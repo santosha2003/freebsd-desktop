@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="खाता सूची">
+							<longdesc>इकिगा दर्ता गर्नु पर्ने खाताहरूको सूची</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="जवाफ नआएमा कलहरू निर्दिष्ट होस्टमा पठाउनुहोस्">
+								<longdesc>यदि सक्षम पारिएमा, तपाईँले कलको उत्तर नदिँदा तल भएका फाँटमा निर्दिष्ट गरिएका होस्टमा सबै आगमन कलहरू पठाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="यदि व्यस्त भएमा कलहरू निर्दिष्ट होस्टमा पठाउनुहोस्">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="सधैँ दिइएको होस्टमा कलहरूलाई पठाउनुहोस्">
+								<longdesc>यदि सक्षम पारिएमा, तल भएका फाँटमा निर्दिष्ट गरिएका होस्टमा सबै आगमन कलहरू पठाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP पोर्ट दायरा">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP पोर्ट दायरा">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="होस्टमा कल पठाउनुहोस्">
+								<longdesc>कल पठाउने सक्षम पारिएको छ भने कल पठाउनु पर्ने होस्ट</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="डीटीएमएफ पठाउँदैछ">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="&apos;द्रुत सुरु&apos; सक्षम पार्नुहोस्">
+								<longdesc>जडान &apos;द्रुत सुरु&apos; मोडमा स्थापित हुन्छ । चाँडै कल सुरु गर्ने H.323v2 मा राखिएकोभन्दा छिटो कल सुरु गर्ने नयाँ तरिका हो । यसलाई नेटमिटिङको समर्थन गरेको छैन र दुबै &apos;फास्ट स्टार्ट&apos; र H.245 ट्युनेलिङको प्रयोगले नेटमिटिङका कुनै संस्करण क्र्यास गर्न सक्छन्</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="पहिलेको H.245  सक्षम पार्नुहोस्">
+								<longdesc>यसले सेटअपमा पहिले नै H.245 लाई सक्षम पार्दछ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 ट्युनेलिङ सक्षम पार्नुहोस्">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="सुन्ने पोर्ट">
+								<longdesc>आगमन जडान सुन्नका लागि पोर्ट । नयाँ मानको प्रभावका लागि इकिगालाई पुन: सुरु गर्नुपर्छ ।</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT बाइन्डिङ समय समाप्ति">
+								<longdesc>STUN प्रयोग भइरेको बेला इकिगाले NAT बाइन्डिङ ताजा पार्न प्रयास गरेपछिको समय प्रविष्ट गर्नुहोस्</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="डीटीएमएफ पठाउँदैछ">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="होस्टमा कल पठाउनुहोस्">
+								<longdesc>कल पठाउने सक्षम पारिएको छ भने कल पठाउनु पर्ने होस्ट</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="बाहिरि सीमा प्रोक्सी">
+								<longdesc>बाहिर जाने कलका लागि प्रयोग गरिने SIP बाहिरिसिमा प्रोक्सी</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="सुन्ने पोर्ट">
+								<longdesc>आगमन जडानहरू सुन्नका लागि पोर्ट । नयाँ मानको प्रभावका लागि इकिगालाई पुन: सुरु गर्नुपर्छ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="अधिकतम जिटर बफर">
+								<longdesc>अडियो ग्रहणका लागि अधिकतम जिटर साइज (मिलिसेकेन्डमा)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="मौन पहिचान सक्षम पार्नुहोस्">
+								<longdesc>यदि सक्षम पारिएमा, यसलाई समर्थन गर्ने कोडेकहरूसँग मौन पहिचान प्रयोग गर्नुहोस्</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="अडियो कोडेकहरूको सूची">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="जवाफ छैन समय समाप्ति">
+								<longdesc>निर्धारित समयमा (सेकेन्ड) कुनै पनि उत्तर नआएमा आगमन कलहरू स्वचालित रूपमा अस्वीकार गर्नुहोस् वा पठाउनुहोस्</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="टाढाको भिडियो सञ्झ्यालको स्थान">
+									<longdesc>टाढाको भिडियो सञ्झ्यालको स्थान</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="टाढाको भिडियो सञ्झ्यालको साइज">
+									<longdesc>टाढाको भिडियो सञ्झ्यालको साइज</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="पूर्वनिर्धारित भिडियो दृश्य">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="कलहरू भएको समयमा अन्य सञ्झ्यालमाथि भिडियो प्रदर्शन गर्ने सञ्झ्याल राख्नुहोस्">
+									<longdesc>कलहरू भएको समयमा अन्य सञ्झ्यालमाथि भिडियो प्रदर्शन गर्ने सञ्झ्याल राख्नुहोस्</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="जूम मान">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="प्राथमिकता सञ्झ्यालको साइज">
+									<longdesc>प्राथमिकता सञ्झ्यालको साइज</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="प्राथमिकता सञ्झ्यालको पर्दामा स्थान">
+									<longdesc>प्राथमिकता सञ्झ्यालको पर्दामा स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="प्राथमिकता सञ्झ्यालको साइज">
+									<longdesc>प्राथमिकता सञ्झ्यालको साइज</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="प्राथमिकता सञ्झ्यालको पर्दामा स्थान">
+									<longdesc>प्राथमिकता सञ्झ्यालको पर्दामा स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="ठेगाना पुस्तक सञ्झ्यालको साइज">
+									<longdesc>ठेगाना पुस्तक सञ्झ्यालको साइज</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ठेगाना पुस्तक सञ्झ्यालको पर्दामा स्थान">
+									<longdesc>ठेगाना पुस्तक सञ्झ्यालको पर्दामा स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="ड्रुइड सञ्झ्यालको पर्दामा स्थान">
+									<longdesc>ड्रुइड सञ्झ्यालको पर्दामा स्थान</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ड्रुइड सञ्झ्यालको साइज">
+									<longdesc>ड्रुइड सञ्झ्यालको साइज</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="कुराकानी सञ्झ्यालको पर्दामा स्थान">
+									<longdesc>कुराकानी सञ्झ्यालको पर्दामा स्थान</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="कुराकानी सञ्झ्यालको साइज">
+									<longdesc>कुराकानी सञ्झ्यालको साइज</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="मुख्य सञ्झ्यालको पर्दामा स्थान">
+									<longdesc>मुख्य सञ्झ्यालको पर्दामा स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="STUN सर्भर">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="व्यस्त आवाजको ध्वनि">
+								<longdesc>यदि सक्षम पारिएमा, कलहरूको अन्त्यमा वा कल गर्दा कोही व्यस्त भएमा यो ध्वनि बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="व्यस्त ध्वनि बजाउनुहोस्">
+								<longdesc>यदि सक्षम पारिएमा, कलहरूको अन्त्यमा वा व्यस्त भएको जोसुकैलाई कल गर्दा छनौट गरिएको आवाज बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="डायल आवाजको ध्वनि">
+								<longdesc>यदि सक्षम पारिएमा, कसैलाई कल गर्दा यो ध्वनि बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="रिङ ध्वनि बजाउनुहोस्">
+								<longdesc>यदि सक्षम पारिएमा, कसैलाई कल गर्दा छनौट गरिएको आवाज बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="नयाँ आवाज समाविष्ट पत्रमा ध्वनि बजाउनुहोस्">
+								<longdesc>यदि सक्षम पारिएमा, नयाँ आवाज समाविष्ट पत्र प्राप्त हुँदा छनौट गरिएको आवाज बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="नयाँ आवाज समाविष्ट पत्र ध्वनि">
+								<longdesc>यदि सक्षम पारिएमा, त्यहाँ नयाँ आवाज समाविष्ट पत्र आउँदा यो ध्वनि बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="नयाँ सन्देशमा आवाज बजाउनुहोस्">
+								<longdesc>यदि सक्षम पारिएमा, नयाँ जरूरी सन्देश आएको बेलामा छनौट गरिएको आवाज बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="नयाँ जरूरी सन्देश ध्वनि">
+								<longdesc>यदि सक्षम पारिएमा, त्यहाँ जरुरी सन्देश आउँदा यो ध्वनि बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="आगमन कलहरू आउँदा आवाज बजाउनुहोस्">
+								<longdesc>यदि सक्षम पारिएमा, आगमन कलहरूमा छनौट गरिएको आवाज बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="आगमन कल ध्वनि">
+								<longdesc>यदि सक्षम पारिएमा, आगमन कलहरूमा घ्वनि बजाइन्छ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="वैकल्पिक अडियो निर्गत यन्त्र">
+								<longdesc>आवाज प्रयोग गर्न वैकल्पिक अडियो निर्गत यन्त्र चयन गर्नुहोस्</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="फ्रेम दर">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="भिडियो पूर्वावलोकन">
+								<longdesc>तपाईँको क्यामेरा यन्त्रबाट छविहरू प्रदर्शन गर्नुहोस्</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="भिडियो ढाँचा">
+								<longdesc>भिडियो क्यामेराहरूका लागि ढाँचा रोज्नुहोस् ( यूएसबी (USB) क्यामेराहरूमा यो लागू हुँदैन)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="भिडियो च्यानल">
+								<longdesc>प्रयोगका लागि भिडियो च्यानल नम्बर (क्यामेरा, टीभी वा अन्य स्रोतहरू चयन गर्नका लागि)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="भिडियो साइज">
+								<longdesc>प्रसारित भिडियो साइज चयन गर्नुहोस्: सानो (QCIF १७४x१४४) वा ठूलो ( CIF ३५२x२८८)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="भिडियो आगत यन्त्र">
+								<longdesc>प्रयोग गरिने भिडियो आगत यन्त्र चयन गर्नुहोस् । यदि यो यन्त्र प्रयोग गर्दा कुनै त्रुटि भएमा परीक्षण तस्वीर प्रसार गरिन्छ ।</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="अडियो आगत यन्त्र">
+								<longdesc>प्रयोग गरिने अडियो आगत यन्त्र चयन गर्नुहोस्</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="अडियो निर्गत यन्त्र">
+								<longdesc>प्रयोग गरिने निर्गत यन्त्र चयन गर्नुहोस्</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="पुस्तकचिनोहरू">
+						<longdesc>जिकन्फ-सम्पादक फोल्डर पुस्तकचिनोहरू</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="हालै खेलेका खेल">
+						<longdesc>हालै खेलेका खेलको सूची ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="खेलिएका खेलको तथ्याङ्क">
+						<longdesc>क्विन्टुपलका रूपमा आउने स्ट्रिङको सूची: नाम, विजेता, खेलेका खेलको कूल सङ्ख्या, उत्तम समय (सेकेन्डमा) र सबैभन्दा खराब समय (सेकेन्डमा) ।नखेलिएका खेललाई प्रतिनिधित्व गर्नु पर्दैन ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="प्रयोग गरिने खेलको फाइल">
+						<longdesc>खेलिने सोलिटेइर खेल सम्मिलित योजना फाइलको नाम ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="एनिमेसनहरू">
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="ध्वनि">
+						<longdesc>घटना ध्वनि प्ले गर्ने या नगर्ने ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="नियन्त्रणको शैली चयन गर्नुहोस्">
+						<longdesc>तासलाई तान्ने वा स्रोतमा क्लिक गरेर त्यसपछि गन्तब्यमा क्लिक गर्ने चयन गर्नुहोस् ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="उपकरणपट्टीलाई देखाउने या नदेखाउने">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="विषयवस्तु फाइल नाम">
+						<longdesc>तासका लागि ग्राफिक्स भएको फाइलको नाम ।</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

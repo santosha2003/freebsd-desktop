@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Nýspilaðir leikir">
+						<longdesc>Listi yfir nýspilaða leiki.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Tölfræði spilaðra leikja">
+						<longdesc>Listi af strengjum sem koma í fimmfeldi: nafn, vinningar, samtalsfjöldi leikja, besti tími (í sekúndum) og versti tími (líka í sekúndum).Óleiknir leikir eru ekki sýndir.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Hvaða leikjaskrá á að nota">
+						<longdesc>Nafn skema-skrárinnar með kaplinum sem á að spila.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Hreyfingar">
+						<longdesc>Á að sýna hreyfingar þegar spilin eru færð.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Hljóð">
+						<longdesc>Hvort spila á leikhljóð eða ekki.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Veldu hvernig leikinum er stjórnað">
+						<longdesc>Veldu hvort á að draga spilin eða smella fyrst á spilið og svo á áfangastað.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Hvort sýna á stöðustikuna eða ekki">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Hvort sýna á hnappastikuna eða ekki">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Heiti þemaskráar">
+						<longdesc>Heiti skráarinnar sem geymir myndir fyrir spilin.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

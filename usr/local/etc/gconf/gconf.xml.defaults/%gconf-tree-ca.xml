@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Historial de trucades">
+							<longdesc>L&apos;historial de les darreres 100 trucades</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Servidors LDAP">
+							<longdesc>Llista de servidors LDAP configurats</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Mostra els contactes fora de línia">
+							<longdesc>Si s&apos;activa, els contactes fora de línia es mostraran a la llista</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Llista dels grups plegats a la llista">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Byte del tipus de servei (TOS) dels paquets IP RTP de sortida">
+							<longdesc>El byte de tipus de servei (TOS) dels paquets IP RTP. Aquest byte l&apos;utilitzarà la xarxa per proporcionar un cert nivell de qualitat de servei (QoS). El valor predeterminat és 184 (0xB8), que correspon a «Expedited Forwarding (EF) PHB», tal com el defineix l&apos;RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="La llista de comptes">
+							<longdesc>La llista de comptes als que l&apos;Ekiga s&apos;hauria de registrar</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Desvia les trucades a un ordinador en concret si no contesto">
+								<longdesc>Si s&apos;habilita, les trucades entrants que no contesteu es desviaran cap a l&apos;ordinador indicat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Desvia les trucades a un ordinador en concret quan estigui ocupat">
+								<longdesc>Si s&apos;activa, totes les trucades entrants que rebeu mentre estigueu en una trucada, o en mode «ocupat», es desviaran a l&apos;ordinador indicat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Desvia sempre les trucades a un ordinador en concret">
+								<longdesc>Si s&apos;habilita, totes les trucades entrants es desviaran a l&apos;ordinador indicat</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Rang de ports UDP">
+								<longdesc>L&apos;interval de ports UDP que utilitzarà l&apos;Ekiga.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Rang de ports TCP">
+								<longdesc>L&apos;interval de ports TCP que l&apos;Ekiga farà servir per al canal H.323 H.245. Aquest rang de ports no té cap efecte si els dos participants a la conferència fan servir la tunelització H.245.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Desvia trucades a l&apos;ordinador">
+								<longdesc>El nom de l&apos;ordinador on es desviaran les trucades si el desviament de trucades està activat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="S&apos;està enviant DTMF">
+								<longdesc>Seleccioneu el mode d&apos;enviament de DTMF. Els valors poden ser 0 (per «String»), 1 ( per «To»), 2 (per «RFC2833»), o bé 3 (per «Q.931»). El valor predeterminat és «String». Si escolliu un valor que no sigui «String», s&apos;inhabilitarà el xat de text.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema short_desc="Rols de vídeo estesos:">
+								<longdesc>Seleccioneu el rol de vídeo de l&apos;H.239. Els valors poden ser 0 (per «desactivar el vídeo estès»), 1 (per «permet màscara de rol segons contingut»), 2 (per «força la presentació») o bé 3 (per «força el rol en viu»)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="Habilita l&apos;H.239">
+								<longdesc>Això habilitarà l&apos;ús de l&apos;H.239 per a rols de vídeo addicionals</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Habilita l&apos;arrencada ràpida">
+								<longdesc>La connexió s&apos;establirà en el mode d&apos;arrencada ràpida. Aquesta és una nova manera d&apos;iniciar les trucades que va introduir-se en l&apos;H.323v2. El Netmeeting no ho implementa, de manera que si utilitzeu l&apos;arrencada ràpida i la tunelització H.245 al mateix temps, us podeu trobar que algunes versions del Netmeeting es pengin</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Habilita H.245 a l&apos;inici">
+								<longdesc>Això habilita H.245 al principi de la configuració</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Habilita la tunelització H.245">
+								<longdesc>Això habilitarà la tunelització H.245. En aquest mode, els missatges estaran encapsulats en el canal H.225 (port 1720), cosa que permet estalviar un port TCP durant les trucades. La tunelització H.245 es va introduir a la versió 2 del protocol H.323v2, i el Netmeeting no ho implementa. Si s&apos;utilitza l&apos;arrencada ràpida juntament amb la tunelització H.245 al mateix temps, és possible que algunes versions del Netmeeting fallin.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Port on escoltar">
+								<longdesc>El port on escoltar per a la recepció de connexions entrants. Caldrà que reinicieu l&apos;Ekiga per tal que el nou valor tingui efecte.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="S&apos;ha excedit el temps d&apos;espera de la vinculació NAT">
+								<longdesc>Entreu el nombre de segons que l&apos;Ekiga ha d&apos;esperar abans d&apos;intentar actualitzar la vinculació NAT quan es faci servir STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="S&apos;està enviant DTMF">
+								<longdesc>Seleccioneu el mode d&apos;enviament de DTMF. Els valors poden ser 0 (per «RFC2833») o bé 1 (per «INFO»)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Desvia trucades a l&apos;ordinador">
+								<longdesc>El nom de l&apos;ordinador on es desviaran les trucades si el desviament de trucades està activat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Servidor intermediari de sortida">
+								<longdesc>El servidor intermediari de sortida SIP per utilitzar en trucades sortints</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Port on escoltar">
+								<longdesc>El port on escoltar per a la recepció de connexions entrants. Caldrà que reinicieu l&apos;Ekiga per tal que el nou valor tingui efecte</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Balanç temporal/espacial">
+								<longdesc>Si preferiu mantenir el nombre màxim de quadres per segon o bé disminuir-lo de manera que es mantingui un nivell mínim de qualitat (espacial) per a tots els quadres. S&apos;hi permet l&apos;interval de valors següents: 0: qualitat mínima màxima, 31: qualitat mínima mínima</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Taxa de bits màxima per a la recepció del vídeo">
+								<longdesc>La taxa de bits màxima per a la recepció del vídeo, en kbit/s. Aquest valor s&apos;indicarà a l&apos;extrem de l&apos;interlocutor que pugui (si ho implementa) ajustar la seva taxa de bits de transmissió en cas que sobrepassi el valor indicat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Taxa de bits màxima per a la transmissió del vídeo">
+								<longdesc>La taxa de bits per a la transmissió de vídeo en kbits/s. La qualitat del vídeo i el nombre de quadres per segon transmesos (depenent del còdec utilitzat) s&apos;ajustaran automàticament per sobre del seu mínim durant les trucades. D&apos;aquesta manera, s&apos;intentarà minimitzar l&apos;amplada de banda al valor que indiqueu aquí</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="La llista de còdecs de vídeo">
+								<longdesc>La llista de còdecs de vídeo</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Memòria intermèdia màxima per al jitter">
+								<longdesc>El valor màxim de la memòria intermèdia per al jitter en la recepció d&apos;àudio (en ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Habilita la cancel·lació automàtica de l&apos;eco">
+								<longdesc>Si s&apos;habilita, utilitza la cancel·lació de l&apos;eco</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Habilita la detecció de silenci">
+								<longdesc>Si s&apos;habilita, es farà servir la detecció de silenci per als còdecs que ho permetin</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Llista de còdecs d&apos;àudio">
+								<longdesc>La llista de còdecs d&apos;àudio</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Tipus de xarxa seleccionada a l&apos;auxiliar">
+							<longdesc>0: 56 Kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Personalitzat</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Resposta automàtica">
+								<longdesc>Si s&apos;habilita, s&apos;acceptaran automàticament les trucades entrants</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="S&apos;ha excedit el temps d&apos;espera">
+								<longdesc>Rebutja o desvia automàticament les trucades entrants si no es contesta dins el marge de temps especificat (en segons)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Posició de la finestra del vídeo remot">
+									<longdesc>La posició de la finestra del vídeo remot</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra del vídeo remot">
+									<longdesc>La mida de la finestra del vídeo remot</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="La vista del vídeo abans d&apos;haver commutat a pantalla completa">
+									<longdesc>La vista de vídeo abans d&apos;haver commutat a la visualització de pantalla completa (s&apos;hi permeten els mateixos valors que a video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="La visualització de vídeo predeterminada">
+									<longdesc>La visualització de vídeo predeterminada (0: local, 1: remota, 2: ambdues, 3: ambdues en finestres separades)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Disposa les finestres que mostrin vídeo per sobre de les altres finestres durant una trucada">
+									<longdesc>Disposa les finestres que mostrin vídeo per sobre de les altres finestres durant una trucada</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="El valor del zoom">
+									<longdesc>El percentatge d&apos;augment que s&apos;aplicarà per a les imatges mostrades a la interfície principal (pot ser 50, 100 o 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Especifiqueu l&apos;algorisme d&apos;escalat per programari">
+									<longdesc>Especifiqueu l&apos;algorisme d&apos;escalat per programari: 0: veí més proper, 1: veí més proper amb un filtre de caixa, 2: filtrat bilineal, 3: filtrat hiperbòlic. No és aplicable als sistemes Windows.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Permet l&apos;escalat per programari de la imatge-en-imatge">
+									<longdesc>Permet que l&apos;Ekiga utilitzi l&apos;escalat per programari per a la imatge-en-imatge com a última alternativa en cas que no estigui implementat per maquinari. Si ho establiu com a fals, l&apos;Ekiga no intentarà obrir la PIP (imatge-en-imatge) si no està implementat per maquinari.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Inhabilita l&apos;acceleració del vídeo per maquinari">
+									<longdesc>Aquesta clau inhabilita l&apos;acceleració per maquinari del DirectX (al win32) i de l&apos;XVideo (al Linux)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra de preferències">
+									<longdesc>Mida de la finestra de preferències</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra de preferències">
+									<longdesc>Posició a la pantalla de la finestra de preferències</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra de preferències">
+									<longdesc>Mida de la finestra de preferències</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra de preferències">
+									<longdesc>Posició a la pantalla de la finestra de preferències</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra de paràmetres de vídeo">
+									<longdesc>Mida de la finestra de paràmetres de vídeo</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra de paràmetres de vídeo">
+									<longdesc>Posició a la pantalla de la finestra de paràmetres de vídeo</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra de paràmetres d&apos;àudio">
+									<longdesc>Mida de la finestra de paràmetres d&apos;àudio</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra de paràmetres d&apos;àudio">
+									<longdesc>Posició a la pantalla de la finestra de paràmetres d&apos;àudio</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra de la llibreta d&apos;adreces">
+									<longdesc>Mida de la finestra de la llibreta d&apos;adreces</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra de la llibreta d&apos;adreces">
+									<longdesc>Posició a la pantalla de la finestra de la llibreta d&apos;adreces</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra de l&apos;auxiliar de configuració">
+									<longdesc>Posició a la pantalla de la finestra de l&apos;auxiliar de configuració</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra de l&apos;auxiliar">
+									<longdesc>Mida de la finestra de l&apos;auxiliar</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra de xat">
+									<longdesc>Posició a la pantalla de la finestra de xat</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra del xat">
+									<longdesc>Mida de la finestra del xat</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Canvia la secció del quadre de la finestra principal">
+									<longdesc>Canvia la secció del quadre de la finestra principal (0 = contactes, 1 = marcador, 2 = historial de trucades)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra principal">
+									<longdesc>Posició a la pantalla de la finestra principal</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="Mida de la finestra de trucada">
+									<longdesc>Mida de la finestra de trucada</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posició a la pantalla de la finestra de trucada">
+									<longdesc>Posició a la pantalla de la finestra de trucada</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Habilita la detecció de xarxa STUN">
+								<longdesc>Habilita la configuració automàtica de la xarxa resultant de la comprovació de l&apos;STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="El servidor STUN">
+								<longdesc>El servidor STUN a utilitzar per a les funcions d&apos;STUN. L&apos;STUN és una tecnologia que permet travessar certs tipus d&apos;encaminadors NAT</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="El so d&apos;ocupat">
+								<longdesc>Si s&apos;habilita, el so que es reproduirà al final de les trucades o quan truqueu algú que estigui ocupat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Reprodueix el so d&apos;ocupat">
+								<longdesc>Si s&apos;habilita, el so que escolliu es reproduirà al final de cada trucada o si truqueu algú que estigui ocupat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="El so del to del marcatge">
+								<longdesc>Si s&apos;habilita, el so que es reproduirà quan es truqui algú</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Reprodueix el so del marcat">
+								<longdesc>Si s&apos;habilita, el so que escolliu es reproduirà quan truqueu a algú</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Reprodueix un so quan hi hagi nous correus de veu">
+								<longdesc>Si s&apos;habilita, el so que escolliu es reproduirà quan rebeu algun correu de veu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="El so per a correus de veu nous">
+								<longdesc>Si s&apos;habilita, el so que es reproduirà quan es rebi un correu de veu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Reprodueix un so quan hi hagi nous missatges">
+								<longdesc>Si s&apos;habilita, el so que escolliu es reproduirà quan rebeu algun missatge instantani</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="El so per a missatges instantanis nous">
+								<longdesc>Si s&apos;habilita, el so que es reproduirà quan es rebi un missatge instantani</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Reprodueix un so per a trucades entrants">
+								<longdesc>Si s&apos;habilita, el so que escolliu es reproduirà quan us truquin</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="El so per a trucades que rebeu">
+								<longdesc>Si s&apos;habilita, el so que es reproduirà per a trucades entrants</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dispositiu d&apos;àudio de sortida alternatiu">
+								<longdesc>Seleccioneu el dispositiu d&apos;àudio de sortida alternatiu per al so de les incidències.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Estat detallat del contacte">
+								<longdesc>La informació detallada sobre l&apos;estat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Estat resumit del contacte">
+								<longdesc>La informació resumida sobre l&apos;estat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Nom complet">
+								<longdesc>Introduïu el vostre nom i cognoms</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Velocitat dels quadres">
+								<longdesc>El nombre màxim de quadres per segon transmesos. Pot ser que aquesta taxa no s&apos;assoleixi en cas que s&apos;hagi configurat una qualitat mínima a través d&apos;un valor de balanç temporal/espacial menor de 31, i que la taxa de bits seleccionada no sigui suficient per funcionar amb aquesta qualitat mínima</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Visualització prèvia del vídeo">
+								<longdesc>Mostra imatges de la càmera</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Format de vídeo">
+								<longdesc>Seleccioneu el format per a càmeres de vídeo. (No té rellevància en la majoria de càmeres USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Canal de vídeo">
+								<longdesc>El canal de vídeo que es farà servir (seleccioneu càmera, tv, o altres fonts...)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Mida del vídeo">
+								<longdesc>Escolliu la mida del vídeo transmès: Petita (QCIF 176x144) o Gran (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Dispositiu de vídeo d&apos;entrada">
+								<longdesc>Seleccioneu el dispositiu de vídeo d&apos;entrada que vulgueu fer servir. Si es produeix algun error, es transmetrà una imatge de prova.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Dispositiu d&apos;àudio d&apos;entrada">
+								<longdesc>Seleccioneu el dispositiu d&apos;àudio d&apos;entrada que vulgueu utilitzar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dispositiu d&apos;àudio de sortida">
+								<longdesc>Seleccioneu el dispositiu d&apos;àudio de sortida que vulgueu utilitzar</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Adreces d&apos;interès">
+						<longdesc>adreces d&apos;interès de carpetes del gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Jocs jugats recentment">
+						<longdesc>Una llista de jocs jugats recentment.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Estadístiques de les partides jugades">
+						<longdesc>Una llista de cadenes en forma de quintet: nom, victòries, jocs jugats totals, millor temps (en segons) i pitjor temps (també en segons). No s&apos;han de representar les partides no jugades.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="El nom del fitxer de la partida a utilitzar">
+						<longdesc>El nom del fitxer d&apos;esquema que conté la partida del solitari per jugar.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animacions">
+						<longdesc>Si s&apos;han d&apos;animar els moviments de les cartes.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="So">
+						<longdesc>Si s&apos;han de reproduir els esdeveniments de so.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Selecciona l&apos;estil de control">
+						<longdesc>Selecciona si s&apos;han d&apos;arrossegar les cartes o si s&apos;ha de fer clic a l&apos;origen i després a la destinació.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Si s&apos;ha de mostrar la barra d&apos;estat">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Si s&apos;ha de mostrar la barra d&apos;eines">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Nom del fitxer de tema">
+						<longdesc>El nom del fitxer amb les imatges de les cartes.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers ntfs-3g">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers ntfs que utilitzen ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="En detectar el sistema de fitxers «ntfs», el controlador de sistema de fitxers a utilitzar per defecte">
+								<longdesc>El nom del sistema de fitxers a utilitzar per defecte en detectar «ntfs». Això pot ser útil en configurar el sistema de manera que s&apos;utilitzi per defecte el controlador «ntfs-3g» per a tots els sistemes de fitxers «ntfs». De totes maneres, l&apos;usuari sempre podrà decidir fer servir el sistema de fitxers «ntfs» especificant-ho de manera explícita per a cada volum o bé a la línia d&apos;ordres.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers ntfs">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers udf">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers iso9660">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Opcions de muntatge per defecte per al sistema de fitxers vfat">
+								<longdesc>Llista d&apos;opcions de muntatge per defecte per a volums amb el sistema de fitxers vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

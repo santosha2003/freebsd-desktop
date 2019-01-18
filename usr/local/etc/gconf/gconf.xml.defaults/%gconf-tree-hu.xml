@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Hívástörténet">
+							<longdesc>A legutóbbi 100 hívás története</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP kiszolgálók">
+							<longdesc>A beállított LDAP kiszolgálók listája</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Kilépett partnerek mutatása">
+							<longdesc>Ha engedélyezve van, a kilépett partnerek megjelennek a partnerlistán</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="A partnerlista összecsukott csoportjainak listája">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Kimenő RTP IP-csomagok szolgáltatástípus (TOS) bájtja">
+							<longdesc>A kimenő RTP IP-csomagok szolgáltatástípus (TOS) bájtja. Ezt a bájtot a hálózat használja bizonyos szolgáltatásminőség (QoS) biztosítására. Az alapértelmezett 184 (0xB8) érték megfelel az RFC 3246 által definiált Expedited Forwarding (EF) PHB-nak.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="A felhasználói fiókok listája">
+							<longdesc>A felhasználói fiókok listája, amelyekre az Ekiganak regisztrálnia kell</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Hívások továbbítása a megadott állomásnak, ha nincs válasz">
+								<longdesc>Ha engedélyezve van, akkor minden bejövő hívás az alábbi mezőben megadott kiszolgálóra lesz továbbítva, ha nem fogadja a hívást</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Hívások továbbítása az adott állomásnak foglaltság esetén">
+								<longdesc>Ha engedélyezi, minden bejövő hívás a lejjebb megadott kiszolgálóra lesz továbbítva, ha már folyamatban van egy hívás vagy Elfoglalt  módban van</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Mindig továbbítsa a hívást a megadott állomásnak">
+								<longdesc>Ha engedélyezve van, akkor minden bejövő hívás az alábbi mezőben megadott kiszolgálóra lesz továbbítva</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP porttartomány">
+								<longdesc>Az Ekiga által használandó UDP porttartomány.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP porttartomány">
+								<longdesc>A használandó TCP portok tartománya, amit az Ekiga a H.323 és H.245 csatornához fog használni. Ennek a porttartománynak nincs hatása, ha a videokonferencia mindkét résztvevője H.245 alagutazást használ.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Továbbítsa a hívásokat ide">
+								<longdesc>Ha a hívástovábbítás engedélyezve van, akkor a hívások erre a kiszolgálóra lesznek továbbítva</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-küldés">
+								<longdesc>Ezzel beállíthatja a DMTF-ek küldési módját. A lehetséges értékek: 0 – „String” (karakterlánc), 1 – „Tone” (Hang), 2 („RFC2833”) vagy 3 („Q.931”) (Az alapértelmezett a „String”). A „String”-től különböző érték választása kikapcsolja a szöveges csevegést.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema short_desc="Bővített videoszerepek">
+								<longdesc>A H.239 videoszerep kiválasztása. A lehetséges értékek: 0 (bővített videó tiltása), 1 (tartalmankénti szerepmaszk engedélyezése), 2 (bemutató kényszerítése) vagy 3 (élő szerep kényszerítése).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="H.239 engedélyezése">
+								<longdesc>Ez engedélyezi a H.239 képességet további videoszerepekhez</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="”Gyors indítás” engedélyezése">
+								<longdesc>A kapcsolatot gyors indítás módban hozza létre. A gyors indítás a hívások indításának egy gyorsabb módja, amit a H.323v2 vezetett be. A Netmeeting nem támogatja, és a gyors indítás és a H.245 alagutazás együttes használata összeomlaszthatja a Netmeeting egyes verzióit</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Korai H.245 engedélyezése">
+								<longdesc>A H.245 korai engedélyezése a beállításban</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 alagutazás engedélyezése">
+								<longdesc>Ez engedélyezi a H.245-alagutazás módot. Ebben a módban a H.245 üzenetek a H.225 csatornába (1720-as port) lesznek beágyazva. Ez felszabadít egy TCP kapcsolatot hívások közben. A H.245 alagutazást a H.323v2 vezette be és a Netmeeting nem támogatja. A gyors indítás és a H.245 alagutazás együttes használata összeomlaszthatja a Netmeeting egyes verzióit.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Figyelőport">
+								<longdesc>Az a port, amelyen a bejövő kapcsolatokat figyelni kell. Az Ekiga programot újra kell indítani ahhoz, hogy az új érték hatása érvényesüljön.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT kötés időtúllépése">
+								<longdesc>Adja meg a másodpercek számát, amely után az Ekiga próbálja meg frissíteni a NAT kötést STUN használatakor</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-küldés">
+								<longdesc>Ez lehetővé teszi a mód beállítását a DMTF-ek küldéséhez. Az érték csak 0 („RFC2833”) és 1 („INFO”) lehet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Továbbítsa a hívásokat ide">
+								<longdesc>Ha a hívástovábbítás engedélyezve van, akkor a hívások erre a kiszolgálóra lesznek továbbítva</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Kimenő proxy">
+								<longdesc>A kimenő hívásokhoz használandó SIP kimenő proxy</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Figyelőport">
+								<longdesc>Az a port, amelyen a bejövő kapcsolatokat figyelni kell. Az Ekiga programot újra kell indítani ahhoz, hogy az új érték hatása érvényesüljön</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Ideiglenes térbeli kompromisszum">
+								<longdesc>A maximális képkockasebesség megtartása, vagy az összes képkocka minimális (térbeli) minőségének megtartásának érdekében ez csökkenthető. 0: legnagyobb minimális minőség, 31: legkisebb minimális minőség.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Beérkező video maximális bitsebessége">
+								<longdesc>Beérkező video maximális bitsebessége kbit/s-ben. Ez az érték elküldésre kerül a távoli partnernek, amely (ha támogatja) beállíthatja a küldési bitsebességét, ha az efölött az érték fölött van.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Kimenő video maximális bitsebessége">
+								<longdesc>A küldött video-sávszélesség felső határa kbit/s-ben. A videominőség és a másodpercenként átvitt képkockák (kodektől függő) száma hívás közben dinamikusan kerül beállításra a minimális érték felett, így próbálva a sávszélességet a megadott értékre csökkenteni</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Videokodekek listája">
+								<longdesc>Videokodekek listája</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Maximális jitter puffer">
+								<longdesc>Maximális jitter puffer a hangfogadáshoz (ezredmásodpercben)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Visszhang-csillapítás támogatása">
+								<longdesc>Ha engedélyezve van, akkor az automatikus visszhangtörlés kerül felhasználásra</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Csendérzékelés engedélyezése">
+								<longdesc>Ha engedélyezve van, akkor az azt támogató kodekek használják a csendérzékelést</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Hangkodekek listája">
+								<longdesc>Hangkodekek listája</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="A varázslóban kiválasztott hálózattípus">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Egyedi</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Automatikus válasz">
+								<longdesc>Ha engedélyezve van, automatikusan válaszol a bejövő hívásokra</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Nincs válaszidő-túllépés">
+								<longdesc>Automatikusan elutasítja vagy továbbítja a bejövő hívásokat, ha nem válaszol a megadott időn belül (másodpercben)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Túloldali videoablak pozíciója">
+									<longdesc>A túloldali videoablak pozíciója</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Túloldali videoablak mérete">
+									<longdesc>A túloldali videoablak mérete</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="A videonézet a teljes képernyőre váltás előtt">
+									<longdesc>A videonézet a teljes képernyőre váltás előtt (ugyanazon értékek, mint a video_view kulcsnál)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Az alapértelmezett videonézet">
+									<longdesc>Az alapértelmezett videonézet (0: helyi, 1: túloldali, 2: mindkettő, 3: mindkettő külön ablakban)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="A videot megjelenítő ablak legfelülre helyezése hívás közben">
+									<longdesc>A videot megjelenítő ablak legfelülre helyezése hívás közben</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="A nagyítási arány">
+									<longdesc>A főablakban megjelenített képek nagyítási aránya (lehetséges értékek: 50, 100, vagy 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Adja meg a szoftveres méretezési algoritmust">
+									<longdesc>Adja meg a szoftveres méretezési algoritmust: 0: legközelebbi szomszéd, 1: legközelebbi szomszéd négyzetszűrővel, 2: bilineáris szűrés, 3: hiperbolikus szűrés. Nem érvényes Windows rendszereken.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="A képben kép szoftveres méretezésének engedélyezése">
+									<longdesc>Az Ekiga visszatérhet a képben kép szoftveres átméretezésére, ha a hardveres támogatás nem áll rendelkezésre. Ha ez hamis, akkor az Ekiga nem próbál képben képet nyitni, ha a hardveres támogatás nem áll rendelkezésre.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="A kép hardvergyorsításának kikapcsolása">
+									<longdesc>Ez a kulcs kikapcsolja a DirectX (win32 rendszeren) és XVideo (Linux rendszeren) hardveres videogyorsítást</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="A beállítások ablak mérete">
+									<longdesc>A beállítások ablak mérete</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="A beállítások ablak pozíciója a képernyőn">
+									<longdesc>A beállítások ablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="A beállítások ablak mérete">
+									<longdesc>A beállítások ablak mérete</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="A beállítások ablak pozíciója a képernyőn">
+									<longdesc>A beállítások ablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="A videobeállítások ablak mérete">
+									<longdesc>A videobeállítások ablak mérete</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="A videobeállítások ablak pozíciója a képernyőn">
+									<longdesc>A videobeállítások ablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="A hangbeállítások ablak mérete">
+									<longdesc>A hangbeállítások ablak mérete</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="A hangbeállítások ablak pozíciója a képernyőn">
+									<longdesc>A hangbeállítások ablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Címjegyzék ablak mérete">
+									<longdesc>Címjegyzék ablak mérete</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="A címjegyzék ablak pozíciója a képernyőn">
+									<longdesc>A címjegyzék ablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="A varázslóablak pozíciója a képernyőn">
+									<longdesc>A varázslóablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="A varázslóablak mérete">
+									<longdesc>A varázslóablak mérete</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="A csevegésablak pozíciója a képernyőn">
+									<longdesc>A csevegésablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="A csevegőablak mérete">
+									<longdesc>A csevegőablak mérete</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="A főablak panel részének módosítása">
+									<longdesc>A főablak panel részének módosítása (0 = partnerek, 1 = tárcsázókészülék, 2 = hívási előzmények)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="A főablak pozíciója a képernyőn">
+									<longdesc>A főablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="A hívásablak mérete">
+									<longdesc>A hívásablak mérete</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="A hívásablak pozíciója a képernyőn">
+									<longdesc>A hívásablak pozíciója a képernyőn</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN hálózatérzékelés engedélyezése">
+								<longdesc>A STUN teszt által eredményezett automatikus hálózati beállítások engedélyezése</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="A STUN kiszolgáló">
+								<longdesc>A STUN támogatáshoz használt STUN kiszolgáló. A STUN technika lehetővé teszi bizonyos típusú NAT átjárókon az áthaladást.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="A „foglalt” hang">
+								<longdesc>Ha engedélyezve van, a hívások végén vagy foglalt jelzéskor ez a hang kerül lejátszásra</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Foglalt jelzés lejátszása">
+								<longdesc>Ha engedélyezve van, a hívások végén vagy foglalt jelzéskor a kiválasztott hang kerül lejátszásra</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="A tárcsahang">
+								<longdesc>Ha engedélyezve van, ez a hang kerül lejátszásra, ha felhív valakit</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Csengés lejátszása">
+								<longdesc>Ha engedélyezve van, a kiválasztott hang kerül lejátszásra, ha felhív valakit</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Hang lejátszása új hangüzenetnél">
+								<longdesc>Ha engedélyezve van, akkor a kiválasztott hang kerül lejátszásra új hangüzenet fogadásakor</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Az új hangüzenet hangja">
+								<longdesc>Ha engedélyezve van, ez a hang kerül lejátszásra új hangüzenet fogadásakor</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Hang lejátszása új üzenetnél">
+								<longdesc>Ha engedélyezve van, akkor a kiválasztott hang kerül lejátszásra új azonnali üzenet fogadása esetén</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Az új azonnali üzenet hangja">
+								<longdesc>Ha engedélyezve van, ez a hang kerül lejátszásra új azonnali üzenet fogadásakor</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Hang lejátszása a bejövő hívásoknál">
+								<longdesc>Ha engedélyezve van, a kiválasztott hang kerül lejátszásra a bejövő hívásoknál</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="A bejövő hívás hangja">
+								<longdesc>Ha engedélyezve van, ez a hang kerül lejátszásra a bejövő hívásoknál</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Tartalék hangkimeneti eszköz">
+								<longdesc>Válasszon ki egy hangeseményekhez használni kívánt tartalék hangkimeneti eszközt.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Partner hosszú állapota">
+								<longdesc>A hosszú állapotinformáció</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Partner rövid állapota">
+								<longdesc>A rövid állapotinformációk</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Teljes név">
+								<longdesc>Adja meg a teljes nevét</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Sebesség">
+								<longdesc>A maximális átvitt képkockasebesség képkocka/s-ben. Ez a sebesség nem érhető el, ha a minimális minőséget 31-nél kisebb TSTO értékkel adták meg, és a bitsebesség nem elegendő ezen minimális minőség kiszolgálásához.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Video előnézet">
+								<longdesc>Képek megjelenítése a kamerából</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Videoformátum">
+								<longdesc>Válassza ki a formátumot a videokamerákra (nem érvényes a legtöbb USB kamerára)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Videocsatorna">
+								<longdesc>A használandó videocsatorna száma (kamera, tv vagy egyéb forrás kiválasztásához)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Videoméret">
+								<longdesc>Válassza ki az átvitt videoméretet: Kicsi (QCIF 176x144) vagy Nagy (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Video bemeneti eszköz">
+								<longdesc>Válassza ki a használandó video bemeneti eszközt. Ha hiba lép fel ezen eszköz használata közben, egy tesztkép kerül átvitelre.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Hangbemeneti eszköz">
+								<longdesc>Válassza ki a használni kívánt hangbemeneti eszközt</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Hangkimeneti eszköz">
+								<longdesc>Válassza ki a használni kívánt hangkimeneti eszközt</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Könyvjelzők">
+						<longdesc>gconf-szerkesztő mappakönyvjelzők</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Legutóbb játszott játékok">
+						<longdesc>Legutóbb játszott játékok listája.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Lejátszott játékok statisztikája">
+						<longdesc>Karaktersorozatok ötös csoportosítású listája: név, győzelmek, összes lejátszott játék, legjobb idő (másodpercben) és legrosszabb idő (szintén másodpercben. A le nem játszott játékoknak nem kell megjelenniük.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="A használandó játékfájl">
+						<longdesc>A játszandó pasziánszjátékot tartalmazó scheme fájl neve.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animációk">
+						<longdesc>A lapmozgások animáltak legyenek-e?</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Hang">
+						<longdesc>Legyen-e az eseményeknek hangjuk.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Válassza ki a vezérlés stílusát">
+						<longdesc>Válassza ki, hogy húzni kívánja a kártyákat vagy kattintani szeretne a forrásra és aztán a célra.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Megjelenjen-e az eszköztár">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Megjelenjen-e az eszköztár">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Témafájl neve">
+						<longdesc>A kártyákhoz használt grafika fájlneve.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Az ntfs-3g fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája ntfs-3g fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="ntfs fájlrendszer észlelésekor alapértelmezésben használandó fájlrendszer-illesztőprogram">
+								<longdesc>Az alapértelmezésben használandó fájlrendszer-illesztőprogram ntfs észlelésekor. Ennek segítségével egyszerűen beállíthatja a rendszert az ntfs-3g alapértelmezett használatára minden ntfs fájlrendszerhez. A felhasználók kötetenként vagy a parancssorban felülbírálhatják ezt és használhatják továbbra is az ntfs illesztőt.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Az ntfs fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája ntfs fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Az udf fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája udf fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Az iso9660 fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája iso9660 fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="A vfat fájlrendszer alapértelmezett csatolási beállításai">
+								<longdesc>Alapértelmezett csatolási beállítások listája vfat fájlrendszerűre formázott kötetekhez.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

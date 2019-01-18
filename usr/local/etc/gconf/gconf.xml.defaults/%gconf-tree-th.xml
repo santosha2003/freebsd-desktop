@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="ประวัติการเรียกสาย">
+							<longdesc>ประวัติการเรียกสาย 100 สายล่าสุด</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="เซิร์ฟเวอร์ LDAP">
+							<longdesc>รายชื่อเซิร์ฟเวอร์ LDAP ที่ตั้งค่าไว้</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="แสดงผู้ติดต่อที่ออฟไลน์">
+							<longdesc>ถ้าเปิดใช้ จะแสดงผู้ติดต่อที่ออฟไลน์ในบัญชีรายชื่อด้วย</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="รายชื่อกลุ่มที่พับเก็บอยู่ในบัญชีรายชื่อ">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="รายชื่อบัญชี">
+							<longdesc>รายชื่อของบัญชีที่จะให้ Ekiga ลงทะเบียนให้</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="โอนสายเรียกไปยังเครื่องที่กำหนดถ้าไม่มีการรับสาย">
+								<longdesc>ถ้าเปิดใช้ สายเรียกเข้าทั้งหมดจะถูกโอนไปยังเครื่องที่ระบุในข้อมูลข้างล่างนี้ ถ้าคุณไม่รับสาย</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="โอนสายเรียกไปยังเครื่องที่กำหนดถ้าสายไม่ว่าง">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="โอนสายเรียกไปยังเครื่องที่กำหนดเสมอ">
+								<longdesc>ถ้าเปิดใช้ สายเรียกเข้าทั้งหมดจะถูกโอนไปยังเครื่องที่ระบุในข้อมูลข้างล่างนี้</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="ช่วงของพอร์ต UDP">
+								<longdesc>ช่วงของพอร์ต UDP ที่ Ekiga จะใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="ช่วงของพอร์ต TCP">
+								<longdesc>ช่วงของพอร์ต TCP ที่ Ekiga จะใช้เป็นช่องเชื่อมต่อ H.323 H.245  ค่าช่วงพอร์ตนี้จะไม่มีผล ถ้าทั้งสองฝั่งของการประชุมใช้ทันเนล H.245 ทั้งคู่</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="โอนสายเรียกไปยังเครื่อง">
+								<longdesc>เครื่องที่จะโอนสายเรียกไป ถ้าเปิดใช้การโอนสายเรียก</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="การส่ง DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="เปิดใช้การเริ่มแบบเร็ว (Fast Start)">
+								<longdesc>การเชื่อมต่อจะเชื่อมในโหมดเริ่มแบบเร็ว (Fast Start) ซึ่งเป็นวิธีใหม่ในการเริ่มการเรียกสายที่เร็วขึ้น และเริ่มใช้ใน H.323v2 แต่ Netmeeting ไม่ได้รองรับ การใช้ทั้งการเริ่มแบบเร็ว พร้อมกับทันเนล H.245 จึงอาจทำให้ Netmeeting บางรุ่นพังได้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="เปิดใช้ H.245 แต่เนิ่นๆ">
+								<longdesc>เปิดใช้ H.245 แต่เนิ่นๆ ในการตั้งค่าระบบ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="เปิดใช้ทันเนล H.245">
+								<longdesc>เปิดใช้โหมดทันเนล H.245 ซึ่งในโหมดนี้ จะห่อหุ้มข้อความลงในช่อง H.225 (พอร์ต 1720) ทำให้ประหยัดการเชื่อมต่อ TCP ไปหนึ่งช่องระหว่างเรียกสาย การทำทันเนล H.245 เริ่มใช้ใน H.323v2 แต่ Netmeeting ไม่ได้รองรับ การใช้ทั้งการเริ่มแบบเร็วและทันเนล H.245 จึงอาจทำให้ Netmeeting บางรุ่นพังได้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="พอร์ตรอรับการเชื่อมต่อ">
+								<longdesc>พอร์ตที่จะรอรับการเชื่อมต่อเข้ามา  Ekiga จำเป็นต้องเริ่มทำงานใหม่เพื่อจะเริ่มใช้ค่าใหม่</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="กำหนดเวลาการผูกโยง NAT">
+								<longdesc>กำหนดจำนวนวินาทีซึ่ง Ekiga ควรลองปรับการเชื่อมโยง NAT ใหม่ ขณะที่ใช้ STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="การส่ง DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="โอนสายเรียกไปยังเครื่อง">
+								<longdesc>เครื่องที่จะโอนสายเรียกไป ถ้าเปิดใช้การโอนสายเรียก</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="พร็อกซีขาออก">
+								<longdesc>พร็อกซีขาออกสำหรับ SIP ที่จะใช้ในการเรียกสายออก</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="พอร์ตรอรับการเชื่อมต่อ">
+								<longdesc>พอร์ตที่จะรอรับการเชื่อมต่อเข้ามา  Ekiga จำเป็นต้องเริ่มทำงานใหม่เพื่อจะเริ่มใช้ค่าใหม่</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="การให้น้ำหนักระหว่างเวลากับภาพ">
+								<longdesc>กำหนดว่าจะพยายามรักษาอัตราเฟรมภาพสูงสุด หรือจะยอมลดอัตราเฟรม เพื่อรักษาระดับคุณภาพขั้นต่ำของภาพในแต่ละเฟรม 0: คุณภาพขั้นต่ำสูงสุด, 31: คุณภาพขั้นต่ำต่ำสุด</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="อัตราบิต RX สูงสุดของภาพ">
+								<longdesc>อัตราบิต RX สูงสุดของภาพ ในหน่วย kbit/s ค่านี้จะถูกส่งไปยังปลายทางที่สามารถปรับอัตราบิต TX (ถ้ารองรับ) ไม่ให้เกินค่านี้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="อัตราบิต TX สูงสุดของภาพ">
+								<longdesc>อัตราบิต TX สูงสุดของภาพ ในหน่วย kbit/s คุณภาพของภาพ และจำนวนเฟรมต่อวินาทีที่ส่ง (แล้วแต่ว่าเลือก codec ไหน) จะถูกปรับเหนือค่าต่ำสุดระหว่างการเรียกสาย เพื่อลดการใช้แบนด์วิดท์ให้อยู่ในขอบเขตของค่าที่กำหนดนี้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="รายชื่อตัวถอด/ลงรหัสวีดิทัศน์">
+								<longdesc>รายชื่อตัวถอด/ลงรหัสวีดิทัศน์</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="บัฟเฟอร์กันกระตุกใหญ่สุด">
+								<longdesc>ขนาดที่ใหญ่ที่สุดของบัฟเฟอร์กันกระตุกสำหรับรับข้อมูลเสียง (เป็น ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="เปิดใช้การตรวจจับช่วงเงียบ">
+								<longdesc>ถ้าเปิดใช้ จะใช้การตรวจจับช่วงเงียบกับตัวถอด/ลงรหัสที่รองรับ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="รายชื่อตัวถอด/ลงรหัสเสียง">
+								<longdesc>รายชื่อตัวถอด/ลงรหัสเสียง</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="ชนิดของเครือข่ายที่เลือกในเครื่องมืออัตโนมัติ">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: กำหนดเอง</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="ตอบสายเรียกอัตโนมัติ">
+								<longdesc>ถ้าเปิดใช้ จะตอบสายเรียกเข้าโดยอัตโนมัติ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="กำหนดเวลารอรับสาย">
+								<longdesc>ปฏิเสธการรับสายหรือโอนสายเรียกโดยอัตโนมัติ ถ้าไม่มีการรับสายภายในเวลาที่กำหนด (เป็นวินาที)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งของหน้าต่างของภาพจากเครื่องอื่น">
+									<longdesc>ตำแหน่งของหน้าต่างของภาพจากเครื่องอื่น</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ขนาดของหน้าต่างของภาพจากเครื่องอื่น">
+									<longdesc>ขนาดของหน้าต่างของภาพจากเครื่องอื่น</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="มุมมองภาพก่อนสลับเป็นการแสดงแบบเต็มจอ">
+									<longdesc>มุมมองภาพก่อนสลับเป็นการแสดงแบบเต็มจอ (ค่าเดียวกับ video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="มุมมองภาพปริยาย">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="วางหน้าต่างที่แสดงภาพทับหน้าต่างอื่นทั้งหมด ระหว่างการคุยสาย">
+									<longdesc>วางหน้าต่างที่แสดงภาพทับหน้าต่างอื่นทั้งหมด ระหว่างการคุยสาย</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="อัตราการย่อ/ขยาย">
+									<longdesc>อัตราการย่อ/ขยายเป็นเปอร์เซ็นต์ที่จะใช้กับภาพที่แสดงในหน้าต่างหลัก (ค่าที่ใช้ได้คือ 50, 100, หรือ 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="ระบุอัลกอริทึมการย่อขยายภาพด้วยซอฟต์แวร์">
+									<longdesc>ระบุอัลกอริทึมการย่อขยายภาพด้วยซอฟต์แวร์: 0: จุดใกล้เคียง, 1: จุดใกล้เคียงพร้อมตัวกรองแบบกล่อง, 2: การกรองแบบไบลิเนียร์, 3: การกรองแบบไฮเพอร์โบลิก ค่านี้ไม่มีผลบนวินโดวส์</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="อนุญาตให้ใช้การย่อ-ขยายขนาดด้วยซอฟต์แวร์แบบภาพซ้อนในภาพ">
+									<longdesc>ให้ Ekiga ใช้การย่อ-ขยายด้วยซอฟต์แวร์แบบภาพซ้อนในภาพเป็นวิธีการสำรองได้ ถ้าไม่มีการรองรับที่ฮาร์ดแวร์ ถ้าค่านี้เป็นเท็จ Ekiga จะไม่พยายามเปิดการย่อ-ขยายแบบภาพซ้อนในภาพ ถ้าฮาร์ดแวร์ไม่รองรับ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="ปิดใช้การเร่งความเร็ววีดิทัศน์ด้วยฮาร์ดแวร์">
+									<longdesc>คีย์นี้ปิดการเร่งความเร็ววีดิทัศน์ด้วยฮาร์ดแวร์ผ่าน DirectX (บน win32) และ XVideo (บนลินุกซ์)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="ขนาดของหน้าต่างปรับแต่ง">
+									<longdesc>ขนาดของหน้าต่างปรับแต่ง</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งบนจอของหน้าต่างปรับแต่ง">
+									<longdesc>ตำแหน่งบนจอของหน้าต่างปรับแต่ง</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="ขนาดของหน้าต่างปรับแต่ง">
+									<longdesc>ขนาดของหน้าต่างปรับแต่ง</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งบนจอของหน้าต่างปรับแต่ง">
+									<longdesc>ตำแหน่งบนจอของหน้าต่างปรับแต่ง</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ขนาดของหน้าต่างตั้งค่าระบบภาพ">
+									<longdesc>ขนาดของหน้าต่างตั้งค่าระบบภาพ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งบนจอของหน้าต่างตั้งค่าระบบภาพ">
+									<longdesc>ตำแหน่งบนจอของหน้าต่างตั้งค่าระบบภาพ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ขนาดของหน้าต่างตั้งค่าระบบเสียง">
+									<longdesc>ขนาดของหน้าต่างตั้งค่าระบบเสียง</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งบนจอของหน้าต่างตั้งค่าระบบเสียง">
+									<longdesc>ตำแหน่งบนจอของหน้าต่างตั้งค่าระบบเสียง</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="ขนาดของหน้าต่างสมุดที่อยู่">
+									<longdesc>ขนาดของหน้าต่างสมุดที่อยู่</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งบนจอของหน้าต่างสมุดที่อยู่">
+									<longdesc>ตำแหน่งบนจอของหน้าต่างสมุดที่อยู่</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งบนจอของเครื่องมืออัตโนมัติ">
+									<longdesc>ตำแหน่งบนจอของเครื่องมืออัตโนมัติ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ขนาดของหน้าต่างเครื่องมืออัตโนมัติ">
+									<longdesc>ขนาดของหน้าต่างเครื่องมืออัตโนมัติ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งบนจอของหน้าต่างสนทนา">
+									<longdesc>ตำแหน่งบนจอของหน้าต่างสนทนา</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ขนาดของหน้าต่างสนทนา">
+									<longdesc>ขนาดของหน้าต่างสนทนา</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="ตำแหน่งบนจอของหน้าต่างหลัก">
+									<longdesc>ตำแหน่งบนจอของหน้าต่างหลัก</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="เปิดใช้การตรวจหาเครือข่าย STUN">
+								<longdesc>เปิดใช้การตั้งค่าเครือข่ายโดยอัตโนมัติจากการตรวจสอบ STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="เซิร์ฟเวอร์ STUN">
+								<longdesc>เซิร์ฟเวอร์ STUN ที่จะใช้เพื่อการรองรับ STUN ซึ่ง STUN เป็นเทคโนโลยีที่ทำให้คุณสามารถทะลุผ่านเกตเวย์ NAT บางประเภทได้</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="เสียงสายไม่ว่าง">
+								<longdesc>เสียงที่จะเล่นเมื่อจบการเรียกสาย หรือเมื่อเรียกไปยังสายที่ไม่ว่าง ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="เล่นเสียงสายไม่ว่าง">
+								<longdesc>จะเล่นเสียงที่เลือกเมื่อจบการเรียกสาย หรือเมื่อเรียกไปยังสายที่ไม่ว่าง ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="เสียงหมุนเลขหมาย">
+								<longdesc>เสียงที่จะเล่นเมื่อเรียกสายออก ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="เล่นเสียงเรียก">
+								<longdesc>จะเล่นเสียงที่เลือกเมื่อเรียกสายออกไปหาผู้อื่น ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="เล่นเสียงเมื่อมีเมลเสียงชิ้นใหม่">
+								<longdesc>จะเล่นเสียงที่เลือกเมื่อได้รับเมลเสียงชิ้นใหม่ ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="เสียงเมลเสียงชิ้นใหม่">
+								<longdesc>เสียงที่จะเล่นเมื่อมีเมลเสียงชิ้นใหม่ ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="เล่นเสียงเมื่อมีข้อความใหม่">
+								<longdesc>จะเล่นเสียงที่เลือกเมื่อได้รับข้อความด่วนชิ้นใหม่ ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="เสียงข้อความด่วน">
+								<longdesc>เสียงที่จะเล่นเมื่อมีข้อความด่วนชิ้นใหม่ ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="เล่นเสียงเมื่อมีการเรียกเข้า">
+								<longdesc>จะเล่นเสียงที่เลือกเมื่อมีการเรียกสายเข้า ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="เสียงเรียกเข้า">
+								<longdesc>เสียงที่จะเล่นเมื่อมีสายเรียกเข้า ถ้าเปิดใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="อุปกรณ์เสียงขาออกสำรอง">
+								<longdesc>เลือกอุปกรณ์เสียงออกสำรองที่จะใช้เล่นเสียงของเหตุการณ์ต่างๆ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="สถานะการเชื่อมต่อแบบยาว">
+								<longdesc>ข้อมูลแบบยาวของสถานะการเชื่อมต่อ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="สถานะการเชื่อมต่อแบบสั้น">
+								<longdesc>ข้อมูลแบบสั้นของสถานะการเชื่อมต่อ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="ชื่อเต็ม">
+								<longdesc>กรอกชื่อเต็มของคุณ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="อัตราเฟรมภาพ">
+								<longdesc>อัตราเฟรมภาพที่ส่งสูงสุด ในหน่วยเฟรม/วินาที การส่งจริงอาจไม่ได้ถึงอัตรานี้ ถ้าค่าคุณภาพขั้นต่ำของภาพถูกกำหนดในการให้น้ำหนักระหว่างเวลากับภาพเป็นค่าต่ำกว่า 31 และอัตราบิตที่เลือกไม่เพียงพอที่จะรองรับคุณภาพขั้นต่ำดังกล่าว</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="ดูตัวอย่างภาพ">
+								<longdesc>แสดงภาพจากกล้องของคุณ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="ฟอร์แมตวีดิทัศน์">
+								<longdesc>เลือกฟอร์แมตสำหรับกล้องวีดิทัศน์ (ใช้ไม่ได้กับกล้อง USB ส่วนใหญ่)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="ช่องสัญญาณภาพ">
+								<longdesc>หมายเลขช่องสัญญาณภาพที่จะใช้ (เพื่อเลือกกล้อง, ทีวี หรือแหล่งอื่น)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="ขนาดภาพ">
+								<longdesc>เลือกขนาดของภาพที่จะส่ง: เล็ก (QCIF 176x144) หรือใหญ่ (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="อุปกรณ์ภาพขาเข้า">
+								<longdesc>เลือกอุปกรณ์ภาพขาเข้าที่จะใช้  ถ้ามีปัญหากับอุปกรณ์นี้ โปรแกรมจะส่งภาพทดสอบออกไปแทน</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="อุปกรณ์เสียงขาเข้า">
+								<longdesc>เลือกอุปกรณ์เสียงขาเข้าที่จะใช้</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="อุปกรณ์เสียงขาออก">
+								<longdesc>เลือกอุปกรณ์เสียงขาออกที่จะใช้</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="ที่คั่นหน้า">
+						<longdesc>ที่คั่นหน้าสำหรับโฟลเดอร์ใน gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="เกมที่เล่นก่อนหน้านี้">
+						<longdesc>รายการเกมที่เล่นก่อนหน้านี้</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="สถิติของการเล่นเกม">
+						<longdesc>รายการสตริงในรูปของระเบียน: ชื่อ, จำนวนเกมชนะ, จำนวนเกมที่เล่นทั้งหมด, เวลาที่ดีที่สุด (เป็นวินาที) และเวลาที่แย่ที่สุด (เป็นวินาทีเช่นกัน) เกมที่ไม่ได้เล่นไม่จำเป็นต้องเก็บ</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="แฟ้มเกมที่จะใช้">
+						<longdesc>ชื่อของแฟ้ม scheme ที่เก็บเกมถอดไพ่ที่จะเล่น</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="ภาพเคลื่อนไหว">
+						<longdesc>กำหนดว่าจะใช้ภาพเคลื่อนไหวขณะย้ายไพ่หรือไม่</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="เสียง">
+						<longdesc>กำหนดว่าจะเล่นเสียงของเหตุการณ์ต่างๆ หรือไม่</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="รูปแบบการควบคุม">
+						<longdesc>เลือกว่าจะใช้การลากไพ่ หรือจะคลิกต้นทางและปลายทาง</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="จะแสดงแถบสถานะหรือไม่">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="จะแสดงแถบเครื่องมือหรือไม่">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="ชื่อแฟ้มชุดตกแต่ง">
+						<longdesc>ชื่อของแฟ้มที่เก็บรูปภาพสำรับไพ่</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

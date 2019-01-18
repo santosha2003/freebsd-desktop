@@ -1,0 +1,72 @@
+#!/bin/sh
+#/usr/sbin/portsnap fetch extract
+cd /usr
+/usr/update-svn
+#freebsd-update cron
+#freebsd-update install
+# backup to /mnt/freebsd
+export currentdate=$(date +%Y%m%d-%H-%M)
+setenv currentdate=$(date +%Y%m%d-%H-%M)
+#tar -C/ -cf - boot root etc var usr/local | xz -f > "/mnt/freebsd/ar-$HOST-$currentdate.tar.xz"
+##tar -C/ -cf /mnt/freebsd/kernel-$HOST-$currentdate.txz boot/kernel
+#tar -C/ -cf /mnt/freebsd/kernel-$HOST-$currentdate.txz boot/kernel
+tar -C/ -cf /mnt/freebsd/etc-$HOST-$currentdate.txz etc
+tar -C/ -cf /mnt/freebsd/local-etc-$HOST-$currentdate.txz usr/local/etc
+#tar -C/ -cf /mnt/freebsd/local-$HOST-$currentdate.txz usr/local
+#tar -C/ -cf /mnt/freebsd/usr-$HOST-$currentdate.txz usr
+#tar -C/ -cf /mnt/freebsd/var-$HOST-$currentdate.txz var
+#tar -C/ -cf /mnt/freebsd/bin-$HOST-$currentdate.txz bin libexec lib sbin
+#tar -C/ -cf /mnt/freebsd/mail-$HOST-$currentdate.txz var/mail
+cd /usr/obj
+chflags -R noschg,nosunlnk *
+#rm -rf /usr/obj/*
+cp /usr/src/sys/amd64/conf/GENERIC /usr/kern
+#cp /usr/src/sys/kern/kern_module.c /usr/kern_module.orig
+cp /usr/kern/KERN64* /usr/src/sys/amd64/conf
+#cp  /usr/kern_module.c /usr/src/sys/kern/kern_module.c
+chmod -R 1777 /tmp
+#kernel world
+#script /root/up-kern.out
+cd /usr/src
+make cleandir
+make cleandir
+rm /root/buildkern.out
+rm /root/up-kern.out
+rm /root/build-w.out
+rm /root/up-world.out
+
+#pkg install -fy llvm38 clang38
+#cp -R /usr/local/llvm38/lib/clang/3.8.1/include/* /usr/include/
+#+ toolchains 
+make -DNOCCACHE CC=clang CPP=clang-cpp CXX=clang++ includes kernel-toolchain libraries >> /root/up-kern.out
+#make includes libraries kernel-toolchain >> /root/up-kern.out
+make -DNOCCACHE buildworld  >>/root/build-w.out
+#make buildworld  >>/root/build-w.out
+make -DNOCCACHE kernel KERNCONF=KERN64  >>/root/buildkern.out
+#make installkernel KERNCONF=KERN64  >>/root/up-kern.out
+make cleandepend
+make depend
+make -C sys/boot install
+#make -j4 kernel KERNCONF=KERN64  >>/root/up-kern.out
+#exit
+# shutdown -r now
+##singleuser mode better..     shutdown now mount -a swapon -a
+cd /usr/src
+make installworld  >> /root/up-world.out
+#//
+#mergemaster -Fi
+#
+make build32 install32
+
+#script /root/up-world.out
+#//manual
+#exit
+#portupgrade -afrRky -m 'config-conditional'
+#portupgrade -afrRky
+#portmaster xorg
+#script /root/up-log.out
+#portupgrade -arR
+
+#
+/usr/bin/nice /usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -- "/usr/up"
+

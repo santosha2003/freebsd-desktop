@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="ارجاع تماس‌ها به میزبان داده شده در صورت جواب ندادن">
+								<longdesc>اگر به کار انداخته شود، اگر به تماسی پاسخ ندهید به میزبانی که در فیلد زیر مشخص می‌شود ارجاع خواهد شد</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="ارجاع تماس‌ها به میزبان داده شده در صورت مشغول بودن">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="تماس‌ها همیشه به میزبان داده شده ارجاع شوند">
+								<longdesc>اگر به کار انداخته شود، همه‌ی تماس‌های دریافتی به میزبانی که در فیلد زیر مشخص می‌شود ارجاع خواهد شد</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="محدوده‌ی درگاه UDP">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="محدوده‌ی درگاه TCP">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="ارجاع تماس‌ها به میزبان">
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="در حال ارسال DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="به کار انداختن «آغاز سریع»">
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema>
+								<longdesc>این گزینه H.245 را خیلی زود در تنظیمات به کار می‌اندازد</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="درگاه گوش دادن">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="dtmf_mode">
+							<local_schema short_desc="در حال ارسال DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="ارجاع تماس‌ها به میزبان">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="درگاه گوش دادن">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="حداکثر میانگیر jitter">
+								<longdesc>حداکثر اندازه‌ی میانگیر jitter برای دریافت صدا (به میلی‌ثانیه)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="به کار انداختن تشخیص سکوت">
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="فهرست کُدک‌های صدا">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="بدون انقضای مدت برای پاسخ">
+								<longdesc>رد یا ارجاع خودکار تماس‌های دریافتی اگر پس از مدت زمان مشخص شده (به ثانیه) پاسخ داده نشدند</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="موقعیت پنجره‌ی ویدئوی دوردست">
+									<longdesc>موقعیت پنجره‌ی ویدئوی دوردست</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="اندازه‌ی پنجره‌ی ویدئوی دوردست">
+									<longdesc>اندازه‌ی پنجره‌ی ویدئوی دوردست</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="نمای ویدئوی پیش‌فرض">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="قرار دادن پنجره‌های نمایش دهنده‌ی ویدئو روی همه‌ی پنجره‌های دیگر در حین تماس‌ها">
+									<longdesc>قرار دادن پنجره‌های نمایش دهنده‌ی ویدئو روی همه‌ی پنجره‌های دیگر در حین تماس‌ها</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="مقدار زوم">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="اندازه‌ی پنجره‌ی ترجیحات">
+									<longdesc>اندازه‌ی پنجره‌ی ترجیحات</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="موقعیت پنجره‌ی ترجیحات روی صفحه‌ی نمایش">
+									<longdesc>موقعیت پنجره‌ی ترجیحات روی صفحه‌ی نمایش</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="اندازه‌ی پنجره‌ی ترجیحات">
+									<longdesc>اندازه‌ی پنجره‌ی ترجیحات</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="موقعیت پنجره‌ی ترجیحات روی صفحه‌ی نمایش">
+									<longdesc>موقعیت پنجره‌ی ترجیحات روی صفحه‌ی نمایش</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="اندازه‌ی پنجره‌ی دفترچه‌ی نشانی">
+									<longdesc>اندازه‌ی پنجره‌ی دفترچه‌ی نشانی</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="موقعیت پنجره‌ی دفترچه‌ی نشانی روی صفحه‌ی نمایش">
+									<longdesc>موقعیت پنجره‌ی دفترچه‌ی نشانی روی صفحه‌ی نمایش</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="موقعیت پنجره‌ی دروئید روی صفحه‌ی نمایش">
+									<longdesc>موقعیت پنجره‌ی دروئید روی صفحه‌ی نمایش</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="اندازه‌ی پنجره‌ی دروئید">
+									<longdesc>اندازه‌ی پنجره‌ی دروئید</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="موقعیت پنجره‌ی اصلی روی صفحه‌ی نمایش">
+									<longdesc>موقعیت پنجره‌ی اصلی روی صفحه‌ی نمایش</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="کارگزار STUN">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="صدای بوق اشغال">
+								<longdesc>صدایی که در صورت به کار انداخته شده، در پایان تماس‌ها یا هنگام تماس با کسی که مشغول است پخش خواهد شد</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="پخش بوق اشغال">
+								<longdesc>در صورت به کار انداخته شدن، صدای انتخاب شده در پایان تماس‌ها یا هنگام تماس با کسی که مشغول است پخش خواهد شد</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema>
+								<longdesc>صدایی که در صورت به کار انداخته شدن، هنگام تماس گرفتن با دیگران پخش خواهد شد</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="پخش زنگ تلفن">
+								<longdesc>در صورت به کار انداخته شدن، صدای انتخاب شده هنگام تماس گرفتن با دیگران پخش خواهد شد</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="پخش صدا هنگام دریافت تماس">
+								<longdesc>در صورت به کار انداخته شدن صدای انتخاب شده هنگام دریافت تماس پخش خواهد شد</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="صدای تماس دریافتی">
+								<longdesc>صدایی که در صورت به کار انداخته شدن، هنگام دریافت تماس پخش خواهد شد</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="آهنگ چارچوب">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="پیش‌نمایش ویدئو">
+								<longdesc>نمایش تصاویر از دستگاه دوربین شما</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="قالب ویدئو">
+								<longdesc>قالب دوربین ویدئو را انتخاب کنید (شامل بیشتر دوربین‌های USB نمی‌شود)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="کانال ویدئویی">
+								<longdesc>شماره‌ی کانال ویدئویی استفاده شونده (برای انتخاب دوربین، تلویزیون یا منابع دیگر)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="اندازه‌ی ویدئو:">
+								<longdesc>اندازه‌ی ویدئوی ارسالی را انتخاب کنید: کوچک (QCIF ۱۷۶×۱۴۴) یا بزرگ (CIF ۳۵۲×۲۸۸)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="دستگاه ورودی ویدئو">
+								<longdesc>دستگاه ورودی ویدئویی استفاده شونده را انتخاب کنید. اگر هنگام استفاده از این دستگاه خطایی رخ دهد یک تصویر آزمایشی ارسال خواهد شد.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="دستگاه ورودی صدا">
+								<longdesc>دستگاه ورودی صدای استفاده شونده را انتخاب کنید</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="دستگاه خروجی صدا">
+								<longdesc>دستگاه خروجی صدای استفاده شونده را انتخاب کنید</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="چوب‌الف‌ها">
+						<longdesc>چوب الف های پوشه‌ی gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="بازی‌های به‌تازگی بازی شده">
+						<longdesc>یک فهرست از بازی‌های به‌تازگی بازی شده.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="آمار بازی‌های انجام شده">
+						<longdesc>فهرستی از رشته‌ها که به شکل پنج‌تایی هستند: نام، بردها، ‌مجموع بازی‌های انجام شده، بهترین زمان (به ثانیه) و بدترین زمان (آن هم به ثانیه). باز‌‌ی‌های بازی نشده نمایش داده نمی‌شوند.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="پرونده‌ی بازی مورد استفاده">
+						<longdesc>نام پرونده‌ی شِمای حاوی بازی‌های یک نفره برای بازی.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="پویانمایی‌ها">
+						<longdesc>اینکه از پویانمایی در حرکت کارتها استفاده شود یا نه.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="صدا">
+						<longdesc>این که صدای رویدادهای پخش شود یا نه.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="انتخاب سبک کنترل">
+						<longdesc>انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد کلیک شود</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="این که نوار وضعیت نشان داده شود یا نه">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="این که نوار ابزار نشان داده شود یا نه">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="نام پرونده‌ی تم">
+						<longdesc>نام پرونده‌ی گرافیک کارت‌ها.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

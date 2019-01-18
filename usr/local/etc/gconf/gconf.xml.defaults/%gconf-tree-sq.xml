@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Kronollogjia e thirrjeve">
+							<longdesc>Kronollogjia e 100 thirrjeve të fundit</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Serverët LDAP">
+							<longdesc>Lista e serverëve të konfiguruar LDAP</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Shfaq kontaktet jashtë linje">
+							<longdesc>Nëse aktivizuar, kontaktet jashtë linje do të shfaqen në listë</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Lista e grupeve të grupuar në listë">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="Lista e profileve">
+							<longdesc>Lista e profileve me të cilat Ekiga duhet të regjistrohet</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Transferon telefonatat tek host i dhënë nëse  nuk ka përgjigje">
+								<longdesc>Nëse aktivizohet, të gjitha telefonatat në hyrje do do të transferohen drejt  host-it të specifikuar në fushën e mëposhtme nëse nuk i përgjigjesh thirrjes</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Transferon telefonatat tek host i dhënë nëse je i zënë">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Gjithmonë transfero telefonatat drejt host-it të caktuar">
+								<longdesc>Nëse aktivizohet, të gjitha telefonatat në hyrje do të transferohen drejt host-it të specifikuar në fushën e mëposhtme</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Intervali i portave UDP">
+								<longdesc>Intervali i portave UDP që do të përdoren nga Ekiga.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Intervali i portave TCP">
+								<longdesc>Intervali i portave TCP që Ekiga do të përdorë për kanalin H.323 H.245. Ky interval portash nuk ka efekt nëse pjesmarrësit e një konference të jenë duke përdorur Tunneling H.245.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Transfero telefonatat drejt host-it">
+								<longdesc>Host-i drejt të cilit do të transferohen telefonatat në rast se transferimi është aktivizuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Dërgimi DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Aktivo &quot;Nisje e Shpejtë&quot;">
+								<longdesc>Lidhja do të kryhet në modalitetin Nisje e Shpejtë. Nisja e Shpejtë është një mënyrë e re për të filluar telefonatat më shpejt se në  H.323v2.  Nuk suportohet nga Netmeeting dhe po të përdoren Nisja e Shpejtë dhe Tunneling H.245 njëkohësisht disa versione të Netmeeting mund të kenë probleme</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Aktivo H.245 e shpejtë">
+								<longdesc>Kjo aktivizon H.245 e shpejtë në përgatitje</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Aktivo tunelin H.245">
+								<longdesc>Aktivizon mënyrën e Tunneling H.245. Në mënyrën e Tunneling H.245, mesazhet janë të kapsuluara në kanalin H.225 (porta 1720). Kjo regjistron një lidhje TCP gjatë thirrjeve. H.245 Tunneling është shtuar në H.323v2 dhe nuk punon me Netmeeting. Përdorimi i Nisjes së Shpejtë dhe Tunneling H.245 së bashku mund të krijojë probleme në disa versione të Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Porta në pritje">
+								<longdesc>Porta në pritje të thirrjeve në hyrje. Ekiga duhet të riniset që vlera e re të ketë efekt.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Skadenca e NAT binding">
+								<longdesc>Cakto numrin e sekondave mbas të cilave Ekiga duhet të rifreskojë lidhjen NAT kur përdoret STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Dërgimi DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Transfero telefonatat drejt host-it">
+								<longdesc>Host-i drejt të cilit do të transferohen telefonatat në rast se transferimi është aktivizuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Proxy në dalje">
+								<longdesc>Proxy i jashtëm SIP për telefonatat në dalje</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Porta në pritje">
+								<longdesc>Porta në pritje të lidhjeve në hyrje. Ekiga duhet të riniset që vlera e re të ketë efekt</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Shkëmbimi temporal spacial (TSTO)">
+								<longdesc>Tregon nëse duhen mbajtur në maksimum frame në sekondë apo duhen ulur për të mbajtur një nivel minimum (spacior) kualiteti për të gjithë frame. 0: kualiteti më i lartë minimum, 31: kualiteti më i ulët minimum.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Banda video maksimum RX">
+								<longdesc>Bitrate maksimum për marrjen video në kbit/s. Kjo vlerë do t&apos;i kalohet palës tjetër në menyrë që të përshtasë (nëse mund ta bëjë) shpejtësinë maksimum të dërgimit nëse gjendet mbi vlerën e dhënë</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Banda video maksimum TX">
+								<longdesc>Maksimumi i bandës video TX në kbit/s. Cilësia e videos dhe numri i imazheve të transmetuara për sekondë (varet nga kodeku i zgjedhur) do të përshtatet në mënyrë dinamike sipër minimumit gjatë telefonatave për të minimizuar bandën tek vlera e dhënë</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Lista e kodekëve video">
+								<longdesc>Lista e kodekëve video</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Buffer maksimum i jitter">
+								<longdesc>Masa maksimale e jitter buffer për marrjen e zërit (në ms).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Aktivo zbulimin e heshtjes">
+								<longdesc>Nëse aktivizohet, përdoret zbulimi i heshtjes me kodekët që e suportojnë</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Lista e kodekëve audio">
+								<longdesc>Lista e kodekëve audio</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Asnjë skadencë kohore për përgjigjen">
+								<longdesc>Refuzo automatikisht ose transfero telefonatat në hyrje nëse nuk ka përgjigje brenda kohës së caktuar (në sekonda)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Pozicioni i dritares së videos remote">
+									<longdesc>Pozicioni i dritares së videos remote</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Madhësia e dritares së videos remote">
+									<longdesc>Madhësia e dritares së videos remote</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Shfaqja e video-s para se të kalohet në modalitet me ekran të plotë">
+									<longdesc>Shfaqja e video-s para se të kalohet në modalitet me ekran të plotë (të njëjtat vlera sikurse video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Paraqitja e prezgjedhur e videos">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Vendos dritaret që shfaqin videon mbi dritaret e tjera gjatë bisedave">
+									<longdesc>Vendos dritaret që shfaqin videon mbi dritaret e tjera gjatë bisedave</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Vlera e zmadhimit">
+									<longdesc>Vlera e zmadhimit që i duhet aplikuar figurave shfaqura në dritaren kryesore (mund të jetë 50, 100, ose 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Përcakto algoritmin e shkallëzimit software">
+									<longdesc>Specifikon algoritmin e shkallëzimit software: 0: fqinj i afërt, 1: fqinj i afërt me kutizë filtrimi, 2: filtrim bilinear, 3: filtrim hiperbolik. Nuk aplikohet në sistemet windows.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Lejo shkallëzimin software figurë-në-figurë">
+									<longdesc>Lejon Ekiga të përdorë shkallëzimin software figurë-në-figurë nëse mungon suporti hardware. Nëse është caktuar në &quot;false&quot;, Ekiga nuk do të përpiqet të hapë PIP nëse mungon suporti hardware.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Çaktivizo përshpejtimin hardware të video-s">
+									<longdesc>Ky opsion çaktivizon përshpejtimin hardware video DirectX (në win32) dhe XVideo (në Linux)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Madhësia e dritares së preferimeve">
+									<longdesc>Madhësia e dritares së preferimeve</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Pozicioni në ekran i dritares së preferimeve">
+									<longdesc>Pozicioni në ekran i dritares së preferimeve</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Madhësia e dritares së preferimeve">
+									<longdesc>Madhësia e dritares së preferimeve</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Pozicioni në ekran i dritares së preferimeve">
+									<longdesc>Pozicioni në ekran i dritares së preferimeve</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Madhësia e dritares së rregullimeve video">
+									<longdesc>Madhësia e dritares së rregullimeve video</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Pozicioni në ekran i dritares së rregullimeve video">
+									<longdesc>Pozicioni në ekran i dritares së rregullimeve video</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Madhësia e dritares së rregullimeve audio">
+									<longdesc>Madhësia e dritares së rregullimeve audio</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Pozicioni në ekran i dritares së rregullimeve audio">
+									<longdesc>Pozicioni në ekran i dritares së rregullimeve audio</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Madhësia e dritares së rubrikës">
+									<longdesc>Madhësia e dritares së rubrikës</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Pozicioni në ekran i dritares së rubrikës">
+									<longdesc>Pozicioni në ekran i dritares së rubrikës</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Pozicioni në ekran i dritares së asistentit të konfigurimit">
+									<longdesc>Pozicioni në ekran i dritares së asistentit të konfigurimit</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Madhësia e dritares së asistentit të konfigurimit">
+									<longdesc>Madhësia e dritares së asistentit të konfigurimit</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Pozicioni në ekran i dritares së bisedës">
+									<longdesc>Pozicioni në ekran i dritares së bisedës</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Madhësia e dritares së bisedave">
+									<longdesc>Madhësia e dritares së bisedave</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Pozicioni në ekran i dritares kryesore">
+									<longdesc>Pozicioni në ekran i dritares kryesore</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="Serveri STUN">
+								<longdesc>Serveri STUN që duhet përdorur për suportin STUN. STUN është një teknikë që mundëson kalimin midis disa prej llojeve gateway NAT</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Tingulli për linjën e zënë">
+								<longdesc>Tingulli që do dëgjohet në fund të thirrjes apo kur mer dikë që është i zënë, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Tingull kur linja është e zënë">
+								<longdesc>Tingulli i zgjedhur do dëgjohet në fund të thirrjeve ose kur merr dikë që është i zënë, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Tingulli i tonit të thirrjes">
+								<longdesc>Tingulli që do dëgjohet kur merr dikë, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Bjeri ziles">
+								<longdesc>Tingulli i zgjedhur do dëgjohet kur thërret dikë, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Tingull kur ka postë të re zanore">
+								<longdesc>Tingulli i zgjedhur do dëgjohet kur vjen një postë e re zanore, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Tingulli i postës së re zanore">
+								<longdesc>Tingulli që do dëgjohet kur ka një postë zanore të re, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Tingull kur ka mesazh të ri">
+								<longdesc>Tingulli i zgjedhur do dëgjohet kur vjen një mesazh i ri, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Tingulli i mesazhit të ri direkt">
+								<longdesc>Tingulli që do dëgjohet kur ka një mesazh çasti të ri, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Tingull kurr arrin një thirrje">
+								<longdesc>Tingulli i zgjedhur do dëgjohet kur vijnë thirrje, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Tingulli i thirrjeve në hyrje">
+								<longdesc>Tingulli që do dëgjohet për telefonatat në hyrje, nëse është aktivuar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dispozitivi alternativ i zërit në dalje">
+								<longdesc>Zgjidh dispozitivin alternativ të zërit në dalje për t&apos;u përdorur për tingujt e ndodhive.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Gjëndja hollësisht e kontaktit">
+								<longdesc>Informacione të hollësishme të gjëndjes</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Gjëndja shkurt e kontaktit">
+								<longdesc>Informacione shkurt të gjëndjes</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Emri i plotë">
+								<longdesc>Shkruaj emrin tuaj të plotë</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Raporti i figurave (framerate)">
+								<longdesc>Taksa e frame maksimum e transmetuar në frame/s. Kjo taksë mund të mos arrihet nëse është konfiguruar një kualitet minimum me anë të një vlere TSTO më të vogël se 31 dhe bitrate i zgjedhur nuk është i mjaftueshëm për të përballuar një kualitet të tillë</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Pamja e parë e videos">
+								<longdesc>Shfaq figura nga kamera juaj</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Formati i videos">
+								<longdesc>Zgjidh formatin për video kamerën (nuk hyn në punë për shumicën e kamerave USB).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Kanali i videos">
+								<longdesc>Numri i kanalit të videos që duhet përdorur (për të zgjedhur një webcam , një TV, apo burime të tjerë).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Madhësia e videos">
+								<longdesc>Zgjidh madhësinë e videos së transmetuar : E vogël (QCIF 176x144) ose E madhe (CIF 352x288).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Dispozitivi i videos në hyrje">
+								<longdesc>Zgjidh dispozitivin e videos. Nëse ndeshet një gabim gjatë përdorimit të këtij dispozitivi, do të transmetohet vetëm një figurë prove.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Dispozitivi i zërit në hyrje">
+								<longdesc>Zgjidh dispozitivin e zërit në hyrje</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dispozitivi i zërit në dalje">
+								<longdesc>Zgjidh dispozitivin e zërit në dalje</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Libërshënues">
+						<longdesc>Kartela e libërshënuesve të editorit gconf</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="statistics">
+					<local_schema short_desc="Statistikat e lojrave të përfunduara">
+						<longdesc>Një listë pesëshe emrash, fitoret, lojrat e luajtura gjithsej, koha më e mirë (në sekonda) dhe koha më e keqe (po ashtu në sekonda). Lojrat e papërfunduar nuk është e nevojshme të paqaqiten.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="File i lojës për përdorim">
+						<longdesc>Emri i file të skemës që përmban lojën solitaire për tu luajtur.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Zëri">
+						<longdesc>Nëse tingujt e lojës duhen aktivizuar apo jo.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Zgjidh stilin e kontrollit">
+						<longdesc>Zgjidh ku duhen çuar letrat ose të klikohet tek burimi e pastaj tek destinacioni.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Të shfaqet apo jo kutiza e veglave">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Emri i file-it së temës">
+						<longdesc>Emri i file-it që përmban figurat e letrave.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

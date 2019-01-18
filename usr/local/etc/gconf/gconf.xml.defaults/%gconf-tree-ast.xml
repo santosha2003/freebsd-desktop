@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Hestorial de llamaes">
+							<longdesc>L&apos;hestóricu de les caberes 100 llamaes</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Sirvidores LDAP">
+							<longdesc>Llista de sirvidores LDAP configuraos</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Amosar contautos desconeutaos">
+							<longdesc>Si ta activao, los contautos desconeutaos amosaránse na llista</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Llista de los grupos agrupaos na llista">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="La llista de cuentes">
+							<longdesc>La llista de cuentes nes qu&apos;Ekiga debería rexistrase</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Esviar les llamaes al host indicáu si nun hai rempuesta">
+								<longdesc>Si ta activáu, toles llamaes entrantes esviaránse al host especificáu embaxo si nun contesta a la llamada</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Esviar les llamaes al host indicáu si se tá ocupáu">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Esviar siempre les llamaes al host indicáu">
+								<longdesc>Si ta activáu, toles llamaes entrantes esviaránse al host especificáu embaxo</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Rangu de puertos UDP">
+								<longdesc>L&apos;intervalu de puertos UDP que Ekiga va utilizar.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Rangu de puertos TCP">
+								<longdesc>L&apos;intervalu de puertos TCP que Ekiga va utilizar pa la canal H.323 H.245. Esti intervalu de puertos nun tien efeutu si los dos participantes na conferencia tan usando Túneles H.245.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Esviar les llamaes al host">
+								<longdesc>Meta equí&apos;l host al que tien de ser esviaes les llamaes nos casos escoyíos enriba</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Unvíu DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Activar el &apos;Entamu rápidu&apos;">
+								<longdesc>La conexón afitaráse en mou «Entamu rápidu». «Entamu rápidu» ye un mou nuevu d&apos;entamar llamaes más rápidu y metióse en H.323v2. Nun tá respaldáu por Netmeeting, y usalo con túneles H.245 pue causar cuelgues en diferentes versiones de Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Activar H.245 antiguu">
+								<longdesc>Esto activa H.245 primitivu na configuración</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Activar túnel H.245">
+								<longdesc>Esto activa el mou Túnel H.245. Nesti mou los mensaxes H.245 encapsúlense nel canal H.225 (puertu 1720). Esto permite aforrar un puertu TCP durante les llamaes. El Túnel H.245 introdúxose en H.323v2 y Netmeeting nun lo soporta. L&apos;usu al empar de «Aniciu rápidu» y «Túnel H.245» pue colingar dalgunas versiones de Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Puertu d&apos;escucha">
+								<longdesc>El puertu nel qu&apos;escuchar les conexones entrantes. Ekiga necesita reiniciase pa que&apos;l valor nuevu se aplique.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Desconexón por escesu de tiempu de la vinculación NAT">
+								<longdesc>Meta&apos;l númberu de segundos tres los qu&apos;Ekiga intentará refrescar la vinculación NAT cuando s&apos;use STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Unvíu DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Esviar les llamaes al host">
+								<longdesc>Meta equí&apos;l host al que tien de ser esviaes les llamaes nos casos escoyíos enriba</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Proxy de salida">
+								<longdesc>El Proxy de salida SIP pa usar nes llamaes salientes</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Puertu d&apos;escucha">
+								<longdesc>El puertu nel qu&apos;escuchar les conexones entrantes. Ekiga necesita reiniciase pa que&apos;l valor nuevu se aplique</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Intercambéu temporal espacial (TSTO)">
+								<longdesc>Conseña si se prefier sostener la tasa de cuadros máxima o amenorgala pa caltener un mínimu nivel de calidá (espacial) pa tolos cuadros. 0: máxima calidá mínima, 31: mínima calidá mínima.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Tasa de bits másima de receición (RX) de videu">
+								<longdesc>La másima tasa de bits de receición de videu en kbit/s. Esti valor conseñarase al puntu final del par que puede axustar (de soportalo) la so tasa de bits de tresmisión si ta por enriba del valor conseñau</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Tasa de bits másima de tresmisión (TX) de videu">
+								<longdesc>La másima tasa de bits de tresmisión de videu en kbit/s. La calidá de videu y el númberu de cuadros tresmitios per segundu (dependiendo del codec seleicionáu) axustaránse dinámicamente por enriba del so mínimu durante les llamaes col envís d&apos;amenorgar l&apos;anchu de banda al valor  conseñau</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="La llista de códecs de videu">
+								<longdesc>La llista de códecs de videu</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Memoria intermedia máxima pal jitter">
+								<longdesc>Tamañu máximu de la memoria intermedia de jitter pa receición de soníu (en ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Activar detección de silencios">
+								<longdesc>Si ta activáu, usar la detección de silenciu colos códecs que la soporten</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Llista de códecs de soníu">
+								<longdesc>La llista de codecs d&apos;audio</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Rempuesta automática">
+								<longdesc>Si ta activáu, responder automáticamente a les llames entrantes</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Tiempu máximu ensin rempuesta">
+								<longdesc>Refugar o esviar automáticamente les llamaes entrantes si nun se da rempuesta dempués del tiempu especificñau (en segundos)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Posición de la ventana de vídeu remotu">
+									<longdesc>La posición de la ventana de vídeu remotu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Tamañu de la ventana de vídeu remotu">
+									<longdesc>El tamañu de la ventana de vídeu remotu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="La vista de videu enantes de camudar a pantalla completa">
+									<longdesc>La vista de videu enantes de camudar a pantalla completa (los mesmos valores que video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="La vista de vídeu predeterminada">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Allugar les ventanes amosando&apos;l vídeu penriba d&apos;otres ventanes demientres les llamaes">
+									<longdesc>Allugar les ventanes amosando&apos;l vídeu penriba d&apos;otres ventanes demientres les llamaes</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="El valor del zoom">
+									<longdesc>El valor en porcentax de l&apos;ampliación p&apos;aplicar a les imáxenes amosaes na IGU principal (pue ser 0.50, 1.00 ó 2.00)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Conseña l&apos;algoritmu d&apos;escalau por software">
+									<longdesc>Conseña l&apos;algoritmu d&apos;escalau por software: 0: vecín más averáu, 1:  vecín más averáu con filtru de cuadru, 2: filtrau billinear, 3: filtrau hiperbólicu. Nun s&apos;aplica en sistemes windows.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Permitir escalar por software la imaxe-n&apos;imaxe">
+									<longdesc>Dexar que Ekiga tente escalar por software la imaxe-n&apos;imaxe (PIP) si&apos;l sofitu de hardware nun ta disponible.Conseñando equí &quot;false&quot;, Ekiga nun tentará abrir la PIP si&apos;l sofitu de hardware nun ta disponible.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Desactivar la aceleración de videu por hardware">
+									<longdesc>Esta clave desactiva l&apos;aceleración de hardware DirectX (en win32) y XVideo (en Linux)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Tamañu de la ventana de preferencies">
+									<longdesc>Tamañu de la ventana de preferencies</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posición na pantalla de la ventana de preferencies">
+									<longdesc>Posición na pantalla de la ventana de preferencies</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Tamañu de la ventana de preferencies">
+									<longdesc>Tamañu de la ventana de preferencies</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posición na pantalla de la ventana de preferencies">
+									<longdesc>Posición na pantalla de la ventana de preferencies</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Tamañu del ventanu d&apos;axustes de videu">
+									<longdesc>Tamañu del ventanu d&apos;axustes de videu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posición na pantalla del ventanu d&apos;axustes de videu">
+									<longdesc>Posición na pantalla del ventanu d&apos;axustes de videu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Tamañu del ventanu d&apos;axustes d&apos;audio">
+									<longdesc>Tamañu del ventanu d&apos;axustes d&apos;audio</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posición na pantalla del ventanu d&apos;axustes d&apos;audio">
+									<longdesc>Posición na pantalla del ventanu d&apos;axustes d&apos;audio</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Tamañu de la ventana de la llibreta de direiciones">
+									<longdesc>Tamañu de la ventana de la llibreta de direiciones</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Posición na pantalla de la ventana del llibru de direiciones">
+									<longdesc>Posición na pantalla de la ventana del llibru de direiciones</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Posición na pantalla de la ventana del asistente">
+									<longdesc>Posición na pantalla de la ventana del asistente</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Tamañu de la ventana del asistente">
+									<longdesc>Tamañu de la ventana del asistente</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Posición na pantalla de la ventana de charra">
+									<longdesc>Posición na pantalla de la ventana de charra</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Tamañu de la ventana de charra">
+									<longdesc>Tamañu de la ventana de charra</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Posición na pantalla de la ventana principal">
+									<longdesc>Posición na pantalla de la ventana principal</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Activar la deteición de STUN na rede">
+								<longdesc>Activar la configuración automática de la configuración de rede colos resultaos del test de STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="El servidor STUN">
+								<longdesc>El sirvidor STUN qu&apos;usar nel soporte STUN. STUN ye una teunoloxía que permite dir a traviés de dalgunos tipos de puertes d&apos;enllaz NAT.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="El soníu pal tonu d&apos;ocupáu">
+								<longdesc>El soníu que se reproduz al final de les llamaes o al llamar a daquién que té ocupáu, si tá activáu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Reproducir el tonu d&apos;ocupáu">
+								<longdesc>Si tá activáu, el soníu escoyíu reproduciráse al final de les llamaes o cuando se llame a daquien que té ocupáu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="El soníu pal tonu de llamada">
+								<longdesc>El soníu que se reproduz al llamar a daquien, si tá activáu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Reproducir el tonu de llamada">
+								<longdesc>Si ta activáu, el soníu escoyíu reproduciráse cuando se llame a daquién</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Reproducir un soníu al llegar un corréu de voz nuevu">
+								<longdesc>Si ta activáu, el soníu escoyíu reproduciráse cuando se reciba un corréu de voz</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="El nuevu soníu de corréu de voz">
+								<longdesc>El soníu que se reproduz cuando heba un corréu de voz nuevu, si tá activáu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Reproducir un soníu al llegar un mensaxe nuevu">
+								<longdesc>Si ta activáu, el soníu escoyíu reproduciráse cuando se reciba un mensaxe instantaneu nuevu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="El soníu pal nuevu mensaxe instantaneu">
+								<longdesc>El soníu que se reproduz cuando heba un mensaxe instantáneu nuevu, si tá activáu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Reproducir un soníu pales llamaes entrantes">
+								<longdesc>Si ta activáu, el soníu escoyíu reproduciráse al tener una llamada entrante</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="El soníu de llamada entrante">
+								<longdesc>El soníu que se reproduz en llamaes entrantes, si tá activáu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Preséu de salida de soníu alternativu.">
+								<longdesc>Seleicione un preséu alternativu de salida de soníu pa usalu nos eventos de soníu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Estáu llargu del contautu">
+								<longdesc>La información d&apos;estau llarga</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Estáu curtiu del contautu">
+								<longdesc>La información d&apos;estáu curtia</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Nome completu">
+								<longdesc>Conseña&apos;l to nome completu</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Tasa de fotogrames">
+								<longdesc>La másima tasa de cuadros tresmitíos en cuadros/s. Esta tasa pue nun alcanzase nel casu de configurase una calidá mínima de valor TSTO menor que 31 y la tasa de bits seleicionada nun baste para sofitar esta calidá mínima</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Vista previa del vídeu">
+								<longdesc>Amuesa les imáxenes dende&apos;l so preséu de cámara</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Formatu de vídeu">
+								<longdesc>Escueya&apos;l formatu pa cámares de vídeu. (Nun s&apos;emplega na mayoría de cámares USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Canal de vídeu">
+								<longdesc>El númberu de canal de vídeu que quier usar (seleicionar cámara, tv o otra fonte)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Tamañu del vídeu">
+								<longdesc>Escueya&apos;l tamañu de la imaxe tresmitida: pequeña (QCIF 176x144) o grande (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Preséu d&apos;entrada de vídeu">
+								<longdesc>Escueya&apos;l preséu d&apos;entrada de vídeu que quier usar. Si asocede un error al emplegar esti preséu tresmitiráse una imaxe de preba.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Preséu d&apos;entrada de soníu">
+								<longdesc>Escueya&apos;l preséu d&apos;entrada de soníu que quier usar</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Preséu de salida de soníu">
+								<longdesc>Escueya&apos;l preséu de salida de soníu que quier usar</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Marcadores">
+						<longdesc>carpeta de marcadores de gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Xuegos apocayá">
+						<longdesc>Una riestra de xuegos xugaos apocayá.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Estadístiques de les partíes xugaes">
+						<longdesc>Una riestra de datos en quintetos: nome, victories, total de partíes xugaes, meyor tiempu (en segundos) y peor tiempu (tamién en segundos). Los xuegos ensin partíes nun se representen.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Nome del ficheru del xuegu">
+						<longdesc>Nome del ficheru col esquema que contién el solitariu pa xugar.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animaciones">
+						<longdesc>Amuesa si se tien qu&apos;usar animación pa los movimientos de les cartes.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Soníu">
+						<longdesc>Reproducir o non los soníos de los eventos</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Escueya l&apos;estilu de control">
+						<longdesc>Escueya ente arrastrar les cartes o calcar nel orixe y dempués nel destín</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Cuándo o non amosar la barra d&apos;estáu">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Amosar o anubrir la barra de ferramientes">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Nome del ficheru del tema">
+						<longdesc>Nome del ficheru coles imáxenes pa les cartes</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

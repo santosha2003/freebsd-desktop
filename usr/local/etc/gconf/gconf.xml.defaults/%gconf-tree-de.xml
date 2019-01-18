@@ -1,0 +1,559 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Anrufchronik">
+							<longdesc>Die Chronik der letzten 100 Anrufe</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP-Server">
+							<longdesc>Liste der konfigurierten LDAP-Server</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Abgemeldete Kontakte anzeigen">
+							<longdesc>Wenn aktiviert, werden abgemeldete Kontakte in der Kontaktliste angezeigt.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Liste der eingeklappten Gruppen der Kontaktliste">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Type of Service (TOS) Byte bei ausgehenden RTP IP-Paketen">
+							<longdesc>Das Type of Service (TOS) Byte bei ausgehenden RTP IP-Paketen. Dieses Byte wird vom Netzwerk verwendet, um einen gewissen Grad an Quality of Service (QoS) zur Verfügung zu stellen. Der Standardwert 184 (0xB8) entspricht Expedited Forwarding (EF) PHB laut RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Die Konten-Liste">
+							<longdesc>Die Liste der Konten, für die Ekiga eine Anmeldung vornehmen soll</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="An den angegebenen Rechner weiterleiten, wenn nicht geantwortet wird">
+								<longdesc>Wenn aktiviert, werden alle ankommenden Anrufe, die nicht entgegengenommen werden, an den obenstehenden Rechner weitergeleitet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="An den angegebenen Rechner weiterleiten, wenn besetzt ist">
+								<longdesc>Wenn aktiviert, so werden alle eingehenden Anrufe an den im Feld unten stehenden Rechner weitergeleitet, wenn besetzt ist oder der »Nicht stören«-Modus ausgewählt wurde</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Immer an den angegebenen Rechner weiterleiten">
+								<longdesc>Wenn aktiviert, werden alle ankommenden Anrufe an den obenstehenden Rechner weitergeleitet</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP-Portbereich">
+								<longdesc>Der Bereich der UDP-Ports, die Ekiga benutzen wird.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP-Port-Bereich">
+								<longdesc>Der Bereich von TCP-Ports, der von Ekiga für den H.245-Kanal von H.323 verwendet wird. Dieser Port-Bereich hat keine Auswirkungen, wenn beide Teilnehmer der Konferenz H.245-Tunneling verwenden.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Anrufe an Rechner weiterleiten">
+								<longdesc>Der Rechner, zu dem Anrufe bei Verwendung von Anrufweiterleitung weitergeleitet werden sollen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-Übertragung">
+								<longdesc>Wählen Sie den Modus für die DTMF-Übertragung. Mögliche Werte sind 0 (für »Zeichenkette«), 1 (für »Ton«), 2 (für »RFC2833«) oder 3 (für »Q.931«) (Vorgabewert ist »Zeichenkette«). Wenn ein anderer Wert als »Zeichenkette« gewählt wird, so wird der Text-Chat deaktiviert.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema short_desc="Erweiterte Videofunktionen">
+								<longdesc>Wählen Sie die H.239-Videofunktion. Die Werte können 0 (für »erweitertes Video deaktivieren«), 1 (für »Inhaltsfunktionsmaske zulassen«), 2 (für »Präsentation erzwingen«) oder 3 (für »Live-Funktion erzwingen«) sein</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="H.239 aktivieren">
+								<longdesc>Hiermit wird das H.239-Verfahren für zusätzliche Videofunktionen aktiviert</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="»Schnellstart« aktivieren">
+								<longdesc>Verbindungen werden im Schnellstart-Modus hergestellt. Der Schnellstart-Modus ist ein neuer Weg um Verbindungen schneller herzustellen, er wurde mit H.323v2 eingeführt. Dies wird von Netmeeting nicht unterstützt, die Benutzung des Schnellstartmodus zusammen mit H.245-Tunneln kann einige Versionen von Netmeeting zum Abstürzen bringen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Frühzeitige Verwendung von H.245 aktivieren">
+								<longdesc>H.245 beim Verbindungsaufbau frühzeitig verwenden</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245-Tunnel aktivieren">
+								<longdesc>Hiermit wird der H.245-Tunnelmodus aktiviert. Im H.245-Tunnelmodus werden H.245-Nachrichten im H.225-Kanal (Port 1720) eingekapselt. Dadurch wird während eines Anrufes eine TCP-Verbindung weniger benötigt. H.245-Tunnel wurden mit H.323v2 eingeführt, Netmeeting unterstützt diese nicht. Die Benutzung des Schnellstartmodus zusammen mit H.245-Tunneln kann einige Versionen von Netmeeting zum Abstürzen bringen.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Überwachter Port">
+								<longdesc>Der Port, der für eingehende Verbindungen überwacht werden soll. Ekiga muss neu gestartet werden, damit die Einstellung in Kraft tritt.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Zeitüberschreitung für NAT-Bindung">
+								<longdesc>Zeitraum in Sekunden, nach dem Ekiga versuchen soll, die NAT-Bindung bei Verwendung von STUN zu erneuern</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-Übertragung">
+								<longdesc>Wählen Sie den Modus für die DTMF-Übertragung. Mögliche Werte sind 0 (für »RFC2833«) und 1 (für »INFO«)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Anrufe an Rechner weiterleiten">
+								<longdesc>Der Rechner, zu dem Anrufe bei Verwendung von Anrufweiterleitung weitergeleitet werden sollen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Proxy für ausgehende Verbindungen">
+								<longdesc>Der Ausgangs-Proxy für ausgehende SIP-Verbindungen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Überwachter Port">
+								<longdesc>Der Port, der für eingehende Verbindungen überwacht werden soll. Ekiga muss neu gestartet werden, damit die Einstellung in Kraft tritt</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Temporärer räumlicher Ausgleich">
+								<longdesc>Legt fest, ob die maximale Bildrate erhalten werden soll oder möglicherweise gesenkt werden kann, um ein minimales (räumliches) Qualitätsniveau für alle Bilder zu erhalten. 0: höchste Minimalqualität, 31: niedrigste Minimalqualität</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Maximale RX Video-Bitrate">
+								<longdesc>Die maximale RX-Video-Bitrate in kbit/s. Dieser Wert wird an den beteiligten Endpunkt übertragen, der (sofern unterstützt) seine TX-Bitrate anpassen kann, falls diese über dem übertragenden Wert liegt</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Maximale TX Video-Bitrate">
+								<longdesc>Die maximale TX Video-Bitrate in kbit/s. Die Videoqualität und die Anzahl der übertragenden Bilder pro Sekunde (abhängig vom gewählten Codec) wird dynamisch während eines Anrufes über ihre Minimalwerte angepasst, um zu versuchen, die Bandbreite auf den gegebenen Wert zu minimieren</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Die Liste der Video-Codecs">
+								<longdesc>Die Liste der Video-Codecs</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Jitter-Puffer-Maximalgröße">
+								<longdesc>Die maximale Größe des Jitter-Puffers, um den Audiodaten beim Empfang verzögert werden (in Millisekunden)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Echo-Unterdrückung aktivieren">
+								<longdesc>Wenn aktiviert, wird Echo-Unterdrückung verwendet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Sprechpausenerkennung einschalten">
+								<longdesc>Wenn aktiviert, Sprechpausenerkennung für Codecs verwenden, die dies unterstützen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Liste der Audio-Codecs">
+								<longdesc>Liste der Audio-Codecs</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Art des im Assistenten ausgewählten Netzwerkes">
+							<longdesc>0: 56 kbit/s, 1: ISDN, 2: DSL 128, 3: DSL 512, 4: LAN, 5: Angepasst</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Automatische Antwort">
+								<longdesc>Wenn aktiviert, werden eingehende Anrufe automatisch beantwortet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Kein Zeitlimit für Rufannahme">
+								<longdesc>Anrufe, die innerhalb der angegebenen Zeit (in Sekunden) nicht angenommen wurden, automatisch ablehnen oder weiterleiten</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Position des Videofensters der Gegenseite">
+									<longdesc>Position des Videofensters der Gegenseite</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Größe des Videofensters der Gegenseite">
+									<longdesc>Größe des Video-Fensters der Gegenseite</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Die Video-Ansicht, bevor in das Vollbild umgeschaltet wurde">
+									<longdesc>Die Video-Ansicht, bevor in das Vollbild umgeschaltet wurde (dieselben Werte wie video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Die Voreinstellung für die Videoansicht">
+									<longdesc>Die voreingestellte Videoansicht (0: Lokal, 1: Gegenseite, 2: Beide zusammen, 3: Beide in einem eigenen Fenster)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Fenster mit Video während einer Verbindung vor anderen Fenstern platzieren">
+									<longdesc>Fenster mit Video während einer Verbindung vor anderen Fenstern platzieren</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Der Vergrößerungsfaktor">
+									<longdesc>Der Vergrößerungsfaktor in Prozent, der für Bilder im Hauptfenster gelten soll (Mögliche Werte sind 50, 100 oder 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Algorithmus zur Software-Skalierung festlegen">
+									<longdesc>Legt den Algorithmus zur Software-Skalierung fest: 0: nächster Nachbar, 1: nächster Nachbar mit Box-Filter, 2: bilinearer Filter, 2: hyperbolischer Filter. Dies wird auf Windows-Systemen nicht angewandt.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Softwaremäßige Bild-in-Bild-Skalierung verwenden">
+									<longdesc>Ekiga erlauben, auf die softwaremäßige Skalierung der Bild-in-Bild-Darstellung zurückzugreifen, wenn keine Hardware-Unterstützung verfügbar ist. Wenn dieser Schlüssel nicht gesetzt ist, wird Ekiga nicht versuchen, die Bild-in-Bild-Darstellung zu öffnen, wenn keine Hardware-Unterstützung verfügbar ist.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Hardware-Videobeschleunigung deaktivieren">
+									<longdesc>Dieser Schlüssel deaktiviert die Hardware-Videobeschleunigung durch DirectX (unter Windows) und XVideo (unter Linux)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Größe des Einstellungen-Fensters">
+									<longdesc>Größe des Einstellungen-Fensters</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position des Einstellungsfensters auf dem Bildschirm">
+									<longdesc>Position des Einstellungsfensters auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Größe des Einstellungen-Fensters">
+									<longdesc>Größe des Einstellungen-Fensters</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position des Einstellungsfensters auf dem Bildschirm">
+									<longdesc>Position des Einstellungsfensters auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Größe des Fensters für die Video-Einstellungen">
+									<longdesc>Größe des Fensters für die Video-Einstellungen</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position des Fensters für Video-Einstellungen auf dem Bildschirm">
+									<longdesc>Position des Fensters für Video-Einstellungen auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Größe des Fensters für die Audio-Einstellungen">
+									<longdesc>Größe des Fensters für die Audio-Einstellungen</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position des Fensters für die Audio-Einstellungen auf dem Bildschirm">
+									<longdesc>Position des Fensters für die Audio-Einstellungen auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Größe des Adressbuch-Fensters">
+									<longdesc>Größe des Adressbuch-Fensters</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position des Adressbuch-Fensters auf dem Bildschirm">
+									<longdesc>Position des Adressbuch-Fensters auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Position des Fensters für den Druiden auf dem Bildschirm">
+									<longdesc>Position des Fensters für den Druiden auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Größe des Druiden-Fensters">
+									<longdesc>Größe des Druiden-Fensters</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Position des Chat-Fensters auf dem Bildschirm">
+									<longdesc>Position des Chat-Fensters auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Größe des Chat-Fensters">
+									<longdesc>Größe des Chat-Fensters</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Leistenbereich des Hauptfensters ändern">
+									<longdesc>Leistenbereich des Hauptfensters ändern (0=Kontakte, 1=Wähltastatur, 2=Anrufchronik)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position des Hauptfensters auf dem Bildschirm">
+									<longdesc>Position des Hauptfensters auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="Größe des Anruf-Fensters">
+									<longdesc>Größe des Anruf-Fensters</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position des Anruf-Fensters auf dem Bildschirm">
+									<longdesc>Position des Anruf-Fensters auf dem Bildschirm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN-Netzwerkerkennung aktivieren">
+								<longdesc>Automatische Netzwerkeinrichtung basierend auf dem STUN-Test aktivieren</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN-Server">
+								<longdesc>Der STUN-Server zum Einsatz der STUN-Unterstützung. STUN ist ein Verfahren, das es ermöglicht, durch einige NAT-Gateways hindurch eine Verbindung aufzubauen</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Klang des Besetzttons">
+								<longdesc>Der Klang, der bei Beendigung einer Verbindung oder bei Anruf einer Person, die beschäftigt ist, abgespielt wird (wenn aktiviert)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Besetztton abspielen">
+								<longdesc>Der gewählte Klang wird (wenn aktiviert) bei Beendigung einer Verbindung oder bei Anruf einer Person, die beschäftigt ist, abgespielt</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Klang für den Wählton">
+								<longdesc>Der Klang, der (wenn aktiviert) abgespielt wird, wenn man jemanden anruft</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Freizeichen abspielen">
+								<longdesc>Der gewählte Klang wird (wenn aktiviert) abgespielt, wenn man jemanden anruft</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Klang bei neuer Sprachnachricht abspielen">
+								<longdesc>Der gewählte Klang wird (wenn aktiviert) abgespielt, wenn eine neue Sprachnachricht eingetroffen ist</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Klang für Sprachnachrichten">
+								<longdesc>Der Klang, der bei einer neuen Sprachnachricht abgespielt wird (wenn aktiviert)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Klang bei neuer Nachricht abspielen">
+								<longdesc>Der gewählte Klang wird (wenn aktiviert) abgespielt, wenn eine neue Nachricht eingetroffen ist</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Klang für eingehende Nachrichten">
+								<longdesc>Der Klang, der (wenn aktiviert) abgespielt wird, wenn eine neue Nachricht eintrifft</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Klang bei eingehendem Anruf abspielen">
+								<longdesc>Der gewählte Klang wird (wenn aktiviert) bei eingehenden Anrufen abgespielt</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Klang bei eingehendem Anruf">
+								<longdesc>Der Klang, der bei eingehendem Anruf abgespielt wird (wenn aktiviert)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Alternatives Gerät für Audiowiedergabe">
+								<longdesc>Wählen Sie ein alternatives Audiowiedergabe-Gerät für die Ausgabe von Klängen bei Ereignissen.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Ausführlicher Kontaktstatus">
+								<longdesc>Die ausführlichen Statusinformationen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Kurzer Kontaktstatus">
+								<longdesc>Die kurze Status-Information</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Voller Name">
+								<longdesc>Tragen Sie Ihren vollen Namen ein</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Bildrate">
+								<longdesc>Das Maximum der übertragenden Bildrate in Bilder/s. Diese Rate wird möglicherweise nicht erreicht, wenn eine minimale Qualität durch einen TSTO-Wert unter 31 konfiguriert wurde und die ausgewählte Bitrate nicht ausreichend ist, um diese minimale Qualität zu erreichen.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Videovorschau">
+								<longdesc>Bilder von der eigenen Kamera anzeigen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Videoformat">
+								<longdesc>Wählen Sie das Format für Videokameras aus. (Irrelevant für die meisten USB-Kameras)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Videokanal">
+								<longdesc>Die zu verwendende Video-Kanalnummer (um Kamera, TV oder andere Quellen auszuwählen)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Videogröße">
+								<longdesc>Wählen Sie die zu übertragende Videogröße aus: Klein (QCIF 176x144) oder Groß (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Gerät für Video-Aufzeichnung">
+								<longdesc>Wählen Sie das Video-Aufnahmegerät, das verwendet werden soll. Wenn ein Fehler bei Benutzung dieses Gerätes auftritt, wird ein Testbild übertragen.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Gerät für Audioaufnahme">
+								<longdesc>Wählen Sie das Audioaufnahme-Gerät</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Gerät für Audiowiedergabe">
+								<longdesc>Wählen Sie das Audiowiedergabe-Gerät</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Lesezeichen">
+						<longdesc>gconf-editor-Ordner-Lesezeichen</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Zuletzt gespielte Spiele">
+						<longdesc>Eine Liste der zuletzt gespielten Spiele.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statistik zu früheren Spielen">
+						<longdesc>Eine Liste von Zeichenketten in Form eines Quintupels: Name, gewonnen, Gesamtanzahl der Spiele, Bestzeit (in Sekunden) sowie schlechteste Zeit (ebenfalls in Sekunden). Nicht gespielte Spiele müssen nicht aufgeführt werden.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Zu verwendende Spieldatei">
+						<longdesc>Der Name der Schema-Datei, die das zu spielende Solitaire-Spiel enthält.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animationen">
+						<longdesc>Legt fest, ob das Bewegen von Karten animiert wird.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Ton">
+						<longdesc>Legt fest, ob bei bestimmten Ereignissen Klänge abgespielt werden.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Legemodus wählen">
+						<longdesc>Dieser Schlüssel legt fest, ob die Karten per Ziehen-und-Ablegen oder per Anklicken gelegt werden sollen.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Legt fest, ob die Statusleiste angezeigt wird">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Legt fest, ob die Werkzeugleiste angezeigt wird">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Name der Themadatei">
+						<longdesc>Der Name der Datei, die die grafische Gestaltung der Karten festlegt.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="desktop">
+			<dir name="gnome">
+				<dir name="policykit">
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Legt fest, ob der Legitimationsdialog Tastatureingaben auf sich ziehen soll.">
+							<longdesc>Ist dies auf wahr gesetzt, zieht der Legitimationsdialog Tastatureingaben auf sich, sodass es nicht möglich ist, in anderen Programmen zu tippen, solange der Dialog aktiv ist. Benutzen Sie dies, wenn ihr Fenstermanager den Legitimationsdialog nicht automatisch fokussiert und sie vermeiden wollen, versehentlich Passwörter in andere Programme zu schreiben.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

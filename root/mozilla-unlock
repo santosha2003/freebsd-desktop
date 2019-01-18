@@ -1,0 +1,17 @@
+cd ~/.mozilla/firefox
+FOLD1=`cat profiles.ini |grep Path |cut -c 6-30`
+echo $FOLD1
+cd $FOLD1
+pwd
+rm -f lock
+cd /compat/linux/root/.mozilla/firefox
+echo $FOLD1
+cd $FOLD1
+pwd
+rm -f lock
+FOLD2=`cat profiles.ini |grep Path |cut -c 6-30`
+echo $FOLD2
+cd $FOLD2
+pwd
+rm -f lock
+

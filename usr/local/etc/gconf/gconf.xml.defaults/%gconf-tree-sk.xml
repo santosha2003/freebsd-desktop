@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="História volaní">
+							<longdesc>História posledných 100 hovorov</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP servery">
+							<longdesc>Zoznam konfigurovaných LDAP serverov</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Zobraziť odpojené kontakty">
+							<longdesc>Ak je povolené, odpojené kontakty sa zobrazia v súpise</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Prehľad zložených skupín v súpise">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Bajt typu služby (TOS) na odchádzajúcich RTP IP paketoch">
+							<longdesc>Bajt typu služby (TOS) na odchádzajúcich RTP IP paketoch. Tento bajt je použitý sieťou na poskytnutie istého stupňa kvality služby (QoS). Predvolená hodnota 184 (0xB8) zodpovedá zrýchlenému preposlielaniu (EF) PHB definovanému v RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Zoznam účtov">
+							<longdesc>Zoznam účtov, voči ktorým sa má Ekiga registrovať</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Ak nie je odpoveď, presmerovať hovor na zadaného hostiteľa">
+								<longdesc>Ak je povolené, všetky prichádzajúce hovory budú presmerované na hostiteľa, ktorý je zadaný v nasledujúcom poli, ak nezodvihnete hovor.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="V prípade zaneprázdnenia presmerovať hovor na zadaného hostiteľa">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Vždy presmerovať hovory zadanému hostiteľovi">
+								<longdesc>Ak je povolené, budú všetky prichádzajúce hovory vždy presmerované na hostiteľa, ktorý je zadaný v nasledujúcom poli</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Rozsah portov UDP">
+								<longdesc>Rozsah portov UDP, ktoré bude Ekiga používať.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Rozsah portov TCP">
+								<longdesc>Rozsah TCP portov, ktoré bude Ekiga používať pre kanál H.323 H.245. Tento rozsah portov nemá vplyv, ak obidvaja účastníci konferencie používajú tunelovanie H.245.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Presmerovať hovory na hostiteľa">
+								<longdesc>Vyberte hostiteľa, na ktorého sa majú presmerovať hovory v prípade, že je povolené presmerovanie hovorov</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Odosielanie DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Povoliť &apos;Rýchly štart&apos;">
+								<longdesc>Spojenie bude otvorené v režime Rýchleho štartu. Rýchly štart je nový spôsob spájania hovorov - rýchlejší, než pomocou H.323v2. Nie je podporovaný Netmeetingom, a súčasné použitie Rýchleho štartu a H.245 tunelovania môže spôsobiť pád niektorých verzii Netmeetingu.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Povoliť včasné H.245">
+								<longdesc>Týmto zapnete skorý H.245 v nastavení</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Povoliť tunelovanie H.245">
+								<longdesc>Týmto zapnete tunelovací režim H.245, v ktorom sú správy zapuzdrené do kanálu H.225 (port 1720). Týmto sa počas hovorov ušetrí jedno TCP spojenie. Tunelovanie H.245 sa zaviedlo v rámci H.323v2 a Netmeeting ho nepodporuje. Ak použijete súčasne Rýchly Štart a H.245 tunelovanie, môže sa Vám podariť zhodiť niektoré verzie Netmeetingu.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Prijímací port">
+								<longdesc>Port, na ktorom sa budú očakávať príchodzie spojenia. Nová hodnota sa uplatní až po reštarte programu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Časový limit väzby NAT">
+								<longdesc>Zadajte počet sekúnd, počas ktorých má Ekiga skúsiť obnoviť väzbu NAT, keď sa používa STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Odosielanie DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Presmerovať hovory na hostiteľa">
+								<longdesc>Vyberte hostiteľa, na ktorého sa majú presmerovať hovory v prípade, že je povolené presmerovanie hovorov</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Proxy pre odchádzajúcu komunikáciu">
+								<longdesc>SIP proxy pre odchádzajúcu komunikáciu, ktorú budete používať pre odchádzajúce hovory</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Prijímací port">
+								<longdesc>Port, na ktorom sa budú očakávať príchodzie spojenia. Nová hodnota sa uplatní až po reštarte programu</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Dočasná priestorová výmena">
+								<longdesc>Či preferujete udržiavanie maximálneho počtu snímkov, alebo ho chcete znížiť, aby sa udržiavala minimálna miera (geometrickej) kvality pre všetky snímky. 0: Najvyššia minimálna kvalita, 31: najnižšia minimálna kvalita</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Maximálny dátový tok prijímaného videa">
+								<longdesc>Maximálny dátový tok RX videa v kbit/s. Táto hodnota bude vyslaná koncovému bodu peera, ktorý môže upraviť (ak to podporuje) TX dátový tok, ak je vyšší ako vyslaná hodnota</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Maximálny dátový tok odosielaného videa">
+								<longdesc>Maximálna prenosová rýchlosť videa v kilobajtoch/s. Kvalita videa a počet prenesených snímok za sekundu (v závislosti na vybranom kodeku) sa budú počas hovorov dynamicky prispôsobovať nad minimálnu hodnotu, aby sa prenosová rýchlosť znížila na zadanú hodnotu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Zoznam video kodekov">
+								<longdesc>Zoznam video kodekov</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Maximálna vyrovnávacia pamäť výpadkov">
+								<longdesc>Maximálna vyrovnávacia pamäť výpadkov príjmu zvuku (v ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Povoliť detekciu ticha">
+								<longdesc>Ak je povolené, použije sa detekcia ticha pre kodeky, ktoré to podporujú</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Zoznam zvukových kodekov">
+								<longdesc>Zoznam zvukových kodekov</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Druh siete vybranej v asistentovi">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Vlastné</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Automatická odpoveď">
+								<longdesc>Ak je povolené, automaticky zodvihne prichádzajúce hovory</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Časový limit pri nezodvihnutí">
+								<longdesc>Automaticky odmietať alebo presmerovávať prichádzajúce hovory, ak nie sú prijaté v určenej dobe (v sekundách)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie okna vzdialeného videa">
+									<longdesc>Umiestnenie okna vzdialeného videa</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Veľkosť okna vzdialeného videa">
+									<longdesc>Veľkosť okna vzdialeného videa</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Zobrazenie videa pred prepnutím na celú obrazovku">
+									<longdesc>Zobrazenie videa pred prepnutím na celú obrazovku (rovnaké hodnoty ako video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Predvolené zobrazenie videa">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Počas hovorov umiestňovať okná zobrazujúce video nad ostatné okná">
+									<longdesc>Počas hovorov umiestňovať okná zobrazujúce video nad ostatné okná</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Hodnota zväčšenia">
+									<longdesc>Hodnota zväčšenia v percentách, ktorá sa má používať pre obrázky zobrazené v hlavnom GUI (môže byť 50, 100 alebo 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Určte algoritmus softvérového škálovania">
+									<longdesc>Určte algoritmus softvérového škálovania: 0: najbližší sused, 1: najbližší sused s plošným filtrom, 2: bilineárne filtrovanie, 3: hyperbolické filtrovanie. Nepoužíva sa na systémoch Windows.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Povoliť softvérovú podporu obrazu v obraze">
+									<longdesc>Povoliť programu Ekiga použitie softvérovej podpory obrazu v obraze (PIP), ak nie je dostupná hardvérová podpora. Ak toto nie je povolené, Ekiga sa nepokúsi otvoriť PIP, ak nie je dostupná hardvérová podpora.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Vypnúť hardvérovú akceleráciu videa">
+									<longdesc>Tento kláves vypína hardvérovú akceleráciu videa DirectX (na win32) a XVideo (na Linuxe)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Veľkosť okna nastavení">
+									<longdesc>Veľkosť okna nastavení</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie okna nastavení na obrazovke">
+									<longdesc>Umiestnenie okna nastavení na obrazovke</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Veľkosť okna nastavení">
+									<longdesc>Veľkosť okna nastavení</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie okna nastavení na obrazovke">
+									<longdesc>Umiestnenie okna nastavení na obrazovke</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Veľkosť okna nastavení videa">
+									<longdesc>Veľkosť okna nastavení videa</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie okna nastavení obrazu na obrazovke">
+									<longdesc>Umiestnenie okna nastavení obrazu na obrazovke</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Veľkosť okna nastavení zvuku">
+									<longdesc>Veľkosť okna nastavení zvuku</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie okna nastavenia zvuku na obrazovke">
+									<longdesc>Umiestnenie okna nastavenia zvuku na obrazovke</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Veľkosť okna adresára kontaktov">
+									<longdesc>Veľkosť okna adresára kontaktov</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie okna adresára kontaktov na obrazovke">
+									<longdesc>Umiestnenie okna adresára kontaktov na obrazovke</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie okna sprievodcu na obrazovke">
+									<longdesc>Umiestnenie okna sprievodcu na obrazovke</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Veľkosť okna sprievodcu">
+									<longdesc>Veľkosť okna sprievodcu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie okna rozhovoru na obrazovke">
+									<longdesc>Umiestnenie okna rozhovoru na obrazovke</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Veľkosť okna rozhovoru">
+									<longdesc>Veľkosť okna rozhovoru</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Umiestnenie hlavného okna na obrazovke">
+									<longdesc>Umiestnenie hlavného okna na obrazovke</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Povoliť detekciu sieťového STUN">
+								<longdesc>Zapnúť automatické nastavenie siete vytvorené STUN testom</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="Server STUN">
+								<longdesc>Server STUN, ktorý sa má používať pre podporu STUN. STUN je technológia, ktorá umožňuje prechádzať niektorými typmi brán s NAT</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Zvuk obsadzovacieho tónu">
+								<longdesc>Zvuk, ktorý bude prehratý na konci hovorov, alebo pri volaní niekoho, kto je zaneprázdnený, ak je to povolené</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Prehrať obsadzovací tón">
+								<longdesc>Ak je to povolené, tak sa vybraný zvuk prehrá na konci hovorov, alebo pri volaní niekoho, kto je zaneprázdnený</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Zvuk oznamovacieho tónu">
+								<longdesc>Zvuk, ktorý sa bude prehrávať pri volaní, ak je to povolené</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Prehrať zvuk zvonenia">
+								<longdesc>Ak je to povolené, tak sa vybraný zvuk prehrá pri volaní</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Prehrať zvuk pri novom hlasovom odkaze">
+								<longdesc>Ak je to povolené, tak sa vybraný zvuk prehrá, keď sa prijme nový hlasový odkaz</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Zvuk nového hlasového odkazu">
+								<longdesc>Zvuk, ktorý sa bude prehrávať pri príchode novej hlasového odkazu, ak je to povolené</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Prehrať zvuk pri novej správe">
+								<longdesc>Ak je to povolené, tak sa vybraný zvuk prehrá, keď sa prijme nová správa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Zvuk novej okamžitej správy">
+								<longdesc>Zvuk, ktorý sa bude prehrávať pri príchode novej okamžitej správy, ak je to povolené</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Prehrať zvuk pri prichádzajúcom hovore">
+								<longdesc>Ak je to povolené, tak sa vybraný zvuk prehrá pri prichádzajúcom hovore.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Zvuk prichádzajúceho hovoru">
+								<longdesc>Zvuk, ktorý sa bude prehrávať pri prichádzajúcom hovore, ak je to povolené</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Alternatívne zariadenie zvukového výstupu">
+								<longdesc>Vyberte alternatívne zariadenie pre zvukový výstup, ktoré sa má používať pre zvukové udalosti.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Dlhý stav kontaktu">
+								<longdesc>Informácia o dlhom stave</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Krátky stav kontaktu">
+								<longdesc>Informácia o krátkom stave</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Celé meno">
+								<longdesc>Zadajte svoje celé meno</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Frekvencia snímkov">
+								<longdesc>Maximálny počet prenesených snímok za sekundu. Tento počet nemusí byť dosiahnutý v prípade, že bola nastavená minimálna kvalita cez TSTO hodnotu menšia ako 31 a vybraný dátový tok nepostačuje k podpore tejto minimálnej kvality</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Náhľad videa">
+								<longdesc>Zobraziť obraz z vašej kamery</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Formát videa">
+								<longdesc>Vyberte formát pre videokamery (netýka sa väčšiny USB kamier)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Video kanál">
+								<longdesc>Číslo videokanálu, ktorý chcete použiť (pre výber kamery, tv,...).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Veľkosť videa">
+								<longdesc>Vyberte veľkosť prenášaného videa: Malá (QCIF 176x144) alebo Veľká (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Zariadenie video vstupu">
+								<longdesc>Vyberte zariadenie video vstupu, ktoré sa má používať. Ak sa pri používaní tohto zariadenia vyskytne chyba, bude sa prenášať testovací obrázok.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Zariadenie zvukového vstupu">
+								<longdesc>Zadajte zariadenie pre zvukový vstup</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Zariadenie zvukového výstupu">
+								<longdesc>Zadajte zariadenie pre zvukový výstup</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Záložky">
+						<longdesc>záložky priečinka pre gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Naposledy hrané hry">
+						<longdesc>Zoznam naposledy hraných hier.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Štatistiky hraných hier">
+						<longdesc>Zoznam reťazcov v tvare pätíc: meno, výhry, celkový počet hraných hier, najlepší čas (v sekundách) a najhorší čas (tiež v sekundách). Nehrané hry nemusia byť uvedené.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Súbor s hrou, ktorý sa má použiť">
+						<longdesc>Názov súboru schémy, ktorý obsahuje solitér hru, ktorá sa bude hrať.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animácie">
+						<longdesc>Určuje, či sa majú animovať pohyby kariet.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Zvuk">
+						<longdesc>Určuje, či sa majú prehrať zvuky udalostí.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Vyberte štýl ovládania">
+						<longdesc>Vyberte si, či budete karty presúvať ťahaním alebo kliknete na kartu a potom na miesto, kam sa má presunúť.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Určuje, či sa má zobraziť stavový panel">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Určuje, či sa má zobraziť lišta nástrojov">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Názov súboru témy">
+						<longdesc>Názov súboru s grafikou kariet.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="desktop">
+			<dir name="gnome">
+				<dir name="policykit">
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="Či má overovacie dialógové okno odchytiť vstup z klávesnice">
+							<longdesc>Ak má hodnotu true, dialógové okno overenia z PolicyKit-gnome odchytí vstup z klávesnice, takže pokiaľ bude toto dialógové okno aktívne, nebudete môcť písať do iných aplikácií. Použite to, ak váš správca okien toto dialógové okno nepresunie automaticky do popredia a chcete zabrániť náhodnému vpísaniu hesiel do iných programov.</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

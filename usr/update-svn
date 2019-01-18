@@ -1,0 +1,107 @@
+#!/bin/sh
+#mv /src /src-git
+#/usr/sbin/portsnap fetch extract
+#/usr/sbin/portsnap cron
+#/usr/local/bin/svn revert -R /usr/ports
+#/usr/local/bin/svn revert -R /usr/src
+# 1 from 3 distro
+
+#12 current!
+#/usr/local/bin/svn co svn://svn.freebsd.org/base/head /usr/src
+#/usr/local/bin/svn up --non-interactive --force /usr/src
+/usr/local/bin/svn co http://svn.freebsd.org/ports/head /usr/ports
+
+#11stable 12 prerelease
+#/usr/local/bin/svn co https://github.com/freebsd/freebsd/tree/stable/11
+/usr/local/bin/svn co https://svn.FreeBSD.org/base/stable/11 /usr/src
+# Sources
+/usr/local/bin/svn cleanup /usr/src
+/usr/local/bin/svn resolve /usr/src
+/usr/local/bin/svn update /usr/src
+# Ports
+/usr/local/bin/svn cleanup /usr/ports
+/usr/local/bin/svn resolve /usr/ports
+/usr/local/bin/svn update /usr/ports
+
+#freebsd-update fetch
+#freebsd-update install
+
+#portsnap fetch update
+cd /usr/ports
+/usr/bin/make fetchindex
+/usr/local/sbin/portsdb -u
+
+#cpan install LWP::UserAgent
+#cpan install XML::Parser
+#cpan install IO::Socket::SSL
+#cpan install Authen::SASL
+#/usr/bin/make fetchindex
+#5.0.24 ok into ports, skip this#/root/reins-port virtualbox-ose #5.0.6  rename Makefile for old versions /usr/ports/emulators/.. actual/root/emulators/
+#/bin/rm -rf /usr/ports/emulators/virtualbox*
+#/bin/cp -R /root/emulators/virtualbox-ose /usr/ports/emulators/
+#/bin/cp -R /root/emulators/virtualbox-ose-kmod /usr/ports/emulators/
+#/bin/cp -R /root/emulators/virtualbox-ose-additions /usr/ports/emulators/
+#KLD vboxdrv.ko: depends on kernel - not available or version mismatch //Reboot after build install kernel & make clean deinstall install
+# not match kernel src (/usr/src )version.
+cd /usr
+
+#dri for Radeon hw accelerate +VDPAU 
+#vdpau
+#/bin/cp /usr/ports/graphics/dri/Makefile /root/Make-dri-o
+#/bin/cp /usr/ports/graphics/dri/pkg-plist /root/dri-pkg-o
+#/bin/cp /root/dri-pkg-plist /usr/ports/graphics/dri/pkg-plist
+#/bin/cp /root/Make-dri /usr/ports/graphics/dri/Makefile
+
+#currentdate=`date`
+
+# run foom terminal rehash
+#make -C /usr/ports/lang/gcc49 reinstall
+# portupgrade -acy
+# -m 'config-conditional'
+#portupgrade -c -a -k
+/usr/bin/tar -C/ -cf /mnt/freebsd/etc-$HOST-$currentdate.txz etc
+/usr/bin/tar -C/ -cf /mnt/freebsd/local-etc-$HOST-$currentdate.txz usr/local/etc
+
+/usr/local/bin/curl -k "sftp://santosha.twilightparadox.com:22/usr/home/p90/" --user "kto-to:wzlomal" -T /mnt/freebsd/etc-$HOST-$currentdate.txz --ftp-create-dirs
+/usr/local/bin/curl -k "sftp://santosha.twilightparadox.com:22/usr/home/p90/" --user "kto-to:wzlomal" -T /mnt/freebsd/local-etc-$HOST-$currentdate.txz --ftp-create-dirs
+
+/usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -- "/usr/up1svn"
+/usr/sbin/chown -R mysql:mysql /var/db/mysql
+/usr/sbin/chown -R www:www /usr/local/www
+# if sendmail not postfix! 
+/usr/sbin/chown smmsp:smmsp /var/spool/clientmqueue
+#/bin/chmod 644 /var/db/mysql/my.cnf
+/bin/chmod 644 /usr/local/etc/mysql/my.cnf
+/bin/chmod 1777 /tmp
+/bin/chmod 700 /tmp/.wine-0
+/bin/chmod 1777 /var/run
+# security bug but Gnome can't start w/o rw permissions
+# Search new patch - change opengl mesa-libs re install Nvidia libs if Nvidia card Gnome 3.28+ 9-2018
+# from box cant run at all dead gnome
+/bin/chmod -R 777 /usr/local/etc/gdm
+/bin/chmod -R 777 /usr/local/etc/gdm/*
+
+
+#/bin/chmod 700 /tmp/.wine-0
+/bin/chmod 700 /tmp/.vbox-root-ipc
+mkdir /tmp/runtime-root
+/bin/chmod 1777 /tmp/runtime-root
+/bin/chmod 1777 /run/*
+#/bin/mv /usr/up1 /usr/up1-
+
+#firefox + oss4
+# firefox 60+ install nspluginwrapper - in about: tab select option (cubeb) alsa snd oss
+#pkg delete -f -y alsa-plugins alsa-lib
+
+
+#/bin/cp /var/db/mysql/my.cnf /usr/local/etc/mysql/my.cnf
+
+
+#/usr/local/etc/rc.d/mysql-server restart
+#cp -R ~/www-bk/* /usr/local
+
+#/bin/cp /root/gdm-autologin/* /usr/local/etc/gdm/
+
+#/usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "/usr/local/sbin/portmaster -a"
+#portmaster -atwvd
+#http://svnweb.freebsd.org/ports/head/

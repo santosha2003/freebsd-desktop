@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="ಕರೆಗಳ ಇತಿಹಾಸ">
+							<longdesc>ಹಿಂದಿನ ೧೦೦ ಕರೆಗಳ ಇತಿಹಾಸ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP ಪರಿಚಾರಕಗಳು">
+							<longdesc>ಸಂರಚಿತಗೊಂಡ LDAP ಪರಿಚಾರಕಗಳ ಪಟ್ಟಿ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="ಆಫ್‌ಲೈನ್ ಸಂಪರ್ಕ ವಿಳಾಸಗಳನ್ನು ತೋರಿಸು">
+							<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಆಫ್‌ಲೈನ್ ವಿಳಾಸಗಳು ಹೆಸರುಗಳ ಪಟ್ಟಿಯಲ್ಲಿ ತೋರಿಸಲಾಗುತ್ತದೆ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="ಹೆಸರುಗಳ ಪಟ್ಟಿಯಲ್ಲಿನ ಮಡಚಲಾದ ಗುಂಪುಗಳ ಪಟ್ಟಿ">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="ಹೊರಹೋಗುವ RTP IP ಪ್ಯಾಕೆಟ್‌ಗಳಲ್ಲಿ ಟೈಪ್ ಆಫ್ ಸರ್ವಿಸ್ (TOS) ಬೈಟ್">
+							<longdesc>ಹೊರಹೋಗುವ RTP IP ಪ್ಯಾಕೆಟ್‌ಗಳಿಗಾಗಿ ಟೈಪ್ ಆಫ್ ಸರ್ವಿಸ್ (TOS) ಬೈಟ್. ಈ ಬೈಟನ್ನು ಒಂದು ಹಂತದ ವರೆಗಿನ ಕ್ವಾಲಿಟಿ ಆಫ್ ಸರ್ವಿಸ್ (QoS) ಅನ್ನು ಒದಗಿಸಲು ಜಾಲಬಂಧದಿಂದ ಬಳಸಲಾಗುತ್ತದೆ. ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯವು RFC 3246 ಇಂದ ಸೂಚಿಸಲಾದ ಎಕ್ಸ್‍ಪೆಡಿಯೇಟೆಡ್ ಫಾರ್ವಾರ್ಡಿಂಗ್ (EF) PHB ಗೆ ಸಂಬಂಧಿಸಿದ 184 (0xB8) ಆಗಿರುತ್ತದೆ.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="ಖಾತೆಗಳ ಪಟ್ಟಿ">
+							<longdesc>Ekiga ನೋಂದಾಯಿಸಬೇಕಿರುವ ಖಾತೆಗಳ ಪಟ್ಟಿ</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="ಉತ್ತರ ಬರದೆ ಹೋದ ಪಕ್ಷದಲ್ಲಿ ಕರೆಗಳನ್ನು ನೀಡಲಾದ ಅತಿಥೇಯಕ್ಕೆ ರವಾನಿಸು">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ನೀವು ಕರೆಗೆ ಉತ್ತರಿಸದೆ ಇದ್ದಲ್ಲಿ ಎಲ್ಲಾ ಒಳಬರುವ ಕರೆಗಳು ಈ ಕೆಳಗೆ ಸೂಚಿಸಲಾದ ಅತಿಥೇಯಕ್ಕೆ ರವಾನಿಸಲ್ಪಡುತ್ತದೆ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="ಕಾರ್ಯನಿರತವಾಗಿದ್ದಲ್ಲಿ ಕರೆಗಳನ್ನು ನೀಡಲಾದ ಅತಿಥೇಯಕ್ಕೆ ರವಾನಿಸು">
+								<longdesc>ಸಕ್ರಿಯಗೊಂಡಿದ್ದಲ್ಲಿ, ನೀವು ಈಗಾಗಲೆ ಇನ್ನೊಂದು ಕರೆಯಲ್ಲಿ ನಿರತರಾಗಿದ್ದಲ್ಲಿ ಅಥವ ನೀವು ಕಾರ್ಯನಿರತ ಸ್ಥಿತಿಯಲ್ಲಿದ್ದಲ್ಲಿ, ಎಲ್ಲಾ ಒಳಬರುವ ಕರೆಗಳು ಈ ಕೆಳಗೆ ಸೂಚಿಸಲಾದ ಅತಿಥೇಯಕ್ಕೆ ರವಾನಿಸಲ್ಪಡುತ್ತದೆ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="ಯಾವಾಗಲೂ ಕರೆಗಳನ್ನು ಒಂದು ನಿಗದಿತ ಅತಿಥೇಯಕ್ಕೆ ಕಳುಹಿಸು">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಎಲ್ಲಾ ಒಳಬರುವ ಕರೆಗಳು ಈ ಕೆಳಗೆ ಸೂಚಿಸಲಾದ ಅತಿಥೇಯಕ್ಕೆ ರವಾನಿಸಲ್ಪಡುತ್ತದೆ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP ಸಂಪರ್ಕಸ್ಥಾನದ ವ್ಯಾಪ್ತಿ">
+								<longdesc>ಎಕಿಗಾ ಬಳಸುವ ಯುಡಿಪಿ ಸಂಪರ್ಕಸ್ಥಾನಗಳ ವ್ಯಾಪ್ತಿ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP ಸಂಪರ್ಕಸ್ಥಾನದ ವ್ಯಾಪ್ತಿ">
+								<longdesc>Ekiga ವು H.323 H.245 ಚಾನಲ್‌ಗಾಗಿ ಬಳಸುವ TCP ಸಂಪರ್ಕಸ್ಥಾನಗಳ ಒಂದು ಶ್ರೇಣಿ. ಕಾನ್ಫರೆನ್ಸಿನಲ್ಲಿ ಭಾಗವಹಿಸುತ್ತಿರುವ ಇಬ್ಬರೂ ಸಹ H.245 ಟನಲಿಂಗ್ ಅನ್ನು ಬಳಸುತ್ತಿದ್ದಲ್ಲಿ ಈ ಸಂಪರ್ಕಸ್ಥಾನಗಳ ಶ್ರೇಣಿಯು ಯಾವುದೆ ಪರಿಣಾಮವನ್ನು ಹೊಂದಿರುವುದಿಲ್ಲ.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="ಕರೆಗಳನ್ನು ಅತಿಥೇಯಕ್ಕೆ ರವಾನಿಸು">
+								<longdesc>ಕರೆಯ ಫಾರ್ವಾರ್ಡಿಂಗ್ ಅನ್ನು ಶಕ್ತಗೊಳಿಸಿದ್ದಲ್ಲಿ ಕರೆಗಳನ್ನು ಫಾರ್ವಾರ್ಡಿಂಗ್ ಮಾಡಬೇಕಿರುವ ಅತಿಥೇಯ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF ಕಳುಹಿಸುವಿಕೆ">
+								<longdesc>DTMF ಗಳನ್ನು ಕಳುಹಿಸಲು ಕ್ರಮವನ್ನು ಆರಿಸಿ. ಮೌಲ್ಯಗಳು 0 (for &quot;String&quot;), 1 (&quot;Tone&quot; ಗಾಗಿ), 2 (&quot;RFC2833&quot; ಗಾಗಿ), ಅಥವ 3 (&quot;Q.931&quot; ಗಾಗಿ) (ಪೂರ್ವನಿಯೋಜಿತವು &quot;String&quot; ಆಗಿರುತ್ತದೆ). &quot;String&quot; ಅನ್ನು ಹೊರತುಪಡಿಸಿ ಬೇರೆ ಮೌಲ್ಯಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡುವುದರಿಂದ ಪಠ್ಯರೂಪದ ಹರಟೆಯನ್ನು (Text Chat) ಅಶಕ್ತಗೊಳಿಸುತ್ತದೆ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema short_desc="ಎಕ್ಸ್ಟೆಂಡೆಂಡ್ ವೀಡಿಯೊ ಪಾತ್ರಗಳು">
+								<longdesc>H.239 ವೀಡಿಯೊ ರೋಲ್‌ ಅನ್ನು ಆಯ್ಕೆ ಮಾಡುತ್ತದೆ. ಮೌಲ್ಯಗಳು 0 (&quot;ಎಕ್ಸ್ಟೆಂಡೆಂಡ್ ವೀಡಿಯೊವನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು&quot; ಎಂಬುದಕ್ಕಾಗಿ), 1 ( &quot;ಪ್ರತಿ ಕಂಟೆಂಟ್ ರೋಲ್ ಮಾಸ್ಕಿಗೆ ಅನುಮತಿಸು&quot; ಎಂಬುದಕ್ಕಾಗಿ), 2 (&quot;ಒತ್ತಾಯಪೂರ್ವಕ ಪ್ರಸೆಂಟೇಶನ್‌&quot;ಗಾಗಿ), ಅಥವ 3 (&quot;ಒತ್ತಾಯಪೂರ್ವಕ ಲೈವ್ ರೋಲ್‌&quot;ಗಾಗಿ) ಆಗಿರಬಹುದು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="H.239 ಸಕ್ರಿಯಗೊಳಿಸು">
+								<longdesc>ಇದು ಹೆಚ್ಚುವರಿ ವೀಡಿಯೊ ರೋಲ್‌ಗಳಿಗಾಗಿ H.239 ಸಾಮರ್ಥ್ಯವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="&apos;ತಕ್ಷಣದ ಆರಂಭ&apos; ಅನ್ನು ಶಕ್ತಗೊಳಿಸು">
+								<longdesc>ಸಂಪರ್ಕವನ್ನು ಫಾಸ್ಟ್‌ ಸ್ಟಾರ್ಟ್ ಕ್ರಮದಲ್ಲಿ ಜೋಡಿಸಲಾಗುವುದು. ಫಾಸ್ಟ್‌ ಸ್ಟಾರ್ಟ್ ಎನ್ನುವುದು H.323v2 ನಲ್ಲಿ ಪರಿಚಯಿಸಲಾದ ವೇಗವಾಗಿ ಕರೆಯನ್ನು ಆರಂಭಿಸುವ ಒಂದು ಹೊಸ ವಿಧಾನವಾಗಿದೆ. ಇದು Netmeeting ಇಂದ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ ಹಾಗು ಫಾಸ್ಟ್‌ ಸ್ಟಾರ್ಟ್ ಮತ್ತು H.245 ಟನಲಿಂಗ್ ಅನ್ನು ಒಟ್ಟಿಗೆ ಬಳಸುವುದರಿಂದ Netmeeting ನ ಕೆಲವು ಆವೃತ್ತಿಗಳಲ್ಲಿ ಕುಸಿತಕ್ಕೆ ಕಾರಣವಾಗಬಹುದು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="ಮುಂಚಿನ H.245 ಶಕ್ತಗೊಳಿಸು">
+								<longdesc>ಇದು ಮುಂಚಿತವಾಗಿ H.245 ಅನ್ನು ಸಿದ್ಧಗೊಳಿಸುತ್ತದೆ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 ಟನಲಿಂಗ್ ಅನ್ನು ಶಕ್ತಗೊಳಿಸು">
+								<longdesc>H.245 ಟನಲಿಂಗ್ ಅನ್ನು ಶಕ್ತಗೊಳಿಸಲು. H.245 ಟನಲಿಂಗ್ ಕ್ರಮದಲ್ಲಿ H.245 ಸಂದೇಶಗಳನ್ನು H.225 ಚಾನಲ್‌ಗೆ ಎನ್‌ಕ್ಯಾಪ್ಸುಲೇಟ್ ಮಾಡಲಾಗುತ್ತದೆ (ಸಂಪರ್ಕಸ್ಥಾನ 1720). ಇದರಿಂದಾಗಿ ಕರೆಗಳ ಸಮಯದಲ್ಲಿ ಒಂದು TCP ಸಂಪರ್ಕವು ಉಳಿಯುತ್ತದೆ. H.245 ಟನಲಿಂಗ್ ಅನ್ನು H.323v2 ನಲ್ಲಿ ಪರಿಚಯಿಸಲಾಗಿದ್ದು ಇದು Netmeeting ಇಂದ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ. ಫಾಸ್ಟ್‌ ಸ್ಟಾರ್ಟ್ ಮತ್ತು H.245 ಟನಲಿಂಗ್ ಅನ್ನು ಒಟ್ಟಿಗೆ ಬಳಸುವುದರಿಂದ Netmeeting ನ ಕೆಲವು ಆವೃತ್ತಿಗಳಲ್ಲಿ ಕುಸಿತಕ್ಕೆ ಕಾರಣವಾಗಬಹುದು.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="ಆಲಿಸುವ ಸಂಪರ್ಕಸ್ಥಾನ">
+								<longdesc>ಒಳಬರು ಕರೆಗಳನ್ನು ಆಲಿಸಲು ಬಳಸುವ ಸಂಪರ್ಕಸ್ಥಾನವಾಗಿದೆ. ಹೊಸ ಮೌಲ್ಯವು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು ಎಕಿಗಾವನ್ನು ಮರಳಿ ಆರಂಭಿಸಬೇಕಿದೆ.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT ಬೈಂಡಿಂಗ್ ಅಂತ್ಯಗೊಳ್ಳುವ ಕಾಲಾವಧಿ">
+								<longdesc>STUN ಅನ್ನು ಬಳಸುವಾಗ, ಎಷ್ಟು ಸೆಕೆಂಡುಗಳ ನಂತರ Ekiga ವು NAT ಬೈಂಡಿಂಗ್ ಅನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಬೇಕು ಎನ್ನುವುದನ್ನು ನಮೂದಿಸಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF ಕಳುಹಿಸುವಿಕೆ">
+								<longdesc>DTMF ಗಳನ್ನು ಕಳುಹಿಸಲು ಕ್ರಮವನ್ನು ಆರಿಸಿ. ಮೌಲ್ಯಗಳು  0 (&quot;RFC2833&quot; ಆಗಿರಬಹುದು), 1 (&quot;INFO&quot; ಗಾಗಿ) ಆಗಿರುತ್ತವೆ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="ಕರೆಗಳನ್ನು ಅತಿಥೇಯಕ್ಕೆ ರವಾನಿಸು">
+								<longdesc>ಕರೆಯ ಫಾರ್ವಾರ್ಡಿಂಗ್ ಅನ್ನು ಶಕ್ತಗೊಳಿಸಿದ್ದಲ್ಲಿ ಕರೆಗಳನ್ನು ಫಾರ್ವಾರ್ಡಿಂಗ್ ಮಾಡಬೇಕಿರುವ ಅತಿಥೇಯ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="ಹೊರಹೋಗುವ ಪ್ರಾಕ್ಸಿ">
+								<longdesc>ಹೊರಹೋಗುವ ಕರೆಗಳಿಗೆ ಬಳಸಬೇಕಾದ SIP ಔಟ್‍ಬೌಂಡ್ ಪ್ರಾಕ್ಸಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="ಆಲಿಸುವ ಸಂಪರ್ಕಸ್ಥಾನ">
+								<longdesc>ಒಳಬರು ಕರೆಗಳನ್ನು ಆಲಿಸಲು ಬಳಸುವ ಸಂಪರ್ಕಸ್ಥಾನವಾಗಿದೆ. ಹೊಸ ಮೌಲ್ಯವು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರಲು ಎಕಿಗಾವನ್ನು ಮರಳಿ ಆರಂಭಿಸಬೇಕಿದೆ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="ಟೆಂಪೋರಲ್ ಸ್ಪೇಶಿಯಲ್ ಟ್ರೇಡ್ ಆಫ್">
+								<longdesc>ಗರಿಷ್ಟ ಫ್ರೇಮ್ ದರಗಳನ್ನು ಹಾಗೆಯೆ ಇರಿಸಿಕೊಳ್ಳಲು ಬಯಸುತ್ತೀರೆ ಅಥವ ಎಲ್ಲಾ ಫ್ರೇಮ್‌ಗಳಿಗೂ ಕನಿಷ್ಟ ಮಟ್ಟದ (ಆಕಾರಕ್ಕೆ ಅನುಗುಣವಾದ) ಗುಣಮಟ್ಟವನ್ನು ಇರಿಸಕೊಳ್ಳುವಂತೆ ದರವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಬಯಸುತ್ತೀರೆ. 0: ಅತ್ಯಂತ ಹೆಚ್ಚಿನ ಕನಿಷ್ಟ ಗುಣಮಟ್ಟ, 31: ಅತ್ಯಂತ ಕಡಿಮೆ ಕನಿಷ್ಟ ಗುಣಮಟ್ಟ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="ಗರಿಷ್ಟ RX ವೀಡಿಯೋ ಬಿಟ್‌ದರ">
+								<longdesc>ಗರಿಷ್ಟ RX ವೀಡಿಯೋ ಬಿಟ್‌ದರ, kbit/s ನಲ್ಲಿ. ಈ ಮೌಲ್ಯವು ಪೀರ್ ಕೊನೆಯಬಿಂದುವಿಗೆ ಸೂಚಿಸಲ್ಪಡುತ್ತದೆ ಹಾಗು ಅದರ TX ಬಿಟ್‌ದರವು ಸೂಚಿಸಲಾದ ಮೌಲ್ಯಕ್ಕಿಂತ ಹೆಚ್ಚಾಗಿದ್ದಲ್ಲಿ, ತನ್ನದನ್ನು ಸರಿ ಹೊಂದಿಸಿಕೊಳ್ಳುತ್ತದೆ(ಅದು ಬೆಂಬಲಿಸುತ್ತಿದ್ದಲ್ಲಿ)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="ಗರಿಷ್ಟ TX ವೀಡಿಯೋ ಬಿಟ್‌ದರ">
+								<longdesc>ಗರಿಷ್ಟ TX ವೀಡಿಯೋ ಬಿಟ್‌ದರ, kbit/s ನಲ್ಲಿ. ವಿಡಿಯೋ ಗುಣಮಟ್ಟ ಹಾಗು ಪ್ರತಿ ಸೆಕೆಂಡಿಗೆ ರವಾನಿಸಲಾಗುವ ಫ್ರೇಮ್‌ಗಳ ಸಂಖ್ಯೆಗಳನ್ನು (ಆಯ್ಕೆ ಮಾಡಲಾದ ಕೋಡೆಕ್‌ಗಳ ಮೇಲೆ ಅವಲಂಬಿತವಾಗಿರುತ್ತದೆ), ಕರೆ ಮಾಡುವ ಸಮಯದಲ್ಲಿ ಬ್ಯಾಂಡ್‌ವಿಡ್ತನ್ನು ಒದಗಿಸಲಾದ ಮೌಲ್ಯಕ್ಕೆ ಕುಗ್ಗಿಸುವಂತೆ ಅವುಗಳ ಕನಿಷ್ಟಕ್ಕಿಂತ ಮೇಲ್ಮಟ್ಟಕ್ಕೆ ಸರಿ ಹೊಂದುವಂತೆ ಬದಲಾಯಿಸಲ್ಪಡುತ್ತದೆ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ವೀಡಿಯೋ ಕೋಡೆಕ್‌ಗಳ ಪಟ್ಟಿ">
+								<longdesc>ವೀಡಿಯೋ ಕೋಡೆಕ್‌ಗಳ ಪಟ್ಟಿ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="ಗರಿಷ್ಟ ಜಿಟ್ಟರ್ ಬಫರ್">
+								<longdesc>ಆಡಿಯೋ ಅನ್ನು ಪಡೆದು ಕೊಳ್ಳಲು ಅಗತ್ಯವಿರುವ ಗರಿಷ್ಟ ಜಿಟ್ಟರ್ ಬಫರ್ (ಮಿಲಿಸೆಕೆಂಡುಗಳಲ್ಲಿ)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="ಪ್ರತಿಧ್ವನಿ ನಿರ್ಮೂಲನೆಯನ್ನು ಸಕ್ರಿಯಗೊಳಿಸು">
+								<longdesc>ಸಕ್ರಿಯಗೊಂಡಿದ್ದಲ್ಲಿ, ಪ್ರತಿಧ್ವನಿ ನಿರ್ಮೂಲನೆಯನ್ನು ಬಳಸಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="ನಿಶ್ಯಬ್ದವನ್ನು ಪತ್ತೆಹಚ್ಚುವುದನ್ನು ಶಕ್ತಗೊಳಿಸು">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಕೋಡೆಕ್‍ಗಳು ಬೆಂಬಲಿಸುವಂತಹ ನಿಶ್ಯಬ್ಧ ಪತ್ತೆಯನ್ನು ಬಳಸಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ಧ್ವನಿ ಕೋಡೆಕ್‍ಗಳ ಪಟ್ಟಿ">
+								<longdesc>ಆಡಿಯೋ ಕೋಡೆಕ್‌ಗಳ ಪಟ್ಟಿ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="ಸಹಾಯಕನಲ್ಲಿ ಆರಿಸಲಾಗಿರುವ ಜಾಲಬಂಧದ ರೀತಿಯದ್ದು">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: ಕಸ್ಟಮ್</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="ಸ್ವಯಂಚಾಲಿತ ಉತ್ತರ">
+								<longdesc>ಶಕ್ತಗೊಳಿಸಲಾಗಿದ್ದರೆ, ಒಳಬರುವ ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸುತ್ತದೆ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="ಉತ್ತರವಿಲ್ಲದಿರುವಿಕೆಯು ಅಂತ್ಯಗೊಳ್ಳುವ ಕಾಲಾವಧಿ">
+								<longdesc>ಒಳಬಂದ ಕರೆಗೆ ಒಂದು ನಿಗದಿತ ಸಮಯದ (ಸೆಕೆಂಡುಗಳಲ್ಲಿ) ಒಳಗೆ ಉತ್ತರಿಸಿದೆ ಹೋದಲ್ಲಿ ಅದು ತಾನಾಗಿಯೆ ತಿರಸ್ಕರಿಸಲ್ಡುವಂತೆ ಅಥವ ಬೇರೆಡೆ ರವಾನಿಸು</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="ದೂರಸ್ಥ ವಿಡಿಯೋ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ದೂರಸ್ಥ ವಿಡಿಯೋ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ದೂರಸ್ಥ ವಿಡಿಯೋ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ದೂರಸ್ಥ ವೀಡಿಯೊ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="ಪೂರ್ಣತೆರೆಗೆ ಬದಲಾಯಿಸುವ ಮೊದಲಿನ ವೀಡಿಯೋ ನೋಟ">
+									<longdesc>ಪೂರ್ಣತೆರೆಗೆ ಬದಲಾಯಿಸುವ ಮೊದಲಿನ ವೀಡಿಯೋ ನೋಟ (video_view ನಲ್ಲಿರುವಂತಹುದೆ ಮೌಲ್ಯ)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="ಪೂರ್ವನಿಯೋಜಿತ ವಿಡಿಯೋ ಕಿಟಕಿಯ">
+									<longdesc>ಪೂರ್ವನಿಯೋಜಿತ ವೀಡಿಯೋ ನೋಟ (0: ಸ್ಥಳೀಯ, 1: ದೂರಸ್ಥ, 2: ಎರಡೂ, 3: ಪ್ರತಿಯೊಂದೂ ಪ್ರತ್ಯೇಕ ಕಿಟಕಿಯಲ್ಲಿ)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="ಕರೆಯ ಸಮಯದಲ್ಲಿ ವಿಡಿಯೋ ಅನ್ನು ತೋರಿಸುವ ಕಿಟಕಿಯನ್ನು ಬೇರೆ ಕಿಟಕಿಗಳ ಮೇಲೆ ಇರಿಸು">
+									<longdesc>ಕರೆಯ ಸಮಯದಲ್ಲಿ ವಿಡಿಯೋ ಅನ್ನು ತೋರಿಸುವ ಕಿಟಕಿಯನ್ನು ಬೇರೆ ಕಿಟಕಿಗಳ ಮೇಲೆ ಇರಿಸು</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="ಗಾತ್ರ ಬದಲಾವಣಾ ಮೌಲ್ಯ">
+									<longdesc>ಪ್ರಮುಖ GUI ಯಲ್ಲಿ ತೋರಿಸಲಾಗುವ ಚಿತ್ರಗಳಿಗೆ ಅನ್ವಯಿಸಬೇಕಿರುವ ಹಿಗ್ಗಿಸುವ ಪ್ರಮಾಣದ ಮೌಲ್ಯ ಪ್ರತಿಶತದಲ್ಲಿ (ಇದು 50, 100, ಅಥವ 200 ಆಗಿರಬಹುದು)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="ತಂತ್ರಾಂಶ ಸ್ಕೇಲಿಂಗ್ ಅಲ್ಗಾರಿದಮ್ ಅನ್ನು ಸೂಚಿಸಿ">
+									<longdesc>ತಂತ್ರಾಂಶ ಸ್ಕೇಲಿಂಗ್ ಅಲ್ಗಾರಿದಮ್ ಅನ್ನು ಸೂಚಿಸಿ: 0: ಪಕ್ಕದಲ್ಲಿರುವುದು, 1: ಚೌಕ ಫಿಲ್ಟರಿನೊಂದಿಗೆ ಪಕ್ಕದಲ್ಲಿರುವುದು, 2: ಬೈಲೀನಿಯರ್ ಫಿಲ್ಟರಿಂಗ್, 3: ಹೈಪರ್ಬಾಲಿಕ್ ಫಿಲ್ಟರಿಂಗ್. ವಿಂಡೋಸ್ ಗಣಕಗಳಿಗೆ ಅನ್ವಯಿಸುವುದಿಲ್ಲ.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="ಚಿತ್ರದೊಳಗೆ-ಚಿತ್ರದ ತಂತ್ರಾಂಶ ಸ್ಕೇಲಿಂಗ್ ಅನ್ನು ಅನುಮತಿಸು">
+									<longdesc>Ekiga ಗೆ ಯಂತ್ರಾಂಶ ಬೆಂಬಲವು ಲಭ್ಯವಿರದೆ ಹೋದಲ್ಲಿ, ಅದನ್ನು ತಂತ್ರಾಂಶವು ಚಿತ್ರದೊಳಗೆ-ಚಿತ್ರವನ್ನು ಸ್ಕೇಲಿಂಗ್ ಮಾಡುವುದಕ್ಕೆ ಮರಳಲು ಅನುವು ಮಾಡಿಕೊಡಿ. ಇದನ್ನು false ಗೆ ಹೊಂದಿಸಿದಲ್ಲಿ, ಯಂತ್ರಾಂಶ ಬೆಂಬಲ ಇಲ್ಲದೆ ಹೋದಲ್ಲಿ Ekiga ವು PIP ಯನ್ನು ತೆರೆಯಲು ಪ್ರಯತ್ನಿಸುವುದಿಲ್ಲ.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="ವೀಡಿಯೋ ಯಂತ್ರಾಂಶ ವೇಗವರ್ಧನೆಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು">
+									<longdesc>ಈ ಕೀಲಿಯು DirectX (win32 ನಲ್ಲಿ) ಹಾಗು XVideo (ಲಿನಕ್ಸಿನಲ್ಲಿ) ವೀಡಿಯೋ ಯಂತ್ರಾಂಶ ವೇಗವರ್ಧಕವನ್ನು ಅಶಕ್ತಗೊಳಿಸುತ್ತದೆ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="ಆದ್ಯತೆಗಳ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ಆದ್ಯತೆಗಳ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ತೆರೆಯಲ್ಲಿ ಆದ್ಯತೆಯ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ತೆರೆಯಲ್ಲಿ ಆದ್ಯತೆಯ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="ಆದ್ಯತೆಗಳ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ಆದ್ಯತೆಗಳ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ತೆರೆಯಲ್ಲಿ ಆದ್ಯತೆಯ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ತೆರೆಯಲ್ಲಿ ಆದ್ಯತೆಯ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ವೀಡಿಯೋ ಸಿದ್ಧತೆಗಳ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ವೀಡಿಯೋ ಸಿದ್ಧತೆಗಳ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ತೆರೆಯ ಮೇಲೆ ವೀಡಿಯೋ ಸಿದ್ಧತೆಗಳ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ತೆರೆಯ ಮೇಲೆ ವೀಡಿಯೋ ಸಿದ್ಧತೆಗಳ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ಆಡಿಯೋ ಸಿದ್ಧತೆಗಳ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ಆಡಿಯೋ ಸಿದ್ಧತೆಗಳ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ತೆರೆಯ ಮೇಲೆ ಆಡಿಯೋ ಸಿದ್ಧತೆಗಳ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ತೆರೆಯ ಮೇಲೆ ಆಡಿಯೋ ಸಿದ್ಧತೆಗಳ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="ವಿಳಾಸ ಪುಸ್ತಕ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ವಿಳಾಸ ಪುಸ್ತಕ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ತೆರೆಯಲ್ಲಿ ವಿಳಾಸ ಪುಸ್ತಕ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ತೆರೆಯಲ್ಲಿ ವಿಳಾಸ ಪುಸ್ತಕ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="ತೆರೆಯಲ್ಲಿ ಗಾರುಡಿ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ತೆರೆಯಲ್ಲಿ ಗಾರುಡಿ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ಗಾರುಡಿಯ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ಗಾರುಡಿಯ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="ತೆರೆಯಲ್ಲಿ ಹರಟೆ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ತೆರೆಯಲ್ಲಿ ಹರಟೆ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ಹರಟೆ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ಹರಟೆ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="ಮುಖ್ಯ ಕಿಟಕಿಯ ಪ್ಯಾನಲ್ ವಿಭಾಗವನ್ನು ಬದಲಾಯಿಸಿ">
+									<longdesc>ಮುಖ್ಯ ಕಿಟಕಿಯ ಪ್ಯಾನಲ್ ವಿಭಾಗವನ್ನು ಬದಲಾಯಿಸಿ (0=ಸಂಪರ್ಕಗಳು, 1=ಡಯಲ್‌ಪ್ಯಾಡ್, 2=ಕರೆ ಇತಿಹಾಸ)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ತೆರೆಯಲ್ಲಿ ಮುಖ್ಯ ಕಿಟಕಿಯ ಸ್ಥಾನ">
+									<longdesc>ತೆರೆಯಲ್ಲಿ ಮುಖ್ಯ ಕಿಟಕಿಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="ಕರೆಯ ಕಿಟಕಿಯ ಗಾತ್ರ">
+									<longdesc>ಕರೆಯ ಕಿಟಕಿಯ ಗಾತ್ರ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ಕರೆಯ ಕಿಟಕಿಯಲ್ಲಿ ತೆರೆಯ ಸ್ಥಾನ">
+									<longdesc>ಕರೆಯ ಕಿಟಕಿಯಲ್ಲಿ ತೆರೆಯ ಸ್ಥಾನ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN ಜಾಲಬಂಧವನ್ನು ಪತ್ತೆಹಚ್ಚುವುದನ್ನು ಶಕ್ತಗೊಳಿಸು">
+								<longdesc>STUN ಪರೀಕ್ಷೆಯಿಂದ ಸಿಗುವ ಸ್ವಯಂಚಾಲಿತ ಜಾಲಬಂಧ ಸಿದ್ಧತೆಯನ್ನು ಶಕ್ತಗೊಳಿಸು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN ಪರಿಚಾರಕ">
+								<longdesc>STUN ಬೆಂಬಲಕ್ಕಾಗಿನ STUN ಪರಿಚಾರಕ. STUN ಎನ್ನುವುದು ಕೆಲವು ಬಗೆಯ NAT ಗೇಟ್‌ವೇಯ ಮೂಲಕ ಹೋಗಲು ಅನುಮತಿಸುವ ಒಂದು ತಂತ್ರಜ್ಞಾನವಾಗಿದೆ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="ಕಾರ್ಯನಿರತ">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಕರೆಗಳ ಕೊನೆಯಲ್ಲಿ ಅಥವ ಯಾರಿಗಾದರೂ ಕರೆ ಮಾಡಿದಾಗ ಅವರು ಬೇರೊಂದು ಕರೆಯಲ್ಲಿ ನಿರತರಾಗಿದ್ದಲ್ಲಿ ಚಲಾಯಿಸಬೇಕಿರುವ ಶಬ್ಧ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="ಕಾರ್ಯನಿರತದ ಧ್ವನಿಯನ್ನು ನುಡಿಸು">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಆಯ್ಕೆ ಮಾಡಲಾದ ಶಬ್ಧವನ್ನು ಕರೆಗಳ ಕೊನೆಯಲ್ಲಿ ಅಥವ ಯಾರಿಗಾದರೂ ಕರೆ ಮಾಡಿದಾಗ ಅವರು ಬೇರೊಂದು ಕರೆಯಲ್ಲಿ ನಿರತರಾಗಿದ್ದಲ್ಲಿ ಚಲಾಯಿತಗೊಳ್ಳುತ್ತದೆ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="ಡಯಲ್ ಟೋನ್‌ ಶಬ್ಧ">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಯಾರಿಗಾದರೂ ಕರೆ ಮಾಡಿದಾದ ಚಲಾಯಿಸಲಾಗುವ ಶಬ್ಧ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="ರಿಂಗ್ ಧ್ವನಿಯನ್ನು ನುಡಿಸು">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಯಾರಿಗಾದರೂ ಕರೆ ಮಾಡಿದಾಗ ಆಯ್ಕೆ ಮಾಡಲಾದ ಶಬ್ಧವನ್ನು ಚಲಾಯಿಸಲಾಗುವುದು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="ಹೊಸ ಧ್ವನಿ ಮೈಲ್ ಬಂದಾಗ ಧ್ವನಿಯನ್ನು ನುಡಿಸು">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಹೊಸ ಧ್ವನಿ ಅಂಚೆಯನ್ನು ಸ್ವೀಕರಿಸಿದಾಗ ಆಯ್ಕೆ ಮಾಡಲಾದ ಶಬ್ಧವನ್ನು ಚಲಾಯಿಸಲಾಗುವುದು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="ಹೊಸ ತಕ್ಷಣ ಧ್ವನಿ ಮೈಲ್‌ಗಾಗಿನ ಶಬ್ಧ">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಹೊಸ ಧ್ವನಿ ಅಂಚೆಯನ್ನು ಸ್ವೀಕರಿಸಿದಾಗ ಚಲಾಯಿಸಲಾಗುವ ಶಬ್ಧ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="ಹೊಸ ಸಂದೇಶ ಬಂದಾಗ ಧ್ವನಿಯನ್ನು ನುಡಿಸು">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಹೊಸ ಕ್ಷಿಪ್ರ ಸಂದೇಶವನ್ನು ಸ್ವೀಕರಿಸಿದಾಗ ಆಯ್ಕೆ ಮಾಡಲಾದ ಶಬ್ಧವನ್ನು ಚಲಾಯಿಸಲಾಗುವುದು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="ಹೊಸ ಕ್ಷಿಪ್ರ ಸಂದೇಶಕ್ಕಾಗಿನ ಶಬ್ಧ">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಹೊಸ ಕ್ಷಿಪ್ರ ಸಂದೇಶವನ್ನು ಸ್ವೀಕರಿಸಿದಾಗ ಚಲಾಯಿಸಲಾಗುವ ಶಬ್ಧ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="ಒಳಬರುವ ಕರೆಗಳಿಗಾಗಿನ ಧ್ವನಿಯನ್ನು ನುಡಿಸು">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಕರೆಗಳು ಬಂದಾಗ ಆಯ್ಕೆ ಮಾಡಲಾದ ಶಬ್ಧವನ್ನು ಚಲಾಯಿಸಲಾಗುವುದು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="ಒಳಬರುವ ಕರೆಗಳ ಶಬ್ಧ">
+								<longdesc>ಶಕ್ತಗೊಂಡಿದ್ದಲ್ಲಿ, ಕರೆಗಳು ಬಂದಾಗ ಚಲಾಯಿಸಲಾಗುವ ಶಬ್ಧ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ಪರ್ಯಾಯ ಆಡಿಯೋ ಔಟ್‍ಪುಟ್ ಸಾಧನ">
+								<longdesc>ಧ್ವನಿಯ ಸಂದರ್ಭಗಳಲ್ಲಿ ಬಳಸಲು ಒಂದು ಪರ್ಯಾಯ ಆಡಿಯೋ ಔಟ್‌ಪುಟ್ ಸಾಧನವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="ಕಾಂಟಾಕ್ಟ್ ಲಾಂಗ್ ಸ್ಟೇಟಸ್">
+								<longdesc>ಉದ್ದವಾದ ಸ್ಥಿತಿ ಮಾಹಿತಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="ಕಾಂಟಾಕ್ಟ್ ಶಾರ್ಟ್ ಸ್ಟೇಟಸ್">
+								<longdesc>ಕಿರಿದಾದ ಸ್ಥಿತಿ ಮಾಹಿತಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="ಸಂಪೂರ್ಣ ಹೆಸರು">
+								<longdesc>ನಿಮ್ಮ ಸಂಪೂರ್ಣ ಹೆಸರನ್ನು ನಮೂದಿಸಿ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="ಚೌಕಟ್ಟು ದರ">
+								<longdesc>ವರ್ಗಾಯಿಸಲಾದ ಗರಿಷ್ಟ ಫ್ರೇಮ್ ದರ, ಫ್ರೇಮ್‌ಗಳು/ಸೆಕೆಂಡ್‌ನಲ್ಲಿ. 31 ಕ್ಕಿಂತ ಚಿಕ್ಕದಾಗಿನ ಒಂದು TSTO ಮೌಲ್ಯದ ಮೂಲಕ ಒಂದು ಕನಿಷ್ಟ ಗುಣಮಟ್ಟವನ್ನು ಸಂರಚಿಸಲಾಗಿದ್ದರೆ ಹಾಗು ಆಯ್ಕೆ ಮಾಡಲಾದ ಬಿಟ್‌ ದರವು ಕನಿಷ್ಟ ಗುಣಮಟ್ಟವನ್ನು ಬೆಂಬಲಿಸಲು ಸಾಕಾಗುವಷ್ಟಿಲ್ಲದೆ ಇದ್ದಲ್ಲಿ ಈ ದರವನ್ನು ತಲುಪಲಾಗುವುದಿಲ್ಲ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="ವೀಡಿಯೊ ಮುನ್ನೋಟ">
+								<longdesc>ನಿಮ್ಮ ಕ್ಯಾಮೆರಾ ಸಾಧನದಿಂದ ಚಿತ್ರಗಳನ್ನು ತೋರಿಸು</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="ವೀಡಿಯೊ ವಿನ್ಯಾಸ">
+								<longdesc>ವೀಡಿಯೋ ಕ್ಯಾಮೆರಾಗಳಿಗಾಗಿ ವಿನ್ಯಾಸವನ್ನು ಆರಿಸಿ (ಹೆಚ್ಚಿನ USB ಕ್ಯಾಮೆಗಳಿಗೆ ಇದು ಅನ್ವಯಿಸುವುದಿಲ್ಲ)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="ವೀಡಿಯೊ ಚಾನಲ್">
+								<longdesc>ಬಳಸಲು ವಿಡಿಯೋ ಚಾನಲ್ ಸಂಖ್ಯೆ (ಕ್ಯಾಮೆರಾ, ಟಿವಿ ಅಥವ ಇತರೆ ಮೂಲಗಳನ್ನು ಆರಿಸಲು)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="ವೀಡಿಯೊ ಗಾತ್ರ">
+								<longdesc>ವರ್ಗಾಯಿಸಲಾದ ವಿಡಿಯೋದ ಗಾತ್ರವನ್ನು ಆರಿಸಿ: ಚಿಕ್ಕದು (QCIF 176x144) ಅಥವ ದೊಡ್ಡದು (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="ವೀಡಿಯೋ ಇನ್‌ಪುಟ್ ಸಾಧನ">
+								<longdesc>ಬಳಕೆಗಾಗಿ ಒಂದು ವಿಡಿಯೋ ಇನ್‌ಪುಟ್ ಸಾಧನವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ. ಈ ಸಾಧನವನ್ನು ಬಳಸುವಾಗ ಎಲ್ಲಿಯಾದರೂ ದೋಷ ಉಂಟಾದರೆ ಒಂದು ಪರೀಕ್ಷಾ ಚಿತ್ರವು ಕಳುಹಿಸಲ್ಪಡುತ್ತದೆ.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="ಆಡಿಯೋ ಇನ್‍ಪುಟ್ ಸಾಧನ">
+								<longdesc>ಬಳಕೆಗಾಗಿ ಒಂದು ಆಡಿಯೋ ಇನ್‌ಪುಟ್ ಸಾಧನವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ಆಡಿಯೋ ಔಟ್‍ಪುಟ್ ಸಾಧನ">
+								<longdesc>ಬಳಕೆಗಾಗಿ ಒಂದು ಆಡಿಯೋ ಔಟ್‌ಪುಟ್ ಸಾಧನವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="ಬುಕ್‌ಮಾರ್ಕುಗಳು">
+						<longdesc>gconf-ಸಂಪದಾಕ ಕಡತಕೋಶ ಬುಕ್‌ಮಾರ್ಕುಗಳು</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="ಇತ್ತೀಚೆಗೆ ಆಡಲಾದ ಆಟಗಳ ಪಟ್ಟಿ">
+						<longdesc>ಇತ್ತೀಚೆಗೆ ಆಡಲಾದ ಆಟಗಳ ಒಂದು ಪಟ್ಟಿ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="ಆಡಲಾದ ಆಟಗಳ ಅಂಕಿ ಅಂಶಗಳು">
+						<longdesc>ಐದು ನಮೂದುಗಳ ನಮೂನೆಯಲ್ಲಿ ಬಂದ ವಾಕ್ಯಗಳ ಒಂದು ಪಟ್ಟಿ: ಹೆಸರು, ಗೆಲುವುಗಳು, ಒಟ್ಟು ಆಡಿದ ಆಟಗಳು, ಉತ್ತಮವಾದ ಸಮಯ (ಸೆಕೆಂಡುಗಳಲ್ಲಿ) ಹಾಗು ಕೆಟ್ಟ ಸಮಯ (ಇದೂ ಸಹ ಸೆಕೆಂಡುಗಳಲ್ಲಿ). ಆಡದೆ ಇರುವ ಆಟಗಳನ್ನು ಸೂಚಿಸುವ ಅಗತ್ಯವಿರುವುದಿಲ್ಲ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="ಬಳಸಲು ಆಟದ ಕಡತ">
+						<longdesc>ಸಾಲಿಟೇರ್ ಆಟವನ್ನು ಆಡಲು ಬೇಕಿರುವ ಕಡತವನ್ನು ಹೊಂದಿರುವ ಸ್ಕೀಮ್ ಕಡತದ ಹೆಸರು.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="ಚಿತ್ರಸಂಚಲನಗಳು">
+						<longdesc>ಎಲೆಗಳನ್ನು ನಡೆಸುವಾಗ ಚಿತ್ರಸಂಚಲನವನ್ನು ಬಳಸಬೇಕೆ ಅಥವ ಬೇಡವೆ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="ಧ್ವನಿ">
+						<longdesc>ಆಟ ಆಡುವಾಗ ಶಬ್ಧಗಳನ್ನು ಹೊರಡಿಸಬೇಕೆ ಅಥವ ಬೇಡವೆ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="ನಿಯಂತ್ರಣ ಶೈಲಿಯನ್ನು ಆರಿಸು">
+						<longdesc>ಎಲೆಗಳನ್ನು ಎಳೆಯಬೇಕೆ ಅಥವ ಮೂಲದ ಮೇಲೆ ಕ್ಲಿಕ್ಕಿಸಿ ನಂತರ ಉದ್ದೇಶಿತ ಸ್ಥಳದ ಮೇಲೆ ಕ್ಲಿಕ್ಕಿಸಿ ಬೇಕೆ ಎಂದು ಆಯ್ಕೆ ಮಾಡಿ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="ಸ್ಥಿತಿ ಪಟ್ಟಿಯನ್ನು ತೋರಿಸಬೇಕೆ ಅಥವ ಬೇಡವೆ">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="ಉಪಕರಣ ಪಟ್ಟಿಯನ್ನು ತೋರಿಸಬೇಕೆ ಅಥವ ಬೇಡವೆ">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="ವಿನ್ಯಾಸ ಕಡತದ ಹೆಸರು">
+						<longdesc>ಎಲೆಗಳಿಗಾಗಿನ ಗ್ರಾಫಿಕ್ಸುಗಳನ್ನು ಹೊಂದಿರುವ ಕಡತದ ಹೆಸರು.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Majukan panggilan ke hos yg diberi jika tiada jawapan">
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Majukan panggilan ke hos yg diberi jika sibuk">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Sentiasa sambungkan panggilan ke hos yang diberikan">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Julat liang TCP">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Sambungkan panggilan ke hos">
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Penghantaran DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Hidupkan &apos;Mula Cepat&apos;">
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Hidupkan H.245 awal">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Liang dengar">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Penghantaran DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Sambungkan panggilan ke hos">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Liang dengar">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Penimbal ketaran maksimum">
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Hidupkan pengesanan senyap">
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Senarai Codec Audio">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Posisi tetingkap video jauh">
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Saiz tetingkap video jauh">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="Pandangan video piawai">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Letak tetingkap memapar video di atas tetingkap lain semasa panggilan">
+									<longdesc>Letak tetingkap memapar video di atas tetingkap lain semasa panggilan</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Nilai zum">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Saiz bagi tetingkap keutamaan">
+									<longdesc>Saiz bagi tetingkap keutamaan</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Saiz bagi tetingkap keutamaan">
+									<longdesc>Saiz bagi tetingkap keutamaan</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Saiz bagi tetingkap buku alamat">
+									<longdesc>Saiz bagi tetingkap buku alamat</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Posisi pada skrin bagi tetingkap jurucipta">
+									<longdesc>Posisi pada skrin bagi tetingkap jurucipta</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Saiz bagi tetingkap jurucipta">
+									<longdesc>Saiz bagi tetingkap jurucipta</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Posisi pada skrin bagi tetingkap utama">
+									<longdesc>Posisi pada skrin bagi tetingkap utama</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Bunyi nada sibuk">
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Main nada sibuk">
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Main nada dering">
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Mainkan bunyi pada panggilan masuk">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="enable_preview">
+							<local_schema short_desc="Prebiu video">
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Format video">
+								<longdesc>Pilih format bagi kamera video. (tak termasuk kebanyakan kamera USB).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Saluran video">
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Saiz video">
+								<longdesc>Pilih saiz video yang dihantar: Kecil (QCIF 176x144) atau Besar (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Peranti input video">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Peranti input audio">
+								<longdesc>Pilih peranti input audio untuk digunakan</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Peranti output audio">
+								<longdesc>Pilih peranti output audio untuk digunakan</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="TandaBuku">
+						<longdesc>tandabuku folder gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="statistics">
+					<local_schema short_desc="Statistik permainan yang telah dimainkan">
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Fail permainan yang hendak digunakan">
+						<longdesc>Nama bagi fail skema mengandungi permainan solitaire untuk dimainkan.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Bunyi">
+						<longdesc>Samada memainkan bunyi atau tidak.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Samada papar atau sembunyikan toolbar">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Nama fail tema">
+						<longdesc>Nama fail  yg mengandungi grafik untuk kad.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,55 @@
+#!/bin/sh
+#/usr/sbin/portsnap fetch extract
+cd /usr/src
+#/usr/update-svn
+#mergemaster -Fp
+
+/usr/bin/tail /root/build-w.out
+sleep 400
+yes | make delete-old   >> /root/up-world.out
+yes | make -DWITH_ATF delete-old-libs >> /root/up-world-cleanlib.out
+
+#portupgrade -afrRky -m 'config-conditional'
+#portupgrade -afrRky
+#portmaster xorg
+#script /root/up-log.out
+#make -C /usr/ports/security/gnutls clean build reinstall
+#make -C /usr/ports/x11-toolkits/gtk20 clean build reinstall
+#make -C /usr/ports/net/glib-networking clean build reinstall
+#make -C /usr/ports/www/webkit-gtk3 clean build reinstall
+#make -C /usr/ports/print/cups clean build reinstall
+#make -C /usr/ports/x11-toolkits/vte3 clean build reinstall
+#make -C /usr/ports/x11/gnome-terminal clean reinstall
+#mergemaster -Fp
+mergemaster -Fi
+
+
+echo 'clean ports reboot auto now in 1-2h save work\!\!\!'
+echo 'upgrade script /usr/up1 delete reinstall graphics drivers audio oss vbox kernel monit'
+
+make -C /usr/ports/www clean
+make -C /usr/ports/graphics clean
+make -C /usr/ports/x11 clean
+make -C /usr/ports/devel clean
+chmod 1777 /tmp
+chmod 1777 /var/log
+#echo /usr/up1 >> /etc/rc.local
+#\n
+#echo  >> /etc/rc.local
+/bin/mv /usr/up1- /usr/up1
+
+#/bin/cp /usr/upgrade.desktop /root/.config/autostart
+/bin/rm /usr/rc1
+/bin/rm /etc/rcl1
+/bin/mv /etc/rc.conf /usr/rc1
+/bin/mv /etc/rc.local /usr/rcl1
+/bin/cp /usr/rc0 /etc/rc.conf
+/bin/cp /usr/rcl0 /etc/rc.local
+
+echo 'reboot auto now in 1,5h save work\!\!\!'
+gnome-terminal -- /usr/update-svn
+/bin/sleep 5000
+/sbin/shutdown -r now
+
+
+

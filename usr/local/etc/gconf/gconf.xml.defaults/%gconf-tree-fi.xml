@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Puheluhistoria">
+							<longdesc>Viimeisten 100 soitetun puhelun historia</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP-palvelimet">
+							<longdesc>Luettelo määritellyistä LDAP-palvelimista</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Näytä poissaolevat tuttavat">
+							<longdesc>Jos käytössä, poissaolevat tuttavat näytetään nimilistassa</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Luettelo nimilistan kansioryhmistä">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="Luettelo tileistä">
+							<longdesc>Lista tileistä, jotka Ekigan tulisi rekisteröidä</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Siirrä puhelut annetulle koneelle jos ei vastata">
+								<longdesc>Kun valittu ja et vastaa puheluun, ohjataan tulevat puhelut koneelle, joka määritellään alla olevaan kenttään</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Siirrä puhelut annetulle koneelle varattuna oltaessa">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Siirrä puhelut aina tietylle koneelle">
+								<longdesc>Kun valittu, ohjataan kaikki tulevat puhelut koneelle, joka määritetään alla olevaan kenttään</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP-porttiväli">
+								<longdesc>Ekigan käyttämä UDP-porttien alue.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP-porttiväli">
+								<longdesc>Väli TCP-portteja, joita Ekiga käyttää H.323 H.245 -kanavalle. Tämä porttiväli ei vaikuta mitään, jos molemmat keskustelijat käyttävät H.245-tunnelointia.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Siirrä puhelut koneelle">
+								<longdesc>Verkkonimi, jolle puhelut ohjataan kun puhelun siirto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-lähetys">
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="Käytä H.239:aa">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Käytä &quot;Nopeaa käynnistystä&quot;">
+								<longdesc>Yhteys muodostetaan Nopea käynnistys -tilassa.  Nopea käynnistys on uusi nopeampi tapa aloittaa puhelu ja se esiteltiin H.323v2:ssa. Netmeeting ei tue tätä ja sekä Nopean käynnistykset että H.245-tunneloinnin käyttäminen voi kaataa jotkut Netmeeting-versiot</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Käytä aikaista H.245:ttä">
+								<longdesc>Tämä ottaa käyttöön H.245:n aikaisessa vaiheessa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Käytä H.245-tunnelointia">
+								<longdesc>Tämä ottaa käyttöön H.245-tunnelointitilan. H.245-tunnelointitilassa H.245-viestit kapseloidaan H.225-kanavaan (portissa 1720). Tämä säästää yhden TCP-yhteyden puhelun aikana. H.245-tunnelointi otettiin käyttöön H.323v2:ssa ja Netmeeting ei tue sitä. Jotkut Netmeetingin versiot voivat kaatua käytettäessä sekä nopeaa käynnistystä sekä H.245-tunnelointia.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Vastaanottoportti">
+								<longdesc>Portti, jossa kuunnellaan tulevia yhteyksiä. Ekiga täytyy käynnistää uudestaan, jotta uusi arvo tulee voimaan.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT-sidoksen aikakatkaisu">
+								<longdesc>Syötä sekunteina aikaviive, jonka jälkeen Ekiga yrittää päivittää NAT-sidoksen, kun STUN on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-lähetys">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Siirrä puhelut koneelle">
+								<longdesc>Verkkonimi, jolle puhelut ohjataan kun puhelun siirto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Lähtevien välipalvelin">
+								<longdesc>Lähteville SIP-puheluille käytettävä välimuisti</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Vastaanottoportti">
+								<longdesc>Portti, jossa kuunnellaan tulevia yhteyksiä. Ekiga täytyy käynnistää uudestaan, jotta uusi arvo tulee voimaan.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Ajallisavaruudellinen kompromissi">
+								<longdesc>Pyritäänkö säilyttämään suurin mahdollinen ruutunopeus vai pyritäänkö säilyttämään kaikille ruuduille tietty laadun minimitaso vähentämällä ruutunopeutta tarvittaessa. Arvo on väliltä 0 (korkein minimilaatu) ja 31 (matalin minimilaatu)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Suurin saapuvan videon bittinopeus">
+								<longdesc>Vastaanotettavan videon suurin bittinopeus kilobitteinä sekunnissa. Tämä arvo signaloidaan vastapäähän, jotta se voi yrittää säätää lähetysnopeuttaan hitaammaksi lähettäessään nopeammin kuin signaalissa kerrotulla nopeudella</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Suurin lähtevän videon bittinopeus">
+								<longdesc>Lähetettävän videon suurin bittinopeus kilobitteinä sekunnissa. Videon laatua ja lähetettävien ruutujen määrää sekunnissa (riippuen valitusta koodekista) säädetään dynaamisesti minimiarvojensa rajoissa siten, että pyritään pienentämään käytetty siirtokaista annettuun arvoon</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Luettelo videokoodekeista">
+								<longdesc>Luettelo videokoodekeista</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Suurin värinäpuskuri">
+								<longdesc>Suurin värinäpuskurikoko äänen vastaanotossa (millisekunteina)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Käytä kaiunpoistoa">
+								<longdesc>Kun asetettu, käytetään kaiunpoistoa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Käytä hiljaisuudentunnistusta">
+								<longdesc>Kun asetettu, käytetään hiljaisuudentunnistusta sitä tukevilla kodekeilla</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Luettelo äänikoodekeista">
+								<longdesc>Luettelo äänikoodekeista</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Ohjatussa käyttöönotossa valittu verkon tyyppi">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Oma</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Automaattinen vastaus">
+								<longdesc>Kun valittu, saapuviin puheluihin vastataan automaattisesti</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Ei vastausta -aikakatkaisu">
+								<longdesc>Hylkää tai ohjaa tulevat puhelut automaattisesti jos annetussa ajassa (sekunneissa) ei vastata</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Etävideoikkunan sijainti">
+									<longdesc>Etävideoikkunan sijainti</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Etävideoikkunan koko">
+									<longdesc>Etävideoikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Videonäkymä ennen siirtymistä kokoruututilaan">
+									<longdesc>Videonäkymä ennen siirtymistä kokoruututilaan (samat arvot kuin avaimella video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Oletusvideonäkymä">
+									<longdesc>Oletusvideonäkymä (0: paikallinen, 1: etä, 2: molemmat , 3: molemmat erillisissä ikkunoissa)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Aseta videota näyttävät ikkunat muiden ikkunoiden päälle soittojen ajaksi">
+									<longdesc>Aseta videota näyttävät ikkunat muiden ikkunoiden päälle soittojen ajaksi</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Suurennuskerroin">
+									<longdesc>Pääikkunassa näytettävissä kuvissa käytettävä suurennuskerroin. Arvo voi olla 50, 100 tai 200.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Anna ohjelmistoskaalauksen algoritmi">
+									<longdesc>Määritä ohjelmistoskaalauksen algoritmi: 0 lähin naapuri, 1 lähin naapuri laatikkosuotimella, 2 bi-lineaarinen suodatus, 3 hyberbolinen suodatus. Ei koske windows-käyttäjiä.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Salli kuva-kuvassa venytys ohjelmallisesti">
+									<longdesc>Salli Ekigan käyttää ohjelmistollista kuvan skaalausta kuva-kuvassa-toiminnolle, jos laitteistopohjaista tukea ei ole. Jos tämä on asetettu arvoon false, Ekiga ei yritä avata kuva-kuvassa ikkunoita, jos laitteisto ei tue toimintoa.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Poista videolaitteiston kiihdytys käytöstä">
+									<longdesc>Tämä avain poistaa DirectX- (Windows) ja Xvideo- (Linux) -kiihdytyksen käytöstä</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Asetusikkunan koko">
+									<longdesc>Asetusikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Asetusikkunan sijainti ruudulla">
+									<longdesc>Asetusikkunan sijainti ruudulla</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Asetusikkunan koko">
+									<longdesc>Asetusikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Asetusikkunan sijainti ruudulla">
+									<longdesc>Asetusikkunan sijainti ruudulla</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Videoasetusikkunan koko">
+									<longdesc>Videoasetusikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Videoasetusikkunan sijainti ruudulla">
+									<longdesc>Videoasetusikkunan sijainti ruudulla</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Ääniasetusikkunan koko">
+									<longdesc>Ääniasetusikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Ääniasetusikkunan sijainti ruudulla">
+									<longdesc>Ääniasetusikkunan sijainti ruudulla</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Osoitekirjaikkunan koko">
+									<longdesc>Osoitekirjaikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Osoitekirjaikkunan sijainti ruudulla">
+									<longdesc>Osoitekirjaikkunan sijainti ruudulla</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Ohjatun asennuksen ikkunan sijainti ruudulla">
+									<longdesc>Ohjatun asennuksen ikkunan sijainti ruudulla</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Ohjatun asennuksen ikkunan koko">
+									<longdesc>Ohjatun asennuksen ikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Keskusteluikkunan sijainti ruudulla">
+									<longdesc>Keskusteluikkunan sijainti ruudulla</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Keskusteluikkunan koko">
+									<longdesc>Keskusteluikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Pääikkunan sijainti ruudulla">
+									<longdesc>Pääikkunan sijainti ruudulla</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="Puheluikkunan koko">
+									<longdesc>Puheluikkunan koko</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Puheluikkunan sijainti näytöllä">
+									<longdesc>Puheluikkunan sijainti näytöllä</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Käytä STUN-verkkotunnistusta">
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN-palvelin">
+								<longdesc>STUN-palvelin, jonka kautta STUN-tukea käytetään. STUN on tekniikka, jota käyttäen päästään tietyn tyyppisten NAT-yhdyskäytävien läpi</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Varattu-äänimerkki">
+								<longdesc>Ääni, joka soitetaan puhelun päätyttyä tai soitettaessa varattuun numeroon, jos toiminto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Soita varattu-ääni">
+								<longdesc>Valittu ääni soitetaan puhelun päätyttyä tai soitettaessa jonnekin varattuun paikkaan, jos valittu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Puhelinlinjan ääni">
+								<longdesc>Ääni, joka soitetaan soitettaessa jollekulle, jos toiminto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Soita hälytysääni">
+								<longdesc>Valittu ääni soitetaan soitettaessa johonkin, jos valittu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Soita ääni uusien ääniviestien saapuessa">
+								<longdesc>Valittu ääni soitetaan vastaanotettaessa uusi ääniviesti, jos toiminto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Saapuvan puhelun ääni">
+								<longdesc>Ääni, joka soitetaan kun uuden ääniviestin saapuessa, jos toiminto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Soita ääni uusien viestien saapuessa">
+								<longdesc>Valittu ääni soitetaan vastaanotettaessa uusi pikaviesti, jos toiminto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Äänimerkki uudestaan pikaviestistä">
+								<longdesc>Ääni, joka soitetaan uuden pikaviestin saapuessa, jos toiminto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Soita ääni uusien puheluiden saapuessa">
+								<longdesc>Valittu ääni soitetaan vastaanotettaessa uusi puhelu, jos toiminto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Tulevan puhelun ääni">
+								<longdesc>Ääni, joka soitetaan saapuville puheluille, jos toiminto on käytössä</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Vaihtoehtoinen lähtevän äänen laite">
+								<longdesc>Valitse vaihtoehtoinen ääniulostulon laite äänitapahtumille.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Tuttavan tila (pitkä muoto)">
+								<longdesc>Pitkät tilatiedot</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Tuttavan tila (lyhyt muoto)">
+								<longdesc>Lyhyet tilatiedot</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Koko nimi">
+								<longdesc>Syötä koko nimesi</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Kehysnopeus">
+								<longdesc>Suurin lähetetty ruutunopeus ruutuina sekunnissa. Tätä nopeutta ei ehkä saavuteta, jos pienin sallittu laatu määriteltiin TSTO-arvoksi joka on pienempi kuin 31 ja jos valittu bittinopeus ei tue tätä pienintä laatua.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Videon esikatselu">
+								<longdesc>Näytä kuvaa kameralaitteeltasi</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Videomuoto">
+								<longdesc>Valitse videokameran kuvamuoto (ei koske useimpia USB-kameroita)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Videokanava">
+								<longdesc>Käytettävä videokanavanumero (valitsemaan kamera, tv tai muu lähde)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Videon koko">
+								<longdesc>Valitse lähetettävän videon koko: pieni (QCIF 176×144) tai suuri (CIF 352×288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Videon syötelaite">
+								<longdesc>Valitse käytettävä videonauhoituslaite.  Kun tätä laitetta käytettäessä sattuu virhe, lähetetään kokeilukuvaa.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Äänen syötelaite">
+								<longdesc>Valitse käytettävä äänen syötelaite</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Äänen toistolaite">
+								<longdesc>Valitse käytettävä äänen toistolaite</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Kirjanmerkit">
+						<longdesc>Gconf-editorin kansiokirjanmerkit</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Äskettäin pelatut pelit">
+						<longdesc>Luettelo äskettäin pelatuista peleistä</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Pelattujen pelien tilastoja">
+						<longdesc>Tekstiluettelo viiden ryhmissä: nimi, voitot, pelattujen pelien lukumäärä, paras aika (sekunteina) ja huonoin aika (sekunteina). Pelaamattomia pelejä ei tarvitse näyttää.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Pelitiedoston nimi">
+						<longdesc>Pelattavan pasianssipelin scheme-tiedoston nimi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animaatiot">
+						<longdesc>Esitetäänkö korttien liikkeet animaatioina.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Ääni">
+						<longdesc>Tulisiko tapahtumaäänet soittaa?</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Valitse ohjauksen tyyli">
+						<longdesc>Valitse raahataanko kortteja vai napsautetaanko ensin lähdettä ja sitten kohdetta</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Näytetäänkö tilarivi">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Tulisiko näyttää työkalupalkki">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Teematiedoston nimi">
+						<longdesc>Korttien kuvagrafiikka-tiedoston nimi.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="NTFS-3g-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo NTFS-muotoisten taltioiden liittämisen oletusvalitsimista käytettäessä ntfs-3g-ajuria.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Mitä tiedostojärjestelmäajuria käytetään havaittaessa &apos;ntfs&apos;-tiedostojärjestelmä">
+								<longdesc>Nimi tiedostojärjestelmäajurille, jota käytetään oletuksena avattaessa ntfs-tiedostojärjestelmiä. Tämä on hyödyllinen, kun halutaan määritellä järjestelmä avaamaan kaikki ntfs-tiedostojärjestelmät oletuksena ajurilla ntfs-3g. Käyttäjät voivat edelleen avata tiedostojärjestelmän käyttäen vanhaa ntfs-ajuria komentorivin valitsimien avulla.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="NTFS-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo NTFS-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="UDF-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo UDF-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="iso9660-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo iso9660-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="VFAT-tiedostojärjestelmän liitoksen oletusvalitsimet">
+								<longdesc>Luettelo VFAT-muotoisten taltioiden liittämisen oletusvalitsimista.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

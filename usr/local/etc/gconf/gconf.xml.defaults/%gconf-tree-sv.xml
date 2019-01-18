@@ -1,0 +1,566 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Samtalshistorik">
+							<longdesc>Historiken för de 100 senaste samtalen</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP-servrar">
+							<longdesc>Lista över konfigurerade LDAP-servrar</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Visa frånkopplade kontakter">
+							<longdesc>Om aktiverad kommer frånkopplade kontakter att visas i kontaktlistan</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Lista över infällda grupper i kontaktlistan">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Type of Service-byte (TOS) på utgående RTP IP-paket">
+							<longdesc>Type of Service-byte (TOS) på utgående RTP IP-paket. Denna byte används av nätverket för att tillhandahålla någon nivå av Quality of Service (QoS). Standardvärdet 184 (0xB8) motsvarar Expedited Forwarding (EF) PHB som definierats i RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Kontolistan">
+							<longdesc>Listan på konton till vilka Ekiga ska registrera sig</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Vidarekoppla samtal till den angivna värden om inget svar">
+								<longdesc>Om detta är aktiverat kommer alla inkommande samtal att vidarekopplas till den värd som är angiven i fältet nedan om du inte svarar på samtalet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Vidarekoppla samtal till den angivna värden om upptagen">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Vidarekoppla alltid samtal till den angivna värden">
+								<longdesc>Om detta är aktiverat kommer alla inkommande samtal att vidarekopplas till den värd som är angiven i fältet nedan</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP-portintervall">
+								<longdesc>Det intervall av UDP-portar som Ekiga kommer att använda.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP-portintervall">
+								<longdesc>Intervallet av TCP-portar som Ekiga kommer att använda för H.323 H.245-kanalen. Portintervallet har ingen effekt om båda deltagarna i konferensen använder H.245-tunnling.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Vidarekoppla samtal till värd">
+								<longdesc>Den värd dit samtal ska vidarekopplas till om vidarekoppling av samtal är aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Skickande av DTMF">
+								<longdesc>Välj läge för DTMF-sändning. Värden kan vara 0 (för &quot;String&quot;), 1 (för &quot;Tone&quot;), 2 (för &quot;RFC2833&quot;) eller 3 (för &quot;Q.931&quot;) (standard är &quot;String&quot;). Välja andra värden än &quot;String&quot; inaktiverar textchatten.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Aktivera snabbstart">
+								<longdesc>Anslutning kommer att etableras i snabbstartläge. Snabbstart är en nytt sätt att starta samtal snabbare och som introducerades i H.323v2. Den stöds inte av Netmeeting och att använda både snabbstart och H.245-tunnling kan krascha en del versioner av Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Aktivera tidig H.245">
+								<longdesc>Detta aktiverar H.245 tidigt i konfigurationen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Aktivera H.245-tunnling">
+								<longdesc>Detta aktiverar H.245-tunnlingsläge. I H.245-tunnlingsläge kapslas H.245-meddelanden in i H.225-kanalen (port 1720). Detta sparar en TCP-anslutning under samtal. H.245-tunnling introducerades i H.323v2 och Netmeeting saknar stöd för det. Att använda både snabbstart och H.245-tunnling kan krascha en del versioner av Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Lyssningsport">
+								<longdesc>Porten att lyssna på för inkommande anslutningar. Ekiga måste startas om för att detta nya värde ska börja gälla.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Tidsgräns för NAT-bindning">
+								<longdesc>Ange antalet sekunder efter vilka Ekiga ska försöka uppdater NAT-bindningen när STUN används</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Skickande av DTMF">
+								<longdesc>Välj läge för DTMF-sändning. Värden kan vara 0 (för &quot;RFC2833&quot;) och 1 (för &quot;INFO&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Vidarekoppla samtal till värd">
+								<longdesc>Den värd dit samtal ska vidarekopplas till om vidarekoppling av samtal är aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Utgående proxy">
+								<longdesc>Utgående SIP-proxy att använda för utgående samtal</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Lyssningsport">
+								<longdesc>Porten att lyssna på för inkommande anslutningar. Ekiga måste startas om för att detta nya värde ska börja gälla.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Temporär spatial kompromiss">
+								<longdesc>Huruvida föredraget val är att upprätthålla maximum bildfrekvens eller att sänka den för att möjligen behålla en minimumnivå av (spatial) kvalitet för alla bildrutor. 0: Högsta minimala kvalitet, 31: lägsta minimala kvalitet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Maximal bitfrekvens för videomottagning">
+								<longdesc>Den maximala bitfrekvensen för mottagning av video i kbit/s. Detta värde kommer att signaleras till motparten så den justera (om stöd finns) dess bitfrekvens för sändning om det är över det signalerade värdet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Maximal bitfrekvens för videosändning">
+								<longdesc>Den maximala bitfrekvensen för videosändning i kbit/s. Videokvaliteten och antalet överförda bildrutor per sekund (beroende på vald kodek) kommer att justeras dynamiskt över dess minimum under samtal för att försöka minimera bandbredden till det angivna värdet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Listan över videokodekar">
+								<longdesc>Listan över videokodekar</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Maximal jitterbuffert">
+								<longdesc>Den maximala jitterbuffertstorleken för ljudmottagning (i ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Aktivera tystnadsdetektering">
+								<longdesc>Om detta är aktiverat kommer tystnadsdetektering användas med de kodekar som har stöd för det</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Listan över ljudkodekar">
+								<longdesc>Listan över ljudkodekar</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Typ av nätverk som valts i guiden">
+							<longdesc>0: 56 kb/s, 1: ISDN, 2: DSL128, 3: DSL512, 4: Lokalt nätverk, 5: Anpassad</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Automatiskt svar">
+								<longdesc>Om detta är aktiverat kommer inkommande samtal att automatiskt besvaras</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Tidsgräns för inget svar">
+								<longdesc>Avvisa eller vidarekoppla automatiskt inkommande samtal om inget svar ges inom den angivna tiden (i sekunder)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Position för fjärrvideofönster">
+									<longdesc>Position för fönstret för fjärrvideo</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Storlek på fjärrvideofönster">
+									<longdesc>Storleken på fönstret för fjärrvideo</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Videovyn innan växling till helskärmsläge">
+									<longdesc>Videovyn innan växling till helskärmsläge (samma värden som video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Standardvideovyn">
+									<longdesc>Standardvy för video (0: Lokal, 1: Fjärr, 2: Båda, 3: Båda i ett separat fönster)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Placera fönster som visar video över andra fönster under samtal">
+									<longdesc>Placera fönster som visar video över andra fönster under samtal</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Zoomvärdet">
+									<longdesc>Zoomvärdet, i procent, som ska tillämpas på bilderna som visas i huvudanvändargränssnittet (kan vara 50, 100 eller 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Ange algoritm för programvaruskalning">
+									<longdesc>Ange algoritm för programvaruskalning: 0: närmsta granne, 1: närmsta granne med rutfilter, 2: bilinjär filtrering, 3: hyperbolisk filtrering. Gäller inte för Windows-system.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Tillåt programvaruskalning för bild-i-bild">
+									<longdesc>Tillåt Ekiga att falla tillbaka på programvaruskalning av bild-i-bild om hårdvarustöd inte finns tillgängligt. Om denna är inställd till falskt kommer Ekiga inte att försöka att öppna Bild-i-Bild om hårdvarustöd inte finns tillgängligt.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Inaktivera accelerering av videohårdvara">
+									<longdesc>Den här nyckeln inaktiverar DirectX-accelering (på win32) och XVideo (på Linux) för videohårdvara</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Storlek på inställningsfönstret">
+									<longdesc>Storlek på inställningsfönstret</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position på skärmen för inställningsfönstret">
+									<longdesc>Position på skärmen för inställningsfönstret</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Storlek på inställningsfönstret">
+									<longdesc>Storlek på inställningsfönstret</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position på skärmen för inställningsfönstret">
+									<longdesc>Position på skärmen för inställningsfönstret</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Storlek på videoinställningsfönstret">
+									<longdesc>Storlek på videoinställningsfönstret</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position på skärmen för videoinställningsfönstret">
+									<longdesc>Position på skärmen för videoinställningsfönstret</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Storlek på ljudinställningsfönstret">
+									<longdesc>Storlek på ljudinställningsfönstret</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position på skärmen för ljudinställningsfönstret">
+									<longdesc>Position på skärmen för ljudinställningsfönstret</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Storlek på adressboksfönstret">
+									<longdesc>Storlek på adressboksfönstret</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position på skärmen för adressboksfönstret">
+									<longdesc>Position på skärmen för adressboksfönstret</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Position på skärmen för guidefönstret">
+									<longdesc>Position på skärmen för guidefönstret</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Storlek på guidefönstret">
+									<longdesc>Storlek på guidefönstret</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Position på skärmen för chattfönstret">
+									<longdesc>Position på skärmen för chattfönstret</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Storlek på chattfönstret">
+									<longdesc>Storlek på chattfönstret</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Ändra panelsektionen i huvudfönstret">
+									<longdesc>Ändra panelsektionen för huvudfönstret (0=Kontakter, 1=Knappsats, 2=Samtalshistorik)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position på skärmen för huvudfönstret">
+									<longdesc>Position på skärmen för huvudfönstret</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Aktivera STUN-nätverksdetektering">
+								<longdesc>Aktivera den automatiska nätverkskonfigurationen som togs fram av STUN-testet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN-servern">
+								<longdesc>STUN-servern att använda för STUN-stöd. STUN är en teknik som tillåter att vissa typer av NAT-gatewayer kan passeras</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Upptagettonen">
+								<longdesc>Ljudet som kommer att spelas vid slutet av samtal eller då någon som är upptagen rings upp, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Spela upptagetton">
+								<longdesc>Det valda ljudet kommer att spelas vid slutet av samtal eller då någon som är upptagen rings upp, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Ljudet för ringtonen">
+								<longdesc>Ljudet som kommer att spelas då någon rings upp, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Spela ringsignal">
+								<longdesc>Det valda ljudet kommer att spelas då någon rings upp, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Spela upp ljud vid nytt röstmeddelande">
+								<longdesc>Det valda ljudet kommer att spelas upp då ett nytt röstmeddelande tas emot, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Det nya ljudet för nytt röstmeddelande">
+								<longdesc>Ljudet som kommer att spelas upp då det finns ett nytt röstmeddelande, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Spela upp ljud vid nytt meddelande">
+								<longdesc>Det valda ljudet kommer att spelas upp då ett nytt snabbmeddelande tas emot, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Det nya ljudet för snabbmeddelande">
+								<longdesc>Ljudet som kommer att spelas upp då det finns ett nytt snabbmeddelande, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Spela ljud vid inkommande samtal">
+								<longdesc>Det valda ljudet kommer att spelas vid inkommande samtal, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Ljudet för inkommande samtal">
+								<longdesc>Ljudet som kommer att spelas för inkommande samtal, om aktiverat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Alternativ ljudutgångsenhet">
+								<longdesc>Välj en alternativ ljudutgångsenhet som ska användas för ljudhändelser.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Kontaktens långa status">
+								<longdesc>Den långa statusinformationen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Kontaktens korta status">
+								<longdesc>Den korta statusinformationen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Fullständigt namn">
+								<longdesc>Ange ditt fullständiga namn</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Bildfrekvens">
+								<longdesc>Den maximala överförda bildfrekvensen i bilder/s. Denna frekvens kanske inte uppnås om minimumkvaliteten konfigurerades via ett TSTO-värde mindre än 31 och vald bitfrekvens inte är tillräcklig för att ge stöd för denna minimumkvalitet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Förhandsgranskning av video">
+								<longdesc>Visa bilder från din kameraenhet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Videoformat">
+								<longdesc>Ange formatet för videokameror (är inte tillämpbart för de flesta USB-kameror)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Videokanal">
+								<longdesc>Videokanalnumret att använda (för att välja kamera, tv eller andra källor)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Videostorlek">
+								<longdesc>Välj den överförda videostorleken: Liten (QCIF 176×144) eller Stor (CIF 352×288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Videoingångsenhet">
+								<longdesc>Välj den videoingångsenhet som ska användas. Om ett fel inträffar då denna enhet används kommer en bild att överföras.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Ljudingångsenhet">
+								<longdesc>Välj den ljudingångsenhet som ska användas</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Ljudutgångsenhet">
+								<longdesc>Välj den ljudutgångsenhet som ska användas</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Bokmärken">
+						<longdesc>Mappbokmärken för gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Tidigare spelade spel">
+						<longdesc>En lista över tidigare spelade spel.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statistik för spelade spel">
+						<longdesc>En lista med strängar som kommer i formen av en femtupel: namn, vinster, totala antalet spelade spel, bästa tiden (i sekunder) och sämsta tiden (också den i sekunder). Ospelade spel behöver inte representeras.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Spelfilen att använda">
+						<longdesc>Namnet på schemafilen som innehåller det patiensspel som ska spelas.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animationer">
+						<longdesc>Huruvida kortdrag ska animeras eller inte.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Ljud">
+						<longdesc>Huruvida händelseljud ska spelas eller inte.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Välj styrningsstil">
+						<longdesc>Välj huruvida korten ska dras eller om källan ska klickas på och sedan målet.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Huruvida statusraden ska visas eller inte">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Huruvida verktygsfältet ska visas eller inte">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Temafilnamn">
+						<longdesc>Namnet på filen som innehåller grafiken för korten.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för ntfs-3g-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med ntfs-filsystemet med ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="När &quot;ntfs&quot; identifieras, vilken filsystemdrivrutin ska användas som standard">
+								<longdesc>Namnet på filsystemdrivrutinen som ska användas som standard när &quot;ntfs&quot; identifieras. Det här är användbart för konfigurering av systemet till att använda drivrutinen &quot;ntfs-3g&quot; för alla &quot;ntfs&quot;-filsystem som standard. Användaren kan fortfarande välja att använda filsystemsdrivrutinen &quot;ntfs&quot; genom att åsidosätta den för varje volym eller på kommandoraden.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för ntfs-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med ntfs-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för udf-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med udf-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för iso9960-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med iso9660-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Standardmonteringsalternativ för vfat-filsystem">
+								<longdesc>En lista på standardmonteringsalternativ för volymer som är formaterade med vfat-filsystemet.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

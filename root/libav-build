@@ -1,0 +1,5 @@
+cd /root/ffmpeg/FFmpeg
+./version.sh
+./configure  --prefix=/usr/local --enable-nonfree --enable-version3 --enable-libaacplus --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libcdio --enable-libfaac --enable-libfdk-aac --enable-libmp3lame --enable-libvorbis --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvpx --enable-libx264 --enable-libxvid --enable-x11grab --enable-shared --enable-gpl --enable-version3 --enable-avfilter --enable-avresample --enable-pthreads --enable-libpulse --enable-libx264 --enable-libx265 --enable-openssl --enable-libmp3lame --enable-libfreetype --enable-vdpau --cc=clang
+gmake all
+gmake install

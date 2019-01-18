@@ -1,0 +1,3 @@
+org.kde.pim.libksieve kdepim (libksieve)
+org.kde.pim.kmanagersieve kdepim (libksieve manager)
+org.kde.pim.sieve kioslave (sieve)

@@ -1,0 +1,87 @@
+# Format : logname<space>description(optional <space>[DEFAULT_CATEGORY] as WARNING/DEBUG/INFO/CRITICAL example: logname<space>description<space>[DEBUG])
+
+#frameworks
+org.kde.kio.kpasswdserver KPasswdServer (KIO)
+org.kde.kurifilter-ikws KUriFilter IKWS (KIO)
+org.kde.kurifilter-shorturi KUriFilter Shorturi (KIO)
+BluezQt BluezQt
+kf5.kauth KAuth
+kf5.kcoreaddons.kdirwatch KDirWatch (KCoreAddons) [WARNING]
+kf5.kcoreaddons.kaboutdata KAboutData (KCoreAddons)
+kf5.kcoreaddons.desktopparser DesktopParser (KCoreAddons) [WARNING]
+kf5.kcoreaddons.kdelibs4configmigrator Kdelibs4ConfigMigrator (KCoreAddons) [WARNING]
+kf5.kded KDED [WARNING]
+kf5.kiconthemes KIconThemes
+kf5.kinit.klauncher KLauncher [WARNING]
+kf5.kio.core KIOCore (KIO)
+kf5.kio.core.dirlister KCoreDirLister (KIO) [WARNING]
+kf5.kio.core.copyjob KIO::CopyJob (KIO) [WARNING]
+kf5.kio.widgets KIOWidgets (KIO)
+kf5.kiod KIO Daemon (KIO)
+kf5.kio.kio_http KIO HTTP slave (KIO) [WARNING]
+kf5.kjobwidgets KJobWidgets
+kf5.kio.favicons FavIcons (KIO)
+kf5.kservice.sycoca KSycoca (KService)
+kf5.kxmlgui KXMLGui
+kglobalaccel-runtime KGlobalAccel [WARNING]
+knewstuff KNewStuff
+log_kxmlrpcclient KXmlRPCClient
+modemmanager-qt ModemManagerQt [WARNING]
+networkmanager-qt NetworkManagerQt [WARNING]
+org.kde.baloo Baloo
+org.kde.kactivities.activities KActivities Activities
+org.kde.kactivities.application KActivities Application
+org.kde.kactivities.lib.core KActivities Library [WARNING]
+org.kde.kactivities.resources KActivities Resources
+org.kde.kf5.idletime KIdleTime [WARNING]
+org.kde.knotifications KNotifications
+org.kde.krunner KRunner
+org.kde.ktexteditor KTextEditor [WARNING]
+org.kde.kwindowsystem KWindowSystem [WARNING]
+org.kde.kwindowsystem.keyserver.x11 KKeyServer (KWindowSystem) [WARNING]
+sonnet.plugins.hunspell HUnspell (Sonnet)
+sonnet.plugins.voikko Voikko (Sonnet)
+
+#kdeedu
+log_klettres kdeedu (kletters)
+
+#kdegames
+log_granatier kdegames (granatier)
+log_ksirkskineditor kdegames (ksirk)
+ksnakeduel_smtp kdegames (ksnakeduel)
+log_kgoldrunner kdegames (kgoldrunner)
+log_kshisen kdegames (kshisen)
+log_libkmahjongg lib kdegames (libkmahjongg)
+LOG_KUBRICK kdegames (kubrick)
+org.kde.lskat kdegames (lskat)
+log_fourinline kdegames (kfourinline)
+
+#workspace
+powerdevil powerdevil
+log_user_manager user manager
+log_kioremote kioslave (kioremove)
+kscreen libkscreen
+kscreen.backendLauncher libkscreen backend launcher
+kscreen.console kscreen (kscreen-console utility)
+kscreen.doctor libkscreen (kscreen-doctor utility)
+kscreen.dpms kscreen DPMS
+kscreen.edid libkscreen (edid)
+kscreen.fake libkscreen (fake backend)
+kscreen.kded kscreen (kded)
+kscreen.kwayland libkscreen (kwayland backend)
+kscreen.kwayland.testserver libkscreen (kwayland test server)
+kscreen.qscreen libkscreen (qscreen backend)
+kscreen.xcb.helper libkscreen (xcb helper)
+kscreen.xrandr libkscreen (xrandr backend)
+kscreen.xrandr11 libkscreen (xrandr1.1 backend)
+ksmserver ksmserver
+libksysguard libksysguard
+log_kio_man kioslave (kio_man)
+log_kio_archive kioslave (kio_archive)
+log_kio_sftp kioslave (kio_sftp)
+
+#kdebase
+log_kdepassword kdepassword
+
+#kdebugsettings
+log_kdebugsettings kdebugsettings

@@ -1,0 +1,360 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="ზარების ისტორია">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="ანგარიშების სია">
+							<longdesc>ანგარიშთა სია რომლებიც ეკიგამ უნდა დაარეგისტრიროს</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="ზარზე პასუხის გაუცემლობის შემთხვევაში ზარის მოცემულ მისამართზე გადაგზავნა">
+								<longdesc>თუ მონიშნულია, ზარზე პასუხის გაუცემლობის შემთხვევაში ყველა შემომავალი ზარი ქვემოთ მოცემულ მისამართზე იქნება გადაგზავნილი</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="თუ დაკავებულია ზარების მოცემულ მისამართზე დაგაგზავნა">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="ყოველთვის ზარების მოცემულ მისამართზე გადაგზავნა">
+								<longdesc>თუ·მონიშნულია,·შემოვამალი ზარი გადაიგზავნება ქვემოთ მინიშნულ მისამართზე</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP პორტის ინტერვალი">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP პორტ ინტერვალი">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="ზარების ჰოსტისკენ გადაგზავნა">
+								<longdesc>თუ მონიშნულია, მისამართი რომელზეც გადაიგზავნება შემომავალი ზარები</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-ის გაგზავნა">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="გააქტიურე &apos;სწრაფი ჩართვა&apos;">
+								<longdesc>კავშირი დამყარდება &quot;სწრაფი ჩართვა&quot; მეთოდით, &quot;სწრაფი ჩართვა&quot; პირველად გამოყენებულ იქნა H.323v2 -ში. იგი არ იმუშავებს Netmeeting -ის ადრეულ ვესრიებთან.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="ჩართე early H.245">
+								<longdesc>რთავს ადრეულ H.245</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="ჩართე H.245 ტუნელინგი">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="მსმენელი პორტი">
+								<longdesc>პორტი შემომავალი კავშირებისთვის. საჭიროა ეკიგას გადათვირთვა ახალი ცვლილებების დასამტკიცებლად.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT·Binding -ის დრო">
+								<longdesc>შეიყვანეთ წამების რაოდენობა რათა ეკიგამ განაახლოს NAT binding -გი,STUN -ისგამოყენების შემთხვევაში</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-ის გაგზავნა">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="ზარების ჰოსტისკენ გადაგზავნა">
+								<longdesc>თუ მონიშნულია, მისამართი რომელზეც გადაიგზავნება შემომავალი ზარები</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="გამავალი პროქსი">
+								<longdesc>გამავალი ზარებისთვის SIP Outbound·Proxy -ის გამოყენება</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="მსმენელი პორტი">
+								<longdesc>შემომავალი კავშირებისთვის გათვალისწინებული პორტი.ცვლილებების დამტკიცებისთვის საჭიროა ეკიგას გადატვირთვა</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="მაქსიმალური jitter-ბუფერი">
+								<longdesc>მაქსიმალური jitter ბუფერის ზომა აუდიო მიღებისთვის (ბ/წმ)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="ჩართე სიჩუმის დეტექტორი">
+								<longdesc>მონიშვნის შემთხვევაში, მოიხმარს სიჩუმის დეტექტორს თუ რა თქმა უნდა კოდეს აქვს ამის მხარდაჭერა</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="აუდიო კოდეკების სია">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="არავითარი პასუხი">
+								<longdesc>ზარის უარყოფა, პასუხის გაუცემლობის შემთხვევაში გარკვეული დროის შემდგომ (წამებში)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="მიღებული ვიდეოს ფანჯრის პოზიცია">
+									<longdesc>დაშორებული ვიდეო ფანჯრის პოზიცია</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="მიღებული ვიდეოს ფანჯრის ზომა">
+									<longdesc>დაშორებული ვიდეოს ფანრის ზომა</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="საწყისი ვიდეო ხედი">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="ეკიგას მთავარი ფანჯრის სხვა ფანჯრებთან შედარებით წინაპლანზე გამოჩენის პრიორიტეტი რეკვის დროს">
+									<longdesc>ეკიგას მთავარი ფანჯრის სხვა ფანჯრებთან შედარებით წინაპლანზე გამოჩენის პრიორიტეტი რეკვის დროს</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="მიახლოების ზომა">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="პარამეტრების ფანჯრის ზომა">
+									<longdesc>პარამეტრების ფანჯრის ზომა</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="პარამეტრების ფანჯრის პოზიცია ეკრანზე">
+									<longdesc>პარამეტრების ფანჯრის პოზიცია ეკრანზე</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="პარამეტრების ფანჯრის ზომა">
+									<longdesc>პარამეტრების ფანჯრის ზომა</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="პარამეტრების ფანჯრის პოზიცია ეკრანზე">
+									<longdesc>პარამეტრების ფანჯრის პოზიცია ეკრანზე</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="მისამართების წიგნაკის ფანჯრის ზომა">
+									<longdesc>მისამართების წიგნაკის ფანჯრის ზომა</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="მისამართების წიგნაკის ფანჯრის მდებარეობა ეკრანზე">
+									<longdesc>მისამართების წიგნაკის ფანჯრის მდებარეობა ეკრანზე</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="დრუიდის ფანჯრის ეკრანზე მდებარეობა">
+									<longdesc>დრუიდის ფანჯრის ეკრანზე მდებარეობა</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="დრუიდის ფანჯრის ზომა">
+									<longdesc>დრუიდის ფანჯრის ზომა</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="სასაუბრო ფანჯრის პოზიცია ეკრანზე">
+									<longdesc>სასაუბრო ფანჯრის პოზიცია ეკრანზე</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ჩატ ფანჯრის ზომა">
+									<longdesc>ჩატ ფანჯრის ზომა</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="მთავარი ფანჯრის პოზიცია ეკრანზე">
+									<longdesc>მთავარი ფანჯრის პოზიცია ეკრანზე</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="STUN სერვერი">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="დაკავების ხმა">
+								<longdesc>თუ ჩართულია, მომხმარებელი რომელიც გირეკავთ, ან თქვენს მიერ განხორციელებულ ზარის დროს გაიგებთ დაკავების ზუმერს </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="დაკავების ტონის დაკვრა">
+								<longdesc>თუ მონიშნულია, შემდეგი ხმა გაისმება ზარის დასრულებისას ან როცა მომხმარებელი რომელსაც ურეკავთ დაკავებულია</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="აკრეფვის ტონის ხმა">
+								<longdesc>თუ·მონიშნულია,·გაიგებთ·ხმას უცნობი შემომავალი ზარების დროს</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="გასვლის ტონის დაკვრა">
+								<longdesc>თუ მონიშნულია, გაიგებთ თქვენს მიერ ამორჩეულ ხმას დარეკვის დროს</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="ხმის დაკვრა ახალი ხმოვანი მეილის მიღებისას">
+								<longdesc>თუ მონიშნულია, ამორჩეული ხმა დაიკვრება ახალი ხმოვანი ფოსტის მიღების შემთხვევაში</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="ახალი ხმოვანი წერილის ხმის ბგერა">
+								<longdesc>მონიშვნის შემთხვევაში, გაიგებთ ხმას ახალი ხმოვანი ფოსტის მიღებისას</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="დაუკარი ახალი შეტყობინების დროს">
+								<longdesc>მონიშვნის შემთხვევაში, გაიგებთ მონიშნულ ბგერას შემომავალი შეტყობინების შემთხვევაში</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="ახალი შეტყობინების ხმის ბგერა">
+								<longdesc>თუ·მონიშნულია,·გაიგებთ·ხმას·შემომავალი·შეტყობინების მიღების დროს</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="შემომავალი ზარების დროს დაკვრა">
+								<longdesc>თუ·მონიშნულია,·გაიგებთ·მონიშნულ·ბგერას·შემომავალი·ზარის შემთხვევაში</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="შემომავალი ზარის ხმა">
+								<longdesc>მონიშვნის შემთხვევაში, გაიგებთ ხმას შემომავალი ზარების დროს</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ალტერნატიული აუდიო გასავალის მოწყობილობა">
+								<longdesc>სხვაგვარი აუდიო გამოტანის მოწყობილობის ამორჩევა ხმოვან მოვლენებისთვის.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="კადრი წამში">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="ვიდეო გადახედვა">
+								<longdesc>კამერის ჩართვა და დისპლეიზე ჩვენება</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="ვიდეო ფორმატი">
+								<longdesc>ამოირჩიეთ ვიდეო კამერების ფორმატი (არ იმუშავებს მეტ წილ USB კამერებთან)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="ვიდეო არხი">
+								<longdesc>გამოსაყენებელი ვიდეო არხების რაოდენობა (კამერა, ტელე ან სხვა წყაროებიდან)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="ვიდეოს ზომა">
+								<longdesc>გასაგზავნი ვიდეოს ზომა: პატარა (QCIF 176x144) ან დიდი (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="ვიდეოს შესავალი ხელსაწყო">
+								<longdesc>ამოირჩიეთ ვიდეო შეტანის მოწყობილობა. შეცდომის შემთხვევაში, ვიდეოს მაგივრად გაიგზავნება ნახატი.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="აუდიო შესავალის მოწყობილობა">
+								<longdesc>ამოირჩიეთ·გამოსაყენებელი·აუდიო·შეტანის·მოწყობილობა</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="აუდიო გასავალის მოწყობილობა">
+								<longdesc>ამოირჩიეთ გამოსაყენებელი აუდიო გამოტანის მოწყობილობა</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="სანიშნეები">
+						<longdesc>gconf-editor სანიშნეების დასტა</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="statistics">
+					<local_schema short_desc="ნათამაშები თამაშების სტატისტიკა">
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="გამოსაყენები თამაშის ფაილი">
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="ხმა">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="თემის ფაილის სახელი">
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

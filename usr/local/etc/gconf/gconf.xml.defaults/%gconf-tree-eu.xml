@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Deien historia">
+							<longdesc>Historiaren azken 100 deiak</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP zerbitzariak">
+							<longdesc>Konfiguratutako LDAP zerbitzarien zerrenda</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Erakutsi lineaz kanpoko kontaktuak">
+							<longdesc>Gaituta badago, lineaz kanpoko kontaktuak erakutsiko dira zerrendan</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Tolestutako taldeen zerrenda">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Zerbitzu motaren (ToS) bytea irteerako RTP IP paketeetan">
+							<longdesc>Zerbitzu motaren (ToS) bytea irteerako RTP IP paketeetan. Byte hau sareak erabiltzen du Zerbitzu Kalitatearen (QoS) maila bat eskaintzeko. 184 (0xB8) balio lehenetsiak RFC 3246en definituta dagoen PHB bidalketa arinduari (EF) dagokio.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Kontuen zerrenda">
+							<longdesc>Kontuen zerrenda Ekiga-k erregistratzeko</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Birbidali deiak emandako ostalariari erantzunik ez badago">
+								<longdesc>Gaituta badago, sartzen diren dei guztiak beheko eremuan adierazitako ostalariari birbidaliko zaizkio, zuk deia erantzuten ez baduzu.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Birbidali deiak emandako ostalariari lanpetuta badago">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Deiak beti birbidali adierazitako ostalariari">
+								<longdesc>Gaituta badago, sartzen diren dei guztiak beheko eremuan adierazitako ostalariari birbidaliko zaizkio.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP ataka-barrutia">
+								<longdesc>UDP ataka-barrutia Ekiga-k erabiltzeko.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP atakaren barrutia">
+								<longdesc>Ekiga-k erailiko duen TCP ataka-barrutia H.323 H.245 kanalerako. Ataka-barruti horrek ez du eraginik konferentziako bi parte-hartzaileak H.245 Tunneling erabiltzen ari badira.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Birbidali deiak ostalariari">
+								<longdesc>Ostalaria, deiak horra birbideratzeko (birbideratzea gaituta egonez gero)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF bidaltzen">
+								<longdesc>Hautatu DTMF bidez bidaltzeko modua. Balioak hauek izan daitezke: &quot;Katea&quot; (0), &quot;Tonua&quot; (1), &quot;RFC2833&quot;(2), &quot;Q.931&quot; (3) (lehenetsia &quot;Katea&quot;) da. &quot;Katea&quot; ez diren balioak hautatuz gero, testu-berriketa desgaituko da.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Gaitu &apos;Hasiera azkarra&apos;">
+								<longdesc>Konexioa &apos;Hasiera azkarra&apos; moduan ezarriko da. Hasiera azkarra H.323v2an sartu den deiak azkarrago hasteko modu berria da. Netmeeting-ek ez du onartzen eta &apos;Hasiera azkarra&apos; eta H.245 Tunnelling biak erabiliz gero Netmeeting-en bertsio batzuk honda daitezke.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Gaitu H.245 goiztiarra">
+								<longdesc>Honek H.245 goiztiarra konfigurazioan gaitzen du</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Gaitu H.245 Tunnelling-a">
+								<longdesc>Horrek H.245 Tunnelling modua gaitzen du. H.245 Tunnelling moduan H.245 mezuak H.225 kanalean kapsulatzen dira (1720 ataka). Horrek TCP konexioa gordetzen du deiak martxan dauden bitartean. H.245 Tunnelling H.323v2-an sartu zen eta Netmeeting-ek ez du onartzen. &apos;Hasiera azkarra&apos; eta H.245 Tunnelling biak batera erabiliz gero, Netmeeting-en hainbat bertsio kraska daitezke.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Entzuteko ataka">
+								<longdesc>Sarrerako konexioetarako entzun beharreko ataka. Ekiga berrabiarazi egin behar da balio berriak eragina izateko.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT loturaren denbora-muga">
+								<longdesc>Sartu segundo-kopurua, horren ondoren Ekiga-k NAT lotura freskatzeko STUN erabiltzen denean</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF bidaltzen">
+								<longdesc>Hautatu DTMFak bidaltzeko modua. Balioak hauek izan daitezke: 0 (&quot;RFC2833&quot;) eta 1 (&quot;INFO&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Birbidali deiak ostalariari">
+								<longdesc>Ostalaria, deiak horra birbideratzeko (birbideratzea gaituta egonez gero)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Irteerako proxy-a">
+								<longdesc>SIP irteerako proxy-a kanpora deitzean erabiltzeko</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Entzuteko ataka">
+								<longdesc>Sarrerako konexioetarako entzun beharreko ataka. Ekiga berrabiarazi egin behar da balio berriak eragina izateko.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Truke denbora-espaziala (TSTO)">
+								<longdesc>Gehienezko fotograma-emaria mantentzea edo murriztea nahi den edo fotograma guztien gutxieneko kalitate (espaziala) maila mantentzeko. 0: gutxieneko kalitate altuena, 31: gutxieneko kalitate baxuena.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Bideoa jasotzeko gehienezko bit-emaria">
+								<longdesc>Bideoa jasotzeko gehienezko bit-emaria (Kbit/s). Balio hau amaierako puntura bidal daiteke bere transmisioko bit-emaria doitzeko (onartzen bada) bidalitako balioa baino altuagoa bada.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Bideoa transmititzeko gehienezko bit-emaria">
+								<longdesc>Bideoaren transmisioaren gehienezko bit-emaria (kbit/s). Bideo-kalitatea eta transmititutako fotograma-emaria segundoko (hautatutako kodekaren arabera) dinamikoki doituko dira beraien gutxienekoaren gainetik deiak martxan dauden bitartean, banda-zabalera emandako baliora minimizatzen saiatzeko.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Bideo-kodeken zerrenda">
+								<longdesc>Bideo-kodeken zerrenda</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Bufferraren gehienezko atzerapena">
+								<longdesc>Audioa jasotzeko bufferraren gehienezko atzerapena (ms-tan).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Gaitu isiltasuna detektatzea">
+								<longdesc>Gaituta badago, erabili isiltasuna detektatzea onartzen duten kodekekin</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Audio-kodeken zerrenda">
+								<longdesc>Audio-kodeken zerrenda</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Laguntzailean hautatutako sare mota">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: pertsonalizatua</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Erantzun automatikoa">
+								<longdesc>Gaituta badago, erantzun automatikoki sarrerako deiak</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Erantzunik ez denbora-muga">
+								<longdesc>Automatikoki ezetsi edo birbidali sarrerako deiak erantzunik ematen ez bada zehaztutako denbora igaro eta gero (segundoak)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Urruneko bideoaren leihoaren posizioa">
+									<longdesc>Urruneko bideoaren leihoaren posizioa</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Urruneko bideoaren leihoaren tamaina">
+									<longdesc>Urruneko bideoaren leihoaren tamaina</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Bideoaren ikuspegia pantaila osora aldatu aurretik">
+									<longdesc>Bideoaren ikuspegia pantaila osora aldatu aurretik (bideoaren ikuspegiaren balio berdinak)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Bideoaren ikuspegi lehenetsia">
+									<longdesc>Bideoaren ikuspegi lehenetsia (0: lokala, 1: urrunekoa, 2: biak sartuta, 3: biak bereizitako leihoan)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Kokatu bideoak erakusten dituzten leihoak beste leihoen gainetik deia martxan dagoela.">
+									<longdesc>Kokatu bideoak erakusten dituzten leihoak beste leihoen gainetik deia martxan dagoela.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Zoomaren balioa">
+									<longdesc>GUI nagusian bistaratutako irudiei aplikatzeko zoomaren balioa (50, 100, edo 200 izan daiteke)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Zehaztu software bidez eskalatzeko algoritmoa">
+									<longdesc>Zehaztu software bidez eskalatzeko algoritmoa: 0 (gertueneko balioa), 1 (gertueneko balioa kutxarekin iragazkia), 2 (iragazki bilineala), 3 (iragazki hiperbolikoa). Windows sistema eragiletan ez da aplikatzen.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Baimendu irudia irudian software bidez eskalatzea">
+									<longdesc>Baimendu Ekiga-ri software bidez irudia irudian eskalatzea, hardwarearen euskarria ez badago erabilgarri. Hau faltsua bezala ezartzen bada, Ekiga ez da &apos;irudia irudian&apos; irekitzen saiatuko hardwarearen euskarria eskuragarri ez dagoenean.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Desgaitu bideoaren hardware bidezko azelerazioa">
+									<longdesc>Gako honek bideoaren hardware bidezko DirectX (win32 sistemetan) eta XVideo (GNU/Linux sistemetan) azelerazioa desgaitzen du</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Hobespenak leihoaren tamaina">
+									<longdesc>Hobespenak leihoaren tamaina</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Hobespenak leihoaren posizioa pantailan">
+									<longdesc>Hobespenak leihoaren posizioa pantailan</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Hobespenak leihoaren tamaina">
+									<longdesc>Hobespenak leihoaren tamaina</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Hobespenak leihoaren posizioa pantailan">
+									<longdesc>Hobespenak leihoaren posizioa pantailan</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Bideo-ezarpenen leihoaren tamaina">
+									<longdesc>Bideo-ezarpenen leihoaren tamaina</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Bideo-ezarpenen leihoaren posizioa pantailan">
+									<longdesc>Bideo-ezarpenen leihoaren posizioa pantailan</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Audio-ezarpenen leihoaren tamaina">
+									<longdesc>Audio-ezarpenen leihoaren tamaina</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Audio-ezarpenen leihoaren posizioa pantailan">
+									<longdesc>Audio-ezarpenen leihoaren posizioa pantailan</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Helbide-liburua leihoaren tamaina">
+									<longdesc>Helbide-liburua leihoaren tamaina</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Helbide-liburuaren leihoaren posizioa pantailan">
+									<longdesc>Helbide-liburuaren leihoaren posizioa pantailan</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Morroia leihoaren posizioa pantailan">
+									<longdesc>Morroia leihoaren posizioa pantailan</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Morroia leihoaren tamaina">
+									<longdesc>Morroia leihoaren tamaina</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Berriketarako leihoaren posizioa pantailan">
+									<longdesc>Berriketarako leihoaren posizioa pantailan</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Berriketarako leihoaren tamaina">
+									<longdesc>Berriketarako leihoaren tamaina</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Aldatu leiho nagusiko panelaren sekzioa">
+									<longdesc>Aldatu leiho nagusiko panelaren sekzioa (0=Kontaktuak, 1=Deitzeko zenbakizko teklatua, 2=Deien historia)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Leiho nagusiaren posizioa pantailan">
+									<longdesc>Leiho nagusiaren posizioa pantailan</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Gaitu STUN sarea detektatzea">
+								<longdesc>Gaitu sarea automatikoki konfiguratzea STUN probaren emaitzekin</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN zerbitzaria">
+								<longdesc>STUN zerbitzaria STUN euskarria erabiltzeko. STUN teknikak NAT atebide mota batzuetan zehar igarotzen uzten du.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Lanpetutako tonuaren soinua">
+								<longdesc>Deien amaieran edo lanpetuta dagoen norbaiti deitzean erreproduzituko den soinua, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Erreproduzitu lanpetuta egoerako tonua">
+								<longdesc>Aukeratutako soinua erreproduzituko da deien amaieran edo lanpetuta dagoen norbaiti deitzean, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Txirrina tonuaren soinua">
+								<longdesc>Norbait deitzen ari denean erreproduzituko den soinua, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Erreproduzitu txirrinaren tonua">
+								<longdesc>Aukeratutako soinua erreproduzituko da norbaiti deitzean, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Erreproduzitu soinua ahotsezko mezu berriarekin">
+								<longdesc>Aukeratutako soinua erreproduzituko da ahotsezko mezua jasotzean, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Ahotsezko mezu berriaren soinua">
+								<longdesc>Ahotsezko mezu berria dagoenean erreproduzituko den soinua, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Erreproduzitu soinua mezu berriarekin">
+								<longdesc>Aukeratutako soinua erreproduzituko da berehalako mezua jasotzean, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Berehalako mezu berriaren soinua">
+								<longdesc>Berehalako mezu berria dagoenean erreproduzituko den soinua, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Erreproduzitu soinua deiak jasotzean">
+								<longdesc>Aukeratutako soinua erreproduzituko da sarrerako deietan, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Sarrerako deien soinua">
+								<longdesc>Deiak jasotzean erreproduzituko den soinua, gaituta badago</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Audioaren bestelako irteerako gailua">
+								<longdesc>Hautatu audioaren beste irteerako gailua dei-soinuaren gertaeran erabiltzeko.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Kontaktuaren egoera luzea">
+								<longdesc>Egoera luzearen informazioa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Kontaktuaren egoera laburra">
+								<longdesc>Egoera laburraren informazioa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Izen-abizenak">
+								<longdesc>Sartu zure izen-abizenak</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Fotograma-emaria">
+								<longdesc>Transmititutako gehienezko fotograma-emaria (f/s). Baliteke emari honetara ez iristea TSTOren gutxieneko kalitatea 31 baino baxuagoa bada eta hautatutako bit-emaria ez bada nahikoa gutxieneko kalitate hau onartzeko.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Bideoaren aurrebista">
+								<longdesc>Bistaratu irudiak kamera-gailutik.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Bideo-formatua">
+								<longdesc>Hautatu bideo-kameretako formatua (ez zaie USB kamera gehienei aplikatzen).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Bideo-kanala">
+								<longdesc>Erabili beharreko bideo-kanalaren zenbakia (kamera, telebista edo bestelako iturriak hautatzeko).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Bideo-tamaina">
+								<longdesc>Hautatu transmititutako bideoaren tamaina: txikia (QCIF 176x144) edo handia (CIF 352x288).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Bideo-sarrerako gailua">
+								<longdesc>Hautatu erabili beharreko bideo-sarrerako gailua. Gailu hau erabiltzean errorerik gertatzen bada, probako irudi bat transmitituko da.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Audio-sarrerako gailua">
+								<longdesc>Hautatu erabili beharreko audioaren sarrerako gailua</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Audioaren irteerako gailua">
+								<longdesc>Hautatu erabili beharreko audioaren irteerako gailua</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Laster-markak">
+						<longdesc>gcond-editorearen laster-marken direktorioa</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Oraintsu jolastutako jokoak">
+						<longdesc>Oraintsu jolastutako jokoen zerrenda.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Jolastutako jokoen estatistikak">
+						<longdesc>Boskoitz moduan etortzen den kate-zerrenda bat: izena, garaipenak, jolastutako partidak guztira, denbora onena (segundotan) eta denbora okerrena (hau ere segundotan). Jolastu gabeko partidak adierazi beharrik ez dago.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Erabili behar den joko-fitxategia">
+						<longdesc>Jolastu beharreko bakar-jokoa duen eskema-fitxategiaren izena.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animazioak">
+						<longdesc>Animazioa erabiliko den karten mugimenduetan ala ez adierazten du.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Soinua">
+						<longdesc>Gertaera-soinuak erreproduzituko diren ala ez adierazten du.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Hautatu kontrol-estiloa">
+						<longdesc>Hautatu kartak arrastatu behar diren, ala lehenik jatorrian eta ondoren helburuan klik egin behar den.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Egoera-barra erakutsiko den ala ez adierazten du.">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Tresna-barra erakutsiko den ala ez adierazten du.">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Gai-fitxategiaren izena">
+						<longdesc>Karten grafikoak dituen fitxategiaren izena.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

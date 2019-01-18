@@ -1,0 +1,22 @@
+#ipfw add 102 allow tcp from any to me dst-port 1723 in via igb1
+##add allow tcp from any to me dst-port 443 in via igb1
+ipfw add 103 allow tcp from any to me http,https,ssh
+##ipfw add 106 allow udp from any to me dst-port 500 in via igb1 // pass 192.168.3.2:500
+ipfw add 106 pass udp from any 500 to 192.168.3.2 500
+#add allow udp from any to me dst-port 1701 in via igb1
+#add allow udp from any to me dst-port 4500 in via igb1
+#add nat 123 ip from any to me recv igb1 in
+##ipfw add 402 allow esp from any to me in via igb1
+ipfw add 202 pass esp from any to 192.168.3.2
+#add allow ip from any to any in
+#add nat 123 gre from 192.168.3.0/24 to any xmit igb1 out
+ipfw add 502 nat 123 esp from 192.168.3.0/24 to any xmit igb1 out
+#add nat 123 ip from 192.168.3.0/24 to any xmit igb1 out
+#add allow gre from any to any
+#ipfw add 702 allow esp from any to any
+#add allow ip from any to any via igb0
+#add allow ip from any to any via lo0
+#add allow icmp from any to any
+#add allow ipv6-icmp from any to any
+#add allow ip6 from any to any
+#add allow ip from any to any

@@ -1,0 +1,7 @@
+##/etc/mergemaster.rc
+
+PRESERVE_FILES=yes
+AUTO_INSTALL=yes
+IGNORE_FILES="/etc/motd /etc/devfs.conf /etc/csh.cshrc /.profile /root/.profile /etc/hosts /etc/ntp.conf /etc/mail/pc.mc /etc/fstab /etc/snmpd.conf /etc/nsmb.conf /etc/devfs.rules /etc/crontab /mnt /mnt1 /mnt2"
+AUTO_UPGRADE=yes
+#

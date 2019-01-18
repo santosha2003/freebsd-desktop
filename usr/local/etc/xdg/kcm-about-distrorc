@@ -1,0 +1,4 @@
+[General]
+Name=FreeBSD
+LogoPath=/usr/local/share/kinfocenter/images/freebsd_logo.svg
+Website=https://www.freebsd.org

@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Історія викликів">
+							<longdesc>Історія останніх 100 викликів</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Сервери LDAP">
+							<longdesc>Список налаштованих серверів LDAP</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Показувати контакти не у мережі">
+							<longdesc>Якщо увімкнено, у списку контактів будуть показані контакти які зараз не в мережі</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Список згорнутих груп у контактах">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Байт типу служби (TOS) на пакеті IP вихідному RTP">
+							<longdesc>Біт типу служби (TOS) на пакетах IP вихідного RTP. Цей байт потрібен мережі для забезпечення деякого рівня якості служби (QoS). Типове значення 184 (0xB8) відповідає за розширене переспрямування (EF) PHB як визначено в RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Список облікових записів">
+							<longdesc>Список облікових рахунків, що використовуються Ekiga для реєстрації</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Переадресовувати виклики на вказану машину, якщо немає відповіді">
+								<longdesc>Переадресовувати всі вхідні виклики на вказану нижче машину, якщо ви не відповідаєте на виклик</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Переадресовувати виклики на вказану машину, якщо лінія зайнята">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Завжди переадресовувати виклики на дану машину">
+								<longdesc>Переадресовувати всі вхідні виклики на вказану нижче машину</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Діапазон портів UDP">
+								<longdesc>Діапазон портів UDP, що використовується.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Діапазон портів TCP">
+								<longdesc>Діапазон портів TCP, які Ekiga використовуватиме для каналу H.323 H.245. Щоб зміна вступила в дію, необхідно перезапустити Ekiga. Цей параметр недійсний, якщо обидва учасника використовують тунелювання H.245. </longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Переадресовувати виклики на машину">
+								<longdesc>Вузол, на який перенаправляти виклики, коли увімкнено переадресацію.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Передавання DTMF">
+								<longdesc>Виберіть режим відправлення DTMF. Доступні значення 0 (для «String»), 1 (для «Tone»), 2 (для «RFC2833») та 3 (для «Q.931»). Типовий (для «String»). Вибравши відмінне від «String» значення, вимикає текстове переписування.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Увімкнути &quot;Швидкий старт&quot;">
+								<longdesc>З&apos;єднання буде встановлено в режимі &quot;Швидкий старт&quot;. Це новий режим швидкого встановлення з&apos;єднання, який вперше був запроваджений в H.323v2. Він не підтримується Netmeeting, і одночасне використання швидкого старту і тунелювання H.245 може призвести до збоїв деяких версій Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Увімкнути ранній H.245">
+								<longdesc>Увімкнути H.245 на ранній стадії з&apos;єднання</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Увімкнути тунелювання  H.245">
+								<longdesc>Вмикає режим тунелювання H.245. В цьому режимі повідомлення H.245 вбудовано в канал H.225 (порт 1270). Це дозволяє не створювати ще одне з&apos;єднання TCP на викликах. Тунелювання H.245 було представлено в H.323v2. Воно не підтримується в Netmeeting, і одночасне використання швидкого старту і тунелювання H.245 може призвести до збоїв деяких версій Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Прослуховувати порт">
+								<longdesc>Порт прийому вхідних з&apos;єднань. Щоб зміна вступила в дію, необхідно перезапустити Ekiga.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Затримка таблиці NAT">
+								<longdesc>Введіть кількість секунд після якої Ekiga буде намагатись оновити таблицю NAT при використанні STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Передавання DTMF">
+								<longdesc>Виберіть режим для відправлення DTMF. Доступні значення 0 (для «RFC2833») і 1 (для «INFO»)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Переадресовувати виклики на машину">
+								<longdesc>Вузол, на який перенаправляти виклики, коли увімкнено переадресацію.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Вихідний проксі">
+								<longdesc>Вихідний проксі-сервер для SIP</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Прослуховувати порт">
+								<longdesc>Порт прийому вхідних з&apos;єднань. Щоб зміна вступила в дію, необхідно перезапустити Ekiga.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Уподобання оптимізації пропускної здатності">
+								<longdesc>Чи надавати перевагу підтримці максимальної частоти кадрів, або знижувати її для забезпечення якості зображення для усіх кадрів. Значення у діапазоні: 0: забезпечувати найвищу якість зображення, 31: надавати перевагу частоті кадрів.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Максимальна швидкість прийому відео">
+								<longdesc>Максимальна смуга прийому відео в кілобітах за секунду. Це значення буде передане віддаленій стороні, і вона зможе скоригувати (за наявності підтримки) власну швидкість передачі відео, якщо вона перевищує отримане значення.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Максимальна швидкість надсилання відео">
+								<longdesc>Максимальна смуга передачі відео в кілобітах за секунду. Якість передачі відео і кількість кадрів на секунду (залежно від обраного кодеку) буде динамічно регулюватись таким чином, щоб при викликах мінімізувати смугу пропускання до вказаного значення.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Список відео кодеків">
+								<longdesc>Список відео кодеків</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Максимальна затримка">
+								<longdesc>Максимальний розмір буфера прийому звуку (в мілісекундах)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Увімкнути виявлення мовчання">
+								<longdesc>Використовувати виявлення мовчання для кодеків, що підтримують цю функцію.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Список звукових кодеків">
+								<longdesc>Список звукових кодеків</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Тип мережі, вибраної в помічнику">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Власне</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Автоматична відповідь">
+								<longdesc>Якщо дозволено - автоматично відповідати на вхідні дзвінки</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Період очікування відповіді">
+								<longdesc>Автоматично відкидати або переадресовувати вхідні дзвінки за відсутності відповіді протягом визначеного проміжку часу (у секундах)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Позиція вікна віддаленого відео">
+									<longdesc>Позиція вікна віддаленого відео</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Розмір вікна віддаленого відео">
+									<longdesc>Ширина вікна віддаленого відео</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Вигляд відео до перемикання у повноекранний режим">
+									<longdesc>Вигляд відео до перемикання у повноекранний режим (ті самі значення, що й у video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Початкове відео">
+									<longdesc>Типовий перегляд відео (0: локальне, 1: віддалене, 2: обидва, 3: обидва в окремому вікні)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="При викликах розміщувати вікна, що показують відео, над іншими вікнами">
+									<longdesc>При викликах розміщувати вікна, що показують відео, над іншими вікнами</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Кратність збільшення">
+									<longdesc>Кратність збільшення зображень в основному інтерфейсі (може бути 0.50, 1.00 чи 2.00)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Алгоритм програмної зміни масштабу відео">
+									<longdesc>Алгоритм програмної зміни масштабу відео: 0: до ближчого сусіднього, 1: до ближчого сусіднього з прямокутним фільтром, 2: білінійна фільтрація, 3: гіперболічна фільтрація. Цей параметр не використовується у системі Windows</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Дозволити програмний вивід картинки у картинці">
+									<longdesc>Дозволяє Ekiga використовувати програмну зміну масштабу для створення картинки у картинці, якщо апаратна підтримка недоступна. Якщо вимкнено, Ekiga не буде виводити відео у цьому режимі за відсутності апаратного прискорення.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Вимкнути апаратне прискорення відео">
+									<longdesc>Вимикає апаратне прискорення відео DirectX (у системі Windows) та XVideo (на Linux)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Розмір вікна параметрів">
+									<longdesc>Розмір вікна параметрів</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиція вікна параметрів">
+									<longdesc>Позиція вікна параметрів</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Розмір вікна параметрів">
+									<longdesc>Розмір вікна параметрів</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиція вікна параметрів">
+									<longdesc>Позиція вікна параметрів</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Розмір вікна параметрів відео">
+									<longdesc>Розмір вікна параметрів відео</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиція вікна параметрів відео">
+									<longdesc>Позиція вікна параметрів відео</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Розмір вікна параметрів звуку">
+									<longdesc>Розмір вікна параметрів звуку</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиція вікна параметрів звуку">
+									<longdesc>Позиція вікна параметрів звуку</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Розмір вікна адресної книги">
+									<longdesc>Розмір вікна адресної книги</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиція вікна адресної книги">
+									<longdesc>Позиція вікна адресної книги</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Позиція вікна помічника">
+									<longdesc>Позиція вікна помічника</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Розмір вікна помічника">
+									<longdesc>Розмір вікна помічника</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Позиція вікна текстового діалогу">
+									<longdesc>Позиція вікна текстового діалогу</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Розмір вікна текстового діалогу">
+									<longdesc>Розмір вікна текстового діалогу</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Змінити розділ панелі головного вікна">
+									<longdesc>Змінити розділ панелі головного вікна (0=Контакти, 1=Набір, 2=Історія викликів)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиція основного вікна">
+									<longdesc>Позиція основного вікна</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Увімкнути виявлення мережі за допомогою STUN">
+								<longdesc>Вмикає автоматичне налаштування мережі відповідно до результатів тесту STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="Сервер STUN">
+								<longdesc>Сервер STUN, що використовується для підтримки STUN. STUN - технологія, що дозволяє переходити через деякі типи шлюзів NAT.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Звуковий тон &quot;зайнято&quot;">
+								<longdesc>Цей звук буде відтворюватись наприкінці викликів або при викликанні когось, хто зайнятий</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Відтворювати тон &quot;зайнято&quot;">
+								<longdesc>Цей звук буде відтворюватись при завершенні виклику або якщо абонент зайнятий</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Звук гудка у лінії">
+								<longdesc>Цей звук буде використовуватись при викликанні будь-кого</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Відтворювати тон дзвінка">
+								<longdesc>Цей звук буде відтворюватись при виклику будь-кого</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Відтворювати звук при отриманні голосової пошти">
+								<longdesc>Цей звук буде відтворюватись при отриманні нового голосового повідомлення</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Звук нового голосового повідомлення">
+								<longdesc>Цей звук буде використовуватись при надходженні нового голосового повідомлення.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Відтворювати звук при отриманні повідомлення">
+								<longdesc>Цей звук буде відтворюватись при отриманні нового повідомлення</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Звук для нового повідомлення">
+								<longdesc>Цей звук буде використовуватись при надходженні нового повідомлення.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Відтворювати звук при вхідних дзвінках">
+								<longdesc>Цей звук буде відтворюватись при отриманні вхідного дзвінка</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Звук вхідного виклику">
+								<longdesc>Цей звук буде використовуватись при отриманні вхідного виклику</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Альтернативний пристрій виводу звуку">
+								<longdesc>Вкажіть альтернативний пристрій відтворення звуку для відтворення звукових подій.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Розширений статус контактів">
+								<longdesc>Розширена інформація про статус</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Короткий статус контактів">
+								<longdesc>Перегляд інформації про статус</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Повне ім&apos;я">
+								<longdesc>Введіть повне ім&apos;я</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Частота кадрів">
+								<longdesc>Максимальна частота передачі кадрів за секунду. Ця частота може не бути досягнута у випадку, якщо перевагу надано якості зображення за допомогою параметра значення TSTO більше 31, та обраної смуги пропускання недостатньо для підтримки мінімальної якості, що вимагається.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Зразок відео">
+								<longdesc>Показувати зображення з вашої камери</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Формат відео">
+								<longdesc>Виберіть формат для відеокамер (не застосовується до більшості камер USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Відеоканал">
+								<longdesc>Номер відеоканалу (камера, ТБ чи інше джерело)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Розмір відео">
+								<longdesc>Виберіть розмір відео, що передається: малий (QCIF 176x144) чи великий (CIF 352x288).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Пристрій вводу відео">
+								<longdesc>Виберіть пристрій вводу відео. Якщо при використанні цього пристрою виникне помилка, буде передаватись тестове зображення.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Пристрій вводу звуку">
+								<longdesc>Вкажіть пристрій вводу звуку</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Пристрій виводу звуку">
+								<longdesc>Вкажіть пристрій відтворення звуку</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Закладки">
+						<longdesc>Тека закладок gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Недавні пасьянси">
+						<longdesc>Список недавно зіграних пасьянсів.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Статистика минулих ігор">
+						<longdesc>Список рядків для форми п&apos;ятірки: ім&apos;я, перемог, всього ігор, найліпший час (в секундах) і найгірший час (також в секундах). Ігри, в які не гралося, не потрібно представляти.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Ігровий файл">
+						<longdesc>Назва файлу схеми, що містить пасьянс.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Анімація">
+						<longdesc>Чи використовувати анімацію при переміщенні карт.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Звук">
+						<longdesc>Чи супроводжувати події звуками.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Вибір стилю керування">
+						<longdesc>Чи перетягувати карти мишею, або вказувати місце, звідки карта береться та куди кладеться.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Чи показувати рядок стану">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Чи показувати панель інструментів">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Назва файлу теми">
+						<longdesc>Назва файлу із зображенням карт.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

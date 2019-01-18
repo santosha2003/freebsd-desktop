@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="general">
+					<dir name="personal_data">
+						<entry name="full_name">
+							<local_schema short_desc="Nom complet">
+								<longdesc>Picatz vòstre nom complet</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Favorits">
+						<longdesc>Repertòri dels favorits de gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Partidas jogadas recentament">
+						<longdesc>Una lista de las partidas jogadas darrièrament.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Estatisticas de las partidas jogadas">
+						<longdesc>Una tièra de cadenas jos la forma d&apos;un quintuplet : nom, victòrias, partidas jogadas, melhor temps (en segondas) e tant pièger (en segondas tanben). Las partidas non jogadas an pas mestièr d&apos;èsser representadas.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Lo fichièr de jòc d&apos;utilizar">
+						<longdesc>Lo nom del fichièr que cap lo jòc de solitari de jogar.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animacions">
+						<longdesc>Indica se cal animar o pas los movements de cartas.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Son">
+						<longdesc>Indica se cal jogar o pas los sons d&apos;eveniments.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Seleccionar lo tipe de contraròtle">
+						<longdesc>Causir se volètz retalhar las cartas o clicar la font puèi la tòca.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Indica se cal afichar la barra d&apos;estat">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Indica se cal afichar o pas la barra d&apos;aisinas">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Nom del fichièr de tèma">
+						<longdesc>Lo nom del fichièr que cap los grafismes de las cartas.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

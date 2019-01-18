@@ -1,0 +1,23 @@
+
+
+# freebsd - upgrade script after kernel build
+
+make -C /usr/ports/devel/boost-libs build deinstall install
+make -C /usr/ports/www/nginx build deinstall install
+ make -C /usr/ports/audio/oss build deinstall install
+ make -C /usr/ports/x11/nvidia-driver-340 build deinstall install
+
+
+mkdir /compat
+mkdir /compat/linux
+mkdir /compat/linux/proc
+mkdir /compat/linux/dev
+mkdir /compat/linux/dev/shm
+
+/bin/rm /etc/rc.conf
+/bin/rm /etc/rc.local
+/bin/cp /usr/rc1  /etc/rc.conf
+/bin/cp /usr/rcl1 /etc/rc.local
+
+
+shutdown -r now

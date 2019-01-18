@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Ιστορικό κλήσεων">
+							<longdesc>Το ιστορικό των τελευταίων 100 κλήσεων</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Εξυπηρετητές LDAP">
+							<longdesc>Κατάλογος εγκατεστημένων εξυπηρετητών LDAP</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Εμφάνιση αποσυνδεδεμένων επαφών">
+							<longdesc>Αν είναι ενεργοποιημένο, θα εμφανίζονται στον κατάλογο οι αποσυνδεδεμένες επαφές</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Λίστα των αναδιπλωμένων ομάδων στον κατάλογο επαφών">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Ψηφίο Type of Service (TOS) σε εξρχόμενα πακέτα RTP IP">
+							<longdesc>Το ψηφίο (byte) Type of Service (TOS) στα εξερχόμενα πακέτα RTP IP. Αυτό το ψηφίο χρησιμοποιείται από το δίκτυο για να παρέχει ένα επίπεδο Quality of Service (QoS). Η προεπιλεγμένη τιμή 184 (0xB8) αντιστοιχεί στο Expedited Forwarding (EF) PHB ως καθορίζεται στο RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Η λίστα λογαριασμών">
+							<longdesc>Η λίστα λογαριασμών που το Ekiga θα εγγραφεί</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Προώθηση κλήσεων αν το συγκεκριμένο σύστημα δεν απαντά">
+								<longdesc>Αν ενεργοποιηθεί, όλες οι εισερχόμενες κλήσεις θα προωθούνται στο σύστημα που έχει καθοριστεί στο παρακάτω πεδίο όταν δεν απαντάτε στην κλήση</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Προώθηση κλήσεων αν το συγκεκριμένο σύστημα είναι κατειλημμένο">
+								<longdesc>Αν ενεργοποιηθεί, όλες οι εισερχόμενες κλήσεις θα προωθούνται στο σύστημα που έχει καθοριστεί στο παρακάτω πεδίο αν ήδη είστε σε κλήση ή απασχολημένοι</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Να γίνεται πάντα προώθηση κλήσεων στο καθορισμένο σύστημα">
+								<longdesc>Αν ενεργοποιηθεί, όλες οι εισερχόμενες κλήσεις θα προωθούνται στο σύστημα που έχει καθοριστεί στο παρακάτω πεδίο</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Εύρος θύρας UDP">
+								<longdesc>Οι θύρες UDP που θα χρησιμοποιεί το Ekiga.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Εύρος θύρας TCP">
+								<longdesc>Οι θύρες TCP εκτός από το listen_port που το Ekiga θα χρησιμοποιεί για το κανάλι H.323 H.245. Αυτή η επιλογή δεν έχει κανένα αποτέλεσμα αν και οι δύο συμμετέχοντες στη διάσκεψη χρησιμοποιούν H.245 Tunneling.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Προώθηση κλήσεων σε σύστημα">
+								<longdesc>Το κεντρικό σύστημα όπου θα προωθούνται οι κλήσεις στις παραπάνω επιλεγμένες περιπτώσεις</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Αποστολή DTMF">
+								<longdesc>Επιλέξτε τη λειτουργία για αποστολή DTMF. Οι τιμές μπορεί να είναι 0 (για &quot;Αλφαριθμητικό&quot;), 1 για (&quot;Τόνος&quot;), 2 (για &quot;RFC2833&quot;) ή 3 (για &quot;Q.931&quot;) (η προεπιλογή είναι &quot;Αλφαριθμητικό&quot;). Αν επιλεχθούν άλλες τιμές απενεργοποιείται η συζήτηση κειμένου.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Ενεργοποίηση &apos;Γρήγορης Εκκίνησης&apos;">
+								<longdesc>Η σύνδεση θα πραγματοποιηθεί σε κατάσταση Γρήγορης Εκκίνησης. Η Γρήγορη Εκκίνηση είναι ένας νέος τρόπος για την έναρξη κλήσεων που παρουσιάστηκε με το H.323v2. Δεν υποστηρίζεται από το Netmeeting και αν χρησιμοποιήσετε και τη Γρήγορη Εκκίνηση και το H.245 Tunnelling είναι πιθανόν να κολλήσουν κάποιες εκδόσεις του Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Ενεργοποίηση early H.245">
+								<longdesc>Αυτό ενεργοποιεί τη λειτουργία H.245 Tunnelling νωρίς στη ρύθμιση</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Ενεργοποίηση H.245 tunnelling">
+								<longdesc>Αυτό ενεργοποιεί τη λειτουργία H.245 Tunnelling. Στο H.245 Tunnelling τα H.245 μηνύματα ενσωματώνονται στο κανάλι H.225 (θύρα 1720). Αυτό αποθηκεύει μια σύνδεση TCP κατά τη διάρκεια των κλήσεων. Το H.245 Tunnelling εισήχθηκε στο H.323v2 και δεν το υποστηρίζει το Netmeeting. Αν χρησιμοποιήσετε και την Γρήγορη Εκκίνηση και το H.245 Tunnelling είναι πιθανόν να κολλήσουν κάποιες εκδόσεις του Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Θήρα ακρόασης">
+								<longdesc>Η θύρα για listen για εισερχόμενες κλήσεις. Το Ekiga χρειάζεται επανεκκίνηση για να πραγματοποιηθεί η αλλαγή.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Όριο χρόνου NAT Binding">
+								<longdesc>Εισάγετε τον αριθμό δευτερολέπτων μετά από τα οποία το Ekiga θα ανανεώνει το NAT binding όταν χρησιμοποιείται το STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Αποστολή DTMF">
+								<longdesc>Επιλέξτε τη λειτουργία για αποστολή DTMF. Οι τιμές μπορεί να είναι 0 (για &quot;RFC2833&quot;) και 1 (για &quot;INFO&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Προώθηση κλήσεων σε σύστημα">
+								<longdesc>Το κεντρικό σύστημα όπου θα προωθούνται οι κλήσεις στις παραπάνω επιλεγμένες περιπτώσεις</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Διαμεσολαβητής εξερχομένων">
+								<longdesc>Ο διαμεσολαβητής εξερχομένων SIP που θα χρησιμοποιηθεί για εξερχόμενες κλήσεις</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Θήρα ακρόασης">
+								<longdesc>Η θύρα για listen για εισερχόμενες κλήσεις. Το Ekiga χρειάζεται επανεκκίνηση για να πραγματοποιηθεί η αλλαγή.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Εξισορρόπηση χωρικής και χρονική ποιότητας">
+								<longdesc>Αν προτιμάτε να διατηρήσετε τα καρέ ανά δευτερόλεπτο στο μέγιστο, ή να τα μειώσετε για να διατηρήσετε ένα ελάχιστο επίπεδο (χωρικής) ποιότητας για όλα τα καρέ. 0: Υψηλότερη ελάχιστη ποιότητα, 31: χαμηλότερη ελάχιστη ποιότητα</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Μέγιστη ταχύτητα λήψης βίντεο">
+								<longdesc>Η μέγιστη ταχύτητα λήψης βίντεο σε kbit/s. Η τιμή αυτή στέλνεται στον άλλο υπολογιστή, ώστε να προσαρμόσει κατάλληλα (αν υποστηρίζεται η λειτουργία) την ταχύτητα αποστολής του, σε περίπτωση που είναι μεγαλύτερη από την τιμή που επιλέξατε</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Μέγιστη ταχύτητα αποστολής βίντεο">
+								<longdesc>Η μέγιστη ταχύτητα αποστολής βίντεο σε kbit/s. Η ποιότητα του βίντεο και ο αριθμός των μεταδιδόμενων καρέ ανά δευτερόλεπτο (εξαρτάται από τις ρυθμίσεις του codec) θα προσαρμόζονται δυναμικά πάνω από το ελάχιστο κατά τη διάρκεια των κλήσεων για να μειωθεί το εύρος μπάντας στην δοθείσα τιμή.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Η Λίστα Codecs βίντεο">
+								<longdesc>Η Λίστα Codecs βίντεο</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Μέγιστο jitter buffer">
+								<longdesc>Το μέγιστο μέγεθος jitter buffer για λήψη ήχου (σε χιλ.δευτ)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Ενεργοποίηση ακύρωσης echo">
+								<longdesc>Αν ενεργοποιηθεί, χρήση της ακύρωσης ηχώ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Ενεργοποίηση εντοπισμού σιωπής">
+								<longdesc>Αν ενεργοποιηθεί, θα γίνει χρήση του εντοπισμού σιωπής με τους codecs που το υποστηρίζουν.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Η Λίστα Codecs Ήχου">
+								<longdesc>Η λίστα codecs ήχου</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Το είδος του δικτύου που επιλέχθηκε στο βοηθό ρυθμίσεων">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Προσαρμοσμένη</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Αυτόματη απάντηση">
+								<longdesc>Αν είναι ενεργοποιημένο, αυτόματη απάντηση εισερχομένων κλήσεων</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Όριο χρόνου αναπάντητης">
+								<longdesc>Αυτόματη απόρριψη ή προώθηση εισερχόμενων κλήσεων αν δε δοθεί απάντηση μετά από ένα καθορισμένο χρονικό διάστημα (σε δευτερόλεπτα)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Θέση του απομακρυσμένου παραθύρου βίντεο">
+									<longdesc>Η θέση του απομακρυσμένου παράθυρου βίντεο</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του απομακρυσμένου παραθύρου βίντεο">
+									<longdesc>Το μέγεθος του απομακρυσμένου παραθύρου βίντεο</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Η προβολή βίντεο πριν τη μετάβαση στη λειτουργία πλήρους οθόνης">
+									<longdesc>Η προβολή βίντεο πριν τη μετάβαση στη λειτουργία πλήρους οθόνης (ισχύουν οι ίδιες τιμές όπως και για την προβολή βίντεο)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Η προεπιλεγμένη προβολή βίντεο">
+									<longdesc>Η προεπιλεγμένη προβολή βίντεο (0: Τοπική, 1: Απομακρυσμένη, 2: Και τα δύο, 3: Και τα δύο σε ξεχωριστό παράθυρο)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Τοποθέτηση παραθύρων που προβάλλουν βίντεο πάνω από άλλα παράθυρα κατά την διάρκεια κλήσεων">
+									<longdesc>Τοποθέτηση παραθύρων που προβάλλουν βίντεο πάνω από άλλα παράθυρα κατά την διάρκεια κλήσεων</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Η τιμή του ζουμ">
+									<longdesc>Το ποσοστό του ζουμ για τις εικόνες που εμφανίζονται στο κύριο γραφικό περιβάλλον (μπορεί να είναι  0.50, 1.00, ή 2.00)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Καθορισμός του αλγορίθμου κλιμακοθέτησης μέσω λογισμικού">
+									<longdesc>Καθορισμός του αλγορίθμου κλιμακοθέτησης μέσω λογισμικού: 0: κοντινότερος γείτονας, 1: κοντινότερος γείτονας με box filter, 2: διγραμμικό φιλτράρισμα, 3: υπερβολικό φιλτράρισμα. Αυτή η επιλογή δεν αφορά τα συστήματα windows.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Να επιτρέπεται η κλιμάκωση εικόνας-σε-εικόνα μέσω λογισμικού">
+									<longdesc>Να επιτρέπεται στο Ekiga να καταφεύγει στην κλιμακοθέτηση μέσω λογισμικού της \&quot;εικόνας εντός της εικόνας\&quot; (PIP), αν δεν υποστηρίζεται από το υλικό. Αν οριστεί ως ψευδές, το Ekiga δεν θα προσπαθήσει να ανοίξει την &quot;εικόνα εντός της εικόνας\&quot; σε περίπτωση που δεν υποστηρίζεται από το υλικό.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Απενεργοποίηση της επιτάχυνσης υλικού βίντεο">
+									<longdesc>Αυτή η επιλογή απενεργοποιεί την επιτάχυνση υλικού βίντεο DirectX (win32) και το XVideo (Linux)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του παραθύρου προτιμήσεων">
+									<longdesc>Μέγεθος του παραθύρου προτιμήσεων</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του παράθυρου προτιμήσεων">
+									<longdesc>Θέση στην οθόνη του παράθυρου προτιμήσεων</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του παραθύρου προτιμήσεων">
+									<longdesc>Μέγεθος του παραθύρου προτιμήσεων</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του παράθυρου προτιμήσεων">
+									<longdesc>Θέση στην οθόνη του παράθυρου προτιμήσεων</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του παραθύρου ρύθμισης βίντεο">
+									<longdesc>Μέγεθος του παραθύρου ρύθμισης βίντεο</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του παράθυρου ρύθμισης βίντεο">
+									<longdesc>Θέση στην οθόνη του παράθυρου ρύθμισης βίντεο</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του παραθύρου ρύθμισης ήχου">
+									<longdesc>Μέγεθος του παραθύρου ρύθμισης ήχου</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του παράθυρου ρύθμισης ήχου">
+									<longdesc>Θέση στην οθόνη του παράθυρου ρύθμισης ήχου</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του παραθύρου του βιβλίου διευθύνσεων">
+									<longdesc>Μέγεθος του παραθύρου του βιβλίου διευθύνσεων</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του παράθυρου βιβλίου διευθύνσεων">
+									<longdesc>Θέση στην οθόνη του παράθυρου βιβλίου διευθύνσεων</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του παράθυρου οδηγού ρυθμίσεων">
+									<longdesc>Θέση στην οθόνη του παράθυρου οδηγού ρυθμίσεων</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του παραθύρου οδηγού ρυθμίσεων">
+									<longdesc>Μέγεθος του παραθύρου οδηγού ρυθμίσεων</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του κύριου παράθυρου συζήτησης κειμένου">
+									<longdesc>Θέση στην οθόνη του κύριου παράθυρου συζήτησης κειμένου</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του παραθύρου συζήτησης κειμένου">
+									<longdesc>Μέγεθος του παραθύρου συζήτησης κειμένου</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Αλλαγή της πλευρικής στήλης του κύριου παράθυρου">
+									<longdesc>Αλλαγή της πλευριής στήλης του κύριου παραθύρου (0=Επαφές, 1=Καντράν, 2=Ιστορικό κλήσεων)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του κύριου παράθυρου">
+									<longdesc>Θέση στην οθόνη του κύριου παράθυρου</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="Μέγεθος του παραθύρου κλήσης">
+									<longdesc>Μέγεθος του παραθύρου κλήσης</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Θέση στην οθόνη του παραθύρου κλήσης">
+									<longdesc>Θέση στην οθόνη του παραθύρου κλήσης</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Απενεργοποίηση του εντοπισμού δικτύου STUN">
+								<longdesc>Απενεργοποίηση της αυτόματης ρύθμισης του δικτύου ως αποτέλεσμα της δοκιμής STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="Ο εξυπηρετητής STUN">
+								<longdesc>Ο εξυπηρετητής STUN που θα χρησιμοποιηθεί για την υποστήριξη STUN. Το STUN είναι μια τεχνική που επιτρέπει το πέρασμα από ορισμένους τύπους πυλών NAT.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Ο ήχος κατειλημμένου">
+								<longdesc>Η ήχος που θα αναπαράγεται στο τερματισμό των κλήσεων ή κατά την κλήση κάποιου που είναι απασχολημένος, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Αναπαραγωγή ήχου απασχολημένου">
+								<longdesc>Ο επιλεγμένος ήχος που θα αναπαράγεται στο τέλος των κλήσεων ή κατά την κλήση κάποιου που είναι απασχολημένος, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Ο ήχος κλήσης">
+								<longdesc>Η ήχος που θα αναπαράγεται κατά την κλήση κάποιου, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Αναπαραγωγή ring tone">
+								<longdesc>Ο επιλεγμένος ήχος που θα αναπαράγεται όταν καλείτε κάποιον, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Εκτέλεση ήχου σε νέο ηχητικό μήνυμα">
+								<longdesc>Ο επιλεγμένος ήχος που θα αναπαράγεται όταν λαμβάνετε ένα νέο ηχητικό μήνυμα, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Ο ήχος νέου ηχητικού μηνύματος">
+								<longdesc>Η ήχος που θα αναπαράγεται όταν υπάρχει νέο ηχητικό μήνυμα, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Εκτέλεση ήχου σε νέο μήνυμα">
+								<longdesc>Ο επιλεγμένος ήχος που θα αναπαράγεται όταν λαμβάνετε ένα νέο άμεσο μήνυμα, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Ο ήχος νέου άμεσου μηνύματος">
+								<longdesc>Η ήχος που θα αναπαράγεται όταν υπάρχει νέο άμεσο μήνυμα, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Εκτέλεση ήχου σε εισερχόμενες κλήσεις">
+								<longdesc>Ο επιλεγμένος ήχος που θα αναπαράγεται στις εισερχόμενες κλήσεις, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Ο ήχος εισερχόμενης κλήσης">
+								<longdesc>Η ήχος που θα αναπαράγεται στις εισερχόμενες κλήσεις, αν ενεργοποιηθεί</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Εναλλακτική ηχητική συσκευή εξόδου">
+								<longdesc>Επιλογή της συσκευής εξόδου ήχου για χρήση στα ηχητικό γεγονός του κουδουνίσματος.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Αναλυτική κατάσταση επαφής">
+								<longdesc>Αναλυτικές πληροφορίες για την κατάσταση</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Συνοπτική κατάσταση επαφής">
+								<longdesc>Συνοπτικές πληροφορίες για την κατάσταση</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Ονοματεπώνυμο">
+								<longdesc>Εισάγετε το ονοματεπώνυμό σας</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Καρέ ανά δευτερόλεπτο">
+								<longdesc>Η μέγιστη ταχύτητα μετάδοσης καρέ, σε καρέ ανά δευτερόλεπτο. Η ταχύτητα αυτή ενδέχεται να μην επιτευχθεί, αν έχει οριστεί ελάχιστη ποιότητα με τιμή TSTO μικρότερη από 31 και το επιλεγμένο εύρος μπάντας δεν επαρκεί για να αποδώσει αυτή την ελάχιστη ποιότητα </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Προεπισκόπηση βίντεο">
+								<longdesc>Εμφάνιση εικόνων από τη συσκευή της κάμερας σας</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Μορφή βίντεο">
+								<longdesc>Επιλέξτε τη μορφή για τις κάμερες βίντεο. (Δεν εφαρμόζεται στις περισσότερες κάμερες  USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Κανάλι βίντεο">
+								<longdesc>Ο αριθμός καναλιού βίντεο που θα χρησιμοποιηθεί ( για επιλογή κάμερας, TV, ή άλλες πηγές)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Μέγεθος βίντεο">
+								<longdesc>Επιλέξτε το μέγεθος του μεταδιδόμενου βίντεο: Μικρό (QCIF 176x144) ή Μεγάλο (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Συσκευή εισόδου βίντεο">
+								<longdesc>Επιλογή της συσκευής εισόδου ήχου για χρήση. Αν προκύψει σφάλμα κατά την χρήση της συσκευής μια δοκιμαστική εικόνα θα μεταδοθεί.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Ηχητική συσκευή εισόδου">
+								<longdesc>Επιλογή της συσκευής εισόδου ήχου για χρήση</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Ηχητική συσκευή εξόδου">
+								<longdesc>Επιλογή της συσκευής εξόδου ήχου για χρήση</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Σελιδοδείκτες">
+						<longdesc>Σελιδοδείκτες φακέλου gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Πρόσφατα παιχνίδια">
+						<longdesc>Μια λίστα από πρόσφατα παιχνίδια.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Στατιστικά στοιχεία παιχνιδιών">
+						<longdesc>Μια λίστα συμβολοσειρών με πενταπλή μορφή: όνομα, νίκες, συνολικός αριθμός παιχνιδιών, καλύτερος χρόνος (σε δευτερόλεπτα) και χειρότερος χρόνος (σε δευτερόλεπτα). Τα παιχνίδια που δεν παίχτηκαν δεν χρειάζεται να εμφανίζονται.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Αρχείο παιχνιδιού προς χρήση">
+						<longdesc>Το όνομα του αρχείου σχήματος που περιέχει το παιχνίδι της πασιέντζας.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Κινούμενες εικόνες">
+						<longdesc>Αν θα χρησιμοποιούνται κινούμενα χαρτιά ή όχι.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Ήχος">
+						<longdesc>Αν θα αναπαράγονται ήχοι συμβάντων ή όχι.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Επιλέξτε το στυλ χειρισμού">
+						<longdesc>Επιλέξτε αν θα σύρονται τα χαρτιά ή θα γίνεται κλικ πρώτα στην πηγή και μετά στον προορισμό.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Αν θα εμφανίζεται ή όχι η γραμμή κατάστασης">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Αν θα εμφανίζεται ή όχι η εργαλειοθήκη">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Όνομα του αρχείου θέματος">
+						<longdesc>Το όνομα του αρχείου με τα γραφικά για τα χαρτιά.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το ntfs-3g fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων ntfs χρησιμοποιώντας το ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Ποιος οδηγός συστήματος αρχείων θα χρησιμοποιείται εξ ορισμού όταν ανιχνεύεται ntfs">
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το ntfs fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το udf fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το iso9660 fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Προκαθορισμένες επιλογές προσάρτησης για το vfat fs">
+								<longdesc>Λίστα με τις προκαθορισμένες επιλογές προσάρτησης για τόμους διαμορφωμένους με το σύστημα αρχείων vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

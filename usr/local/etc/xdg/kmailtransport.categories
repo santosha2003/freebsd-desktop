@@ -1,0 +1,4 @@
+org.kde.pim.mailtransport kmailtransport (kmailtransport)
+org.kde.pim.mailtransportakonadi kmailtransportakonadi (kmailtransportakonadi)
+org.kde.pim.mailtransport.smtpplugin kmailtransport (smtp plugin)
+org.kde.pim.mailtransport.akonadiplugin kmailtransport (akonadi plugin)

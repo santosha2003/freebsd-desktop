@@ -1,0 +1,1 @@
+tty -s; if [ $? -ne 0 ]; then konsole -e "$0"; exit; fi

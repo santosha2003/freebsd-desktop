@@ -1,0 +1,36 @@
+# $FreeBSD$
+
+[client]
+port                            = 3306
+socket                          = /tmp/mysql.sock
+
+[mysql]
+prompt                          = \u@\h [\d]>\_
+no_auto_rehash
+
+[mysqld]
+user                            = mysql
+port                            = 3306
+socket                          = /tmp/mysql.sock
+bind-address                    = 0.0.0.0
+basedir                         = /usr/local
+datadir                         = /var/db/mysql
+tmpdir                          = /var/db/mysql_tmpdir
+slave-load-tmpdir               = /var/db/mysql_tmpdir
+secure-file-priv                = /var/db/mysql_secure
+open_files_limit                = 32768
+table_open_cache                = 16384
+table_definition_cache          = 8192
+net_retry_count                 = 16384
+key_buffer_size                 = 256M
+max_allowed_packet              = 64M
+query_cache_type                = 0
+query_cache_size                = 0
+long_query_time                 = 0.5
+character_set_server          = utf8
+skip-symbolic-links
+
+[mysqldump]
+max_allowed_packet              = 256M
+quote_names
+quick

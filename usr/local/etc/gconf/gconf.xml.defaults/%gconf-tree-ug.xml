@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="تېلېفون ئىزلىرى">
+							<longdesc>ئىزلار (100 قېتىملىق)</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP مۇلازىمېتىرلىرى">
+							<longdesc>تەڭشىلىپ بولغان LDAP مۇلازىمېتىرلىرىنىڭ تىزىملىكى</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="توردا يوق ئالاقەداشلارنىمۇ كۆرسەت">
+							<longdesc>TRUE تاللانسا، توردا يوق ئالاقەداشنى ئالاقە دەپتىرىدە كۆرسىتىدۇ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="ئالاقە دەپتىرىدە قاتلانغان گۇرۇپپىلارنىڭ تىزىملىكى">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Type of Service (TOS) byte on outgoing RTP IP packets">
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="ھېساباتلار">
+							<longdesc>Ekiga غا خەتلىتىلگەن ھېساباتلار</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="جاۋاب بەرمىسە، چاقىرىشنى كۆرسىتىلگەن ماشىنىغا ئۇلاپ بەر">
+								<longdesc>TRUE تاللانسا، چاقىرىشقا جاۋاب بەرمىسىڭىز، بارلىق چاقىرىشلار(تېلېفونلار) تۆۋەندە كۆرسىتىلگەن ماشىنىغا ئۇلىنىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="ئالدىراش ۋاقىتتا، چاقىرىشنى كۆرسىتىلگەن ماشىنىغا ئۇلاپ بەر">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="كەلگەن تېلېفونلارنى ھەمىشە بېرىلگەن host قا ئۇلاپ بېرىش">
+								<longdesc>TRUE تاللانسا، بارلىق چاقىرىشلار(تېلېفونلار) تۆۋەندە كۆرسىتىلگەن ماشىنىغا ئۇلىنىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP ئېغىز دائىرىسى">
+								<longdesc>Ekiga ئىشلىتىۋاتقان UDP ئېغىزىنىڭ دائىرىسى.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP ئېغىزىنىڭ دائىرىسى">
+								<longdesc>H.323/H.245 قانىلىدا ئىشلىتىلىدىغان TCP ئېغىزىنىڭ دائىرىسى، يىغىنغا قاتنىشىۋاتقان ئىككىلا تەرەپ H.245 نى ئىشلىتىۋاتقان بولسا بۇنىڭ ھېچقانداق ئۈنۈمى يوق.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="چاقىرىشنى ئۇلاپ بېرىدىغان ماشىنا">
+								<longdesc>ئەگەر چاقىرىشنى باشقىغا ئۇلاش قوزغىتىلغان بولسا چاقىرىشنى بۇ ماشىنىغا ئۇلايدۇ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF ئەۋەتىش">
+								<longdesc>DTMFs يوللاش ھالىتىنى تاللايدۇ. بۇنىڭ قىممىتى («String» نى تاللاش ئۈچۈن) ، 1(«Tone» نى تاللاش ئۈچۈن) 2 («RFC2833» نى تاللاش ئۈچۈن)  ياكى 3  («Q.931» نى تاللاش ئۈچۈن)  بولىدۇ. (كۆڭۈلدىكىسىنى«String»).  «String» دىن باشقىسى تاللانسا يېزىقلىق پاراڭ چەكلىنىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="«تەز باشلاش» نى ئىناۋەتلىك قىلماق">
+								<longdesc>تەز باشلاش ھالىتىدە باغلىنىدۇ. تەز باشلاش ھالىتى دېگىنىمىز H.323v2 نىڭدا تونۇشتۇرۇلغان ئۇسۇلدۇر. Netmeeting دا ئىشلەتكىلى بولمايدۇ. ئەگەر تەز باشلاش H.245 تونەللاش بىرگە ئىشلىتىلسە بەزى نەشردىكى Netmeeting غۇلاپ كېتىدۇ(crash)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="H.245 (دەسلەپكى)نى ئىناۋەتلىك قىلماق">
+								<longdesc>H.245 ئىناۋەتلىك قىلىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 تونەللاشنى ئىناۋەتلىك قىلماق">
+								<longdesc>بۇ H.245 نىڭ تونىللاش شەكلىنى قوزغىتىدۇ.H.245تونىللاش شەكلىدە H.245نىڭ ئۇچۇرى H.245نىڭ قانىلى(1720 ئېغىز) تەرىپىدىن قاپلىۋېتىلگەن بولىدۇ.بۇ پاراڭلىشىش جەريانىدىكى بىر TCPئېغىزىنى باغلايدۇ. H.245تونىللاش بولسا H.323v2دىن پايدىلىنىپ ئېرىشكەن. Netmeeting بۇنى قوللىمايدۇ.بىرلا ۋاقىتتا تىز باشلاش بىلەن H.245 تونىللاشنى ئىشلەتكەندە بەزى نەشردىكى Netmeetingدىن چاتاق چىقىشنى كەلتۈرۈپ چىقىرىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="كۈتىدىغان ئېغىز(نومۇرى)">
+								<longdesc>كەلگەن باغلىنىشنى كۈتىدىغان ئېغىز. بۇ ئۆزگەرتىلسە Ekiga نى قايتا قوزغىتىش كېرەك.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT باغلاش مۆھلىتى(Timeout)">
+								<longdesc>STUN ئىشلىتىلگەن ۋاقىتتا، Ekiga نىڭ NAT بىلەن بولغان باغلانمىسىنى يېڭىلايدىغان ۋاقىت (سېكۇنت)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF ئەۋەتىش">
+								<longdesc>DTMFs يوللاش ھالىتىنى تاللايدۇ.بۇنىڭ قىممىتى 0(«RFC2833» نى تاللاش ئۈچۈن) ۋە 1(«INFO» نى تاللاش ئۈچۈن) بولىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="چاقىرىشنى ئۇلاپ بېرىدىغان ماشىنا">
+								<longdesc>ئەگەر چاقىرىشنى باشقىغا ئۇلاش قوزغىتىلغان بولسا چاقىرىشنى بۇ ماشىنىغا ئۇلايدۇ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="سىرتقى ۋاكالەتچى">
+								<longdesc>باشقىلارنى چاقىرغاندا ئىشلىتىدىغان سىرتقى SIP ۋاكالەتچىسى</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="كۈتىدىغان ئېغىز(نومۇرى)">
+								<longdesc>كەلگەن باغلىنىشنى كۈتىدىغان ئېغىز. بۇ ئۆزگەرتىلسە Ekiga نى قايتا قوزغىتىش كېرەك</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="ۋاقىتلىق بوشلۇق Trade Off">
+								<longdesc>بارلىق كاندۇك ئەڭ تۆۋەن سەۋىيە(بوشلۇقنىڭ) سۈپىتىنى ساقلاش ئۈچۈن ، ئەڭ يۇقىرى كاندۇك سۈرئىتىنى ساقلامسىز. 0:تۆۋەن سۈپەتنىڭ ئەڭ يۇقىرىسى، 31: تۆۋەن سۈپەتنىڭ ئەڭ تۆۋىنى</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="ئەڭ چوڭ RX سىن  بىت تېزلىكى(bitrate)">
+								<longdesc>قوبۇل قىلالايدىغان ئەڭ يۇقىرى سىن بەلۋاغ كەڭلىكى kbit/s . بۇ قىممەت سىگنال ئارقىلىق تەڭداش نۇقتىغا يەتكۈزۈلۈپ، قارشى تەرەپ سىگنال قىممىتىدىن ئېشىپ كەتكەن ئەھۋالدا يوللايدىغان بەلۋاغ كەڭلىكىنى تەڭشەشكە قۇلايلاشتۇرىدۇ(ئەگەر ئۇنى قوللىسا).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="ئەڭ چوڭ TX سىن بىت تېزلىكى(bitrate)">
+								<longdesc>TX سىننىڭ ئەڭ چوڭ بەلۋاغ كەڭلىكىنىڭ ئەڭ چوڭ قىممىتى kbits/s . سىننىڭ سۈپىتى ۋە كاندۇك سانى(تاللانغان كودلىغۇچ كود يەشكۈچكە باغلىق) بۇ يەردە كۆرسىتىلگەن بەلۋاغ كەڭلىكىگە ئاساسەن ئەڭ كىچىك قىممەتكە كاپالەتلىك قىلغان ئاساستا ئاپتوماتىك تەڭشىلىپ تۇرىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="سىن كودلىغۇچ-يەشكۈچلەر">
+								<longdesc>سىن كودلىغۇچ-يەشكۈچلەر</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Jitter يىغلەكىنىڭ ئەڭ چوڭ قىممىتى">
+								<longdesc>ئاۋازنى قوبۇل قىلىشىشتا ئىشلىتىلىدىغان ئەڭ چوڭ jitter يىغلەكىنىڭ چوڭلۇقى(مىللىسېكۇنت)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="ئۇنسىز يەرلەرنى بىلىپ بىر تەرەپ قىلىشنى ئىناۋەتلىك قىلماق">
+								<longdesc>TRUE تاللانسا، codecs دا ئىشلەتكىلى بولىدىغان جىمجىتلىقنى بايقاش ئىقتىدارى ئىشلىتىلىدۇ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ئۈن Codec لىرى تىزىملىكى">
+								<longdesc>ئۈن كودلىغۇچلار</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="تەڭشەك ياردەمچىسىدە تاللانغان تورنىڭ تىپى">
+							<longdesc>0 (56Kbps)、1 (ISDN)、2 (DSL 128)、3 (DSL 512)、4 (LAN)、 5 (باشقىلار)</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="ئاپتوماتىك جاۋاب">
+								<longdesc>TRUE تاللانسا، چاقىرىشلارغا ئاپتوماتىك جاۋاب بېرىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="«جاۋاب يوق» نىڭ ۋاقىت چېكى">
+								<longdesc>كەلگەن تېلېفونغا كۆرسىتىلگەن ۋاقىت(سېكۇنت) ئىچىدە جاۋاب بېرىلمىسە، ئۇنى ئۇنى ئاپتوماتىك رەت قىلىدۇ ياكى باشقا يەرگە ئۇلاپ بېرىدۇ.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="يىراقتىكى سىن كۆزنىكىنىڭ ئورنى">
+									<longdesc>سىن كۆزنىكىنىڭ ئورنى (قارىشى تەرەپنىڭ)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="يىراقتىكى سىن كۆزنىكىنىڭ چوڭلۇقى">
+									<longdesc>سىن كۆزنىكىنىڭ چوڭلۇقى (قارىشى تەرەپنىڭ)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="تولۇق ئېكرانغا ئالمىشىشتىن بۇرۇنقى سىننىڭ كۆرۈنۈشى">
+									<longdesc>تولۇق ئېكرانغا ئالمىشىشتىن بۇرۇنقى سىننىڭ كۆرۈنۈشى(video_view نىڭ قىممىتى بىلەن ئوخشاش)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="سىننىڭ كۆرۈنۈشى (كۆڭۈلدىكى قىممىتى)">
+									<longdesc>سىن كۆرۈشنىڭ كۆڭۈلدىكى ئۇسۇلى (0: يەرلىك، 1: يىراق، 2: ئىككىلىسى، 3: ئىككىلىسى بىراق ئايرىم-ئايرىم كۆزنەكتە)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="سۆزلىشىۋاتقاندا، باشقا كۆزنەك ئۇستى قىسمىغا سىن كۆرسىتىدىغان كۆزنەك ئورۇنلاشتۇرىدۇ">
+									<longdesc>سۆزلىشىۋاتقاندا، باشقا كۆزنەك ئۇستى قىسمىغا سىن كۆرسىتىدىغان كۆزنەك ئورۇنلاشتۇرىدۇ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="چوڭايتىش-كىچىكلىتىش قىممىتى">
+									<longdesc>ئاساسىي كۆرۈنمەيۈزدە كۆرسىتىلىدىغان رەسىمنىڭ چوڭايتىش نىسبىتى(پىرسەنت)(قىممەتلىرى 50، 100 ياكى 200 بولىدۇ)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="سىن چوڭلۇقىنى ئۆزگەرتىش ئالگورىزىمى(ھېسابلاش ئۇسۇلى)">
+									<longdesc>سىن چوڭلۇقىنى ئۆزگەرتىش ئالگورىزىمى : 0 ئەڭ يېقىن قوشنا، 1: ئەڭ يېڭى قوشنا(كۆزنەكچە سۈزگۈچى بار) 2: قوش سىزىقلىق سۈزۈش، 3: hyperbolic سۈزۈش. كۆزنەك سىستېمىلىرىغا ماس كەلمەيدۇ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="رەسىم ئىچىدە رەسىم بولغاندا يۇمشاق دېتال ئارقىلىق چوڭلۇقىنى ئۆزگەرتىشكە رۇخسەت قىل">
+									<longdesc>قاتتىق دېتالدا رەسىم ئىچىدە رەسىم كۆرسىتىشنى ئىشلەتكىلى بولمىسا، Ekiga يۇمشاق دېتال ئارقىلىق رەسىم ئىچىدە رەسىم نى چوڭايتىشقا رۇخسەت قىلىدۇ. بۇ false قىلىنسا، قاتتىق دېتالدا بۇ ئىقتىدارىنى ئىشلەتكىلى بولمىغان ئەھۋالدا يۇمشاق دېتالدا بۇ ئىقتىدارىنى ئىشلەتمەيدۇ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="سىن قاتتىق دېتال تېزلىتىش ئىقتىدارىنى ئىناۋەتسىز قىلماق">
+									<longdesc>بۇ ئاچقۇچ DirectX (win32 دىكى) ۋە XVideo (Linux دىكى) سىن قاتتىق دېتالىنىڭ تېزلىتىش ئىقتىدارىنى ئىناۋەتسىز قىلىدۇ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="تەڭشەك كۆزنىكىنىڭ چوڭلۇقى">
+									<longdesc>تەڭشەك كۆزنىكىنىڭ چوڭلۇقى</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="تەڭشەك كۆزنىكىنىڭ ئورنى">
+									<longdesc>تەڭشەك كۆزنىكىنىڭ ئورنى</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="تەڭشەك كۆزنىكىنىڭ چوڭلۇقى">
+									<longdesc>تەڭشەك كۆزنىكىنىڭ چوڭلۇقى</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="تەڭشەك كۆزنىكىنىڭ ئورنى">
+									<longdesc>تەڭشەك كۆزنىكىنىڭ ئورنى</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="سىن تەڭشەكلىرى كۆزنىكىنىڭ چوڭلۇقى">
+									<longdesc>سىن تەڭشەكلىرى كۆزنىكىنىڭ چوڭلۇقى</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="سىن تەڭشەكلىرى كۆزنىكىنىڭ ئورنى">
+									<longdesc>سىن تەڭشەكلىرى كۆزنىكىنىڭ ئورنى</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ئۈن تەڭشەكلىرى كۆزنىكىنىڭ چوڭلۇقى">
+									<longdesc>ئۈن تەڭشەكلىرى كۆزنىكىنىڭ چوڭلۇقى</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ئۈن تەڭشەكلىرى كۆزنىكىنىڭ ئورنى">
+									<longdesc>ئۈن تەڭشەكلىرى كۆزنىكىنىڭ ئورنى</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="ئادرېس دەپتىرى كۆزنىكىنىڭ چوڭلۇقى">
+									<longdesc>ئادرېس دەپتىرى كۆزنىكىنىڭ چوڭلۇقى</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ئادرېس دەپتىرى كۆزنىكىنىڭ ئورنى">
+									<longdesc>ئادرېس دەپتىرى كۆزنىكىنىڭ ئورنى</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="druid كۆزنىكىنىڭ ئورنى">
+									<longdesc>druid كۆزنىكىنىڭ ئورنى</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="druid كۆزنىكىنىڭ چوڭلۇقى">
+									<longdesc>druid كۆزنىكىنىڭ چوڭلۇقى</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="پاراڭ كۆزنىكىنىڭ ئورنى">
+									<longdesc>پاراڭ كۆزنىكىنىڭ ئورنى</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="پاراڭ كۆزنىكىنىڭ چوڭلۇقى">
+									<longdesc>پاراڭ كۆزنىكىنىڭ چوڭلۇقى</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="ئاساسىي كۆزنەكتىكى تاختاي بۆلىكىنى ئۆزگەرتىدۇ.">
+									<longdesc>ئاساسىي كۆزنەكتىكى تاختاي بۆلىكىنى ئۆزگەرتىدۇ(0=ئالاقەداشلار، 1=نومۇر تاختىسى، 2=تېلېفون ئىزلىرى)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ئاساسىي كۆزنەكنىڭ ئورنى">
+									<longdesc>ئاساسىي كۆزنەكنىڭ ئورنى</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN ئارقىلىق بايقاشنى ئىناۋەتلىك قىلماق">
+								<longdesc>STUN سىنىقى ئارقىلىق تور تەڭشىكىنى ئاپتوماتىك بېكىتىشنى ئىناۋەتلىك قىلىش</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN مۇلازىمېتىرى">
+								<longdesc>STUN ئىشلىتىدىغان STUN مۇلازىمېتىرىدۇر. STUN بولسا NAT دەرۋازىسىدىن ئۆتۈشتە ئىشلىتىلىدىغان تېخنىكا.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="سۆزلىشىۋاتقاننى بىلدۈرىدىغان تون">
+								<longdesc>سۆزلىشىش تاماملانغاندا ياكى قارشى تەرەپ ئالدىراش چاغدا قويىدىغان ئاۋاز(ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="ئالدىراش تونىنى قوي">
+								<longdesc>سۆزلىشىش تاماملانغاندا ياكى قارشى تەرەپ ئالدىراش چاغدا تاللانغان ئاۋازنى قويىدۇ(ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="نومۇر باسقاندىكى ئاۋاز">
+								<longdesc>بىرەرىنى چاقىرىۋاتقاندا قويىدىغان ئاۋاز(ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="تېلېفون قوڭغۇرىقىنى قوي">
+								<longdesc>بىرەرىنى چاقىرغاندا تاللانغان ئاۋازنى قويىدۇ.  (ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="يېڭى ئۈنخەت كەلگەندە ئاۋاز چىقار">
+								<longdesc>يېڭىدىن ئۈنخەت كەلگەندە تاللانغان ئاۋازنى قويىدۇ.  (ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="يېڭى كەلگەن سىنخەتنىڭ ئاۋازى">
+								<longdesc>يېڭى ئۈنخەت كەلگەندە قويىدىغان ئاۋاز(ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="يېڭى ئۇچۇر كەلگەندە ئاۋاز چىقار">
+								<longdesc>يېڭى ئۇچۇر كەلسە تاللانغان ئاۋازنى قويىدۇ (ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="يېڭى كەلگەن مۇڭداشما ئاۋازى">
+								<longdesc>يېڭى مۇڭداشما ئۇچۇرى كەلگەندە قويىدىغان ئاۋاز(ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="باشقىلار چاقىرغاندا ئاۋاز چىقار">
+								<longdesc>چاقىرىق كەلگەندە تاللانغان ئاۋازنى قويىدۇ (ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="چاقىرىق كەلگەندە قويىدىغان ئاۋاز">
+								<longdesc>چاقىرىق كەلگەندە چاغدا قويىدىغان ئاۋاز(ئەگەر ئىناۋەتلىك قىلىنغان بولسا)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="يەنە بىر ئۈن چىقىرىش ئۈسكۈنىسى">
+								<longdesc>ئاۋاز چىقىرىش ئۈچۈن ئىشلىتىدىغان يەنە بىر ئۈن ئۈسكۈنىسىنى تاللايدۇ.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="قارشى تەرەپتە كۆرسىتىدىغان ھالەت (ئۇزۇن)">
+								<longdesc>ھالەت ئۇچۇرى (ئۇزۇن تېكىستتە ئىپادىلەنگەن).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="قارشى تەرەپتە كۆرسىتىدىغان ھالەت (قىسقا)">
+								<longdesc>ھالەت ئۇچۇرى (قىسقا تېكىستتە ئىپادىلەنگەن).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="تولۇق ئاتى">
+								<longdesc>تولۇق ئاتىڭىزنى كىرگۈزۈڭ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="كاندۇك تېزلىكى">
+								<longdesc>ئەڭ يۇقىرى  يوللاش كاندۇك سۈرئىتى(كاندۇك\سېكۇنت).  TSTO قىممىتى 31 دىن كىچىك قىلىپ سەپلەنگەن ئەڭ تۆۋەن سۈپەت ئاساس قىلىنىپ تاللانغان كەڭ بەلۋاغ بۇ خىل ئەڭ تۆۋەن سۈپەتلىك ئەھۋالنى قوللاش ئېھتىياجىدىن چىقالمىغان ئەھۋالدا بۇ سۈرئەتكە يىتەلمەيدۇ .</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="سىننى ئالدىن كۆرۈش">
+								<longdesc>كامېرادىن كەلگەن سۈرەتلەرنى كۆرسەتمەك</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="سىن فورماتى">
+								<longdesc>سىن كامېراسىنىڭ فورماتى(كۆپلىگەن USB كامېراغا ماس كەلمەيدۇ)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="سىن قانىلى">
+								<longdesc>ئىشلىتىدىغان سىن قانىلىنىڭ سانى(كامېرا تاللاش، تېلېۋىزور ياكى مەنبە)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="سىن چوڭلۇقى">
+								<longdesc>يوللايدىغان سىننىڭ چوڭلۇقى: Small (QCIF 176x144) ياكى Large (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="سىن كىرگۈزۈش ئۈسكۈنىسى">
+								<longdesc>ئىشلىتىدىغان سىن كىرگۈزۈش ئۈسكۈنىسىنى تاللايدۇ. بۇنى ئىشلىتىۋاتقاندا خاتالىق كۆرۈلسە سىناق سۈرەت يوللىنىدۇ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="ئۈن كىرگۈزۈش ئۈسكۈنىسى">
+								<longdesc>ئىشلىتىدىغان ئۈن كىرگۈزۈش(مىكروفون) ئۈسكۈنىسىنى تاللا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ئۈن چىقىرىش ئۈسكۈنىسى">
+								<longdesc>ئىشلىتىدىغان ئۈن چىقىرىش(ياڭراتقۇ) ئۈسكۈنىسىنى تاللا</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="خەتكۈشلەر">
+						<longdesc>gconf-editor قىسقۇچ خەتكۈچلەر</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="يېقىندا ئوينىغان ئويۇنلار">
+						<longdesc>يېقىندا ئوينىغان ئويۇنلار تىزىمى.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="ئوينىغان ئويۇننىڭ ستاتىستىكىسى">
+						<longdesc>تۆۋەندىكى بەش خىل ئۇچۇرنىڭ جەدۋىلى: ئويۇن ئاتى، ئۇتقان قېتىم سانى، ئومۇمىي ئويۇن قېتىم سانى، ئەڭ ياخشى ۋاقىت (سېكۇنت)، ئەڭ ناچار ۋاقىت (سېكۇنت). ئوينالمىغان ئويۇنلار تىزىمدا كۆرۈنمەيدۇ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="ئىشلىتىدىغان ئويۇن ھۆججىتى">
+						<longdesc>ئوينايدىغان قارتا ئويۇنىنىڭ ئۆرنەك ھۆججىتىنىڭ ئاتى.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="جانلاندۇرۇملار">
+						<longdesc>قارتا يۆتكەلگەندە جانلاندۇرۇم بارمۇ يوق.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="ئاۋاز">
+						<longdesc>ھادىسە ئاۋازىنى قويامدۇ يوق.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="تىزگىننىڭ ئۇسلۇبىنى تاللاش">
+						<longdesc>قارتا يۆتكەش سۆرەش ئارقىلىق يۆتكىلەمدۇ ياكى باشلىنىش ۋە ئاخىرلىشىشنى چېكىش ئارقىلىق يۆتكىلەمدۇ تاللاڭ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="ھالەت بالداقنى كۆرسىتەمدۇ يوق">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="قورال بالداقنى كۆرسىتەمدۇ يوق">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="ئۆرنەك ھۆججىتى ئاتى">
+						<longdesc>قارتاغا ئىشلەتكەن گرافىكنىڭ ھۆججەت ئاتى.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

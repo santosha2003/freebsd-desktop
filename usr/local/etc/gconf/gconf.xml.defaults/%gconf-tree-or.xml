@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="କଲ୍ ପୁରୁଣା ତଥ୍ୟ">
+							<longdesc>ପୁର୍ବତନ ୧୦୦ଟି କଲର ଇତିହାସ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP ସର୍ଭର">
+							<longdesc>ବିନ୍ଯାସିତ LDAP ସର୍ଭର ତାଲିକା</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="ଅଫଲାଇନ ସମ୍ପର୍କ ଦେଖାଅ">
+							<longdesc>ଯଦି ସକ୍ରିୟ ଅଛି, ଅଫଲାଇନ ସମ୍ପର୍କଗୁଡ଼ିକୁ ନାମାବଳୀରେ ଦର୍ଶାଯିବ</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="ସୂଚୀରେ ଫୋଲଡର ସମୂହଗୁଡ଼ିକର ତାଲିକା">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="ଆକାଉଣ୍ଟ ତାଲିକା">
+							<longdesc>ଆକାଉଣ୍ଟଗୁଡିକର ତାଲିକା ୟାହା ସହିତ Ekiga ପଞ୍ଜିକୃତ ହେବା ଉଚିତ</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="ୟଦି ଉତ୍ତର ମିଳେ ନାହିଁ  ଦତ୍ତ ହୋଷ୍ଟକୁ କଲଗୁଡିକୁ ଅଗ୍ରସର କର">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ସବୁ ଆସୁଥିବା କଲ ହୋଷ୍ଟକୁ ଅଗ୍ରସର ହେବ ୟାହାକି ତଳ କ୍ଷେତ୍ରରେ ନିର୍ଦ୍ଦିଷ୍ଟ ହୋଇଥାଏ , ୟଦି ଆପଣ କଲର ଉତ୍ତର ଦିଅନ୍ତି ନାହିଁ </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="ଯଦି ବ୍ଯସ୍ତ ଥାଏ ଦତ୍ତ ହୋଷ୍ଟକୁ କଲଗୁଡିକୁ ଅଗ୍ରସର କର">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="ପ୍ରଦତ୍ତ ହୋଷ୍ଟଙ୍କୁ କଲ୍ ଗୁଡିକ ସର୍ବଦା ଅଗ୍ରସର କରାଅ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ସବୁ ଆସୁଥିବା କଲ ହୋଷ୍ଟକୁ ଅଗ୍ରସର ହେବ ୟାହାକି ତଳ କ୍ଷେତ୍ରରେ ନିର୍ଦ୍ଦିଷ୍ଟ ହୋଇଥାଏ </longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP ପୋର୍ଟ ପରିସର">
+								<longdesc>Ekiga ବ୍ୟବହାର କରିବାକୁ ଥିବା UDP ସଂଯୋଗିକୀଗୁଡ଼ିକର ପରିସର।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP ପୋର୍ଟ ପରିସର">
+								<longdesc>H.323 H.245 ଚ୍ୟାନେଲ ପାଇଁ Ekiga ବ୍ୟବହାର କରୁଥିବା TCP ସଂଯୋଗିକୀର ପରିସର। ଏହି ସଂଯୋଗିକୀ ପରିସୀମାର କୌଣସି ପ୍ରଭାବ ନାହିଁ ଯଦି ଉଭୟ ଅଂଶଗ୍ରହଣକାରୀ H.245 ଟନେଲିଙ୍ଗ ବ୍ୟବହାର କରୁଥାନ୍ତି।</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="ହୋଷ୍ଟକୁ କଲଗୁଡିକୁ ଅଗ୍ରସରକର">
+								<longdesc>ୟଦି କଲ ଅଗ୍ରସର କରିବା ସକ୍ଷମ ହୋଇଥାଏ, ତେବେ ହୋଷ୍ଟ ୟେଉଁଠାରେ କଲଗୁଡିକ ଅଗ୍ରସର ହେବା ଉଚିତ </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF ପଠାଇବା">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc=" &apos;ଦ୍ରୁତ ଆରମ୍ଭ&apos; କୁ ସକ୍ଷମ କର ">
+								<longdesc>ସଂୟୋଗ ଦ୍ରୁତ ଆରମ୍ଭ ମୋଡରେ ସ୍ଥାପିତ ହେବ। କଲଗୁଡିକୁ ଶୀଘ୍ର ଆରମ୍ଭ କରିବା ପାଇଁ ଦ୍ରୁତ ଆରମ୍ଭ ମୋଡ ଏକ ନୂଆ ଉପାଯ ଅଟେ ୟାହାକି H.323v2ରେ ପ୍ରସ୍ତାବିତ କରାୟାଇଛି। ଏହା ନେଟମିଟିଙ୍ଗ ଦ୍ବାରା ସମର୍ଥିତ ନୁହେଁ ଏବଂ  ଦ୍ରୁତ ଆରମ୍ଭ ଏବଂ H.245 ଟ୍ଯୁନ୍ କରିବା ହୁଏତ ନେଟମିଟିଙ୍ଗର କେତେକ ଭାଷାନ୍ତରକୁ ଅଚଳ କରିଦେଇପାରେ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="ପୂର୍ବରୁ H.245 କୁ ସକ୍ଷମକରନ୍ତୁ">
+								<longdesc>ସେଟ ଅପରେ H.245 ପ୍ରାରମ୍ଭରେ ସକ୍ଷମ କରେ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc=" H.245 ଟ୍ଯୁନ କରିବା ସକ୍ଷମ କର">
+								<longdesc>ଏହା H.245 ଟନେଲିଙ୍ଗ ଧାରାକୁ ସକ୍ରିୟ କରିଥାଏ। H.245 ଟନେଲିଙ୍ଗ ଧାରାରେ H.245 ସନ୍ଦେଶଗୁଡ଼ିକ H.225 ଚ୍ୟାନେଲରେ (ସଂଯୋଗିକୀ 1720) ସଂଗୁପ୍ତ ହୋଇଥାଏ। ଏହା ଗୋଟିଏ TCP ସଂଯୋଗକୁ କଲ ମାଧ୍ୟମରେ ସଂରକ୍ଷଣ କରିଥାଏ। H.245 ଟନେଲିଙ୍ଗ H.323v2 ଏବଂ ନେଟ ସାକ୍ଷାତକାର ମାଧ୍ୟମରେ ସମର୍ଥନ କରିଥାଏ। ତୀବ୍ର ଆରମ୍ଭ ଏବଂ H.245 ଟନେଲିଙ୍ଗ ନେଟ ସାକ୍ଷାତକାରର କିଛି ସଂସ୍କରଣକୁ ନଷ୍ଟକରିପାରେ।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="ଶୁଣିବା ପୋର୍ଟ">
+								<longdesc>ଆସୁଥିବା ସଂୟୋଗଗୁଡିକ ପାଇଁ ଶୁଣିବା ନିମନ୍ତେ ପୋର୍ଟ ନୂଆ ମୂଲ୍ଯ ପ୍ରଭାବଶାଳୀ ହେବା ପାଇଁ Ekigaକୁ ପୁନଃ ଆରମ୍ଭ କରିବାକୁ ହୁଏ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT ବାନ୍ଧିବା ସମଯ ବିତିୟିବା">
+								<longdesc>ସେକେଣ୍ଡର ସଂଖ୍ଯା ପ୍ରବିଷ୍ଟକର ୟାହା ପରେ Ekiga NAT ବାନ୍ଧିବାକୁ ସତେଜନ କରିବାକୁ ଚେଷ୍ଟାକରିବା ଉଚିତ ୟେବେ STUN ଉପୟୋଗ ହେଉଥିବ </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF ପଠାଇବା">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="ହୋଷ୍ଟକୁ କଲଗୁଡିକୁ ଅଗ୍ରସରକର">
+								<longdesc>ୟଦି କଲ ଅଗ୍ରସର କରିବା ସକ୍ଷମ ହୋଇଥାଏ, ତେବେ ହୋଷ୍ଟ ୟେଉଁଠାରେ କଲଗୁଡିକ ଅଗ୍ରସର ହେବା ଉଚିତ </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="ବାହରକୁ ୟାଉଥିବା ପ୍ରୋକ୍ସି">
+								<longdesc>ବାହାରକୁ ୟାଉଥିବା କଲଗୁଡିକ ନିମନ୍ତେ ଉପୟୋଗ କରିବା ପାଇଁ SIP ବାହାରକୁ ୟାଉଥିବା ପ୍ରୋକ୍ସି</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="ଶୁଣିବା ପୋର୍ଟ">
+								<longdesc>ଆସୁଥିବା ସଂୟୋଗଗୁଡିକ ପାଇଁ ଶୁଣିବା ନିମନ୍ତେ ପୋର୍ଟ। ନୂଆ ମୂଲ୍ଯ ପ୍ରଭାବଶାଳୀ ହେବା ପାଇଁ Ekigaକୁ ପୁନଃ ଆରମ୍ଭ କରିବାକୁ ହେବ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="ସାମୟିକ ସ୍ଥାନୀୟ କାରବାର">
+								<longdesc>ସର୍ବାଧିକ ଫ୍ରେମ ହାରକୁ ବଜାୟ ରଖିବା ପାଇଁ ଅଥବା ସର୍ବନିମ୍ନ ସ୍ତର ପର୍ଯ୍ୟନ୍ତ ନିମ୍ନଗାମୀ କରିବା ପାଇଁ ସମସ୍ତ ଫ୍ରେମର ବିଶେଷତା ସ୍ତର। 0: ସର୍ବାଧିକ ବିଶେଷତା, 31: ସର୍ବନିମ୍ନ ବିଶେଷତା</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="ସର୍ବାଧିକ RX ଭିଡିଓ ବିଟ୍ରେଟ">
+								<longdesc>ସର୍ବାଧିକ RX ଭିଡ଼ିଓ ବିଟହାର kbit/s. ଏହି ମୂଲ୍ୟଟି ସାଥୀ ଅନ୍ତବିନ୍ଦୁ ସହିତ ସୂଚୀତ ହୋଇଥାଏ ଯାହାକି ତାହାର ସାଥୀ ଅନ୍ତବିନ୍ଦୁ ସହିତ ମେଳଖାଇଥାଏ (ଯଦି ଏହା ସମର୍ଥନ କରିଥାଏ) ଏହାର TX ବିଟହାର ଯଦି ଏହା ସୂଚନା ମୂଲ୍ୟ ଉପରେ ଥାଏ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="ସର୍ବାଧିକ TX ଭିଡିଓ ବିଟ୍ରେଟ">
+								<longdesc>ସର୍ବାଧିକ TX ଭିଡ଼ିଓ ବିଟହାର kbit/s. ଭିଡ଼ିଓ ଗୁଣବତ୍ତା ଏବଂ ପ୍ରତି ସେକଣ୍ଡରେ ପରିବହନ ହୋଇଥିବା ଫ୍ରେମ ସଂଖ୍ୟାକୁ(ବଚ୍ଛିତ ସଙ୍କେତକ ଉପରେ ନିର୍ଭର କରି) ତାହାର ସର୍ବନିମ୍ନ ମୂଲ୍ୟ ଉପରେ ମେଳାଇଥାଏ।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ଭିଡିଓ କୋଡେକ ତାଲିକା">
+								<longdesc>ଭିଡିଓ କୋଡେକ ତାଲିକା</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="ସର୍ବାଧିକ ଜିଟ୍ଟର ବଫର">
+								<longdesc>ଅଡିଓ ପ୍ରାପ୍ତ କରିବା ପାଇଁ ସର୍ବାଧିକ ଜିଟ୍ଟର ବଫର ଆକାର(msରେ)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="ନୀରବତା ଧରିବା ସକ୍ଷମ କର ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ନୀରବତା ଧରିବା ଏହାକୁ ସମର୍ଥନ କରୁଥିବା କୋଡଗୁଡିକ ସହିତ ଉପୟୋଗକର</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ଅଡିଓ କୋଡେକ ତାଲିକା">
+								<longdesc>ଧ୍ବନି କୋଡେକ ତାଲିକା</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="ସ୍ୱୟଂଚାଳିତ ଉତ୍ତର">
+								<longdesc>ଯଦି ସକ୍ରିୟ ଅଛି, ତେବେ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଆସୁଥିବା କଲକୁ ଉତ୍ତର ଦିଅନ୍ତୁ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="କୌଣସି ଉତ୍ତର ନାହିଁ ସମଯ ବିତିୟିବା">
+								<longdesc>ୟଦି କୌଣସି ଉତ୍ତର ଏକ ନିର୍ଦ୍ଦିଷ୍ଟ ସମୟ ପର ପର୍ୟ୍ଯନ୍ତ ମିଳି ନଥାଏ (ସେକେଣ୍ଡରେ) ତେବେ ଆସୁଥିବା କଲଗୁଡିକୁ ସ୍ବଯଂଚାଳିତ ଭାବରେ ଅସ୍ବୀକୃତ କିମ୍ବା ଅଗ୍ରସରକର </longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="ଦୂରସ୍ଥ ଭିଡିଓ ୱିଣ୍ଡୋ ସ୍ଥାନ">
+									<longdesc>ଦୂରସ୍ଥ ଭିଡିଓ ୱିଣ୍ଡୋର ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ଦୂରସ୍ଥ ଭିଡିଓ ୱିଣ୍ଡୋ ଆକାର">
+									<longdesc>ଦୂରସ୍ଥ ଭିଡିଓ ୱିଣ୍ଡୋର ଆକାର</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="ପୂର୍ଣ୍ଣ ପରଦାକୁ ପରିବର୍ତ୍ତନ କରିବା ପୁର୍ବର ଭିଡିଓ ଦୃଶ୍ଯ">
+									<longdesc>ସମ୍ପୂର୍ଣ୍ଣ ପରଦା ଅବସ୍ଥାକୁ ବଦଳିବା ପୂର୍ବର ଭିଡିଓ ଦୃଶ୍ୟ (video_view ପରି ସମାନ ମୂଲ୍ୟ)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="ଡିଫଲ୍ଟ ଭିଡିଓ ଦୃଶ୍ଯ">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="କଲଗୁଡିକ ସମଯରେ ଭଡିଓ ପ୍ରଦର୍ଶନ କରୁଥିବା ୱିଣ୍ଡୋକୁ ଅନ୍ଯ ୱିଣ୍ଡୋ ଉପରେ ସ୍ଥାପିତ କର">
+									<longdesc>କଲଗୁଡିକ ସମଯରେ ଭଡିଓ ପ୍ରଦର୍ଶନ କରୁଥିବା ୱିଣ୍ଡୋକୁ ଅନ୍ଯ ୱିଣ୍ଡୋ ଉପରେ ସ୍ଥାପିତ କର</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="ଜୁମ ମୂଲ୍ଯ">
+									<longdesc>ମୂଖ୍ୟ GUI (50, 100, କିମ୍ବା 200 ହୋଇପାରେ) ରେ ପ୍ରତିଛବିରେ ପ୍ରୟୋଗ କରିବା ପାଇଁ ଛୋଟବଡ଼ ମୂଲ୍ୟ ଶତକଡ଼ାରେ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="ସଫ୍ଟୱେର ମାପକ ଆଲଗୋରିଦମ ଉଲ୍ଲେଖ କରନ୍ତୁ">
+									<longdesc>ସଫ୍ଟୱେର ମାପିବା ଆଲଗୋରିଦମକୁ ଉଲ୍ଲେଖ କରନ୍ତୁ: 0: ପାଖାପାଖି ପଡ଼ୋଶୀ, 1: ବାକ୍ସ ଛାଣକ ସହିତ ପାଖାପାଖି ପଡ଼ୋଶୀ, 2: ଦ୍ୱିମୁଖୀ ଛାଣକ, 3: ହାଇପରବୋଲିକ ଛାଣକ। ଏହାକୁ windows ତନ୍ତ୍ରରେ ପ୍ରୟୋଗ କରାଯାଇନଥାଏ।</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="picture-in-picture ସଫ୍ଟୱେର ମାପକୁ ଅନୁମତି ଦିଅନ୍ତୁ">
+									<longdesc>Ekiga କୁ ଛବି ପରେ ଛବି ସଫ୍ଟୱେର ମାପିବା ପାଇଁ ପକାଇବାକୁ ଅନୁମତି ଦେଇଥାଏ ଯଦି ହାର୍ଡୱେର ସମର୍ଥନ ଉପଲବ୍ଧ ହୋଇନଥାଏ। ଯଦି ଏହାକୁ false ସେଟ କରାଯାଏ, ଯଦି ହାର୍ଡୱେର ସମର୍ଥନ ଉପଲବ୍ଧ ହୋଇନଥାଏ Ekiga PIP କୁ ଖୋଲିବାକୁ ଚେଷ୍ଟାକରିନଥାଏ।</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="ଭିଡିଓ ହାର୍ଡୱେର ନିଷ୍କ୍ରିୟ କରନ୍ତୁ">
+									<longdesc>ଏହି କି DirectX (win32 ଉପରେ) ଏବଂ XVideo (Linux ଉପରେ) ଭିଡ଼ିଓ ହାର୍ଡୱେର ତ୍ୱରଣକୁ ନିଷ୍କ୍ରିୟ କରିଥାଏ </longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="ପସନ୍ଦ ୱିଣ୍ଡୋର ଆକାର">
+									<longdesc>ପସନ୍ଦ ୱିଣ୍ଡୋର ଆକାର</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ପସନ୍ଦ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ">
+									<longdesc>ପସନ୍ଦ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="ପସନ୍ଦ ୱିଣ୍ଡୋର ଆକାର">
+									<longdesc>ପସନ୍ଦ ୱିଣ୍ଡୋର ଆକାର</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ପସନ୍ଦ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ">
+									<longdesc>ପସନ୍ଦ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ଭିଡିଓ ବିନ୍ଯାସ ୱିଣ୍ଡୋର ଆକାର">
+									<longdesc>ଭିଡିଓ ବିନ୍ଯାସ ୱିଣ୍ଡୋର ଆକାର</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ଭିଡିଓ ବିନ୍ଯାସ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ">
+									<longdesc>ଭିଡିଓ ବିନ୍ଯାସ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ଧ୍ବନି ବିନ୍ଯାସ ୱିଣ୍ଡୋର ଆକାର">
+									<longdesc>ଧ୍ବନି ବିନ୍ଯାସ ୱିଣ୍ଡୋର ଆକାର</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ଧ୍ବନି ବିନ୍ୟାସ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ">
+									<longdesc>ଧ୍ବନି ବିନ୍ୟାସ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="ଠିକଣା ପୁସ୍ତକ ୱିଣ୍ଡୋର ଆକାର">
+									<longdesc>ଠିକଣା ପୁସ୍ତକ ୱିଣ୍ଡୋର ଆକାର</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ଠିକଣା ପୁସ୍ତକ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ">
+									<longdesc>ଠିକଣା ପୁସ୍ତକ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="ଡ୍ରୁଇଡ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ">
+									<longdesc>ଡ୍ରୁଇଡ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ଡ୍ରୁଇଡ ୱିଣ୍ଡୋର ଆକାର">
+									<longdesc>ଡ୍ରୁଇଡ ୱିଣ୍ଡୋର ଆକାର</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="ଚାଟ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ">
+									<longdesc>ଚାଟ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ଚାଟ ୱିଣ୍ଡୋର ଆକାର">
+									<longdesc>ଚାଟ ୱିଣ୍ଡୋର ଆକାର</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="ମୂଖ୍ଯ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ">
+									<longdesc>ମୂଖ୍ଯ ୱିଣ୍ଡୋର ସ୍କ୍ରିନରେ ସ୍ଥାନ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN ନେଟୱର୍କ ସନ୍ଧାନକୁ ସକ୍ରିୟ କରନ୍ତୁ">
+								<longdesc>STUN ପରୀକ୍ଷଣରୁ ମିଳିଥିବା ସ୍ୱୟଂଚାଳିତ ନେଟୱର୍କ ସଂରଚନାକୁ ସକ୍ରିୟ କରନ୍ତୁ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc=" STUN ସରଭର">
+								<longdesc>STUN ସମର୍ଥନ ପାଇଁ STUN ସର୍ଭର ବ୍ୟବହୃତ ହୋଇଥାଏ। STUN ଗୋଟିଏ ପ୍ରଯୁକ୍ତି ବିଜ୍ଞାନ ଯାହାକି NAT ପ୍ରବେଶ ଦ୍ୱାର ମଧ୍ଯରେ କୌଣସି ପ୍ରକାର ପ୍ରବେଶ ପାଇଁ ଅନୁମତି ଦେଇଥାଏ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="ବ୍ଯସ୍ତ ସ୍ବର ଧ୍ବନୀ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, କଲଗୁଡିକର ଶେଷରେ  କିମ୍ବା ଜଣେ ବ୍ଯସ୍ତଥିବା ବେଳେ ଡାକିବା ସମଯରେ ଗୋଟିଏ ଧ୍ବନୀ ବଜାୟିବ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="ବ୍ଯସ୍ତରହିବା ସ୍ବର ବଜାଅ">
+								<longdesc>ବଛାୟାଇଥିବା ଧ୍ବନୀ କଲଗୁଡିକର ଅନ୍ତରେ ବଜାୟିବ କିମ୍ବା କାହାକୁ ଡାକିବା ବେଳେ ୟିଏ ବ୍ଯସ୍ତ ଥାଆନ୍ତି, ୟଦି ସକ୍ଷମ ହୁଏ </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="ଡାଏଲ ଟୋନ ଧ୍ବନୀ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ଜଣେ କାହାକୁ ଡକାୟିବା ବେଳେ ଧ୍ବନୀ ବଜାୟିବ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="ରିଙ୍ଗ ହେବା ସ୍ବର ବଜାଅ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ଗୋଟିଏ ବଛାୟାଇଥିବା ଧ୍ବନୀ ବଜାୟିବ ୟେବେ କାହାକୁ କଲ କରାହେବ </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="ନୂଆ ଭାଷାମେଲରେ ଧ୍ବନୀ ବଜାଅ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ଗୋଟିଏ ବଛାୟାଇଥିବା ଧ୍ବନା ବଜାୟିବ ୟେବେ ଗୋଟିଏ ନୂଆ ଭାଷା ମେଲ ପ୍ରାପ୍ତ ହେବ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="ନୂଆ ଭାଷା ମେଲ ଧ୍ବନୀ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ୟେବେ ଗୋଟିଏ ନୂଆ ଭାଷା ମେଲ ଆସିବ ଗୋଟିଏ ଧ୍ବନୀ ବଜାୟିବ।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="ନୂଆ ସଂଦେଶରେ ଧ୍ବନୀ ବଜାଅ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ଗୋଟିଏ ବଛାୟାଇଥିବା ଧ୍ବନୀ  ବଜାୟିବ ୟେବେ ଗୋଟିଏ ତ୍ବରିତ ସଂଦେଶ ପ୍ରାପ୍ତ ହେବ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="ନୂଆ ତ୍ବରିତ ସଂଦେଶ ଧ୍ବନୀ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ୟେବେ ଗୋଟିଏ ତ୍ବରିତ ନୂଆ ସଂଦେଶ ଆସେ ସେତେବେଳେ ଧ୍ବନୀ ବଜାୟିବ।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="ଆସୁଥିବା କଲଗୁଡିକରେ ଧ୍ବନୀ ବଜାଅ">
+								<longdesc>ବଛାୟାଇଥିବା ଧ୍ବନୀ ଆସୁଥିବା କଲ ସମଯରେ ବଜାୟିବ, ୟଦି ସକ୍ଷମ ହୁଏ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="ଆସୁଥିବା କଲର ଧ୍ବନୀ">
+								<longdesc>ୟଦି ସକ୍ଷମ ହୁଏ, ଆସୁଥିବା କଲ ସମଯରେ ଗୋଟିଏ ଧ୍ବନୀ ବଜାୟିବ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ବୌକଳ୍ପିକ ଅଡିଓ ଆଉଟପୁଟ ଉପକରଣ">
+								<longdesc>ଧ୍ବନୀ ଘଟଣାଗୁଡିକ ନିମନ୍ତେ ଉପୟୋଗ କରିବା ପାଇଁ ଗୋଟିଏ ବୈକଳ୍ପିକ ଅଡିଓ ଭିଡିଓ ଆଉଟପୁଟ ଉପକରଣ ମନୋନୀତ କର</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="ଲମ୍ବା ଅବସ୍ଥିତି ସମ୍ପର୍କ କରନ୍ତୁ">
+								<longdesc>ଲମ୍ବା ଅବସ୍ଥିତି ସୁଚନା</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="ଛୋଟ ଅବସ୍ଥିତି ସମ୍ପର୍କ କରନ୍ତୁ">
+								<longdesc>ଛୋଟ ଅବସ୍ଥିତି ସୁଚନା</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="ପୂରା ନାମ">
+								<longdesc>ନିଜର ପୂର୍ଣ୍ଣ ନାମ ପ୍ରବିଷ୍ଟ କରନ୍ତୁ</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="ଫ୍ରେମ ଦର">
+								<longdesc>ସର୍ବାଧିକ ପରିବହନ ହୋଇଥିବା ଫ୍ରେମ ହାର ଫ୍ରେମ/ସେକଣ୍ଡ। ଏହି ମୂଲ୍ୟଟି ସର୍ବନିମ୍ନ ଗୁଣବତ୍ତା ବିନ୍ୟାସ ହୋଇଥିବ ସମୟରେ 31 ରୁ କମ TSTO ମୂଲ୍ୟ ଏବଂ ସର୍ବନିମ୍ନ କ୍ଷମତାକୁ ସମର୍ଥନ କରୁଥିବା ବିଟହାର ମାଧ୍ଯମରେ ପହଞ୍ଚି ନଥାଏ।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="ଭିଡିଓ ପୂର୍ବଦୃଶ୍ଯ">
+								<longdesc>ଆପଣଙ୍କର କ୍ଯାମେରା ଉପକରଣରୁ ଚିତ୍ର ପ୍ରଦର୍ଶନ କର </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="ଭିଡିଓ ଫର୍ମାଟ">
+								<longdesc>ଭଡିଓ କ୍ଯାମେରାଗୁଡିକ ପାଇଁ ଫର୍ମାଟ ମନୋନୀତ କର (ଅଧିକାଂଶ USB କ୍ଯାମେରାଗୁଡିକୁ ପ୍ରଯୋଗ ହୋଇ ନଥାଏ)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="ଭିଡିଓ ଚ୍ଯାନେଲ">
+								<longdesc>ଉପୟୋଗ କରିବା ପାଇଁ ଭିଡିଓ ଚ୍ଯାନେଲ ସଂଖ୍ଯା (କ୍ଯାମେରା, ଟି.ଭି, କିମ୍ବା ଅନ୍ଯ ଉପାଯଗୁଡିକୁ ମନୋନୀତ କରିବା ପାଇଁ )</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="ଭିଡିଓ ଆକାର">
+								<longdesc>ସ୍ଥାନାନ୍ତରିତ ହୋଇଥିବା ଭିଡିଓ ଆକାର ମନୋନୀତ କର: ଛୋଟ (QCIF 176x144) କିମ୍ବା ବଡ (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="ଭିଡିଓ ଇନପୁଟ ଉପକରଣ ">
+								<longdesc>ଉପୟୋଗ କରିବା ପାଇଁ  ଭିଡିଓ ଇନପୁଟ ଉପକରଣ ମନୋନୀତ କର। ଏହି ଉପକରଣ ଉପୟୋଗ କରିବା ସମଯରେ ୟଦି ତ୍ରୁଟି ଘଟେ ଗୋଟିଏ ପରୀକ୍ଷା ଚିତ୍ର ସ୍ଥାନାନ୍ତରିତ ହେବ।</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="ଅଡିଓ ଇନପୁଟ ଉପକରଣ">
+								<longdesc>ଉପୟୋଗ କରିବା ପାଇଁ ଗୋଟିଏ ଅଡିଓ ଇନପୁଟ ଉପକରଣ ମନୋନୀତ କର</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ଅଡିଓ ଆଉଟପୁଟ ଉପକରଣ">
+								<longdesc>ଉପୟୋଗ କରିବା ପାଇଁ ଅଡିଓ ଆଉଟପୁଟ ଉପକରଣ ମନୋନୀତ କର</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="ଚିହ୍ନିତ ସ୍ଥାନ">
+						<longdesc>ଜିକନ୍ଫ-ଏଡିଟର ଚିହ୍ନିତ ସ୍ଥାନଗୁଡ଼ିକର ଫୋଲ୍ଡର</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="ବର୍ତ୍ତମାନ ଖେଳାଯାଉଥିବା କିଛି ଖେଳ">
+						<longdesc>ବର୍ତ୍ତମାନ ଖେଳାଯାଉଥିବା କିଛି ଖେଳର ତାଲିକା।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="ଖେଳାୟାଇଥିବା ଖେଳର ପରିସଂଖ୍ଯାନ">
+						<longdesc>ସ୍ଟ୍ରିଙ୍ଗ ଗୁଡିକର ତାଲିକା ୟାହାକି ଗୋଟିଏ ପାଞ୍ଚଗୁଣ ଗଠନରେ ଆସେ: ନାମ, ବିଜଯଗୁଡିକ, ଖେଳାୟାଇଥିବା ସର୍ବମୋଟ ଖେଳ, ଉତ୍ତମ ସମଯ (ସେକେଣ୍ଡରେ) ଏବଂ ସବୁଠାରୁ ମନ୍ଦ ଖେଳ (ତା ମଧ୍ୟ ସେକେଣ୍ଡରେ) ୤ ଖେଳାୟାଇ ନଥିବା ଖେଳକୁ ଉପସ୍ଥାପିତ କରିବାକୁ ଦରକାର ପଡେ ନାହିଁ ୤</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="ଉପୟୋଗକରିବା ପାଇଁ ଖେଳ ଫାଇଲ">
+						<longdesc>ୟୋଜନା ଫାଇଲର ନାମ ୟେଉଁଥିରେ ଖେଳିବା ପାଇଁ ସଲିଟେଯର ଖେଳ ରହିଥାଏ ୤</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="ଜୀବନ୍ତଚିତ୍ରଗୁଡିକ ">
+						<longdesc>କାର୍ଡ ଗତିକୁ ଜୀବନାୟନ କରାଯିବା ଉଚିତ କି ନୁହଁ।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="ଶବ୍ଦ">
+						<longdesc>ଘଟଣା ଧ୍ବନୀ ଖେଳାୟିବ କି ନାହିଁ ୤</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="ନିଯନ୍ତ୍ରଣର ଶୈଳୀ ମନୋନୀତ କର">
+						<longdesc>କାର୍ଡଗୁଡିକୁ ଟଣାୟିବ କିମ୍ବା ଥରେ ମୂଳରେ ଏବଂ ପରେ ଗନ୍ତବ୍ଯରେ କେବଳ କ୍ଲିକ କରାୟିବ, ମନୋନୀତ କର ୤</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="ସ୍ଥିତିପଟିକୁ ଦର୍ଶାଯିବା ଉଚିତ କି ନୁହଁ">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="ଟୁଲବାର ଦର୍ଶାୟିବ କି ନାହିଁ ">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="ଥିମ ଫାଇଲ ନାମ">
+						<longdesc>କାର୍ଡଗୁଡିକ ପାଇଁ ଗ୍ରାଫିକ୍ସ ସହିତ ଫାଇଲର ନାମ </longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

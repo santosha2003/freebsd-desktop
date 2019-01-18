@@ -1,0 +1,67 @@
+
+[alsa]
+mixer-element=Master
+pcm=oss
+
+[audacious]
+advance_on_delete=TRUE
+chardet_detector=russian
+chardet_fallback=cp1251
+convert_backslash=TRUE
+record_stream=2
+repeat=TRUE
+
+[audgui]
+about_win=37,64,582,385
+equalizer_win=0,578,343,219
+filebrowser_win=60,177,967,694
+filesel_path=/root/Desktop
+info_win=386,265,708,451
+playlist_export_win=132,92,840,630
+playlist_manager_win=457,437,421,250
+playlist_path=file:///root/Desktop
+url_opener_win=448,423,384,144
+
+[gtkui]
+column_expand=1,1,1,0,0
+column_widths=10,695,175,10,175,175,10,100,43,10,275,275,275,10,275
+player_height=778
+player_width=1233
+player_x=308
+player_y=659
+record=TRUE
+
+[gtkui-layout]
+item0_name=Плагин LyricWiki
+item0_pos=-1,8,36,292,192
+item1_name=Анализатор спектра
+item1_pos=-1,47,74,292,192
+item2_name=Размывающийся уровень
+item2_pos=-1,724,518,142,90
+item3_name=Blur Scope
+item3_pos=-1,39,66,292,192
+item4_name=LyricWiki Plugin
+item4_pos=-1,86,113,296,196
+item5_name=Search Tool
+item5_pos=0,-1,-1,200,473
+item6_name=Модуль LyricWiki
+item6_pos=-1,0,27,280,184
+item7_name=Списки воспроизведения
+item7_pos=-1,0,27,272,176
+item8_name=Обложка альбома
+item8_pos=-1,0,0,276,180
+item_count=9
+
+[history]
+entry0=http://uk6.listen2myradio.com:2199/start/qybjxvvk/
+entry1=https://uk6.listen2myradio.com:2199/start/qybjxvvk/
+
+[oss4]
+alt_device=/dev/dsp0
+volume=25700
+
+[skins]
+skin=/usr/local/share/audacious/Skins/Default
+
+[skins-layout]
+blur_scope=272,712,288,192

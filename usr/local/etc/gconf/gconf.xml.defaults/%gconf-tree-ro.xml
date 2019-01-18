@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Istoric apeluri">
+							<longdesc>Istoricul ultimelor 100 apeluri făcute</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Servere LDAP">
+							<longdesc>Lista serverelor LDAP configurate</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Arată contactele deconectate">
+							<longdesc>La activare, apelurile primite vor fi afișate în agendă</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Lista grupurilor pliate din agendă">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Octetul tip de serviciu (TOS) al pachetelor de ieșire RTP IP">
+							<longdesc>Octetul tip de serviciu (TOS) al pachetelor de ieșire RTP IP. Acest octet este utilizat de rețea pentru a oferi un anumit nivel al Calității serviciului (QoS). Valoarea implicită 184 (0xB8) înseamnă Expedited Forwarding (EF) PHB după cum e definit în RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Lista conturilor">
+							<longdesc>Lista conturilor la care Ekiga trebuie să se conecteze</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Redirecționează apelurile la acest calculator dacă nu se răspunde">
+								<longdesc>La activare, dacă nu răspundeți la apeluri, toate apelurile primite vor fi redirecționate la calculatorul specificat în câmpul de mai jos</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Redirecționează apelurile către acest calculator dacă linia este ocupată">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Redirecționează toate apelurile către un alt calculator">
+								<longdesc>La activare, toate apelurile primite vor fi redirecționate la calculatorul specificat în câmpul de mai jos.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Plajă porturi UDP">
+								<longdesc>Intervalul de porturi UDP utilizate de Ekiga.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Interval de porturi TCP">
+								<longdesc>Plaja de valori a portului TCP pe care Ekiga îl va utiliza pentru canalul H.323 H.245.  Această plajă nu are niciun efect dacă ambii participanți la conferință utilizează tunelarea H.245.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Redirecționează apelurile către calculatorul">
+								<longdesc>Calculatorul la care trebuie redirectate apelurile dacă s-a ales redirecționarea apelurilor</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Trimitere DTMF">
+								<longdesc>Selectați modul pentru trimiterea DTMFs. Valorile pot fi 0 (pentru „String”), 1 (pentru „Tone”), 2 (pentru „RFC2833”), sau 3 (pentru „Q.931”) (implicit este „String”). Alegerea altor valori decât „String” dezactivează Chat Text.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Activare „Fast Start”">
+								<longdesc>Conexiunea va fi stabilită în modul de pornire rapidă (Fast Start). Metoda de pornire rapidă este o metodă nouă de a începe convorbirile mai repede, definită în H.323v2. Nu e compatibilă cu Netmeeting și folosirea simultană a tunelării H.245 poate bloca anumite versiuni Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Activare „early H.245”">
+								<longdesc>Aceasta activează opțiunile „early H.245”</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Activare a tunelării H.245">
+								<longdesc>Aceasta activează modul de tunelare H.245. În modul de tunelare H.245, mesajele H.245 sunt încapsulate în canalul H.225 (portul 1720). Aceasta salvează o conexiune TCP în timpul convorbirii. Tunelarea H.245 a fost introdusă în H.323v2 și Netmeeting nu îl recunoaște. Folosind Start-Rapid și tunelarea H.245 poate bloca anumite versiuni de Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Port utilizat">
+								<longdesc>Port deschis pentru primirea de apeluri. Ekiga trebuie repornit pentru ca noua valoare să aibă efect</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Limită de timp pentru „NAT binding”">
+								<longdesc>Introduceți numărul de secunde după care Ekiga va împrospăta conexiunea NAT când se utilizează STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Trimitere DTMF">
+								<longdesc>Selectați modul pentru trimiterea DTMFs. Valorile pot fi 0 (pentru „RFC2833”) și 1 (pentru „INFO”)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Redirecționează apelurile către calculatorul">
+								<longdesc>Calculatorul la care trebuie redirectate apelurile dacă s-a ales redirecționarea apelurilor</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Proxy de ieșire">
+								<longdesc>Proxy-ul de ieșire SIP de utilizat pentru apelurile trimise</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Port utilizat">
+								<longdesc>Port deschis pentru primirea de apeluri. Ekiga trebuie repornit pentru ca noua valoare să aibă efect</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Compromis temporal/spațial">
+								<longdesc>Specifică dacă se preferă menținerea numărului maxim de cadre pe secundă sau micșorarea acestui număr pentru a menține un nivel minim de calitate (spațială) pentru toate cadrele. 0: cea mai înaltă calitate minimă, 31: cea mai joasă calitate minimă</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Rata de biți maximă a semnalului video primit (RX)">
+								<longdesc>Rata de biți TX maximă în kb/s.  Valoarea va fi semnalată calculatorului de la distanță care poate ajusta (dacă suportă acest lucru) rata de biți a sa în cazul în care este mai mare decât această valoare</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Rata de biți maximă a semnalului video transmis (TX)">
+								<longdesc>Rata de biți maximă in kb/s. În timpul convorbirilor, calitatea video și numărul maxim de cadre trimise pe secundă (depinde de codec) vor fi ajustate dinamic peste valoarea minimă pentru a reduce rate de biți la valoarea specificată</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Listă codecuri video">
+								<longdesc>Listă codecuri video</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Dimensiune maximă pentru „jitter buffer”">
+								<longdesc>Mărime maximă a tamponului jitter pentru recepția audio (în ms).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Activare a detectării intervalelor de liniște">
+								<longdesc>La activare, pentru codecurile ce suportă aceasta, se detectează intervalele de liniște</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Lista codecuri audio">
+								<longdesc>Lista codecuri audio</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Tip de rețea selectat în asistentul de configurare">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Personalizat</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Răspuns automat">
+								<longdesc>La activare, apelurile vor fi răspunse automat</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Limită de timp pentru apel nepreluat">
+								<longdesc>Respinge sau redirecționează automat apelul, dacă nu se răspunde după un interval specificat de timp (în secunde)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Poziție a ferestrei cu video recepționat">
+									<longdesc>Poziție fereastră cu semnal video primit</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Dimensiuni ale ferestrei cu video recepționat">
+									<longdesc>Mărime fereastră la distanță cu semnal video</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Vederea video înainte de a schimba imaginea pe tot ecranul">
+									<longdesc>Vederea video înainte de a fi schimbat la afișare pe tot ecranul (aceleași valori ca la video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Imagine video implicită">
+									<longdesc>Imagine video implicită (0: locală, 1: la distanță, 2: amândouă, 3: amândouă în ferestre diferite)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="În timpul convorbirilor, plasează ferestrele ce conțin semnal video deasupra celorlalte ferestre.">
+									<longdesc>În timpul convorbirilor, plasează ferestrele ce conțin semnal video deasupra celorlalte ferestre.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Valoare magnificare">
+									<longdesc>Valoarea magnificării în procente ce va fi aplicată imaginilor afișate în fereastra principală (poate fi 50, 100 sau 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Specifică algoritmul de scalare software">
+									<longdesc>Specifică algoritmul de scalare software: 0 : vecinul cel mai apropiat, 1 : vecinul cel mai apropiat cu filtru box, 2 : filtru biliniar, 3 : filtru hiperbolic.  Nu funcționează în Windows.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Permite scalare software imagine-în-imagine">
+									<longdesc>Permite Ekiga să utilizeze scalare imagine-în-imagine în software dacă suportul hardware nu este disponibil. Dacă nu se permite, Ekiga nu va încerca să deschidă o imagine în altă imagine dacă suportul hardware nu este disponibil.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Dezactivare a accelerării video hardware">
+									<longdesc>Dezactivează accelerația hardware video DirectX (în win32) și XVideo (în Linux)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Mărime fereastră cu opțiuni">
+									<longdesc>Mărime fereastră cu opțiuni</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Poziție pe ecran a ferestrei cu opțiuni">
+									<longdesc>Poziție pe ecran a ferestrei cu opțiuni</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Mărime fereastră cu opțiuni">
+									<longdesc>Mărime fereastră cu opțiuni</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Poziție pe ecran a ferestrei cu opțiuni">
+									<longdesc>Poziție pe ecran a ferestrei cu opțiuni</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Mărime fereastră de opțiuni video">
+									<longdesc>Mărime fereastră de opțiuni video</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Poziție pe ecran a ferestrei de opțiuni video">
+									<longdesc>Poziție pe ecran a ferestrei de opțiuni video</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Mărime fereastră de opțiuni audio">
+									<longdesc>Mărime fereastră de opțiuni audio</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Poziție pe ecran a ferestrei cu opțiuni audio">
+									<longdesc>Poziție pe ecran a ferestrei cu opțiuni audio</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Mărime fereastră cu agendă">
+									<longdesc>Mărime fereastră cu agendă</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Poziție pe ecran a ferestrei cu cartea de adrese">
+									<longdesc>Poziție pe ecran a ferestrei cu cartea de adrese</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Poziție pe ecran a ferestrei cu asistentul de configurare">
+									<longdesc>Poziție pe ecran a ferestrei cu asistentul de configurare</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Mărime fereastră cu asistentul de configurare">
+									<longdesc>Mărime fereastră cu asistentul de configurare</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Poziție pe ecran a ferestrei de chat">
+									<longdesc>Poziție pe ecran a ferestrei de chat</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Mărime fereastră de conversație">
+									<longdesc>Mărime fereastră de conversație</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Modifică panoul ferestrei principale">
+									<longdesc>Modifică panoul ferestrei principale (0=Contacte, 1=Tastatură, 2=Istoric apeluri)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Poziție pe ecran a ferestrei principale">
+									<longdesc>Poziție pe ecran a ferestrei principale</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Activează detectărea de rețea STUN">
+								<longdesc>Activează configurarea automată a rețelei prin test STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="Serverul STUN ">
+								<longdesc>Serverul STUN ofera suport pentru STUN (Simple Traversal of UDP over NATs). STUN este o metodă care permite trecerea prin anumite tipuri de gateway-uri care folosesc translatarea adresei IP (NAT)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Sunetul pentru ton ocupat">
+								<longdesc>La activare, sunetul care de redat la sfârșitul convorbirilor sau la apelarea unei persoane ocupate</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Redă ton de ocupat">
+								<longdesc>La activare, sunetul ales va fi utilizat la sfârșitul convorbirilor sau la apelul unei persoane ocupate</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Sunet ton la apel">
+								<longdesc>La activare, sunetul de redat la inițierea unui apel</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Redă ton de sonerie">
+								<longdesc>La activare, sunetul ales va fi utilizat la inițierea apelurilor</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Redă un sunet la apeluri vocale noi">
+								<longdesc>La activare, sunetul ales va fi utilizat când un nou mesaj vocal este primit</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Sunet la primerea unui apel">
+								<longdesc>La activare, sunetul de redat la apelurile primite</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Redă un sunet la mesaje noi">
+								<longdesc>La activare, sunetul ales va fi utilizat când un mesaj nou este primit</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Sunet la primirea unui mesaj nou">
+								<longdesc>La activare, sunetul de redat la primirea unui mesaj</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Redă un sunet la primire apeluri">
+								<longdesc>La activare, sunetul ales va fi utilizat la primirea apelurilor</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Sunet utilizat la primerea unui apel">
+								<longdesc>La activare, sunetul de redat la apelurile primite</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dispozitiv alternativ de ieșire audio">
+								<longdesc>Alegeți dispozitivul de ieșire audio alternativ folosit pentru notificările sonore.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Stare lungă contact">
+								<longdesc>Informație despre starea (in extenso)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Stare scurtă contact">
+								<longdesc>Informație despre starea (pe scurt)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Nume complet">
+								<longdesc>Introduceți-vă numele complet</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Frecvență de cadre">
+								<longdesc>Rata maximă de cadre transmise în cadre/s.  Aceasta rată poate să nu fie atinsă în cazul în care calitatea minimă a fost configurată cu o valoare TSTP mai mică de 31, iar rata de biți selectată nu este suficientă pentru a suporta aceasta calitate minimă</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Previzualizare video">
+								<longdesc>Afișează imagini de la cameră</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Format video">
+								<longdesc>Alegeți formatul utilizat la camerele video (nu se aplică la majoritatea camerelor USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Canal video">
+								<longdesc>Numărul canalului video ce va fi folosit (pentru a selecta o videocameră, televizor, sau alte surse).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Mărime video">
+								<longdesc>Alegeți rezoluția semnalului video transmis: mică (QCIF 176x144) sau mare (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Dispozitiv video de intrare">
+								<longdesc>Alegeți dispozitivul video de intrare. O imagine de test va fi transmisă dacă apare o eroare în timp ce folosiți acest dispozitiv</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Dispozitiv audio de intrare">
+								<longdesc>Alegeți dispozitivul de intrare audio</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dispozitiv audio de ieșire">
+								<longdesc>Alegeți dispozitivul de ieșire audio</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Semne de carte">
+						<longdesc>dosar cu semne de carte gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Jocuri jucate recent">
+						<longdesc>O listă a jocurilor jucate recent.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statisticile jocurilor jucate">
+						<longdesc>O listă de șiruri care vin sub forma unui cvintuplu: nume, victorii, total jocuri jucate, cel mai bun timp (în secunde) și cel mai slab timp (tot în secunde). Jocurile nejucate nu trebuie reprezentate.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Fișierul jocului de utilizat">
+						<longdesc>Numele fișerului schemă care conține jocul solitaire rulat.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animații">
+						<longdesc>Dacă să se animeze mișcările cărților.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Sunet">
+						<longdesc>Dacă să se redea sunetul evenimentelor.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Selectați stilu de control">
+						<longdesc>Selectați ori să trageți cărți sau să faceți click pe sursă iar dupa pe destinație.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Dacă să se arate bara de statistici.">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Dacă să se arate bara de instrumente">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Numele fișierului temă">
+						<longdesc>Numele fișierului cu grafica pentru cărți.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

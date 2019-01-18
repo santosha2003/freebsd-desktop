@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="அழைப்பு வரலாறு">
+							<longdesc>கடைசியாக அழைத்த 100 அழைப்புகளின் வரலாறு</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc=" LDAP சேவையகங்கள்">
+							<longdesc>அமைக்கப்பட்ட LDAP சேவையகங்கள் பட்டியல் </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc=" வலை தொடர்பில்லாத தொடர்புகளை காட்டு">
+							<longdesc>செயற்படுத்திய வலை தொடர்பில்லாத தொடர்புகள் பதிவேட்டில் காட்டப்படும்</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="பதிவேட்டில் மடிக்கப்பட்ட குழுக்களின் பட்டியல்">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="வெளிச்செல்லும் ஆர்டிபி ஐபி பாக்கெட்டுகளுக்கு சேவை வகை (TOS) ">
+							<longdesc>வெளிச்செல்லும் ஆர்டிபி ஐபி பாக்கெட்டுகளுக்கு சேவை வகை (TOS) .முன்னிருப்பு மதிப்பு 184 (0xB8) இது RFC 3246 இல் குறிப்பிட்ட துரிதப்படுத்திய மேலனுப்பல்(EF) PHB உடன் ஒத்துப்போகிறது.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="கணக்குகள் பட்டியல்">
+							<longdesc>எகிகா பதிவு செய்ய வேண்டிய கணக்குகளின் பட்டியல்.</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="கணிணி பதிலலிக்க மறுத்தால் அழைப்புகளை முன்னோக்கு">
+								<longdesc>தேர்வு செய்யப்பட்டிருந்தால், அழைத்தவர் பதில் தரவில்லை எனில் கீழே குறிப்பிட்டது போல் அழைப்புகளை முன்னோக்கி புரவலனுக்கு அனுப்பும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="கணிணி பயன்பாட்டிவ் இருந்தால் அழைப்புகளை முன்னோக்கு">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="எப்போதும் அழைப்புகளை கொடுக்கப்பட்டுள்ள கணிணிக்கு முன்னோக்கஞ் செய்">
+								<longdesc>தேர்வு செய்யப்பட்டிருந்தால் கீழே குறிப்பிட்டது போல் அழைப்புகளை முன்னோக்கி புரவலனுக்கு அனுப்பும்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP வழி வரம்பு">
+								<longdesc>எகிகா பயன்படுத்தும் யுடிபி(UDP)  துறைகள்.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP வழி வரம்பு">
+								<longdesc>H.245 அலைவரிசைக்காக எகிகா  பயன்படுத்தும் TCP வழியின் வரம்பு. IP அனுப்பல் முறையை நீங்கள் பயன்படுத்தினாலோ அல்லது பல எகிகா நடந்துகொண்டிருந்தாலோ NAT/PAT பாதை வழியாக TCP வழியின் வரம்பை மாற்றலாம். எகிகா புதிய மதிப்புகளை பெற்றுக்கொள்வதற்கான மீண்டும் துவக்கப்பட வேண்டும். H.245 சுரங்கம் பயன்படுத்தப்படும் போது எகிகா பங்கேற்பாளர்களுக்கு எந்த விளைவும் ஏற்படாது</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="அழைப்புகளை முன்னோக்க வேண்டிய புரவலன்">
+								<longdesc>அழைப்புகளை முன்னோக்க வேண்டிய புரவலன்  பெயரை இங்கு உள்ளீடு செய்யவும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF அனுப்பல்">
+								<longdesc>DTMFs அனுப்பலுக்கான பாங்கை அனுமதிக்கும்.மதிப்புகள் 0 (&quot;சரம்&quot; க்கு), 1 (&quot;சாயல்&quot; க்கு), 2 (&quot;rfc2833&quot; க்கு), 3 (&quot;Q.931&quot; க்கு) (முன்னிருப்பு  &quot;சரம்&quot;) &quot;சரம்&quot;   தவிர்த்த  மற்ற மதிப்புகள் உரை அரட்டையை செயல்படுத்தாது</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="வேகதுவக்கத்தை செயல்படுத்து">
+								<longdesc>இணைப்பு வேக பாங்கில் துவக்கப்படும். வேக துவக்கி அழைப்புகளை  H.323v2 ஐ விட மிக வேகமாக துவக்கும். இதற்கு நெட்மீட்டிங் இன் ஆதரவு இல்லை.வேக துவக்கி மற்றும் H.245 இரண்டையும் பயன் படுத்தி உள்நுழைதல்நெட்மீட்டிங் இன் சில பதிப்புகளில் வேலையை நிறுத்திவிடும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="முன்கூட்டியே H.245 ஐ செயல்படுத்து">
+								<longdesc>H.245 முன்கூட்டிய அமைப்பை செயல்படுத்து</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 tunneling செயல்படுத்தவும்">
+								<longdesc>H.245 சுரங்கத்தை செயல்படுத்தும். H.245 சுரங்கம் மற்றும் H.245 செய்திகள் சேர்ந்து  H.245 அலைவரிசையை தரும்(வழி 1720) .இது அழைப்பின் போது TCP இணைப்பை சேமிக்கும்.  H.245 சுரங்கம் H.323v2 பதிப்போடு அறிமுகப்படுத்தப்பட்டது.நெட் மீட்டிங் இதை ஆதரிக்கவில்லை. வேக துவக்கி மற்றும் H.245 சுரங்கம்  சில நெட் மீட்டிங் பதிப்புகளில் வேலை செய்யாது.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="கேட்குந்துறை">
+								<longdesc>உள்வருந்துறை மாற்று. பின் எகிகாவை மறுதொடக்கம் செய்யுங்கள்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="நேட் பிணைப்பு  நேரம் முடிந்தது">
+								<longdesc>ஸ்டன்  (STUN)  பயன்படும் போது நேட் பிணைப்பை புதுப்பிக்க எகிகா எடுத்துக்கொள்ள வேண்டிய நேர இடைவெளியை நொடிகளில் உள்ளிடுக.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF அனுப்பல்">
+								<longdesc>டிடிஎம்ஃஎப்களை (DTMFs) அனுப்ப வேண்டிய  முறைமை அமைக்க உதவுகிறது. மதிப்புகள்  0 (&quot;RFC2833&quot; க்கு) , 1 (&quot;INFO&quot; க்கு)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="அழைப்புகளை முன்னோக்க வேண்டிய புரவலன்">
+								<longdesc>அழைப்புகளை முன்னோக்க வேண்டிய புரவலன்  பெயரை இங்கு உள்ளீடு செய்யவும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="வெளிசெல் பதிலாள்">
+								<longdesc>வெளி செல்லும் அழைப்புகளுக்கு பயனாகும் சிப் வெளி செல்லும்  பதிலாள் </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="கேட்குந்துறை">
+								<longdesc>செவி சாய்க்க உள்வருந்துறை. மாற்றினால் எகிகாவை மறுதொடக்கம் செய்யுங்கள்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="கால வெளி சமாதானம்">
+								<longdesc>அதிகபட்ச சட்ட விகிதத்தை வைத்துக்கொள்ளவா அல்லது எல்லா  சட்டங்களிலும் குறைந்தபட்ச சீரான தரம் இருக்க கொஞ்சம் குறைத்துக்கொள்ளலாமா.  0: அதிக அளவு  குறைந்தபட்ச தரம், 31: மிகக் குறைந்த அளவு  குறைந்தபட்ச தரம்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="அதிகபட்ச ஆர்எக்ஸ் வீடியோ அலை அகலம்">
+								<longdesc>கிலோ பிட்களில் அதிக பட்ச ஆர் எக்ஸ் பிட்ரேட். இந்த மதிப்பு சகாவின் இறுதிபுள்ளிக்கு அனுப்பப்படும். ஆதரவு இருப்பின் அது  அதன் டிஎக்ஸ் பிட்ரேட் ஐ சமிக்ஞைக்கு மேல் இருப்பின் தகுந்த படி அமைத்துக்கொள்ளும்.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="அதிகபட்ச டிஎக்ஸ் வீடியோ அலை அகலம்">
+								<longdesc>கிலோ பிட்களில் அதிக பட்ச டிஎக்ஸ்  பிட்ரேட். விடியோவின் தரம் மற்றும் அனுப்பட்ட சட்டங்கள்/வினாடி (தேஎர்வு செய்த கோடக்கை பொருத்து) ஆகியவை சரிசெய்யப்பட்டு அழைப்பின் போது குறைவான அலை அகலத்தை பயன்படுத்துமாறு செய்யும்.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ஒளி குறிமுறைகள் பட்டியல்">
+								<longdesc>ஒளி குறிமுறைகள் பட்டியல்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="அதிக பட்ச பதட்ட இடையகம்">
+								<longdesc>ஒலியை பெருவதற்கான பதட்ட இடையக அளவு(மில்லிசெகண்டில்)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="நிசப்த அறிவிப்பை செயல்படுத்து">
+								<longdesc>தேர்வு செய்யப்பட்டிருந்தால் ஆதரவு தரும் கோடக்கில் அமைதியை தேடும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ஒலிக் குறிமுறைகள் பட்டியல்">
+								<longdesc>ஒலிக் குறிமுறைகள் பட்டியல்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="உதவியளரால் தேர்ந்தெடுக்கப்பட்ட உங்கள் வலையமைப்பு வகை">
+							<longdesc>0: 56Kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: தனிபயன்</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="தானியங்கி பதில்">
+								<longdesc>இயலுமைபடுத்தினால் தானியங்கியாக உள்வரும் அழைப்புகளுக்கு பதில் தரும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="பதில் இல்லாததால் காலம்கடந்தது">
+								<longdesc>குறிப்பிட்ட நேரத்திற்கு பிறகு பதில் ஏதும் கிடைக்கைவில்லை எனில் அழைப்புகளை மறுக்கவும் அல்லது திசைமாற்றவும்(நொடிகள்)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="தொலை ஒளித்தோற்ற  சாளர நிலை">
+									<longdesc>தொலைவு ஒளித்தோற்ற சாளர நிலை</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="தொலை ஒளித்தோற்ற  சாளர அளவு">
+									<longdesc>தொலைவு ஒளித்தோற்ற தொலை சாளர அளவு</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="முழுத்திரைக்கு முன் இருந்த ஔதப்பாங்கு ">
+									<longdesc>முழுத்திரைக்கு முன் இருந்த ஔதப்பாங்கு (விடியோ_காட்சிக்கான அதே மதிப்பு)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="கொடாநிலை ஒளித்தோற்ற பார்வை">
+									<longdesc>கொடாநிலை ஒளித்தோற்ற பார்வை (0: உள்ளமை, 1: தொலைவு, 2: இரண்டும் , 3: இரண்டும் தனித்தனி சாளரத்தில்.)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="வீடியோவை மேலே காட்டும்படியாகவோ அல்லது அழைப்பில் இருக்கும் போது மற்ற சாளரத்தை காட்டும்படியாகவோ சாளரத்தை வைக்கவும்">
+									<longdesc>வீடியோவை மேலே காட்டும்படியாகவோ அல்லது அழைப்பில் இருக்கும் போது மற்ற சாளரத்தை காட்டும்படியாகவோ சாளரத்தை வைக்கவும்</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="அளவுமாற்ற மதிப்பு">
+									<longdesc>முதன்மை GUI இல் பிம்பங்கள் பயன்படுத்த வேண்டிய அளவுமாற்ற மதிப்பு(50, 100, அல்லது 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="மென்பொருள் அளவீட்டு  படிமுறையை குறிப்பிடு">
+									<longdesc>அளவாக்கி மென்பொருளின் படிமுறையை குறிப்பிடுக.   இயக்கு சாளரம். 0: சமீபத்திய அண்டை வீட்டுகாரர். 1: பெட்டி வடிகட்டி உள்ள அண்டை வீட்டுகாரர் 2: இருபரிமாண வடிகட்டி, 3:அதிபர வளைய  வடிகட்டி விண்டோஸ் கணினிகளுக்கு பொருந்தாது..</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="மென்பொருளால் படத்தில் பட அளவீட்டை  அனுமதி ">
+									<longdesc>வன்பொருள் ஆதரவு இல்லையானால் மென்பொருளால் படத்தில் பட அளவீட்டை  அனுமதி. இந்த தேர்வு இல்லாவிடில் எகிகா வன்பொருள் ஆதரவு இல்லையானால் பிஇன்பி ஐ  திறக்காது..</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="வன்பொருள் விடியோ முடுக்கத்தை நீக்கு">
+									<longdesc>இந்த விசைவிண்டோஸில் டைரக்ட் X மற்றும் லீனக்ஸீல் வன்பொருள் விடியோ முடுக்கம் இவற்றை செயல் நீக்கும்.</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="விருப்பங்கள் சாளரத்தின் அளவு">
+									<longdesc>விருப்பங்கள் சாளரத்தின் அளவு</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="விருப்பங்கள் சாளரத்தில் திரையின் நிலை">
+									<longdesc>விருப்பங்கள் சாளரத்தில் திரையின் நிலை</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="விருப்பங்கள் சாளரத்தின் அளவு">
+									<longdesc>விருப்பங்கள் சாளரத்தின் அளவு</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="விருப்பங்கள் சாளரத்தில் திரையின் நிலை">
+									<longdesc>விருப்பங்கள் சாளரத்தில் திரையின் நிலை</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="வீடியோ அமைவுகள் சாளரத்தின் அளவு">
+									<longdesc>வீடியோ அமைவுகள் சாளரத்தின் அளவு</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ஔதப்பாங்கு அமைப்பு சாளரத்தில்  திரையின் நிலை">
+									<longdesc>ஔதப்பாங்கு அமைப்பு சாளரத்தில்  திரையின் நிலை</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="கேட்பொலி அமைவுகள் சாளரத்தின் அளவு">
+									<longdesc>கேட்பொலி அமைவுகள் சாளரத்தின் அளவு</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ஒலி அமைப்பு சாளரத்தில் திரையின் நிலை">
+									<longdesc>ஒலி அமைப்பு சாளரத்தில் திரையின் நிலை</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="முகவரி புத்தக சாளரத்தின் அளவு">
+									<longdesc>முகவரி புத்தக சாளரத்தின் அளவு</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="சாளரத்தில் முகவரி புத்தக திரையின் நிலை">
+									<longdesc>சாளரத்தில் முகவரி புத்தக திரையின் நிலை</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="சாளரத்தில் க்டூரிட் திரையின் நிலை">
+									<longdesc>சாளரத்தில் க்டூரிட் திரையின் நிலை</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ட்டூரிச் சாளரத்தின் அளவு">
+									<longdesc>ட்டூரிச் சாளரத்தின் அளவு</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="அரட்டை சாளரத்தில் திரையின் நிலை">
+									<longdesc>அரட்டை சாளரத்தில் திரையின் நிலை</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="அரட்டை சாளரத்தின் அளவு">
+									<longdesc>அரட்டை சாளரத்தின் அளவு</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="முதன்மை சாளரத்தில் பலகத் தொகுதியை மாற்றுக">
+									<longdesc>முதன்மை சாளரத்தின் பலக தொகுதியை மாற்றுக; (0=தொடர்புகள், 1=அழைப்பு விசை பலகம், 2=அழைப்பு வரலாறு)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="முதன்மை சாளரத்தில் திரையின் நிலை">
+									<longdesc>முதன்மை சாளரத்தில் திரையின் நிலை</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN பிணைய கண்டறிதலை செயலாக்கு">
+								<longdesc>STUN சோதனையிலிருந்து கிடைக்கும் தானியங்கி பிணைய அமைவை செயலாக்குக</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="ஸ்டன்  (STUN) சேவகன்">
+								<longdesc>ஸ்டன்  (STUN) ஆதரவுக்காக பயன்படுத்தப்படும் ஸ்டன்  (STUN) சேவகன். ஸ்டன்  (STUN) சில NAT நுழைவாயில்கள் வழியாக போக்கு வரத்தை  அனுமதிக்கும் தொழில்நுட்பம்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="வேலையில் உள்ளதை குறிக்கும் ஒலி">
+								<longdesc>செயல்பாட்டில் இருந்தால், அழைப்பவர் மறுமுனையில் வேலையாக இருந்தால் இந்த ஒலியை எழுப்பும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="வேலையில் இருக்கும் சத்தத்தை அமை">
+								<longdesc>செயல்படுத்தப்பட்டிருந்தால் அழைப்பின் முடிவிலோ அல்லது அழைப்பவர் வேலையாக இருக்கும் போதோ இயக்க பட வேண்டிய ஒலி</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="அழைப்பு தொனி ஒலி">
+								<longdesc>தேர்விருந்தால்  அழைக்கும் போது  ஒலிக்க வேண்டிய ஒலி.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="ரிங் சத்தத்தை இயக்குகிறது">
+								<longdesc>தேர்விருந்தால்  மற்றவரை அழைக்கும் போது ஒலியெழுப்பப்படும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="புதிய ஒலி அஞ்சல் வரும்போது ஒலி எழுப்பு">
+								<longdesc>தேர்விருந்தால்  புதிய ஒலி அஞ்சல்  கிடைக்கும் போது தேர்ந்தெடுத்த ஒலியெழுப்பப்படும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="புதிய பேச்சு அஞ்சல் ஒலி">
+								<longdesc>தேர்விருந்தால்  புதிய ஒலி அஞ்சல் வந்தால் ஒலிக்க வேண்டிய ஒலி</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="புதிய செய்தி வரும்போது ஒலி எழுப்பு">
+								<longdesc>தேர்விருந்தால்  உடனடி செய்தி கிடைக்கும் போது தேர்ந்தெடுத்த ஒலியெழுப்பப்படும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="புதிய உடனடி செய்தி ஒலி">
+								<longdesc>தேர்விருந்தால் புதிய உடனடி செய்தி வரும்போது ,  ஒலிக்க வேண்டிய ஒலி.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="அழைப்பு வரும்போது ஒலி எழுப்பு">
+								<longdesc>தேர்விருந்தால்  அழைப்பு வந்தால் ஒலியெழுப்பப்படும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="அழைப்பு வருவதற்கான ஒலி">
+								<longdesc>தேர்விருந்தால்  அழைப்பு வந்தால்  ஒலிக்க வேண்டிய ஒலி.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="மாற்று கேட்பொலி வெளியீடு சாதனம்">
+								<longdesc>ஒலி நிகழ்வுகளுக்கு பயன்படுத்த வேண்டிய மாற்று ஒலி விளைவு சாதனத்தை தேர்வு செய்யவும்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="நீள இருப்பு நிலையை தொடர்புகொள்">
+								<longdesc>நீள இருப்பு நிலை விவரங்கள்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="குறைந்த இருப்பு நிலையை தொடர்புகொள்">
+								<longdesc>குறைந்த இருப்பு நிலையை விவரங்கள் </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="முழு பெயர்">
+								<longdesc>உங்கள் முழு பெயரை உள்ளிடுக</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="சட்ட விகிதம்">
+								<longdesc>சட்டங்கள்/வினாடி இல் அதிகபட்ச அனுப்பபடும் சட்டங்களின் விகிதம். இந்த வேகம் சில சமயம் அணுகப்படாமல் போகும்: டிஎஸ் டிஓ மதிப்பு 31 ஐ விட குறைவாக இருந்து இது குறைந்த பட்சம் ஆனால். பிட்ரேட் குறைந்த பட்ச தரத்துக்கு ஆதரவு தர முடியவில்லையானால்.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="ஒளித்தோற்ற முன்னோட்டம்">
+								<longdesc>உங்கள் கேமரா சாதனத்திலிருந்து படத்தை காட்டவும்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="ஒளித்தோற்ற வடிவம்">
+								<longdesc>வீடியோ காமராவிம் வடிவமைப்பை தேர்வு செய்யவும் (USB காமராக்களுக்கு இது பொருந்தாது)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="ஒளித்தோற்றத தடம்">
+								<longdesc>பயன்படுத்த வேண்டிய ஒளித்தோற்ற எண்(கேமரா, தொலைகாட்சி அல்லது மற்ற மூலங்கள்)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="ஒளித்தோற்ற அளவு">
+								<longdesc>அனுப்பட்ட வீடியோ அளவை தேர்வு செய்யவும்: சிறிய (QCIF 176x144) அல்லது பெரிய (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="ஒளித்தோற்றச் சாதனம்">
+								<longdesc>பயன்படுத்த வேண்டிய ஒலித்தோற்ற உள்ளிடு சாதனத்தை தேர்வு செய்யவும். பிழை ஏற்பட்டால் சோதனை  படத்தை அனுப்பி சோதிக்கவும்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="தானாக உள்ளிடும் ஒலி சாதனம்">
+								<longdesc>பயன்படுத்த வேண்டிய ஒலி இயக்கியை தேர்வுச் செய்</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="தானாக விளைவுகளை தரும் ஒலி சாதனம்">
+								<longdesc>பயன்படுத்த வேண்டிய ஒலி இயக்கியை தேர்வுச் செய்</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="புத்தககுறிகள்">
+						<longdesc>gconf-editor புத்தக குறிகள் அடைவு</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="அண்மையில் விளையாடிய விளையாட்டுக்கள்">
+						<longdesc>அண்மையில் விளையாடிய விளையாட்டுக்களின் பட்டியல்</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="விளையாடிய விளையாட்டுகளின் புள்ளிவிவரம்">
+						<longdesc>ஐந்துகளாகத் தெரியும் சரங்களின் பட்டியல்: பெயர், வெற்றிகள், மொத்த விளையாட்டுகளின் எண்ணிக்கை, சிறப்பான ஆட்ட நேரம்(நொடிகளில்) மற்றும் மோசமான ஆட்ட நேரம்(நொடிகளில்). விளையாடாத விளையாட்டுகள் சேர்க்கப்பட மாட்டாது.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="பயன்படுத்த விளையாட்டு கோப்பு">
+						<longdesc>விளையாட வேண்டிய சாலிடேர் விளையாட்டை கொண்டுள்ள அமைப்பு கோப்பின் பெயர் </longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="அசைவூட்டம்">
+						<longdesc>அசைவூட்ட படத்தை பயன்படுத்துவதா அல்லது வேண்டாமா</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="ஒலி">
+						<longdesc>சம்பவ ஒலியை ஒலிக்கவா அல்லது வேண்டாமா</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="கட்டுப்பாட்டின் பாணியை தேர்வு செய்">
+						<longdesc>சீட்டை இழுக்க விருப்பமா அல்லது தொடக்கத்திலும் இலக்கிலும் க்ளிக் செய்ய விருப்பமா.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="இருப்பு நிலை   பட்டியை காட்டுவதா இல்லையா">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="கருவிபட்டியை காண்பிக்கவா அல்லது வேண்டாமா">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="கரு கோப்பின் பெயர்">
+						<longdesc>சீட்டுகளுக்கான வரைபடத்துடன் உள்ள கோப்பின் பெயர்.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

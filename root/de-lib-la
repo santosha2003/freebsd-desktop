@@ -1,0 +1,1 @@
+grep ^dependency_libs=..* /usr/local/lib/*.la > dependency-libs-la

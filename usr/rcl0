@@ -1,0 +1,86 @@
+#
+#reinstall upgrade to 12
+#setenv UNAME_r 11.1-RELEASE
+#setenv OSVERSION 1100161
+##kldload radeon
+#dhclient alc0
+#kldload linux
+#kldload fuse
+
+pkg delete -y oss nvidia-driver-340 virtualbox-ose-kmod conky linux_base-c6 firefox chromium flashplayer
+
+kldunload ipfw_nat
+kldunload ipfw
+#ifconfig igb0 192.168.3.211
+dhclient igb0
+
+resolvconf -l
+#ntfs-3g /dev/ada1s1 /media/disk2
+#ntfs-3g /dev/ada1s2 /media/disk3
+mount /dev/ada1p2 /mnt2
+#/usr/local/bin/ntfs-3g /dev/da0s1 /media/disk
+
+# Windows server 2012+ run winrm qc
+#mount_smbfs //ADMIN@santosha/e$ /mnt
+mount_smbfs -I 192.168.1.111 //admin@qwerty1/e$ /mnt
+#mount_smbfs -I 192.168.1.111 //ADMIN@santosha/e$ /mnt
+#mount_smbfs -I 192.168.1.111 //admin@santosha/g$ /mnt1
+#mount_smbfs //Admin@sklad/c$ /mnt2
+#mount_smbfs //Admin@sklad/e$ /mnt4
+# winrm qc run at admin if windows server 2012 2016, edit /etc/nsmb.conf
+#mount_smbfs  //Admin@SANTOSHA/e$  /mnt 
+#mount_smbfs -I192.168.3.2 -EUTF-8:CP1251  //Admin@srv01/f$  /mnt1
+#mount_smbfs -L ru_RU.UTF-8 -E UTF-8:CP1251 //p90@srv01/e$ /mnt
+# for ati driver 7.2.0 - no KMS kernel part & fw autoload
+#kldload radeonkms
+##kldload drm
+#kldload nvi-.ko
+#soundon
+
+#ipfw - separate file /ipfw-logic..
+# all in rc.conf
+#kldload libalias
+#kldload ipfilter
+
+# wrong order?? out send 32k in any stream only then 13 error! (blocked local http server)
+# flush do not try (works)
+#kldunload ipfw
+#kldunload ipfw_nat
+kldstat
+#kldload ipdivert
+#kldload ipfw
+#kldload ipfw_nat
+
+#ipfw--kernel-nat
+#/ipfw2.conf
+
+# into loader.conf + /etc/sysctl.conf
+route add 192.168.0.0 192.168.1.111
+# 192.168.3.2
+#route add 192.168.40.0 192.168.3.2
+route add 192.168.40.0 192.168.1.111
+
+#route add -net 192.168.0.0/24 192.168.3.2
+#route add -net 192.168.40.0/24 192.168.3.2
+#route add 0.0.0.0 192.168.3.2
+route add 0.0.0.0 192.168.1.111
+
+#route add -net 0.0.0.0 192.168.3.2
+#route show 192.168.0.0
+#route add 77.37.234.161 192.168.3.1
+#/root/rungnome.sh
+#/usr/bin/env DISPLAY=:0 xterm
+#/bin/rm -rf /tmp/.wine-0
+#route add 192.168.0.0/255 192.168.3.2
+#route add 0.0.0.0 192.168.3.2
+
+
+
+#/sbin/chown -R www:www /var/tmp/nginx
+#/sbin/chown -R www:www /tmp/nginx
+
+pkg install -fy oss nvidia-driver-340
+pkg install -fy firefox chromium flashplayer
+# virtualbox-ose-kmod conky linux_base-c6 firefox chromium flashplayer
+# pkg install -fy  gnome3 firefox chromium monero-cli nginx wordpress php70 mysql57-server flashplayer oss nvidia-driver-340
+/usr/upgr-lin

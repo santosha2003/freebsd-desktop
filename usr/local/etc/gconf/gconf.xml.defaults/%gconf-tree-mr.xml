@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="कॉल इतिहास">
+							<longdesc>शेवटचे 100 कॉलचा इतिहास</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP सर्व्हर">
+							<longdesc>संयोजीत LDAP सर्व्हरची यादी</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="ऑफलाइन संपर्क दर्शवा">
+							<longdesc>कार्यान्वीत असल्यास, ऑफलाइन संपर्क नामवलीत दर्शविले जाईल</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="नामवलीतील गटांची सूची">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="बाहेर जाणाऱ्या RTP IP पॅकेट्स्वरील टाइप ऑफ सर्व्हिस (TOS) बाइट">
+							<longdesc>बाहेरजाणाऱ्या RTP IP पॅकेट्स्वरील टाइप ऑफ सर्व्हिस (TOS) बाइट. या बाइटचा वापर काहिक स्तरापर्यंत नेटवर्कद्वारे कॉलिटि ऑफ सर्व्हिस (QoS) पुरवण्यासाठी केला जातो. पूर्वनिर्धारीत मुल्य 184 (0xB8) RFC 3246 मध्ये निर्देशीत एक्सपेडिटेड फॉरवर्डिंग (EF) PHB सह परस्पर आहे.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="खाते यादी">
+							<longdesc>Ekiga शी पंजीकृत व्हावे अशा खात्यांची यादी</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="प्राप्त संदेश निर्देशित स्वागतकर्त्याकडे पाठवा जर प्रतिसाद नसेल तर">
+								<longdesc>कार्यान्वीत असल्यास, कॉलला प्रतिउत्तर देत नसल्यास येणारे सर्व कॉल खालील नुरूप निश्चित यजमानाकडे पाठविले जाईल</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="प्राप्त संदेश निर्देशित स्वागतकर्त्याकडे पाठवा जर व्यस्त असेल तर">
+								<longdesc>सुरू असल्यास, तुम्ही आधिपासूनच कॉल मध्ये व्यस्त असाल किंवा मला विचारू नका पद्धतीत कार्यशील असल्यास येणारे सर्व कॉल खालील नुरूप निश्चित यजमानाकडे पाठविले जाईल</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="प्राप्त संदेश नेहमी वापरकर्त्याकडे पाठवा">
+								<longdesc>कार्यान्वीत असल्यास, येणारे सर्व कॉल खालील नुरूप निर्देशीत यजमानकडे पाठविले जातील</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP पोर्ट क्षेत्र">
+								<longdesc>Ekiga द्वारे वापरण्याजोगी UDP पोर्टचे क्षेत्र.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP पोर्ट क्षेत्र">
+								<longdesc>H.323 H.245 मार्ग करीता Ekiga द्वारे वापरण्याजोगी TCP पोर्ट. दोन्ही श्रोता परस्पर संपर्क करीता H.245 टनलींगचा वापर करत असल्यास या पोर्ट क्षेत्राचा प्रभाव शून्य ठरतो.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="प्राप्त संदेश स्वागतकर्त्याकडे पाठवा">
+								<longdesc>कॉल फॉरवर्डींग कार्यान्वीत केले असल्यास निर्देशीत यजमान जेथे कॉल सरकायला हवे</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF पाठवित आहे">
+								<longdesc>यामुळे तुम्ही DTMF पाठविण्याकरीता पद्धती निश्चित करू शकता. मुल्य 0 (&quot;स्ट्रिंग&quot; करीता), 1 (&quot;टोन&quot; करीता), 2 (&quot;RFC2833&quot; करीता), किंवा 3 (&quot;Q.931&quot; करीता) (&quot;स्ट्रिंग&quot; हे पूर्वनिर्धारीत आहे) असे असू शकते. &quot;स्ट्रिंग&quot; पेक्षा इतर मुल्य निवडल्यास पाठ्य संवाद बंद होते.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema short_desc="विस्तारित व्हिडिओ रोल्स्">
+								<longdesc>H.239 व्हिडिओ रोल पसंत करा. मूल्य 0 (&quot;विस्तारित व्हिडिओ बंद करा&quot; करीता), 1 (&quot;प्रत्येक कंटेंट रोल मास्ककरीता स्वीकारा&quot; करीता), 2 (&quot;सादरिकरण जबरनपणे लागू करा&quot; करीता), किंवा 3 (&quot;लाइव्ह रोल जबरनपणे लागू करा&quot; करीता) असू शकते</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="H.239 सुरू करा">
+								<longdesc>ह्यामुळे अगाऊ व्हिडिओ रुल्सकरीता H.239 क्षमता सुरू होते</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="&apos;Fast Start&apos; कार्यान्वीत करा">
+								<longdesc>Fast Start पद्धतीत जोडणी प्रस्थापित केली जाईल. H.323v2 पेक्षा वेगाने कॉल करण्याची पद्धत म्हणजे Fast Start. यास Netmeeting आणि Fast Start व H.245 चे समर्थन नाही टनलींगमुळे Netmeeting चे काहिक आवृत्ती सदोषीत ठरू शकते</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="अलिकडील H.245 कार्यान्वीत करा">
+								<longdesc>यामुळे H.245 संयोजना लवकरच कार्यान्वीत होते</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 टनलींग कार्यान्वीत करा">
+								<longdesc>यामुळे H.245 टनलींग पद्धती कार्यान्वीत होते. H.245 टनलींग पद्धतीत H.245 संकेत संक्षिप्त स्वरूपात H.225 मार्ग (पोर्ट 1720) येथे लपविले जातात. यामुळे एक TCP जुळवणी संचयीत केली जाते. H.245 टनलींग H.323v2 अंतर्गत प्रारंभ केला गेला व Netmeeting त्याकरीता समर्थन पुरवीत नाही. Fast Start व H.245 टनलींग Netmeeting चे ठराविक आवृत्तींकरीता धोकादायक ठरू शकते.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="सक्रीय पोर्ट">
+								<longdesc>येणाऱ्या जुळवणी करीता सक्रीय पोर्ट. नवीन मूल्य प्रभावी ठरण्याकरीता Ekiga ला पुन्हा सुरू करावे लागते.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT बाइन्डींग वेळसमाप्ति">
+								<longdesc>STUN चा वापरकरतेवेळी Ekiga ने NAT बाइन्डींग करीता पुन्हा प्रयत्नाची वेळ सेकंदात प्रविष्ट करा</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF पाठवित आहे">
+								<longdesc>यामुळे तुम्ही DTMF पाठविण्याकरीता पद्धती निश्चित करू शकता. मुल्य 0 (&quot;RFC2833&quot; करीता) व 1 (&quot;INFO&quot; करीता) असे असू शकतात</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="प्राप्त संदेश स्वागतकर्त्याकडे पाठवा">
+								<longdesc>कॉल फॉरवर्डींग कार्यान्वीत केले असल्यास निर्देशीत यजमान जेथे कॉल सरकायला हवे</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="बाह्य प्रॉक्सी">
+								<longdesc>बाहेर जाणारे कॉल करीता वापरण्याजोगी SIP आउटपुट प्रॉक्सी</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="सक्रीय पोर्ट">
+								<longdesc>येणाऱ्या जुळवणी करीता सक्रीय पोर्ट. नवीन मुल्य प्रभावी ठरण्याकरीता Ekiga पुन्हा सुरू करावे लागेल. </longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="वेळनुरूप तडजोड">
+								<longdesc>सर्व फ्रेम करीता फ्रेम दर कमाल किंवा किमान दर्जा (स्पेशल) असे निश्चित करायचे . 0: सर्वोत्तम किमान दर्जा, 31: सर्वात कमी दर्जा</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="कमाल RX विडीओ बीटदर">
+								<longdesc>kbit/s कमाल RX विडीओ बीटदर. वरील संकेत मुल्य निश्चित असल्यावरच हे संकेत समघटक करीता पाठविले जाईल जे TX बीटदरास संकेत मुल्यशी जुळवेल (समर्थन पुरवित असेल तरच)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="कमाल TX विडीओ बीटदर">
+								<longdesc>kbit/s मधिल कमाल TX विडीओ बीटदर. बॅन्डवीड्थला किमान ठराविक मुल्य करीता निश्चित करण्याकरीता विडीओ दर्जा व प्रत्येक सेकंदला (निवडलेल्या कोडेकवर आधारीत) पाठविले जाणारे फ्रेमची संख्या आपोआप किमान पेक्षा जास्त स्तराशी जुळविले जाईल</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="विडीओ कोडेकची यादी">
+								<longdesc>विडीओ कोडेकची यादी</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="कमाल जीटर बफर">
+								<longdesc>ऑडिओ प्राप्य (ms) करीता अधिकतम जीटर बफर आकार</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="एको रद्द करणे सुरू करा">
+								<longdesc>सुरू असल्यास, एको रद्द करण्याचा वापर करा</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="हळुवापरपणे शोध कार्यान्वीत करा">
+								<longdesc>कार्यान्वीत असल्यास, समर्थीत कोडेक सह हळुवारपणे शोधचा वापर करा</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ऑडिओ कोडची यादी">
+								<longdesc>ऑडिओ कोडेकची यादी</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="सहाय्यकमध्ये निवडलेल्या नेटवर्कचे प्रकार">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: इच्छिक</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="स्वयं उत्तर">
+								<longdesc>सुरू असल्यास, स्वयं इंकमिंग कॉल्स्ला उत्तर द्या</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="प्रतिसाद नाही कालबाह्य झाले">
+								<longdesc>ठराविक वेळ नंतर (सेकंदात) उत्तर प्राप्त न झाल्यास आपोआप येणारे कॉल नकरा किंवा पुढे सरकवा</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="दूरस्त विडीओ चौकटीचे स्थान">
+									<longdesc>दूरस्त विडीओ चौकटीचे स्थान</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="दूरस्त विडीओ चौकटीचे आकार">
+									<longdesc>दूरस्त विडीओ चौकटचे आकार</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="पूर्णपडद्याकरीता वापरण्यापूर्वी विडीओ दृश्य">
+									<longdesc>पूर्णपडद्याकडे स्थानांतरीत होण्यापूर्वीचे विडीओ दृश्य (मुल्य विडीओ_दृश्य नुरूपच)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="साधारण विडीओ चित्र">
+									<longdesc>मुलभूत विडीओ दृश्य (0: स्थानीय, 1: दूरस्त, 2: दोन्ही स्थरीय, 3: दोंही वेगळ्या चौकटीत)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="कॉल प्राप्यवेळी विडीओ दर्शविणारे चौकट इतर चौकटींच्या वर स्थीत करा">
+									<longdesc>कॉल प्राप्यवेळी विडीओ दर्शविणारे चौकट इतर चौकटींच्या वर स्थीत करा</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="झूम मुल्य">
+									<longdesc>मुख्य GUI अंतर्गत (50, 100, किंवा 200) प्रदर्शित प्रतिमांकरीता लागू करण्याजोगी झूम मूल्य</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="सॉफ्टवेअर प्रमाण अल्गोरिदम निश्चित करा">
+									<longdesc>सॉफ्टवेअर प्रमाण अल्गोरिदम निश्चित करा: 0: सर्वात जवळचा शेजारी, 1: बॉक्स् फिल्टर सह सर्वात जवळचा शेजारी, 2: एकरेषीय फिल्टर पद्धती, 3: हायपरबोलीक फिल्टर पद्धती. windows प्रणाली करीता लागू होत नाही.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="चित्र-अंतर्गत-चित्र सॉफ्टवेअर प्रमाण करीता सहमती द्या">
+									<longdesc>हार्डवेअर समर्थन उपलब्ध नसल्यास Ekiga ला चित्रा अंतर्गत चित्राचे सॉफ्टवेअर स्केलींग करीता परवानगी द्या. यास खोटे असे निश्चित केल्यास, व हार्डवेअप समर्थन उपलब्ध नसल्यास Ekiga PIP उघडण्याचा प्रयत्न करणार नाही.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="विडीओ हार्डवेअर प्रवेगक बंद करा">
+									<longdesc>ही कि DirectX (win32 वर) व XVideo (Linux वर) विडीओ हार्डवेअर प्रवेगक अकार्यान्वीत करते</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="प्राधान्यक्रता चौकटचे आकार">
+									<longdesc>प्राधान्यक्रता चौकटचे आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="प्राधान्यक्रम चौकटचे पडद्यावरील स्थान">
+									<longdesc>प्राधान्यक्रम चौकटचे पडद्यावरील स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="प्राधान्यक्रता चौकटचे आकार">
+									<longdesc>प्राधान्यक्रता चौकटचे आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="प्राधान्यक्रम चौकटचे पडद्यावरील स्थान">
+									<longdesc>प्राधान्यक्रम चौकटचे पडद्यावरील स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ऑडिओ संयोजना चौकटचे आकार">
+									<longdesc>ऑडिओ संयोजना चौकटचे आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="विडीओ संयोजना चौकटचे पडद्यावरील स्थान">
+									<longdesc>विडीओ संयोजना चौकटचे पडद्यावरील स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ऑडिओ संयोजना चौकटचे आकार">
+									<longdesc>ऑडिओ संयोजना चौकटचे आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="ऑडीओ संयोजना चौकटचे पडद्यावरील स्थान">
+									<longdesc>ऑडीओ संयोजना चौकटचे पडद्यावरील स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="पत्ता पुस्तिका चौकटचे आकार">
+									<longdesc>पत्ता पुस्तिका चौकटचे आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="पत्ता पुस्तिका चौकटचे पडद्यावरील स्थान">
+									<longdesc>पत्ता पुस्तिका चौकटचे पडद्यावरील स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="ड्रुइड चौकटचे पडद्यावरील स्थान">
+									<longdesc>ड्रुइड चौकटचे पडद्यावरील स्थान</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ड्रुइड चौकटीचे आकार">
+									<longdesc>ड्रुइड चौकटीचे आकार</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="संवाद चौकटचे पडद्यावरील स्थान">
+									<longdesc>संवाद चौकटचे पडद्यावरील स्थान</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="संवाद चौकटीचे आकार">
+									<longdesc>संवाद चौकटीचे आकार</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="मुख्य पटलाचे पटल विभाग बदला">
+									<longdesc>मुख्य पटलचे पटल विभाग बदला(0=संपर्क, 1=डायलपॅड, 2=कॉल इतिहास)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="मुख्य चौकटचे पडद्यावरील स्थान">
+									<longdesc>मुख्य चौकटचे पडद्यावरील स्थान</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="कॉल पटलचे आकार">
+									<longdesc>कॉल पटलचे आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="कॉल पटलाच्या पडद्यावरील स्थिती">
+									<longdesc>कॉल पटलाच्या पडद्यावरील स्थिती</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN नेटवर्क तपास सुरू करा">
+								<longdesc>STUN चाचणी पासूनचे परिणामक स्वयं नेटवर्क मांडणी सुरू करा</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN सर्व्हर">
+								<longdesc>STUN समर्थन करीता वापरण्याजोगी STUN सर्व्हर. STUN असे तंत्रज्ञाण आहे जे NAT गेटवेच्या विविध प्रकार अंतर्गत प्रवाह मार्ग करीता सहमती देतो</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="व्यस्त स्वर करीता संगीत">
+								<longdesc>कार्यान्वीत असल्यास, कॉलच्या समाप्तीस किंवा व्यस्त व्यक्तिशी बोलतेवेळी चालविण्याजोगी संगीत</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="व्यस्त स्वर चालवा">
+								<longdesc>कार्यान्वीत असल्यास, निवडलेले संगीत कॉलच्या समाप्तीस किंवा व्यस्त असल्यास चालविले जातील</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="डायल स्वरचा आवाज">
+								<longdesc>कार्यान्वीत असल्यास, व्यक्तिशी बोलायचे असतेवेळी चालविण्याजोगी संगीत</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="रिंगटोन चालवा">
+								<longdesc>कार्यान्वीत असल्यास, निवडलेले संगीत व्यक्तिशी बोलतेवेळी चालविले जाईल</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="नवीन वाचा मेल करीता संगीत चालवा">
+								<longdesc>कार्यान्वीत असल्यास, निवडलेले संगीत नवीन वाचा मेल प्राप्त होतेवेळी चालविले जाईल</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="नवीन वाचा मेल संगीत">
+								<longdesc>कार्यान्वीत असल्यास, नवीन वाचा मेल प्राप्त झाल्यावर चालविण्याजोगी संगीत</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="नवीन संदेश करीता संगीत चालवा">
+								<longdesc>कार्यान्वीत असल्यास, निवडलेले संगीत नवीन जलद संदेश प्राप्त होतेवेळी चालविले जाईल</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="नवीन जलद संदेश करीता संगीत">
+								<longdesc>कार्यान्वीत असल्यास, नवीन जलद संदेश प्राप्त झाल्यावर चालविण्याजोगी संगीत</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="येणारे कॉल करीता संगीत चालवा">
+								<longdesc>कार्यान्वीत असल्यास, निवडलेले संगीत येणारे कॉल करीता चालविले जाईल</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="इनकमींग कॉलकरीता संगीत">
+								<longdesc>कार्यान्वीत असल्यास, येणारे कॉल करीता चालविण्याजोगी संगीत</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="पर्यायी ऑडिओ आउटपुट साधन">
+								<longdesc>संगीत घटनांकरीता वैक्लपिक वापरण्याजोगी ऑडिओ आउटपुट साधन निवडा.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="संपर्क लांब पचियच">
+								<longdesc>लांब स्थिती माहिती</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="संपर्क लहान पचियच">
+								<longdesc>लहान स्थिती माहिती</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="पूर्ण नाव">
+								<longdesc>पूर्ण नाव प्रविष्ट करा</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="फ्रेम दर">
+								<longdesc>फ्रेम/s मधिल कमाल पाठविलेले फ्रेम दर. किमान दर्जा 31 पेक्षा लहान TSTO मुल्यशी संयोजीत असल्यास व बीटदर किमान समर्थीय दर्जा पेक्षा कमी असल्याशिवाय फ्रेम दर कमाल स्तरापर्यंत पोहचणे शक्य नाही</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="विडीओ पूर्वावलोकन">
+								<longdesc>कॅमेरा साधन पासून प्रतिमा दर्शवा</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="विडीओ स्वरुप">
+								<longdesc>विडीओ कॅमेऱ्यासाठी पद्धत निवडा (बहुतांश USB कॅमेरा करीता लागू होत नाही)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="विडीओ मार्ग ">
+								<longdesc>वापरण्याजोगी विडीओ मार्ग क्रमांक (कॅमेरा, टीव्ही किंवा अन्य माध्यम निवडायचे)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="विडीओ आकार">
+								<longdesc>पाठविलेले विडीओ आकार निवडा: लहान (QCIF 176x144) किंवा मोठे (CIF352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="विडीओ इनपुट साधन">
+								<longdesc>वापरण्याजोगी विडीओ इनपुट साधन निवडा. या साधनाचा वापर करतेवेळी त्रुटी आढळल्यास साधन एक चाचणी चित्र पाठवितो.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="ऑडिओ इनपुट साधन">
+								<longdesc>वापरण्याजोगी ऑडिओ इनपुट साधन निवडा</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ऑडिओ आउटपुट साधन">
+								<longdesc>वापरण्याजोगी ऑडिओ आइटपुट साधन निवडा</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="पुस्तकखुण">
+						<longdesc>gconf-editor फोल्डर पुस्तकखुण</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="नुकतेच खेळलेले खेळांची यादी">
+						<longdesc>नुकतेच खेळलेल्या खेळांची यादी.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="खेळलेल्या खेळ्यांची आकडेवारी">
+						<longdesc>वाक्यांची यादी जी ह्या पाचांच्या समूहरुपाने येते: नाव, विजय, एकूण खेळ्या, सर्वोत्तम वेळ (सेकंदात), आणि सर्वात वाईट वेळ (सेकंदात). न खेळलेले खेळ ची गरज नाही.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="खेळ फाईल उपयोगात आहे">
+						<longdesc>प्रयोजन फाईल ज्यात खेळल्या जाणारा सॉलिटेयर खेळ आहे.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="ऍनीमेशन">
+						<longdesc>कार्ड हालाचाली ऍनीमेट करायचे का.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="आवाज">
+						<longdesc>घटनांकरीता श्राव्य इशारा द्यायचा किंवा नाही.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="ताब्याची शैली निवडा">
+						<longdesc>पत्ते ओढायचे अथवा स्त्रोतावर क्लिक करुन नंतर ते निवडा.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="स्थितीपट्टी दर्शवायची अथवा नाही">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="साधनपट्टी दर्शवायची की नाही">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="थीम फाईलचे नाव">
+						<longdesc>पत्त्यांकरीता आरेखने असलेल्या फाईलचे नांव.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

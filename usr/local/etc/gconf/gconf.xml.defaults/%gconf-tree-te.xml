@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="కాల్స్ పూర్వపు జాబితా">
+							<longdesc>చివరి  100 కాల్స్ యొక్క పూర్వపు జాబితా</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP సేవికలు">
+							<longdesc>ఆకృతీకరించిన LDAP సేవికల జాబితా</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="ఆఫ్‌లైన్ పరిచయాలను చూపుము">
+							<longdesc>చేతనపరచినట్లైతే, ఆఫ్‌లైన్ పరిచయాలు రోస్టర్‌నందు చూపబడతాయి</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="రోస్టర్‌నందు మడిచివుంచిన సమూహాల జాబితా">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="బయటకు వెళ్ళు RTP IP పాకెట్లపైన టైప్ ఆఫ్ సర్వీస్ (TOS) బైట్">
+							<longdesc>బయటకు వెళ్ళు RTP IP పాకెట్లపైన టైప్ ఆఫ్ సర్వీస్ (TOS) బైట్. కొంత స్థాయి క్వాలిటీ ఆఫ్ సర్వీస్ (QoS) అందించుటకు నెట్వర్కు చేత యీ బైట్ వుపయోగించబడును. RFC 3246 నందు నిర్వచించినట్లు యెక్సుపీడిటెడ్ ఫార్వార్డింగ్ (EF) PHB కు చెందిన అప్రమేయ విలువ 184 (0xB8).</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="ఖాతాల సంఖ్య">
+							<longdesc>ఎకీగా నమోదుచేయాల్సిన ఖాతాల పట్టా</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="ఒకవేళ సమాధానం లేకపోతే యివ్వబడిన అతిధేయకు కాల్సును ఫార్వార్డుచేయుము">
+								<longdesc>చేతనపరచబడితే, మీరు కాల్‌కు సమాధనం ఈయకపోతే అన్ని లోనికివచ్చు కాల్స్ ఈ క్రింది క్షేత్రమునందు తెలిపిన అతిధేయకు పంపుబడతాయి</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="ఒకవేళ రద్దీగావుంటే యివ్వబడిన అతిధేయకు కాల్సును ఫార్వార్డు చేయుము">
+								<longdesc>చేతనపరచబడితే, మీరు యిప్పటికే వొక కాల్‌నందువున్నా లేదా విసిగంచ వద్దు రీతినందు వున్నా అన్ని లోనికివచ్చు కాల్స్ సంవిధానములు ఈ క్రింది క్షేత్రమునందు తెలిపిన అతిధేయకు పంపుబడతాయి.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="కాల్సును యెల్లప్పుడు యిచ్చిన అతిధేయకు పంపుము(ఫార్వార్డు చేయుము)">
+								<longdesc>చేతనపరచబడితే, అన్ని లోనికివచ్చు కాల్స్ ఈ క్రింది క్షేత్రమునందు తెలుపబడిన అతిధేయకు పంపబడతాయి.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP రేవు శ్రేణి">
+								<longdesc>Ekiga వుపయోగించే UDP పోర్ట్సు విస్తృతి.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP పోర్టు రేంజు">
+								<longdesc>Ekiga అనునది H.323 H.245 చానల్ కొరకు వుపయోగించే TCP పోర్టుల విస్తృతి. కాన్ఫెరెన్సునందు పాల్గొన్న రెండువర్గాల వారు H.245 టన్నెలింగ్ వుపయోగిస్తే ఈ పోర్టు విస్తృతికి యెటువంటి ప్రభావంవుండదు.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="కాల్సును అతిధేయకు ఫార్వార్డుచేయుము">
+								<longdesc>కాల్ పంపుట(ఫార్వార్డు చేయుట) చేతనమైతే యెక్కడికి కాల్సు పంపాలో ఆ అతిధేయ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF పంపుచున్నది">
+								<longdesc>DTMFలను పంపు రీతిని యెంపికచేయి. విలువలు (&quot;String&quot; కొరకు)(0), (&quot;Tone&quot; కొరకు) 1, (&quot;RFC2833&quot; కొరకు) 2, (&quot;Q.931&quot; కొరకు) 3 (అప్రమేయం &quot;String&quot;) కాగలవు. &quot;String&quot; కాక యితర విలువలను యెంపికచేస్తే పాఠ్యపు చాట్ అచేతనమౌతుంది.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema short_desc="విస్తరిత వీడియో పాత్రలు">
+								<longdesc>H.239 వీడియో పాత్రను యెంపికచేయి. విలువలు 0 (&quot;విస్తరిత విలువ అచేతనం చేయుటకు&quot;), 1 (&quot;విషయ రోల్ మాస్క్ అనుమతించుటకు&quot;), 2 (&quot;బలవంతపు సమర్పణకు&quot;), లేదా 3(&quot;బలవంతపు లైవ్ పాత్రకు&quot;) అవగలవు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="H.239 చేతనంచేయి">
+								<longdesc>అదనపు వీడియో పాత్రల కొరకు యిది H.239 సామర్ధ్యంను చేతనంచేయును</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="త్వరగా మొదలయే ప్రక్రియను క్రియాశీలకరించుము">
+								<longdesc>అనుసంధానము ఫాస్ట్ స్టార్ట్ రీతినందు ఏర్పరచబడుతుంది. ఫాస్ట్ స్టార్ట్ అనునది H.323v2 నందు పరిచయం చేయబడిన కాల్సును వేగముగా ప్రారంభించుటకు కొత్త మార్గము. ఇది నెట్‌సమావేశమునకు మద్దతునీయదు మరియు ఫాస్ట్ స్టార్ట్‌ను H.245 టన్నెలింగ్‌ను కలిపి వుపయోగించుట అనునది నెట్‌సమావేశం యొక్క కొన్ని వర్షన్లను క్రాష్ చేయగలదు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="ముందలి H.245ను చేతనముచేయుము">
+								<longdesc>ఇది అమర్పునందు ముందుగా H.245ను చేతనపరుస్తుంది</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 టన్నెలింగ్‌ను చేతనముచేయుము">
+								<longdesc>ఇది H.245 టన్నెలింగ్ రీతిని చేతనము చేస్తుంది. H.245 టన్నెలింగ్ రీతినందు H.245 సందేశములు H.225 చానల్ (పోర్టు 1720)కు వుంచబడినాయి. ఇది కాల్సునందు వొక TCP అనుసంధానమును దాస్తుంది. H.245 టన్నెలింగ్ H.323v2 నందు పరిచయం చేయబడింది మరియు నెట్‌సమావేశము మద్దతునీయదు. ఫాస్ట్ స్టార్ట్  మరియు H.245 టన్నెలింగ్ రెంటిని వుపయోగించుట నెట్‌సమావేశము యొక్క కొన్ని వర్షన్లను క్రాష్ చేస్తుంది.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="లిజన్ పోర్టు">
+								<longdesc>లోనికివచ్చు అనుసంధానాల కొరకు పోర్టు. కొత్త విలువ ప్రాభావితం అగుటకు Ekiga పునఃప్రారంభించవలసి వున్నది.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT అనుసంధానించు కాలహరణం">
+								<longdesc>STUN వుపయోగించునప్పుడు NAT బందనంను Ekiga ఎన్ని సెకనుల తర్వాత రీఫ్రెష్ చేయాలో ప్రవేశపెట్టుము</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF పంపుచున్నది">
+								<longdesc>DTMFలను పంపుటకు రీతిని యెంపికచేయి.  విలువలు (&quot;RFC2833&quot; కొరకు) 0, (&quot;INFO&quot; కొరకు) 1 కాగలవు.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="కాల్సును అతిధేయకు ఫార్వార్డుచేయుము">
+								<longdesc>కాల్ పంపుట(ఫార్వార్డు చేయుట) చేతనమైతే యెక్కడికి కాల్సు పంపాలో ఆ అతిధేయ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="అవుట్‌బౌండ్ ప్రోక్సీ">
+								<longdesc>బయటకువెళ్ళు కాల్సును వుపయోగించుటకొరకు SIP అవుట్‌బౌండ్ ప్రోక్సీ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="లిజన్ పోర్టు">
+								<longdesc>లోనికివచ్చు అనుసంధానములను వినుటకు పోర్టు. కొత్త విలువ ప్రభావితం అగుటకు Ekiga పునఃప్రారంభించవలసి వుంది</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="టెంపోరల్ స్పేషియల్ ట్రేడ్ ఆఫ్">
+								<longdesc>గరిష్టంగా వుంచుటకు యిష్టం చూపాలా.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="RX వీడియో గరిష్ట బిట్‌రేట్">
+								<longdesc>kbit/s లలో RX వీడియో గరిష్ట బిట్‌రేట్. ఈ విలువ పీర్ అంతిమబిందువుకు సంకేతంచేయబడుతుంది (ఆవిలువకు ఇది మద్దతు యీయగలిగితే) ఇది దానియొక్క TX బిట్‌రేట్‌ సంకేతించిన విలువకంటే యెక్కువవుంటే సర్దుబాటుచేస్తుంది.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="TX వీడియో కనిష్ట బిట్‌రేట్">
+								<longdesc>TX వీడియో యొక్క గరిష్ట బిట్‌రేట్ kbit/sలలో. ఇచ్చిన విలువకంటే బ్యాండ్‌విడ్తును తగ్గించుటకు కనీస నిడివి కాల్సునందు వీడియో నాణ్యత మరియు సెకనుకు బదిలీకరించు చట్రముల సంఖ్య (కొడెక్‌పై ఆధారపడి) గతికంగా సర్దుబాటుచేయబడతాయి.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ఆడియో కోడెక్స్ యొక్క జాబితా">
+								<longdesc>ఆడియో కోడెక్స్ యొక్క జాబితా</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="గరిష్ట జిట్టర్ బఫర్">
+								<longdesc>ఆడియో రిసెప్షన్ కొరకు గరిష్ట జిట్టర్ బఫర్ పరిమాణం (ms లో)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="ప్రతిధ్వని రద్దును చేతనంచేయి">
+								<longdesc>చేతనమైతే, ప్రతిధ్వని రద్దును ఉపయోగించండి</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="నిశ్శబ్దపు గుర్తింపును చేతనముచేయుము">
+								<longdesc>చేతనపరచబడితే, దానిని మద్దతిచ్చే కోడెక్సుతో నిశ్శబ్ద గుర్తింపును వుపయోగిస్తుంది</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ఆడియో కోడెక్స్ యొక్క జాబితా">
+								<longdesc>ఆడియో కోడెక్స్ యొక్క జాబితా</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="సహాయకి నందు యెంపికచేసిన నెట్వర్కు రకం">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Custom</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="స్వయంచాలక ప్రశ్న">
+								<longdesc>చేతనమైతే, లోనికివచ్చు ప్రశ్నలను స్వయంచాలకంగా సమాధానమివ్వు</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="సమాధానంలేని కాలహరణం ">
+								<longdesc>లోనికివచ్చు కాల్‌నకు తెలుపబడిన సమయం (సెకనులలో) తర్వాతకూడా సమాధానం యీయకపోతే వాటిని స్వయంచాలకంగా తిరస్కరించుము లేదా ముందుకుపంపుము</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="సుదూర వీడియో విండోము యొక్క  స్థానము">
+									<longdesc>సుదూర వీడియో విండో యొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="సుదూర వీడియో విండోము యొక్క పరిణామం">
+									<longdesc>సూదూర వీడియో విండో యొక్క పరిమాణం</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="పూర్తితెరకు మారుటకు ముందుగా వీడియో దర్శనం">
+									<longdesc>పూర్తితెరకు మారుటకు ముందుగా వీడియో దర్శనం (video_view వంటి విలువలె)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="అప్రమేయ వీడియో దర్శనం">
+									<longdesc>అప్రమేయ వీడియో దర్శనం ((0: స్థానిక, 1: దూరస్థ, 2: రెండు పొరలు, 3: రెండూ కూడా ప్రత్యేక విండోలో)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="కాల్సునందు యితర విండోలపైన వీడియోను ప్రదర్శించు విండోలను వుంచుము">
+									<longdesc>కాల్సునందు యితర విండోలపైన వీడియోను ప్రదర్శించు విండోలను వుంచుము</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="జూమ్ విలువ">
+									<longdesc>ముఖ్య GUI మీద ప్రదర్శితమైన ప్రతిబింబములకు ఆపాదించుటకు జూమ్ విలువ (50, 100 లేదా 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="సాఫ్టవేర్ స్కేలింగ్ అల్గార్దెమ్‌ను తెలుపుము">
+									<longdesc>సాఫ్టువేర్ స్కేలింగ్ అల్గార్దెమ్‌ను తెలుపుము: 0: nearest neighbor, 1: nearest neighbor with box filter, 2: bilinear filtering, 3: hyperbolic filtering. విండోస్ సిస్టమ్సుపై ఆపాదించబడదు.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="picture-in-picture సాఫ్టువేర్ స్కేలింగ్‌ను అనుమతించుము">
+									<longdesc>హార్డువేరు మద్దతు అందుబాటులో లేకపోతే Ekigaను సాఫ్టువేరు స్కేలింగ్‌కు వెనక్కుతెమ్ము picture-in-picture. ఇది అసత్యమునకు అమర్చితే, హార్డువేరు మద్దతు అందుబాటులో లేనప్పుడు Ekiga అనునది PIPను తెరువుటకు ప్రయత్నించదు.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="వీడియో హార్డువేర్ త్వరుణీకరణాన్ని అచేతనముచేయుము">
+									<longdesc>ఈ కీ DirectX (win32 నందు) మరియు XVideo (Linux నందు) వీడియో హార్డువేర్ త్వరుణాన్ని అచేతనముచేస్తుంది</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="అభీష్టాల విండో యొక్క పరిమాణం">
+									<longdesc>అభీష్టాల విండో యొక్క పరిమాణం</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="అభీష్టాల విండో తెర యొక్క స్థానము">
+									<longdesc>అభీష్టాల విండో తెర యొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="అభీష్టాల విండో యొక్క పరిమాణం">
+									<longdesc>అభీష్టాల విండో యొక్క పరిమాణం</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="అభీష్టాల విండో తెర యొక్క స్థానము">
+									<longdesc>అభీష్టాల విండో తెర యొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="వీడియో అమర్పుల విండోయొక్క పరిమాణము">
+									<longdesc>వీడియో అమర్పుల విండోయొక్క పరిమాణము</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="తెరపైన వీడియో అమరికల విండోయొక్క స్థానము">
+									<longdesc>తెరపైన వీడియో అమరికల విండోయొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ఆడియో అమర్పుల విండోయొక్క పరిమాణము">
+									<longdesc>ఆడియో అమర్పుల విండోయొక్క పరిమాణము</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="తెరపైన ఆడియో అమరికల విండోయొక్క స్థానము">
+									<longdesc>తెరపైన ఆడియో అమరికల విండోయొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="చిరునామా పుస్తకం యొక్క పరిమాణం">
+									<longdesc>చిరునామా పుస్తకం యొక్క పరిమాణం</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="చిరునామా పుస్తక విండోము యొక్క స్థానము">
+									<longdesc>చిరునామా పుస్తక విండోము యొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="నిర్దేశి విండో తెర యొక్క స్థానము">
+									<longdesc>నిర్దేశి విండో తెర యొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="నిర్దేశి విండో యొక్క పరిమాణం">
+									<longdesc>నిర్దేశి విండో యొక్క పరిమాణం</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="మాటామంతి విండో తెర యొక్క స్థానము">
+									<longdesc>మాటామంతి విండో తెర యొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="కాల్ విండో యొక్క పరిమాణం">
+									<longdesc>కాల్ విండో యొక్క పరిమాణం</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc=" ముఖ్య విండో తెర యొక్క పానల్ విభాగము మార్చండి">
+									<longdesc>ముఖ్య విండో యొక్క పానల్ విభాగమును మార్చును (0=పరిచయాలు, 1=డయల్‌పాడ్, 2=కాల్ చరిత్ర)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc=" ముఖ్య విండో తెర యొక్క స్థానము">
+									<longdesc> ముఖ్య విండో తెర యొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="కాల్ విండో యొక్క పరిమాణం">
+									<longdesc>కాల్ విండో యొక్క పరిమాణం</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="కాల్ విండో తెర యొక్క స్థానము">
+									<longdesc>కాల్ విండో తెర యొక్క స్థానము</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN నెట్వర్కు గుర్తింపును చేతనముచేయుము">
+								<longdesc>STUN పరీక్షాఫలితంగా వచ్చిన స్వయంచాలక నెట్వర్కు అమర్పును చేతనముచేయి</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN సేవిక">
+								<longdesc>STUN మద్దతుకొరకు STUN సేవిక. STUN అనునది NAT గేట్‌వేలయొక్క కొన్ని రకముల ద్వారా పంపుటకు అనుమతించే సాంకేతికత.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="బ్యుజీ గొంతు శబ్ధము">
+								<longdesc>చేతనమైనట్లైతే, కాల్ ముగింపునందు లేదా బ్యుజీగా వున్నవారిని కాల్ చేయునప్పుడు వినిపించు శబ్దము</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="తీరికలేని స్వరాన్ని ఆడించుము">
+								<longdesc>చేతనపరిచినట్లైతే, యెంచుకోబడిన శబ్ధము కాల్సుయొక్క ముగింపునందు వినిపించబడుతుంది లేదా బ్యుజీగా వున్నవారికి కాల్ చేయుచున్నప్పుడు వినిపించబడుతుంది</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="తిరగలి ధ్వని స్వరము">
+								<longdesc>క్రియాశీలీకరించబడితే, ఎవరికైనా కాల్చేసినప్పుడు ఆడే ధ్వని</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="రింగ్ టోన్ మోగించుము">
+								<longdesc>క్రియాశీలీకరించబడితే,  ఎవరికైన కాల్  చేస్తునప్పుడు ఎనుకున్న ధ్వని ఆడుతుంది</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="కొత్త స్వర మెయిల్‌కు శబ్ధము చేయుము">
+								<longdesc>చేతనపరిచినట్లైతే, ఎంపికచేసుకొనిన శబ్ధము స్వర మెయిల్ స్వీకరించబడినప్పుడు వినిపించబడుతుంది</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="కొత్త స్వర మెయిల్ శబ్ధము">
+								<longdesc>చేతనపరచినట్లైతే, కొత్త స్వర మెయిల్‌కు వినిపించు శబ్ధము</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="కొత్త సందేశం ధ్వనిని ఆడించుము">
+								<longdesc>క్రియాశీలీకరించబడితే,  కొత్త తక్షణా సందేశం వచ్చినప్పుడు ఎనుకున్న ధ్వని ఆడుతుంది</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="కొత్త తక్షణ సందేశపు ధ్వని">
+								<longdesc>క్రియాశీలీకరించబడితే, కొత్త తక్షణ సందేశం వచ్చినప్పుడు ఆడే ధ్వని</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="లోనికివచ్చే కాల్స్ కి ధ్వన్ని ఆడించుము">
+								<longdesc>క్రియాశీలీకరించబడితే,  కాల్స్ వచ్చినప్పుడు ఎనుకున్న ధ్వని ఆడుతుంది</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="కాల్స్ వచ్చే ధ్వని">
+								<longdesc>క్రియాశీలీకరించబడితే, కాల్స్ వచ్చినప్పుడు ఆడే ధ్వని</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ప్రత్యామ్నయ ఆడియో దిగుబడి పరికరం">
+								<longdesc>ధ్వని ఘటనలకు ఉపయోగించడానికి  ప్రత్యామ్నయ ఆడియో దిగుబడి పరికరాన్ని ఎంచుకొనుము</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="పరిచయం సుధీర్ఘ స్థితి">
+								<longdesc>సుధీర్ఘ స్థితి సమాచారము</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="పరిచయం స్వల్పకాల స్థితి">
+								<longdesc>స్వల్పకాల స్థితి సమాచారము</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="పూర్తి పేరు">
+								<longdesc>మీ పూర్తి పేరును ప్రవేశపెట్టండి</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="చట్ర ప్రమాణము">
+								<longdesc>గరిష్టంగా బదిలీకరించు ఫ్రేమ్ రేటు ఫ్రేమ్లు/సె లలో. TSTO ద్వారా 31కన్నా తక్కువ విలువైన కనీస నాణ్యతను ఆకృతీకరించితే ఈ రేటు చేరుకోలేదు మరియు యెంపికచేసిన బిట్‌రేట్ ఈ కనీస నాణ్యతను మద్దతీయలేదు.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="వీడియో ఉపదర్శనం">
+								<longdesc>మీ కెమెరా నుండి  ప్రతిరూపాలను ప్రదర్శించుము</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="వీడియో రూపలావణ్యం">
+								<longdesc>వీడియో కెమేరాల కొరకు ఫార్మాట్‌ను యెంపికచేయుము (చాలా USB కెమేరాలను ఆపాదించబడదు)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="వీడియో ప్రసారమార్గం">
+								<longdesc>ఉపయోగించుటకు వీడియో చానల్ సంఖ్య (కెమేరా, టివి లేదా యితర మూలములను యెంచుకొనుటకు)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="వీడియో పరిమాణం">
+								<longdesc>బదిలీకరించిన వీడియో పరిమాణంను యెంపికచేయుము: Small (QCIF 176x144) లేదా Large (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="వీడియో ఎగుబడి పరికరం">
+								<longdesc>ఉపయోగించటానికి వీడియో ఇన్పుట్ పరికరమును యెంపికచేయుము. ఈ పరికరమును వుపయోగిస్తున్నప్పుడు దోషము యెదురైతే పరిశీలనా చిత్రము బదిలీకరించబడుతుంది.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="ఆడియో ఎగుబడి పరికరం">
+								<longdesc>ఉపయోగించడానికి ఆడియో  ఎగుబడి పరికరాన్ని ఎంచుకొనుము</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ఆడియో  దిగుబడి పరికరం">
+								<longdesc>ఉపయోగించడానికి ఆడియో దిగుబడి పరికరాన్ని ఎంచుకొనుము</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="గుర్తులు">
+						<longdesc>జికాన్ఫ్-సరికర్త సంచయ గుర్తులు</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="ఇంతకుముందే ఆడిన ఆటలు">
+						<longdesc>ఇటీవల ఆడిన ఆటల జాబితా.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="ఆడిన ఆటల గణాంకాలు">
+						<longdesc>అయిదింటి రూపములో వచ్చే స్ట్రింగ్సు జాబితా. నామము, విజయాలు, మొత్తం ఆడిన ఆటలు, మంచి సమయం (సెకనులలో) మరియు చెడ్డ సమయం (సెకనులలో). ఆడని ఆటలు చూపించవలసిన అవసరములేదు.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="వాడాల్సిన ఆట దస్త్రము">
+						<longdesc>సొలెటైర్ పేకాట ఆడుటకు  ఉన్న పథకదస్త్రము నామము</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="యానిమేషన్స్">
+						<longdesc>కార్డుల కదలికలను యానిమేట్ చేయాలా వద్దా.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="ధ్వని">
+						<longdesc>ఆడుతున్నపుడు కదలికల శ్రవణాన్ని మోగించాలా</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="నియంత్రణ శైలిని ఎంచుకొనుము">
+						<longdesc>కార్డులను లాగవలెనంటే యెంపికచేయుము లేదా మూలముపైన నొక్కి తరువాత గమ్యముపై నొక్కుము.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="స్థితి పట్టీ చూపాలావద్దా">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="పనిముట్ల పట్టీని చూపించాలా... లేదా...">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="వైవిధ్యాంశ దస్త్రనామము">
+						<longdesc>పేకలుకొరకు ఉన్న చిత్రాల దస్త్రనామము </longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

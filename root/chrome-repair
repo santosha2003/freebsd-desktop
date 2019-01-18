@@ -1,0 +1,13 @@
+
+# has a known problem of hanging tabs. The workaround
+#for this problem is to mount ~/.cache/chromium as memory-fs.
+#In order to do this, before you run chromium, please run these
+#commands once as root for each user who uses chromium (replace
+#{user}/{group} with your user/group names):
+
+# [ -d ~{user}/.cache/chromium ] || mkdir ~{user}/.cache/chromium
+# echo "md $(echo ~{user})/.cache/chromium mfs rw,late,-w{user}:{group},-s300m 2 0" >> /etc/fstab
+# mount ~{user}/.cache/chromium
+ [ -d ~/.cache/chromium ] || mkdir ~/.cache/chromium
+echo "md $(echo ~)/.cache/chromium mfs rw,late,-wroot:wheel,-s300m 2 0" >> /etc/fstab
+ mount ~/.cache/chromium

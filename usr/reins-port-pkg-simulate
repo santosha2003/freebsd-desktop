@@ -1,0 +1,115 @@
+#!/usr/local/bin/bash
+
+# santosha.no-ip.info
+#pkg query %ro
+#cat pckges-list | ~/reins-port-simulate
+ #pkgng pack create packages for freebsd port and all dependency
+ # virtualbox and vlc mplayer libav mesa -all new and not from ports up to date
+#/usr/update-svn
+#n=4
+mv /root/reins-port.log /root/reins-port.old
+#mv /root/pack-port.log /root/pack-port.old
+#printf  "" > /root/pack-port.log
+printf "" > /root/thisfrombase.log
+n=$#
+ # cumulative sum up to 5000
+echo $n
+PACKAGESLINE=""
+p=$*
+echo $p
+if [ $# -eq 0 ]
+  then
+  #P= `cat 1l | awk '{print }' `
+  p1=`cat pckges-list |xargs pkg info`
+  p=`cat pckges-list |xargs echo`
+
+
+  echo $p
+  echo $p1
+
+    echo "No arguments supplied"
+fi
+
+
+echo "The number of arguments is: $#"
+a=${@}
+echo "The total length of all arguments is: ${#a}: "
+count=0
+accum=0
+for var in "$@"
+do
+    echo "The length of argument '$p' is: ${#p}"
+    (( count ++ ))
+    (( accum += ${#p} ))
+done
+echo "The counted number of arguments is: $count"
+echo "The accumulated length of all arguments is: $accum"
+
+#PKGL= `cat  1l` #pckges-list
+#echo $PKGL
+i=0
+for ARG in $p
+ do
+ i=i+1
+ echo $ARG
+ echo $n
+  #if $$i == "" then break
+  #fi
+ PORTPATH=`whereis -s $ARG | awk '{print $2}'`
+ echo $PORTPATH
+#make -C $PORTPATH clean
+#pkg create -o /root $1
+
+#make -C /usr/ports/ports-mgmt/pkg build
+#pkg query %o >listpkge
+#cat listpkge | xargs pkg install -f
+#cat listpkge | xargs echo
+#cat listpkge | xargs pkg install -f -y
+
+ PACKAGELINE=$ARG
+ echo $PACKAGELINE
+ printf "ports-mgmt/pkg" >> /root/reins-port.log
+ printf "\n" >> /root/reins-port.log
+   for LINE in `make -C $PORTPATH all-depends-list |cut -c 12-127`
+     do
+     LINST=`whereis -s $LINE | awk '{print $2}'| cut -c 1-8`
+         if (test "$LINE" != "ports-mgmt/pkg")  then
+          if (test "$LINST" != "/usr/src")  then
+            # only new package in depends list 
+	    if (test "" == "`cat /root/reins-port.log |grep $LINE`")  then
+#    pkg install -f -y $LINE
+     #    echo -n "build  (${LINE}) "
+#	PORTP=`whereis -s $LINE | awk '{print $2}'`
+#	echo -n " from ($PORTP) "
+        PACKAGESLINE="$PACKAGESLINE ${LINE}"
+        printf  "${LINE}\n" >> /root/reins-port.log
+       printf "`cat /root/reins-port.log |grep $LINE`\n" >> /root/reins-port1-log
+       echo -n $LINE
+       echo " "
+       #pkg install -f -y $LINE
+        echo -n "$LINE ">> /root/reins-log
+    #     if (test "$LINE" == "devel/gettext-runtime")  then
+    #    make -C /usr/ports/${LINE} build deinstall install | tail >>~/reins.texi
+    #     fi
+    #    make -C /usr/ports/${LINE} reinstall | tail >>~/reins.texi
+	#make -C /usr/ports/ports-mgmt/pkg install
+	    else echo -n "ist schon bearbeitet ($LINE) "
+	    fi
+          else printf " Error (this from base?) $LINE \n" >> /root/reins-port-err.log
+#          make -C /usr/ports/${LINE} reinstall | tail >>~/reins.texi
+          fi
+         fi
+     done
+ printf "${PACKAGESLINE}\n" >> /root/reins-port-$ARG.log
+ echo "Script search all dependency for each package in command line or input file"
+ echo "iteration cycle $i"
+ echo " 800 packages estimate time 24h"
+ done
+
+
+#make -C /usr/ports/${LINE} clean
+# if not-found 1 package do fail pkg install -f -y $PACKAGESLINE
+
+ echo $PACKAGESLINE
+
+ printf "${PACKAGESLINE}\n" >> /root/reins-port-all.log

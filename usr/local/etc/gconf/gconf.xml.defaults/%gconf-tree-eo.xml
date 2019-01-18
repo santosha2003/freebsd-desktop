@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Historio de telefonvokoj">
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Montri nekonektitajn kontaktojn">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="Listo de kontoj">
+							<longdesc>Listo de kontoj al kiuj Ekigo devas aliĝi</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Se respondo ne estis, sendi telefonvokokojn al difinita gastiga komputilo">
+								<longdesc>Se ĝi estas enŝaltita, se vi ne respondas, ĉiuj enirantaj telefonvokoj estos senditaj al gastiga komputilo difinita en la suba fako</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Se ĝi estas okupita, sendi telefonvokojn al difinita gastiga komputilo">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Sendi ĉiam telefonvokojn al indikita gastiga komputilo">
+								<longdesc>Se ĝi estas enŝaltita, ĉiuj enirantaj telefonvokoj estos senditaj al gastiga komputilo difinita en la suba fako</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Intervalo de UDP-pordoj">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Intervalo de TCP-pordoj">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Sendi talefonvokojn al ĉi tiu gastiga komputilo">
+								<longdesc>L&apos;host a cui inoltrare le chiamate se l&apos;inoltro delle chiamate è abilitato</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Sendante DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Enŝalti «Rapidan Starton»">
+								<longdesc>La konekto starigos per la reĝimo «rapida starto». La rapida starto estas nova reĝimo por fari vokojn pli rapide, dank&apos;al protokolo H.323v2. Ĝi ne estas subtenita de NetMeeting kaj uzo de ĝi kun tunelo de H.245 povus kaŭzi kraŝon de iuj versioj de NetMeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Enŝalti rapidaĵon de H.245">
+								<longdesc>Tio enŝaltas rapidan starton de H.245 en la agordoj</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Enŝalti tunelon de H.245">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Aŭskultpordo">
+								<longdesc>Pordo por aŭskulti enigajn konektojn. Ekigo necesas denove starti por ke la novaj valoroj efikas.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Tempolimo de «NAT-bindado»">
+								<longdesc>Enigu nombro da sekundoj post kiuj Ekigo devige provos ĝisdatigi la NAT-bindado kiam STUN estas uzata</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Sendante DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Sendi talefonvokojn al ĉi tiu gastiga komputilo">
+								<longdesc>L&apos;host a cui inoltrare le chiamate se l&apos;inoltro delle chiamate è abilitato</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Proxy outbound">
+								<longdesc>Il proxy SIP esterno da usare per le chiamate in  uscita</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Aŭskultpordo">
+								<longdesc>Pordo por aŭskulti enigajn konektojn. Ekigo necesas denove starti por ke la novaj valoroj efikas</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Maksimuma bufro de ĵitero">
+								<longdesc>Maksimuma grando de bufro de ĵitero por sonricevado (en ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Enŝalti forigon de eĥo">
+								<longdesc>Se ĝi estas enŝaltita, estas uzata forigo de la eĥo</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Enŝalti rekonon de silento">
+								<longdesc>Se ĝi estas enŝaltita, estas uzata rekono de silentoj laŭ kodaĵoj kiuj subtenas tion</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="La listo de sonkodaĵoj">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema>
+							<longdesc>0: 56Kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Propre</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Aŭtomata respondo">
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Tempolimo de maltrafita respondo">
+								<longdesc>Ĝi rifuzas aŭ sendas aŭtomate enirantajn telefonvokojn, se la respondo ne estas en la specifita tempolimo (en sekundoj)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Loko de fora videofenestro">
+									<longdesc>Loko de fora videofenestro</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Grando de fora videofenestro">
+									<longdesc>Grando de fora videofenestro</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="Defaŭlta videovido">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Loki la fenestrojn por montri videon supre dum telefonvokoj">
+									<longdesc>Loki la fenestrojn por montri videon supre dum telefonvokoj</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Valoro de zomo">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Grando de fenestro de agordoj">
+									<longdesc>Grando de fenestro de agordoj</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Loko de fenestro de agordoj en la ekrano">
+									<longdesc>Loko de fenestro de agordoj en la ekrano</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Grando de fenestro de agordoj">
+									<longdesc>Grando de fenestro de agordoj</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Loko de fenestro de agordoj en la ekrano">
+									<longdesc>Loko de fenestro de agordoj en la ekrano</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Grando de fenestro de adresaro">
+									<longdesc>Grando de fenestro de adresaro</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Loko de fenestro de adresaro en la ekrano">
+									<longdesc>Loko de fenestro de adresaro en la ekrano</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Loko de fenestro de agordilo en la ekrano">
+									<longdesc>Loko de fenestro de agordilo en la ekrano</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Grando de fenestro de agordilo">
+									<longdesc>Grando de fenestro de agordilo</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Loko de fenestro de babillineo en la ekrano">
+									<longdesc>Loko de fenestro de babillineo en la ekrano</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Grando de fenestro de babillineo">
+									<longdesc>Grando de fenestro de babillineo</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Loko de ĉefa fenestro en la ekrano">
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Loko de ĉefa fenestro en la ekrano">
+									<longdesc>Loko de ĉefa fenestro en la ekrano</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="Servilo STUN">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Sono por tono de okupita lineo">
+								<longdesc>Se ĝi estas enŝaltita, sono estas ludita kiam la telefonado finis aŭ se la lineo estas okupita</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Ludi tonon de okupita lineon">
+								<longdesc>Se ĝi estas enŝaltita, la elektita sono estos ludita je fino de vokoj aŭ se la lineo estas okupita</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Sono de tono por libera lineo">
+								<longdesc>Se ĝi estas enŝaltita, tiu ĉi sono estas ludita kiam oni faras televonvokojn</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Ludi telefontrilon">
+								<longdesc>Se ĝi estas enŝaltita, la elektita sono estos ludita kiam startigi telefonvokon</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Ludi sonon por novaj voĉaj retpoŝtoj">
+								<longdesc>Se ĝi estas enŝaltita, la elektita sono estos ludita se estas nova voĉa retpoŝto</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Sono por nova voĉretpoŝto">
+								<longdesc>Se ĝi estas enŝaltita, tiu ĉi sono estas ludita kiam estas nova voĉretpoŝto</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Ludi sonon por novaj mesaĝoj">
+								<longdesc>Se ĝi estas enŝaltita, la elektita sono estos ludita se estas nova mesaĝo</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Sono por nova mesaĝo">
+								<longdesc>Se ĝi estas enŝaltita, tiu ĉi sono estas ludita kiam estas nova mesaĝo</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Ludi sonon por enirantaj telefonvokoj">
+								<longdesc>Se ĝi estas enŝaltita, la elektita sono estos ludita se telefonfokoj estas enirantaj</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Sono de enirantaj telefonvokoj">
+								<longdesc>Se ĝi estas enŝaltita, tiu ĉi sono estas ludita por la enirantaj telefonvokoj</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Alia aparato por soneligo">
+								<longdesc>Elektu alian aparaton de soneligo uzendan laŭ soneventoj.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="full_name">
+							<local_schema short_desc="Tuta nomo">
+								<longdesc>Enigu vian tutan nomon</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Kvalito laŭ Filmerkvanto">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Videoantaŭmontro">
+								<longdesc>Montri bildojn el loka kamerao</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Videoformato">
+								<longdesc>Elektu videoformaton por videokamero (ĝi ne estas aplikebla al multaj USB-videokameroj).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Videokanalo">
+								<longdesc>Numero de uzenda videokanalo (por elekti camera, tv, aŭ aliaj aparatoj)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Videogrando">
+								<longdesc>Elektu formaton de elsendita video: Eta (QCIF 176x144) aŭ Granda (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Aparato de videoenigo">
+								<longdesc>Elektu uzendan aparaton de videoenigo. Se eraro estos dum la uzado de ĉi tiu, provbildo estos elsendita.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Aparato por sonenigo">
+								<longdesc>Elektu uzendan aparaton de sonenigo</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Aparato por soneligo">
+								<longdesc>Elektu uzendan aparaton de soneligo</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Legosignoj">
+						<longdesc>Dosierujaj legosignoj de gconf-redaktilo</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Antaŭ nelonge luditaj maĉoj">
+						<longdesc>Listo de antaŭnelonge luditaj maĉoj.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statistikoj de luditaj ludoj">
+						<longdesc>Listo de linioj, kiuj enhavas kvinopojn en la formo: nomo, kvanto de gajnoj, kvanto de luditaj maĉoj, plej bona tempo (en sekundoj), kaj malplej bona tempo (ankaŭ en sekundoj). Neluditaj ludoj ne bezonas esti prezentataj.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="La luda dosiero por uzi">
+						<longdesc>La nomo de la skema dosiero, kiu enhavas la paciencludon por ludi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animacioj">
+						<longdesc>Ĉu animi kartajn movojn?</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Sono">
+						<longdesc>Ĉu ludi eventajn sonojn?</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Elekti kontrol-stilon">
+						<longdesc>Elekti ĉu ŝovi la kartojn aŭ alklaki la fonton kaj poste la destinon.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Ĉu montri statobreton?">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Ĉu montri ilobreton?">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Etosa dosiernomo">
+						<longdesc>La nomo de la dosiero kun la bildoj de la ludkartoj.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

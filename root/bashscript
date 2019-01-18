@@ -1,0 +1,162 @@
+Написание скриптов на Bourne Shell
+Автор: SHuRuP
+Когда сидишь в консоле (а все мы с этим сталкиваемся), невольно хочется оптимизировать/упростить работу в ней. Как это сделать? Многие посоветуют учить С/С++, но зачем напрягаться больше, если есть способ проще?
+
+У всех *nix-систем (современных) обязательно есть несколько командных интерпрепаторов, вот самые известные из них:
+Bourne Shell aka /bin/sh - именно он и будет рассматриваться в этой статье (инициализация - .profile);
+Bourne-Again Shell aka /bin/bash - идентичен Bourne Shell (.profile и .bashrc);
+C Shell aka /bin/csh - интерпретатор для C-программеров (.login и .cshrc).
+
+Написание скриптов на Bourne Shell
+Выполнение скриптов на sh равносильно набиранию всех этих команд с консоли. Все программы должны начиться с:
+#!/bin/sh
+Комментарии начинаются с помощью символа '#'. Значения переменным задаются так:
+var1=value
+var1 - переменная, value - значение этой переменной. Дальше следует использовать данную переменную с символом '$' в начале ( $var1 ). Существуют также другие возможности получения переменной:
+${var1}text - отделяет значение $var1 от последующего текста (text);
+${var1:=var2} - если значение $var1 не определено, то ей присваивается значение $var2;
+${var1:-var2} - если значение $var1 не определено, то выводится значение $var2 ($var1 остается не определенным).
+
+Пример простого скрипта:
+#!/bin/sh
+#script 1
+var1=text1
+var2=text2
+echo ${var1}klm
+#выведет text1klm
+echo ${var1:=$var2}
+#выведет text1
+echo ${var4:=$var2}
+#выведет text2
+echo ${var4:-$var1}
+#выведет text2
+
+Некоторые перемменые, используемые sh:
+$$ - pid текущего shell'а;
+$! - pid последнего процесса в фоновом режиме;
+$? - код возврата последнего процесса;
+$x - где x-числа: параметры, переданные скрипту ($0 - последний запущенный скрипт).
+
+#!/bin/sh
+#script 2
+echo "script filename: $0"
+#выведет название файла данного скрипта
+echo "value1: $1"
+#выведет первый параметр, заданный скрипту
+echo "value2: $2"
+#выведет второй параметр, заданный скрипту
+
+Параметры задаются скрипту задаются так:
+/home/shurup/script1 value1 value2 value3
+value1, value2, value3 - параметры для скрипта.
+
+В Bourne Shell также возможно создание условий:
+if [ условие ]
+then действия при выполнении условия
+else действия при не выполнении условия
+fi
+
+Пример использования:
+#!/bin/sh
+#script 3
+if [ $1 == $2 ]
+then echo "$1 равно $2"
+else echo "$1 не равно $2"
+fi
+
+Циклы в sh создаются так:
+while команда1
+do
+действие1
+done
+
+Действие1 будет исполняться до конца выполнения команды1.
+Пример использования:
+#!/bin/sh
+#script 4
+while :
+do
+echo test
+done
+
+В случае запуска этого скрипта команда 'echo test' будет выполняться в бесконечном цикле.
+Для считывания информации в sh используется команда 'read'. Еще один пример использования циклов со считыванием информации:
+#!/bin/sh
+#script 5
+cat ./sh_script5.txt | grep text1 |
+while read text
+do
+if [ $text == "text1" ]
+then echo "text1 был успешно найден в файле sh_script5.txt"
+else echo "text1 не был найден в файле sh_script5.txt"
+fi
+done
+
+Этот скрипт надо запускать из одного каталога с файлом sh_script5.txt. Файл sh_script5.txt выглядит примерно так:
+text7
+text45
+text1
+text35
+И на этом файле должно быть право чтения (chmod +r sh_script5.txt).
+Для выбора из нескольких возможных случаев в sh юзается 'case'. Синтаксис такой:
+case $var of
+a) действие1;;
+b) действие2;;
+c) действие3;;
+*) действие4;;
+esac
+Здесь $var - переменная, которая может принивать значения a,b,c, любые другие. При $var=a будет выполнено действие1, $var=b - действие2, $var=3 - действие3, а при $var равное любым другим значениям кроме a,b,c будет исполнено действие4.
+Пример простой программы, в которой от значения переменной изменяется выполняемое действие:
+#!/bin/sh
+#script 6
+echo "1)startx 2)reboot 3)shutdown 4)halt"
+#приглашение выбрать число
+read main
+#читаем выбор
+case $main in
+#в зависимости от выбора выполняем действия
+1) startx;;
+2) reboot;;
+3) shutdown now;;
+4) halt;;
+*) echo "error #1: не правильно выбрано число"
+echo "Попробуйте снова";;
+#если выбрано другое число/набраны другие символы, выводим сообщение об ошибке
+esac
+
+И на прощанье привожу пример своего небольшого скрипта, который с помощью find выполняет поиск файлов и каталогов в фоновом режиме, выводит результат в файл.
+
+#!/bin/sh
+#script ss
+case $1 in
+'-q') if [ $# = 4 ]
+then
+echo SS v0.2b\: starting search $3 in $2
+echo SS v0.2b\: searching of $3 on $2 has been started >$4; echo -====- >>$4 && find $2 -name $3 -print 1>>$4 2>/dev/null && echo -===- >>$4; echo SS v0.2b\: searching has been successfully finished >>$4 && echo SS v0.2b\: searching completed; echo SS v0.2b\: to see result look at $4
+exit 1
+else
+echo SS v0.2b\: input \"$0 --help\" for help
+echo SS v0.2b\: input \"$0 --info\" for info about this script
+exit 1
+fi;;
+'--help') echo SS v0.2b\: usage: $0 -q path target logfile
+echo SS v0.2b\: path - from which path begin to search
+echo SS v0.2b\: target - what are you looking for
+echo SS v0.2b\: logfile - file where will be logged search result
+echo SS v0.2b\: example: $0 -q /home/shurup core ./tmp
+exit 1;;
+'--info') echo SS v0.2b\: Search Script | version: 0.2beta
+echo SS v0.2b\: This is simple script for *nix which searching for files & dirs
+echo SS v0.2b\: It uses "find" in background process
+echo SS v0.2b\: SS v0.2b was written by ******
+echo SS v0.2b\: SS v0.2b is absolutely free and open-sourced
+echo SS v0.2b\: Contacts:
+echo SS v0.2b\: Email - ***@***.ru
+echo SS v0.2b\: WWW - http://****.ru
+exit 1;;
+*) echo SS v0.2b\: input \"$0 --help\" for help
+echo SS v0.2b\: input \"$0 --info\" for info about this script
+exit 1;;
+esac
+
+Теперь ты знаком с основами кодинга в Bourne Shell. Успехов на этом поприще!

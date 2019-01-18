@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Onlangs gespeelde speletjies">
+						<longdesc>&apos;n Lys van onlangs gespeelde speletjies.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statistiek van speletjies gespeel">
+						<longdesc>&apos;n Lys stringe wat as vyftal aangegee word, naamlik naam, wenne, totale speletjies gespeel, beste tyd (in sekondes) en swakste tyd (ook in sekondes). Ongespeelde speletjies hoef nie aangegee te word nie.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Die speletjielêer om te gebruik">
+						<longdesc>Die naam van die skemalêer met die patience-speletjie om te speel.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animasies">
+						<longdesc>Of die kaartbewegings geanimeer moet word of nie.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Klank">
+						<longdesc>Of gebeureklanke gespeel moet word of nie.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Kies die kontrolestyl">
+						<longdesc>Kies of die kaarte beweeg word deur te sleep, of deur te kliek op die bron en dan die bestemming.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Of die statusbalk getoon moet word of nie">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Of die nutsbalk gewys moet word of nie">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Temalêernaam">
+						<longdesc>Die naam van die lêer met die grafika vir die kaarte.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

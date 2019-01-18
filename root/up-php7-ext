@@ -1,0 +1,89 @@
+#!/bin/sh
+# nginx on apache24 off
+#/usr/sbin/portsnap fetch extract
+#cd /usr
+#/usr/update-svn
+# backup to /mnt/freebsd
+#make -C /usr/ports clean
+export currentdate=$(date +%Y%m%d-%H-%M)
+setenv currentdate=$(date +%Y%m%d-%H-%M)
+#tar -C/ -cf /mnt/freebsd/local-$HOST-$currentdate.local-conf.txz usr/local/etc usr/local/share
+
+#cp /usr/local/etc/apache24/httpd.conf  ~/www-bk/$HOST-$currentdate.httpd.c-new
+pkg info php7\* > ~/installed-php-ports-list
+
+pkg query %ro | grep p5- >perl_mod_to_update
+pkg query %ro |grep php7 >php7ex_to_update
+#cat php5ex_to_update | xargs pkg delete -f -y
+#portmaster -x pkg -x gcc49 -x gcc5 -o lang/php56 lang/php5
+#pkg delete -f -y lang/php55 archivers/php55-bz2 misc/php55-calendar textproc/php55-ctype databases/php55-dba textproc/php55-dom graphics/php55-exif lang/php55-extensions archivers/php55-phar security/php55-hash archivers/php55-zip archivers/php55-zlib converters/php55-iconv converters/php55-mbstring converters/php55-recode databases/php55-mysql databases/php55-mysqli databases/php55-pdo databases/php55-pdo_mysql databases/php55-pdo_sqlite databases/php55-sqlite3 devel/php55-gettext devel/php55-json devel/php55-pcntl devel/php55-tokenizer ftp/php55-curl ftp/curl ftp/php55-ftp graphics/php55-gd devel/t1lib math/php55-gmp net/php55-soap www/php55-session net/php55-sockets security/php55-filter security/php55-mcrypt security/php55-openssl sysutils/php55-fileinfo sysutils/php55-posix textproc/php55-simplexml textproc/php55-wddx textproc/php55-xml textproc/php55-xmlreader textproc/php55-xmlwriter textproc/php55-xsl www/php55-opcache net-mgmt/php55-snmp 
+#pkg install -f -y devel/binutils
+#portmaster -x gcc5 -x binutils -x pkg -x gcc49 
+
+#pkg check -d -y
+#pkg delete -fy lang/php55 archivers/php55-bz2 misc/php55-calendar textproc/php55-ctype databases/php55-dba textproc/php55-dom graphics/php55-exif lang/php55-extensions archivers/php55-phar security/php55-hash archivers/php55-zip archivers/php55-zlib converters/php55-iconv converters/php55-mbstring converters/php55-recode databases/php55-mysql databases/php55-mysqli databases/php55-pdo databases/php55-pdo_mysql databases/php55-pdo_sqlite databases/php55-sqlite3 devel/php55-gettext devel/php55-json devel/php55-pcntl devel/php55-tokenizer ftp/php55-curl ftp/curl ftp/php55-ftp graphics/php55-gd devel/t1lib math/php55-gmp net/php55-soap www/php55-session net/php55-sockets security/php55-filter security/php55-mcrypt security/php55-openssl sysutils/php55-fileinfo sysutils/php55-posix textproc/php55-simplexml textproc/php55-wddx textproc/php55-xml textproc/php55-xmlreader textproc/php55-xmlwriter textproc/php55-xsl www/php55-opcache net-mgmt/php55-snmp
+
+#pkg install -fy devel/binutils
+
+#make CC=clang CPP=clang-cpp CXX=clang++ -C /usr/ports/devel/gettext-runtime build deinstall install reinstall
+
+#portmaster -x pkg -x gcc49 -x gcc5 -o lang/php56 lang/php5
+#portmaster -m CC=clang -m CPP=clang-cpp -m CXX=clang++ -x gcc49 -x gcc5 -x pkg -o lang/perl5.20 lang/perl5.18
+
+#portmaster -m CC=clang -m CXX=clang++ -m CPP=clang-cpp -x gcc49 -o lang/perl5.20 lang/perl5.18
+#make  CC=clang CXX=clang++ CPP=clang-cpp -C /usr/ports/lang/perl5.20 reinstall
+#make CC=clang CPP=clang-cpp CXX=clang++ -C /usr/ports/lang/perl5.20 reinstall
+
+#make CC=clang CPP=clang-cpp CXX=clang++ -C /usr/ports/lang/php56 build reinstall
+
+#/root/vlc-ffmpeg-up
+
+#echo y < portmaster -x gcc49 -x gcc5 -x pkg net-mgmt/net-snmp net-mgmt/mrtg > /root/snmpinst-log
+#portmaster -x gcc49 -x gcc5 -x pkg www/mod_php56 p5-
+
+#portmaster -x gcc5 -x binutils -x pkg -x gcc49 lang/php56 archivers/php56-bz2 misc/php56-calendar textproc/php56-ctype databases/php56-dba textproc/php56-dom graphics/php56-exif lang/php56-extensions archivers/php56-phar security/php56-hash archivers/php56-zip archivers/php56-zlib converters/php56-iconv converters/php56-mbstring converters/php56-recode databases/php56-mysql databases/php56-mysqli databases/php56-pdo databases/php56-pdo_mysql databases/php56-pdo_sqlite databases/php56-sqlite3 devel/php56-gettext devel/php56-json devel/php56-pcntl devel/php56-tokenizer ftp/php56-curl ftp/curl ftp/php56-ftp graphics/php56-gd devel/t1lib math/php56-gmp net/php56-soap www/php56-session net/php56-sockets security/php56-filter security/php56-mcrypt security/php56-openssl sysutils/php56-fileinfo sysutils/php56-posix textproc/php56-simplexml textproc/php56-wddx textproc/php56-xml textproc/php56-xmlreader textproc/php56-xmlwriter textproc/php56-xsl www/php56-opcache net-mgmt/php56-snmp
+#portmaster -x pkg -x gcc49 -x gcc5 lang/php56 www/mod_php56 graphics/pecl-imagick multimedia/ffmpeg multimedia/libav graphics/GraphicsMagick graphics/libwmf net/avahi-libdns graphics/libosmesa audio/libaacplus multimedia/libdvdcss multimedia/linux-realplayer net-mgmt/mbrowse net-mgmt/p5-SNMP-Util net-mgmt/php56-snmp net-mgmt/net-snmp  www/apache24 www/mod_php56 www/mod_perl2
+#make CC=clang CXX=clang++ CPP=clang-cpp -C /usr/ports/graphics/ImageMagick reinstall
+#make CC=clang CXX=clang++ CPP=clang-cpp -C /usr/ports/graphics/pecl-imagick reinstall
+
+#pkg delete -f lang/php55 lang/php56 mod_php56 avahi-libdns pecl-imagick libwmf  Graphic
+
+
+#portmaster -x pkg -x gcc49 -x gcc5 -m LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0.4200.2 -m CPP=clang-cpp -m CXX=clang++ -m CC=clang lang/php56 www/mod_php56 graphics/pecl-imagick multimedia/ffmpeg multimedia/libav graphics/GraphicsMagick graphics/libwmf net/avahi-libdns graphics/libosmesa audio/libaacplus multimedia/libdvdcss multimedia/linux-realplayer net-mgmt/mbrowse net-mgmt/p5-SNMP-Util net-mgmt/php56-snmp net-mgmt/net-snmp  graphics/ImageMagick  www/apache24 www/mod_php56 www/mod_perl2 lang/php56 archivers/php56-bz2 misc/php56-calendar textproc/php56-ctype databases/php56-dba textproc/php56-dom graphics/php56-exif lang/php56-extensions archivers/php56-phar security/php56-hash archivers/php56-zip archivers/php56-zlib converters/php56-iconv converters/php56-mbstring converters/php56-recode databases/php56-mysql databases/php56-mysqli databases/php56-pdo databases/php56-pdo_mysql databases/php56-pdo_sqlite databases/php56-sqlite3 devel/php56-gettext devel/php56-json devel/php56-pcntl devel/php56-tokenizer ftp/php56-curl ftp/curl ftp/php56-ftp graphics/php56-gd devel/t1lib math/php56-gmp net/php56-soap www/php56-session net/php56-sockets security/php56-filter security/php56-mcrypt security/php56-openssl sysutils/php56-fileinfo sysutils/php56-posix textproc/php56-simplexml textproc/php56-wddx textproc/php56-xml textproc/php56-xmlreader textproc/php56-xmlwriter textproc/php56-xsl www/php56-opcache net-mgmt/php56-snmp
+#make CC=clang CXX=clang++ CPP=clang-cpp -C /usr/ports/x11-toolkits/p5-Tk build reinstall
+
+   # pkg delete -f libiconv
+#cat  perl_mod_to_update | xargs portmaster -x pkg -x gcc49 -x gcc5 -m CPP=clang-cpp -m CXX=clang++ -m CC=clang
+cat  perl_mod_to_update | xargs pkg install -y
+#portmaster -x pkg -x gcc49 -x gcc5 
+cat  php7ex_to_update | xargs pkg delete -fy
+cat  php7ex_to_update | xargs pkg install -y
+#portmaster -x gcc49 -x pkg -x gcc5
+
+make -C /usr/ports/www/nginx build reinstall
+
+make -C /usr/ports/www/wordpress build reinstall
+make -C /usr/ports/databases/phpmyadmin reinstall
+#make -C /usr/ports/www/mod_php56 reinstall
+#make CC=clang CXX=clang++ CPP=clang-cpp -C /usr/ports/www/mod_perl2 reinstall
+make CC=clang CXX=clang++ CPP=clang-cpp -C /usr/ports/graphics/pecl-imagick reinstall clean
+#chmod 644 /var/db/mysql/my.cnf
+#ln -s /var/db/mysql/my.cnf /etc/mysql/my.cnf
+#/usr/local/etc/rc.d/mysql-server restart
+#cp /usr/local/www/wordpress/wp-includes/functions.php ~/www-bk/function.php.orig
+#cp /usr/local/www/wordpress/wp-content/themes/twentythirteen/functions.php ~/www-bk/functions.php.theme-orig
+#cp -R ~/www-bk/* /usr/local
+
+#make -C /usr/ports/lang/php56 reinstall
+#cp ~/www-bk/httpd.conf  /usr/local/etc/apache24/httpd.conf
+#cp ~/www-bk/footer.php /usr/local/www/wordpress/wp-content/themes/twentythirteen
+#cp ~/www-bk/header.php /usr/local/www/wordpress/wp-content/themes/twentythirteen
+#cp ~/www-bk/functions.php /usr/local/www/wordpress/wp-content/themes/twentythirteen
+#cp ~/www-bk/f.php /usr/local/www/wordpress/wp-includes/functions.php
+
+#/root/reins-php php7
+
+#apachectl restart
+service php-fpm restart
+service nginx restart
+service mysql-server restart

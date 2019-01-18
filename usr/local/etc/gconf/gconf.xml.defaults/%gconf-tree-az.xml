@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Cavab verilməyəndə zəngləri verilən qovşağa istiqamətləndir">
+								<longdesc>Seçilidirsə, zəngə cavab vermədiyiniz vaxt gələn bütün zənglər aşağıda müəyyən edilən qovşağa istiqamətləndiriləcəkdir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Məşğul olanda zəngləri verilən qovşağa istiqamətləndir">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Zəngləri həmişə verilən qovşağa istiqamətləndir">
+								<longdesc>Seçilidirsə, gələn bütün zənglər aşağıda müəyyən edilən qovşağa istiqamətləndiriləcəkdir</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP qapı aralığı">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP qapı aralığı">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Zəngləri qovşağa istiqamətləndir">
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF göndərilməsi">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="&apos;Sür&apos;ətli Başlanğıcı&apos; fəallaşdır">
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Erkən H.245 fəal">
+								<longdesc>Bu, qurğularda early H.245-i fəallaşdırır</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Dinləmə qapısı">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF göndərilməsi">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Zəngləri qovşağa istiqamətləndir">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Dinləmə qapısı">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Maksimal jitter ara yaddaşı">
+								<longdesc>Audio alımı üçün maksimal jitter ara yaddaş böyüklüyü (ms olaraq)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Sükunət aşkarını fəallaşdır">
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Audio Kodeklər Siyahısı">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Cavablama vaxt dolması olmasın">
+								<longdesc>Müəyyən bir vaxt sonra (saniyə olaraq)cavab verilməzsə gələn zəngləri rədd et ya da istiqamətləndir</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Uzaq video pəncərəsinin mövqeyi">
+									<longdesc>Uzaq video pəncərəsinin mövqeyi</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Uzaq video pəncərəsinin böyüklüyü">
+									<longdesc>Uzaq video pəncərəsinin böyüklüyü</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="Ön qurğulu video görünüşü">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Zəng vaxtında videonu göstərən pəncərələri digər pəncərələrin üstündə göstər">
+									<longdesc>Zəng vaxtında videonu göstərən pəncərələri digər pəncərələrin üstündə göstər</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Yaxınlaşdırma qiyməti">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Seçimlər pəncərəsinin böyüklüyü">
+									<longdesc>Seçimlər pəncərəsinin böyüklüyü</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Seçimlər pəncərəsinin ekrandakı mövqeyi">
+									<longdesc>Seçimlər pəncərəsinin ekrandakı mövqeyi</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Seçimlər pəncərəsinin böyüklüyü">
+									<longdesc>Seçimlər pəncərəsinin böyüklüyü</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Seçimlər pəncərəsinin ekrandakı mövqeyi">
+									<longdesc>Seçimlər pəncərəsinin ekrandakı mövqeyi</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Ünvan kitabçası pəncərəsinin böyüklüyü">
+									<longdesc>Ünvan kitabçası pəncərəsinin böyüklüyü</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Ünvan kitabçası pəncərəsinin ekrandakı mövqeyi">
+									<longdesc>Ünvan kitabçası pəncərəsinin ekrandakı mövqeyi</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Sehirbaz pəncərəsinin ekrandakı mövqeyi">
+									<longdesc>Sehirbaz pəncərəsinin ekrandakı mövqeyi</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Sehirbaz pəncərəsinin böyüklüyü">
+									<longdesc>Sehirbaz pəncərəsinin böyüklüyü</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Ana pəncərənin ekrandakı mövqeyi">
+									<longdesc>Ana pəncərənin ekrandakı mövqeyi</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Məşğul tonu səsi">
+								<longdesc>Fəaldırsa, bu səs məşğul olan birisinə zəng vurulanda ya da zənglərin sonunda çalınacaq səsi bildirir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Məşğul səsini çal">
+								<longdesc>Fəaldırsa, seçili səs məşğul olan birisinə zəng vurulanda ya da zənglərin sonunda çalınacaqdır</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema>
+								<longdesc>Fəaldırsa, başqasına zəng vuranda çalınacaq səsi bildirir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Qudok səsini çal">
+								<longdesc>Fəaldırsa, seçili səs vurulan zənglərdə çalınacaqdır</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Gələn zənglərdə səs çal">
+								<longdesc>Fəaldırsa, seçili səs gələn zənglərdə çalınacaqdır</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Gələn zəngin səsi">
+								<longdesc>Fəaldırsa, gələn zənglərdə çalınacaq səsi bildirir</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="enable_preview">
+							<local_schema short_desc="Video nümayişi">
+								<longdesc>Kamera avadanlığındakı rəsmləri göstər</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Video şəkli">
+								<longdesc>Video kameralar üçün formatı seç (Əksər USB kameralara tətbiq edilmir)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Video kanalı">
+								<longdesc>İstifadə ediləcək video kanal nömrəsi (kamera, televiziya ya da başqa mənbələri seçmək üçün)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Video böyüklüyü">
+								<longdesc>Ötürülən video böyüklüyünü seç: Kiçik (QCIF 176x144) ya da Geniş (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Video giriş avadanlığı">
+								<longdesc>İşlədiləcək video çıxış avadanlığını seçin. Əgər bu avadanlıq işlədilirkən bir xəta yaransa sınaq rəsmi göndəriləcəkdir.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Səs giriş avadanlığı">
+								<longdesc>İşlədiləcək səs giriş avadanlığını seç</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Səs çıxış avadanlığı">
+								<longdesc>İşlədiləcək səs çıxış avadanlığını seç</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Nişanlar">
+						<longdesc>gconf-editor qovluq nişanları</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="statistics">
+					<local_schema short_desc="Oynanan oyunların statistikaları">
+						<longdesc>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="İşlədiləcək oyun faylı">
+						<longdesc>Oynanacaq solitaire oyununu daxil edən sxem faylının adı.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Səs">
+						<longdesc>Hadisə səslərinin çalınması.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Vasitə çubuğunun göstərilməsi">
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Закладкі">
+						<longdesc>тэчка закладак gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Нядаўнія гульні">
+						<longdesc>Спіс нядаўніх гульняў.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Статыстыка аб згуляных партыях">
+						<longdesc>Спіс радкоў у форме пяцёркі: назва, колькасць перамог, колькасць гульняў, найлепшы час (у секундах) і найгоршы час (таксама ў секундах). Гульні, у якія не гулялі, могуць адсутнічаць.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Файл гульні">
+						<longdesc>Назва scheme-файла з пасьянснай гульнёй.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Анімацыя">
+						<longdesc>Ці трэба анімаваць перакладванне картаў.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Гук">
+						<longdesc>Ці трэба агучваць падзеі ў гульні.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Выбар спосабу кіравання">
+						<longdesc>Выбар спосабу перамяшчэння картаў: або перацягваючы іх, або пстрыкнуўшы спачатку ў патрэбную карту, а потым - у патрэбнае месца для яе.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Ці трэба паказваць стужку стану">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Ці трэба паказваць паліцу прылад">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Назва файла з матывам аздаблення">
+						<longdesc>Назва файла з графічным аздабленнем картаў.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs">
+						<entry name="mount_options">
+							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы ntfs">
+								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы ntfs.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы udf">
+								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы udf.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы iso9660">
+								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы iso9660.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Звычайныя парамэтры мацавання для файлавай сістэмы vfat">
+								<longdesc>Спіс звычайных парамэтраў мацавання для файлавай сістэмы vfat.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

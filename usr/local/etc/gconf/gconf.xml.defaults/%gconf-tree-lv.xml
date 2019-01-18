@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Zvanu vēsture">
+							<longdesc>Pēdējo 100 veikto zvanu vēsture</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP serveri">
+							<longdesc>Konfigurēto LDAP serveru saraksts</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Radīt nesaistes kontaktus">
+							<longdesc>Ja aktivēts, nesaistes kontakti būs redzami sarakstā</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Sakļautās grupas sarakstā">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Type of Service (TOS) baits izejošajās RTP IP paketēs">
+							<longdesc>Type of Service (TOS) baits izejošajām RTP IP paketēm. Šo baitu izmanto tīkls, lai nodrošinātu kaut kādu Quality of Service (QoS). Noklusēta vērtība 184 (0xB8) atbilst Expedited Forwarding (EF) PHB, kas ir  definētaRFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Kontu saraksts">
+							<longdesc>Kontu sarakts, kurus Ekiga reģistrēt</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Pārsūtīt zvanus uz norādīto datoru, ja nav atbildes">
+								<longdesc>Ja aktivēts, visi ienākošie zvani tiks pārsūtīti uz datoru, kas norādīts zemāk, ja jūs neatbildat uz zvanu</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Pārsūtīt zvanus uz norādīto datoru, ja aizņemts">
+								<longdesc>Ja aktivēts, visi ienākošie zvani tiks vienmēr pārsūtīti uz datoru, kas norādīts zemāk, ja jau notiek saruna vai arī jūs esat Aizņemts režīmā</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Vienmēr pārsūtīt zvanus uz doto datoru">
+								<longdesc>Ja aktivēts, visi ienākošie zvani tiks pārsūtīti uz datoru, kas norādīts zemāk</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP portu diapazons">
+								<longdesc>UDP portu diapazons, ko izmantos Ekiga.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP portu diapazons">
+								<longdesc>TCP portu diapazons, ko Ekiga lietos H.323 H.245 kanālam. Šis portu diapazons netiek lietots, ka abas konferences puses lieto H.245 tunelēšanu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Pārsūtīt zvanus uz datoru">
+								<longdesc>Dators, uz kuru zvani pārsūtāmi, ja aktivēta zvanu pārsūtīšana</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF sūtīšana">
+								<longdesc>Iestatiet DTMF nosūtīšanas režīmu. Iespējamās vērtības ir 0 (String), 1 (Tone), 2 (RFC2833), 3 (Q.931) (noklusējuma ir “String”). Izvēloties citas vērtību kā “String”, tiek deaktivēta teksta tērzēšana.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema short_desc="Paplašinātās video lomas">
+								<longdesc>Izvēlieties H.239 video lomu. Vērtības var būt no 0 (disable extended video), 1 (allow per content role mask), 2 (force presentation), 3 (force live role).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="Aktivēt H.245">
+								<longdesc>Tas aktivē H.239 iespējas papildu video lomām</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Aktivēt “Ātro startu”">
+								<longdesc>Savienojums tiks veidots Ātrā starta režīmā. Ātrais starts ir jauns veids, kā sākt zvanus ātrāk, kas tika ieviests H.323v2. To neatbalsta Netmeeting un, lietojot gan Ātrā starta, gan H.245 tunelēšanu reizē, var izraisīt avārijas dažās Netmeeting versijās.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Aktivēt agrāko H.245">
+								<longdesc>Šis aktivē H.245 uzstādīšanas sākumā</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Aktivēt H.245 tunelēšanu">
+								<longdesc>Šis aktivē H.245 tunelēšanas režīmu. H.245 tunelēšanas režīmā H.245 ziņas tiek iekapsulētas H.225 kanālā (ports 1720). Tas aiztaupa vienu TCP savienojumu zvanu laikā. H.245 tunelēšana tika ieviesta ar H.323v2 un to neatbalsta Netmeeting. Gan Ātrā sākuma, gan H.245 tunelēšanas vienlaicīga lietošana var izraisīt avārijas dažās Netmeeting versijās.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Klausīties portu">
+								<longdesc>Ports, kuru klausīties ienākošajiem savienojumiem. Ekiga nepieciešams pārlādēt, lai jaunās vērtības stātos spēkā.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT sasaistīšanās noildze">
+								<longdesc>Ievadiet laiku sekundēs, pēc kura Ekiga mēģinās atjaunot NAT sasaistījumu STUN lietošanas laikā</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF sūtīšana">
+								<longdesc>Iestatiet DTMF sūtīšanas režīmu. Vērtība var būt 0 (RFC2833) un 1 (INFO)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Pārsūtīt zvanus uz datoru">
+								<longdesc>Dators, uz kuru zvani pārsūtāmi, ja aktivēta zvanu pārsūtīšana</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Izejošais starpniekserveris">
+								<longdesc>SIP izejošais starpniekserveris, ko izmantot izejošajiem zvaniem</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Klausīties portu">
+								<longdesc>Ports, kuru klausīties ienākošajiem savienojumiem. Ekiga nepieciešams pārlādēt, lai jaunās vērtības stātos spēkā.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Pagaidu sadalītais kompromiss">
+								<longdesc>Vai mēģināt uzturēt maksimālo kadru ātrumu, vai to, iespējams, samazināt, lai nodrošinātu minimālo kvalitātes līmeni visiem kadriem. 0: augstākā minimālā kvalitāte, 31: zemākā minimālā kvalitāte</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Maksimālais RX video bitu pārraides ātrums">
+								<longdesc>Maksimālais RX video bitu ātrums kbiti/s. Šī vērtība tiks ziņota otram dalībniekam, lai tas varētu pielāgot savu TX bitu ātrumu, ja tas ir virs ziņotās vērtības.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Maksimālais TX video bitu pārraides ātrums">
+								<longdesc>Maksimālais TX video bitu ātrums kbiti/s. Video kvalitāte un pārsūtīto kadru daudzums sekundē tiks dinamiski pieregulēts virs to minimuma zvanu laikā, lai mēģinātu samazināt joslas platumu līdz dotajai vērtībai.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Video kodeku saraksts">
+								<longdesc>Video kodeku saraksts</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Maksimālais jitter buferis">
+								<longdesc>Maksimālais jitter bufera izmērs audio uztveršanai (ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Aktivēt atbalss slāpēšanu">
+								<longdesc>Ja aktivēts, tiks lietota atbalss slāpēšana</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Aktivēt klusuma noteikšanu">
+								<longdesc>Ja aktivēts, tiks lietota klusuma noteikšana ar kodeksiem, kas to atbalsta</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Audio kodeku saraksts">
+								<longdesc>Audio kodeku saraksts</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Izvēlētais tīkla veids vednī">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512 4: LAN, 5: Izvēles</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Automātiska atbilde">
+								<longdesc>Ja aktivēts, automātiski atbildēt uz ienākošajiem zvaniem</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="“Nav atbildes” noildze">
+								<longdesc>Automātiski noraidīt vai pārsūtīt ienākošos zvanus, ja norādītajā laika intervālā netiek dota atbilde (sekundēs)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Attālinātā video loga novietojums">
+									<longdesc>Attālinātā video loga novietojums</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Attālinātā video loga izmērs">
+									<longdesc>Attālinātā video loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Video skats pirms pārslēdzas uz pilnekrānu">
+									<longdesc>Video skats pirms pārslēdzas uz pilnekrānu (tādas pašas vērtības kā video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Noklusētais video skats">
+									<longdesc>Noklusētais video skats (0: Lokālais, 1: Attālinātais, 2: Abi, 3: Abi atsevišķos logos)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Novietot video logus virs pārējiem logiem zvana laikā">
+									<longdesc>Novietot video logus virs pārējiem logiem zvana laikā</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Mēroga vērtība">
+									<longdesc>Mēroga vērtība, kuru pielietot attēliem, kas parādīti galvenajā logā(var būt 50, 100, vai 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Norādiet programmatūras mērogošanas algoritmu">
+									<longdesc>Norādiet programmatūra mērogošanas algoritmu: 0: tuvākais kaimiņš, 1: tuvākais kaimiņš ar logu filtru, 2: bilineāru filtrēšanu, 3: hiperbolisko filtrēšanu. Neattiecas uz Windows sistēmām.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Atļaut programmatisko mērogošanu bilde-bildē">
+									<longdesc>Atļaut Ekiga atgriezties pie programmatiskas mērogošanas bilde-bildē, ja aparatūras atbalsts nav pieejams. Ja šis parametrs ir norādīts nepareizi, Ekiga nemēģinās atvērt PIP, ja aparatūras atbalsts nav pieejams.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Deaktivēt video aparatūras paātrināšanu">
+									<longdesc>Šī atslēga deaktivē DirectX (uz win32) un XVideo (uz Linux) video aparatūras paātrināšanu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Iestatījumu loga izmērs">
+									<longdesc>Iestatījumu loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Iestatījumu loga novietojums uz ekrāna">
+									<longdesc>Iestatījumu loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Iestatījumu loga izmērs">
+									<longdesc>Iestatījumu loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Iestatījumu loga novietojums uz ekrāna">
+									<longdesc>Iestatījumu loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Video iestatījumu loga izmērs">
+									<longdesc>Video iestatījumu loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Video iestatījumu loga novietojums uz ekrāna">
+									<longdesc>Video iestatījumu loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Audio iestatījumu loga izmērs">
+									<longdesc>Audio iestatījumu loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Audio iestatījumu loga novietojums uz ekrāna">
+									<longdesc>Audio iestatījumu loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Adrešu grāmatas loga izmērs">
+									<longdesc>Adrešu grāmatas loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Adrešu grāmatiņas loga novietojums uz ekrāna">
+									<longdesc>Adrešu grāmatiņas loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Vedņa loga novietojums uz ekrāna">
+									<longdesc>Vedņa loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Vedņa loga izmērs">
+									<longdesc>Vedņa loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Tērzēšanas loga novietojums uz ekrāna">
+									<longdesc>Tērzēšanas loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Tērzēšanas loga izmērs">
+									<longdesc>Tērzēšanas loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Mainīt galvenā loga paneļa sadaļu">
+									<longdesc>Mainīt galvenā loga paneļa sadaļu (0=Kontakti, 1=Ciparnīca, 2=Zvanu vēsture)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Galvenā loga novietojums uz ekrāna">
+									<longdesc>Galvenā loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="Zvana loga izmērs">
+									<longdesc>Zvana loga izmērs</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Zvana loga novietojums uz ekrāna">
+									<longdesc>Zvana loga novietojums uz ekrāna</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Aktivēt STUN tīkla noteikšanu">
+								<longdesc>Aktivēt automātiskus tīkla iestatījumu rezultātus no STUN testa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN serveris">
+								<longdesc>STUN serveris STUN atbalstam. STUN ir metode, kas ļauj iziet cauri dažiem NAT vārteju viediem</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="“Aizņemts” signāla skaņa">
+								<longdesc>Skaņa, ko atskaņot zvana beigās vai zvanot kādam, kas ir aizņemts, ja aktivēts</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Atskaņot “aizņemts” signālu">
+								<longdesc>Ja aktivēts, beidzot sarunu, vai zvanot kādam, kas ir aizņemts, tiks atskaņota izvēlētā skaņa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Centrāles gatavības signāla skaņa">
+								<longdesc>Skaņa, ko atskaņot zvanot kādam, ja aktivēts</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Atskaņot zvana signālu">
+								<longdesc>Ja aktivēts, veicot zvanu, tiks atskaņota izvēlētā skaņa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Atskaņot skaņu jauna balss pasta ziņojuma laikā">
+								<longdesc>Ja aktivēts, saņemot jaunu balss pasta ziņojumu, tiks atskaņota izvēlētā skaņa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Jauna balss pasta ziņojuma skaņa">
+								<longdesc>Skaņa, ko atskaņot saņemot jaunu balss pasta ziņojumu, ja aktivēts</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Atskaņot skaņu jauna ziņojuma laikā">
+								<longdesc>Ja aktivēts, saņemot jaunu tūlītējo ziņojumu, tiks atskaņota izvēlētā skaņa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Jauna tūlītējā ziņojuma skaņa">
+								<longdesc>Skaņa, ko atskaņot saņemot jaunu tūlītējo ziņojumu, ja aktivēts</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Atskaņot skaņu ienākošo zvanu laikā">
+								<longdesc>Ja aktivēts, saņemot zvanu, tiks atskaņota izvēlētā skaņa</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Ienākošā zvana skaņa">
+								<longdesc>Skaņa, ko atskaņot saņemot ienākošo zvanu, ja aktivēts</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Izvēles audio atskaņošanas ierīce">
+								<longdesc>Izvēlieties citu audio atskaņošanas ierīci skaņas notikumiem.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Kontaktu garais statuss">
+								<longdesc>Rediģēt garā statusa informāciju</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Kontaktu īsais statuss">
+								<longdesc>Īsā statusa informācija</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Pilns vārds">
+								<longdesc>Ievadiet savu vārdu un uzvārdu</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Kadru biežums">
+								<longdesc>Maksimālais nosūtīto kadru ātrums (kadri sekundē). Šis ātrums var netikt sasniegts, ja minimālā kvalitāte tika konfigurēta caur TSTO vērtību, kura ir mazāka kā 31 un izvēlētais bitu ātrums nav pietiekams, lai atbalstītu minimālo kvalitāti.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Video priekšskatījums">
+								<longdesc>Parādīt attēlus no jūsu video kameras</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Video formāts">
+								<longdesc>Izvēlieties video kameras formātu (neattiecas uz lielāko daļu USB kameru)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Video kanāls">
+								<longdesc>Lietojamā video kanāla numurs (izvēloties kameru, tv vai citus avotus)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Video izmērs">
+								<longdesc>Izvēlieties pārsūtāmā video izmēru: mazs (QCIF 176x144) vai liels (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Video ierakstīšanas ierīce">
+								<longdesc>Izvēlieties izmantojamo ierakstīšanas ierīci. Ja gadīsies kļūda lietojot šo ierīci, tiks pārraidīts pārbaudes attēls.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Audio ierakstīšanas ierīce">
+								<longdesc>Izvēlieties lietojamo audio ierakstīšanas ierīci</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Audio atskaņošanas ierīce">
+								<longdesc>Izvēlieties lietojamo audio atskaņošanas ierīci</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Grāmatzīmes">
+						<longdesc>gconf-editor mapju grāmatzīmes</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Nesen spēlētās spēles">
+						<longdesc>Nesen spēlēto spēļu saraksts.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Spēlēto spēļu statistika">
+						<longdesc>Saraksts ar rindām, kuras nāk pa pieciniekiem: vārds, uzvaras, pavisam spēlētās spēles, labākais laiks (sekundēs) un sliktākais laiks (arī sekundēs). Nespēlētās spēles nav nepieciešams atspoguļot.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Spēles datne, ko izmantot">
+						<longdesc>Shēmas datnes nosaukums, kas satur spēlējamo solitaire spēli.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animācijas">
+						<longdesc>Vai attēlot kāršu kustību.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Skaņa">
+						<longdesc>Vai atskaņot notikumu skaņas.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Izvelieties vadības stilu">
+						<longdesc>Izvēlieties, vai pārvilksiet kārtis, vai arī klikšķināsiet vispirms uz vienas un tad uz otras kārts.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Vai rādīt statusa joslu">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Vai rādīt rīkjoslu">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Motīva datnes nosaukums">
+						<longdesc>Kāršu attēlu saturošās datnes nosaukums.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš ntfs-3g fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar ntfs failu sistēmu izmantojot ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="Kādu failu sistēmas dzini izmantot kā noklusēto, kad &apos;ntfs&apos; ir atklāts">
+								<longdesc>Kādu failu sistēmas dzini izmantot kā noklusēto kad &apos;ntfs&apos; ir atklāts. Šis ir noderīgi konfigurējot sistēmu &apos;ntfs-3g&apos;&apos;dziņa lietošanai visām &apos;ntfs&apos; failu sistēmām pēc noklusējuma. Lietotājs var izvēlēties &apos;ntfs&apos; failu sistēmas draiveri uzstādot to atsevišķi katram sējuma caur komandrindu.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš ntfs-fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar ntfs failu sistēmu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš udf fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar udf failu sistēmu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš iso9660 fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar iso9660 failu sistēmu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Noklusētās montēšanas opcijas priekš vfat fs">
+								<longdesc>Saraksts ar noklusētājām montēšanas opcijām priekš sējumiem, kas noformatēti ar vfat failu sistēmu.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

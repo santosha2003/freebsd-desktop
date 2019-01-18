@@ -1,0 +1,3535 @@
+<gconfschemafile>
+  <schemalist>
+
+    <schema>
+      <key>/schemas/apps/aisleriot/card_style</key>
+      <applyto>/apps/aisleriot/card_style</applyto>
+      <owner>aisleriot</owner>
+      <type>string</type>
+      <default></default>
+      <locale name="C">
+        <short>Theme file name</short>
+        <long>The name of the file with the graphics for the cards.</long>
+      </locale>
+
+      <locale name="af">
+        <short>Temalêernaam</short>
+        <long>Die naam van die lêer met die grafika vir die kaarte.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>اسم ملف التّيمة</short>
+        <long>اسم الملف الحاوي على رسوم الورق.</long>
+      </locale>
+
+      <locale name="as">
+        <short>থীম ফাইলৰ নাম</short>
+        <long>যি ফাইলত তাচৰ গ্ৰাফিক্স আছে তাৰ নাম।</long>
+      </locale>
+
+      <locale name="ast">
+        <short>Nome del ficheru del tema</short>
+        <long>Nome del ficheru coles imáxenes pa les cartes</long>
+      </locale>
+
+      <locale name="be">
+        <short>Назва файла з матывам аздаблення</short>
+        <long>Назва файла з графічным аздабленнем картаў.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Име на файла с темата</short>
+        <long>Името на файла с графиките за картите.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>থীম ফাইলের নাম</short>
+        <long>তাসের সঙ্গে ব্যবহারের জন্য চিহ্নিত গ্রাফিক্স ধারণকারী ফাইলের নাম।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>থিম ফাইলের নাম</short>
+        <long>তাসের সঙ্গে ব্যবহারের জন্য চিহ্নিত গ্রাফিক্স ধারণকারী ফাইলের নাম।</long>
+      </locale>
+
+      <locale name="br">
+        <short>Anv ar restr neuz</short>
+        <long>Anv ar restr gant grafek ar c&apos;hartennoù</long>
+      </locale>
+
+      <locale name="bs">
+        <short>Ime datoteke sa temom</short>
+        <long>Ime datoteke sa slikama za karte.</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Nom del fitxer de tema</short>
+        <long>El nom del fitxer amb les imatges de les cartes.</long>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>Nom del fitxer de tema</short>
+        <long>El nom del fitxer amb les imatges de les cartes.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Název souboru motivu</short>
+        <long>Název souboru s grafikou karet.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Enw&apos;r ffeil thema</short>
+        <long>Enw&apos;r ffeil sy&apos;n cynnwys y delweddau ar gyfer y cardiau.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Temafilnavn</short>
+        <long>Navnet på filen med grafikken til kortene.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Name der Themadatei</short>
+        <long>Der Name der Datei, die die grafische Gestaltung der Karten festlegt.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>བརྗོད་དོན་གྱི་ཡིག་སྣོད་མིང་།</short>
+        <long>ཏ་སེ་གི་ཚད་རིས་དང་སྦྲགས་པའི་ ཡིག་སྣོད་ཀྱི་མིང་།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Όνομα του αρχείου θέματος</short>
+        <long>Το όνομα του αρχείου με τα γραφικά για τα χαρτιά.</long>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑔𐑰𐑥 𐑓𐑲𐑤 𐑯𐑱𐑥</short>
+        <long>𐑞 𐑯𐑱𐑥 𐑝 𐑞 𐑓𐑲𐑤 𐑢𐑦𐑞 𐑞 𐑜𐑮𐑨𐑓𐑦𐑒𐑕 𐑓𐑹 𐑞 𐑒𐑸𐑛𐑟.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Theme file name</short>
+        <long>The name of the file with the graphics for the cards.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Theme file name</short>
+        <long>The name of the file with the graphics for the cards.</long>
+      </locale>
+
+      <locale name="eo">
+        <short>Etosa dosiernomo</short>
+        <long>La nomo de la dosiero kun la bildoj de la ludkartoj.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Nombre del archivo del tema</short>
+        <long>El nombre del archivo con las imágenes para las cartas.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Teemafaili nimi</short>
+        <long>Kaardigraafika faili nimi.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Gai-fitxategiaren izena</short>
+        <long>Karten grafikoak dituen fitxategiaren izena.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>نام پرونده‌ی تم</short>
+        <long>نام پرونده‌ی گرافیک کارت‌ها.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Teematiedoston nimi</short>
+        <long>Korttien kuvagrafiikka-tiedoston nimi.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Le nom de fichier du thème</short>
+        <long>Le nom du fichier contenant les graphismes des cartes.</long>
+      </locale>
+
+      <locale name="fur">
+        <short>Il non dal file di teme</short>
+        <long>Il non dal file che al ten la grafiche pes cjartis.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Nome de ficheiro de tema</short>
+        <long>O nome de ficheiro coas imaxes para as cartas.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>થીમની ફાઇલનું નામ</short>
+        <long>પાનાઓ માટે માટે ફાઈલનું નામ ગ્રાફિક્સ સાથે.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Theme file name</short>
+        <long>The name of the file with the graphics for the cards.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>प्रसंग फाइल नाम</short>
+        <long>पत्तों हेतु ग्राफ़िक्स सहित फ़ाइल का नाम.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Naziv datoteke teme</short>
+        <long>Naziv datoteke koja sadrži grafiku karata.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Témafájl neve</short>
+        <long>A kártyákhoz használt grafika fájlneve.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Nama berkas tema</short>
+        <long>Nama berkas dengan grafis untuk kartu.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Heiti þemaskráar</short>
+        <long>Heiti skráarinnar sem geymir myndir fyrir spilin.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Il nome del file di tema</short>
+        <long>Il nome del file contenente la grafica per le carte.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>テーマファイルの名前</short>
+        <long>カードの絵柄を格納したファイルの名前です。</long>
+      </locale>
+
+      <locale name="ka">
+        <short>თემის ფაილის სახელი</short>
+        
+      </locale>
+
+      <locale name="km">
+        <short>ឈ្មោះ​ឯកសារ​ស្បែក</short>
+        <long>ឈ្មោះ​របស់​ឯកសារ​ដែល​មាន​ក្រាហ្វិក​សម្រាប់​បៀ ។</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ವಿನ್ಯಾಸ ಕಡತದ ಹೆಸರು</short>
+        <long>ಎಲೆಗಳಿಗಾಗಿನ ಗ್ರಾಫಿಕ್ಸುಗಳನ್ನು ಹೊಂದಿರುವ ಕಡತದ ಹೆಸರು.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>테마 파일 이름</short>
+        <long>카드의 그래픽이 들어 있는 파일의 이름.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Temos failo pavadinimas</short>
+        <long>Failo, saugančio kortų grafiką, pavadinimas.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Motīva datnes nosaukums</short>
+        <long>Kāršu attēlu saturošās datnes nosaukums.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>प्रसंग फाइलक नाम</short>
+        <long>पत्ता क&apos; लेल ग्राफ़िक्स सहित फ़ाइल क&apos; नाम.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Име на датотеката со тема</short>
+        <long>Името на датотеката со графиката за картите.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>പ്രമേയത്തിനുള്ള ഫയലിന്റെ പേര്</short>
+        <long>ചീട്ടുകള്‍ക്കായുള്ള ഗ്രാഫിക്സിനുള്ള ഫയലിന്റെ പേര്.</long>
+      </locale>
+
+      <locale name="mr">
+        <short>थीम फाईलचे नाव</short>
+        <long>पत्त्यांकरीता आरेखने असलेल्या फाईलचे नांव.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Nama fail tema</short>
+        <long>Nama fail  yg mengandungi grafik untuk kad.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Navn på temafil</short>
+        <long>Navn på grafikkfil for kortene.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>विषयवस्तु फाइल नाम</short>
+        <long>तासका लागि ग्राफिक्स भएको फाइलको नाम ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Naam van themabestand</short>
+        <long>De naam van het bestand met de plaatjes van de kaarten.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Draktfilnamnet</short>
+        <long>Namn på fila som inneheld grafikken til filene.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Nom del fichièr de tèma</short>
+        <long>Lo nom del fichièr que cap los grafismes de las cartas.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଥିମ ଫାଇଲ ନାମ</short>
+        <long>କାର୍ଡଗୁଡିକ ପାଇଁ ଗ୍ରାଫିକ୍ସ ସହିତ ଫାଇଲର ନାମ </long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਥੀਮ ਫਾਇਲ ਨਾਂ</short>
+        <long>ਖੇਡਣ ਲਈ ਕਾਨੂੰਨਾਂ ਦੇ ਬਦਲਾਓ ਵਾਲੀ ਨਿਯਮ ਫਾਇਲ ਦਾ ਨਾਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Nazwa pliku motywu</short>
+        <long>Nazwa pliku zawierającego grafikę dla kart.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Nome do ficheiro de tema</short>
+        <long>O nome do ficheiro que contém os gráficos para as cartas.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Nome do arquivo de tema</short>
+        <long>O nome do arquivo com os desenhos para as cartas.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Numele fișierului temă</short>
+        <long>Numele fișierului cu grafica pentru cărți.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Имя файла темы</short>
+        <long>Имя файла с изображениями карт.</long>
+      </locale>
+
+      <locale name="si">
+        <short>තේමා ගොනු නම</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>Názov súboru témy</short>
+        <long>Názov súboru s grafikou kariet.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Ime datoteke s temo</short>
+        <long>Ime datoteke s slikovno podobo kart.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Emri i file-it së temës</short>
+        <long>Emri i file-it që përmban figurat e letrave.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Датотека са темом</short>
+        <long>Назив датотеке са сликама за карте.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Datoteka sa temom</short>
+        <long>Naziv datoteke sa slikama za karte.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Temafilnamn</short>
+        <long>Namnet på filen som innehåller grafiken för korten.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>கரு கோப்பின் பெயர்</short>
+        <long>சீட்டுகளுக்கான வரைபடத்துடன் உள்ள கோப்பின் பெயர்.</long>
+      </locale>
+
+      <locale name="te">
+        <short>వైవిధ్యాంశ దస్త్రనామము</short>
+        <long>పేకలుకొరకు ఉన్న చిత్రాల దస్త్రనామము </long>
+      </locale>
+
+      <locale name="th">
+        <short>ชื่อแฟ้มชุดตกแต่ง</short>
+        <long>ชื่อของแฟ้มที่เก็บรูปภาพสำรับไพ่</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Tema dosyasının ismi</short>
+        <long>Kartlar için grafikleri içeren dosyanın adı.</long>
+      </locale>
+
+      <locale name="ug">
+        <short>ئۆرنەك ھۆججىتى ئاتى</short>
+        <long>قارتاغا ئىشلەتكەن گرافىكنىڭ ھۆججەت ئاتى.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Назва файлу теми</short>
+        <long>Назва файлу із зображенням карт.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Tên tập tin sắc thái</short>
+        <long>Tên tập tin chứa đồ họa cho bài.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Umxholo wegama lefayili</short>
+        <long>Igama lefayili enemizobo yamakhadi.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>主题文件名</short>
+        <long>纸牌所用图案的文件名。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>佈景主題檔案名稱</short>
+        <long>載有啤牌圖片的檔案的名稱。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>佈景主題檔案名稱</short>
+        <long>載有紙牌影像的檔案的名稱。</long>
+      </locale>
+     </schema>
+
+    <schema>
+      <key>/schemas/apps/aisleriot/show_toolbar</key>
+      <applyto>/apps/aisleriot/show_toolbar</applyto>
+      <owner>aisleriot</owner>
+      <type>bool</type>
+      <default>TRUE</default>
+      <locale name="C">
+        <short>Whether or not to show the toolbar</short>
+      </locale>
+
+      <locale name="af">
+        <short>Of die nutsbalk gewys moet word of nie</short>
+      </locale>
+
+      <locale name="ar">
+        <short>فيما إذا سيظهر شريط الأدوات أم لا</short>
+      </locale>
+
+      <locale name="as">
+        <short>টুলবাৰ প্ৰদৰ্শন কৰা হ&apos;ব নে</short>
+      </locale>
+
+      <locale name="ast">
+        <short>Amosar o anubrir la barra de ferramientes</short>
+      </locale>
+
+      <locale name="az">
+        <short>Vasitə çubuğunun göstərilməsi</short>
+      </locale>
+
+      <locale name="be">
+        <short>Ці трэба паказваць паліцу прылад</short>
+      </locale>
+
+      <locale name="bg">
+        <short>Дали да бъде показана лентата с инструменти.</short>
+      </locale>
+
+      <locale name="bn">
+        <short>টুল-বার প্রদর্শন করা হবে কি না</short>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>টুল-বার প্রদর্শন করা হবে কি না</short>
+      </locale>
+
+      <locale name="bs">
+        <short>Da li prikazivati paletu alata</short>
+      </locale>
+
+      <locale name="ca">
+        <short>Si s&apos;ha de mostrar la barra d&apos;eines</short>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>Si s&apos;ha de mostrar la barra d&apos;eines</short>
+      </locale>
+
+      <locale name="cs">
+        <short>Zda zobrazovat nebo nezobrazovat lištu nástrojů</short>
+      </locale>
+
+      <locale name="cy">
+        <short>A ddylid dangos y bar offer</short>
+      </locale>
+
+      <locale name="da">
+        <short>Om værktøjslinjen skal vises</short>
+      </locale>
+
+      <locale name="de">
+        <short>Legt fest, ob die Werkzeugleiste angezeigt wird</short>
+      </locale>
+
+      <locale name="dz">
+        <short>ལག་ཆས་ཕྲ་རིང་སྟོན་དགོ་ག་མིན་དགོ</short>
+      </locale>
+
+      <locale name="el">
+        <short>Αν θα εμφανίζεται ή όχι η εργαλειοθήκη</short>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑢𐑧𐑞𐑼 𐑹 𐑯𐑪𐑑 𐑑 𐑖𐑴 𐑞 𐑑𐑵𐑤𐑚𐑸</short>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Whether or not to show the toolbar</short>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Whether to show the toolbar</short>
+      </locale>
+
+      <locale name="eo">
+        <short>Ĉu montri ilobreton?</short>
+      </locale>
+
+      <locale name="es">
+        <short>Mostrar u ocultar la barra de herramientas</short>
+      </locale>
+
+      <locale name="et">
+        <short>Kas tööriistariba on nähtaval või peidus</short>
+      </locale>
+
+      <locale name="eu">
+        <short>Tresna-barra erakutsiko den ala ez adierazten du.</short>
+      </locale>
+
+      <locale name="fa">
+        <short>این که نوار ابزار نشان داده شود یا نه</short>
+      </locale>
+
+      <locale name="fi">
+        <short>Tulisiko näyttää työkalupalkki</short>
+      </locale>
+
+      <locale name="fr">
+        <short>Indique s’il faut afficher ou non la barre d’outils</short>
+      </locale>
+
+      <locale name="fur">
+        <short>Indiche se mostrâ o mancul la sbare dai struments</short>
+      </locale>
+
+      <locale name="gl">
+        <short>Indica se se mostra ou non a barra de ferramentas</short>
+      </locale>
+
+      <locale name="gu">
+        <short>સાધન દર્શાવતી પટ્ટી દર્શાવવી કે નહિ</short>
+      </locale>
+
+      <locale name="he">
+        <short>Whether or not to show the toolbar</short>
+      </locale>
+
+      <locale name="hi">
+        <short>उपकरण-पट्टी दिखाएँ या नहीं</short>
+      </locale>
+
+      <locale name="hr">
+        <short>Treba li ili ne prikazati alatnu traku</short>
+      </locale>
+
+      <locale name="hu">
+        <short>Megjelenjen-e az eszköztár</short>
+      </locale>
+
+      <locale name="id">
+        <short>Apakah akan menampilkan bilah alat</short>
+      </locale>
+
+      <locale name="is">
+        <short>Hvort sýna á hnappastikuna eða ekki</short>
+      </locale>
+
+      <locale name="it">
+        <short>Indica se mostrare o meno la barra degli strumenti</short>
+      </locale>
+
+      <locale name="ja">
+        <short>ツールバーを表示するかどうか</short>
+      </locale>
+
+      <locale name="km">
+        <short>ថា​តើ​ត្រូវ​បង្ហាញ​របារ​ឧបករណ៍​ដែរ​ឬ​ទេ</short>
+      </locale>
+
+      <locale name="kn">
+        <short>ಉಪಕರಣ ಪಟ್ಟಿಯನ್ನು ತೋರಿಸಬೇಕೆ ಅಥವ ಬೇಡವೆ</short>
+      </locale>
+
+      <locale name="ko">
+        <short>도구 모음을 표시합니다</short>
+      </locale>
+
+      <locale name="lt">
+        <short>Ar rodyti įrankių juostą</short>
+      </locale>
+
+      <locale name="lv">
+        <short>Vai rādīt rīkjoslu</short>
+      </locale>
+
+      <locale name="mai">
+        <short>की अओजारपट्टी देखओनाइ अछि अथवा नहि.</short>
+      </locale>
+
+      <locale name="mk">
+        <short>Дали да ја покажува лентата со алатки.</short>
+      </locale>
+
+      <locale name="ml">
+        <short>ടൂള്‍ ബാര്‍ കാണിക്കണമോ എന്ന്</short>
+      </locale>
+
+      <locale name="mn">
+        <short>Багаж самбар харуулах эсэх</short>
+      </locale>
+
+      <locale name="mr">
+        <short>साधनपट्टी दर्शवायची की नाही</short>
+      </locale>
+
+      <locale name="ms">
+        <short>Samada papar atau sembunyikan toolbar</short>
+      </locale>
+
+      <locale name="nb">
+        <short>Om verktøylinjen skal vises eller ikke</short>
+      </locale>
+
+      <locale name="ne">
+        <short>उपकरणपट्टीलाई देखाउने या नदेखाउने</short>
+      </locale>
+
+      <locale name="nl">
+        <short>Of de werkbalk al dan niet wordt getoond</short>
+      </locale>
+
+      <locale name="nn">
+        <short>Om verktøylinja skal visast eller ikkje</short>
+      </locale>
+
+      <locale name="oc">
+        <short>Indica se cal afichar o pas la barra d&apos;aisinas</short>
+      </locale>
+
+      <locale name="or">
+        <short>ଟୁଲବାର ଦର୍ଶାୟିବ କି ନାହିଁ </short>
+      </locale>
+
+      <locale name="pa">
+        <short>ਟੂਲਬਾਰ ਹੋਵੇ ਜਾਂ ਨਹੀਂ</short>
+      </locale>
+
+      <locale name="pl">
+        <short>Określa, czy wyświetlać pasek narzędziowy</short>
+      </locale>
+
+      <locale name="pt">
+        <short>Se mostrar ou não a barra de ferramentas</short>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Mostrar a barra de ferramentas</short>
+      </locale>
+
+      <locale name="ro">
+        <short>Dacă să se arate bara de instrumente</short>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать ли панель инструментов</short>
+      </locale>
+
+      <locale name="sk">
+        <short>Určuje, či sa má zobraziť lišta nástrojov</short>
+      </locale>
+
+      <locale name="sl">
+        <short>Ali naj bo prikazana orodna vrstica</short>
+      </locale>
+
+      <locale name="sq">
+        <short>Të shfaqet apo jo kutiza e veglave</short>
+      </locale>
+
+      <locale name="sr">
+        <short>Да ли приказивати палету алата</short>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Da li prikazivati paletu alata</short>
+      </locale>
+
+      <locale name="sv">
+        <short>Huruvida verktygsfältet ska visas eller inte</short>
+      </locale>
+
+      <locale name="ta">
+        <short>கருவிபட்டியை காண்பிக்கவா அல்லது வேண்டாமா</short>
+      </locale>
+
+      <locale name="te">
+        <short>పనిముట్ల పట్టీని చూపించాలా... లేదా...</short>
+      </locale>
+
+      <locale name="th">
+        <short>จะแสดงแถบเครื่องมือหรือไม่</short>
+      </locale>
+
+      <locale name="tr">
+        <short>Araç çubuğunu göster veya gizle</short>
+      </locale>
+
+      <locale name="ug">
+        <short>قورال بالداقنى كۆرسىتەمدۇ يوق</short>
+      </locale>
+
+      <locale name="uk">
+        <short>Чи показувати панель інструментів</short>
+      </locale>
+
+      <locale name="vi">
+        <short>Hiển thị hay ẩn thanh công cụ</short>
+      </locale>
+
+      <locale name="xh">
+        <short>Nokuba ngaba iboniswe na i-toolbar</short>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>是否显示工具栏</short>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>是否顯示工具列</short>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>是否顯示工具列</short>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/aisleriot/show_statusbar</key>
+      <applyto>/apps/aisleriot/show_statusbar</applyto>
+      <owner>aisleriot</owner>
+      <type>bool</type>
+      <default>TRUE</default>
+      <locale name="C">
+        <short>Whether or not to show the status bar</short>
+      </locale>
+
+      <locale name="af">
+        <short>Of die statusbalk getoon moet word of nie</short>
+      </locale>
+
+      <locale name="ar">
+        <short>فيما إذا سيظهر شريط الحالة أم لا</short>
+      </locale>
+
+      <locale name="as">
+        <short>টুলবাৰ প্ৰদৰ্শন কৰা হ&apos;ব নে</short>
+      </locale>
+
+      <locale name="ast">
+        <short>Cuándo o non amosar la barra d&apos;estáu</short>
+      </locale>
+
+      <locale name="be">
+        <short>Ці трэба паказваць стужку стану</short>
+      </locale>
+
+      <locale name="bg">
+        <short>Дали да бъде показана лентата за състоянието.</short>
+      </locale>
+
+      <locale name="bn">
+        <short>অবস্থাসূচক-বার প্রদর্শন করা হবে কি না</short>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>অবস্থাসূচক-বার প্রদর্শন করা হবে কি না</short>
+      </locale>
+
+      <locale name="bs">
+        <short>Prikazati statusnu traku ili ne.</short>
+      </locale>
+
+      <locale name="ca">
+        <short>Si s&apos;ha de mostrar la barra d&apos;estat</short>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>Si s&apos;ha de mostrar la barra d&apos;estat</short>
+      </locale>
+
+      <locale name="cs">
+        <short>Zda zobrazovat nebo nezobrazovat stavovou lištu</short>
+      </locale>
+
+      <locale name="cy">
+        <short>A ddylid dangos y bar statws</short>
+      </locale>
+
+      <locale name="da">
+        <short>Om statuslinjen skal vises</short>
+      </locale>
+
+      <locale name="de">
+        <short>Legt fest, ob die Statusleiste angezeigt wird</short>
+      </locale>
+
+      <locale name="el">
+        <short>Αν θα εμφανίζεται ή όχι η γραμμή κατάστασης</short>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑢𐑧𐑞𐑼 𐑹 𐑯𐑪𐑑 𐑑 𐑖𐑴 𐑞 𐑕𐑑𐑱𐑑𐑫𐑕 𐑚𐑸</short>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Whether or not to show the status bar</short>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Whether to show the status bar</short>
+      </locale>
+
+      <locale name="eo">
+        <short>Ĉu montri statobreton?</short>
+      </locale>
+
+      <locale name="es">
+        <short>Indica si se debe mostrar la barra de estado</short>
+      </locale>
+
+      <locale name="et">
+        <short>Kas olekuriba on nähtaval või peidus</short>
+      </locale>
+
+      <locale name="eu">
+        <short>Egoera-barra erakutsiko den ala ez adierazten du.</short>
+      </locale>
+
+      <locale name="fa">
+        <short>این که نوار وضعیت نشان داده شود یا نه</short>
+      </locale>
+
+      <locale name="fi">
+        <short>Näytetäänkö tilarivi</short>
+      </locale>
+
+      <locale name="fr">
+        <short>Indique s’il faut afficher la barre d’état</short>
+      </locale>
+
+      <locale name="fur">
+        <short>Indiche se mostrâ o mancul la sbare di stât</short>
+      </locale>
+
+      <locale name="gl">
+        <short>Indica se se mostra ou non a barra de estado</short>
+      </locale>
+
+      <locale name="gu">
+        <short>ક્યાંતો સાધન દર્શાવતી પટ્ટી દર્શાવવી કે નહિ</short>
+      </locale>
+
+      <locale name="he">
+        <short>Whether or not to show the status bar</short>
+      </locale>
+
+      <locale name="hi">
+        <short>स्थिति-पट्टी दिखाएँ या नहीं</short>
+      </locale>
+
+      <locale name="hr">
+        <short>Treba li ili ne prikazati statusnu traku</short>
+      </locale>
+
+      <locale name="hu">
+        <short>Megjelenjen-e az eszköztár</short>
+      </locale>
+
+      <locale name="id">
+        <short>Apakah akan menampilkan bilah status</short>
+      </locale>
+
+      <locale name="is">
+        <short>Hvort sýna á stöðustikuna eða ekki</short>
+      </locale>
+
+      <locale name="it">
+        <short>Indica se mostrare o meno la barra di stato</short>
+      </locale>
+
+      <locale name="ja">
+        <short>ステータスバーを表示するかどうか</short>
+      </locale>
+
+      <locale name="km">
+        <short>ថា​តើ​ត្រូវ​បង្ហាញ​របារ​ស្ថានភាព​ដែរ​ឬ​ទេ</short>
+      </locale>
+
+      <locale name="kn">
+        <short>ಸ್ಥಿತಿ ಪಟ್ಟಿಯನ್ನು ತೋರಿಸಬೇಕೆ ಅಥವ ಬೇಡವೆ</short>
+      </locale>
+
+      <locale name="ko">
+        <short>상태 표시줄을 표시합니다</short>
+      </locale>
+
+      <locale name="lt">
+        <short>Ar rodyti būsenos juostą</short>
+      </locale>
+
+      <locale name="lv">
+        <short>Vai rādīt statusa joslu</short>
+      </locale>
+
+      <locale name="mk">
+        <short>Дали да се покажува статусната лента</short>
+      </locale>
+
+      <locale name="ml">
+        <short>അവസ്ഥാപട്ട കാണിക്കണമോ എന്ന്</short>
+      </locale>
+
+      <locale name="mr">
+        <short>स्थितीपट्टी दर्शवायची अथवा नाही</short>
+      </locale>
+
+      <locale name="nb">
+        <short>Om statuslinjen skal vises eller ikke</short>
+      </locale>
+
+      <locale name="nl">
+        <short>Of de statusbalk al dan niet wordt getoond</short>
+      </locale>
+
+      <locale name="nn">
+        <short>Om statuslinja skal visast eller ikkje</short>
+      </locale>
+
+      <locale name="oc">
+        <short>Indica se cal afichar la barra d&apos;estat</short>
+      </locale>
+
+      <locale name="or">
+        <short>ସ୍ଥିତିପଟିକୁ ଦର୍ଶାଯିବା ଉଚିତ କି ନୁହଁ</short>
+      </locale>
+
+      <locale name="pa">
+        <short>ਕੀ ਹਾਲਤ-ਪੱਟੀ ਵੇਖਣੀ ਹੈ ਜਾਂ ਨਹੀਂ</short>
+      </locale>
+
+      <locale name="pl">
+        <short>Określa, czy wyświetlać pasek stanu</short>
+      </locale>
+
+      <locale name="pt">
+        <short>Se mostrar ou não a barra de estado</short>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Mostrar a barra de status</short>
+      </locale>
+
+      <locale name="ro">
+        <short>Dacă să se arate bara de statistici.</short>
+      </locale>
+
+      <locale name="ru">
+        <short>Показывать ли панель состояния</short>
+      </locale>
+
+      <locale name="sk">
+        <short>Určuje, či sa má zobraziť stavový panel</short>
+      </locale>
+
+      <locale name="sl">
+        <short>Ali naj bo prikazana vrstica stanja</short>
+      </locale>
+
+      <locale name="sr">
+        <short>Да ли приказати траку стања</short>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Da li prikazati traku stanja</short>
+      </locale>
+
+      <locale name="sv">
+        <short>Huruvida statusraden ska visas eller inte</short>
+      </locale>
+
+      <locale name="ta">
+        <short>இருப்பு நிலை   பட்டியை காட்டுவதா இல்லையா</short>
+      </locale>
+
+      <locale name="te">
+        <short>స్థితి పట్టీ చూపాలావద్దా</short>
+      </locale>
+
+      <locale name="th">
+        <short>จะแสดงแถบสถานะหรือไม่</short>
+      </locale>
+
+      <locale name="tr">
+        <short>Durum çubuğunu göster veya gizle</short>
+      </locale>
+
+      <locale name="ug">
+        <short>ھالەت بالداقنى كۆرسىتەمدۇ يوق</short>
+      </locale>
+
+      <locale name="uk">
+        <short>Чи показувати рядок стану</short>
+      </locale>
+
+      <locale name="vi">
+        <short>Có nên hiển thị thanh trạng thái hay không</short>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>是否显示状态栏</short>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>是否顯示狀態列</short>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>是否顯示狀態列</short>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/aisleriot/click_to_move</key>
+      <applyto>/apps/aisleriot/click_to_move</applyto>
+      <owner>aisleriot</owner>
+      <type>bool</type>
+      <default>FALSE</default>
+      <locale name="C">
+        <short>Select the style of control</short>
+        <long>Select whether to drag the cards or to click on the source then the destination.</long>
+      </locale>
+
+      <locale name="af">
+        <short>Kies die kontrolestyl</short>
+        <long>Kies of die kaarte beweeg word deur te sleep, of deur te kliek op die bron en dan die bestemming.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>اختر أسلوب التّحكّم</short>
+        <long>اختر فيما إذا تريد سحب الأوراق سحبًا أم النّقر على المصدر ثمّ الوجهة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>নিয়ন্ত্ৰণৰ ধৰণ বাছক</short>
+        <long>তাচ স্থানান্তৰৰ সময় প্ৰত্যক্ষভাৱে তাচ টানি নিয়া হ&apos;ব, নেকি প্ৰথমে উৎস আৰু পিছত গন্তব্যেৰ ওপৰত ক্লিক কৰা হ&apos;ব, সেইটো বাছক।</long>
+      </locale>
+
+      <locale name="ast">
+        <short>Escueya l&apos;estilu de control</short>
+        <long>Escueya ente arrastrar les cartes o calcar nel orixe y dempués nel destín</long>
+      </locale>
+
+      <locale name="be">
+        <short>Выбар спосабу кіравання</short>
+        <long>Выбар спосабу перамяшчэння картаў: або перацягваючы іх, або пстрыкнуўшы спачатку ў патрэбную карту, а потым - у патрэбнае месца для яе.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Избор на вид на управлението</short>
+        <long>Избор дали да се влачат картите или да се натиска върху източника и след това върху целта.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>নিয়ন্ত্রণের ধরন বেছে নিন</short>
+        <long>তাস স্থানান্তরের সময় সরাসরি তাস টেনে নেয়া হবে, নাকি প্রথমে উৎস ও পরে গন্তব্যের ওপর ক্লিক করা হবে, তা নির্বাচন করুন।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>নিয়ন্ত্রণের ধরন বেছে নিন</short>
+        <long>তাস স্থানান্তরের সময় সরাসরি তাস টেনে নেওয়া হবে, নাকি প্রথমে উৎস ও পরে গন্তব্যের ওপর ক্লিক করা হবে, তা বেছে নিন।</long>
+      </locale>
+
+      <locale name="br">
+        <short>Dibabit un doare kontroll</short>
+        
+      </locale>
+
+      <locale name="bs">
+        <short>Izaberite stil upravljanja</short>
+        <long>Izaberite da li da prevlačite karte ili da kliknete na izvornu pa na odredišnu.</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Selecciona l&apos;estil de control</short>
+        <long>Selecciona si s&apos;han d&apos;arrossegar les cartes o si s&apos;ha de fer clic a l&apos;origen i després a la destinació.</long>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>Selecciona l&apos;estil de control</short>
+        <long>Selecciona si s&apos;han d&apos;arrossegar les cartes o si s&apos;ha de fer clic a l&apos;origen i després a la destinació.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Zvolte styl ovládání</short>
+        <long>Zvolte, jestli karty přetahovat nebo kliknout na zdroj a pak na cíl.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Dewis y math o reoli</short>
+        <long>Dewis a ddylid llusgo&apos;r cardiau neu i glicio ar y tardd ac yna ar y cyrchfan.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Vælg kontrolstilen</short>
+        <long>Vælg mellem træk og slip eller at klikke først på startpunkt så på slutpunkt.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Legemodus wählen</short>
+        <long>Dieser Schlüssel legt fest, ob die Karten per Ziehen-und-Ablegen oder per Anklicken gelegt werden sollen.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>ཚད་འཛིན་གྱི་བཟོ་རྣམ་སེལ་འཐུ་འབད།</short>
+        <long>ཤོག་བྱང་འཐེན་འདྲུད་འབད་ནི་ཨིན་ན་མེན་ སེལ་འཐུ་འབད། ཡང་ན་ དང་པ་འབྱུང་ཁུངས་དང་ དེ་ལས་འགྲོ་ཡུལ་ལུ་ ཨེབ་གཏང་འབད་ནི་ཨིན་ན།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Επιλέξτε το στυλ χειρισμού</short>
+        <long>Επιλέξτε αν θα σύρονται τα χαρτιά ή θα γίνεται κλικ πρώτα στην πηγή και μετά στον προορισμό.</long>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑕𐑩𐑤𐑧𐑒𐑑 𐑞 𐑕𐑑𐑲𐑤 𐑝 𐑒𐑩𐑯𐑑𐑮𐑴𐑤</short>
+        <long>𐑕𐑩𐑤𐑧𐑒𐑑 𐑢𐑧𐑞𐑼 𐑑 𐑛𐑮𐑨𐑜 𐑞 𐑒𐑸𐑛𐑟 𐑹 𐑑 𐑒𐑤𐑦𐑒 𐑪𐑯 𐑞 𐑕𐑹𐑕 𐑞𐑧𐑯 𐑞 𐑛𐑧𐑕𐑑𐑦𐑯𐑱𐑖𐑩𐑯.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Select the style of control</short>
+        <long>Select whether to drag the cards or to click on the source then the destination.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Select the style of control</short>
+        <long>Select whether to drag the cards or to click on the source then the destination.</long>
+      </locale>
+
+      <locale name="eo">
+        <short>Elekti kontrol-stilon</short>
+        <long>Elekti ĉu ŝovi la kartojn aŭ alklaki la fonton kaj poste la destinon.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Seleccione el estilo del control</short>
+        <long>Seleccione entre arrastrar las cartas o pulsar en el origen y después en el destino.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Juhtimislaadi valimine</short>
+        <long>Kui märgitud, siis kaarte tõstetakse teise kohta lohistamise abil, vastasel juhul aga klõpsamise abil.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Hautatu kontrol-estiloa</short>
+        <long>Hautatu kartak arrastatu behar diren, ala lehenik jatorrian eta ondoren helburuan klik egin behar den.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>انتخاب سبک کنترل</short>
+        <long>انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد کلیک شود</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Valitse ohjauksen tyyli</short>
+        <long>Valitse raahataanko kortteja vai napsautetaanko ensin lähdettä ja sitten kohdetta</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Sélectionne le style de contrôle</short>
+        <long>Indique si on clique sur la carte de départ puis sur la carte d’arrivée ou si on glisse les cartes pour les déplacer.</long>
+      </locale>
+
+      <locale name="fur">
+        <short>Selezione il stîl di control</short>
+        <long>Indiche se strissinâ lis cjartis o se fâ clic su la sorzint e daspò su la destinazion.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Roghnaigh an stíl rialaithe</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Seleccione o estilo do control</short>
+        <long>Seleccione se prefire arrastrar as cartas ou premer na orixe e logo no destino.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>નિયંત્રકની શૈલી પસંદ કરો</short>
+        <long>શું પત્તાઓ ખેંચવા કે સ્રોત પર ક્લિક કરીને અંતિમ મુકામ પર ક્લિક કરવાનું તે પસંદ કરો.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Select the style of control</short>
+        <long>Select whether to drag the cards or to click on the source then the destination.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>नियंत्रण की शैली का चयन करें</short>
+        <long>चुनें कि कार्ड खींचना है या गंतव्य के बजाय श्रोत पर क्लिक करना है.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Odaberi način upravljanja</short>
+        <long>Odaberite hoćete li povlačiti karte ili kliknuti na polazište, pa na odredište.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Válassza ki a vezérlés stílusát</short>
+        <long>Válassza ki, hogy húzni kívánja a kártyákat vagy kattintani szeretne a forrásra és aztán a célra.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Pilih gaya pengendalian</short>
+        <long>Pilih apakah ingin menyeret kartu atau mengklik pada sumber baru kemudian ke tujuan.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Veldu hvernig leikinum er stjórnað</short>
+        <long>Veldu hvort á að draga spilin eða smella fyrst á spilið og svo á áfangastað.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Seleziona il tipo di controllo</short>
+        <long>Indica se trascinare le carte o se fare clic sulla sorgente e poi sulla destinazione.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>操作方法の選択</short>
+        <long>カードを操作する方法として、カードをドラッグするか、または移動元をクリックして対象となるカードへドラッグするかを選択してください。</long>
+      </locale>
+
+      <locale name="km">
+        <short>ជ្រើស​រចនាប័ទ្ម​របស់​វត្ថុ​បញ្ជា</short>
+        <long>ជ្រើស​ថា​តើ​ត្រូវ​អូស​បៀ ឬ​ចុច​លើ​ប្រភព​បន្ទាប់​ទៅកាន់​ទិសដៅ ។</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ನಿಯಂತ್ರಣ ಶೈಲಿಯನ್ನು ಆರಿಸು</short>
+        <long>ಎಲೆಗಳನ್ನು ಎಳೆಯಬೇಕೆ ಅಥವ ಮೂಲದ ಮೇಲೆ ಕ್ಲಿಕ್ಕಿಸಿ ನಂತರ ಉದ್ದೇಶಿತ ಸ್ಥಳದ ಮೇಲೆ ಕ್ಲಿಕ್ಕಿಸಿ ಬೇಕೆ ಎಂದು ಆಯ್ಕೆ ಮಾಡಿ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>컨트롤 방식을 고르십시오</short>
+        <long>카드를 옮길 때 원래 위치에서 옮길 위치까지 드래그할 지 누를 지 고르십시오.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Pasirinkite valdymo stilių</short>
+        <long>Pasirinkite ar tempti kortas, ar spragtelti ant šaltinio, o paskui ant tikslo.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Izvelieties vadības stilu</short>
+        <long>Izvēlieties, vai pārvilksiet kārtis, vai arī klikšķināsiet vispirms uz vienas un tad uz otras kārts.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>नियंत्रण क&apos; शैली क&apos; चयन करू</short>
+        <long>चुनू जे कार्ड घीँचनाइ अछि अथवा गंतव्य क&apos; बजाय श्रोत पर क्लिक कएनाइ अछि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Изберете го начинот на контрола</short>
+        <long>Изберете дали да ги влечете картите или да кликате на почетната и крајната дестинација.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഏത് രീതിയിലുള്ള നിയന്ത്രണം എന്ന് തിരഞ്ഞെടുക്കുക</short>
+        <long>ചീട്ടുകള്‍ നിങ്ങള്‍ വലിച്ച് നീക്കണമോ അതോ എവിടെ നിന്നും എവിടേക്ക് നീക്കണം എന്നത് ക്ലിക്ക് ചെയ്ത് ചെയ്യണമോ എന്ന് തിരഞ്ഞെടുക്കുക</long>
+      </locale>
+
+      <locale name="mr">
+        <short>ताब्याची शैली निवडा</short>
+        <long>पत्ते ओढायचे अथवा स्त्रोतावर क्लिक करुन नंतर ते निवडा.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Velg type kontroll</short>
+        <long>Velg om du vil dra kortene eller klikke på kilde og så på mål</long>
+      </locale>
+
+      <locale name="ne">
+        <short>नियन्त्रणको शैली चयन गर्नुहोस्</short>
+        <long>तासलाई तान्ने वा स्रोतमा क्लिक गरेर त्यसपछि गन्तब्यमा क्लिक गर्ने चयन गर्नुहोस् ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Kiezen van de bedieningsstijl</short>
+        <long>Kiezen of kaarten verplaatst worden door te slepen, of door eerst de kaart aan te klikken en daarna de bestemming.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Vel type kontroll</short>
+        <long>Vel om du vil bruka dra-og-slepp for å flytta korta eller om du vil trykka først på kortet så på målet.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Seleccionar lo tipe de contraròtle</short>
+        <long>Causir se volètz retalhar las cartas o clicar la font puèi la tòca.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ନିଯନ୍ତ୍ରଣର ଶୈଳୀ ମନୋନୀତ କର</short>
+        <long>କାର୍ଡଗୁଡିକୁ ଟଣାୟିବ କିମ୍ବା ଥରେ ମୂଳରେ ଏବଂ ପରେ ଗନ୍ତବ୍ଯରେ କେବଳ କ୍ଲିକ କରାୟିବ, ମନୋନୀତ କର ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਕੰਟਰੋਲ ਦਾ ਸਟਾਈਲ ਚੁਣੋ</short>
+        <long>ਚੁਣੋ ਕਿ ਪੱਤਾ ਚੁੱਕ ਕੇ ਲੈ ਜਾਣਾ ਹੈ ਜਾਂ ਸਰੋਤ ਤੇ ਕਲਿੱਕ ਕਰਨ ਉਪਰੰਤ ਸਰੋਤ ਨੂੰ ਦਬਾਉ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Wybór rodzaju sterowania</short>
+        <long>Określa, czy karty mają być przeciągane, czy też należy najpierw kliknąć źródło, a potem cel.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Selecionar o estilo de controlo</short>
+        <long>Selecionar se as cartas deverão ser arrastadas ou clicar na origem e depois no destino.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Selecionar o estilo de controle</short>
+        <long>Selecione se as cartas devem ser arrastadas ou se deve ser clicado na origem e no destino.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Selectați stilu de control</short>
+        <long>Selectați ori să trageți cărți sau să faceți click pe sursă iar dupa pe destinație.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Выбор метод управления</short>
+        <long>Выберите способ переноса карт: перетаскивание карт с помощью мыши или указание мест, откуда берутся и куда кладутся карты.</long>
+      </locale>
+
+      <locale name="sk">
+        <short>Vyberte štýl ovládania</short>
+        <long>Vyberte si, či budete karty presúvať ťahaním alebo kliknete na kartu a potom na miesto, kam sa má presunúť.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Izberite slog nadzora</short>
+        <long>Izberite med vlečenjem kart in klikom najprej na vir in nato na cilj.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Zgjidh stilin e kontrollit</short>
+        <long>Zgjidh ku duhen çuar letrat ose të klikohet tek burimi e pastaj tek destinacioni.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Изаберите стил управљања</short>
+        <long>Изаберите да ли да превлачите карте или да кликнете на изворну па на одредишну.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Izaberite stil upravljanja</short>
+        <long>Izaberite da li da prevlačite karte ili da kliknete na izvornu pa na odredišnu.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Välj styrningsstil</short>
+        <long>Välj huruvida korten ska dras eller om källan ska klickas på och sedan målet.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>கட்டுப்பாட்டின் பாணியை தேர்வு செய்</short>
+        <long>சீட்டை இழுக்க விருப்பமா அல்லது தொடக்கத்திலும் இலக்கிலும் க்ளிக் செய்ய விருப்பமா.</long>
+      </locale>
+
+      <locale name="te">
+        <short>నియంత్రణ శైలిని ఎంచుకొనుము</short>
+        <long>కార్డులను లాగవలెనంటే యెంపికచేయుము లేదా మూలముపైన నొక్కి తరువాత గమ్యముపై నొక్కుము.</long>
+      </locale>
+
+      <locale name="th">
+        <short>รูปแบบการควบคุม</short>
+        <long>เลือกว่าจะใช้การลากไพ่ หรือจะคลิกต้นทางและปลายทาง</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Kontrol biçimini seçin</short>
+        <long>Kağıtları taşınmasını mı yoksa kaynağa sonra da hedefe tıklanmasını mı istediğinizi seçin.</long>
+      </locale>
+
+      <locale name="ug">
+        <short>تىزگىننىڭ ئۇسلۇبىنى تاللاش</short>
+        <long>قارتا يۆتكەش سۆرەش ئارقىلىق يۆتكىلەمدۇ ياكى باشلىنىش ۋە ئاخىرلىشىشنى چېكىش ئارقىلىق يۆتكىلەمدۇ تاللاڭ.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Вибір стилю керування</short>
+        <long>Чи перетягувати карти мишею, або вказувати місце, звідки карта береться та куди кладеться.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Hãy chọn kiểu điều khiển</short>
+        <long>Hãy chọn kéo bài, hoặc nhấp vào nguồn rồi đích.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Khetha isimbo solawulo</short>
+        <long>Khetha ukuba uwarhuqe na amakhadi okanye ucofe emthonjeni uze ulandelise ngesiphelo.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>选择控制样式</short>
+        <long>选择是拖放牌片还是先点击源牌片然后点击目的地。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>選擇啤牌移動方式</short>
+        <long>選擇移動啤牌的方式；是拖曳啤牌，還是點選啤牌然後點選目的地。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>選擇紙牌移動方式</short>
+        <long>選擇移動紙牌的方式；是拖曳紙牌，還是點選紙牌然後點選目的地。</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/aisleriot/sound</key>
+      <applyto>/apps/aisleriot/sound</applyto>
+      <owner>aisleriot</owner>
+      <type>bool</type>
+      <default>FALSE</default>
+      <locale name="C">
+        <short>Sound</short>
+        <long>Whether or not to play event sounds.</long>
+      </locale>
+
+      <locale name="af">
+        <short>Klank</short>
+        <long>Of gebeureklanke gespeel moet word of nie.</long>
+      </locale>
+
+      <locale name="am">
+        <short>ድምፅ</short>
+        
+      </locale>
+
+      <locale name="ar">
+        <short>صوت</short>
+        <long>عزف أو عدم عزف أصوات أحداث.</long>
+      </locale>
+
+      <locale name="as">
+        <short>ধ্বনি</short>
+        <long>ইভেন্টসূচক শব্দ বজোৱা হ&apos;ব নে।</long>
+      </locale>
+
+      <locale name="ast">
+        <short>Soníu</short>
+        <long>Reproducir o non los soníos de los eventos</long>
+      </locale>
+
+      <locale name="az">
+        <short>Səs</short>
+        <long>Hadisə səslərinin çalınması.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Гук</short>
+        <long>Ці трэба агучваць падзеі ў гульні.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Звук</short>
+        <long>Дали да се изпълняват звуци при събития.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>শব্দ</short>
+        <long>বিবিধ ঘটনার জন্য শব্দ বাজানো হবে কি না।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>শব্দ</short>
+        <long>বিবিধ ঘটনার জন্য শব্দ বাজানো হবে কি না।</long>
+      </locale>
+
+      <locale name="br">
+        <short>Son</short>
+        
+      </locale>
+
+      <locale name="bs">
+        <short>Zvuk</short>
+        <long>Da li puštati zvukove pri događajima.</long>
+      </locale>
+
+      <locale name="ca">
+        <short>So</short>
+        <long>Si s&apos;han de reproduir els esdeveniments de so.</long>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>So</short>
+        <long>Si s&apos;han de reproduir els esdeveniments de so.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Zvuk</short>
+        <long>Zda přehrávat nebo nepřehrávat zvuky k událostem.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Sain</short>
+        <long>A ddylid chwarae seiniau digwyddiadau.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Lyd</short>
+        <long>Om lydhændelser skal afspilles.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Ton</short>
+        <long>Legt fest, ob bei bestimmten Ereignissen Klänge abgespielt werden.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>སྒྲ་སྐད།</short>
+        <long>འབྱུང་ལས་ཀྱི་སྒྲ་སྐད་ གཏང་དགོ་ག་མིན་དགོ</long>
+      </locale>
+
+      <locale name="el">
+        <short>Ήχος</short>
+        <long>Αν θα αναπαράγονται ήχοι συμβάντων ή όχι.</long>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑕𐑬𐑯𐑛</short>
+        <long>𐑢𐑧𐑞𐑼 𐑹 𐑯𐑪𐑑 𐑑 𐑐𐑤𐑱 𐑦𐑝𐑧𐑯𐑑 𐑕𐑬𐑯𐑛𐑟.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Sound</short>
+        <long>Whether or not to play event sounds.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Sound</short>
+        <long>Whether to play event sounds.</long>
+      </locale>
+
+      <locale name="eo">
+        <short>Sono</short>
+        <long>Ĉu ludi eventajn sonojn?</long>
+      </locale>
+
+      <locale name="es">
+        <short>Sonido</short>
+        <long>Reproducir sonidos de evento.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Heli</short>
+        <long>Kas helisid esitatakse või mitte.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Soinua</short>
+        <long>Gertaera-soinuak erreproduzituko diren ala ez adierazten du.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>صدا</short>
+        <long>این که صدای رویدادهای پخش شود یا نه.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Ääni</short>
+        <long>Tulisiko tapahtumaäänet soittaa?</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Son</short>
+        <long>Indique s’il faut jouer ou non les sons d’événements.</long>
+      </locale>
+
+      <locale name="fur">
+        <short>Sun</short>
+        <long>Indiche se riprodusi o mancul i events sonôrs.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Fuaim</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Son</short>
+        <long>Indica se reproducir ou non sons de evento.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>ધ્વનિ</short>
+        <long>બનાવનો અવાજ વગાડવો કે નહિ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Sound</short>
+        <long>Whether or not to play event sounds.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>ध्वनि</short>
+        <long>घटनाओं हेतु ध्वनि बजाएँ या नहीं.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Zvuk</short>
+        <long>Treba li ili ne reproducirati zvukove događaja.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Hang</short>
+        <long>Legyen-e az eseményeknek hangjuk.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Suara</short>
+        <long>Mainkan suara atau tidak.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Hljóð</short>
+        <long>Hvort spila á leikhljóð eða ekki.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Suono</short>
+        <long>Indica se riprodurre o meno gli eventi sonori.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>効果音を鳴らすかどうか</short>
+        <long>イベント時のサウンドを演奏するかどうかです。</long>
+      </locale>
+
+      <locale name="ka">
+        <short>ხმა</short>
+        
+      </locale>
+
+      <locale name="kk">
+        <short>Дыбыс</short>
+        
+      </locale>
+
+      <locale name="km">
+        <short>សំឡេង</short>
+        <long>តើ​ថា​​ត្រូវ​ចាក់​​​សំឡេង​ព្រឹត្តិការណ៍​​ដែរ​ឬ​ទេ ។</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಧ್ವನಿ</short>
+        <long>ಆಟ ಆಡುವಾಗ ಶಬ್ಧಗಳನ್ನು ಹೊರಡಿಸಬೇಕೆ ಅಥವ ಬೇಡವೆ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>소리</short>
+        <long>이벤트 사운드를 재생합니다.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Garsai</short>
+        <long>Ar skleisti garsus žaidimo metu.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Skaņa</short>
+        <long>Vai atskaņot notikumu skaņas.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>ध्वनि</short>
+        <long>घटनासभ लेल ध्वनि बजाउ अथवा नहि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Звук</short>
+        <long>Дали да се слуша звук.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ശബ്ദം</short>
+        <long>കളിക്കുമ്പോള്‍ ശബ്ദം പ്രവര്‍ത്തിക്കണമോ വേണ്ടയോ എന്ന്.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Дуу</short>
+        <long>Дуу тоглуулах эсэх</long>
+      </locale>
+
+      <locale name="mr">
+        <short>आवाज</short>
+        <long>घटनांकरीता श्राव्य इशारा द्यायचा किंवा नाही.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Bunyi</short>
+        <long>Samada memainkan bunyi atau tidak.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Lyd</short>
+        <long>Om lyder skal spilles av for hendelser.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>ध्वनि</short>
+        <long>घटना ध्वनि प्ले गर्ने या नगर्ने ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Geluid</short>
+        <long>Of er al dan niet geluid wordt afgespeeld bij gebeurtenissen.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Lyd</short>
+        <long>Om lydar skal spelast for hendingar.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Son</short>
+        <long>Indica se cal jogar o pas los sons d&apos;eveniments.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଶବ୍ଦ</short>
+        <long>ଘଟଣା ଧ୍ବନୀ ଖେଳାୟିବ କି ନାହିଁ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਅਵਾਜ਼</short>
+        <long>ਕੀ ਅਵਾਜ਼ ਖੇਡ ਖੇਡੀ ਜਾਵੇ ਜਾਂ ਨਹੀਂ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Dźwięk</short>
+        <long>Określa, czy odtwarzać dźwięki zdarzeń.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Som</short>
+        <long>Se reproduzir ou não sons de eventos.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Som</short>
+        <long>Reproduzir os sons dos eventos.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Sunet</short>
+        <long>Dacă să se redea sunetul evenimentelor.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Звук</short>
+        <long>Воспроизводить ли звуки событий.</long>
+      </locale>
+
+      <locale name="rw">
+        <short>Ijwi</short>
+        
+      </locale>
+
+      <locale name="si">
+        <short>ශබ්දය</short>
+        
+      </locale>
+
+      <locale name="sk">
+        <short>Zvuk</short>
+        <long>Určuje, či sa majú prehrať zvuky udalostí.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Zvok</short>
+        <long>Ali naj se ob dogodkih predvajajo zvoki.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Zëri</short>
+        <long>Nëse tingujt e lojës duhen aktivizuar apo jo.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Звук</short>
+        <long>Да ли пуштати звуке при догађајима.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Zvuk</short>
+        <long>Da li puštati zvuke pri događajima.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Ljud</short>
+        <long>Huruvida händelseljud ska spelas eller inte.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>ஒலி</short>
+        <long>சம்பவ ஒலியை ஒலிக்கவா அல்லது வேண்டாமா</long>
+      </locale>
+
+      <locale name="te">
+        <short>ధ్వని</short>
+        <long>ఆడుతున్నపుడు కదలికల శ్రవణాన్ని మోగించాలా</long>
+      </locale>
+
+      <locale name="tg">
+        <short>Садо</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>เสียง</short>
+        <long>กำหนดว่าจะเล่นเสียงของเหตุการณ์ต่างๆ หรือไม่</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Ses</short>
+        <long>Olay seslerinin çalınıp çalınmayacağı.</long>
+      </locale>
+
+      <locale name="ug">
+        <short>ئاۋاز</short>
+        <long>ھادىسە ئاۋازىنى قويامدۇ يوق.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Звук</short>
+        <long>Чи супроводжувати події звуками.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Âm thanh</short>
+        <long>Có bật âm thanh cho sự kiện không.</long>
+      </locale>
+
+      <locale name="wa">
+        <short>Son</short>
+        
+      </locale>
+
+      <locale name="xh">
+        <short>Isandi</short>
+        <long>Nokuba ngaba zidlalwe na izandi zezehlo okanye hayi.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>音效</short>
+        <long>是否播放事件声音。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>音效</short>
+        <long>是否以音效代表不同事件發生。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>音效</short>
+        <long>是否以音效代表不同事件發生。</long>
+      </locale>
+    </schema>
+
+
+    <schema>
+      <key>/schemas/apps/aisleriot/animations</key>
+      <applyto>/apps/aisleriot/animations</applyto>
+      <owner>aisleriot</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Animations</short>
+        <long>Whether or not to animate card moves.</long>
+      </locale>
+
+      <locale name="af">
+        <short>Animasies</short>
+        <long>Of die kaartbewegings geanimeer moet word of nie.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>رسوم متحركة</short>
+        <long>استعمال أو عدم استعمال صور متحركة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>এনিমেশন</short>
+        <long>এনিমেশন ব্যৱহাৰ  কৰা হ&apos;ব নে।</long>
+      </locale>
+
+      <locale name="ast">
+        <short>Animaciones</short>
+        <long>Amuesa si se tien qu&apos;usar animación pa los movimientos de les cartes.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Анімацыя</short>
+        <long>Ці трэба анімаваць перакладванне картаў.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Анимации</short>
+        <long>Дали движенията на картите да са анимирани.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>অ্যানিমেশন</short>
+        <long>তাশের চলাচল প্রদর্শনে অ্যানিমেশন ব্যবহার করা হবে কি না।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>অ্যানিমেশন</short>
+        <long>তাশের চলাচল প্রদর্শনে অ্যানিমেশন ব্যবহার করা হবে কি না।</long>
+      </locale>
+
+      <locale name="br">
+        <short>Tresadennoù fiñv</short>
+        
+      </locale>
+
+      <locale name="bs">
+        <short>Animacije</short>
+        <long>Prikazati poteze karatai animacijom ili ne.</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Animacions</short>
+        <long>Si s&apos;han d&apos;animar els moviments de les cartes.</long>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>Animacions</short>
+        <long>Si s&apos;han d&apos;animar els moviments de les cartes.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Animace</short>
+        <long>Zda animovat nebo neanimovat pohyby karet.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Animeiddiadau</short>
+        
+      </locale>
+
+      <locale name="da">
+        <short>Animationer</short>
+        <long>Om flytninger af kort skal animeres.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Animationen</short>
+        <long>Legt fest, ob das Bewegen von Karten animiert wird.</long>
+      </locale>
+
+      <locale name="el">
+        <short>Κινούμενες εικόνες</short>
+        <long>Αν θα χρησιμοποιούνται κινούμενα χαρτιά ή όχι.</long>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑨𐑯𐑩𐑥𐑱𐑖𐑩𐑯𐑟</short>
+        <long>𐑢𐑧𐑞𐑼 𐑹 𐑯𐑪𐑑 𐑑 𐑨𐑯𐑩𐑥𐑩𐑑 𐑒𐑸𐑛 𐑥𐑵𐑝𐑟.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Animations</short>
+        <long>Whether or not to animate card moves.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Animations</short>
+        <long>Whether to animate card moves.</long>
+      </locale>
+
+      <locale name="eo">
+        <short>Animacioj</short>
+        <long>Ĉu animi kartajn movojn?</long>
+      </locale>
+
+      <locale name="es">
+        <short>Animaciones</short>
+        <long>Indica si se debe usar animación para los movimientos de las cartas.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Animatsioonid</short>
+        <long>Kas kaardikäikude animatsiooni kasutatakse või mitte.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Animazioak</short>
+        <long>Animazioa erabiliko den karten mugimenduetan ala ez adierazten du.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>پویانمایی‌ها</short>
+        <long>اینکه از پویانمایی در حرکت کارتها استفاده شود یا نه.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Animaatiot</short>
+        <long>Esitetäänkö korttien liikkeet animaatioina.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Animations</short>
+        <long>Indique s’il faut animer ou non les mouvements de cartes.</long>
+      </locale>
+
+      <locale name="fur">
+        <short>Animazions</short>
+        <long>Indiche se doprâ o mancul la animazion tal movi lis cjartis.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Íomhánna Beo</short>
+        
+      </locale>
+
+      <locale name="gl">
+        <short>Animacións</short>
+        <long>Indica se animar os movementos de cartas ou non.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>એનીમૅશનો</short>
+        <long>ક્યાંતો એનીમેશન પત્તાને ખસેડવા કે નહિ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Animations</short>
+        <long>Whether or not to animate card moves.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>एनीमेशन</short>
+        <long>कार्ड चालों में एनीमेशन उपयोग करें या नहीं.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Animacije</short>
+        <long>Treba li ili ne animirati pokrete karata.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Animációk</short>
+        <long>A lapmozgások animáltak legyenek-e?</long>
+      </locale>
+
+      <locale name="id">
+        <short>Animasi</short>
+        <long>Apakah menampilkan animasi kartu bergerak.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Hreyfingar</short>
+        <long>Á að sýna hreyfingar þegar spilin eru færð.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Animazioni</short>
+        <long>Indica se usare o meno l&apos;animazione nel muovere le carte.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>アニメーションするかどうか</short>
+        <long>カードを移動する際にアニメーションを使用するかどうかです。</long>
+      </locale>
+
+      <locale name="kk">
+        <short>Анимациялар</short>
+        
+      </locale>
+
+      <locale name="km">
+        <short>ចលនា</short>
+        <long>ថា​តើ​ត្រូវ​ធ្វើ​ឲ្យ​ការ​ផ្លាស់ទី​របស់​បៀ​មាន​ចលនា​ដែរ​ឬ​ទេ ។</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಚಿತ್ರಸಂಚಲನಗಳು</short>
+        <long>ಎಲೆಗಳನ್ನು ನಡೆಸುವಾಗ ಚಿತ್ರಸಂಚಲನವನ್ನು ಬಳಸಬೇಕೆ ಅಥವ ಬೇಡವೆ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>애니메이션</short>
+        <long>카드 움직임에 애니메이션을 사용합니다.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Animacijos</short>
+        <long>Ar naudoti animaciją kortų ėjimams.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Animācijas</short>
+        <long>Vai attēlot kāršu kustību.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Анимации</short>
+        <long>Дали да се користи анимација за потезите со картите.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>സചേതനം</short>
+        <long>ആനിമേഷന്‍ ഉപയോഗിക്കണമോ വേണ്ടയോ എന്ന്.</long>
+      </locale>
+
+      <locale name="mr">
+        <short>ऍनीमेशन</short>
+        <long>कार्ड हालाचाली ऍनीमेट करायचे का.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Animasjoner</short>
+        <long>Om animasjoner skal brukes for flytting av kort.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>एनिमेसनहरू</short>
+        
+      </locale>
+
+      <locale name="nl">
+        <short>Animaties</short>
+        <long>Of het verplaatsen van kaarten al dan niet van animatie wordt voorzien.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Animasjonar</short>
+        <long>Om animasjon skal brukast eller ikkje.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Animacions</short>
+        <long>Indica se cal animar o pas los movements de cartas.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଜୀବନ୍ତଚିତ୍ରଗୁଡିକ </short>
+        <long>କାର୍ଡ ଗତିକୁ ଜୀବନାୟନ କରାଯିବା ଉଚିତ କି ନୁହଁ।</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਐਨੀਮੇਸ਼ਨ</short>
+        <long>ਕੀ ਪੱਤੇ ਹਿਲਾਉਣ ਦੌਰਾਨ ਐਨੀਮੇਸ਼ਨ ਵੇਖਣੀ ਹੈ ਜਾਂ ਨਹੀਂ</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Animacje</short>
+        <long>Określa, czy animować ruchy kart.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Animações</short>
+        <long>Se animar ou não os movimentos das cartas.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Animações</short>
+        <long>Animar os movimentos das cartas.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Animații</short>
+        <long>Dacă să se animeze mișcările cărților.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Анимация</short>
+        <long>Использовать ли анимацию при перемещении карт.</long>
+      </locale>
+
+      <locale name="sk">
+        <short>Animácie</short>
+        <long>Určuje, či sa majú animovať pohyby kariet.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Animacije</short>
+        <long>Izbrana možnost omogoča prikaz animacij gibanja kart.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Анимације</short>
+        <long>Да ли приказивати анимације.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Animacije</short>
+        <long>Da li prikazivati animacije.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Animationer</short>
+        <long>Huruvida kortdrag ska animeras eller inte.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>அசைவூட்டம்</short>
+        <long>அசைவூட்ட படத்தை பயன்படுத்துவதா அல்லது வேண்டாமா</long>
+      </locale>
+
+      <locale name="te">
+        <short>యానిమేషన్స్</short>
+        <long>కార్డుల కదలికలను యానిమేట్ చేయాలా వద్దా.</long>
+      </locale>
+
+      <locale name="tg">
+        <short>Аниматсияҳо</short>
+        
+      </locale>
+
+      <locale name="th">
+        <short>ภาพเคลื่อนไหว</short>
+        <long>กำหนดว่าจะใช้ภาพเคลื่อนไหวขณะย้ายไพ่หรือไม่</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Canlandırmalar</short>
+        <long>Kart hareketlerinin canlandırmalı olup olmayacağı</long>
+      </locale>
+
+      <locale name="ug">
+        <short>جانلاندۇرۇملار</short>
+        <long>قارتا يۆتكەلگەندە جانلاندۇرۇم بارمۇ يوق.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Анімація</short>
+        <long>Чи використовувати анімацію при переміщенні карт.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Hoạt ảnh</short>
+        <long>Có nên hoạt cảnh khi di chuyển quân bài hay không.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>动画</short>
+        <long>是否使用动画。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>動畫</short>
+        <long>移動啤牌時是否使用動畫。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>動畫</short>
+        <long>移動紙牌時是否使用動畫。</long>
+      </locale>
+    </schema>
+
+
+    <schema>
+      <key>/schemas/apps/aisleriot/game_file</key>
+      <applyto>/apps/aisleriot/game_file</applyto>
+      <owner>aisleriot</owner>
+      <type>string</type>
+      <default>klondike.scm</default>
+      <locale name="C">
+        <short>The game file to use</short>
+        <long>The name of the scheme file containing the solitaire game to play.</long>
+      </locale>
+
+      <locale name="af">
+        <short>Die speletjielêer om te gebruik</short>
+        <long>Die naam van die skemalêer met die patience-speletjie om te speel.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>ملف اللّعبة الذي سيستخدم</short>
+        <long>اسم ملف المخطّط الحاوي على لعبة السوليتير التي ستلعب.</long>
+      </locale>
+
+      <locale name="as">
+        <short>যি খেল ফাইল ব্যৱহাৰ কৰা হ&apos;ব</short>
+        <long>যি solitaire খেলটো খেলা হব সেইটো সম্বলিত আঁচনি ফাইলৰ নাম।</long>
+      </locale>
+
+      <locale name="ast">
+        <short>Nome del ficheru del xuegu</short>
+        <long>Nome del ficheru col esquema que contién el solitariu pa xugar.</long>
+      </locale>
+
+      <locale name="az">
+        <short>İşlədiləcək oyun faylı</short>
+        <long>Oynanacaq solitaire oyununu daxil edən sxem faylının adı.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Файл гульні</short>
+        <long>Назва scheme-файла з пасьянснай гульнёй.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Използван файл с игра</short>
+        <long>Името на файл на Scheme с пасианси.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>ব্যবহারের জন্য চিহ্নিত খেলার ফাইল</short>
+        <long>খেলার উদ্দেশ্যে সলিটেয়ার ধারণকারী স্কীম ফাইলের নাম।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>ব্যবহারের জন্য চিহ্নিত খেলার ফাইল</short>
+        <long>খেলার উদ্দেশ্যে সলিটেয়ার ধারণকারী স্কিম ফাইলের নাম।</long>
+      </locale>
+
+      <locale name="br">
+        <short>Restr c&apos;hoari da implj</short>
+        
+      </locale>
+
+      <locale name="bs">
+        <short>Datoteka igre koja će se koristiti</short>
+        <long>Ime datoteke koja sadrži opis vrste pasijansa koji će se igrati.</long>
+      </locale>
+
+      <locale name="ca">
+        <short>El nom del fitxer de la partida a utilitzar</short>
+        <long>El nom del fitxer d&apos;esquema que conté la partida del solitari per jugar.</long>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>El nom del fitxer de la partida a utilitzar</short>
+        <long>El nom del fitxer d&apos;esquema que conté la partida del solitari per jugar.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Soubor hry, který se má používat</short>
+        <long>Název souboru schématu obsahujícího hru solitér, která se má hrát.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Y ffeil gêm i&apos;w ddefnyddio</short>
+        <long>Enw&apos;r ffeil scheme yn cynnwys y gêm amynedd i&apos;w chwarae.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Spilfil der skal benyttes</short>
+        <long>Navnet på den Scheme-fil der indeholder kortspillet der skal spilles.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Zu verwendende Spieldatei</short>
+        <long>Der Name der Schema-Datei, die das zu spielende Solitaire-Spiel enthält.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>ལག་ལེན་འཐབ་ནིའི་རྩེད་མོའི་ཡིག་སྣོད།</short>
+        <long>སོ་ལི་ཊེར་རྩེདམོ་ཡོད་པའི་ ལས་འཆར་ཡིག་སྣོད་ཀྱི་མིང་།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Αρχείο παιχνιδιού προς χρήση</short>
+        <long>Το όνομα του αρχείου σχήματος που περιέχει το παιχνίδι της πασιέντζας.</long>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑞 𐑜𐑱𐑥 𐑓𐑲𐑤 𐑑 𐑿𐑕</short>
+        <long>𐑞 𐑯𐑱𐑥 𐑝 𐑞 ·𐑕𐑒𐑰𐑥 𐑓𐑲𐑤 𐑒𐑩𐑯𐑑𐑱𐑯𐑦𐑙 𐑞 𐑕𐑪𐑤𐑦𐑑𐑺 𐑜𐑱𐑥 𐑑 𐑐𐑤𐑱.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>The game file to use</short>
+        <long>The name of the scheme file containing the solitaire game to play.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>The game file to use</short>
+        <long>The name of the scheme file containing the solitaire game to play.</long>
+      </locale>
+
+      <locale name="eo">
+        <short>La luda dosiero por uzi</short>
+        <long>La nomo de la skema dosiero, kiu enhavas la paciencludon por ludi.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Nombre del archivo del juego</short>
+        <long>El nombre del archivo de esquema que contiene el juego de solitario que se jugará.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Kasutatav mängufail</short>
+        <long>Kaardiladumismängu skeemifaili nimi.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Erabili behar den joko-fitxategia</short>
+        <long>Jolastu beharreko bakar-jokoa duen eskema-fitxategiaren izena.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>پرونده‌ی بازی مورد استفاده</short>
+        <long>نام پرونده‌ی شِمای حاوی بازی‌های یک نفره برای بازی.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pelitiedoston nimi</short>
+        <long>Pelattavan pasianssipelin scheme-tiedoston nimi.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Le fichier de jeu à utiliser</short>
+        <long>Le nom du fichier Scheme contenant le jeu de solitaire à jouer.</long>
+      </locale>
+
+      <locale name="fur">
+        <short>Il file di zûc di doprâ</short>
+        <long>Il non dal file scheme che al ten il solitari di zuiâ.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>O ficheiro de partida que se vai usar</short>
+        <long>O nome de ficheiro de esquema que contén o xogo do solitario.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>વાપરવા માટેની રમત ફાઇલ</short>
+        <long>સોલિટેર રમવા માટેની યોજના ધરાવતી ફાઇલનું નામ.</long>
+      </locale>
+
+      <locale name="he">
+        <short>The game file to use</short>
+        <long>שם קובץ הסכימה המכיל את משחק הסוליטר למשחק.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>खेल फ़ाइल उपयोग में</short>
+        <long>प्रसंग फ़ाइल का नाम जिसमें खेला जाने वाला सॉलिटेयर खेल है.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Datoteka igre koja će se koristiti</short>
+        <long>Naziv datoteke sheme koja sadrži pasijans koji će se igrati.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>A használandó játékfájl</short>
+        <long>A játszandó pasziánszjátékot tartalmazó scheme fájl neve.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Berkas permainan untuk dipakai</short>
+        <long>Nama berkas skema yang berisi permainan solitaire.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Hvaða leikjaskrá á að nota</short>
+        <long>Nafn skema-skrárinnar með kaplinum sem á að spila.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Il file di gioco da usare</short>
+        <long>Il nome del file scheme contenente il solitario da giocare.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>使用するゲームファイル</short>
+        <long>プレイするソリティアゲームを格納したスキーマファイルの名前です。</long>
+      </locale>
+
+      <locale name="ka">
+        <short>გამოსაყენები თამაშის ფაილი</short>
+        
+      </locale>
+
+      <locale name="km">
+        <short>ឯកសារ​ល្បែង​ត្រូវ​ប្រើ</short>
+        <long>ឈ្មោះ​របស់​ឯកសារ​គ្រោងការណ៍​ដែល​មាន​ល្បែង solitaire ត្រូវ​លេង ។</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಬಳಸಲು ಆಟದ ಕಡತ</short>
+        <long>ಸಾಲಿಟೇರ್ ಆಟವನ್ನು ಆಡಲು ಬೇಕಿರುವ ಕಡತವನ್ನು ಹೊಂದಿರುವ ಸ್ಕೀಮ್ ಕಡತದ ಹೆಸರು.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>사용할 게임 파일</short>
+        <long>플레이할 솔리테어 게임이 들어 있는 Scheme 파일의 이름.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Naudotinas žaidimo failas</short>
+        <long>Schemos failas, aprašantis žaidžiamą pasjanso žaidimą.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Spēles datne, ko izmantot</short>
+        <long>Shēmas datnes nosaukums, kas satur spēlējamo solitaire spēli.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>प्रयोग करब क&apos; लेल खेल फ़ाइल</short>
+        <long>योजना फ़ाइल क&apos; नाम जकरामे खेलल जाए बला सॉलिटेयर खेल समाहित अछि.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Името на датотеката за играта</short>
+        <long>Името на датотеката со шема за играта на пасијанс која сакате да ја играте.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഉപയോഗിക്കാനുള്ള കളിയുടെ ഫയല്‍</short>
+        <long>സോളിട്ടയര്‍ കളി ഉള്‍ക്കൊള്ളുന്ന സ്കീം ഫയലിന്റെ പേര്‌.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Хэрэглэх тоглоомын файл</short>
+        
+      </locale>
+
+      <locale name="mr">
+        <short>खेळ फाईल उपयोगात आहे</short>
+        <long>प्रयोजन फाईल ज्यात खेळल्या जाणारा सॉलिटेयर खेळ आहे.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Fail permainan yang hendak digunakan</short>
+        <long>Nama bagi fail skema mengandungi permainan solitaire untuk dimainkan.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Spillfil som skal brukes</short>
+        <long>Navn på schema-fil som inneholder solitaire-spill som skal spilles.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>प्रयोग गरिने खेलको फाइल</short>
+        <long>खेलिने सोलिटेइर खेल सम्मिलित योजना फाइलको नाम ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Het te gebruiken spelbestand</short>
+        <long>De naam van het schemabestand dat het te spelen patiencespel bevat.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Spelfila som skal brukast</short>
+        <long>Namnet på Scheme-fila som inneheld kabalen som skal spelast.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Lo fichièr de jòc d&apos;utilizar</short>
+        <long>Lo nom del fichièr que cap lo jòc de solitari de jogar.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଉପୟୋଗକରିବା ପାଇଁ ଖେଳ ଫାଇଲ</short>
+        <long>ୟୋଜନା ଫାଇଲର ନାମ ୟେଉଁଥିରେ ଖେଳିବା ପାଇଁ ସଲିଟେଯର ଖେଳ ରହିଥାଏ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਵਰਤਣ ਲਈ ਖੇਡ ਫਾਇਲ</short>
+        <long>ਖੇਡਣ ਲਈ ਸੋਲੀਟਾਇਰ(solitaire) ਖੇਡ ਵਾਲੀ ਸਕੀਮ ਫਾਇਲ ਦਾ ਨਾਂ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Plik gry, który ma być użyty</short>
+        <long>Nazwa pliku Scheme pasjansa do rozegrania.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>O ficheiro de jogo a utilizar</short>
+        <long>O nome do ficheiro scheme que contém o jogo solitário a jogar.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>O arquivo de jogo a usar</short>
+        <long>O nome do arquivo de esquema contendo o jogo de paciência a ser jogado.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Fișierul jocului de utilizat</short>
+        <long>Numele fișerului schemă care conține jocul solitaire rulat.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Используемый файл игры</short>
+        <long>Название файла схем, содержащего нужный пасьянс.</long>
+      </locale>
+
+      <locale name="sk">
+        <short>Súbor s hrou, ktorý sa má použiť</short>
+        <long>Názov súboru schémy, ktorý obsahuje solitér hru, ktorá sa bude hrať.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Ime datoteke igre, ki jo želite igrati</short>
+        <long>Ime datoteke sheme z igro pasjanse, ki jo želite igrati.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>File i lojës për përdorim</short>
+        <long>Emri i file të skemës që përmban lojën solitaire për tu luajtur.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Датотека игре која ће се користити</short>
+        <long>Назив датотеке која садржи опис врсте пасијанса који ће се играти.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Datoteka igre koja će se koristiti</short>
+        <long>Naziv datoteke koja sadrži opis vrste pasijansa koji će se igrati.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Spelfilen att använda</short>
+        <long>Namnet på schemafilen som innehåller det patiensspel som ska spelas.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>பயன்படுத்த விளையாட்டு கோப்பு</short>
+        <long>விளையாட வேண்டிய சாலிடேர் விளையாட்டை கொண்டுள்ள அமைப்பு கோப்பின் பெயர் </long>
+      </locale>
+
+      <locale name="te">
+        <short>వాడాల్సిన ఆట దస్త్రము</short>
+        <long>సొలెటైర్ పేకాట ఆడుటకు  ఉన్న పథకదస్త్రము నామము</long>
+      </locale>
+
+      <locale name="th">
+        <short>แฟ้มเกมที่จะใช้</short>
+        <long>ชื่อของแฟ้ม scheme ที่เก็บเกมถอดไพ่ที่จะเล่น</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Kullanılacak oyun dosyası</short>
+        <long>Oynanılacak iskambil falı oyununu içeren şema dosyasının ismi.</long>
+      </locale>
+
+      <locale name="ug">
+        <short>ئىشلىتىدىغان ئويۇن ھۆججىتى</short>
+        <long>ئوينايدىغان قارتا ئويۇنىنىڭ ئۆرنەك ھۆججىتىنىڭ ئاتى.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Ігровий файл</short>
+        <long>Назва файлу схеми, що містить пасьянс.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Tập tin trò chơi cần dùng</short>
+        <long>Tên tập tin sắc thái chứa trò chơi solitaire cần chơi.</long>
+      </locale>
+
+      <locale name="wa">
+        <short>Li fitchî d&apos; djeu a-z eployî</short>
+        
+      </locale>
+
+      <locale name="xh">
+        <short>Ifayili yomdlalo emayisetyenziswe</short>
+        <long>Igama lefayili eyiliweyo enomdlalo i-solitaire omawudlalwe.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>要使用的游戏文件</short>
+        <long>包含要玩的纸牌游戏的 scheme 文件名。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>代表遊戲規則的檔案</short>
+        <long>載有準備玩的接龍遊戲規則的檔案。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>代表遊戲規則的檔案</short>
+        <long>載有準備玩的接龍遊戲規則的檔案。</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/aisleriot/statistics</key>
+      <applyto>/apps/aisleriot/statistics</applyto>
+      <owner>aisleriot</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Statistics of games played</short>
+	<long>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</long>
+      </locale>
+
+      <locale name="af">
+        <short>Statistiek van speletjies gespeel</short>
+	<long>&apos;n Lys stringe wat as vyftal aangegee word, naamlik naam, wenne, totale speletjies gespeel, beste tyd (in sekondes) en swakste tyd (ook in sekondes). Ongespeelde speletjies hoef nie aangegee te word nie.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>إحصائيّات اللّعب الملعوبة</short>
+	<long>قائمة بالسّلاسل التي تأتي بشكل خماسيّة: الاسم و مرّات الرّبح و مجموع اللّعب الملعوبة و أفضل و أسوأ زمن (بالثّواني). لا توجد حاجة لعرض اللّعب غير الملعوبة.</long>
+      </locale>
+
+      <locale name="as">
+        <short>খেলা খেলৰ পৰিসংখ্যা</short>
+	<long>কুইনটিউপলৰ ( পঞ্চজমজ ) আকাৰত অহা এটা পংতি তালিকা: নাম, জয়, মোট খেল, সেৰা সময় ( ছেকেণ্ডত প্ৰকাশিত ) ও আটাইতকৈ বেয়া সময় ( এইটোও ছেকেণ্ডত প্ৰকাশিত )।  অসম্পূৰ্ণ খেলক এই তালিকাত ৰখাৰ প্ৰয়োজন নাই।</long>
+      </locale>
+
+      <locale name="ast">
+        <short>Estadístiques de les partíes xugaes</short>
+	<long>Una riestra de datos en quintetos: nome, victories, total de partíes xugaes, meyor tiempu (en segundos) y peor tiempu (tamién en segundos). Los xuegos ensin partíes nun se representen.</long>
+      </locale>
+
+      <locale name="az">
+        <short>Oynanan oyunların statistikaları</short>
+	<long>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Статыстыка аб згуляных партыях</short>
+	<long>Спіс радкоў у форме пяцёркі: назва, колькасць перамог, колькасць гульняў, найлепшы час (у секундах) і найгоршы час (таксама ў секундах). Гульні, у якія не гулялі, могуць адсутнічаць.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Статистика за играните игри</short>
+	<long>Списък от низове, който идва под фо̀рмата на наредени петорки: име, победи, общ брой играни игри, най-добро време (в секунди) и най-лошо време (отново в секунди). Неиграните игри не е нужно да бъдат представяни.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>সম্পন্ন খেলা সংক্রান্ত পরিসংখ্যান</short>
+	<long>স্ট্রিংয়ের তালিকা যা কুইনটাপলের আকারে আসে: নাম, জয়, যতগুলো খেলা হয়েছে, সেরা সময় (সেকেন্ডে) এবং সর্বাপেক্ষা খারাপ সময় (সেকেন্ডে)। যেগুলো খেলা হয়নি তা প্রদর্শন করার প্রয়োজন নেই।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>সম্পন্ন খেলা সংক্রান্ত পরিসংখ্যান</short>
+	
+      </locale>
+
+      <locale name="br">
+        <short>Stadegoù c&apos;hoarioù graet</short>
+	<long>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</long>
+      </locale>
+
+      <locale name="bs">
+        <short>Statistika odigranih igara</short>
+	<long>Lista stringova koji dolaze u formi: ime, pobjede, ukupno odigrane igre, najbolje vrijeme (u sekundama) i najgore vrijeme (u sekundama). Neodigrane igre ne moraju biti zastupljene.</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Estadístiques de les partides jugades</short>
+	<long>Una llista de cadenes en forma de quintet: nom, victòries, jocs jugats totals, millor temps (en segons) i pitjor temps (també en segons). No s&apos;han de representar les partides no jugades.</long>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>Estadístiques de les partides jugades</short>
+	<long>Una llista de cadenes en forma de quintet: nom, victòries, jocs jugats totals, millor temps (en segons) i pitjor temps (també en segons). No s&apos;han de representar les partides no jugades.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Statistiky odehraných her</short>
+	<long>Seznam řetězců ve tvaru pětic: název, výher, celkem hraných her, nejlepší čas (v sekundách) a nejhorší čas (také v sekundách). Nehrané hry nemusí být reprezentovány.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Ystadegau o&apos;r gemau a chwaraewyd</short>
+	<long>Rhestr o linynnau sydd yn dod mewn ffurf pumhlyg: enw, enillion, cyfanswm gemau chwaraewyd, amser gorau (mewn eiliadau) a&apos;r amser gwaethaf (hefyd eiliadau). Nid oes rhaid cynrychioli gemau heb ei chwarae.</long>
+      </locale>
+
+      <locale name="da">
+        <short>Statistik for spillede spil</short>
+	<long>En liste af strenge udformede som femtupler: navn, vundne, samlet spillede spil, bedste tid (i sekunder) og dårligste tid (også i sekunder). Spil der ikke er blevet prøvet, behøver ikke at blive repræsenteret.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Statistik zu früheren Spielen</short>
+	<long>Eine Liste von Zeichenketten in Form eines Quintupels: Name, gewonnen, Gesamtanzahl der Spiele, Bestzeit (in Sekunden) sowie schlechteste Zeit (ebenfalls in Sekunden). Nicht gespielte Spiele müssen nicht aufgeführt werden.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>རྩེདམོ་རྩེ་ཡོད་པའི་ཚད་རྩིས་ཚུ།</short>
+	<long>ཀུའིན་ཊུ་པཱལ་གྱི་ ཚུལ་ནང་ཡོད་མི་ ཡིག་རྒྱུན་གྱི་ཐོ་ཡིག: མིང་ རྒྱལ་ཁ་ རྩེདམོ་རྩེ་ཡོད་པའི་ཡོངས་བསྡོམས་ དུས་ཚོད་དྲག་ཤོས་(སྐར་ཆའི་ནང་) དེ་ལས་ དུས་ཚོད་སྐྱོ་ཤོས་(དེ་ཡང་སྐར་ཆའི་ནང་) མ་རྩེ་བའི་རྩེདམོ་ཚུ་གི་ཁྱད་ཚབ་སྟོན་མི་དགོ</long>
+      </locale>
+
+      <locale name="el">
+        <short>Στατιστικά στοιχεία παιχνιδιών</short>
+	<long>Μια λίστα συμβολοσειρών με πενταπλή μορφή: όνομα, νίκες, συνολικός αριθμός παιχνιδιών, καλύτερος χρόνος (σε δευτερόλεπτα) και χειρότερος χρόνος (σε δευτερόλεπτα). Τα παιχνίδια που δεν παίχτηκαν δεν χρειάζεται να εμφανίζονται.</long>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑕𐑑𐑩𐑑𐑦𐑕𐑑𐑦𐑒𐑕 𐑝 𐑜𐑱𐑥𐑟 𐑐𐑤𐑱𐑛</short>
+	
+      </locale>
+
+      <locale name="en_CA">
+        <short>Statistics of games played</short>
+	<long>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Statistics of games played</short>
+	<long>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</long>
+      </locale>
+
+      <locale name="eo">
+        <short>Statistikoj de luditaj ludoj</short>
+	<long>Listo de linioj, kiuj enhavas kvinopojn en la formo: nomo, kvanto de gajnoj, kvanto de luditaj maĉoj, plej bona tempo (en sekundoj), kaj malplej bona tempo (ankaŭ en sekundoj). Neluditaj ludoj ne bezonas esti prezentataj.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Estadísticas de los juegos jugados</short>
+	<long>Una lista de cadenas en forma de quinteto: nombre, victorias, total de partidas jugadas, mejor tiempo (en segundos) y peor tiempo (también en segundos). Los juegos sin partidas no se tienen que representar.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Mängitud mängude statistika</short>
+	
+      </locale>
+
+      <locale name="eu">
+        <short>Jolastutako jokoen estatistikak</short>
+	<long>Boskoitz moduan etortzen den kate-zerrenda bat: izena, garaipenak, jolastutako partidak guztira, denbora onena (segundotan) eta denbora okerrena (hau ere segundotan). Jolastu gabeko partidak adierazi beharrik ez dago.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>آمار بازی‌های انجام شده</short>
+	<long>فهرستی از رشته‌ها که به شکل پنج‌تایی هستند: نام، بردها، ‌مجموع بازی‌های انجام شده، بهترین زمان (به ثانیه) و بدترین زمان (آن هم به ثانیه). باز‌‌ی‌های بازی نشده نمایش داده نمی‌شوند.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Pelattujen pelien tilastoja</short>
+	<long>Tekstiluettelo viiden ryhmissä: nimi, voitot, pelattujen pelien lukumäärä, paras aika (sekunteina) ja huonoin aika (sekunteina). Pelaamattomia pelejä ei tarvitse näyttää.</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Statistiques des parties jouées</short>
+	<long>Une liste de chaînes sous la forme d’un quintuplet : nom, victoires, total des parties jouées, meilleur temps (en secondes) et plus mauvais temps (aussi en secondes). Les parties non jouées non pas besoin d’être représentées.</long>
+      </locale>
+
+      <locale name="fur">
+        <short>Statistichis des partidis zuiadis</short>
+	<long>Une cuintuple di stringhis te forme: non, vitoriis, totâl di partidis zuiadis, miôr timp (in seconts) e piês timp (simpri in seconts). Nol è necessari rapresentâ lis partidis mai zuiadis.</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Estatísticas das partidas xogadas</short>
+	<long>Unha lista de cadeas formadas por un quinteto: nome, vitorias, partidas xogadas en total, mellor tempo (en segundos) e peor tempo (tamén en segundos). Os xogos que non se xogaron non teñen que estar representados.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>રમાયેલી રમતની પરિસ્થિતી</short>
+	<long>શબ્દમાળાઓની યાદી કે જે ચાર ટપલોના સ્વરુપમાં આવે છેઃ  નામ, જીતે, કુલ રમાયેલી રમતો, શ્રેષ્ઠ સમય (સેકન્ડોમાં) અને ખરાબ સમય (પણ સેકન્ડોમાં). નહિ રમાયેલી રમતોનું વર્ણન કરવું જરુરી નથી.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Statistics of games played</short>
+	<long>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>खेल पुनः प्रारंभ करें</short>
+	<long>स्ट्रिंग की सूची जो पांच गुने रूप में आता है: name, wins, total games played, best time (सेकेंड में) और worst time (सेकेंड में ही). नहीं खेला गया खेल दिखाया नहीं जा सकता.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Statiskita odigranih igara</short>
+	<long>Popis znakova koji dolaze u obliku peterostrukosti: naziv, pobjede, ukupno odigranih igara, najbolje vrijeme (u sekundama) i najlošije vrijeme (isto u sekundama). Neodigrane igre ne trebaju biti prikazane.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Lejátszott játékok statisztikája</short>
+	<long>Karaktersorozatok ötös csoportosítású listája: név, győzelmek, összes lejátszott játék, legjobb idő (másodpercben) és legrosszabb idő (szintén másodpercben. A le nem játszott játékoknak nem kell megjelenniük.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Statistik permainan yang telah dimainkan</short>
+	<long>Daftar kata yang dalam bentuk quintuple: nama, menang, total  permainan, waktu terbaik (dalam detik) dan waktu terburuk (juga dalam detik). Game yang tidak dimainkan tidak perlu ditampilkan.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Tölfræði spilaðra leikja</short>
+	<long>Listi af strengjum sem koma í fimmfeldi: nafn, vinningar, samtalsfjöldi leikja, besti tími (í sekúndum) og versti tími (líka í sekúndum).Óleiknir leikir eru ekki sýndir.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Statistiche delle partite giocate</short>
+	<long>Una quintupla di stringhe nella forma: nome, vittorie, totale di partite giocate, miglior tempo (in secondi) e peggior tempo (sempre in secondi). Non è necessario rappresentare le partite mai giocate.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>プレイしたゲームの成績</short>
+	<long>5つからなる文字列のリストです: 名前、勝ち数、プレイ数、ベストタイム (秒)、ワーストタイム(秒)。ここにプレイしていない数を指定する必要はありません。</long>
+      </locale>
+
+      <locale name="ka">
+        <short>ნათამაშები თამაშების სტატისტიკა</short>
+	
+      </locale>
+
+      <locale name="kk">
+        <short>Ойналған ойындардың статистикасы</short>
+	
+      </locale>
+
+      <locale name="km">
+        <short>ស្ថិតិ​នៃ​ល្បែង​ដែល​បាន​លេង</short>
+	<long>បញ្ជី​នៃ​ខ្សែ​អក្សរ​ដែល​​ជា​ទម្រង់​​ quintuple: ឈ្មោះ ការ​ឈ្នះ ល្បែង​ដែល​បាន​លេង​សរុប ឱកាស​​ល្អ (គិត​ជា​វិនាទី) និង​ឱកាស​មិន​ល្អ (គិត​ជា​វិនាទី) ។ ល្បែង​ដែល​មិន​បាន​លេង​មិន​ចាំបាច់​ត្រូវ​បង្ហាញ​ឡើយ ។​</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಆಡಲಾದ ಆಟಗಳ ಅಂಕಿ ಅಂಶಗಳು</short>
+	<long>ಐದು ನಮೂದುಗಳ ನಮೂನೆಯಲ್ಲಿ ಬಂದ ವಾಕ್ಯಗಳ ಒಂದು ಪಟ್ಟಿ: ಹೆಸರು, ಗೆಲುವುಗಳು, ಒಟ್ಟು ಆಡಿದ ಆಟಗಳು, ಉತ್ತಮವಾದ ಸಮಯ (ಸೆಕೆಂಡುಗಳಲ್ಲಿ) ಹಾಗು ಕೆಟ್ಟ ಸಮಯ (ಇದೂ ಸಹ ಸೆಕೆಂಡುಗಳಲ್ಲಿ). ಆಡದೆ ಇರುವ ಆಟಗಳನ್ನು ಸೂಚಿಸುವ ಅಗತ್ಯವಿರುವುದಿಲ್ಲ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>플레이한 게임의 통계</short>
+	<long>5개 데이터 튜플 형태의 문자열 목록: 이름, 이긴 회수, 전체 게임 수, 최고 시간(초 단위) 그리고 최저 시간(역시 초 단위).  플레이하지 않은 게임은 해당 없습니다.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Žaistų žaidimų statistika</short>
+	<long>Eilučių sąrašas kuris susideda iš penkių dalių: vardas, pergalės, viso kartų žaista, geriausias laikas (sekundėmis) ir blogiausias laikas (irgi sekundėmis). Nežaisti žaidimai nebus rodomi.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Spēlēto spēļu statistika</short>
+	<long>Saraksts ar rindām, kuras nāk pa pieciniekiem: vārds, uzvaras, pavisam spēlētās spēles, labākais laiks (sekundēs) un sliktākais laiks (arī sekundēs). Nespēlētās spēles nav nepieciešams atspoguļot.</long>
+      </locale>
+
+      <locale name="mai">
+        <short>खेलल गए खेल क&apos; आंकड़ा</short>
+	<long>स्ट्रिंग क&apos; सूची जे पाँच गुना रूपमे आबैत अछि name, wins, total games played, best time (सकेंडमे) आओर worst time (सकेंडमे). नहि खेलल गेल खेल देखाओल नहि जाए सकत.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Статистика на изиграни партии</short>
+	<long>Листа на стрингови кои доаѓаат во форма на квинт: име, победи, вкупен број на одиграни игри, најдобро време (во секунди) и најлошо време (во секунди). Игрите кои не се одиграни нема потреба да се прикажуваат.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>കളിച്ച കളികളുടെ സ്ഥിതി വിവരണം</short>
+	<long>ഒരു ക്വിന്റ്യൂപിള്‍ രീതിയല്‍ ലഭ്യമാകുന്ന സ്ട്രിങുകളുടെ പട്ടിക: പേരു്, ജയങ്ങള്‍, കളിച്ച മൊത്തം കളികള്‍, നല്ല സമയം (സെക്കന്‍ഡുകളില്‍), ചീത്ത സമയം (സെക്കന്‍ഡുകളില്‍). കളിക്കാത്ത കളികള്‍ സൂചിപ്പിക്കേണ്ടതില്ല.</long>
+      </locale>
+
+      <locale name="mn">
+        <short>Тоглосон тоглоомын статистик</short>
+	
+      </locale>
+
+      <locale name="mr">
+        <short>खेळलेल्या खेळ्यांची आकडेवारी</short>
+	<long>वाक्यांची यादी जी ह्या पाचांच्या समूहरुपाने येते: नाव, विजय, एकूण खेळ्या, सर्वोत्तम वेळ (सेकंदात), आणि सर्वात वाईट वेळ (सेकंदात). न खेळलेले खेळ ची गरज नाही.</long>
+      </locale>
+
+      <locale name="ms">
+        <short>Statistik permainan yang telah dimainkan</short>
+	
+      </locale>
+
+      <locale name="nb">
+        <short>Statistikk for spill</short>
+	<long>En femdelt liste med strenger delt i: navn, seirer, antall ganger spilt, beste tid (i sekunder) og dårligste tid (i sekunder). Uspilte spill trenger ikke å være representerte.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>खेलिएका खेलको तथ्याङ्क</short>
+	<long>क्विन्टुपलका रूपमा आउने स्ट्रिङको सूची: नाम, विजेता, खेलेका खेलको कूल सङ्ख्या, उत्तम समय (सेकेन्डमा) र सबैभन्दा खराब समय (सेकेन्डमा) ।नखेलिएका खेललाई प्रतिनिधित्व गर्नु पर्दैन ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Statistieken van de gespeelde spellen</short>
+	<long>Een lijst met tekenreeksen bestaande uit vijf onderdelen: naam, gewonnen, totaal gespeeld, beste tijd (in seconden) en slechtste tijd (ook in seconden).  Niet-gespeelde spellen hoeven niet te worden weergegeven.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Statistikk over spelte spel</short>
+	<long>Ei liste med fem strengar: Namn, kor mange gonger vunne, kor mange gonger spelt, beste tid (i sekund), dårlegaste tid (også i sekund). Ikkje ferdig spelte spel treng ikkje takast med.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Estatisticas de las partidas jogadas</short>
+	<long>Una tièra de cadenas jos la forma d&apos;un quintuplet : nom, victòrias, partidas jogadas, melhor temps (en segondas) e tant pièger (en segondas tanben). Las partidas non jogadas an pas mestièr d&apos;èsser representadas.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ଖେଳାୟାଇଥିବା ଖେଳର ପରିସଂଖ୍ଯାନ</short>
+	<long>ସ୍ଟ୍ରିଙ୍ଗ ଗୁଡିକର ତାଲିକା ୟାହାକି ଗୋଟିଏ ପାଞ୍ଚଗୁଣ ଗଠନରେ ଆସେ: ନାମ, ବିଜଯଗୁଡିକ, ଖେଳାୟାଇଥିବା ସର୍ବମୋଟ ଖେଳ, ଉତ୍ତମ ସମଯ (ସେକେଣ୍ଡରେ) ଏବଂ ସବୁଠାରୁ ମନ୍ଦ ଖେଳ (ତା ମଧ୍ୟ ସେକେଣ୍ଡରେ) ୤ ଖେଳାୟାଇ ନଥିବା ଖେଳକୁ ଉପସ୍ଥାପିତ କରିବାକୁ ଦରକାର ପଡେ ନାହିଁ ୤</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਖੇਡੀ ਖੇਡ ਦੇ ਅੰਕੜੇ</short>
+	<long>ਸਤਰਾਂ ਦੀ ਸੂਚੀ, ਜੋ ਕਿ ਚੌਭੁਜ ਤੋਂ ਆਏ ਹਨ: ਨਾਂ, ਜਿੱਤ, ਕੁੱਲ ਖੇਡੀਆਂ ਖੇਡਾਂ, ਉੱਤਮ ਸਮਾਂ (ਸਮਾਂ ਸਕਿੰਟਾਂ ਵਿੱਚ) ਅਤੇ ਬੁਰਾ ਸਮਾਂ (ਸਮਾਂ ਸਕਿੰਟਾਂ ਵਿੱਚ)। ਨਾ-ਖੇਡੀਆਂ ਖੇਡਾਂ ਪੇਸ਼ ਕਰਨ ਦਾ ਜਰੂਰਤ ਨਹੀਂ ਹੈ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Statystyki rozegranych gier</short>
+	<long>Lista napisów zawierających pięć elementów: nazwa, zwycięstwa, liczba rozegranych gier, najlepszy czas (w sekundach) i najgorszy czas (również w sekundach). Gry nierozegrane nie są przedstawiane.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Estatísticas dos jogos realizados</short>
+	<long>Uma lista de cadeias no formato de um quinteto: nome, vitórias, total de jogos realizados, melhor tempo (em segundos) e pior tempo (também em segundos). Jogos não jogados não necessitam de ser representados.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Estatísticas de jogos realizados</short>
+	<long>Uma lista de mensagens que vem em forma de quíntuplo: nome, vitórias, total de jogos realizados, melhor tempo (em segundos) e pior tempo (também em segundos). Jogos que não foram realizados não precisam ser representados.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Statisticile jocurilor jucate</short>
+	<long>O listă de șiruri care vin sub forma unui cvintuplu: nume, victorii, total jocuri jucate, cel mai bun timp (în secunde) și cel mai slab timp (tot în secunde). Jocurile nejucate nu trebuie reprezentate.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Статистика сыгранных игр</short>
+	<long>Список строк, которые содержат четвёрки: имя игры, победы, количество игр, лучшее время в секундах и худшее время тоже в секундах. Игры, в которые не играли, могут отсутствовать.</long>
+      </locale>
+
+      <locale name="si">
+        <short>තරග කළ තරග සංඛ්‍යාන්ක</short>
+	
+      </locale>
+
+      <locale name="sk">
+        <short>Štatistiky hraných hier</short>
+	<long>Zoznam reťazcov v tvare pätíc: meno, výhry, celkový počet hraných hier, najlepší čas (v sekundách) a najhorší čas (tiež v sekundách). Nehrané hry nemusia byť uvedené.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Statistika odigranih iger</short>
+	<long>Seznam nizov, ki se pojavljajo v peterkah: ime, zmage, skupno igranih iger, najboljši čas (v sekundah) in najslabši čas (tudi v sekundah). Neigranih iger ni treba prikazati.</long>
+      </locale>
+
+      <locale name="sq">
+        <short>Statistikat e lojrave të përfunduara</short>
+	<long>Një listë pesëshe emrash, fitoret, lojrat e luajtura gjithsej, koha më e mirë (në sekonda) dhe koha më e keqe (po ashtu në sekonda). Lojrat e papërfunduar nuk është e nevojshme të paqaqiten.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Статистика одиграних игара</short>
+	<long>Списак ниски у облику петорке: име, број победа, укупно одиграних, најбоље и најгоре време (у секундама). Неодигране игре не морају да буду представљене.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Statistika odigranih igara</short>
+	<long>Spisak niski u obliku petorke: ime, broj pobeda, ukupno odigranih, najbolje i najgore vreme (u sekundama). Neodigrane igre ne moraju da budu predstavljene.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Statistik för spelade spel</short>
+	<long>En lista med strängar som kommer i formen av en femtupel: namn, vinster, totala antalet spelade spel, bästa tiden (i sekunder) och sämsta tiden (också den i sekunder). Ospelade spel behöver inte representeras.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>விளையாடிய விளையாட்டுகளின் புள்ளிவிவரம்</short>
+	<long>ஐந்துகளாகத் தெரியும் சரங்களின் பட்டியல்: பெயர், வெற்றிகள், மொத்த விளையாட்டுகளின் எண்ணிக்கை, சிறப்பான ஆட்ட நேரம்(நொடிகளில்) மற்றும் மோசமான ஆட்ட நேரம்(நொடிகளில்). விளையாடாத விளையாட்டுகள் சேர்க்கப்பட மாட்டாது.</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఆడిన ఆటల గణాంకాలు</short>
+	<long>అయిదింటి రూపములో వచ్చే స్ట్రింగ్సు జాబితా. నామము, విజయాలు, మొత్తం ఆడిన ఆటలు, మంచి సమయం (సెకనులలో) మరియు చెడ్డ సమయం (సెకనులలో). ఆడని ఆటలు చూపించవలసిన అవసరములేదు.</long>
+      </locale>
+
+      <locale name="th">
+        <short>สถิติของการเล่นเกม</short>
+	<long>รายการสตริงในรูปของระเบียน: ชื่อ, จำนวนเกมชนะ, จำนวนเกมที่เล่นทั้งหมด, เวลาที่ดีที่สุด (เป็นวินาที) และเวลาที่แย่ที่สุด (เป็นวินาทีเช่นกัน) เกมที่ไม่ได้เล่นไม่จำเป็นต้องเก็บ</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Oynanan oyun hakkındali istatistikler</short>
+	<long>Beşli olarak gelen dizgilerin anlamları: isim, kazandığı, toplam oynanan oyun, en iyi zaman (saniye) ve en kötü zaman (saniye). Oynanmayan oyunları belirtme ihtiyacı duyulmadı.</long>
+      </locale>
+
+      <locale name="ug">
+        <short>ئوينىغان ئويۇننىڭ ستاتىستىكىسى</short>
+	<long>تۆۋەندىكى بەش خىل ئۇچۇرنىڭ جەدۋىلى: ئويۇن ئاتى، ئۇتقان قېتىم سانى، ئومۇمىي ئويۇن قېتىم سانى، ئەڭ ياخشى ۋاقىت (سېكۇنت)، ئەڭ ناچار ۋاقىت (سېكۇنت). ئوينالمىغان ئويۇنلار تىزىمدا كۆرۈنمەيدۇ.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Статистика минулих ігор</short>
+	<long>Список рядків для форми п&apos;ятірки: ім&apos;я, перемог, всього ігор, найліпший час (в секундах) і найгірший час (також в секундах). Ігри, в які не гралося, не потрібно представляти.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Thống kê các trò đã chơi</short>
+	<long>Một danh sách chuỗi dạng năm phần: tên, lần thắng, tổng trò đã chơi, thời gian tốt nhất (theo giây) và thời gian xấu nhất (theo giây). Không cần hiển thị trò chưa chơi.</long>
+      </locale>
+
+      <locale name="xh">
+        <short>Ingqokelela yamanani yemidlalo edlaliweyo</short>
+	<long>Uluhlu lwamagama oluvela ngezihlanu: igama, ukuphumelela, imidlalo edlaliweyo iyonke, ixesha elilunge ngqo (ngokweesekondi) nexesha elilelona libi (nalo ngokweesekondi). Imidlalo engadlalangwa akukho mfuneko yokuba ivezwe.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>所玩游戏的统计</short>
+	<long>一张字符串列表，由以下五部分组成：姓名、所赢回合数、总计玩过的回合数、最好时间(以秒计)、最差时间(亦以秒计)。未玩过的游戏不被表示。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>已玩過的遊戲的統計</short>
+	<long>這是一系列的字串，每個字串都有 5 部份：名稱、贏的次數、玩過的總局數、最快時間（秒）和最慢時間（秒）。未玩過的遊戲不需要列出來。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>已玩過的遊戲的統計</short>
+	<long>這是一系列的字串，每個字串都有 5 部份：名稱、贏的次數、玩過的總局數、最快時間（秒）和最慢時間（秒）。未玩過的遊戲不需要列出來。</long>
+      </locale>
+    </schema>
+	
+    <schema>
+      <key>/schemas/apps/aisleriot/recent_games_list</key>
+      <applyto>/apps/aisleriot/recent_games_list</applyto>
+      <owner>aisleriot</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Recently played games</short>
+        <long>A list of recently played games.</long>
+      </locale>
+
+      <locale name="af">
+        <short>Onlangs gespeelde speletjies</short>
+        <long>&apos;n Lys van onlangs gespeelde speletjies.</long>
+      </locale>
+
+      <locale name="ar">
+        <short>الألعاب التي لُعبت حديثًا</short>
+        <long>لائحة الألعاب التي لُعبت حديثًا</long>
+      </locale>
+
+      <locale name="as">
+        <short>অলপতে খেলা খেল</short>
+        <long>অলপতে খেলা খেলৰ তালিকা।</long>
+      </locale>
+
+      <locale name="ast">
+        <short>Xuegos apocayá</short>
+        <long>Una riestra de xuegos xugaos apocayá.</long>
+      </locale>
+
+      <locale name="be">
+        <short>Нядаўнія гульні</short>
+        <long>Спіс нядаўніх гульняў.</long>
+      </locale>
+
+      <locale name="bg">
+        <short>Скоро играни игри</short>
+        <long>Списък със скоро играни игри.</long>
+      </locale>
+
+      <locale name="bn">
+        <short>সম্প্রতি যে খেলাগুলি খেলা হয়েছে</short>
+        <long>সম্প্রতি যে খেলাগুলি খেলা হয়েছে তার তালিকা।</long>
+      </locale>
+
+      <locale name="bn_IN">
+        <short>সম্প্রতি যে খেলাগুলি খেলা হয়েছিল</short>
+        <long>সম্প্রতি যে খেলাগুলি খেলা হয়েছে।</long>
+      </locale>
+
+      <locale name="br">
+        <short>C&apos;hoarioù graet a nevez zo</short>
+        <long>Roll c&apos;hoarioù graet a nevez zo</long>
+      </locale>
+
+      <locale name="bs">
+        <short>Nedavno igrane igre</short>
+        <long>Lista nedavno odigranih igara.</long>
+      </locale>
+
+      <locale name="ca">
+        <short>Jocs jugats recentment</short>
+        <long>Una llista de jocs jugats recentment.</long>
+      </locale>
+
+      <locale name="ca@valencia">
+        <short>Jocs jugats recentment</short>
+        <long>Una llista de jocs jugats recentment.</long>
+      </locale>
+
+      <locale name="cs">
+        <short>Naposledy hrané hry</short>
+        <long>Seznam naposledy hraných her.</long>
+      </locale>
+
+      <locale name="cy">
+        <short>Gemau chwaraewyd yn ddiweddar</short>
+        <long>Gemau Chwaraewyd yn Ddiweddar</long>
+      </locale>
+
+      <locale name="da">
+        <short>Seneste spil</short>
+        <long>En liste med seneste spillede spil.</long>
+      </locale>
+
+      <locale name="de">
+        <short>Zuletzt gespielte Spiele</short>
+        <long>Eine Liste der zuletzt gespielten Spiele.</long>
+      </locale>
+
+      <locale name="dz">
+        <short>འཕྲལ་ཁམས་རྩེ་ཡོད་པའི་རྩེདམོ་ཚུ།</short>
+        <long>འཕྲལ་ཁམས་རྩེ་ཡོད་པའི་རྩེདམོ་ཚུ་གི་ཐོ།</long>
+      </locale>
+
+      <locale name="el">
+        <short>Πρόσφατα παιχνίδια</short>
+        <long>Μια λίστα από πρόσφατα παιχνίδια.</long>
+      </locale>
+
+      <locale name="en@shaw">
+        <short>𐑮𐑰𐑕𐑩𐑯𐑑𐑤𐑦 𐑐𐑤𐑱𐑛 𐑜𐑱𐑥𐑟</short>
+        <long>𐑩 𐑤𐑦𐑕𐑑 𐑝 𐑮𐑰𐑕𐑩𐑯𐑑𐑤𐑦 𐑐𐑤𐑱𐑛 𐑜𐑱𐑥𐑟.</long>
+      </locale>
+
+      <locale name="en_CA">
+        <short>Recently played games</short>
+        <long>A list of recently played games.</long>
+      </locale>
+
+      <locale name="en_GB">
+        <short>Recently played games</short>
+        <long>A list of recently played games.</long>
+      </locale>
+
+      <locale name="eo">
+        <short>Antaŭ nelonge luditaj maĉoj</short>
+        <long>Listo de antaŭnelonge luditaj maĉoj.</long>
+      </locale>
+
+      <locale name="es">
+        <short>Juegos recientemente jugados</short>
+        <long>Una lista de juegos recientemente jugados.</long>
+      </locale>
+
+      <locale name="et">
+        <short>Viimati mängitud mängud</short>
+        <long>Viimati mängitud mängude nimekiri.</long>
+      </locale>
+
+      <locale name="eu">
+        <short>Oraintsu jolastutako jokoak</short>
+        <long>Oraintsu jolastutako jokoen zerrenda.</long>
+      </locale>
+
+      <locale name="fa">
+        <short>بازی‌های به‌تازگی بازی شده</short>
+        <long>یک فهرست از بازی‌های به‌تازگی بازی شده.</long>
+      </locale>
+
+      <locale name="fi">
+        <short>Äskettäin pelatut pelit</short>
+        <long>Luettelo äskettäin pelatuista peleistä</long>
+      </locale>
+
+      <locale name="fr">
+        <short>Parties récemment jouées</short>
+        <long>Une liste des parties récemment jouées.</long>
+      </locale>
+
+      <locale name="fur">
+        <short>Partidis zuiadis di pôc</short>
+        <long>Une liste di partidis zuiadis che nol è tant.</long>
+      </locale>
+
+      <locale name="ga">
+        <short>Cluichí imeartha le déanaí</short>
+        <long>Liosta cluichí imeartha le déanaí</long>
+      </locale>
+
+      <locale name="gl">
+        <short>Xogos xogados recentemente</short>
+        <long>Unha lista dos xogos xogados recentemente.</long>
+      </locale>
+
+      <locale name="gu">
+        <short>છેલ્લે રમાયેલ રમતો</short>
+        <long>છેલ્લે રમવામાં આવેલ રમતોની યાદી.</long>
+      </locale>
+
+      <locale name="he">
+        <short>Recently played games</short>
+        <long>A list of recently played games.</long>
+      </locale>
+
+      <locale name="hi">
+        <short>हाल में खेले खेल के नाम</short>
+        <long>हाल में खेले गए खेल के नाम.</long>
+      </locale>
+
+      <locale name="hr">
+        <short>Nedavno odigrane igre</short>
+        <long>Popis nedavno odigranih igara.</long>
+      </locale>
+
+      <locale name="hu">
+        <short>Legutóbb játszott játékok</short>
+        <long>Legutóbb játszott játékok listája.</long>
+      </locale>
+
+      <locale name="id">
+        <short>Yang baru-baru ini dimainkan</short>
+        <long>Daftar permainan yang terakhir dimainkan.</long>
+      </locale>
+
+      <locale name="is">
+        <short>Nýspilaðir leikir</short>
+        <long>Listi yfir nýspilaða leiki.</long>
+      </locale>
+
+      <locale name="it">
+        <short>Partite giocate recentemente</short>
+        <long>Un elenco delle partite giocate recentemente.</long>
+      </locale>
+
+      <locale name="ja">
+        <short>最近プレイしたゲーム</short>
+        <long>最近プレイしたゲームのリストです。</long>
+      </locale>
+
+      <locale name="kk">
+        <short>Соңғы ойналған ойындар</short>
+        <long>Соңғы ойналған ойындар тізімі.</long>
+      </locale>
+
+      <locale name="km">
+        <short>ល្បែង​ដែល​បាន​លេង​ថ្មីៗ</short>
+        <long>រាយ​បញ្ជី​ល្បែង​ដែល​បាន​លេង​ថ្មីៗ ។</long>
+      </locale>
+
+      <locale name="kn">
+        <short>ಇತ್ತೀಚೆಗೆ ಆಡಲಾದ ಆಟಗಳ ಪಟ್ಟಿ</short>
+        <long>ಇತ್ತೀಚೆಗೆ ಆಡಲಾದ ಆಟಗಳ ಒಂದು ಪಟ್ಟಿ.</long>
+      </locale>
+
+      <locale name="ko">
+        <short>최근 플레이한 게임</short>
+        <long>최근 플레이한 게임의 목록.</long>
+      </locale>
+
+      <locale name="lt">
+        <short>Paskutinieji žaisti žaidimai</short>
+        <long>Paskutiniųjų žaistų žaidimų sąrašas.</long>
+      </locale>
+
+      <locale name="lv">
+        <short>Nesen spēlētās spēles</short>
+        <long>Nesen spēlēto spēļu saraksts.</long>
+      </locale>
+
+      <locale name="mk">
+        <short>Скоро играни игри</short>
+        <long>Листа на скоро играни игри.</long>
+      </locale>
+
+      <locale name="ml">
+        <short>ഏറ്റവും ഒടുവില്‍ കളിച്ച കളികള്‍</short>
+        <long>ഏറ്റവും ഒടുവില്‍ കളിച്ച കളികളുടെ പട്ടിക.</long>
+      </locale>
+
+      <locale name="mr">
+        <short>नुकतेच खेळलेले खेळांची यादी</short>
+        <long>नुकतेच खेळलेल्या खेळांची यादी.</long>
+      </locale>
+
+      <locale name="nb">
+        <short>Nylig spilte spill</short>
+        <long>En liste med nylig spilte spill.</long>
+      </locale>
+
+      <locale name="ne">
+        <short>हालै खेलेका खेल</short>
+        <long>हालै खेलेका खेलको सूची ।</long>
+      </locale>
+
+      <locale name="nl">
+        <short>Onlangs gespeelde spellen</short>
+        <long>Een lijst met onlangs gespeelde spellen.</long>
+      </locale>
+
+      <locale name="nn">
+        <short>Nyleg spela spel</short>
+        <long>Ei liste med nyleg spela spel.</long>
+      </locale>
+
+      <locale name="oc">
+        <short>Partidas jogadas recentament</short>
+        <long>Una lista de las partidas jogadas darrièrament.</long>
+      </locale>
+
+      <locale name="or">
+        <short>ବର୍ତ୍ତମାନ ଖେଳାଯାଉଥିବା କିଛି ଖେଳ</short>
+        <long>ବର୍ତ୍ତମାନ ଖେଳାଯାଉଥିବା କିଛି ଖେଳର ତାଲିକା।</long>
+      </locale>
+
+      <locale name="pa">
+        <short>ਤਾਜ਼ਾ ਖੇਡੀਆਂ ਖੇਡਾਂ</short>
+        <long>ਤਾਜ਼ਾ ਖੇਡੀਆਂ ਖੇਡਾਂ ਦੀ ਲਿਸਟ ਹੈ।</long>
+      </locale>
+
+      <locale name="pl">
+        <short>Ostatnio używane gry</short>
+        <long>Lista ostatnio używanych gier.</long>
+      </locale>
+
+      <locale name="pt">
+        <short>Jogos recentemente jogados</short>
+        <long>Uma lista de jogos recentemente jogados.</long>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Jogos realizados recentemente</short>
+        <long>Uma lista de jogos realizados recentemente.</long>
+      </locale>
+
+      <locale name="ro">
+        <short>Jocuri jucate recent</short>
+        <long>O listă a jocurilor jucate recent.</long>
+      </locale>
+
+      <locale name="ru">
+        <short>Недавние пасьянсы</short>
+        <long>Список недавно сыгранных пасьянсов.</long>
+      </locale>
+
+      <locale name="si">
+        <short>මෑතකඳි තරග කළ තරග</short>
+        <long>මෑතකඳි තරග කළ තරග ලැයිස්තුව</long>
+      </locale>
+
+      <locale name="sk">
+        <short>Naposledy hrané hry</short>
+        <long>Zoznam naposledy hraných hier.</long>
+      </locale>
+
+      <locale name="sl">
+        <short>Nedavno igrane igre</short>
+        <long>Seznam nedavno igranih iger.</long>
+      </locale>
+
+      <locale name="sr">
+        <short>Скорашње игре</short>
+        <long>Списак скоро одиграних игара.</long>
+      </locale>
+
+      <locale name="sr@latin">
+        <short>Skorašnje igre</short>
+        <long>Spisak skoro odigranih igara.</long>
+      </locale>
+
+      <locale name="sv">
+        <short>Tidigare spelade spel</short>
+        <long>En lista över tidigare spelade spel.</long>
+      </locale>
+
+      <locale name="ta">
+        <short>அண்மையில் விளையாடிய விளையாட்டுக்கள்</short>
+        <long>அண்மையில் விளையாடிய விளையாட்டுக்களின் பட்டியல்</long>
+      </locale>
+
+      <locale name="te">
+        <short>ఇంతకుముందే ఆడిన ఆటలు</short>
+        <long>ఇటీవల ఆడిన ఆటల జాబితా.</long>
+      </locale>
+
+      <locale name="th">
+        <short>เกมที่เล่นก่อนหน้านี้</short>
+        <long>รายการเกมที่เล่นก่อนหน้านี้</long>
+      </locale>
+
+      <locale name="tr">
+        <short>Yakınlarda oynanmış oyunlar</short>
+        <long>Yakınlarda oynanmış oyunların bir listesi.</long>
+      </locale>
+
+      <locale name="ug">
+        <short>يېقىندا ئوينىغان ئويۇنلار</short>
+        <long>يېقىندا ئوينىغان ئويۇنلار تىزىمى.</long>
+      </locale>
+
+      <locale name="uk">
+        <short>Недавні пасьянси</short>
+        <long>Список недавно зіграних пасьянсів.</long>
+      </locale>
+
+      <locale name="vi">
+        <short>Lượt vừa chơi</short>
+        <long>Danh sách các lượt vừa chơi.</long>
+      </locale>
+
+      <locale name="zh_CN">
+        <short>最近玩过的游戏</short>
+        <long>最近玩过的游戏的列表。</long>
+      </locale>
+
+      <locale name="zh_HK">
+        <short>最近玩過的遊戲</short>
+        <long>最近玩過的遊戲清單。</long>
+      </locale>
+
+      <locale name="zh_TW">
+        <short>最近玩過的遊戲</short>
+        <long>最近玩過的遊戲清單。</long>
+      </locale>
+     </schema>
+
+  </schemalist>
+</gconfschemafile>

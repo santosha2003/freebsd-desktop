@@ -1,0 +1,436 @@
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/gconf-editor/bookmarks</key>
+      <applyto>/apps/gconf-editor/bookmarks</applyto>
+      <owner>gconf-editor</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+	<short>Bookmarks</short>
+	<long>gconf-editor folder bookmarks</long>
+      </locale>
+
+      <locale name="ar">
+	<short>العلامات</short>
+	<long>علامات مجلّد gconf-editor</long>
+      </locale>
+
+      <locale name="as">
+	<short>পত্ৰচিহ্নসমূহ</short>
+	<long>gconf-সম্পাদক ফোল্ডাৰৰ পত্ৰচিহ্নসমূহ</long>
+      </locale>
+
+      <locale name="ast">
+	<short>Marcadores</short>
+	<long>carpeta de marcadores de gconf-editor</long>
+      </locale>
+
+      <locale name="az">
+	<short>Nişanlar</short>
+	<long>gconf-editor qovluq nişanları</long>
+      </locale>
+
+      <locale name="be">
+	<short>Закладкі</short>
+	<long>тэчка закладак gconf-editor</long>
+      </locale>
+
+      <locale name="be@latin">
+	<short>Zakładki</short>
+	<long>zakładki na katalohi redaktara naładaŭ</long>
+      </locale>
+
+      <locale name="bg">
+	<short>Отметки</short>
+	<long>отметки за папки на редактора на настройки</long>
+      </locale>
+
+      <locale name="bn">
+	<short>বুকমার্কসমূহ</short>
+	<long>gconf-সম্পাদক ফোল্ডারের বুকমার্ক</long>
+      </locale>
+
+      <locale name="bn_IN">
+	<short>বুকমার্কস</short>
+	<long>gconf-editor ফোল্ডারের বুকমার্ক</long>
+      </locale>
+
+      <locale name="br">
+	<short>Sinedoù</short>
+	<long>Teuliad ar sinedoù gconf-editor</long>
+      </locale>
+
+      <locale name="bs">
+	<short>Zabilješke</short>
+	<long>gconf-editor direktorij zabilješki</long>
+      </locale>
+
+      <locale name="ca">
+	<short>Adreces d&apos;interès</short>
+	<long>adreces d&apos;interès de carpetes del gconf-editor</long>
+      </locale>
+
+      <locale name="ca@valencia">
+	<short>Adreces d&apos;interés</short>
+	<long>adreces d&apos;interés de carpetes del gconf-editor</long>
+      </locale>
+
+      <locale name="cs">
+	<short>Záložky</short>
+	<long>Záložky složek v Editoru nastavení</long>
+      </locale>
+
+      <locale name="cy">
+	<short>Llyfrnodau</short>
+	<long>llyfrnodau plygell gconf-editor</long>
+      </locale>
+
+      <locale name="da">
+	<short>Bogmærker</short>
+	<long>mappebogmærker for konfigurationsredering</long>
+      </locale>
+
+      <locale name="de">
+	<short>Lesezeichen</short>
+	<long>gconf-editor-Ordner-Lesezeichen</long>
+      </locale>
+
+      <locale name="dz">
+	<short>དེབ་རྟགས་ཚུ།</short>
+	<long>ཇི་ཀཱོནཕ་ཞུན་དག་པའི་ སྣོད་འཛིན་དེབ་རྟགས།</long>
+      </locale>
+
+      <locale name="el">
+	<short>Σελιδοδείκτες</short>
+	<long>Σελιδοδείκτες φακέλου gconf-editor</long>
+      </locale>
+
+      <locale name="en@shaw">
+	<short>𐑚𐑫𐑒𐑥𐑸𐑒𐑕</short>
+	<long>gconf-𐑧𐑛𐑦𐑑𐑹 𐑓𐑴𐑤𐑛𐑼 𐑚𐑫𐑒𐑥𐑸𐑒𐑕</long>
+      </locale>
+
+      <locale name="en_CA">
+	<short>Bookmarks</short>
+	<long>gconf-editor folder bookmarks</long>
+      </locale>
+
+      <locale name="en_GB">
+	<short>Bookmarks</short>
+	<long>gconf-editor folder bookmarks</long>
+      </locale>
+
+      <locale name="eo">
+	<short>Legosignoj</short>
+	<long>Dosierujaj legosignoj de gconf-redaktilo</long>
+      </locale>
+
+      <locale name="es">
+	<short>Marcadores</short>
+	<long>carpeta de marcadores de gconf-editor</long>
+      </locale>
+
+      <locale name="et">
+	<short>Järjehoidjad</short>
+	<long>gconf-editor&apos;i kataloogijärjehoidjaid</long>
+      </locale>
+
+      <locale name="eu">
+	<short>Laster-markak</short>
+	<long>gcond-editorearen laster-marken direktorioa</long>
+      </locale>
+
+      <locale name="fa">
+	<short>چوب‌الف‌ها</short>
+	<long>چوب الف های پوشه‌ی gconf-editor</long>
+      </locale>
+
+      <locale name="fi">
+	<short>Kirjanmerkit</short>
+	<long>Gconf-editorin kansiokirjanmerkit</long>
+      </locale>
+
+      <locale name="fr">
+	<short>Signets</short>
+	<long>Dossier des signets de gconf-editor</long>
+      </locale>
+
+      <locale name="ga">
+	<short>Leabharmharcanna</short>
+	<long>leabharmharcanna fhillteán gconf-editor</long>
+      </locale>
+
+      <locale name="gl">
+	<short>Marcadores</short>
+	<long>Marcadores de cartafoles do gconf-editor</long>
+      </locale>
+
+      <locale name="gu">
+	<short>બુકમાર્કો</short>
+	<long>જીકોન્ફ-સંપાદક ફોલ્ડરની બુકમાર્કો</long>
+      </locale>
+
+      <locale name="he">
+	<short>Bookmarks</short>
+	<long>gconf-editor folder bookmarks</long>
+      </locale>
+
+      <locale name="hi">
+	<short>पसंदीदा</short>
+	<long>जिकॉन्फ़ संपादक फ़ोल्डर पसंद करें</long>
+      </locale>
+
+      <locale name="hu">
+	<short>Könyvjelzők</short>
+	<long>gconf-szerkesztő mappakönyvjelzők</long>
+      </locale>
+
+      <locale name="id">
+	<short>Penanda Tautan</short>
+	<long>Folder penanda tautan gconf-editor</long>
+      </locale>
+
+      <locale name="it">
+	<short>Segnalibri</short>
+	<long>Segnalibri per cartelle in gconf-editor</long>
+      </locale>
+
+      <locale name="ja">
+	<short>ブックマーク</short>
+	<long>GConf エディターのフォルダー式ブックマークです。</long>
+      </locale>
+
+      <locale name="ka">
+	<short>სანიშნეები</short>
+	<long>gconf-editor სანიშნეების დასტა</long>
+      </locale>
+
+      <locale name="kk">
+	<short>Бетбелгілер</short>
+	
+      </locale>
+
+      <locale name="kn">
+	<short>ಬುಕ್‌ಮಾರ್ಕುಗಳು</short>
+	<long>gconf-ಸಂಪದಾಕ ಕಡತಕೋಶ ಬುಕ್‌ಮಾರ್ಕುಗಳು</long>
+      </locale>
+
+      <locale name="ko">
+	<short>책갈피</short>
+	<long>gconf 편집기 폴더 책갈피</long>
+      </locale>
+
+      <locale name="ku">
+	<short>Bijare</short>
+	<long>gconf-editor peldanka bijareyan</long>
+      </locale>
+
+      <locale name="lt">
+	<short>Žymelės</short>
+	<long>gconf-editor aplankų žymelės</long>
+      </locale>
+
+      <locale name="lv">
+	<short>Grāmatzīmes</short>
+	<long>gconf-editor mapju grāmatzīmes</long>
+      </locale>
+
+      <locale name="mai">
+	<short>पुस्तकचिह्न</short>
+	<long>जिकॉन्फ़ संपादक फोल्डर पुस्तकचिह्न</long>
+      </locale>
+
+      <locale name="mg">
+	<short>Tobin-drohy</short>
+	<long>Rohin&apos;ny lahatahirin&apos;ny gconf-editor</long>
+      </locale>
+
+      <locale name="mk">
+	<short>Обележувачи</short>
+	<long>папка со обележувачи на gconf-уредувач </long>
+      </locale>
+
+      <locale name="ml">
+	<short>ബുക്ക് മാര്‍ക്കുകള്‍</short>
+	<long>gconf-editor ഫോള്‍ഡര്‍ ബുക്ക് മാര്‍ക്കുകള്‍</long>
+      </locale>
+
+      <locale name="mn">
+	<short>Хавчуурга</short>
+	<long>gconf засварлагчийн Хавчуургын хавтас</long>
+      </locale>
+
+      <locale name="mr">
+	<short>पुस्तकखुण</short>
+	<long>gconf-editor फोल्डर पुस्तकखुण</long>
+      </locale>
+
+      <locale name="ms">
+	<short>TandaBuku</short>
+	<long>tandabuku folder gconf-editor</long>
+      </locale>
+
+      <locale name="nb">
+	<short>Bokmerker</short>
+	<long>mappebokmerker for gconf-editor</long>
+      </locale>
+
+      <locale name="ne">
+	<short>पुस्तकचिनोहरू</short>
+	<long>जिकन्फ-सम्पादक फोल्डर पुस्तकचिनोहरू</long>
+      </locale>
+
+      <locale name="nl">
+	<short>Bladwijzers</short>
+	<long>gconf-editor mappen bladwijzers</long>
+      </locale>
+
+      <locale name="nn">
+	<short>Bokmerke</short>
+	<long>mappebokmerker for gconf-editor</long>
+      </locale>
+
+      <locale name="oc">
+	<short>Favorits</short>
+	<long>Repertòri dels favorits de gconf-editor</long>
+      </locale>
+
+      <locale name="or">
+	<short>ଚିହ୍ନିତ ସ୍ଥାନ</short>
+	<long>ଜିକନ୍ଫ-ଏଡିଟର ଚିହ୍ନିତ ସ୍ଥାନଗୁଡ଼ିକର ଫୋଲ୍ଡର</long>
+      </locale>
+
+      <locale name="pa">
+	<short>ਬੁੱਕਮਾਰਕ</short>
+	<long>gconf-editor ਫੋਲਡਰ ਬੁੱਕਮਾਰਕ</long>
+      </locale>
+
+      <locale name="pl">
+	<short>Zakładki</short>
+	<long>Zakładki katalogu edytora konfiguracji</long>
+      </locale>
+
+      <locale name="ps">
+	<short>ليکنښې</short>
+	<long>ليکنښې پوښۍ gconf-سمونګر </long>
+      </locale>
+
+      <locale name="pt">
+	<short>Marcadores</short>
+	<long>marcadores de pasta gconf-editor</long>
+      </locale>
+
+      <locale name="pt_BR">
+	<short>Marcadores</short>
+	<long>Marcadores de pasta do gconf-editor</long>
+      </locale>
+
+      <locale name="ro">
+	<short>Semne de carte</short>
+	<long>dosar cu semne de carte gconf-editor</long>
+      </locale>
+
+      <locale name="ru">
+	<short>Закладки</short>
+	<long>Закладки папок gconf-editor</long>
+      </locale>
+
+      <locale name="rw">
+	<short>Ibirango</short>
+	
+      </locale>
+
+      <locale name="si">
+	<short>පිටු සළකුණු</short>
+	
+      </locale>
+
+      <locale name="sk">
+	<short>Záložky</short>
+	<long>záložky priečinka pre gconf-editor</long>
+      </locale>
+
+      <locale name="sl">
+	<short>Zaznamki</short>
+	<long>gconf-editor zaznamki map</long>
+      </locale>
+
+      <locale name="sq">
+	<short>Libërshënues</short>
+	<long>Kartela e libërshënuesve të editorit gconf</long>
+      </locale>
+
+      <locale name="sr">
+	<short>Обележивачи</short>
+	<long>Обележивачи фасцикли самог уређивача</long>
+      </locale>
+
+      <locale name="sr@latin">
+	<short>Obeleživači</short>
+	<long>Obeleživači fascikli samog uređivača</long>
+      </locale>
+
+      <locale name="sv">
+	<short>Bokmärken</short>
+	<long>Mappbokmärken för gconf-editor</long>
+      </locale>
+
+      <locale name="ta">
+	<short>புத்தககுறிகள்</short>
+	<long>gconf-editor புத்தக குறிகள் அடைவு</long>
+      </locale>
+
+      <locale name="te">
+	<short>గుర్తులు</short>
+	<long>జికాన్ఫ్-సరికర్త సంచయ గుర్తులు</long>
+      </locale>
+
+      <locale name="th">
+	<short>ที่คั่นหน้า</short>
+	<long>ที่คั่นหน้าสำหรับโฟลเดอร์ใน gconf-editor</long>
+      </locale>
+
+      <locale name="tr">
+	<short>Yer imleri</short>
+	<long>gconf-editor klasör yer imleri</long>
+      </locale>
+
+      <locale name="ug">
+	<short>خەتكۈشلەر</short>
+	<long>gconf-editor قىسقۇچ خەتكۈچلەر</long>
+      </locale>
+
+      <locale name="uk">
+	<short>Закладки</short>
+	<long>Тека закладок gconf-editor</long>
+      </locale>
+
+      <locale name="vi">
+	<short>Liên kết lưu</short>
+	<long>Liên kết lưu thư mục gconf-editor</long>
+      </locale>
+
+      <locale name="xh">
+	<short>Izinto zokuphawula</short>
+	<long>Izinto zokuphawula zesiqulathi seefayili se-gconf-editor</long>
+      </locale>
+
+      <locale name="zh_CN">
+	<short>书签</short>
+	<long>gconf-editor 文件夹书签</long>
+      </locale>
+
+      <locale name="zh_HK">
+	<short>書籤</short>
+	<long>GConf 編輯器書籤目錄</long>
+      </locale>
+
+      <locale name="zh_TW">
+	<short>書籤</short>
+	<long>GConf 編輯器書籤目錄</long>
+      </locale>
+    </schema>
+ </schemalist>
+</gconfschemafile>

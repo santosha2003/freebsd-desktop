@@ -1,0 +1,8 @@
+# messagelib
+org.kde.pim.messagecomposer messagelib (messagecomposer)
+org.kde.pim.messagecore messagelib (messagecore)
+org.kde.pim.messagelist messagelib (messagelist)
+org.kde.pim.messageviewer messagelib (messageviewer)
+org.kde.pim.templateparser messagelib (templateparser)
+org.kde.pim.mimetreeparser messagelib (mimetreeparser)
+org.kde.pim.webengineviewer messagelib (webengineviewer)

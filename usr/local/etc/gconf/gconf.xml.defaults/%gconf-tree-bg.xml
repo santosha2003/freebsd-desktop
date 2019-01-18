@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="История на обажданията">
+							<longdesc>История на последните 100 набрани номера</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Сървъри за LDAP">
+							<longdesc>Списък с настроените сървъри за LDAP</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Показване на изключените контакти">
+							<longdesc>Ако е включено, изключените контакти ще се показват в указателя</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Списък със затворените групи в указателя">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Байт за „Тип на услуга“ (TOS) за изходящи RTP IP пакети">
+							<longdesc>Байтът за „Тип услуга“ (TOS) за изходящи RTP IP пакети. Този байт се използва от мрежата за предоставяне на „Качество на услугата“ (QoS). Стандартната стойност 184 (0xB8) съответства на „Експедитивно препращане“ (EF) PHB както е указано в RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Списък с регистрациите">
+							<longdesc>Списък на регистрациите, към които Ekiga трябва да се включи</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Прехвърляне на обаждания към даден хост при липса на отговор">
+								<longdesc>Ако е включено, обажданията, на които не отговорите, ще бъдат прехвърлени към хоста, който е определен в полето долу</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Прехвърляне на обаждания към даден хост при заето">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Обажданията винаги да се прехвърлят към посочения хост">
+								<longdesc>Ако е включено, всички входящи обаждания ще бъдат прехвърляни към хоста определен в полето долу</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Диапазон на портове по UDP">
+								<longdesc>Обхватът от портове по UDP, които да се ползват от програмата</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Диапазон на портове по TCP">
+								<longdesc>Диапазон от портове по TCP, които Ekiga ще използва за канала H.245 за H.323. Този диапазон от портове няма никакво значение, ако и двамата участници в обаждането използват тунелиране на H.245.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Прехвърляне на обаждания към хост">
+								<longdesc>Хостът, към който обажданията трябва да бъдат прехвърляни, когато прехвърлянето е включено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Изпращане на DTMF">
+								<longdesc>Избор на режима за изпращане на DTMF. Валидните стойности са 0 (за „String“ — низ), 1 (за „Tone“ — тон), 2 (за „RFC2833“), 3 (за „Q.931“) (стандартно е „String“ — низ). Ако изберете стойност различна от „String“, няма да можете да пращате текстови съобщения</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Включване на „Бързо набиране“">
+								<longdesc>Връзката ще бъде осъществена в режим „Бързо набиране“. Това е нов начин за по-бързо стартиране на обаждания представено в H.323v2. Не се поддържа от Netmeeting. Ползването му, както и на тунелирането по H.245, може да забие някои версии на Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Включване на ранен H.245">
+								<longdesc>Това включва ранния H.245 при осъществяване на връзка</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Включване на тунелиране по H.245">
+								<longdesc>Това включва тунелирането на H.245. В този режим съобщенията за H.245 се вграждат в канала за H.225 (порт 1720). Това спестява една връзка по TCP по време на обаждане. Тунелирането на H.245 бе въведено с H.323v2 и Netmeeting не го поддържа. Ползването едновременно на „Бързо набиране“ и тунелиране по H.245 може да забие някои версии на Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Порт, на който да се слуша">
+								<longdesc>Порт за очакване на входящи връзки. Трябва да рестартирате Ekiga, за да може новата настройка да влезе в сила.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Максимално време за свързване към NAT">
+								<longdesc>Въведете броя секунди, които Ekiga трябва да изчака преди обновяване на правилата за NAT при използване на STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Изпращане на DTMF">
+								<longdesc>Избор на режима за изпращане на DTMF. Валидните стойности са 0 (за „RFC2833“) и 1 (за „INFO“)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Прехвърляне на обаждания към хост">
+								<longdesc>Хостът, към който обажданията трябва да бъдат прехвърляни, когато прехвърлянето е включено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Изходящ посредник">
+								<longdesc>Изходящият посредник за SIP за изходящите обаждания</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Порт, на който да се слуша">
+								<longdesc>Порт за очакване на входящи връзки. Трябва да рестартирате Ekiga, за да може новата настройка да влезе в сила.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Временен геометричен компромис">
+								<longdesc>Дали да се предпочита запазването на максималната честота на кадри или тя да си намали, за да се запази някакво минимално ниво на геометрично качество на всички кадри: 0 — най-високо минимално качество, 31 — най-ниско минимално качество</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Максимална широчина на лентата при получаване на видео">
+								<longdesc>Максимална широчина на лентата за приемане на видео в kbit/s. Тази стойност ще бъде подадена на отсрещната страна, така че при възможност тя да промени широчината на лентата на предавания поток, когато тя е по-висока от подадената стойност.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Максимална широчина на лентата при изпращане на видео">
+								<longdesc>Максимална широчина на лентата за предаваното видео в kbit/s. Качеството на видео изображенията и честотата на предаваните кадри ще бъде автоматично регулирана по време на обажданията, за да се минимизира широчината на ползваната лента до указаната стойност, без да се преминава под минимума (това зависи от използвания кодер)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Списък със видео декодерите">
+								<longdesc>Списък със видео декодерите</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Максимален защитен буфер">
+								<longdesc>Максималният размер на защитния буфер за аудио приемане (в ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Включване на засичането на тишина">
+								<longdesc>Ако е включено, тишината се засича с кодерите, които поддържат това</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Списък с аудио декодерите">
+								<longdesc>Списък със аудио декодерите</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Вид мрежа избрана в помощника">
+							<longdesc>0: 56Kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Избрана от потребителя скорост</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Автоматичен отговор">
+								<longdesc>Ако е включено, на входящите обаждания ще се отговаря автоматично</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Време, след което се счита, че е нямало отговор">
+								<longdesc>Автоматично отказване или прехвърляне на входящи обаждания, ако няма отговор в рамките на посочения брой секунди</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Позицията на прозореца за отдалечената видео картина">
+									<longdesc>Позицията на прозореца за отдалечената видео картина</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Размер на прозореца за отдалечената видео картина">
+									<longdesc>Размерът на прозореца за отдалечената видео картина</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Видео изгледът преди превключване на цял екран">
+									<longdesc>Видео изгледът преди превключване на цял екран (същите възможни стойности като ключа „video_view“)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Стандартният видео изглед">
+									<longdesc>Стандартният видео изглед (0: локален; 1: отдалечен; 2: и двата; 3: и двата, в отделни прозорци)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Прозорците с видео картината да са над всички останали по време на обаждания">
+									<longdesc>Прозорците с видео картината да са над всички останали по време на обаждания</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Мащаб на увеличение">
+									<longdesc>Мащаб на изображенията, показвани в главния прозорец (възможни стойности: 50, 100 или 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Указване на алгоритъма за мащабиране">
+									<longdesc>Указване на алгоритъма за мащабиране: 0 — най-близък съсед, 1 — най-близък съсед с филтър по кутия, 2 — билинейно филтриране, 3 — хиперболично филтриране. Не се отнася за системите под Уиндоус.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Разрешаване на софтуерно мащабиране при кадър в кадъра">
+									<longdesc>Разрешаване на Ekiga да ползва софтуерно мащабиране при кадър в кадъра, ако не е налично хардуерно мащабиране. Ако това е лъжа, то Ekiga няма да се опитва да отвори кадър в кадъра, когато няма хардуерна поддръжка.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Изключване на хардуерното видео ускорение">
+									<longdesc>Този ключ изключва видео ускорението чрез DirectX (под Уиндоус) и XVideo (под Линукс)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Размер на прозореца с настройките">
+									<longdesc>Размер на прозореца с настройките</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позицията на екрана на прозореца за настройките">
+									<longdesc>Позицията на екрана на прозореца за настройките</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Размер на прозореца с настройките">
+									<longdesc>Размер на прозореца с настройките</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позицията на екрана на прозореца за настройките">
+									<longdesc>Позицията на екрана на прозореца за настройките</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Размер на прозореца за видео настройките">
+									<longdesc>Размер на прозореца за видео настройките</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позицията на екрана за видео настройките">
+									<longdesc>Позицията на екрана за видео настройките</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Размер на прозореца за аудио настройките">
+									<longdesc>Размер на прозореца за аудио настройките</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позицията на екрана на прозореца за аудио настройките">
+									<longdesc>Позицията на екрана на прозореца за аудио настройките</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Размер на прозореца за адресника">
+									<longdesc>Размер на прозореца за адресника</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позицията на екрана на прозореца с адресника">
+									<longdesc>Позицията на екрана на прозореца с адресника</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Позиция на екрана за прозореца с помощника за настройките">
+									<longdesc>Позиция на екрана за прозореца с помощника за настройките</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Размер на прозореца за помощника за настройките">
+									<longdesc>Размер на прозореца за помощника за настройките</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Позицията на екрана на прозореца за съобщения">
+									<longdesc>Позицията на екрана на прозореца за съобщения</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Размер на прозореца за съобщения">
+									<longdesc>Размер на прозореца за съобщения</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Смяна на панела в главния прозорец">
+									<longdesc>Смяна на панела в главния прозорец (0=Контраст, 1=Клавиатура, 2=Повиквания)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позицията на екрана на главния прозорец">
+									<longdesc>Позицията на екрана на главния прозорец</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Включване на откриването на STUN">
+								<longdesc>Включване на автоматичната настройка на мрежата от теста за STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="Сървър за STUN">
+								<longdesc>Сървърът за STUN позволява преминаването през някои видове шлюзове за NAT.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Звукът за заето">
+								<longdesc>Ако е включено, е звукът, който ще се пуска в края на всяко обаждане или когато се обаждате на някой и ви дава заето</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Пускане на сигнал за заето">
+								<longdesc>Избраният аудио файл ще бъде изпълняван след края на обажданията или когато се свързвате с някой, който е зает.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Звукът при набиране">
+								<longdesc>Ако е включено, е звукът, който ще се пуска, когато се обаждате на някой</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Пускане на сигнал за звънене">
+								<longdesc>Ако е включен, избраният звук ще се пуска, когато се обаждате на някой</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Пускане на звук при нова гласова поща">
+								<longdesc>Ако е включен, избраният звук ще се пуска, когато се обаждате на някой.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Звукът за нова гласова поща">
+								<longdesc>Ако е включено, е звукът, който ще се пуска при нова гласова поща</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Пускане на звук при ново съобщение">
+								<longdesc>Ако е включен, избраният звук ще се пуска, когато получите ново бързо съобщение</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Звукът за ново бързо съобщение">
+								<longdesc>Ако е включено, е звукът, който ще се пуска, при ново бързо съобщение</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Пускане на звук при входящо обаждане">
+								<longdesc>Ако е включен, избраният звук ще се пуска при входящи обаждания</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Звукът за входящо обаждане">
+								<longdesc>Ако е включено, е звукът, който ще се пуска при входящи обаждания</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Допълнително изходно аудио устройство">
+								<longdesc>Избор на алтернативно изходно аудио устройство за звуковите ефекти.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Дълго състояние на контакта">
+								<longdesc>Подробно описание на състоянието</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Кратко състояние на контакта">
+								<longdesc>Кратко състояние на контакта</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Пълно име">
+								<longdesc>Въведете пълното си име</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Честота на кадрите">
+								<longdesc>Максималната честота кадри в секунда на излъчвания сигнал. Тя може да не бъде достигната, ако е зададено минимално графично качeство (стойност на ключа „TSTO“ под 31), а избраната честотна лента не стига.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Преглед на видеото">
+								<longdesc>Показване на изображения от камерата ви</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Видео формат">
+								<longdesc>Избор на формата за видео камерите (не важи за повечето камери с USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Видео канал">
+								<longdesc>Номерът на видео канала, който да се използва (за избор на камера, телевизор или друг източник)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Размер на видео картината">
+								<longdesc>Избор на размера на предаваната видео картина: нормален (QCIF 176x144) или голям (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Входно видео устройство">
+								<longdesc>Избор на входното видео устройство, което да се използва. Ако се появи грешка при използването на това устройство, ще се появи тестова картина.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Входно аудио устройство">
+								<longdesc>Избор на входното аудио устройство</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Изходно аудио устройство">
+								<longdesc>Избор на изходното аудио устройство</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Отметки">
+						<longdesc>отметки за папки на редактора на настройки</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Скоро играни игри">
+						<longdesc>Списък със скоро играни игри.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Статистика за играните игри">
+						<longdesc>Списък от низове, който идва под фо̀рмата на наредени петорки: име, победи, общ брой играни игри, най-добро време (в секунди) и най-лошо време (отново в секунди). Неиграните игри не е нужно да бъдат представяни.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Използван файл с игра">
+						<longdesc>Името на файл на Scheme с пасианси.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Анимации">
+						<longdesc>Дали движенията на картите да са анимирани.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Звук">
+						<longdesc>Дали да се изпълняват звуци при събития.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Избор на вид на управлението">
+						<longdesc>Избор дали да се влачат картите или да се натиска върху източника и след това върху целта.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Дали да бъде показана лентата за състоянието.">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Дали да бъде показана лентата с инструменти.">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Име на файла с темата">
+						<longdesc>Името на файла с графиките за картите.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

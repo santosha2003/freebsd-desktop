@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="अनुत्तरित रहब पर देल गेल होस्टकेँ कॉल अग्रसारित करू">
+								<longdesc>जँ सक्रिय कएल जाएत अछि, सभ इनकमिंग कॉलकेँ होस्टमे अग्रसारित कएल जएताह जे क्षेत्रमे नीच्चाँ निर्दिष्ट अछि जँ अहाँ कॉल क&apos; उत्तर नहि देत छी</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="व्यस्त रहब पर देल गेल होस्टकेँ कॉल अग्रसारित करू">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="हरदम देल होस्टकेँ कॉल अग्रसारित करू">
+								<longdesc>जँ सक्रिय कएल जाएत अछि, सभ इनकमिंग कॉलकेँ अग्रसारित कएल जएताह होस्टमे जे क्षेत्रमे नीच्चाँ निर्दिष्ट अछि</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP पोर्ट परिसर">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP पोर्ट सीमा">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="होस्टकेँ कॉल अग्रसारित करू">
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF पठाएब रहल अछि">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="&apos;तेज प्रारंभ&apos; सक्षम करू">
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="आरंभिक H.245 सक्षम करू">
+								<longdesc>ई H.245केँ सेटअपमे पहिले सक्रिय करैत अछि</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="पोर्ट सुनू">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF पठाएब रहल अछि">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="होस्टकेँ कॉल अग्रसारित करू">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="पोर्ट सुनू">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc=" अधिकतम जिटर बफ़र">
+								<longdesc>ऑडियो रिसेप्शन क&apos;लेल अधिकतम जिटर बफर आकार (msमे)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="मौन जाँच सक्षम करू">
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ऑडियो कोडेक सूची">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="कोनो उत्तर नहि टाइमआउट">
+								<longdesc>जँ समय क&apos; निर्दिष्ट मात्रा क&apos; बाद कोनो उत्तर नहि मिलए तँ स्वतः आबैबला कॉल केँ अस्वीकार अथवा अग्रसारित करू (सकेंडमे)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="दूरस्थ वीडियो विंडो क&apos; स्थिति">
+									<longdesc>दूरस्थ वीडियो विंडो क&apos; स्थिति</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="दूरस्थ वीडियो विंडो क&apos; आकार">
+									<longdesc>दूरस्थ वीडियो विंडो क&apos; आकार</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="मूलभूत वीडियो दृश्य">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="कॉलक दौरान आन विंडोक उप्पर वीडियोकेँ प्रदर्शित करैत विंडो राखू">
+									<longdesc>कॉलक दौरान आन विंडोक उप्पर वीडियोकेँ प्रदर्शित करैत विंडो राखू</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="ज़ूम मान">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="वरीयता विंडो क&apos; आकार">
+									<longdesc>वरीयता विंडो क&apos; आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="वरीयता विंडो क&apos; स्क्रीन पर स्थिति">
+									<longdesc>वरीयता विंडो क&apos; स्क्रीन पर स्थिति</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="वरीयता विंडो क&apos; आकार">
+									<longdesc>वरीयता विंडो क&apos; आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="वरीयता विंडो क&apos; स्क्रीन पर स्थिति">
+									<longdesc>वरीयता विंडो क&apos; स्क्रीन पर स्थिति</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="पता पुस्तिका विंडो क&apos; आकार">
+									<longdesc>पता पुस्तिका विंडो क&apos; आकार</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="पता पुस्तिका विंडोक स्क्रीन क&apos; स्थिति">
+									<longdesc>पता पुस्तिका विंडोक स्क्रीन क&apos; स्थिति</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="ड्रयूड विंडो क&apos; स्क्रीन पर स्थिति">
+									<longdesc>ड्रयूड विंडो क&apos; स्क्रीन पर स्थिति</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ड्रयूड विंडो क&apos; आकार">
+									<longdesc>ड्रयूड विंडो क&apos; आकार</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="मुख्य विंडो क&apos; स्क्रीन पर स्थिति">
+									<longdesc>मुख्य विंडो क&apos; स्क्रीन पर स्थिति</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="STUN सर्वर">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="व्यस्त टोन ध्वनि">
+								<longdesc>ध्वनि जे कॉल क&apos; अंत मे बजाओल जाएत अछि अथवा जखन कोनो व्यस्त अछि, जँ सक्रिय अछि</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="व्यस्त-टोन बजाबू">
+								<longdesc>चुनल गेल ध्वनि कॉल क&apos; अंतमे खेलल जएताह अथवा कोनोकेँ कॉल कएनाइ जँ कोनो व्यस्त अछि, जँ सक्रिय कएल जाएत अछि</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema>
+								<longdesc>कोनोकेँ बोलाबै क&apos; दौरान ध्वनि जे बजाओल जएताह, जँ सक्रिय कएल जाएत अछि</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="रिंगटोन बजाबू">
+								<longdesc>कोनोकेँ कॉल करबाक दौरान चुनल गेल आवाज बजाओल जाएत अछि, जँ सक्रिय कएल जाएत अछि</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="आबै बला कॉल पर ध्वनि बजाबू">
+								<longdesc>इनकमिंग कॉल पर चुनल गेल आवाज बजाओल जाएत अछि, जँ सक्रिय कएल जाएत अछि</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="आबैबला कॉल क&apos; ध्वनि">
+								<longdesc>ध्वनि जे इनकमिंग कॉल पर बजाओल जएताह, जँ सक्रिय कएल जाएत अछि</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="full_name">
+							<local_schema short_desc="पूरा नाम">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="फ्रेम दर">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="वीडियो पूर्वावलोकन">
+								<longdesc>अहाँक कैमरा डिवाइस सँ चित्रकेँ देखबैत अछि</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="वीडियो प्रारूप">
+								<longdesc>वीडियो कैमरा क&apos; लेल प्रारूप चुनू (ज्यादातर USB कैमरामे लागू नहि हाएत)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="वीडियो चैनल">
+								<longdesc>वीडियो चैनल सँख्या प्रयोग क&apos;लेल (कैमरा, tv अथवा आन श्रोत क&apos; चयन क&apos;लेल )</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="वीडियो आकार">
+								<longdesc>प्रेषित वीडियो आकार चुनू: छोट (QCIF 176x144) अथवा पैघ (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="वीडियो इनपुट डिवाइस">
+								<longdesc>प्रयोग क&apos; लेल वीडियो आगत युक्त चुनू. जँ एकटा त्रुटि पैदा हाएत अछि एहि डिवाइस क&apos; प्रयोगमे एकटा जाँच बिंब प्रेषित कएल जएताह.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="ऑडियो इनपुट डिवायस">
+								<longdesc>उपयोग लेल ऑडियो इनपुट डिवाइस चुनू</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="ऑडियो आउटपुट डिवायस">
+								<longdesc>उपयोग लेल ऑडियो आउटपुट डिवाइस चुनू</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="पुस्तकचिह्न">
+						<longdesc>जिकॉन्फ़ संपादक फोल्डर पुस्तकचिह्न</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="statistics">
+					<local_schema short_desc="खेलल गए खेल क&apos; आंकड़ा">
+						<longdesc>स्ट्रिंग क&apos; सूची जे पाँच गुना रूपमे आबैत अछि name, wins, total games played, best time (सकेंडमे) आओर worst time (सकेंडमे). नहि खेलल गेल खेल देखाओल नहि जाए सकत.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="प्रयोग करब क&apos; लेल खेल फ़ाइल">
+						<longdesc>योजना फ़ाइल क&apos; नाम जकरामे खेलल जाए बला सॉलिटेयर खेल समाहित अछि.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="ध्वनि">
+						<longdesc>घटनासभ लेल ध्वनि बजाउ अथवा नहि.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="नियंत्रण क&apos; शैली क&apos; चयन करू">
+						<longdesc>चुनू जे कार्ड घीँचनाइ अछि अथवा गंतव्य क&apos; बजाय श्रोत पर क्लिक कएनाइ अछि.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="की अओजारपट्टी देखओनाइ अछि अथवा नहि.">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="प्रसंग फाइलक नाम">
+						<longdesc>पत्ता क&apos; लेल ग्राफ़िक्स सहित फ़ाइल क&apos; नाम.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

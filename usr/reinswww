@@ -1,0 +1,15 @@
+#!/usr/local/bin/bash
+
+pkg install gnome3 gdm dbus twm vlc monero-cli node8 
+make -C /usr/ports/multimedia/ffmpeg build deinstall install
+make -C /usr/ports/www/nginx build deinstall install
+make -C /usr/ports/multimedia/libav build deinstall install
+
+make -C /usr/ports/www/wordpress build deinstall install
+make -C /usr/ports/graphics/pecl-imagick build deinstall install
+
+#make -C /usr/ports/www/firefox reinstall
+#make -C /usr/ports/www/chromium reinstall
+#pkg delete -f -y alsa-plugins alsa-lib
+
+pkg install firefox chromium

@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Zgodovina klicev">
+							<longdesc>Zgodovina zadnjih 100 klicev</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Strežniki LDAP">
+							<longdesc>Seznam nastavljenih strežnikov LDAP</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Pokaži nepovezane stike">
+							<longdesc>Možnost omogoča, da prikaz nepovezanih stikov v seznamu stikov</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Seznam skrčenih skupin v seznamu stikov">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Bajt vrste storitve (TOS) odhajajočih paketov RTP IP">
+							<longdesc>Bit vrste storitve (TOS) odhajajočih paketov RTP IP. Bajt se na omrežju uporablja za določanje ravni kakovosti storitve (QoS). Privzeta vrednost (0xB8) je enaka posredovanju (EF) PHB kot je to določeno s standardom RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Seznam računov">
+							<longdesc>Seznam računov, na katere naj se vpiše Ekiga</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Posreduj klice danemu gostitelju, če ni odgovora">
+								<longdesc>Možnost omogoča posredovanje dohodnih klicev gostitelju, ki je naveden v spodnjem polju, kadar ne odgovorite na klic</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Posreduj klice danemu gostitelju, če je zaposlen">
+								<longdesc>Možnost omogoča posredovanje dohodnih klicev gostitelju, ki je naveden v spodnjem polju, če klic že teče ali pa če je stanje klica zasedeno</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Vedno posreduj klice danemu gostitelju">
+								<longdesc>Možnost omogoča posredovanje dohodnih klicev h gostitelju, ki je naveden v spodnjem polju</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Obseg vrat UDP">
+								<longdesc>Obseg vrat UDP, ki jih bo uporabljal program Ekiga.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Obseg vrat TCP">
+								<longdesc>Obseg vrat TCP, ki ga bo program Ekiga uporabljal za kanal H.323 H.245. Ta obseg vrat nima učinka, če oba sodelujoča v konferenci uporabljata tuneliranje H.245.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Posreduj klice gostitelju">
+								<longdesc>Gostitelj, na katerega naj bodo posredovani klici, če je posredovanje omogočeno</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Pošiljanje DTMF">
+								<longdesc>Izberite način za pošiljanje DTMF-jev. Vrednosti so lahko 0 (za  &quot;Niz&quot;), 1 (za &quot;Ton&quot;), 2 za (&quot;RFC2833&quot;), 3 (za &quot;Q.931&quot;) (privzeto je &quot;Niz&quot;). Če izberete drugo vrednost kot &quot;Niz&quot;, s tem onemogočite besedilni klepet.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema short_desc="Razširjene vloge">
+								<longdesc>Izberite video vlogo H.239. Možne vrednosti so 0 (za &quot;onemogoči razširjen video&quot;), 1 (za &quot;dovoli masko vloge po vsebini&quot;), 2 (za &quot;vsili predstavitev&quot;) ali 3 (za &quot;vsili živo vlogo&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="Omogoči H.239">
+								<longdesc>Možnost omogoča zmožnosti dodatnih video vlog H.239</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Omogoči &apos;Hitri zagon&apos;">
+								<longdesc>Povezava bo vzpostavljena v načinu Hitri zagon, ki je nov način za hitrejši začetek klicev, kot jih omogoča H.323v2. Netmeeting ga ne podpira. Uporaba skupaj s tuneliranjem H.245 pa lahko povzroči sesutje nekaterih različic Netmeetinga</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Omogoči zgodnji H.245">
+								<longdesc>To omogoči H.245 zgodaj med namestitvijo</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Omogoči tuneliranje H.245">
+								<longdesc>To omogoči način tuneliranja H.245, kjer so sporočila vložena v kanal H.225 (vrata 1720), med klici pa se prihrani ena TCP povezava. Tuneliranje H.245 je bilo predstavljeno v H.323v2, zato zmožnosti program Netmeeting ne podpira. Uporaba skupaj s Hitrim zagonom lahko povzroči sesutje nekaterih različic Netmeetinga.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Vrata za poslušanje">
+								<longdesc>Vrata za poslušanje dohodnih povezav. Za učinek novih vrednosti je treba znova zagnati program.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Zakasnitev vezave NAT">
+								<longdesc>Vnesite število sekund, po katerih bo program Ekiga poskusil osvežiti povezavo NAT, ko je uporabljen STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Pošiljanje DTMF">
+								<longdesc>Izberite način za pošiljanje DTMF-jev. Vrednosti so lahko 0 (za &quot;RFC2833&quot;), 1 (za &quot;INFO&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Posreduj klice gostitelju">
+								<longdesc>Gostitelj, na katerega naj bodo posredovani klici, če je posredovanje omogočeno</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Zunanji posredniški strežnik">
+								<longdesc>Zunanji posredniški strežnik SIP za odhodne klice</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Vrata za poslušanje">
+								<longdesc>Vrata za poslušanje dohodnih povezav. Za učinek novih vrednosti je treba znova zagnati program</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Začasna prostorska izmenjava">
+								<longdesc>Ali naj prednostno ohranja največjo hitrost ali naj jo zmanjša za ohranjevanje ravni prostorske kakovosti za vse slike. 0: Največja minimalna kakovost, 31: najnižja minimalna kakovost.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Največja bitna hitrost RX">
+								<longdesc>Največja bitna hitrost videa RX v kbit/s. Vrednost bo odposlana prejemniku klica, ki lahko prilagodi (v primeru, da podpira možnost) svojo bitno hitrost TX,. če je nad odposlano vrednostjo.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Največja bitna hitrost TX">
+								<longdesc>Največja bitna hitrost videa TX v kbit/s. Kakovost videa in število oddanih sličic na sekundo (odvisno od izbire kodeka) bosta med klici dinamično prilagojena nad najnižjo vrednostjo z namenom zmanjševanja pasovne širine na dano vrednost</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Seznam video kodekov">
+								<longdesc>Seznam video kodekov</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Največji medpomnilnik trepetanja">
+								<longdesc>Največja velikost medpomnilnika trepetanja za sprejemanje zvoka (v ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Omogoči odstranjevanje odmeva">
+								<longdesc>Možnost omogoča uporabo odstranjevanja odmeva</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Omogoči zaznavanje tišine">
+								<longdesc>Možnost omogoča zaznavanje tišine s kodeki, ki ga podpirajo</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Seznam zvočnih kodekov">
+								<longdesc>Seznam zvočnih kodekov</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Vrsta omrežja, ki je bila izbrana s pomočnikom">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Po meri</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Samodejno odgovori">
+								<longdesc>Izbrana možnost omogoča samodejno odgovarjanje na dohodne klice</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Zakasnitev za stanje Brez odgovora">
+								<longdesc>Samodejno zavrni ali posreduj dohodne klice, kadar po določenem času (v sekundah) ni odziva</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Položaj okna z oddaljenim videom">
+									<longdesc>Položaj okna z oddaljenim videom</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Velikost okna z oddaljenim videom">
+									<longdesc>Velikost okna z oddaljenim videom</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Video pogled pred preklopom na celozaslonski način">
+									<longdesc>Video pogled pred preklopom na celozaslonski način (enaka vrednost kot pri video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Privzet pogled videa">
+									<longdesc>Privzet pogled videa (0: krajevno, 1: oddaljeno, 2: oba, 3: oba v ločenih oknih)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Okna, ki prikazujejo video, med klici postavi nad ostala okna">
+									<longdesc>Okna, ki prikazujejo video, med klici postavi nad ostala okna</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Vrednost približanja">
+									<longdesc>Vrednost približanja za slike, prikazane v glavnem oknu (lahko je 50, 100 ali 200).</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Določilo programskega algoritma spreminjanja velikosti">
+									<longdesc>Določilo programskega algoritma spreminjanja velikosti: 0: najbližji sosed, 1: najbližji sosed s filtriranjem polja, 2: bilinearno filtriranje, 3: hiperbolično filtriranje. Ni podprto v sistemu Okna.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Dovoli spreminjanje velikosti slike v sliki">
+									<longdesc>Dovoli programu programsko spreminjanje velikosti slike v sliki, kadar ni na voljo strojna podpora spreminjanja. V primeru, da možnost ni omogočena, program v primeru odsotnosti strojne podpore ne bo poskušal samodejno odpreti slike v sliki.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Onemogoči strojno pospeševanje videa">
+									<longdesc>Ključ onemogoči strojno pospeševanje prikazovanja slike na DirectX (na win32) in XVideo (na Linux) sistemih</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Velikost okna možnosti">
+									<longdesc>Velikost okna možnosti</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Položaj okna možnosti">
+									<longdesc>Položaj okna možnosti</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Velikost okna možnosti">
+									<longdesc>Velikost okna možnosti</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Položaj okna možnosti">
+									<longdesc>Položaj okna možnosti</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Velikost okna nastavitev videa">
+									<longdesc>Velikost okna nastavitev videa</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Položaj okna nastavitev videa">
+									<longdesc>Položaj okna nastavitev videa</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Velikost okna nastavitev zvoka">
+									<longdesc>Velikost okna nastavitev zvoka</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Položaj okna nastavitev zvoka">
+									<longdesc>Položaj okna nastavitev zvoka</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Velikost okna imenika">
+									<longdesc>Velikost okna imenika</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Položaj okna imenika">
+									<longdesc>Položaj okna imenika</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Položaj okna pomočnika">
+									<longdesc>Položaj okna pomočnika</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Velikost okna pomočnika">
+									<longdesc>Velikost okna pomočnika</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Položaj okna za klepet">
+									<longdesc>Položaj okna za klepet</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Velikost okna za klepet">
+									<longdesc>Velikost okna za klepet</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Spremeni odsek pladnja glavnega okna">
+									<longdesc>Spremeni odsek pladnja glavnega okna (0=stiki, 1=številčnica, 2=zgodovina klicev)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Položaj glavnega okna">
+									<longdesc>Položaj glavnega okna</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="Velikost okna za pogovora">
+									<longdesc>Velikost okna za pogovora</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Položaj okna pogovora na zaslonu">
+									<longdesc>Položaj okna pogovora na zaslonu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Omogoči zaznavanje omrežja STUN">
+								<longdesc>Omogoči samodejno nastavitev omrežja preko preizkusa STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="Strežnik STUN">
+								<longdesc>Strežnik STUN za uporabo pri podpori STUN. STUN je tehnika, ki omogoča pot skozi nekatere prehode NAT</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Zvok tona zaposlenosti">
+								<longdesc>Zvok, ki se bo predvajal ob koncu klicev ali ob klicih zaposlenih oseb, če je omogočen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Predvajaj ton zaposlenosti">
+								<longdesc>Izbrana možnost omogoča, da se bo izbran zvok predvajal po koncu klica ali med klicanjem zaposlenih uporabnikov</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Zvok tona klicanja">
+								<longdesc>Zvok, ki se bo predvajal ob klicanju, če je omogočen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Predvajaj ton klicanja">
+								<longdesc>Izbrana možnost omogoča, da se bo ob klicanju predvajal izbran zvok</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Predvajaj zvok ob novi glasovni pošti">
+								<longdesc>Izbrana možnost omogoča, da se bo ob prejemu nove glasovne pošte predvajal izbran zvok</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Zvok nove zvočne pošte">
+								<longdesc>Zvok, ki se bo predvajal ob novi glasovni pošti, če je omogočen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Predvajaj zvok ob novih sporočilih">
+								<longdesc>Izbrana možnost omogoča, da se bo ob vsakem prejemu novega hipnega sporočila predvajal izbran zvok</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Zvok novega hipnega sporočila">
+								<longdesc>Zvok, ki se bo predvajal ob novih neposrednih sporočilih, če je omogočen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Predvajaj zvok ob dohodnih klicih">
+								<longdesc>Izbrana možnost omogoča, da se bo ob dohodnih klicih predvajal izbran zvok</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Zvok dohodnih klicev">
+								<longdesc>Zvok, ki se bo predvajal ob dohodnih klicih, če je omogočen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dodatna zvočna izhodna naprava">
+								<longdesc>Izberite dodatno zvočno izhodno napravo za uporabo zvočnih dogodkov.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Dolg opis stanja stika">
+								<longdesc>Daljši pregled podrobnosti</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Kratek opis stanja stika">
+								<longdesc>Krajši pogled podrobnosti</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Polno Ime">
+								<longdesc>Vnesite svoje polno ime</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Hitrost sličic">
+								<longdesc>Največja poslana hitrost v sličicah na sekundo. Hitrosti morda ne bo mogoče doseči v primeru, da je najmanjša kakovost določena s TSTO vrednostjo manjšo kot 31 in je izbrana bitna hitrost prenizka za podporo najmanjše kakovosti.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Predogled videa">
+								<longdesc>Pokaži slike iz naprave vaše kamere</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Vrsta videa">
+								<longdesc>Izberite zapis video kamer (ne vpliva na večino kamer USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Kanal videa">
+								<longdesc>Številka kanala videa (za izbiro kamere, TV ali drugih virov)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Velikost videa">
+								<longdesc>Izberite velikost videa za oddajanje: majhna (QCIF 176x144) ali velika (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Vhodna naprava videa">
+								<longdesc>Izberite vhodno napravo videa. Če pride do napake pri uporabi te naprave, bo oddajana preizkusna slika.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Zvočna vhodna naprava">
+								<longdesc>Izberite zvočno vhodno napravo</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Zvočna izhodna naprava">
+								<longdesc>Izberite zvočno izhodno napravo</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Zaznamki">
+						<longdesc>gconf-editor zaznamki map</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Nedavno igrane igre">
+						<longdesc>Seznam nedavno igranih iger.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statistika odigranih iger">
+						<longdesc>Seznam nizov, ki se pojavljajo v peterkah: ime, zmage, skupno igranih iger, najboljši čas (v sekundah) in najslabši čas (tudi v sekundah). Neigranih iger ni treba prikazati.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Ime datoteke igre, ki jo želite igrati">
+						<longdesc>Ime datoteke sheme z igro pasjanse, ki jo želite igrati.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animacije">
+						<longdesc>Izbrana možnost omogoča prikaz animacij gibanja kart.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Zvok">
+						<longdesc>Ali naj se ob dogodkih predvajajo zvoki.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Izberite slog nadzora">
+						<longdesc>Izberite med vlečenjem kart in klikom najprej na vir in nato na cilj.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Ali naj bo prikazana vrstica stanja">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Ali naj bo prikazana orodna vrstica">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Ime datoteke s temo">
+						<longdesc>Ime datoteke s slikovno podobo kart.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

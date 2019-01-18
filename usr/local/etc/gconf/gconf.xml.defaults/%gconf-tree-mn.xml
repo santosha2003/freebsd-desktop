@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Хэрэв хариу өгөхгүй бол дуулдагыг өгөгдсөн хост руу дамжуулна">
+								<longdesc>Хэрэв ажиллахад бэлэн бол, мөн та дуудлаганд хариу өгөхгүй байгаа бол хост руу орж ирж байгаа бүх дуудлага дамжуулагдана. </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Хэрэв завгүй бол дуулдагыг өгөгдсөн хост руу илгээнэ">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Өгөгдсөн хост руу дуудлагыг үргэлж шилжүүл">
+								<longdesc>Хэрэв ажиллахад бэлэн бол доорхи талбарт тодорхойлогдсон хост руу орж ирж байгаа бүх дуудлага дамжуулагдана. </longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP порт хязгаар">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="ТиСиПи портны хүрээ">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Дуудлагыг хост руу илгээх">
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="ДиТиЭмЭф явуулах">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="&apos;Хурдан эхлэх&apos;-ийг ажиллуулж эхлэх">
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Өмнөх H.245-ийг идэвхтэй">
+								<longdesc>Суулгаж эхлэхэд Н.245 нь идэвхжүүлнэ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Чагнах порт">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="dtmf_mode">
+							<local_schema short_desc="ДиТиЭмЭф явуулах">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Дуудлагыг хост руу илгээх">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Чагнах порт">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="jitter буферийн дээд хэмжээ">
+								<longdesc>Дуу хүлээн авах jitter буферийн дээд хэмжээ(нэгж мс дэх)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Чимээгүйг танигчийг ажиллуулж эхлэх">
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Дууны кодлогчийн жагсаалт">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Хариу өгөөгүй хугацааны завсар">
+								<longdesc>Хэрэв тодорхой хугацааны (секунтээр) дараа ямар ч хариу өгөхгүй бол орж ирж буй дуулагыг автоматаар таслана эсвэл дамжуулна</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Нөгөө талын видео цонхны байршил">
+									<longdesc>Гадаад видео цонхны байршил</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Нөгөө талын видео цонхны хэмжээ">
+									<longdesc>Нөгөө талын видео цонхны хэмжээ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="Үндсэн видео харагдалт">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Дуудлагын үед дээрх цонхноос бусад гарч байгаа видео цонхуудыг байрлуул.">
+									<longdesc>Дуудлагын үед дээрх цонхноос бусад гарч байгаа видео цонхуудыг байрлуул.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Томруулагч утга">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Давуу эрхтэй цонхны хэмжээ">
+									<longdesc>Давуу эрхтэй цонхны хэмжээ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Дэлгэцэн дээрх давуу эрхтэй цонхны байршил">
+									<longdesc>Дэлгэцэн дээрх давуу эрхтэй цонхны байршил</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Давуу эрхтэй цонхны хэмжээ">
+									<longdesc>Давуу эрхтэй цонхны хэмжээ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Дэлгэцэн дээрх давуу эрхтэй цонхны байршил">
+									<longdesc>Дэлгэцэн дээрх давуу эрхтэй цонхны байршил</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Хаягны дэвтэр цонхны хэмжээ">
+									<longdesc>Хаягны дэвтэр цонхны хэмжээ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Хаягны дэвтэрийн дэлгэцэндэх байршил">
+									<longdesc>Хаягны дэвтэрийн дэлгэцэндэх байршил</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Дэлгэцэн дээрх үндсэн цонхны байршил">
+									<longdesc>Дэлгэцэн дээрх үндсэн цонхны байршил</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Лог цонхны хэмжээ">
+									<longdesc>Лог цонхны хэмжээ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Дэлгэцэн дээрх үндсэн цонхны байршил">
+									<longdesc>Дэлгэцэн дээрх үндсэн цонхны байршил</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Завгүйг илтгэх ая">
+								<longdesc>Завгүй хүний дуудлагын үед эсвэл дуудлагын төгсгөлд тоглогдох ая (хэрэв идэвхжисэн бол)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Завгүйн ая эгшиглэнэ">
+								<longdesc>Хэрэв ажиллах боломжтой бол дуудсан хэрэглэгч завгүй үед эсвэл дуудлагын төгсгөлд сонгосон ая эгшиглэнэ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema>
+								<longdesc>Дуудах үед тоглогдох ая (хэрэв идэвхижсэн бол)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Хонхны ая тоглуулна">
+								<longdesc>Хэрэв ажиллах боломжтой бол хэрэглэгчийг дуудах үед сонгосон ая эгшиглэнэ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Ирж буй дуудлагын чимээг тоглуулах">
+								<longdesc>Хэрэв ажиллах боломжтой бол дуудлага орж ирэхэд сонгосон ая эгшиглэнэ.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Орж ирж байгаа дуудлагын эгшиг">
+								<longdesc>Ирж буй дуудлагын үед тоглогдох ая.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="enable_preview">
+							<local_schema short_desc="Видеог урьдчилан харах">
+								<longdesc>Камер төхөөрөмжөөс оруулсан дүрийг дэлгэцэнд үзүүлэх</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Видео формат">
+								<longdesc>Видео камерын форматыг сонгоно уу. (Ихэнхи ЮЭсБи камер хамаараагүй)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Видео суваг">
+								<longdesc>Ашиглах видео сувгийн тоо ( камер, ТV, болон бусад эд )</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Видео хэмжээ">
+								<longdesc>Дамжуулагдах видео хэмжээг сонго: Жижиг (КюСиАйЭф 176х144) эсвэл том (СиАйЭф 352х288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Видео оролтын төхөөрөмж">
+								<longdesc>Хэрэглэх видео оролтын төхөөрөмжөө сонго. Хэрэв туршилтын зураг дамжуулахад төхөөрөмжид алдаа гарвал.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Дууны оролтын төхөөрөмж">
+								<longdesc>Хэрэглэх дууны оролтын төхөөрөмжөө сонгоно уу.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Дууны гаралтын төхөөрөмж">
+								<longdesc>Хэрэглэх дууны гаралтын төхөөрөмжөө сонгоно уу.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Хавчуурга">
+						<longdesc>gconf засварлагчийн Хавчуургын хавтас</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="statistics">
+					<local_schema short_desc="Тоглосон тоглоомын статистик">
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Хэрэглэх тоглоомын файл">
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Дуу">
+						<longdesc>Дуу тоглуулах эсэх</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Багаж самбар харуулах эсэх">
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

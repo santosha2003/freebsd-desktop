@@ -1,0 +1,231 @@
+#!/bin/sh
+pkg upgrade
+#/usr/bin/nice /usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "/root/conf-port nginx vlc ffmpeg virtualbox-ose virtualbox-ose-kmod oss nvidia-driver-304"
+#pkg delete -fy virtualbox-ose virtualbox-ose-kmod oss nvidia-driver-304
+/usr/bin/make -C /usr/ports/emulators/virtualbox-ose clean build
+#/usr/bin/make -C /usr/ports/multimedia/vlc clean
+#/usr/bin/make -C /usr/ports/multimedia/ffmpeg clean
+
+# deinstall install
+#/usr/bin/make -C /usr/ports/x11/nvidia-driver-340 clean deinstall install
+/usr/bin/make -C /usr/ports/emulators/virtualbox-ose-kmod  build
+#deinstall install
+#/usr/bin/make -C /usr/ports/audio/oss clean build
+# deinstall install
+# cuda miner
+/usr/bin/make -C /usr/ports/x11/nvidia-driver-340 build deinstall install clean
+#/usr/bin/nice /usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "/root/up-php56-ext-lamp-wp-mrtg-snmp"
+/usr/bin/make -C /usr/ports/www/nginx build deinstall install
+#reinstall clean
+/usr/bin/make -C /usr/ports/emulators/virtualbox-ose build deinstall install
+/usr/bin/make -C /usr/ports/emulators/virtualbox-ose-kmod build deinstall install
+/bin/rm -rf /tmp/.vbox*
+/usr/bin/make -C /usr/ports/audio/oss build deinstall install
+#/root/reins-port vlc ffmpeg curl
+/usr/bin/make -C /usr/ports/multimedia/vlc build deinstall install
+/usr/bin/make -C /usr/ports/multimedia/ffmpeg build deinstall install
+/usr/bin/make -C /usr/ports/ftp/curl build deinstall install
+#/usr/bin/make -C /usr/ports/www/firefox reinstall clean
+
+
+#make -C /usr/ports/x11/nvidia-driver reinstall clean
+#make -C /usr/ports/ports-mgmt/pkg clean build reinstall
+#make -C /usr/ports/lang/perl5.20 build reinstall
+#gnome3
+#-m 'config-recursive'
+#/usr/bin/nice /usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "/usr/local/sbin/portupgrade -m 'CC=clang CPP=clang-cpp CXX=clang++' -x pkg -a"
+#make -C /usr/ports/lang/perl5.20 build reinstall
+#make -C /usr/ports/devel/glib20 build reinstall
+#portupgrade -m "CC=clang CPP=clang-cpp CXX=clang++" -x pkg -arR
+#portmaster -a -k
+#portmaster -x gcc5 -x gcc49 -x binutils -x pkg -m LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 -a
+#portmaster -x gcc5 -x gcc49 -x binutils -x pkg -m LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 -aR
+#portmaster dbus hal
+#portmaster -x pkg -rf accountsservice
+#portupgrade -a
+#portmaster -a
+cd /root
+#/usr/bin/nice /usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "/root/reins-dri.sh"
+#/usr/bin/nice /usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "/root/vlc-ffmpeg-up"
+#kernel must be the same for Chromium firefox virtualbox ..*kmod Drupal Wordpress
+#/root/reins-browsers
+#env DISPLAY=:0 gnome-terminal -e "/root/reins-port virtualbox-ose oss"
+ #5.0.6  rename Makefile for old versions /usr/ports/emulators/..
+# script /usr/update-svn copy actual version vbox to ports tree
+#KLD vboxdrv.ko: depends on kernel - not available or version mismatch //Reboot after build install kernel & make clean deinstall install
+# not match kernel src (/usr/src )version 
+#/usr/bin/nice /usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "/root/reins-port virtualbox-ose"
+#/root/reins-port gnome3
+
+#PHPPORT=php70
+#LINE=whereis -s $PHPPORT  | awk '{print $2}'
+#make -C $LINE reinstall
+#LINST=`whereis -s $LINE | awk '{print $2}'| cut -c 1-8`
+#make -C `whereis -s  php56-curl | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-ftp | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-gd | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-mbstring | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-hash | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-mcrypt | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-tokenizer | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-xml | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-zip | awk '{print $2}'` reinstall
+#make -C `whereis -s  php56-zlib | awk '{print $2}'` reinstall
+#for ARG in LIN
+# do
+# echo $ARG
+# echo $n
+#  #if $$i == "" then break
+#  #fi
+#PORTPATH=`whereis -s $ARG | awk '{print $2}'`
+#echo $PORTPATH
+
+#chown -R mysql:mysql /var/db/mysql
+#chown -R mysql:mysql /var/db/mysql/*
+#cp -R ~/www-bk/* /usr/local
+
+#cp -R ~/www-bk/* /usr/local
+#cp /root/gdm-autologin/* /usr/local/etc/gdm/
+#cp /root/www-bk/httpd.conf /usr/local/etc/apache24/httpd.conf
+#cp /root/www-bk/footer.php /usr/local/www/wordpress/wp-content/themes/twentythirteen/footer.php
+#cp /root/www-bk/header.php /usr/local/www/wordpress/wp-content/themes/twentythirteen/header.php
+##shutdown -r now  #re-boot
+#cd /usr/ports && make clean
+#  1028	11:19	env DISPLAY=:0 gnome-terminal
+#  1029	11:20	env DISPLAY=:0 gnome-terminal mc
+#  1030	11:21	service hald start
+#  1031	11:21	env DISPLAY=:0 gnome-terminal mc
+#  1032	11:22	env DISPLAY=:0 gnome-terninal
+#  1033	11:22	env DISPLAY=:0 gnome-terninal
+#  1034	11:22	env DISPLAY=:0 gnome-terninal
+#  1035	11:22	env DISPLAY=:0 gnome-terminal mc
+#  1036	11:22	service hald start
+#  1037	11:22	service gdm start
+#  1038	11:22	env DISPLAY=:0 gnome-shell
+#  1039	11:23	service hald restart
+#  1040	11:23	env DISPLAY=:0 gnome-shell
+#  1041	11:23	env DISPLAY=:0 gdm
+#  1042	11:24	env DISPLAY=:0 gnome-shell
+#  1043	11:24	env DISPLAY=:0 gnome-shell
+#  1044	11:24	env DISPLAY=:0 gnome-terminal
+#  1045	11:24	env DISPLAY=:0 gnome-terminal mc
+#  1046	11:25	env DISPLAY=:0 firefox
+#  1047	11:31	env DISPLAY=:0 firefox &
+#  1048	11:31	env DISPLAY=:0 firefox &
+#  1049	11:35	env DISPLAY=:0 gnome-shell &
+#  1050	11:35	env DISPLAY=:0 gnome-terminal -e /usr/update-svn
+#  1051	11:40	ps -ax
+#  1052	11:40	h > /usr/u1
+
+#/usr/bin/env DISPLAY=:0 gnome-terminal -e "/usr/local/sbin/portupgrade -arR -m 'config-conditional'"
+
+#/usr/local/sbin/portupgrade -arRk
+#/usr/update-svn && make -C /usr/ports/www/chromium reinstall
+
+#/usr/local/sbin/portupgrade -aRr | tail >> /root/log-add-upgrade
+#centos c6 dbus glib gtk ...
+#/usr/local/sbin/portupgrade -rf linux-firefox chromium
+#/usr/local/sbin/portupgrade -rRf x11/gnome3
+#/usr/local/sbin/portupgrade -rRf linux-c6-dbus-libs
+#/usr/local/sbin/portupgrade -rf vlc libGL dri ffmpeg mplayer libva vaapi libvdpau wordpress
+#portupgrade -frR virtualbox-ose
+#portupgrade -frR hal
+#portupgrade -rRf www/apache24
+#clean all cache + settings
+# rm -rf /compat/linux/root/.cache
+# rm -rf /compat/linux/root/.mozilla .. .lock
+
+#/root/unlock-mozilla
+
+#
+#cd /usr/ports && make clean
+#make -C /usr/ports/ports-mgmt/pkg clean build reinstall
+#make -C /usr/ports/lang/perl5.20 build reinstall
+#portupgrade -arR -m 'config-conditional'
+#-m 'config-recursive'
+#portupgrade -m "CC=clang CPP=clang-cpp CXX=clang++" -x pkg -a
+#make -C /usr/ports/lang/perl5.20 build reinstall
+#make -C /usr/ports/devel/glib20 build reinstall
+#portupgrade -m "CC=clang CPP=clang-cpp CXX=clang++" -x pkg -arR
+#portmaster -a -k
+#/usr/local/sbin/portmaster -x gcc5 -x gcc49 -x binutils -x pkg -m LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 -a | tail >> /root/add-log-update
+#portmaster -x gcc5 -x gcc49 -x binutils -x pkg -m LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 -aR
+#portmaster dbus hal
+#portmaster -x pkg -rf accountsservice
+cd /root
+#/root/reins-dri.sh
+#/root/vlc-ffmpeg-up
+#kernel must be the same for Chromium firefox virtualbox ..*kmod Drupal Wordpress
+#/root/reins-browsers
+#
+# all depends of kernel (nvidia-driver use pkg)
+#virtualbox 5.0.26+ now in ports - reinstall if new kernel
+#KLD vboxdrv.ko: depends on kernel - not available or version mismatch //Reboot after build install kernel & make clean deinstall install
+#service oss with kernel part
+# make -C /usr/ports/audio/oss clean deintall install
+#===>  Checking if oss already installed
+#===>   Registering installation for oss-4.2.b2011
+#Installing oss-4.2.b2011...
+##!Detected Generic ENVY24HT based sound card
+#---------------------------------------------------------------------
+#To load OSS at boot, add oss_enable="YES" to your /etc/rc.conf.
+#
+# not match kernel src (/usr/src )version 
+#/root/reins-port virtualbox-ose libICE libSM gnome-settings-daemon
+cp /root/gdm-autologin/* /usr/local/etc/gdm/
+#/root/up-php56-ext-lamp-wp-mrtg-snmp
+#make -C /usr/ports/graphics/jpeg-turbo clean build reinstall
+#/root/reins-port ImageMagick opencv2 vlc jpeg-turbo GraphicsMagick ffmpeg php56 php56-bz2 php56-ctype php56-curl php56-filter php56-ftp php56-gd php56-hash php56-iconv php56-json php56-mbstring php56-fileinfo php56-mcrypt php56-mysql php56-mysqli php56-openssl php56-session php56-tokenizer php56-xml php56-zip php56-zlib phpMyAdmin curl jpeg-turbo
+# ln -s /usr/local/lib/libMagickCore-6.so.2.0.0 /usr/local/lib/libMagickCore-6.so.2
+# ln -s /usr/local/lib/libMagick++-6.so.6.0.0 /usr/local/lib/libMagick++-6.so.6
+# ln -s /usr/local/lib/libMagickWand-6.so.2.0.0 /usr/local/lib/libMagickWand-6.so.2
+chown -R www:www /usr/local/www
+cd /usr/local/www/wordpress
+#chmod -R 777 *
+chmod 644 wp-config.php
+chmod 644 /usr/local/etc/my.cfg
+chmod 644 /usr/local/etc/mysql/my.cfg
+
+cd /root
+chown -R mysql:mysql /var/db/mysql
+chown -R mysql:mysql /var/db/mysql/*
+# nginx
+# cp -R /usr/local/etc/apache24/httpd.conf /root/www-bk/httpd.c.old
+cp -R /root/www-bk/* /usr/local
+#portmaster audio/alsa-lib audio/alsa-utils audio/alsa-plugins www/firefox
+#nspluginwrapper -v -a -r
+#The following modules require a license confirmation before they can be enabled:
+
+#[*] Adobe Flash Player
+#    By continuing the installation you agree that you've read and accepted the
+#    ADOBE Personal Computer Software License Agreement:
+#    http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/legal/licenses-terms/pdf/Flash%20Player_11.0.pdf
+#
+#    To find out more click here:
+#    http://get.adobe.com/flashplayer
+#
+#Do you accept the 1 license(s) above? [Y/N] y
+#Plugin flash is now enabled
+#pipelight-plugin --create-mozilla-plugins
+#pipelight-plugin --enable flash
+
+#/root/reins-port libao alsa-lib alsa-utils alsa-plugins pulseaudio linux-c6-alsa-lib linux-c6-alsa-plugins-oss firefox www/linux-firefox ffmpeg vlc
+
+#pipelight-plugin --update
+#pipelight-plugin --list-enabled
+
+
+#nspluginwrapper -v -a -i
+#nspluginwrapper -v -a -r
+
+# Firefox with OSS4
+#pkg delete -f -y alsa-lib alsa-plugins
+##shutdown -r now  #re-boot
+
+#/usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "/usr/local/sbin/portupgrade -a"
+#pkg delete -f -y alsa-plugins alsa-lib
+
+#/usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "pkg install oss virtualbox-ose"
+#/usr/bin/env DISPLAY=:0 /usr/local/bin/gnome-terminal -e "pkg check -d"
+/bin/mv /usr/up1 /usr/up1-
+mv /usr/up1 /usr/up1-

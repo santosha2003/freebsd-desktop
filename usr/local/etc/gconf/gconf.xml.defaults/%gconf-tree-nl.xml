@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Oproepgeschiedenis">
+							<longdesc>De historie van de 100 laatst geplaatste oproepen</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP-servers">
+							<longdesc>Lijst van geconfigureerde LDAP-servers</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Offline contacten tonen">
+							<longdesc>Als dit aangevinkt is, worden ook offline contacten getoond in het adresboek</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Lijst van samengevouwen groepen in het adresboek">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="De lijst met abonnementen">
+							<longdesc>De lijst met abonnementen waar Ekiga zich zal aanmelden</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Stuur oproepen door naar de gegeven server bij geen antwoord">
+								<longdesc>Als dit aangevinkt is, worden alle binnenkomende oproepen doorgestuurd naar de onderstaand server als u de oproep niet beantwoord</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Oproepen doorsturen naar de gegeven server indien bezet">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Oproepen altijd doorsturen naar opgegeven server">
+								<longdesc>Als dit aangevinkt is, worden alle binnenkomende oproepen doorgestuurd naar de onderstaande server</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Bereik UDP-poorten">
+								<longdesc>Het bereik aan UDP-poorten dat Ekiga gebruiken zal.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP-poortenbereik">
+								<longdesc>De TCP-poorten die Ekiga kan gebruiken voor het H.323 H.245-kanaal. Dit poortenbereik geeft geen invloed wanneer beide deelnemers aan de conferentie gebruik maken van H.245-tunnels.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Oproepen doorsturen naar computer">
+								<longdesc>De server waar oproepen naar doorgestuurd moeten worden indien het doorsturen van oproepen is aangezet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF verzenden">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="‘Snelstart’ inschakelen">
+								<longdesc>De verbinding zal worden opgebouwd in snelstart-modus. Snelstart is een nieuwe manier om oproepen sneller te starten die geintroduceerd is in H.323v2. Dit wordt niet ondersteund door Netmeeting. En bij gebruik van snelstart en H.245-tunnel modus kunnen sommige versies van Netmeeting crashen.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Vroegtijdige H.245 inschakelen">
+								<longdesc>De schakelt H.245 vroegtijdig in tijdens de initialisatie</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245-tunnel inschakelen">
+								<longdesc>Dit schakelt de H.245-tunnelmodus in. In H.245-tunnelmodus worden H.245-berichten verpakt in het H.225-kanaal (poort 1720). Dit bespaart één TCP-verbinding gedurende de oproep. H.245-tunnels zijn mogelijk vanaf H.323v2, maar Netmeeting ondersteunt dit niet. Bij gebruik van snelstart en H.245-tunnelmodus kunnen sommige versies van Netmeeting crashen.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Luisterpoort">
+								<longdesc>De poort om te luisteren voor binenkomende verbindingen. Ekiga moet herstart worden om de nieuwe waarde te kunnen gebruiken.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT binding tijdslimiet">
+								<longdesc>Geef het aantal seconden wachttijd voordat Ekiga moet proberen de NAT-binding te vernieuwen bij het gebruik van STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF verzenden">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Oproepen doorsturen naar computer">
+								<longdesc>De server waar oproepen naar doorgestuurd moeten worden indien het doorsturen van oproepen is aangezet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Uitgaande proxy">
+								<longdesc>De SIP uitgaande proxy die gebruikt wordt voor uitgaande oproepen</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Luisterpoort">
+								<longdesc>De poort om te luisteren voor binenkomende verbindingen. Ekiga moet herstart worden om de nieuwe waarde te kunnen gebruiken.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Tijd-ruimte afweging">
+								<longdesc>Of de voorkeur gegeven wordt om de maximale beeldfrequentie aan te houden, of om deze te verlagen teneinde een minimaal (ruimtelijk) kwaliteitsniveau voor alle frames te behouden. 0: hoogste minimale kwaliteit, 31: laagste minimale kwaliteit</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Maximale videobandbreedte bij ontvangst">
+								<longdesc>De maximum RX (ontvangst) videobandbreedte in kbit/s. Deze waarde wordt doorgegeven aan het peer-eindpunt die daarmee (indien het het ondersteund) zijn TX (verzend) bandbreedte kan aanpassen wanneer het boven deze waarde ligt.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Maximale videobandbreedte bij verzenden">
+								<longdesc>De maximale videobandbreedte in kbytes/s. De videokwaliteit en het aantal verzonden frames per seconde (is afhankelijk van de geselecteerde codec) worden tijdens gesprekken automatisch aangepast boven het minimum om de bandbreedte te beperken tot de gegeven waarde.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="De lijst met video-codecs">
+								<longdesc>De lijst met video-codecs</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Maximum jitter-buffer">
+								<longdesc>De maximumgrootte van de jitter-buffer voor audio-ontvangst (in ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Stiltedetectie inschakelen">
+								<longdesc>Als dit aangevinkt is, wordt stiltedetectie gebruikt bij die codecs waarbij dat mogelijk is</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="De lijst met audio-codecs">
+								<longdesc>De lijst met audio-codecs</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Geen antwoord tijdslimiet">
+								<longdesc>Automatisch binnenkomende oproepen weigeren of doorsturen als deze niet binnen de ingestelde tijd (in seconden) worden beantwoord</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Positie van het venster voor video op afstand">
+									<longdesc>De positie van het venster voor video op afstand</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="De grootte van het venster voor video-op-afstand">
+									<longdesc>De grootte van het venster voor video op afstand</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Het videobeeld voordat het volledig scherm gevuld werd">
+									<longdesc>Het videobeeld voordat geschakeld werd naar volledig scherm (dezelfde waarde als video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Het standaard videobeeld">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Plaats vensters die videobeelden weergeven tijdens gesprekken boven andere vensters">
+									<longdesc>Plaats vensters die videobeelden weergeven tijdens gesprekken boven andere vensters</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="De zoomwaarde">
+									<longdesc>De zoomwaarde (als percentage) die gebruikt wordt voor de videobeelden in het hoofdscherm (kan 50, 100 of 200 zijn)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Specificeer het schalingsalgoritme">
+									<longdesc>Specificeer het schalingsalgoritme: 0: dichstbijzijnde buur, 1: dichtstbijzijnde buur met boxfilter, 2: bilineaire filter, 3: hyperbolische filter. Is niet van toepassing op windows-systemen.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Beeld-in-beeld softwarematig schalen toestaan">
+									<longdesc>Geeft Ekiga de mogelijkheid terug te vallen op softwarematig schalen van het Beeld-In-Beeld (PIP) wanneer hardwarematige ondersteuning niet beschikbaar is. Wanneer dit niet aangevinkt is zal Ekiga niet trachten het Beeld-In-Beeld te openen wanneer dit niet door de hardware ondersteund wordt.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Video hardwareversnelling uitschakelen">
+									<longdesc>Deze sleutel schakelt DirectX (op win32) en XVideo (op Linux) videohardewareversnelling uit</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Grootte van het voorkeurenvenster">
+									<longdesc>Grootte van het voorkeurenvenster</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="De positie van het voorkeurenvenster op het scherm">
+									<longdesc>De positie van het voorkeurenvenster op het scherm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Grootte van het voorkeurenvenster">
+									<longdesc>Grootte van het voorkeurenvenster</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="De positie van het voorkeurenvenster op het scherm">
+									<longdesc>De positie van het voorkeurenvenster op het scherm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Grootte van het video-instellingenvenster">
+									<longdesc>Grootte van het video-instellingenvenster</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="De positie van het video-instellingenvenster op het scherm">
+									<longdesc>De positie van het video-instellingenvenster op het scherm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Grootte van het audio-instellingenvenster">
+									<longdesc>Grootte van het audio-instellingenvenster</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="De positie van het audio-instellingenvenster op het scherm">
+									<longdesc>De positie van het audio-instellingenvenster op het scherm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Grootte van het adresboekvenster">
+									<longdesc>Grootte van het adresboekvenster</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Positie op het scherm van het adresboekvenster">
+									<longdesc>Positie op het scherm van het adresboekvenster</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="De positie van het configuratiehulp-venster op het scherm">
+									<longdesc>De positie van het configuratiehulp-venster op het scherm</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Grootte van het configuratiehulpvenster">
+									<longdesc>Grootte van het configuratiehulpvenster</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="De positie van het chatvenster op het scherm">
+									<longdesc>De positie van het chatvenster op het scherm</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Grootte van het chat-venster">
+									<longdesc>Grootte van het chat-venster</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="De positie van het hoofdvenster op het scherm">
+									<longdesc>De positie van het hoofdvenster op het scherm</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="De STUN-server">
+								<longdesc>De STUN-server die gebruikt wordt voor STUN-ondersteuning. STUN is een techniek die het mogelijk maakt bepaalde typen NAT-gateways te passeren.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Het geluid van de bezet-toon">
+								<longdesc>Het geluid dat afgespeeld wordt aan het einde van gesprekken of als iemand bezet is, indien ingeschakeld.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Geluid bij bezette lijn">
+								<longdesc>Het gekozen geluid dat wordt afgespeeld aan het einde van gesprekken of als iemand bezet is, indien ingeschakeld.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Het beltoongeluid">
+								<longdesc>Het geluid dat afgespeeld wordt tijdens het bellen van iemand, indien ingeschakeld</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Geluid bij opbellen">
+								<longdesc>Als dit aangevinkt is, zal het gekozen geluid worden afgespeeld bij het bellen van iemand</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Geluid bij binnenkomende voice-mail">
+								<longdesc>Als dit aangevinkt is, zal het gekozen geluid worden afgespeeld bij het ontvangen van een nieuwe voic-mail</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Het geluid bij een binnenkomende voice-mail">
+								<longdesc>Het geluid dat afgespeeld wordt wanneer er een nieuwe voice-mail is ontvangen, indien ingeschakeld.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Geluid bij binnenkomend bericht">
+								<longdesc>Als dit aangevinkt is, zal het gekozen geluid worden afgespeeld bij het ontvangen van een nieuw expresbericht</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Het geluid bij een binnenkomend expresbericht">
+								<longdesc>Het geluid dat afgespeeld wordt wanneer er een nieuw expresbericht is ontvangen, indien ingeschakeld</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Geluid bij binnenkomende oproepen">
+								<longdesc>Als dit aangevinkt is, zal het gekozen geluid worden afgespeeld bij binnenkomende gesprekken</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="De beltoon voor binnenkomende gesprekken">
+								<longdesc>Het geluid dat afgespeeld wordt bij binnenkomende oproepen, indien ingeschakeld.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Alternatief audioweergaveapparaat">
+								<longdesc>Kies een alternatief apparaat voor de weergave van geluidsacties.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Uitgebreide status van contact">
+								<longdesc>De uitgebreide statusinformatie</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Beknopte status van contact">
+								<longdesc>De korte statusinformatie</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Volledige naam">
+								<longdesc>Vul uw volledige naam in</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Beeldsnelheid">
+								<longdesc>De maximum beeldfrequentie voor verzenden in beelden/s. Deze frequentie wordt mogelijk niet gehaald wanneer een minimum kwaliteit ingesteld is via een TSTO-waarde die kleiner is dan 31 en wanneer de geselecteerde bandbreedte niet voldoende is om deze minumum kwaliteit te onderhouden.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Videovoorbeeld">
+								<longdesc>Beelden van uw camera weergeven</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Videoformaat">
+								<longdesc>Voor videocamera&apos;s, kies het formaat. (Niet van toepassing voor de meeste USB-camera&apos;s)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Videokanaal">
+								<longdesc>Het nummer van het te gebruiken videokanaal (om camera, tv of andere bronnen te kiezen)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Videogrootte">
+								<longdesc>Kies de te verzenden videogrootte: Klein (QCIF 176x144) of Groot (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Video-opnameapparaat">
+								<longdesc>Kies het te gebruiken video-opnameapparaat. Indien het verkeerde apparaat of een onjuiste afbeelding is gekozen zal er een testbeeld verzonden worden.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Audio-opnameapparaat">
+								<longdesc>Kies het te gebruiken apparaat voor audio-opname</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Audioweergaveapparaat">
+								<longdesc>Kies het te gebruiken apparaat voor audioweergave</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Bladwijzers">
+						<longdesc>gconf-editor mappen bladwijzers</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Onlangs gespeelde spellen">
+						<longdesc>Een lijst met onlangs gespeelde spellen.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statistieken van de gespeelde spellen">
+						<longdesc>Een lijst met tekenreeksen bestaande uit vijf onderdelen: naam, gewonnen, totaal gespeeld, beste tijd (in seconden) en slechtste tijd (ook in seconden).  Niet-gespeelde spellen hoeven niet te worden weergegeven.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Het te gebruiken spelbestand">
+						<longdesc>De naam van het schemabestand dat het te spelen patiencespel bevat.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animaties">
+						<longdesc>Of het verplaatsen van kaarten al dan niet van animatie wordt voorzien.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Geluid">
+						<longdesc>Of er al dan niet geluid wordt afgespeeld bij gebeurtenissen.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Kiezen van de bedieningsstijl">
+						<longdesc>Kiezen of kaarten verplaatst worden door te slepen, of door eerst de kaart aan te klikken en daarna de bestemming.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Of de statusbalk al dan niet wordt getoond">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Of de werkbalk al dan niet wordt getoond">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Naam van themabestand">
+						<longdesc>De naam van het bestand met de plaatjes van de kaarten.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

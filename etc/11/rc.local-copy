@@ -1,0 +1,84 @@
+##kldload radeon
+#dhclient alc0
+#kldload linux
+#kldload fuse
+ifconfig igb0 192.168.3.211
+#ntfs-3g /dev/ada1s1 /media/disk2
+#ntfs-3g /dev/ada1s2 /media/disk3
+/usr/local/bin/ntfs-3g /dev/da0s1 /media/disk
+mount_smbfs -I192.168.3.2 -EUTF-8:CP1251  //Admin@srv01/e$  /mnt
+mount_smbfs -I192.168.3.2 -EUTF-8:CP1251  //Admin@srv01/F  /mnt1
+#mount_smbfs -L ru_RU.UTF-8 -E UTF-8:CP1251 //p90@srv01/e$ /mnt
+# for ati driver 7.2.0 - no KMS kernel part & fw autoload
+#kldload radeonkms
+##kldload drm
+#kldload nvi-.ko
+#soundon
+
+# all in rc.conf
+#kldload libalias
+#kldload ipfilter
+
+# fuck! wrong order?? out send 32k in any stream only then 13 error!
+# flush do not try
+kldunload ipfw
+kldunload ipfw_nat
+kldstat
+#kldload ipdivert
+kldload ipfw
+kldload ipfw_nat
+/sbin/ipfw nat  show config
+
+#/sbin/ipfw add 100 allow ip from any to any
+#/sbin/ipfw add 100 allow ip from 192.168.3.211 to any
+# conflict with vpn server (route nat ok use natd)
+#/sbin/ipfw add 40 divert natd ip from 192.168.3.0/24 to any out via igb1
+#/sbin/ipfw add 40 divert natd ip from any to me in via igb1
+#/sbin/ipfw add 45 allow ip from 192.168.3.211 to any
+#/sbin/ipfw add 40 allow ip from 127.0.0.1 to any
+
+# variable defines into rc.conf - edit
+#/sbin/ipfw nat 123 config if $firewall_nat_interface redirect_port tcp 192.168.3.211:90 90
+#/sbin/ipfw nat 123 config if igb1 redirect_port tcp 192.168.3.2:1723 1723 redirect_port tcp 192.168.3.2:4899 4900 redirect_port tcp 192.168.3.211:90 90 redirect_port tcp 192.168.3.211:80 80 redirect_port tcp 192.168.3.211:92 92 redirect_port tcp 192.168.3.211:23 23
+/sbin/ipfw add 45 nat 123 ip from any to me recv igb1 in
+/sbin/ipfw add 50 allow ip from any to any in
+/sbin/ipfw add 55 nat 123 ip from 192.168.3.0/24 to any xmit igb1 out
+/sbin/ipfw add 100 allow ip from any to any via lo0
+/sbin/ipfw add 63000 allow icmp from any to any
+/sbin/ipfw add 62000 allow ipv6-icmp from any to any
+
+/sbin/ipfw nat 123 config if igb1 redirect_port tcp 192.168.3.2:1723 1723 redirect_port tcp 192.168.3.2:4899 4900
+/sbin/ipfw add 65000 allow ip from any to any
+/sbin/ipfw nat 123 show config
+
+#
+# 00045 220448  21244857 nat 123 ip from any to me recv igb1 in
+# 00055      0         0 nat 123 ip from 192.168.3.0/24 to any xmit igb1 out
+# 00050 454010  23656338 allow ip from any to any in
+# 00100   1594   3104317 allow ip from any to any via lo0
+# 63000 435008  24360532 allow icmp from any to any
+# 65000 512902 537332856 allow ip from any to any
+# 65535   2479    232189 deny ip from any to any
+# root@pc1:/etc# ipfw nat show config
+# ipfw nat 123 config if igb1 redirect_port tcp 192.168.3.2:4899 4900 redirect_port tcp 192.168.3.2:1723 1723
+# 
+
+#vpn pptp at 192.168.3.2
+route add 192.168.0.0 192.168.3.2
+
+#/sbin/ipfw add 40 divert natd ip from any to 77.41.57.147 in via igb1
+#natd -interface igb1 -f /etc/natd.conf
+#service natd restart
+
+#/sbin/chown -R www:www /var/tmp/nginx
+#/sbin/chown -R www:www /tmp/nginx
+
+#route add -net 192.168.0.0/24 192.168.3.2
+#route add 0.0.0.0 192.168.3.2
+
+#route add -net 0.0.0.0 192.168.3.2
+#route show 192.168.0.0
+#route add 77.37.234.161 192.168.3.1
+#/root/rungnome.sh
+#/usr/bin/env DISPLAY=:0 xterm
+

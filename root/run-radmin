@@ -1,0 +1,2 @@
+#!/bin/sh
+env WINEPREFIX=/root/.wine-pipelight wine "/ra3/Radmin.exe"

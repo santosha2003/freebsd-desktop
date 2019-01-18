@@ -1,0 +1,66 @@
+#!/bin/sh
+ #pkgng pack create packages for freebsd port and all dependency
+ # virtualbox and vlc mplayer libav mesa -all new and not from ports up to date
+#/usr/update-svn
+#n=4
+mv /root/reins-port.log /root/reins-port.old
+#mv /root/pack-port.log /root/pack-port.old
+#printf  "" > /root/pack-port.log
+printf "" > /root/thisfrombase.log
+n=$#
+ # cumulative sum up to 5000
+PACKAGESLINE=""
+ # each input package  # 5000 max arguments in cmd line freebsd10
+for ARG in $*
+ do
+ echo $ARG
+ echo $n
+  #if $$i == "" then break
+  #fi
+PORTPATH=`whereis -s $ARG | awk '{print $2}'`
+echo $PORTPATH
+make -C $PORTPATH clean
+#pkg create -o /root $1
+
+#make -C /usr/ports/ports-mgmt/pkg build
+#pkg query %o >listpkge
+#cat listpkge | xargs pkg install -f
+#cat listpkge | xargs echo
+#cat listpkge | xargs pkg install -f -y
+
+
+PACKAGELINE=$ARG
+echo $PACKAGELINE
+printf "ports-mgmt/pkg" >> /root/reins-port.log
+printf "\n" >> /root/reins-port.log
+   for LINE in `make -C $PORTPATH all-depends-list |cut -c 12-127`
+     do
+     LINST=`whereis -s $LINE | awk '{print $2}'| cut -c 1-8`
+         if (test "$LINE" != "ports-mgmt/pkg")  then
+          if (test "$LINST" != "/usr/src")  then
+	    if (test "" == "`cat /root/reins-port.log |grep $LINE`")  then
+        echo -n "build  (${LINE}) "
+	PORTP=`whereis -s $LINE | awk '{print $2}'`
+	echo -n " from ($PORTP) "
+        PACKAGESLINE="$PACKAGESLINE ${LINE}"
+        printf  "${LINE}\n" >> /root/reins-port.log
+       printf "`cat /root/reins-port.log |grep $LINE`\n" >> /root/reins-port1-log
+        #echo "\n" >> /root/reins-log
+         if (test "$LINE" == "devel/gettext-runtime")  then
+        make -C /usr/ports/${LINE} clean build deinstall install | tail >>~/reins.texi
+         fi
+        make -C /usr/ports/${LINE} build deinstall install | tail >>~/reins.texi
+	#make -C /usr/ports/ports-mgmt/pkg install
+	    else echo -n "ist schon bearbeitet ($LINE) "
+	    fi
+          else printf " Error (this from base?)\n$LINE \n" >> /root/reins-port.log
+          make -C /usr/ports/${LINE} reinstall | tail >>~/reins.texi
+          fi
+         fi
+     done
+ done
+#make -C /usr/ports/${LINE} clean
+#pkg install -f $PACKAGESLINE
+echo $PACKAGESLINE
+
+ printf "${PACKAGESLINE}\n" >> /root/reins-port-all.log

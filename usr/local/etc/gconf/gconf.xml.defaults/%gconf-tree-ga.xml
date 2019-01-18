@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="ldap_servers">
+						<local_schema short_desc="Freastalaí LDAP">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<dir name="user_interface">
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Méid na fuinneoige socruithe físe">
+									<longdesc>Méid na fuinneoige socruithe físe</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Méid na fuinneoige socruithe fuaime">
+									<longdesc>Méid na fuinneoige socruithe fuaime</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="An Freastalaí STUN">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="full_name">
+							<local_schema short_desc="Ainm iomlán">
+								<longdesc>Iontráil d&apos;ainm iomlán</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Leabharmharcanna">
+						<longdesc>leabharmharcanna fhillteán gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Cluichí imeartha le déanaí">
+						<longdesc>Liosta cluichí imeartha le déanaí</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Íomhánna Beo">
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Fuaim">
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Roghnaigh an stíl rialaithe">
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

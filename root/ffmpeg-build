@@ -1,0 +1,11 @@
+cd /root/ffmpeg/libav
+./version.sh
+make -C /usr/ports/audio/libaacplus reinstall
+make -C /usr/ports/audio/faac reinstall
+make -C /usr/ports/graphics/aalib reinstall
+make -C /usr/ports/audio/alsa-lib reinstall
+make -C /usr/ports/audio/alsa-plugins reinstall
+# ./configure  --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libcdio --enable-libfaac --enable-libfdk-aac --enable-libmp3lame --enable-libvorbis --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvpx --enable-libx264 --enable-libxvid --enable-x11grab --enable-shared --enable-gpl --enable-version3 --enable-avfilter --enable-avresample --enable-pthreads --enable-nonfree --enable-vdpau --cc=clang
+./configure  --prefix=/usr/local --enable-nonfree --enable-version3 --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libcdio --enable-libfaac --enable-libfdk-aac --enable-libmp3lame --enable-libvorbis --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvpx --enable-libx264 --enable-libxvid --enable-x11grab --enable-shared --enable-gpl --enable-version3 --enable-avfilter --enable-avresample --enable-pthreads --enable-libpulse --enable-libx264 --enable-libx265 --enable-openssl --enable-libmp3lame --enable-libfreetype --enable-vdpau --enable-libx265 --cc=clang
+gmake all
+gmake install

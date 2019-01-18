@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Желіде еместерді көрсету">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="general">
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="STUN сервері">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="full_name">
+							<local_schema short_desc="Толық аты">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="size">
+							<local_schema short_desc="Видео өлшемі">
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Видео енгізу құрылғысы">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Аудио енгізу құрылғысы">
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Аудио шығару құрылғысы">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Бетбелгілер">
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Соңғы ойналған ойындар">
+						<longdesc>Соңғы ойналған ойындар тізімі.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Ойналған ойындардың статистикасы">
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Анимациялар">
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Дыбыс">
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="কলের ইতিহাস">
+							<longdesc>পূর্ববর্তী ১০০-টি কল সম্পর্কিত তথ্য</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP সার্ভার">
+							<longdesc>কনফিগার করা LDAP সার্ভারের তালিকা</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="অফলাইন পরিচিতিদের প্রদর্শন">
+							<longdesc>যদি সক্রিয় থাকে, অফ-লাইন পরিচিতদের নাম পরিচিতি তালিকা প্রদর্শিত হবে</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="রোস্টারে অন্তর্ভুক্ত ফোল্ডেড গ্রুপ-এর তালিকা">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="অ্যাকাউন্ট তালিকা">
+							<longdesc>Ekiga দ্বারা যে সমস্ত অ্যাকাউন্টের সাথে নিবন্ধন করা হবে</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="উত্তর না পেলে কল নির্দিস্ট হোস্টে পাঠানো হবে">
+								<longdesc>এটি সক্রিয় হলে যে সমস্ত কলগুলির আপনি উত্তর দেবেন না তা সবই নিম্নোক্ত হোস্টটিতে পাঠিয়ে দেওয়া হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="ব্যস্ত থাকলে কল নির্দিস্ট হোস্টে পাঠানো হবে">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="সব সময়ই নির্দিষ্ট হোস্টে কল এগিয়ে দেওয়া হবে">
+								<longdesc>সক্রিয় থাকলে, নিম্নলিখিত ক্ষেত্রের বৈশিষ্ট্য অনুযায়ী নির্ধারিত হোস্টে সকল কল ফরওয়ার্ড করা হবে</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP পোর্টের সীমা">
+								<longdesc>Ekiga দ্বারা ব্যবহারযোগ্য UDP পোর্টের সীমা।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP পোর্টের সীমা">
+								<longdesc>H.323 H.245 চ্যানেলের জন্য Ekiga দ্বারা ব্যবহৃত TCP পোর্টের সীমা। কনফারেন্সের সকল অংশগ্রহকারী দ্বারা H.245 টানেলিং ব্যবহার করা হলে পোর্টের এই সীমা দ্বারা কোনো প্রভাব সৃষ্টি হবে না।</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="সব কল হোস্টে পাঠানো হবে">
+								<longdesc>ওপরে উল্লেখিত ক্ষেত্রসমূহ নির্বাচিত হলে যে হোস্টে সব কল পাঠিয়ে দেওয়া হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF প্রেরণ করা হচ্ছে">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="&apos;ফাস্ট স্টার্ট&apos; সক্রিয়">
+								<longdesc>ফাস্ট স্টার্ট মোডে যোগাযোগ স্থাপন করা হবে। ফাস্ট স্টার্ট একটি নতুন প্রক্রিয়া যা দ্রুততার সাথে কল আরম্ভ করতে পারে যেমনটি H.323v2-এ উত্থাপন করা হয়েছিল। এটি Netmeeting দ্বারা সমর্থিত নয় এবং ফাস্ট স্টার্ট ও H.245 টানেলিং একযোগে ব্যবহারে Netmeeting-র কিছু সংস্করণ ক্র্যাশ করতে পারে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="শীঘ্রই H.245 সক্রিয় করুন">
+								<longdesc>এর ফলে, প্রস্তুতির প্রারম্ভিক ধাপে H.245 সক্রিয় করা হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 টানেলিং সক্রিয়">
+								<longdesc>এর ফলে H.245 টানেলিং মোড সক্রিয় করা হবে। H.245 টানেলিং মোডের অধীন, H.245 বার্তাগুলি H.225 চ্যানেলে (পোর্ট ১৭২০) আবদ্ধ করা হয় ও কল চলাকালীন একটি TCP সংযোগ ব্যবহার করার প্রয়োজন হবে না। H.245 টানেলিং প্রণালী H.323v2-এ প্রথম উপলব্ধ করা হয়েছিল ও  Netmeeting দ্বারা এটি সমর্থিত নয়। ফাস্ট স্টার্ট ও H.245 টানেলিং একযোগে ব্যবহারে Netmeeting-র কিছু সংস্করণ বিকল হতে পারে।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="অপেক্ষার জন্য ব্যবহৃত পোর্ট">
+								<longdesc>আগমনকারী সংযোগের জন্য অপেক্ষামান পোর্ট। নতুন মান প্রয়োগ করার জন্য Ekiga পুনরায় আরম্ভ করা আবশ্যক।</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT Binding এর সময়সীমা পার হয়ে গেছে">
+								<longdesc>STUN ব্যবহারকালে Ekiga দ্বারা NAT বাইন্ডিং পুনরায় প্রচেষ্টার পূর্বে যে সংখ্যক সেকেন্ড অপেক্ষা করা হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF প্রেরণ করা হচ্ছে">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="সব কল হোস্টে পাঠানো হবে">
+								<longdesc>ওপরে উল্লেখিত ক্ষেত্রসমূহ নির্বাচিত হলে যে হোস্টে সব কল পাঠিয়ে দেওয়া হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="আউটবাউন্ড প্রক্সি">
+								<longdesc>যে সকল কল বাইরে যাচ্ছে তাতে ব্যবহৃত SIP Outbound Proxy নির্বাচন করুন</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="অপেক্ষার জন্য ব্যবহৃত পোর্ট">
+								<longdesc>আগমনকারী সংযোগের জন্য অপেক্ষামান পোর্ট। নতুন মান প্রয়োগ করার জন্য Ekiga পুনরায় আরম্ভ করা আবশ্যক</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="অস্থায়ী বিশেষ ট্রেড অফ">
+								<longdesc>ফ্রেমের সর্বাধিক হার জারি রাখা হবে নাকি সকল ফ্রেমের জন্য সর্বনিম্ন গুণমান (স্পেশিয়াল) বজায় রাখার প্রচেষ্টায় হারের মাত্রা হ্রাস করা হবে। 0: সর্বনিম্ন গুণমানের সর্বাধিক পরিমাণ, 31: সর্বনিম্ন গুণমানের সর্বনিম্ন পরিমাণ</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="RX ভিডিওর সর্বাধিক বিটের মাত্রা">
+								<longdesc>কিলোবিট/সেকেন্ড অনুযায়ী সর্বাধিক RX ভিডিওর বিটের হার। সমতূল্য প্রান্তিক সআকার্তিস্থলে এই মান প্রেরিত হবে এবং (বৈশিষ্ট্য সমর্থিত হলে) সেটির TX বিটের হার বেশি হলে তা যথাযতভাবে পরিবর্তিত হবে।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="TX ভিডিওর সর্বাধিক বিটের মাত্রা">
+								<longdesc>কিলোবাইট/সেকেন্ডে ধার্য TX ভিডিওর সর্বাধিক বিটের হার। কল চলাকালীন ব্যান্ডউইর্থের সুনির্দিষ্ট মান বজায় রাখার জন্য ভিডিও গুনমান ও প্রতি সেকেন্ডে পরিবাহিত ফ্রেমের সংখ্যাগুলি তৎক্ষনাৎ পরিবর্তন করা হবে (নির্বাচিত কোডেকের উপর নির্ভরশীল) ও সর্বনিম্ন পরিমাণের চেয়ে বেশি আকারে ধার্য করা হবে।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="ভিডিও কোডেকের তালিকা">
+								<longdesc>ভিডিও কোডেকের তালিকা</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="সর্বাধিক জিট্টার বাফার">
+								<longdesc>অডিও গ্রহণের উদ্দেশ্যে jitter বাফারের সর্বাধিক আকার (মিলিসেকেন্ডে ধার্য)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="নীরবতা সনাক্তকরণ সক্রিয়">
+								<longdesc>যদি সক্রিয় থাকে, সমর্থনকারী কোডেকের ক্ষেত্রে নীরবতা সনাক্তকরণ অবস্থা ব্যবহার করা হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="অডিও কোডেকের তালিকা">
+								<longdesc>অডিও কোডেকের তালিকা</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="স্বয়ংক্রিয় উত্তর">
+								<longdesc>যদি সক্রিয় থাকে, স্বয়ংক্রিয়ভাবে আগত কলের জবাব দেয়া হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="প্রত্যুত্তরের জন্য সময়সীমা নির্ধারিত নেই">
+								<longdesc>চিহ্নিত সময়ের মধ্যে (সেকেন্ডে ধার্য) কোনো উত্তর না পাওয়া গেলে, আগত কলগুলো স্বয়ংক্রিয়ভাবে প্রত্যাখ্যান অথবা ফরওয়ার্ড করা হবে</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="দূরবর্তী ভিডিও উইন্ডোর অবস্থান">
+									<longdesc>দূরবর্তী ভিডিও উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="দূরবর্তী ভিডিও উইন্ডোর আকার">
+									<longdesc>দূরবর্তী ভিডিও উইন্ডোর আকার</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="পূর্ণ পর্দা জুড়ে প্রদর্শনের পূর্বে ভিডিও প্রদর্শনের ক্ষেত্র">
+									<longdesc>পূর্ণ পর্দা জুড়ে প্রদর্শনের পূর্বে ভিডিও প্রদর্শনের ক্ষেত্র (video_view-র সমান আকার)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="ডিফল্ট ভিডিও দর্শনের ধরণ">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="কল চলাকালে, ভিডিওর উইন্ডোগুলো অন্যান্য উইন্ডোর উপরে প্রদর্শন করা হবে">
+									<longdesc>কল চলাকালে, ভিডিওর উইন্ডোগুলো অন্যান্য উইন্ডোর উপরে প্রদর্শন করা হবে</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="ছোট/বড় করে দেখানোর মাত্রা">
+									<longdesc>প্রধান GUI-র মধ্যে প্রদর্শিত ছবির আকার, শতাংশে ধার্য (যেমন ৫০, ১০০, অথবা ২০০)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="সফ্টওয়ার স্কেলিং-এর অ্যালগরিদম নির্ধারন করুন">
+									<longdesc>ছবির আকার পরিবর্তনের জন্য অ্যালগরিদম নির্ধারণ করুন: ০: nearest neighbor, ১: nearest neighbor with box filter , ২: bilinear filtering , ৩: hyperbolic filtering। windows সিস্টেমের ক্ষেত্রে প্রযোজ্য নয়।</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="picture-in-picture সফ্টওয়ার স্কেলিং এ অনুমতি দিন">
+									<longdesc>হার্ডওয়্যারের সমর্থন বিদ্যমান না থাকলে, ছবির-মধ্যে-ছবির আকার নির্ধারণের জন্য Ekiga দ্বারা সফ্টওয়্যার প্রয়োগ করা হবে। এই বৈশিষ্ট্যের মান false নির্ধারিত হলে, হার্ডওয়্যার সমর্থন ছাড়া Ekiga PIP আরম্ভের চেষ্টা করবে না।</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="ভিডিও হার্ডওয়ার অ্যাক্সিলারেশন নিষ্ক্রিয়">
+									<longdesc>এই কি-র ফলে, DirectX (win32-র ক্ষেত্রে) ও XVideo (Linux-র ক্ষেত্রে) ভিডিও হার্ডওয়্যার গতিবর্ধন ব্যবস্থা নিষ্ক্রিয় করা হবে</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="পছন্দসমূহ উইন্ডোর আকার">
+									<longdesc>পছন্দসমূহ উইন্ডোর আকার</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="পর্দায় পছন্দসমূহ উইন্ডোর অবস্থান">
+									<longdesc>পর্দায় পছন্দসমূহ উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="পছন্দসমূহ উইন্ডোর আকার">
+									<longdesc>পছন্দসমূহ উইন্ডোর আকার</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="পর্দায় পছন্দসমূহ উইন্ডোর অবস্থান">
+									<longdesc>পর্দায় পছন্দসমূহ উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="ভিডিও সেটিংস উইন্ডোর আকার">
+									<longdesc>ভিডিও সেটিংস উইন্ডোর আকার</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="পর্দার মধ্যে ভিডিও সংক্রান্ত বৈশিষ্ট্যের উইন্ডোর অবস্থান">
+									<longdesc>পর্দার মধ্যে ভিডিও সংক্রান্ত বৈশিষ্ট্যের উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="অডিও সেটিংস উইন্ডোর আকার">
+									<longdesc>অডিও সেটিংস উইন্ডোর আকার</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="পর্দায় অডিও সেটিংস উইন্ডোর অবস্থান">
+									<longdesc>পর্দায় অডিও সেটিংস উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="ঠিকানা বইয়ের উইন্ডোর আকার">
+									<longdesc>ঠিকানা বইয়ের উইন্ডোর আকার</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="পর্দায় ঠিকানা বই উইন্ডোর অবস্থান">
+									<longdesc>পর্দায় ঠিকানা বই উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="পর্দায় druid উইন্ডোর অবস্থান">
+									<longdesc>পর্দায় druid উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="druid উইন্ডোর আকার">
+									<longdesc>druid উইন্ডোর আকার</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="পর্দায় আলাপন উইন্ডোর অবস্থান">
+									<longdesc>পর্দায় আলাপন উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="আড্ডা উইন্ডোর আকার">
+									<longdesc>আড্ডা উইন্ডোর আকার</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="পর্দায় প্রধান উইন্ডোর অবস্থান">
+									<longdesc>পর্দায় প্রধান উইন্ডোর অবস্থান</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN নেটওয়ার্ক সনাক্তরণ সক্রিয়">
+								<longdesc>STUN পরীক্ষা হতে প্রাপ্ত ফলাফলের ভিত্তিতে স্বয়ংক্রিয়ভাবে নেটওয়ার্ক সেটআপ সক্রিয়</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN সার্ভার">
+								<longdesc>STUN সমর্থনে ব্যবহৃত STUN সার্ভার। STUN প্রযুক্তির সাহায্যে কিছু প্রকার NAT গেটওয়ের মধ্যে পথ প্রস্তুত করা সম্ভব</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="ব্যস্ত টোন ধ্বনি">
+								<longdesc>বৈশিষ্ট্য সক্রিয় করা হলে, কলের সমাপ্তির পরে অথবা কল করা ব্যক্তি ব্যস্ত থাকলে চিহ্নিত শব্দ বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="ব্যস্ত চিহ্নকারী শব্দ বাজানো হবে">
+								<longdesc>যদি সক্রিয় করা থাকে, তাহলে নির্বাচিত ধ্বনি কলের শেষে অথবা কোন ব্যস্ত সংযোগস্থাপনের সময় বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="ডায়াল টোন ধ্বনি">
+								<longdesc>সক্রিয় হলে‌, কোনো ব্যক্তিকে কল করার সময় যে শব্দ বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="রিং টোন বাজান">
+								<longdesc>সক্রিয় হলে, কোনো কল করার সময় নির্বাচিত শব্দ বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="ভয়েস-মেইল প্রাপ্ত হলে শব্দ বাজিয়ে সূচিত করা হবে">
+								<longdesc>সক্রিয় হলে, নতুন ভয়েস মেইল পেলে নির্বাচিত শব্দ বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="প্রাপ্ত নতুন ভয়েস মেইলের শব্দ">
+								<longdesc>সক্রিয় হলে‌, নতুন ভয়েস মেইল প্রাপ্ত হলে যে শব্দ বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="বার্তা প্রাপ্ত হলে শব্দ বাজিয়ে সূচিত করা হবে">
+								<longdesc>সক্রিয় থাকলে নতুন বার্তা গ্রহণ করার সময় এই ধ্বনি বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="নতুন ইনস্ট্যান্ট বার্তার জন্য চিহ্নিত শব্দ">
+								<longdesc>সক্রিয় হলে‌, নতুন ইন্সট্যান্ট বার্তা প্রাপ্ত হলে যে শব্দ বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="কল প্রাপ্ত হলে শব্দ বাজিয়ে সূচিত করা হবে">
+								<longdesc>সক্রিয় থাকলে কল গ্রহণ করার সময় এই ধ্বনি বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="কল গ্রহণ করার ধ্বনি">
+								<longdesc>সক্রিয় হলে‌, আগত কলের জন্য যে শব্দ বাজানো হবে</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="বিকল্প অডিও আউটপুট ডিভাইস">
+								<longdesc>শব্দ সহ ইভেন্টের জন্য বিকল্প অডিও আউটপুট ডিভাইস নির্বাচন করুন।</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="পরিচিতির দীর্ঘ অবস্থা">
+								<longdesc>যোগাযোগ সংক্রান্ত তথ্যাদি সম্পাদন</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="পরিচিতির সংক্ষিপ্ত অবস্থা">
+								<longdesc>অবস্থা সম্পর্কিত সংক্ষিপ্ত সূচনা</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="পুরো নাম">
+								<longdesc>আপনার পূর্ণনাম লিখুন</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="ফ্রেমের হার">
+								<longdesc>ফ্রেম/সেকেন্ড অনুযায়ী পরিবাহিত সর্বাধিক ফ্রেমের হার। সর্বনিম্ন গুণমান চিহ্নকারী মান, TSTO-র মাধ্যমে ৩১-এর কম কোনো সংখ্যায় ধার্য করা হলে ও সর্বনিম্ন এই মান সমর্থনের জন্য নির্বাচিত বিটের হার পর্যাপত না হলে এই মাত্রা স্পর্শ সম্ভব না হতে পারে।</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="ভিডিওর প্রাকদর্শন">
+								<longdesc>ক্যামেরা ডিভাইস থেকে ছবি প্রদর্শন</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="ভিডিওর বিন্যাস">
+								<longdesc>ভিডিও ক্যামেরার বিন্যাস বেছে নিন (অধিকাংশ USB ক্যামেরার ক্ষেত্রে প্রযোজ্য নয়)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="ভিডিও চ্যানেল">
+								<longdesc>ব্যবহারযোগ্য ভিডিও চ্যানেলের সংখ্যা (ক্যামেরা, টিভি অথবা অন্যান্য উৎস নির্বাচনের জন্য)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="ভিডিওর আকার">
+								<longdesc>সম্প্রচার করা ভিডিও আকার নির্বাচন করুন: ছোট (QCIF 176x144) অথবা বড় (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="ভিডিও ইনপুট ডিভাইস">
+								<longdesc>ব্যবহারযোগ্য ভিডিও ইনপুট ডিভাইস নির্বাচন করুন। এই ডিভাইস ব্যবহারকালে কোনো ধরনের ত্রুটি উৎপন্ন হলে একটি পরীক্ষামূলক ছবি সম্প্রচার করা হবে।</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="অডিও ইনপুট ডিভাইস">
+								<longdesc>ব্যবহারের জন্য অডিও ইনপুট ডিভাইস নির্বাচন করুন</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="অডিও আউটপুট ডিভাইস">
+								<longdesc>ব্যবহারের জন্য অডিও আউটপুট ডিভাইস নির্বাচন করুন</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="বুকমার্কসমূহ">
+						<longdesc>gconf-সম্পাদক ফোল্ডারের বুকমার্ক</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="সম্প্রতি যে খেলাগুলি খেলা হয়েছে">
+						<longdesc>সম্প্রতি যে খেলাগুলি খেলা হয়েছে তার তালিকা।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="সম্পন্ন খেলা সংক্রান্ত পরিসংখ্যান">
+						<longdesc>স্ট্রিংয়ের তালিকা যা কুইনটাপলের আকারে আসে: নাম, জয়, যতগুলো খেলা হয়েছে, সেরা সময় (সেকেন্ডে) এবং সর্বাপেক্ষা খারাপ সময় (সেকেন্ডে)। যেগুলো খেলা হয়নি তা প্রদর্শন করার প্রয়োজন নেই।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="ব্যবহারের জন্য চিহ্নিত খেলার ফাইল">
+						<longdesc>খেলার উদ্দেশ্যে সলিটেয়ার ধারণকারী স্কীম ফাইলের নাম।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="অ্যানিমেশন">
+						<longdesc>তাশের চলাচল প্রদর্শনে অ্যানিমেশন ব্যবহার করা হবে কি না।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="শব্দ">
+						<longdesc>বিবিধ ঘটনার জন্য শব্দ বাজানো হবে কি না।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="নিয়ন্ত্রণের ধরন বেছে নিন">
+						<longdesc>তাস স্থানান্তরের সময় সরাসরি তাস টেনে নেয়া হবে, নাকি প্রথমে উৎস ও পরে গন্তব্যের ওপর ক্লিক করা হবে, তা নির্বাচন করুন।</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="অবস্থাসূচক-বার প্রদর্শন করা হবে কি না">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="টুল-বার প্রদর্শন করা হবে কি না">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="থীম ফাইলের নাম">
+						<longdesc>তাসের সঙ্গে ব্যবহারের জন্য চিহ্নিত গ্রাফিক্স ধারণকারী ফাইলের নাম।</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

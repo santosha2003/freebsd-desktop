@@ -1,0 +1,44 @@
+/usr/local/sbin/pkg-static install -fy pkg
+
+#/usr/sbin/pkg upgrade -fy
+#/usr/local/sbin/portupgrade -a -m 'config-conditional'
+#/usr/sbin/pkg upgrade -fy
+gnome-terminal -- /usr/sbin/pkg upgrade -f
+
+#erase all dl packages 
+#/usr/sbin/pkg clean -y
+
+echo ImageMagick off now php - fpm bug pecl-imagick
+echo OSS conflict with Alsa lib - video flash Firefox use OSS
+#pkg delete -f -y alsa-plugins alsa-lib
+#
+
+
+#freebsd-update fetch
+#freebsd-update install
+
+#portsnap fetch update
+cd /usr/ports
+
+
+echo mining rig - daily updates manually!  //off
+#off!
+#
+# pkg lock ImageMagick virtualbox-ose virtualbox-ose-kmod
+#/usr/sbin/pkg install -y gnome-terminal ImageMagick
+/usr/bin/make -C /usr/ports/multimedia/ffmpeg build deinstall install 
+/usr/bin/make -C /usr/ports/www/nginx build deinstall install
+pkg install google-perftools
+/usr/bin/make -C /usr/ports/multimedia/vlc build deinstall install
+/usr/bin/make -C /usr/ports/ftp/curl build deinstall install
+/usr/bin/make -C /usr/ports/graphics/pecl-imagick build deinstall install
+
+
+/usr/bin/make -C /usr/ports/multimedia clean
+/usr/bin/make -C /usr/ports/www clean
+/usr/bin/make -C /usr/ports/ftp clean
+/usr/bin/make -C /usr/ports/x11 clean
+/usr/bin/make -C /usr/ports/net-p2p clean
+/usr/bin/make -C /usr/ports/graphics clean
+
+# /usr/bin/make -C /usr/ports/devel/boost-libs build deinstall install

@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="تاريخ المكالمات">
+							<longdesc>تاريخ آخر 100 مكالمة </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="خوادم LDAP">
+							<longdesc>قائمة بخوادم LDAP المُشَكّلة</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="أعرض المتراسلين غير المتصلين">
+							<longdesc>إذا كان محدداً، سيُظهر المتراسلين غير المتصلين في القائمة</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="قائمة بالمجموعات المطوية في القائمة">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="قائمة الحسابات">
+							<longdesc>قائمة الحسابات التى يجب على إكِجا ان يسجلها</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="حوّل المكالمات إلى المستضيف المحدد إن لم يكن هناك إجابة">
+								<longdesc>إن كان محدّدًا، سوف تحول كل المكالمات الواردة إلى المستضيف المحدد في المربع أدناه إن لم تجب المكالمة</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="حوّل الاتصالات إلى المستضيف المحدد إن كنت مشغولًا">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="حوّل الاتصالات دائما إلى المستضيف المحدد">
+								<longdesc>إن كان محدّدًا، سوف تحول كل المكالمات إلى المستضيف المحدد في المربع أدناه</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="مدى أرقام منافذ UDP">
+								<longdesc>مجال منافذ UDP الذي سيستخدمه إكجا.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="مدى منافذ TCP">
+								<longdesc>مدى منافذ TCP التي سيستخدمها إكجا من أجل قناة H.323 H.245. ليس لهذا المدى أيّة أثر في حال كان كلا المشتركان في التحاور يستخدمان H.245 Tunneling.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="حوّل الاتصالات إلى المستضيف">
+								<longdesc>المستضيف الذى سوف يتم تحويل المكالمات إليه فى حالة تفعيل خاصية تحويل المكالمات</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="إرسالة نغمة DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="فعّل &apos;التشغيل السريع&apos;">
+								<longdesc>سيتم بدأ الاتصال فى وضعية البدأ السريع. البدأ السريع هى طريقة جديدة لبدأ المكالمات بشكل أسرع و الذى تم تقديمه فىH.323v2 و لكنها غير مدعومة من قبل  Netmeeting و استخدام البدأ السريع و H.245 Tunneling Netmeetingيمكن أن يقوم بكسر بعض نسخ </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="فعّل H.245">
+								<longdesc>يفعّل هذا H.245 منذ البداية في الإعداد</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="فعّل نفق H.245">
+								<longdesc>يمكن هذا وضع H.245 Tunnelling. في هذا الوضع يتم تضمين رسائل H.245 في قناة H.225 (المنفذ 1720). يبقي هذا اتصال TCP واحد خلال المكالمات. قدمت تقنية H.245 Tunnelling  في H323v2 ولا يدعم نت ميتنج هذه التقنية. استخدام البدء السريع مع H.245 Tunnelling قد يحطم بعد إصدارات نت ميتنج.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="منفذ الاستماع">
+								<longdesc>رقم البوابة لاستخدامها للمكالمات الواردة. يجب إعادة تشغيل إكِجا كي تصبح القيمة الجديدة فعالة.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT Binding Timeout">
+								<longdesc>أدخل عدد الثواني التي ينتظرها إكِجا قبل أن يحاول أن ينعش ارتباط NAT STUN عندما يتم استخدام</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="إرسالة نغمة DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="حوّل الاتصالات إلى المستضيف">
+								<longdesc>المستضيف الذى سوف يتم تحويل المكالمات إليه فى حالة تفعيل خاصية تحويل المكالمات</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="وسيط الجهة الخارجية">
+								<longdesc>The SIP Outbound Proxy to use for outgoing calls</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="منفذ الاستماع">
+								<longdesc>رقم البوابة لاستخدامها للمكالمات الواردة. يجب إعادة تشغيل إكِجا كي تصبح القيمة الجديدة فعالة.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="مقايضة فضائية وزمانية">
+								<longdesc>إما الرغبة في دعم المعدل الاقصى للاطار أو التقليل منه ما أمكن من أجل الحفاظ على مستوى أدنى من الجودة لكل الأطر. 0:  أعلى جودة دنيا، 31: أقل جودة دنيا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="عرض الموجة الأقصى لاستقبال الفيديو">
+								<longdesc>أقصى RX معدل البت للفيديو ب بالكيلوبت/ثانية. سيرسل هذا العدد إلى آخر نظير الذي يمكنه ضبط (إن كان بمقدوره ذلك) معدل البت TX لو كان فوق العدد المرسل</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="عرض الموجة الأقصى لبث الفيديو">
+								<longdesc>أقصى عرض موجة للفيديو بالكيلوبايت/ثانية. جودة الفيديو وعدد الإطارات المبثوثة في كل ثانية سوف يتم تعديلها ديناميكيًا بحيث تصبح أقل ما يمكن خلال المكالمة بمحاولة لتقليص عرض الموجة المستخدم للقيمة المعطاة</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="قائمة مِرمازات الفيديو">
+								<longdesc>قائمة مِرمازات الفيديو</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="أقصى حد لتخزين للتأخير">
+								<longdesc>أقصى حد لحجم التخزين المؤقت لاستقبال الصوت (بالملي ثانية)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="فعّل التحقق من الصمت">
+								<longdesc>إذا فعلت ، إستخدم الكشف الصامت مع المرامز الداعمة له</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="لائحة مِرمازات الصوت">
+								<longdesc>قائمة مِرمازات الصوت</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="نوع الشبكة المحددة باستخدام المساعد">
+							<longdesc>‏0: 56Kbps،‏ 1: ISDN،‏ 2: DSL128،‏ 3: DSL512،‏ 4: شبكة محلية، 5: مخصص</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="الرد الآلي">
+								<longdesc>إن كان محددًا، سيرد آليا على المكالمات الواردة</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="نفاذ وقت عدم الردّ">
+								<longdesc>ارفض أو حوّل المكالمات الواردة تلقائيًا إن لم يكن هناك رد بعد الوقت المحدد (بالثواني)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="موضع نافذة الفيديو البعيد">
+									<longdesc>موضع نافذة عرض الفيديو البعيد</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="حجم نافذة الفيديو البعيد">
+									<longdesc>حجم نافذة الفيديو البعيدة</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="عرض الفيديو قبل الانتقال إلى العرض ملء الشاشة ">
+									<longdesc>عرض الفيديو قبل الانتقال إلى العرض ملء الشاشة (نفس قيم video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="عرض الفيديو الافتراضي">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="ضع النوافذ العارضة للفيديو أعلى النوافذ الأخرى خلال المكالمات">
+									<longdesc>ضع النوافذ العارضة للفيديو أعلى النوافذ الأخرى خلال المكالمات</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="قيمة التحجيم">
+									<longdesc>القيمة المئوية للتحجيم قصد تطبيقها على الصور المعروضة في واجهة المستخدم الرئيسية (يمكن أن تكون 50 أو 100 أو 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="حدد خوارزمية التحجيم البرمجي ">
+									<longdesc>حدد خوارزمية التحجيم البرمجي: 0: أقرب جار، 1: أقرب جار ذو صندوق ترشيح، 2: ترشيح ، 3: ترشيح هيبربولي. لا ينطبق على أنظمة ويندوز.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="السماح بالتحجيم برمجيا للصورة-ضمن-الصورة">
+									<longdesc>اسمح لإكِجا الرجوع إلى التحجيم البرمجي للصورة داخل الصورة. إذا ما تم تعيين ذلك لخطأ، فإن إكِجا لن يحاول فتح الصورة داخل الصورة إذا غاب دعم العتاد.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="تعطيل تسريع فيديو العتاد">
+									<longdesc>هذا المفتاح يعطل تسريع عتاد الفيديو على كل من DirectX (win32) و XVideo (لينوكس) </longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="حجم نافذة التفضيلات">
+									<longdesc>حجم نافذة التفضيلات</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="موضع نافذة التفضيلات على الشاشة">
+									<longdesc>موضع نافذة التفضيلات على الشاشة</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="حجم نافذة التفضيلات">
+									<longdesc>حجم نافذة التفضيلات</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="موضع نافذة التفضيلات على الشاشة">
+									<longdesc>موضع نافذة التفضيلات على الشاشة</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="حجم نافذة إعدادات الفيديو">
+									<longdesc>حجم نافذة إعدادات الفيديو</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="موضع نافذة إعدادات الفيديو على الشاشة">
+									<longdesc>موضع نافذة إعدادات الفيديو على الشاشة</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="حجم نافذة إعدادات الصوت">
+									<longdesc>حجم نافذة إعدادات الصوت</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="موضع نافذة إعدادات الصوت على الشاشة">
+									<longdesc>موضع نافذة إعدادات الصوت على الشاشة</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="حجم نافذة دفتر العناوين">
+									<longdesc>حجم نافذة دفتر العناوين</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="موضع نافذة دفتر العناوين على الشاشة">
+									<longdesc>موضع نافذة دفتر العناوين على الشاشة</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="موضع نافذة المساعد على الشاشة">
+									<longdesc>موضع نافذة المساعد على الشاشة</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="حجم نافذة المساعد">
+									<longdesc>حجم نافذة المساعد</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="موضع نافذة الدردشة على الشاشة">
+									<longdesc>موضع نافذة الدردشة على الشاشة</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="حجم نافذة المحادثة">
+									<longdesc>حجم نافذة المحادثة</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="موضع النافذة الرئيسية على الشاشة">
+									<longdesc>موضع النافذة الرئيسية على الشاشة</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="فعّل استكشاف الشبكة عبر STUN">
+								<longdesc>فعّل إعداد الشبكة الآلي الناتج من اختبار STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="خادوم STUN">
+								<longdesc>خادوم STUN الذي تريد استخدامه لدعم STUN. تقنية STUN هي تقنية تسمح بالمرور عبر بعض أنواع بوابات NAT.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="صوت نغمة مشغول">
+								<longdesc>الصوت الذي سوف يُلعب بنهاية الاتصالات أو عند الاتصال بأحد مشغول، إن كان مفعّلًا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="العب نغمة المشغول">
+								<longdesc>الصوت المحدد سوف يُلعب بنهاية الاتصالات الاتصال بأحد مشغول، إن كان مفعّلًا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="صوت نغمة إدخال الأرقاام">
+								<longdesc>الصوت الذي سوف يُلعب عند الاتصال بأحدهم، إن كان مفعّلًا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="العب نغمة الرنين">
+								<longdesc>الصوت المحدد سيُلعب عند الاتصال بأحدهم، إن كان مفعّلًا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="إلعب صوتًا في حال رسالة صوتية جديدة">
+								<longdesc>الصوت الذى تم اختياره سيتم تشغيله عند استقبال بريد صوتى جديد، فى حالة تفعيله</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="مقطع صوتي لرسالة صوتية جديدة">
+								<longdesc>الصوت الذي سوف يُلعب عند استقبال رسالة جديدة، إن كان مفعلا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="إلعب صوتًا في حال رسالة جديدة">
+								<longdesc>الصوت المختار سيتم تشغيله عند وصول رسالة قصيرة جديدة، إذا فعٌلت</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="مقطع صوتي لرسالة فورية جديدة">
+								<longdesc>الصوت الذي سوف يُلعب عند ارسال رسالة فورية، إن كان مفعلا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="إلعب صوتًا في حال المكالمات الواردة">
+								<longdesc>الصوت المحدد سيُلعب عند الاتصال الوارد، إن كان مفعّلًا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="صوت المكالمة الواردة">
+								<longdesc>الصوت الذي سوف يُلعب في حال المكالمات الواردة، إن كان مفعّلًا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="جهاز خرج الصّوت البديل">
+								<longdesc>إختر جهاز خرج الصوت بديل لاستخدامه لأصوات الأحداث.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="حالة المتراسل الطويلة">
+								<longdesc>معلومات الحالة الطويلة</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="حالة المتراسل القصيرة">
+								<longdesc>معلومات الحالة القصيرة</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="الاسم الكامل">
+								<longdesc>ادخل اسمك الكامل</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="معدل الإطارات">
+								<longdesc>أقصى معدل الإطارات مرسل (إطار في الثانية). هذا المعدل قد لا يتم الوصول إليه في حال ضبط الجودة الدنيا عبر قيمة TSTO أقل من 31 و معدل البت المحدد غير كاف لتحمل هذه الجودة الدنيا</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="استعراض الفيديو">
+								<longdesc>أظهر الصور من جهاز كاميرتك</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="تنسيق الفيديو">
+								<longdesc>اختر التنسيق لكاميرات الفيديو. (لا ينطبق على معظم كاميرات USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="قناة الفيديو">
+								<longdesc>رقم قناة الفيديو لاستخدامها (لتختار الكاميرا، التلفزيون أو مصادر أخرى)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="حجم الفيديو">
+								<longdesc>إختر حجم الفيديو المبثوث: صغير (QCIF 176×144) أو كبير (CIF 352×288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="جهاز دخل الفيديو">
+								<longdesc>حدد جهاز دخل الفيديو لاستخدامه. إذا حدث خطأ عند استخدام هذا الجهاز سوف تبثّ صورة تجريبية.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="جهاز دخل الصوت">
+								<longdesc>إختر جهاز دخل الصوت لاستخدامه</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="جهاز خرج الصوت">
+								<longdesc>إختر جهاز خرج الصوت لاستخدامه</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="العلامات">
+						<longdesc>علامات مجلّد gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="الألعاب التي لُعبت حديثًا">
+						<longdesc>لائحة الألعاب التي لُعبت حديثًا</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="إحصائيّات اللّعب الملعوبة">
+						<longdesc>قائمة بالسّلاسل التي تأتي بشكل خماسيّة: الاسم و مرّات الرّبح و مجموع اللّعب الملعوبة و أفضل و أسوأ زمن (بالثّواني). لا توجد حاجة لعرض اللّعب غير الملعوبة.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="ملف اللّعبة الذي سيستخدم">
+						<longdesc>اسم ملف المخطّط الحاوي على لعبة السوليتير التي ستلعب.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="رسوم متحركة">
+						<longdesc>استعمال أو عدم استعمال صور متحركة.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="صوت">
+						<longdesc>عزف أو عدم عزف أصوات أحداث.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="اختر أسلوب التّحكّم">
+						<longdesc>اختر فيما إذا تريد سحب الأوراق سحبًا أم النّقر على المصدر ثمّ الوجهة.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="فيما إذا سيظهر شريط الحالة أم لا">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="فيما إذا سيظهر شريط الأدوات أم لا">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="اسم ملف التّيمة">
+						<longdesc>اسم الملف الحاوي على رسوم الورق.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

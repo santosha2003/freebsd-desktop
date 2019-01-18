@@ -1,0 +1,19 @@
+
+#    screenshot (ImageMagick) with a delay of 5 seconds
+
+
+sleep 5; import -window root screen01.png
+sleep 5; import -window root screen02.png
+sleep 5; import -window root screen03.png
+sleep 5; import -window root screen04.png
+sleep 5; import -window root screen05.png
+sleep 5; import -window root screen06.png
+sleep 5; import -window root screen07.png
+sleep 5; import -window root screen08.png
+sleep 5; import -window root screen09.png
+sleep 5; import -window root screen10.png
+sleep 5; import -window root screen11.png
+sleep 5; import -window root screen12.png
+sleep 5; import -window root screen13.png
+sleep 5; import -window root screen14.png
+sleep 5; import -window root screen15.png

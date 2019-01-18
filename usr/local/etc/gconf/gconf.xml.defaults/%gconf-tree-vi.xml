@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Lược sử cuộc gọi">
+							<longdesc>Lược sử của 100 cuộc gọi cuối cùng</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="Máy phục vụ LDAP">
+							<longdesc>Danh sách máy phục vụ LDAP đã cấu hình</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Hiện liên lạc ngoại tuyến">
+							<longdesc>Nếu bật, các liên kết ngoại tuyến cũng được hiển thị trong danh sách</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Danh sách các nhóm đã gấp trong danh sách">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="Danh sách tài khoản">
+							<longdesc>Danh sách các tài khoàn mà Ekiga nên đăng ký</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Chuyển tiếp cuộc gọi đến máy đã chỉ định nếu không có trả lời">
+								<longdesc>Nếu bật, mọi cuộc gửi đến sẽ chuyển tiếp đến máy được chỉ định trong trường bên dưới nếu bạn không trả lời cuộc gọi</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Chuyển tiếp cuộc gọi đến máy đã chỉ định nếu bận">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Luôn chuyển tiếp cuộc gọi đến máy đã chọn">
+								<longdesc>Nếu bật, mọi cuộc gọi đến sẽ chuyển tiếp đến máy được chỉ định trong trường dưới đây</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Phạm vi cổng UDP">
+								<longdesc>Phạm vi các cổng UDP mà Ekiga sẽ dùng.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Phạm vi cổng TCP">
+								<longdesc>Phạm vi các cổng TCP mà Ekiga dùng cho kênh H.323 H.245. Phạm vi cổng này không có tác dụng nếu cả hai tham gia hội thoại bằng Đường hầm H.245.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Chuyển tiếp cuộc gọi tới máy">
+								<longdesc>Máy đến đó cần chuyển tiếp cuộc gọi, nếu khả năng chuyển tiếp cuộc gọi đã được hiệu lực</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Gửi DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Bật &apos;Khởi động nhanh&apos;">
+								<longdesc>Kết nối sẽ được thiết lập ở chế độ Khởi động nhanh. Khởi động nhanh là một phương pháp khởi động nhanh cuộc gọi được giới thiệu trong H.323v2. Nó không được Netmeeting hỗ trợ, và nếu dùng cả khởi động nhanh và H.245 Tunnel có thể gây ra đổ vỡ với một số phiên bản Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Bật H.245 sớm">
+								<longdesc>Việc này bật H.245 trong phần đâu tiến trình thiết lập.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Bật H.245 tunnel">
+								<longdesc>Tùy chọn này hiệu lực chế độ Đường hầm H.245 (H.245 Tunnelling). Trong chế độ Đường hầm H.245, các thông điệp H.245 được bao bọc trong kênh H.225 (cổng 1720). Trường hợp này tiết kiệm một kết nối TCP trong cuộc gọi. Chức năng đường hầm H.245 được giới thiệu trong H.323v2, mà Netmeeting không hỗ trợ. Dùng cả hai Sở Khởi Nhanh và H.245 đều có thể làm hỏng một vài phiên bản Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Cổng nghe">
+								<longdesc>Cổng dùng để lắng nghe cuộc gọi đến. Ekiga cần được khởi chạy lại để giá trị mới có tác dụng.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Thời hạn kết nối NAT">
+								<longdesc>Hãy gõ số giây mà Ekiga nên thử sau khi cập nhật tổ hợp NAT khi sử dụng STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Gửi DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Chuyển tiếp cuộc gọi tới máy">
+								<longdesc>Máy đến đó cần chuyển tiếp cuộc gọi, nếu khả năng chuyển tiếp cuộc gọi đã được hiệu lực</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Máy ủy nhiệm ra">
+								<longdesc>Ủy nhiệm đi ra SIP cần dùng khi gọi ra</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Cổng nghe">
+								<longdesc>Cổng dùng để lắng nghe cuộc gọi đến. Ekiga cần được khởi chạy lại để giá trị mới có tác dụng</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Thỏa hiệp Không giản Thời gian">
+								<longdesc>Có nên bảo tồn tỷ lệ khung tối đa, hoặc giảm nó có thể để giữ lại mức chất lượng (không gian) tối đa cho mọi khung:
+ • 0		mức chất lượng tối thiểu cao nhất
+ • 1		mức chất lượng tối thiểu thấp nhất</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Tỷ lệ bit ảnh động RX tối đa">
+								<longdesc>Tỷ lệ bit ảnh động RX tối đa, theo kbit/giây. Giá trị này sẽ được báo hiệu cho điểm cuối ngang hàng có thể điều chỉnh (nếu hỗ trợ) tỷ lệ TX bên trên giá trị đã báo hiệu.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Tỷ lệ bit ảnh động TX tối đa">
+								<longdesc>Tỷ lệ bit ảnh động TX tối đa, theo kbit/giây. Mức chất lượng của ảnh động và số khung được truyền mỗi giây (phụ thuộc vào codec đã chọn) sẽ được điều chỉnh động bên trên giá trị tối thiểu trong cuộc gọi, để thử cực đại hoá băng thông thành giá trị đã cho.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Danh sách các coden ảnh động">
+								<longdesc>Danh sách các coden ảnh động</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Vùng đệm biến đổi tối đa">
+								<longdesc>Kích cỡ vùng đệm tối đa biến đổi tính thời gian ngẫu nhiên, để nhận âm thanh (theo mili giây)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Bật phát hiện im lặng">
+								<longdesc>Nếu bật, sẽ dò im lặng bằng các codec</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Danh Sách Codec Âm Thanh">
+								<longdesc>Danh sách các codec âm thanh</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Thời hạn không trả lời">
+								<longdesc>Tự động từ chối hay chuyển tiếp các cuộc gọi được gửi đến nếu không có trả lời trong khoảng thời gian đã chỉ định (tính bằng giây)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Vị trí cửa sổ ảnh động từ xa">
+									<longdesc>Vị trí cửa sổ ảnh động từ xa</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Cỡ cửa sổ ảnh động từ xa">
+									<longdesc>Cỡ cửa sổ ảnh động từ xa</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Ô xem ảnh động trước khi chuyển đổi sang toàn màn hình">
+									<longdesc>Ô xem ảnh động trước khi chuyển đổi sang toàn màn hình (cùng những giá trị với « video_view »)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Ô xem ảnh động mặc định">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Để cửa sổ hiển thị ảnh động trên mọi cửa sổ khác trong suốt cuộc gọi">
+									<longdesc>Để cửa sổ hiển thị ảnh động trên mọi cửa sổ khác trong suốt cuộc gọi</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Giá trị thu/phóng">
+									<longdesc>Giá trị thu/phóng (theo phần trăm) cần áp dụng cho ảnh được hiển thị trong giao diện đồ họa người dùng chính (có thể là 50, 100 hay 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Ghi rõ thuật toán co giãn phần mềm">
+									<longdesc>Ghi rõ thuật toán cogiãn phần mềm:
+ • 0		hàng xóm gần nhất
+ • 1		hàng xóm gần nhất có bộ lọc hộp
+ • 2		lọc tuyến kép
+ • 3		lọc hyperbolic
+(Không có hiệu lực trên hệ thống Windows.)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Cho co giãn phần mềm ảnh-tới-ảnh">
+									<longdesc>Cho phép Ekiga dùng thu phóng phần mềm dự phòng nếu phần cứng không được hỗ trợ. Nếu đặt thành Sai (False), Ekiga sẽ không mở PIP khi không có hỗ trợ phần cứng.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Tắt tăng tốc phần cứng video">
+									<longdesc>Khoá này tắt chức năng tăng tốc phần cứng ảnh động kiểu DirectX (trên win32) và XVideo (trên Linux)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Kích cỡ cửa sổ tùy thích">
+									<longdesc>Kích cỡ cửa sổ tùy thích</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Vị trí cửa sổ tùy thích">
+									<longdesc>Vị trí cửa sổ tùy thích</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Kích cỡ cửa sổ tùy thích">
+									<longdesc>Kích cỡ cửa sổ tùy thích</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Vị trí cửa sổ tùy thích">
+									<longdesc>Vị trí cửa sổ tùy thích</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Kích cỡ cửa sổ thiết lập ảnh động">
+									<longdesc>Kích cỡ cửa sổ thiết lập ảnh động</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Vị trí cửa sổ thiết lập ảnh động trên màn hình">
+									<longdesc>Vị trí cửa sổ thiết lập ảnh động trên màn hình</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Kích cỡ cửa sổ thiết lập âm thanh">
+									<longdesc>Kích cỡ cửa sổ thiết lập âm thanh</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Vị trí cửa sổ thiết lập âm thanh trên màn hình">
+									<longdesc>Vị trí cửa sổ thiết lập âm thanh trên màn hình</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Kích cỡ cửa sổ của sổ địa chỉ">
+									<longdesc>Kích cỡ cửa sổ của sổ địa chỉ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Vị trí cửa sổ Sổ địa chỉ">
+									<longdesc>Vị trí cửa sổ Sổ địa chỉ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Vị trí cửa sổ trợ lý">
+									<longdesc>Vị trí cửa sổ trợ lý</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Kích cỡ cửa sổ trợ lý">
+									<longdesc>Kích cỡ cửa sổ trợ lý</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Vị trí trên màn hình của cửa sổ trò chuyện">
+									<longdesc>Vị trí trên màn hình của cửa sổ trò chuyện</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Kích cỡ cửa sổ trò chuyện">
+									<longdesc>Kích cỡ cửa sổ trò chuyện</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Vị trí cửa sổ chính">
+									<longdesc>Vị trí cửa sổ chính</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="Máy phục vụ STUN">
+								<longdesc>Máy phục vụ STUN cần dùng để hỗ trợ STUN.
+STUN là một kỹ thuật cho phép đi qua một số kiểu cổng ra NAT.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Âm thanh cho tiếng bận">
+								<longdesc>Bật thì tiếng cần phát tại kết thúc gọi, hoặc khi gọi người bận</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Phát tiếng bận">
+								<longdesc>Bật thì phát âm thanh đã chọn khi kết thúc gọi hay gọi người bận</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Tiếng chuông gọi">
+								<longdesc>Bật thì tiếng cần phát khi gọi ra</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Phát tiếng chuông">
+								<longdesc>Bật thì phát âm thanh khi gọi ra</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Phát âm thanh khi nhận thư thoại mới">
+								<longdesc>Bật thì phát âm thanh khi nhận được thư thoại mới</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Âm thanh thư thoại mới">
+								<longdesc>Bật thì tiếng cần phát khi nhận được thư nói mới</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Phát âm thanh khi nhận tin nhắn mới">
+								<longdesc>Bật thì phát âm thanh khi nhận được tin nhắn mới</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Âm thanh tin nhắn tức khắc mới">
+								<longdesc>Bật thì tiếng cần phát khi nhận được tin nhắn tức khắc mới</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Phát âm thanh khi nhận cuộc gọi mới">
+								<longdesc>Bật thì phát âm thanh đã chọn khi nhận được cuộc gọi</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Âm thanh cuộc gọi đến">
+								<longdesc>Bật thì tiếng cần phát khi nhận được cuộc gọi</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Thiết bị xuất âm thanh thay thế">
+								<longdesc>Chọn thiết bị xuất âm thanh thay thế cần dùng cho dữ kiện âm thanh.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Trạng thái gọi dài">
+								<longdesc>Thông tin chi tiết về liên lạc</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Trạng thái gọi ngắn">
+								<longdesc>Thông tin ngắn về liên lạc</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Tên đầy đủ">
+								<longdesc>Nhập họ tên của bạn</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Tỷ lệ khung">
+								<longdesc>Tỷ lệ khung tối đa đã truyền, theo khung/giây. Tỷ lệ này có thể không tới được trong trường hợp mức chất lượng tối thiểu được cấu hình thông qua giá trị TSTO nhỏ hơn 31 và tỷ lệ bit được chọn không đủ để hỗ trợ mức chất lượng tối thiểu này.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Xem thử ảnh động">
+								<longdesc>Hiện ảnh từ camera của bạn</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Định dạng ảnh động">
+								<longdesc>Chọn định dạng cho máy ảnh động (không áp dụng vào phần lớn máy ảnh USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Kênh ảnh động">
+								<longdesc>Số hiệu kênh ảnh động cần dùng (để chọn máy ảnh, TV hoặc các nguồn khác).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Cỡ ảnh động">
+								<longdesc>Chọn kích thước ảnh động gửi đi: Nhỏ (QCIF 176×144) hay Lớn (CIF 352×288).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Thiết bị nhập ảnh động">
+								<longdesc>Chọn thiết bị nhập ảnh động cần dùng. Sử dụng thiết bị này và gặp lỗi thì truyền ảnh thử.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Thiết bị nhập âm thanh">
+								<longdesc>Chọn thiết bị nhập âm thanh cần dùng</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Thiết bị xuất âm thanh">
+								<longdesc>Chọn thiết bị xuất âm thanh cần dùng</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Liên kết lưu">
+						<longdesc>Liên kết lưu thư mục gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Lượt vừa chơi">
+						<longdesc>Danh sách các lượt vừa chơi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Thống kê các trò đã chơi">
+						<longdesc>Một danh sách chuỗi dạng năm phần: tên, lần thắng, tổng trò đã chơi, thời gian tốt nhất (theo giây) và thời gian xấu nhất (theo giây). Không cần hiển thị trò chưa chơi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Tập tin trò chơi cần dùng">
+						<longdesc>Tên tập tin sắc thái chứa trò chơi solitaire cần chơi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Hoạt ảnh">
+						<longdesc>Có nên hoạt cảnh khi di chuyển quân bài hay không.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Âm thanh">
+						<longdesc>Có bật âm thanh cho sự kiện không.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Hãy chọn kiểu điều khiển">
+						<longdesc>Hãy chọn kéo bài, hoặc nhấp vào nguồn rồi đích.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Có nên hiển thị thanh trạng thái hay không">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Hiển thị hay ẩn thanh công cụ">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Tên tập tin sắc thái">
+						<longdesc>Tên tập tin chứa đồ họa cho bài.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs">
+						<entry name="mount_options">
+							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin ntfs">
+								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin ntfs</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin udf">
+								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin udf</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin iso9660">
+								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin iso9660</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Tuỳ chọn gắn kết mặc định cho hệ tập tin vfat">
+								<longdesc>Danh sách các tuỳ chọn gắn kết mặc định cho các khối dùng hệ tập tin vfat</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

@@ -1,0 +1,17 @@
+#!/bin/sh
+ #pkgng pack create packages for freebsd port and all dependency
+
+PORTPATH=`whereis -s $1 | awk '{print $2}'`
+echo $PORTPATH
+#make -C $PORTPATH all-depends-list  | cut -c 12-127
+#pkg create -o /root $1
+PACKAGESLINE=$1
+echo $PACKAGESLINE
+   for LINE in `make -C $PORTPATH all-depends-list |cut -c 12-127`
+     do
+        echo -n "Creating package (${LINE})..."
+        PACKAGESLINE="$PACKAGESLINE ${LINE}"
+     done
+
+echo $PACKAGESLINE
+portmaster -x pkg  $PACKAGESLINE | tail >>~/reins.texi

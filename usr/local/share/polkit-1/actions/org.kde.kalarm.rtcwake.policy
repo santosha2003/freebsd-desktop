@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+<vendor>KAlarm</vendor>
+<icon_name>kalarm</icon_name>
+   <action id="org.kde.kalarm.rtcwake.settimer" >
+      <description xml:lang="ar">اضبط وقت استيقاظ RTC</description>
+      <description xml:lang="bs">Postavlja vrijeme buđenja sata realnog vremena</description>
+      <description xml:lang="ca">Defineix l'hora d'activació de l'RTC</description>
+      <description xml:lang="da">Angiv RTC-opvågningstidspunkt</description>
+      <description xml:lang="de">Den Zeitpunkt zum Aufwachen gemäß der Echtzeituhr setzen</description>
+      <description xml:lang="el">Ρύθμιση της ώρας ξυπνήματος RTC</description>
+      <description>Set RTC wakeup time</description>
+      <description xml:lang="en_GB">Set RTC wakeup time</description>
+      <description xml:lang="es">Establecer hora de despertar RTC</description>
+      <description xml:lang="et">RTC äratusaja määramine</description>
+      <description xml:lang="fi">Aseta RTC-herätysaika</description>
+      <description xml:lang="fr">Définir l'heure de réveil RTC</description>
+      <description xml:lang="gl">Configurar a hora de espertar RTC</description>
+      <description xml:lang="hu">RTC ébresztési idő beállítása</description>
+      <description xml:lang="ia">Fixa tempore de eveliar RTC</description>
+      <description xml:lang="it">Imposta ora RTC di risveglio</description>
+      <description xml:lang="kk">RTC ойяну уақытын орнату</description>
+      <description xml:lang="km">កំណត់​ពេលវេលា​ភ្ញាក់​របស់ RTC</description>
+      <description xml:lang="ko">RTC 기상 시간 설정</description>
+      <description xml:lang="lt">Nustatyti RTC žadinimo laiką</description>
+      <description xml:lang="mr">RTC उठण्याची वेळ निश्चित करा</description>
+      <description xml:lang="nb">Still inn RTC vekketid</description>
+      <description xml:lang="nds">Wedderanmaaktiet na Echttietklock instellen</description>
+      <description xml:lang="nl">Wektijd van RTC instellen</description>
+      <description xml:lang="pl">Ustaw czas pobudki RTC</description>
+      <description xml:lang="pt">Definir a hora de activação do RTC</description>
+      <description xml:lang="pt_BR">Definir a hora de ativação do RTC</description>
+      <description xml:lang="ro">Stabilește ora de trezire a calculatorului</description>
+      <description xml:lang="ru">Время пробуждения системы</description>
+      <description xml:lang="sk">Nastaviť RTC čas prebudenia</description>
+      <description xml:lang="sl">Čas bujenja iz pripravljenosti</description>
+      <description xml:lang="sr">Постави РТЦ време буђења</description>
+      <description xml:lang="sv">Ställ in RTC-uppvakningstid</description>
+      <description xml:lang="tr">RTC uyanma zamanını ayarla</description>
+      <description xml:lang="uk">Встановлення часу пробудження у RTC</description>
+      <description xml:lang="wa">Defini l' eure RTC di dispiertaedje</description>
+      <description xml:lang="zh_CN">设置实时时钟唤醒时间</description>
+      <description xml:lang="zh_TW">設定 RTC 喚醒時間</description>
+      <message xml:lang="ar">اضبط وقت استيقاظ RTC من التّعليق</message>
+      <message xml:lang="bs">Postavlja vrijeme buđenja iz suspenzije sata realnog vremena</message>
+      <message xml:lang="ca">Defineix l'hora d'activació des de suspensió de l'RTC</message>
+      <message xml:lang="da">Angiv RTC-opvågningstidspunkt fra suspendering</message>
+      <message xml:lang="de">Den Zeitpunkt zum Aufwachen aus dem Ruhezustand gemäß der Echtzeituhr setzen</message>
+      <message xml:lang="el">Ρύθμιση της ώρας RTC «ξύπνημα από αναστολή»</message>
+      <message>Set RTC wake-from-suspend time</message>
+      <message xml:lang="en_GB">Set RTC wake-from-suspend time</message>
+      <message xml:lang="es">Establecer hora despertar-desde-suspendido RTC</message>
+      <message xml:lang="et">RTC uneseisundist ärkamise aja määramine</message>
+      <message xml:lang="fi">Aseta RTC:n herätys keskeytyksistä -aika</message>
+      <message xml:lang="fr">Définir l'heure de réveil RTC depuis la mise en veille</message>
+      <message xml:lang="gl">Configurar a hora de «espertar desde a suspensión» de RTC</message>
+      <message xml:lang="hu">RTC felfüggesztésből felébredési idő beállítása</message>
+      <message xml:lang="ia">Fixa tempore de eveliar-ex-suspender RTC</message>
+      <message xml:lang="it">Imposta l'orario RTC di risveglio dalla sospensione</message>
+      <message xml:lang="kk">RTC аялдаудан ойяну уақытын орнату</message>
+      <message xml:lang="km">កំណត់​ពេលវេលា​ផ្អាក​ពី​កា​រភ្ញាក់​របស់ RTC</message>
+      <message xml:lang="ko">RTC 대기 모드 해제 설정</message>
+      <message xml:lang="lt">Nustatyti RTC žadinimo iš sustabdymo į diską laiką</message>
+      <message xml:lang="mr">RTC अकार्यक्षमतेतून उठण्याची वेळ निश्चित करा</message>
+      <message xml:lang="nb">Still inn RTC gjenoppta-tid</message>
+      <message xml:lang="nds">Wedderanmaaktiet na Utsetten na Echttietklock instellen</message>
+      <message xml:lang="nl">Wektijd-na-opschorten instellen</message>
+      <message xml:lang="nn">Vel tidspunkt å vekkjast frå dvale</message>
+      <message xml:lang="pl">Ustaw czas pobudki-z-uśpienia RTC</message>
+      <message xml:lang="pt">Definir a hora para acordar da suspensão no RTC</message>
+      <message xml:lang="pt_BR">Definir a hora para acordar da suspensão no RTC</message>
+      <message xml:lang="ro">Stabilește ora de trezire din suspendare a calculatorului</message>
+      <message xml:lang="ru">Время пробуждения системы из режима ожидания</message>
+      <message xml:lang="sk">Nastaviť RTC čas prebudenia z uspania</message>
+      <message xml:lang="sl">Nastavite čas bujenja iz pripravljenosti</message>
+      <message xml:lang="sr">Постави РТЦ време буђења из суспендованости</message>
+      <message xml:lang="sv">Ställ in RTC-tid att vakna från viloläge</message>
+      <message xml:lang="tr">RTC uykudan uyanma zamanını ayarla</message>
+      <message xml:lang="uk">Встановлення часу пробудження системи у RTC</message>
+      <message xml:lang="wa">Defini l' eure RTC di dispiertaedje après mete doirmi</message>
+      <message xml:lang="zh_CN">设置实时时钟从睡眠中唤醒时间</message>
+      <message xml:lang="zh_TW">設定 RTC 從休眠中被喚醒時間</message>
+      <defaults>
+         <allow_inactive>no</allow_inactive>
+         <allow_active>auth_admin_keep</allow_active>
+      </defaults>
+   </action>
+</policyconfig>

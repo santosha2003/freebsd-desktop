@@ -1,0 +1,53 @@
+#!/usr/local/bin/bash
+#
+#pkg check -d
+#pkg install -f -y gcc49 gcc5 binutils clang36
+#cd /usr
+#/usr/update-svn
+
+#pkg install -fRy multimedia/vlc graphics/opencv graphics/opencv-core accessibility/atk devel/binutils lang/gcc49 audio/musepack audio/pulseaudio devel/dbus devel/gconf2 net/avahi-app sysutils/consolekit audio/twolame converters/fribidi devel/libzvbi devel/libunicode devel/sdl12 devel/nasm graphics/aalib graphics/libcaca graphics/freeglut graphics/ftgl graphics/sdl_image multimedia/libass converters/enca converters/p5-Unicode-Map8 converters/p5-Unicode-String converters/recode multimedia/libbluray multimedia/libaacs textproc/flex multimedia/ffmpeg
+#cd ~
+#make CC=clang CPP=clang-cpp CXX=clang++ -C /usr/ports/devel/gettext-runtime clean build reinstall
+#portmaster -x binutils -x gcc49 -x gcc5 -m LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0.4200.2 -m CPP=clang-cpp -m CXX=clang++ -m CC=clang multimedia/ffmpeg multimedia/libav multimedia/vlc multimedia/mplayer
+
+#ffmpeg
+ #pkgng pack create packages for freebsd port and all dependency
+make -C /usr/ports/textproc/xmlcharent build deinstall reinstall
+cp ~/Make-dri /usr/ports/graphics/dri/Makefile
+#make -C /usr/ports/graphics/dri config
+#make -C /usr/ports/multimedia/vlc config-recursive
+#make -C /usr/ports/multimedia/ffmpeg config-recursive
+make -C /usr/ports/devel/glib20 build reinstall
+#PORTPATH=`whereis -s vlc | awk '{print $2}'`
+#echo $PORTPATH
+#make -C $PORTPATH all-depends-list  | cut -c 12-127
+#pkg create -o /root $1
+#PACKAGESLINE="vlc"
+#echo $PACKAGESLINE
+#   for LINE in `make -C $PORTPATH all-depends-list |cut -c 12-127`
+#     do
+#        echo -n "Creating package (${LINE})..."
+#        PACKAGESLINE="$PACKAGESLINE ${LINE}"
+#        make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0.4200.2 CPP=clang-cpp CXX=clang++ -m CC=clang -C /usr/ports/${LINE} clean reinstall
+#     done
+#PORTPATH=`whereis -s ffmpeg | awk '{print $2}'`
+#echo $PORTPATH
+##make -C $PORTPATH all-depends-list  | cut -c 12-127
+#pkg create -o /root $1
+#PACKAGESLINE="$PACKAGESLINE ffmpeg"
+#echo $PACKAGESLINE
+#   for LINE in `make -C $PORTPATH all-depends-list |cut -c 12-127`
+#     do
+#        echo -n "Creating package (${LINE})..."
+#        PACKAGESLINE="$PACKAGESLINE ${LINE}"
+#        make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0.4200.2 CPP=clang-cpp CXX=clang++ -m CC=clang -C /usr/ports/${LINE} clean reinstall
+#     done
+
+#echo $PACKAGESLINE
+
+make CPP=clang-cpp CXX=clang++ CC=clang -C /usr/ports/graphics/dri build reinstall
+make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 CPP=clang-cpp CXX=clang++ CC=clang -C /usr/ports/multimedia/ffmpeg reinstall
+make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 CPP=clang-cpp CXX=clang++ CC=clang -C /usr/ports/multimedia/vlc build deinstall install
+
+#portmaster -x binutils -x gcc49 -x gcc5 -x pkg -m LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0.4200.2 -m CPP=clang-cpp -m CXX=clang++ -m CC=clang $PACKAGESLINE
+#make -C /usr/ports clean

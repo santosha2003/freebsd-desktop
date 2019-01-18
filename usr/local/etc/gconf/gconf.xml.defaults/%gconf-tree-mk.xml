@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="Листа на сметки">
+							<longdesc>Листа на сметки на кои треба да се регистрира Ekiga</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Пренасочи ги повиците кон наведениот хост доколку нема одговор">
+								<longdesc>Доколку е овозможено, сите пристигнати повици ќе се пренасочат кон хостот што е наведен во полето подолу ако не одговорите на повикот</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Пренасочи ги повиците кон наведениот хост доколку е зафатено">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Секогаш пренасочувај ги повиците кон дадениот хост">
+								<longdesc>Докплку е овозможено, сите пристигнати повици ќе се пренасочат кон хостот што е наведен во полето подолу</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Ранг на UDP порти">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Ранг на TCP порти">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Пренасочи ги повиците кон хостот">
+								<longdesc>Хост на кој што треба да се пренасочуваат повици ако е вклучено пренасочување</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF испраќање">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Овозможи &apos;Брз старт&apos;">
+								<longdesc>Конекцијата ќе биде воспоставена во модот Брз Старт. Брз Старт е нов начин за побрзо започнување на повици што е воведен во H.323v2. Не е поддржан од Netmeeting, а истовремено користење на Брз Старт и H.245 тунелирање може да сруши некои верзии на Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Вклучи ран H.245">
+								<longdesc>Ова го овоозможува рано H.245 во поставувањето</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Вклучи H.245 _тунелирање">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Влезна порта">
+								<longdesc>Влезна порта за пристигнати конекции. Ekiga треба да се рестартира за новата вредност да стапи на сила.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Време на истекување на NAT врската ">
+								<longdesc>Внеси го бројот на секунди за освежување на NAT врската кога се користи STUN </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF испраќање">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Пренасочи ги повиците кон хостот">
+								<longdesc>Хост на кој што треба да се пренасочуваат повици ако е вклучено пренасочување</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Надворешен прокси">
+								<longdesc>SIP надворешен прокси за надворешни повици</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Влезна порта">
+								<longdesc>Влезна порта за пристигнати конекции. Ekiga треба да се рестартира за новата вредност да стапи на сила.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Максимален jitter бафер">
+								<longdesc>Максимална големина на jitter баферот за прием на аудио (во ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Овозможи детекција на тишина">
+								<longdesc>Доколку е овозможено, употребувај детекција на тишина со кодеците што ја поддржуваат</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Листа на аудио кодеци">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Без одговор при истек на време">
+								<longdesc>Автоматски одбиј го или пренасочи го пристигнатиот повик ако на него не е одговорено во одреден период од време (во секунди)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Позиција на далечниот видео прозорец">
+									<longdesc>Позиција на далечниот видео прозорец</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Големина на далечниот видео прозорец">
+									<longdesc>Големина на далечниот видео прозорец</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="Стандарден видео поглед">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Постави го прозорецот што прикажува видео пред останатите прозорци за време на повици">
+									<longdesc>Постави го прозорецот што прикажува видео пред останатите прозорци за време на повици</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Вредност за зум">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Големина на прозорецот за параметри">
+									<longdesc>Големина на прозорецот за параметри</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиција на екранот на прозорецот за параметри">
+									<longdesc>Позиција на екранот на прозорецот за параметри</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Големина на прозорецот за параметри">
+									<longdesc>Големина на прозорецот за параметри</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиција на екранот на прозорецот за параметри">
+									<longdesc>Позиција на екранот на прозорецот за параметри</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Големина на прозорецот за именикот">
+									<longdesc>Големина на прозорецот за именикот</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Позиција на екранот на прозорецот на именикот">
+									<longdesc>Позиција на екранот на прозорецот на именикот</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Позиција на екранот на друид прозорецот">
+									<longdesc>Позиција на екранот на друид прозорецот</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Големина на далечниот друид прозорец">
+									<longdesc>Големина на далечниот друид прозорец</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Позиција на екранот на чат прозорецот">
+									<longdesc>Позиција на екранот на чат прозорецот</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Големина на прозорецот за разговор">
+									<longdesc>Големина на прозорецот за разговор</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Позиција на екранот на главниот прозорец">
+									<longdesc>Позиција на екранот на главниот прозорец</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="STUN сервер">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Тон за зафатено">
+								<longdesc>Звукот кој ќе биде отсвирен на крајот на разговорот или кога повикувате некого кој е зафатен, доколку е овозможено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Отсвири тон за зафатено">
+								<longdesc>Избраниот тон ќе биде отсвирен на крајот од повикот или при повикувањето на некого кој е зафатен, доколку е овозможено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Звук за бирање">
+								<longdesc>Звукот кој ќе биде отсвирен кога повикувате некого, доколку е овозможено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Отсвири ринг тон">
+								<longdesc>Избраниот звук ке биде отсвирен кога повикувате некого, доколку е овозможено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Отсвири звук при нова гласовна пошта">
+								<longdesc>Избраниот звук ке биде отсвирен кога е примена нова гласовна пошта, ако е вклучено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Звук за нова гласовна пошта">
+								<longdesc>Звукот кој ќе биде отсвирен кога има нова гласовна пошта, ако е вклучено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Отсвири звук при нова порака">
+								<longdesc>Избраниот звук ке биде отсвирен кога е примена нова инстант порака, ако е вклучено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Звук за нова инстант порака">
+								<longdesc>Звукот кој ќе биде отсвирен кога има нова инстант порака, ако е вклучено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Отсвири звук при пристигнат повик.">
+								<longdesc>Избраниот звук ќе биде отсвирен за пристигнатите повици, доколку е овозможено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Звук за пристигнати повици">
+								<longdesc>Звукот кој ќе биде отсвирен на пристигнати повици, доколку е овозможено</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Алтернативен уред за аудио излез">
+								<longdesc>Изберете алтернативен уред за аудио излез за користење за звучни настани.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Размер на рамка">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Видео преглед">
+								<longdesc>Прикажи слики од твојата камера</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Видео формат">
+								<longdesc>Одберете го форматот за видео камери (не може да се примени на повеќето од USB камерите)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Видео канали">
+								<longdesc>Видео број на канал кој ќе се користи (за избирање камера, тв или друг извор)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Видео големина">
+								<longdesc>Одберете ја големината на емитуваното видео: мала (QCIF 176x144) или голема (CIF 352x288).</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Уред за видео влез">
+								<longdesc>Изберете уред за видео излез. Доколку некоја грешка попречува при користењ на овој уред ќе биде емитувана тест слика.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Уред за аудио влез">
+								<longdesc>Изберете го аудио плејер уредот за влез за употреба</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Уред за аудио излез">
+								<longdesc>Изберете го аудио плејер уредот за излез за употреба</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Обележувачи">
+						<longdesc>папка со обележувачи на gconf-уредувач </longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Скоро играни игри">
+						<longdesc>Листа на скоро играни игри.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Статистика на изиграни партии">
+						<longdesc>Листа на стрингови кои доаѓаат во форма на квинт: име, победи, вкупен број на одиграни игри, најдобро време (во секунди) и најлошо време (во секунди). Игрите кои не се одиграни нема потреба да се прикажуваат.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Името на датотеката за играта">
+						<longdesc>Името на датотеката со шема за играта на пасијанс која сакате да ја играте.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Анимации">
+						<longdesc>Дали да се користи анимација за потезите со картите.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Звук">
+						<longdesc>Дали да се слуша звук.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Изберете го начинот на контрола">
+						<longdesc>Изберете дали да ги влечете картите или да кликате на почетната и крајната дестинација.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Дали да се покажува статусната лента">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Дали да ја покажува лентата со алатки.">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Име на датотеката со тема">
+						<longdesc>Името на датотеката со графиката за картите.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs">
+						<entry name="mount_options">
+							<local_schema short_desc="Стандардни опции за монтирање за ntfs датотечниот систем">
+								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со ntfs датотечниот систем.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="Стандардни опции за монтирање за udf датотечниот систем">
+								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со udf датотечниот систем.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="Стандардни опции за монтирање за iso9660 датотечниот систем">
+								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со iso9660 датотечниот систем.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="Стандардни опции за монтирање за vfat датотечниот систем">
+								<longdesc>Листа на стандардни опции за монтирање на просторот форматиран со vfatдатотечниот систем.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

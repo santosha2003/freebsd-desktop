@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="𐑒𐑷𐑤𐑟 𐑣𐑦𐑕𐑑𐑼𐑦">
+							<longdesc>𐑞 𐑣𐑦𐑕𐑑𐑼𐑦 𐑝 𐑞 100 𐑤𐑭𐑕𐑑 𐑒𐑷𐑤𐑟</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP 𐑕𐑻𐑝𐑼𐑟">
+							<longdesc>𐑤𐑦𐑕𐑑 𐑝 𐑒𐑩𐑯𐑓𐑦𐑜𐑘𐑼𐑛 LDAP 𐑕𐑻𐑝𐑼𐑟</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="𐑖𐑴 𐑪𐑓𐑤𐑲𐑯 𐑒𐑪𐑯𐑑𐑨𐑒𐑑𐑕">
+							<longdesc>𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛, 𐑪𐑓𐑤𐑲𐑯 𐑒𐑪𐑯𐑑𐑨𐑒𐑑𐑕 𐑢𐑦𐑤 𐑚𐑰 𐑖𐑴𐑯 𐑦𐑯 𐑞 𐑮𐑭𐑕𐑑𐑻</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="𐑤𐑦𐑕𐑑 𐑝 𐑓𐑴𐑤𐑛𐑩𐑛 𐑜𐑮𐑵𐑐𐑕 𐑦𐑯 𐑞 𐑮𐑭𐑕𐑑𐑻">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="𐑞 𐑩𐑒𐑬𐑯𐑑𐑕 𐑤𐑦𐑕𐑑">
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="𐑓𐑹𐑢𐑼𐑛 𐑒𐑷𐑤𐑟 𐑑 𐑞 𐑜𐑦𐑝𐑩𐑯 𐑣𐑴𐑕𐑑 𐑦𐑓 𐑯𐑴 𐑭𐑯𐑕𐑼">
+								<longdesc>𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛, 𐑷𐑤 𐑦𐑯𐑒𐑳𐑥𐑦𐑙 𐑒𐑷𐑤𐑟 𐑢𐑦𐑤 𐑚𐑰 𐑓𐑪𐑮𐑢𐑻𐑛𐑦𐑛 𐑑 𐑞 𐑣𐑴𐑕𐑑 𐑞𐑨𐑑 𐑦𐑟 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛 𐑦𐑯 𐑞 𐑓𐑰𐑤𐑛 𐑚𐑩𐑤𐑴 𐑦𐑓 𐑿 𐑛𐑵 𐑯𐑪𐑑 𐑭𐑯𐑕𐑼 𐑞 𐑒𐑷𐑤</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="𐑓𐑹𐑢𐑼𐑛 𐑒𐑷𐑤𐑟 𐑑 𐑞 𐑜𐑦𐑝𐑩𐑯 𐑣𐑴𐑕𐑑 𐑦𐑓 𐑚𐑦𐑟𐑰">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="𐑷𐑤𐑢𐑱𐑟 𐑓𐑹𐑢𐑼𐑛 𐑒𐑷𐑤𐑟 𐑑 𐑞 𐑜𐑦𐑝𐑩𐑯 𐑣𐑴𐑕𐑑">
+								<longdesc>𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛, 𐑷𐑤 𐑦𐑯𐑒𐑳𐑥𐑦𐑙 𐑒𐑷𐑤𐑟 𐑢𐑦𐑤 𐑚𐑰 𐑓𐑪𐑮𐑢𐑻𐑛𐑦𐑛 𐑑 𐑞 𐑣𐑴𐑕𐑑 𐑞𐑨𐑑 𐑦𐑟 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛 𐑦𐑯 𐑞 𐑓𐑰𐑤𐑛 𐑚𐑩𐑤𐑴</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="𐑓𐑹𐑢𐑼𐑛 𐑒𐑷𐑤𐑟 𐑑 𐑣𐑴𐑕𐑑">
+								<longdesc>𐑞 𐑣𐑴𐑕𐑑 𐑢𐑺 𐑒𐑷𐑤𐑟 𐑖𐑫𐑛 𐑚𐑰 𐑓𐑪𐑮𐑢𐑻𐑛𐑦𐑛 𐑦𐑓 𐑒𐑷𐑤 𐑓𐑪𐑮𐑢𐑻𐑛𐑦𐑙 𐑦𐑟 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="𐑦𐑯𐑱𐑚𐑩𐑤 &apos;𐑓𐑭𐑕𐑑 𐑕𐑑𐑸𐑑&apos;">
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="𐑦𐑯𐑱𐑚𐑩𐑤 𐑻𐑤𐑰 H.245">
+								<longdesc>𐑞𐑦𐑕 𐑦𐑯𐑱𐑚𐑩𐑤𐑟 H.245 𐑻𐑤𐑰 𐑦𐑯 𐑞 𐑕𐑧𐑑𐑳𐑐</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="𐑦𐑯𐑱𐑚𐑩𐑤 H.245 𐑑𐑳𐑯𐑩𐑤𐑦𐑙">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="𐑤𐑦𐑕𐑩𐑯 𐑐𐑹𐑑">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT 𐑚𐑲𐑯𐑛𐑦𐑙 𐑑𐑲𐑥𐑬𐑑">
+								<longdesc>𐑧𐑯𐑑𐑼 𐑞 𐑯𐑳𐑥𐑚𐑼 𐑝 𐑕𐑧𐑒𐑩𐑯𐑛𐑟 𐑭𐑓𐑑𐑼 𐑢𐑦𐑗 ·𐑧𐑒𐑰𐑜𐑩 𐑖𐑫𐑛 𐑑𐑮𐑲 𐑮𐑰𐑓𐑮𐑧𐑖𐑦𐑙 𐑞 NAT 𐑚𐑲𐑯𐑛𐑦𐑙 𐑢𐑧𐑯 STUN 𐑦𐑟 𐑚𐑰𐑦𐑙 𐑿𐑟𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="𐑓𐑹𐑢𐑼𐑛 𐑒𐑷𐑤𐑟 𐑑 𐑣𐑴𐑕𐑑">
+								<longdesc>𐑞 𐑣𐑴𐑕𐑑 𐑢𐑺 𐑒𐑷𐑤𐑟 𐑖𐑫𐑛 𐑚𐑰 𐑓𐑪𐑮𐑢𐑻𐑛𐑦𐑛 𐑦𐑓 𐑒𐑷𐑤 𐑓𐑪𐑮𐑢𐑻𐑛𐑦𐑙 𐑦𐑟 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="𐑶𐑑𐑚𐑶𐑯𐑛 𐑐𐑮𐑪𐑒𐑕𐑦">
+								<longdesc>𐑞 ·𐑕𐑦𐑐 𐑶𐑑𐑚𐑶𐑯𐑛 𐑐𐑮𐑪𐑒𐑕𐑦 𐑑 𐑿𐑕 𐑓𐑹 𐑬𐑑𐑜𐑴𐑦𐑙 𐑒𐑷𐑤𐑟</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="𐑤𐑦𐑕𐑩𐑯 𐑐𐑹𐑑">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="𐑑𐑧𐑥𐑐𐑼𐑩𐑤 𐑕𐑐𐑱𐑖𐑩𐑤 𐑑𐑮𐑱𐑛 𐑪𐑓">
+								<longdesc>𐑢𐑧𐑞𐑼 𐑑 𐑐𐑮𐑦𐑓𐑻 𐑑 𐑕𐑩𐑕𐑑𐑱𐑯 𐑞 𐑥𐑨𐑒𐑕. 𐑓𐑮𐑱𐑥 𐑮𐑱𐑑 𐑹 𐑤𐑴𐑼 𐑦𐑑 𐑐𐑪𐑕𐑩𐑚𐑩𐑤𐑦 𐑦𐑯 𐑹𐑛𐑼 𐑑 𐑒𐑰𐑐 𐑩 𐑥𐑦𐑯𐑩𐑥𐑩𐑥 𐑤𐑧𐑝𐑩𐑤 𐑝 (𐑕𐑐𐑱𐑖𐑩𐑤) 𐑒𐑢𐑪𐑤𐑦𐑑𐑰 𐑓𐑹 𐑷𐑤 𐑓𐑮𐑱𐑥𐑟. 0: 𐑣𐑲𐑩𐑕𐑑 𐑥𐑦𐑯𐑩𐑥𐑩𐑤 𐑒𐑢𐑪𐑤𐑦𐑑𐑰, 31: 𐑤𐑴𐑩𐑕𐑑 𐑥𐑦𐑯𐑩𐑥𐑩𐑤 𐑒𐑢𐑪𐑤𐑦𐑑𐑰</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="𐑥𐑨𐑒𐑕𐑦𐑥𐑩𐑥 RX 𐑝𐑦𐑛𐑦𐑴 𐑚𐑦𐑑𐑮𐑱𐑑">
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="𐑥𐑨𐑒𐑕𐑦𐑥𐑩𐑥 TX 𐑝𐑦𐑛𐑦𐑴 𐑚𐑦𐑑𐑮𐑱𐑑">
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="𐑞 𐑝𐑦𐑛𐑦𐑴 𐑒𐑴𐑛𐑧𐑒𐑕 𐑤𐑦𐑕𐑑">
+								<longdesc>𐑞 𐑝𐑦𐑛𐑦𐑴 𐑒𐑴𐑛𐑧𐑒𐑕 𐑤𐑦𐑕𐑑</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="𐑥𐑨𐑒𐑕𐑦𐑥𐑩𐑥 𐑡𐑦𐑑𐑼 𐑚𐑳𐑓𐑼">
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="𐑦𐑯𐑱𐑚𐑩𐑤 𐑕𐑲𐑤𐑩𐑯𐑕 𐑛𐑦𐑑𐑧𐑒𐑖𐑩𐑯">
+								<longdesc>𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛, 𐑿𐑟 𐑕𐑲𐑤𐑩𐑯𐑕 𐑛𐑦𐑑𐑧𐑒𐑖𐑩𐑯 𐑢𐑦𐑞 𐑞 𐑒𐑴𐑛𐑧𐑒𐑕 𐑕𐑩𐑐𐑹𐑑𐑦𐑙 𐑦𐑑</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="𐑞 𐑷𐑛𐑦𐑴 𐑒𐑴𐑛𐑧𐑒𐑕 𐑤𐑦𐑕𐑑">
+								<longdesc>𐑞 𐑷𐑛𐑦𐑴 𐑒𐑴𐑛𐑧𐑒𐑕 𐑤𐑦𐑕𐑑</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="𐑷𐑑𐑴𐑥𐑨𐑑𐑦𐑒 𐑭𐑯𐑕𐑼">
+								<longdesc>𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛, 𐑷𐑑𐑩𐑥𐑨𐑑𐑦𐑒𐑤𐑦 𐑭𐑯𐑕𐑼 𐑦𐑯𐑒𐑳𐑥𐑦𐑙 𐑒𐑷𐑤𐑟</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="𐑯𐑴 𐑭𐑯𐑕𐑼 𐑑𐑲𐑥𐑬𐑑">
+								<longdesc>𐑷𐑑𐑩𐑥𐑨𐑑𐑦𐑒𐑤𐑦 𐑮𐑦𐑡𐑧𐑒𐑑 𐑹 𐑓𐑹𐑢𐑼𐑛 𐑦𐑯𐑒𐑳𐑥𐑦𐑙 𐑒𐑷𐑤𐑟 𐑦𐑓 𐑯𐑴 𐑭𐑯𐑕𐑼 𐑦𐑟 𐑜𐑦𐑝𐑩𐑯 𐑭𐑓𐑑𐑼 𐑞 𐑕𐑐𐑧𐑕𐑦𐑓𐑲𐑛 𐑩𐑥𐑬𐑯𐑑 𐑝 𐑑𐑲𐑥 (𐑦𐑯 𐑕𐑧𐑒𐑩𐑯𐑛𐑟)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="𐑮𐑦𐑥𐑴𐑑 𐑝𐑦𐑛𐑦𐑴 𐑢𐑦𐑯𐑛𐑴 𐑐𐑩𐑟𐑦𐑖𐑩𐑯">
+									<longdesc>𐑞 𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑝 𐑞 𐑮𐑦𐑥𐑴𐑑 𐑝𐑦𐑛𐑦𐑴 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="𐑮𐑦𐑥𐑴𐑑 𐑝𐑦𐑛𐑦𐑴 𐑢𐑦𐑯𐑛𐑴 𐑕𐑲𐑟">
+									<longdesc>𐑞 𐑕𐑲𐑟 𐑝 𐑞 𐑮𐑦𐑥𐑴𐑑 𐑝𐑦𐑛𐑦𐑴 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="𐑞 𐑛𐑦𐑓𐑷𐑤𐑑 𐑝𐑦𐑛𐑦𐑴 𐑝𐑿">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="𐑐𐑤𐑱𐑕 𐑢𐑦𐑯𐑛𐑴𐑟 𐑛𐑦𐑕𐑐𐑤𐑱𐑦𐑙 𐑝𐑦𐑛𐑦𐑴 𐑩𐑚𐑳𐑝 𐑳𐑞𐑼 𐑢𐑦𐑯𐑛𐑴𐑟 𐑛𐑘𐑫𐑼𐑦𐑙 𐑒𐑷𐑤𐑟">
+									<longdesc>𐑐𐑤𐑱𐑕 𐑢𐑦𐑯𐑛𐑴𐑟 𐑛𐑦𐑕𐑐𐑤𐑱𐑦𐑙 𐑝𐑦𐑛𐑦𐑴 𐑩𐑚𐑳𐑝 𐑳𐑞𐑼 𐑢𐑦𐑯𐑛𐑴𐑟 𐑛𐑘𐑫𐑼𐑦𐑙 𐑒𐑷𐑤𐑟</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="𐑞 𐑟𐑵𐑥 𐑝𐑨𐑤𐑿">
+									<longdesc>𐑞 𐑟𐑵𐑥 𐑝𐑨𐑤𐑿 𐑦𐑯 𐑐𐑻𐑕𐑧𐑯𐑑 𐑑 𐑩𐑐𐑤𐑲 𐑑 𐑦𐑥𐑦𐑡𐑩𐑟 𐑛𐑩𐑕𐑐𐑤𐑱𐑛 𐑦𐑯 𐑞 𐑥𐑱𐑯 GUI (𐑒𐑨𐑯 𐑚𐑰 50, 100, 𐑹 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="𐑕𐑐𐑧𐑕𐑦𐑓𐑲 𐑞 𐑕𐑪𐑓𐑑𐑢𐑺 𐑕𐑒𐑱𐑤𐑦𐑙 𐑨𐑤𐑜𐑻𐑦𐑞𐑩𐑥">
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="𐑩𐑤𐑬 𐑐𐑦𐑒𐑗𐑼-𐑦𐑯-𐑐𐑦𐑒𐑗𐑼 𐑕𐑪𐑓𐑑𐑢𐑺 𐑕𐑒𐑱𐑤𐑦𐑙">
+									<longdesc>𐑩𐑤𐑬 ·𐑧𐑒𐑰𐑜𐑩 𐑑 𐑓𐑷𐑤 𐑚𐑨𐑒 𐑑 𐑕𐑪𐑓𐑑𐑢𐑺 𐑕𐑒𐑱𐑤𐑦𐑙 𐑞 𐑐𐑦𐑒𐑗𐑼-𐑦𐑯-𐑐𐑦𐑒𐑗𐑼 𐑦𐑓 𐑣𐑭𐑮𐑛𐑢𐑧𐑮 𐑕𐑩𐑐𐑹𐑑 𐑦𐑟 𐑯𐑪𐑑 𐑩𐑝𐑱𐑤𐑩𐑚𐑩𐑤. 𐑦𐑓 𐑞𐑦𐑕 𐑦𐑟 𐑕𐑧𐑑 𐑑 𐑓𐑷𐑤𐑕, ·𐑧𐑒𐑰𐑜𐑩 𐑢𐑦𐑤 𐑯𐑪𐑑 𐑑𐑮𐑲 𐑑 𐑴𐑐𐑩𐑯 𐑞 PIP 𐑦𐑓 𐑣𐑭𐑮𐑛𐑢𐑧𐑮 𐑕𐑩𐑐𐑹𐑑 𐑦𐑟 𐑯𐑪𐑑 𐑩𐑝𐑱𐑤𐑩𐑚𐑩𐑤.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="𐑛𐑦𐑕𐑱𐑚𐑩𐑤 𐑝𐑦𐑛𐑦𐑴 𐑣𐑭𐑮𐑛𐑢𐑧𐑮 𐑨𐑒𐑕𐑧𐑤𐑼𐑱𐑖𐑩𐑯">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="𐑕𐑲𐑟 𐑝 𐑞 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑕𐑲𐑟 𐑝 𐑞 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="𐑕𐑲𐑟 𐑝 𐑞 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑕𐑲𐑟 𐑝 𐑞 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑐𐑮𐑧𐑓𐑼𐑩𐑯𐑕𐑩𐑟 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="𐑕𐑲𐑟 𐑝 𐑞 𐑝𐑦𐑛𐑦𐑴 𐑕𐑧𐑑𐑦𐑙𐑟 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑕𐑲𐑟 𐑝 𐑞 𐑝𐑦𐑛𐑦𐑴 𐑕𐑧𐑑𐑦𐑙𐑟 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑝𐑦𐑛𐑦𐑴 𐑕𐑧𐑑𐑦𐑙𐑟 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑝𐑦𐑛𐑦𐑴 𐑕𐑧𐑑𐑦𐑙𐑟 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="𐑕𐑲𐑟 𐑝 𐑞 𐑷𐑛𐑦𐑴 𐑕𐑧𐑑𐑦𐑙𐑟 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑕𐑲𐑟 𐑝 𐑞 𐑷𐑛𐑦𐑴 𐑕𐑧𐑑𐑦𐑙𐑟 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑷𐑛𐑦𐑴 𐑕𐑧𐑑𐑦𐑙𐑟 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑷𐑛𐑦𐑴 𐑕𐑧𐑑𐑦𐑙𐑟 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="𐑕𐑲𐑟 𐑝 𐑞 𐑩𐑛𐑮𐑧𐑕 𐑚𐑫𐑒 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑕𐑲𐑟 𐑝 𐑞 𐑩𐑛𐑮𐑧𐑕 𐑚𐑫𐑒 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑩𐑛𐑮𐑧𐑕 𐑚𐑫𐑒 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑩𐑛𐑮𐑧𐑕 𐑚𐑫𐑒 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑛𐑮𐑵𐑦𐑛 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑛𐑮𐑵𐑦𐑛 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="𐑕𐑲𐑟 𐑝 𐑞 𐑛𐑮𐑵𐑦𐑛 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑕𐑲𐑟 𐑝 𐑞 𐑛𐑮𐑵𐑦𐑛 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑗𐑨𐑑 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑗𐑨𐑑 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="𐑕𐑲𐑟 𐑝 𐑞 𐑗𐑨𐑑 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑕𐑲𐑟 𐑝 𐑞 𐑗𐑨𐑑 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑥𐑱𐑯 𐑢𐑦𐑯𐑛𐑴">
+									<longdesc>𐑐𐑩𐑟𐑦𐑖𐑩𐑯 𐑪𐑯 𐑞 𐑕𐑒𐑮𐑰𐑯 𐑝 𐑞 𐑥𐑱𐑯 𐑢𐑦𐑯𐑛𐑴</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="𐑦𐑯𐑱𐑚𐑩𐑤 ·𐑕𐑑𐑩𐑯 𐑯𐑧𐑑𐑢𐑻𐑒 𐑛𐑦𐑑𐑧𐑒𐑖𐑩𐑯">
+								<longdesc>𐑦𐑯𐑱𐑚𐑩𐑤 𐑞 𐑷𐑑𐑴𐑥𐑨𐑑𐑦𐑒 𐑯𐑧𐑑𐑢𐑻𐑒 𐑕𐑧𐑑𐑳𐑐 𐑮𐑦𐑟𐑳𐑤𐑑𐑦𐑙 𐑓𐑮𐑪𐑥 𐑞 𐑕𐑑𐑩𐑯 𐑑𐑧𐑕𐑑</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="𐑞 ·𐑕𐑑𐑩𐑯 𐑕𐑻𐑝𐑼">
+								<longdesc>𐑞 ·𐑕𐑑𐑩𐑯 𐑕𐑻𐑝𐑼 𐑑 𐑿𐑕 𐑓𐑹 ·𐑕𐑑𐑩𐑯 𐑕𐑩𐑐𐑹𐑑. ·𐑕𐑑𐑩𐑯 𐑦𐑟 𐑩 𐑑𐑧𐑒𐑯𐑭𐑤𐑩𐑡𐑰 𐑞𐑨𐑑 𐑐𐑻𐑥𐑦𐑑𐑕 𐑐𐑨𐑕𐑦𐑡 𐑔𐑮𐑵 𐑕𐑳𐑥 𐑑𐑲𐑐𐑕 𐑝 ·𐑯𐑨𐑑 𐑜𐑱𐑑𐑢𐑱</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="𐑞 𐑚𐑦𐑟𐑰 𐑑𐑴𐑯 𐑕𐑬𐑯𐑛">
+								<longdesc>𐑞 𐑕𐑬𐑯𐑛 𐑞𐑨𐑑 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑨𐑑 𐑞 𐑧𐑯𐑛 𐑝 𐑒𐑷𐑤𐑟 𐑹 𐑢𐑧𐑯 𐑒𐑷𐑤𐑦𐑙 𐑕𐑳𐑥𐑚𐑪𐑛𐑦 𐑣𐑵 𐑦𐑟 𐑚𐑦𐑟𐑰, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="𐑐𐑤𐑱 𐑚𐑦𐑟𐑰 𐑑𐑴𐑯">
+								<longdesc>𐑞 𐑗𐑴𐑟𐑩𐑯 𐑕𐑬𐑯𐑛 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑨𐑑 𐑞 𐑧𐑯𐑛 𐑝 𐑒𐑷𐑤𐑟 𐑹 𐑒𐑷𐑤𐑦𐑙 𐑕𐑳𐑥𐑚𐑪𐑛𐑦 𐑣𐑵 𐑦𐑟 𐑚𐑦𐑟𐑰, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="𐑞 𐑛𐑲𐑤 𐑑𐑴𐑯 𐑕𐑬𐑯𐑛">
+								<longdesc>𐑞 𐑕𐑬𐑯𐑛 𐑞𐑨𐑑 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑢𐑧𐑯 𐑒𐑷𐑤𐑦𐑙 𐑕𐑳𐑥𐑚𐑪𐑛𐑦, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="𐑐𐑤𐑱 𐑮𐑦𐑙 𐑑𐑴𐑯">
+								<longdesc>𐑞 𐑗𐑴𐑟𐑩𐑯 𐑕𐑬𐑯𐑛 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑢𐑧𐑯 𐑒𐑷𐑤𐑦𐑙 𐑕𐑳𐑥𐑚𐑪𐑛𐑦, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="𐑐𐑤𐑱 𐑕𐑬𐑯𐑛 𐑪𐑯 𐑯𐑿 𐑝𐑶𐑕 𐑥𐑱𐑤">
+								<longdesc>𐑞 𐑗𐑴𐑟𐑩𐑯 𐑕𐑬𐑯𐑛 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑢𐑧𐑯 𐑩 𐑯𐑿 𐑝𐑶𐑕 𐑥𐑱𐑤 𐑦𐑟 𐑮𐑦𐑕𐑰𐑝𐑛, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="𐑞 𐑯𐑿 𐑝𐑶𐑕 𐑥𐑱𐑤 𐑕𐑬𐑯𐑛">
+								<longdesc>𐑞 𐑕𐑬𐑯𐑛 𐑞𐑨𐑑 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑢𐑧𐑯 𐑞𐑺 𐑦𐑟 𐑩 𐑯𐑿 𐑝𐑶𐑕 𐑥𐑱𐑤, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="𐑐𐑤𐑱 𐑕𐑬𐑯𐑛 𐑪𐑯 𐑯𐑿 𐑥𐑧𐑕𐑦𐑡">
+								<longdesc>𐑞 𐑗𐑴𐑟𐑩𐑯 𐑕𐑬𐑯𐑛 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑢𐑧𐑯 𐑩 𐑯𐑿 𐑦𐑯𐑕𐑑𐑩𐑯𐑑 𐑥𐑧𐑕𐑦𐑡 𐑦𐑟 𐑮𐑦𐑕𐑰𐑝𐑛, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="𐑞 𐑯𐑿 𐑦𐑯𐑕𐑑𐑩𐑯𐑑 𐑥𐑧𐑕𐑦𐑡 𐑕𐑬𐑯𐑛">
+								<longdesc>𐑞 𐑕𐑬𐑯𐑛 𐑞𐑨𐑑 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑢𐑧𐑯 𐑞𐑺 𐑦𐑟 𐑩 𐑯𐑿 𐑦𐑯𐑕𐑑𐑩𐑯𐑑 𐑥𐑧𐑕𐑦𐑡, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="𐑐𐑤𐑱 𐑕𐑬𐑯𐑛 𐑪𐑯 𐑦𐑯𐑒𐑳𐑥𐑦𐑙 𐑒𐑷𐑤𐑟">
+								<longdesc>𐑞 𐑗𐑴𐑟𐑩𐑯 𐑕𐑬𐑯𐑛 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑪𐑯 𐑦𐑯𐑒𐑳𐑥𐑦𐑙 𐑒𐑷𐑤𐑟, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="𐑞 𐑦𐑯𐑒𐑳𐑥𐑦𐑙 𐑒𐑷𐑤 𐑕𐑬𐑯𐑛">
+								<longdesc>𐑞 𐑕𐑬𐑯𐑛 𐑞𐑨𐑑 𐑢𐑦𐑤 𐑚𐑰 𐑐𐑤𐑱𐑛 𐑪𐑯 𐑦𐑯𐑒𐑳𐑥𐑦𐑙 𐑒𐑷𐑤𐑟, 𐑦𐑓 𐑦𐑯𐑱𐑚𐑩𐑤𐑛</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="𐑷𐑤𐑑𐑻𐑯𐑩𐑑𐑦𐑝 𐑷𐑛𐑦𐑴 𐑬𐑑𐑐𐑫𐑑 𐑛𐑦𐑝𐑲𐑕">
+								<longdesc>𐑕𐑩𐑤𐑧𐑒𐑑 𐑩𐑯 𐑷𐑤𐑑𐑻𐑯𐑩𐑑𐑦𐑝 𐑷𐑛𐑦𐑴 𐑬𐑑𐑐𐑫𐑑 𐑛𐑦𐑝𐑲𐑕 𐑑 𐑿𐑕 𐑓𐑹 𐑕𐑬𐑯𐑛 𐑦𐑝𐑧𐑯𐑑𐑕.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="𐑒𐑪𐑯𐑑𐑨𐑒𐑑 𐑤𐑪𐑙 𐑕𐑑𐑱𐑑𐑫𐑕">
+								<longdesc>𐑞 𐑤𐑪𐑙 𐑕𐑑𐑱𐑑𐑫𐑕 𐑦𐑯𐑓𐑼𐑥𐑱𐑖𐑩𐑯</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="𐑒𐑪𐑯𐑑𐑨𐑒𐑑 𐑖𐑹𐑑 𐑕𐑑𐑱𐑑𐑫𐑕">
+								<longdesc>𐑞 𐑖𐑹𐑑 𐑕𐑑𐑱𐑑𐑫𐑕 𐑦𐑯𐑓𐑼𐑥𐑱𐑖𐑩𐑯</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="𐑓𐑫𐑤 𐑯𐑱𐑥">
+								<longdesc>𐑧𐑯𐑑𐑼 𐑿𐑼 𐑓𐑫𐑤 𐑯𐑱𐑥</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="𐑓𐑮𐑱𐑥 𐑮𐑱𐑑">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="𐑝𐑦𐑛𐑦𐑴 𐑐𐑮𐑰𐑝𐑿">
+								<longdesc>𐑛𐑩𐑕𐑐𐑤𐑱 𐑦𐑥𐑦𐑡𐑩𐑟 𐑓𐑮𐑪𐑥 𐑿𐑼 𐑒𐑨𐑥𐑻𐑩 𐑛𐑦𐑝𐑲𐑕</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="𐑝𐑦𐑛𐑦𐑴 𐑓𐑹𐑥𐑨𐑑">
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="𐑝𐑦𐑛𐑦𐑴 𐑗𐑨𐑯𐑩𐑤">
+								<longdesc>𐑞 𐑝𐑦𐑛𐑦𐑴 𐑗𐑨𐑯𐑩𐑤 𐑯𐑳𐑥𐑚𐑼 𐑑 𐑿𐑕 (𐑑 𐑕𐑩𐑤𐑧𐑒𐑑 𐑒𐑨𐑥𐑻𐑩, ·𐑑·𐑝 𐑹 𐑳𐑞𐑼 𐑕𐑹𐑕𐑩𐑟)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="𐑝𐑦𐑛𐑦𐑴 𐑕𐑲𐑟">
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="𐑝𐑦𐑛𐑦𐑴 𐑦𐑯𐑐𐑫𐑑 𐑛𐑦𐑝𐑲𐑕">
+								<longdesc>𐑕𐑩𐑤𐑧𐑒𐑑 𐑞 𐑝𐑦𐑛𐑦𐑴 𐑦𐑯𐑐𐑫𐑑 𐑛𐑦𐑝𐑲𐑕 𐑑 𐑿𐑕. 𐑦𐑓 𐑩𐑯 𐑻𐑼 𐑪𐑒𐑻𐑟 𐑢𐑧𐑯 𐑿𐑟𐑦𐑙 𐑞𐑦𐑕 𐑛𐑦𐑝𐑲𐑕 𐑩 𐑑𐑧𐑕𐑑 𐑐𐑦𐑒𐑗𐑼 𐑢𐑦𐑤 𐑚𐑰 𐑑𐑮𐑨𐑯𐑕𐑥𐑦𐑑𐑩𐑛.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="𐑷𐑛𐑦𐑴 𐑦𐑯𐑐𐑫𐑑 𐑛𐑦𐑝𐑲𐑕">
+								<longdesc>𐑕𐑩𐑤𐑧𐑒𐑑 𐑞 𐑷𐑛𐑦𐑴 𐑦𐑯𐑐𐑫𐑑 𐑛𐑦𐑝𐑲𐑕 𐑑 𐑿𐑕</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="𐑷𐑛𐑦𐑴 𐑬𐑑𐑐𐑫𐑑 𐑛𐑦𐑝𐑲𐑕">
+								<longdesc>𐑕𐑩𐑤𐑧𐑒𐑑 𐑞 𐑷𐑛𐑦𐑴 𐑬𐑑𐑐𐑫𐑑 𐑛𐑦𐑝𐑲𐑕 𐑑 𐑿𐑕</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="𐑚𐑫𐑒𐑥𐑸𐑒𐑕">
+						<longdesc>gconf-𐑧𐑛𐑦𐑑𐑹 𐑓𐑴𐑤𐑛𐑼 𐑚𐑫𐑒𐑥𐑸𐑒𐑕</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="𐑮𐑰𐑕𐑩𐑯𐑑𐑤𐑦 𐑐𐑤𐑱𐑛 𐑜𐑱𐑥𐑟">
+						<longdesc>𐑩 𐑤𐑦𐑕𐑑 𐑝 𐑮𐑰𐑕𐑩𐑯𐑑𐑤𐑦 𐑐𐑤𐑱𐑛 𐑜𐑱𐑥𐑟.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="𐑕𐑑𐑩𐑑𐑦𐑕𐑑𐑦𐑒𐑕 𐑝 𐑜𐑱𐑥𐑟 𐑐𐑤𐑱𐑛">
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="𐑞 𐑜𐑱𐑥 𐑓𐑲𐑤 𐑑 𐑿𐑕">
+						<longdesc>𐑞 𐑯𐑱𐑥 𐑝 𐑞 ·𐑕𐑒𐑰𐑥 𐑓𐑲𐑤 𐑒𐑩𐑯𐑑𐑱𐑯𐑦𐑙 𐑞 𐑕𐑪𐑤𐑦𐑑𐑺 𐑜𐑱𐑥 𐑑 𐑐𐑤𐑱.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="𐑨𐑯𐑩𐑥𐑱𐑖𐑩𐑯𐑟">
+						<longdesc>𐑢𐑧𐑞𐑼 𐑹 𐑯𐑪𐑑 𐑑 𐑨𐑯𐑩𐑥𐑩𐑑 𐑒𐑸𐑛 𐑥𐑵𐑝𐑟.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="𐑕𐑬𐑯𐑛">
+						<longdesc>𐑢𐑧𐑞𐑼 𐑹 𐑯𐑪𐑑 𐑑 𐑐𐑤𐑱 𐑦𐑝𐑧𐑯𐑑 𐑕𐑬𐑯𐑛𐑟.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="𐑕𐑩𐑤𐑧𐑒𐑑 𐑞 𐑕𐑑𐑲𐑤 𐑝 𐑒𐑩𐑯𐑑𐑮𐑴𐑤">
+						<longdesc>𐑕𐑩𐑤𐑧𐑒𐑑 𐑢𐑧𐑞𐑼 𐑑 𐑛𐑮𐑨𐑜 𐑞 𐑒𐑸𐑛𐑟 𐑹 𐑑 𐑒𐑤𐑦𐑒 𐑪𐑯 𐑞 𐑕𐑹𐑕 𐑞𐑧𐑯 𐑞 𐑛𐑧𐑕𐑑𐑦𐑯𐑱𐑖𐑩𐑯.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="𐑢𐑧𐑞𐑼 𐑹 𐑯𐑪𐑑 𐑑 𐑖𐑴 𐑞 𐑕𐑑𐑱𐑑𐑫𐑕 𐑚𐑸">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="𐑢𐑧𐑞𐑼 𐑹 𐑯𐑪𐑑 𐑑 𐑖𐑴 𐑞 𐑑𐑵𐑤𐑚𐑸">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="𐑔𐑰𐑥 𐑓𐑲𐑤 𐑯𐑱𐑥">
+						<longdesc>𐑞 𐑯𐑱𐑥 𐑝 𐑞 𐑓𐑲𐑤 𐑢𐑦𐑞 𐑞 𐑜𐑮𐑨𐑓𐑦𐑒𐑕 𐑓𐑹 𐑞 𐑒𐑸𐑛𐑟.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

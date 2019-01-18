@@ -1,0 +1,7 @@
+# $FreeBSD: head/etc/cron.d/at 318443 2017-05-18 06:33:55Z ngie $
+#
+SHELL=/bin/sh
+PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin
+
+# See crontab(5) for field format.
+*/5	*	*	*	*	root	/usr/libexec/atrun

@@ -1,0 +1,45 @@
+#!/bin/sh
+ 
+name="comstar1"
+rcvar="comstar1_enable"
+pidfile="/var/run/${name}.pid"
+vpn_server="santosha.no-ip.info"
+conn_name="comstar1"
+tun0_pid="/var/run/tun0.pid"
+logfile="/var/log/${name}.txt"
+
+case "$1" in
+start)
+    if [ -f $tun0_pid ]; then
+	echo "Connection already active!"
+      else
+	echo "Connection not active yet. Starting."
+            /usr/local/sbin/pptp ${vpn_server} ${conn_name} --loglevel 2 --test-rate 50 --timeout 4 & 2>&1
+	touch $pidfile
+    fi
+        ;;
+stop)
+    if [ -f $tun0_pid ]; then
+	echo "Connection is active. Stopping."
+	tun0_pid_value=`cat ${tun0_pid}`
+	kill $tun0_pid_value
+	rm -f $pidfile
+      else
+            echo "Connection not active yet!"
+    fi
+    ;;
+status)
+       if [ -f $tun0_pid ]; then
+	tun0_pid_value=`cat ${tun0_pid}`
+                echo "Connection is active. PID=${tun0_pid_value}."
+          else
+                echo "Connection not active yet!"
+        fi
+        ;;
+*)
+        echo "Usage: `basename $0` {start|stop|status}" >&2
+        exit 64
+        ;;
+esac
+ 
+exit 0

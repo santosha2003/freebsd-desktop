@@ -1,0 +1,34 @@
+# /etc/crontab - root's crontab for FreeBSD
+#
+# $FreeBSD: stable/11/etc/crontab 194170 2009-06-14 06:37:19Z brian $
+#
+SHELL=/bin/sh
+PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin
+#
+#minute	hour	mday	month	wday	who	command
+#
+*/5	*	*	*	*	root	/usr/libexec/atrun
+#
+# Save some entropy so that /dev/random can re-seed on boot.
+*/11	*	*	*	*	operator /usr/libexec/save-entropy
+#
+# Rotate log files every hour, if necessary.
+0	*	*	*	*	root	newsyslog
+#
+# Perform daily/weekly/monthly maintenance.
+1	3	*	*	*	root	periodic daily
+15	4	*	*	6	root	periodic weekly
+30	5	1	*	*	root	periodic monthly
+# update Perform daily/weekly/monthly maintenance.
+1	4	2,11,20,27	*	*	root	/usr/update-svn
+1	1	16	*	*	root	/usr/up1-64
+# letsencrypt
+1	4	23	*	*	root	certbot renew
+4	4	23	*	*	root	service nginx restart
+#
+# Adjust the time zone if the CMOS clock keeps local time, as opposed to
+# UTC time.  See adjkerntz(8) for details.
+1,31	0-5	*	*	*	root	adjkerntz -a
+/5	*	*	*	*	root	/usr/dynamic-url-perl.pl
+/6	*	*	*	*	root	/usr/dynamic-url1-perl.pl
+

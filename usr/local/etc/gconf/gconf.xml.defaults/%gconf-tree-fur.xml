@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Partidis zuiadis di pôc">
+						<longdesc>Une liste di partidis zuiadis che nol è tant.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statistichis des partidis zuiadis">
+						<longdesc>Une cuintuple di stringhis te forme: non, vitoriis, totâl di partidis zuiadis, miôr timp (in seconts) e piês timp (simpri in seconts). Nol è necessari rapresentâ lis partidis mai zuiadis.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Il file di zûc di doprâ">
+						<longdesc>Il non dal file scheme che al ten il solitari di zuiâ.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animazions">
+						<longdesc>Indiche se doprâ o mancul la animazion tal movi lis cjartis.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Sun">
+						<longdesc>Indiche se riprodusi o mancul i events sonôrs.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Selezione il stîl di control">
+						<longdesc>Indiche se strissinâ lis cjartis o se fâ clic su la sorzint e daspò su la destinazion.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Indiche se mostrâ o mancul la sbare di stât">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Indiche se mostrâ o mancul la sbare dai struments">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Il non dal file di teme">
+						<longdesc>Il non dal file che al ten la grafiche pes cjartis.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

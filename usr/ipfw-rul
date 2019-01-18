@@ -1,0 +1,43 @@
+
+/sbin/ipfw -f flush
+#/sbin/ipfw add 100 allow ip from any to any
+#/sbin/ipfw add 100 allow ip from 192.168.3.211 to any
+# conflict with vpn server (route nat ok use natd)
+#/sbin/ipfw add 40 divert natd ip from 192.168.3.0/24 to any out via igb1
+#/sbin/ipfw add 40 divert natd ip from any to me in via igb1
+#/sbin/ipfw add 45 allow ip from 192.168.3.211 to any
+#/sbin/ipfw add 40 allow ip from 127.0.0.1 to any
+
+# variable defines into rc.conf - edit
+#/sbin/ipfw nat 123 config if $firewall_nat_interface redirect_port tcp 192.168.3.211:90 90
+#/sbin/ipfw nat 123 config if igb1 redirect_port tcp 192.168.3.2:1723 1723 redirect_port tcp 192.168.3.2:4899 4900 redirect_port tcp 192.168.3.211:90 90 redirect_port tcp 192.168.3.211:80 80 redirect_port tcp 192.168.3.211:92 92 redirect_port tcp 192.168.3.211:23 23
+
+/sbin/ipfw add allow tcp from any to me dst-port 1723 in via igb1
+# /sbin/ipfw add 40 allow gre from any to any
+
+#/sbin/ipfw add 40 allow tcp from 192.168.3.0/24 to any dst-port 1723 out via igb1
+/sbin/ipfw add nat 123 ip from any to me recv igb1 in
+/sbin/ipfw add allow ip from any to any in
+/sbin/ipfw add nat 123 gre from 192.168.3.0/24 to any xmit igb1 out
+/sbin/ipfw add nat 123 ip from 192.168.3.0/24 to any xmit igb1 out
+# /sbin/ipfw add 60 nat 123 gre from any to any
+/sbin/ipfw add allow gre from any to any
+/sbin/ipfw add allow ip from any to any via igb0
+/sbin/ipfw add allow ip from any to any via lo0
+/sbin/ipfw add allow icmp from any to any
+/sbin/ipfw add allow ipv6-icmp from any to any
+/sbin/ipfw nat 123 config if igb1 redirect_port tcp 192.168.3.2:1723 1723 redirect_port tcp 192.168.3.2:4899 4900 redirect_port tcp 192.168.3.211:90 90 redirect_port tcp 192.168.3.211:91 91 redirect_port tcp 192.168.3.211:80 80 redirect_port tcp 192.168.3.211:92 92 redirect_port tcp 192.168.3.2:51413 51413 redirect_port tcp 192.168.3.2:6346 6346 redirect_port tcp 192.168.3.2:3389 3389 
+/sbin/ipfw add allow ip from any to any
+/sbin/ipfw nat 123 show config
+/sbin/ipfw show
+
+# 00045 220448  21244857 nat 123 ip from any to me recv igb1 in
+# 00055      0         0 nat 123 ip from 192.168.3.0/24 to any xmit igb1 out
+# 00050 454010  23656338 allow ip from any to any in
+# 00100   1594   3104317 allow ip from any to any via lo0
+# 63000 435008  24360532 allow icmp from any to any
+# 65000 512902 537332856 allow ip from any to any
+# 65535   2479    232189 deny ip from any to any
+# root@pc1:/etc# ipfw nat show config
+# ipfw nat 123 config if igb1 redirect_port tcp 192.168.3.2:4899 4900 redirect_port tcp 192.168.3.2:1723 1723
+# 

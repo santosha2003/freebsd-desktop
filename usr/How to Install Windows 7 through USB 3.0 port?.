@@ -1,0 +1,152 @@
+<html><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="PowerISO" name="description">
+<meta content="Microsoft FrontPage 4.0" name="GENERATOR">
+<meta content="FrontPage.Editor.Document" name="ProgId">
+<title>How to Install Windows 7 through USB 3.0 port?</title>
+
+<style type="text/css">P {FONT-SIZE: 9pt; FONT-FAMILY: "Arial"}
+B {	FONT-SIZE: 9pt; FONT-FAMILY: "Arial"}
+A:link {FONT-SIZE: 9pt; FONT-FAMILY: "Arial"; TEXT-DECORATION: none}
+A:visited {FONT-SIZE: 9pt; FONT-FAMILY: "Arial"; TEXT-DECORATION: none}
+A:active {FONT-SIZE: 9pt; FONT-FAMILY: "Arial"; TEXT-DECORATION: none}
+A:hover {FONT-SIZE: 9pt; FONT-FAMILY: "Arial"; TEXT-DECORATION: none}
+</style>
+
+</head>
+
+<body topmargin="0" leftmargin="0" bgcolor="#FAF6ED">
+
+<div align="center">
+  <center>
+  <center>
+    </center><center>
+    </center><table width="675" height="241" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+    <tbody><tr>
+      <td colspan="9" width="759" height="53">
+        <div align="left">
+          <table width="759" height="53" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr><td width="759" height="53"><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/banner.jpg" width="800" height="122" border="0"></td></tr>
+          </tbody></table>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td width="159" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top1.jpg"><p align="center"><a href="https://www.poweriso.com/index.htm"><font size="4" color="#FFFFFF">Home</font></a></p></td>
+      <td width="3" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top3-1.jpg"></td>
+      <td width="159" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top1.jpg"><p align="center"><a href="https://www.poweriso.com/download.htm"><font size="4" color="#FFFFFF">Download</font></a></p></td>
+      <td width="3" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top3-1.jpg"></td>
+      <td width="159" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top1.jpg"><p align="center"><a href="https://www.poweriso.com/order.htm"><font size="4" color="#FFFFFF">Buy Now</font></a></p></td>
+      <td width="3" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top3-3.jpg"></td>
+      <td width="159" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top2.jpg"><p align="center"><a href="https://www.poweriso.com/tutorials/index.htm"><font size="4" color="#FFFFFF">Tutorials</font></a></p></td>
+      <td width="3" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top3-2.jpg"></td>
+      <td width="143" nowrap="nowrap" height="45" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/top1.jpg"><p align="center"><a href="https://www.poweriso.com/contact.htm"><font size="4" color="#FFFFFF">Contact US</font></a></p></td>
+    </tr>
+    <tr>
+      <td colspan="9" width="791" valign="bottom" nowrap="nowrap" height="27">
+        <p align="center"><b><font size="3" color="#036DB6">How to Install
+        Windows 7 through USB 3.0 port?</font></b>   
+      </p></td>
+    </tr>
+  
+    <tr>
+      <td colspan="9" width="791" valign="bottom" nowrap="nowrap" height="21">
+        <p align="left">You are here:&nbsp; <a href="https://www.poweriso.com/tutorials/index.htm">Tutorials</a>
+        &gt; <b> How to Install Windows 7 through USB 3.0 port?</b></p></td>
+    </tr>
+  <tr>
+      <td colspan="9" width="791" nowrap="nowrap" height="12">
+        <hr>
+      </td>
+    </tr>
+  
+    <tr>
+      <td colspan="9" width="759" height="39">
+
+<p>When installing Windows 7 through USB drive on new skylake system, you may
+receive the following error message,</p><p>"A required CD/DVD drive 
+device driver is missing. If you have a driver floppy disk, CD, DVD, or 
+USB flash drive, please insert it now.
+"</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-0.png" width="564" height="424" border="0"></p><p>In such case, the installation can't continue. The problem is caused by a missing USB 3.0 driver
+in the Windows 7 installation package. The Windows 7 installation program doesn't
+recognize the new USB 3.0 port, hence we need patch the driver to the
+installation package. Please follow the steps,</p><p><b>Step 1 - Create Windows 7 bootable
+USB drive from Windows 7 ISO file</b></p><p>You can find the detail procedure <a href="http://www.poweriso.com/tutorials/how-to-make-win7-bootable-usb-drive.htm">here</a>. Let's
+assume the USB drive has the drive letter H: after you have created Windows 7
+bootable USB drive successfully.</p><p><b>Step 2 - Download and unpack Intel(R) USB 3.0 eXtensible Host Controller
+Driver</b>
+
+</p><p> You may
+download it from&nbsp;<a href="https://downloadcenter.intel.com/product/65855">https://downloadcenter.intel.com/product/65855</a>
+.</p><p>There are two zip files for the driver. Just unzip them to a local folder,
+with different sub folder for each file, for example, C:\USB3\driver1, and C:\USB3\driver2.</p><p><b>Step 3 - Run
+PowerISO DISM Tool</b></p><p>Run PowerISO, and select the menu, "Tools --&gt; DISM
+Tool".
+On Windows vista or above Windows operating systems, you will need confirm UAC
+dialog to continue.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-1.png" width="619" height="435" border="0"></p><p>&nbsp;</p><p><b>Step
+4 - Mount WIM file in the USB drive</b></p><p>In "DISM Tool" dialog,
+select "Mount / Unmount" page, and click the button
+"Mount...".</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-2.png" width="587" height="454" border="0"></p><p>The
+"Mount image" dialog will popup. Click "Browse" button to
+select the boot WIM file in USB drive, for example, H:\sources\boot.wim.&nbsp;</p><p>Select
+the image index from the list, usually, it should be "2: Microsoft Windows
+Setup (x64)" for 64-bit Windows 7 ISO file, or "2: Microsoft Windows
+Setup (x86)" for 32-bit Windows 7 ISO file.</p><p>Create an empty folder, for
+example, C:\mount, and select it for the mount
+path.</p><p>Click "Mount" to mount the image in WIM file to the specified
+path.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-3.png" width="519" height="312" border="0"></p><p>You
+should get the message, "The operation completed successfully" after
+the image has been successfully mounted to the specified the path. Click
+"OK" to close the message box.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-4.png" width="549" height="337" border="0"></p><p><b>Step
+5 - Patch drivers into the image</b></p><p>Select "Driver Servicing" page,
+and select "C:\mount" from the mounted
+directories list.</p><p>Click "Add driver..." button.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-5.png" width="587" height="454" border="0"></p><p>The
+"Add driver" dialog will popup. Select "C:\usb3"
+for the driver folder, and check the option, "Recurse - Query all
+subfolders for drives".</p><p>Click "OK" to add the drivers to the
+image.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-6.png" width="429" height="298" border="0"></p><p>You
+should see the message like below after the operation completes. Click
+"OK" to close the message box.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-7.png" width="549" height="337" border="0"></p><p><b>Step
+6 - Unmount WIM file</b></p><p>Select "Mount / Unmount" page, and select
+"C:\mount" from the images list.</p><p>Click
+"Unmount" button.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-8.png" width="587" height="454" border="0"></p><p>The
+"Unmount image" dialog will popup. Make sure the unmount path is
+"C:\mount", and check the option,
+"Commit - Save the changes when unmounting image file". Click "Unmount"
+to unmount the image.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-9.png" width="519" height="312" border="0"></p><p>You
+should get the message below after the operation completed successfully.</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-10.png" width="549" height="337" border="0"></p><p>You
+might receive the error message below when unmounting the image,</p><p><i><u>The directory could not be completely unmounted.  This is usually due to applications that still have files opened within
+the mount directory.  Close these files and unmount again to complete the unmount process.</u></i></p><p>In
+such case, please close all programs which might open the files in mounted
+directory, especially close all Explorer Windows, and then try unmounting the
+image again.
+
+</p><p><b>Step 7 - Patch drivers to install.wim</b></p><p>Repeat step 4 to step 6 to
+patch drives to install.wim. Usually install.wim can be found in the sources
+folder, for example, the full path name looks like H:\sources\install.wim.&nbsp;</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-11.png" width="756" height="512" border="0"></p><p>If
+there are several images in install.wim, you need select the correct image to
+patch. If you are not sure which image should be patched, you can patch all
+images in install.wim (repeat step 4 to step 6 for each image in the wim file).</p><p><img src="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/install-windows-7-through-usb3-port-12.png" width="519" height="312" border="0">
+
+</p><p>&nbsp;
+
+</p><p><b>Step 8 - Install Windows 7 from the patched USB drive</b></p><p>You have
+patched the USB 3.0 driver to Windows 7 installation package successfully. You
+can now use it to install Windows 7 from the USB 3.0 port, which is present in
+most new skylake computers. Please also make sure that the BIOS is properly configured for booting from the USB device.
+</p><p>&nbsp;
+      </p></td>
+    </tr>
+  <tr>
+      <td colspan="9" width="759" height="23" background="How%20to%20Install%20Windows%207%20through%20USB%203.0%20port%3F_files/bottom.jpg">
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0" align="center"><font color="#FFFFFF"><b>Copyright 2004-2018 Power Software Ltd. All rights reserved.</b></font></p></td>
+    </tr>
+  </tbody></table>
+  </center>
+</div>
+
+
+
+
+<span style="border-radius: 3px !important; text-indent: 20px !important; width: auto !important; padding: 0px 4px 0px 0px !important; text-align: center !important; font: bold 11px/20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important; background: rgb(230, 0, 35) url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjZTYwMDIzIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) no-repeat scroll 3px 50% / 14px 14px !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: medium none !important; top: 312px; left: 219px;">Save</span><span style="width: 24px !important; height: 24px !important; background: rgba(0, 0, 0, 0.4) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxtYXNrIGlkPSJtIj48cmVjdCBmaWxsPSIjZmZmIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiByeT0iNiIvPjxyZWN0IGZpbGw9IiMwMDAiIHg9IjUiIHk9IjUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEiIHJ5PSIxIi8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMTAiIHk9IjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjI0Ii8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0Ii8+PC9tYXNrPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNmZmYiIG1hc2s9InVybCgjbSkiLz48L3N2Zz4=&quot;) no-repeat scroll 50% 50% / 14px 14px !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: medium none !important; border-radius: 12px; top: 310px; left: 741px;"></span></body></html>

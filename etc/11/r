@@ -1,0 +1,1 @@
+/sbin/ipfw nat 123 config if igb1 redirect_port tcp 192.168.3.2:1723 1723 redirect_port tcp 192.168.3.2:4899 4900 redirect_port tcp 192.168.3.211:90 90 redirect_port tcp 192.168.3.211:80 80 redirect_port tcp 192.168.3.211:92 92 redirect_port udp 127.0.0.1:22 22

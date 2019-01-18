@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="Y rhestr cyfrifon">
+							<longdesc>Y rhestr o gyfrifon y dylai Ekiga gofrestru â hwy</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Blaenyrru galwadau at y gwesteiwr rhoddedig os nad oes ateb">
+								<longdesc>Wedi&apos;i alluogi, bydd pob galwad sy&apos;n cyrraedd yn cael ei flaenyrru i&apos;r gwesteiwr sydd wedi&apos;i benodi yn y maes isod os na fyddwch yn ateb yr alwad</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Blaenyrru galwadau at y gwesteiwr penodol os yn brysur">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Blaenyrru galwadau at y gwesteiwr penodol bob amser">
+								<longdesc>Wedi&apos;i alluogi, bydd pob galwad sy&apos;n cyrraedd yn cael ei flaenyrru i&apos;r gwesteiwr sydd wedi&apos;i benodi yn y maes isod.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Amrediad Pyrth UDP">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Amrediad porthau TCP">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Blaenyrru galwadau at y gwesteiwr">
+								<longdesc>Y gwesteiwr y dylid blaenyrru galwadau iddo os yw blaenyrru galwadau wedi&apos;i alluogi</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Anfon DTMF">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Galluogi &apos;Dechrau Cyflym&apos;">
+								<longdesc>Sefydlir y cysylltiad yn y modd Cychwyn Cyflym. Mae Cychwyn Cyflym yn ffordd newydd o ddechrau galwadau yn gyflymach, gyflwynwyd yn H.323v2. Ni chynhelir ef gan Netmeeting, a gall defnyddio Cychwyn Cyflym yr un pryd â Thwnelu H.245 chwalu rhai fersiynau o Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Galluogi H.245 cynnar">
+								<longdesc>Mae hyn yn galluogi H.245 yn gynnar yn y gosod</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Galluogi twnelu H.245">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Porth gwrando">
+								<longdesc>Y porth i wrando arno am gysylltiadau sy&apos;n cyrraedd. Rhaid ail-gychwyn Ekiga er mwyn i&apos;r gwerth newydd ddod i rym.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="Terfyn Amser Rhwymiad NAT">
+								<longdesc>Rhowch y nifer o eiliadau y dylai Ekiga aros cyn ceisio ail-lwytho&apos;r rhwymiad NAT wrth ddefnyddio STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="Anfon DTMF">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Blaenyrru galwadau at y gwesteiwr">
+								<longdesc>Y gwesteiwr y dylid blaenyrru galwadau iddo os yw blaenyrru galwadau wedi&apos;i alluogi</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Dirprwy Allan">
+								<longdesc>Y Dirprwy SIP Allan i&apos;w ddefnyddio ar gyfer galwadau allan</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Porth gwrando">
+								<longdesc>Y porth i wrando arno am gysylltiadau sy&apos;n cyrraedd. Rhaid ail-gychwyn Ekiga er mwyn i&apos;r gwerth newydd ddod i rym.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Uchafswm byffer siglo">
+								<longdesc>Maint uchaf y byffer siglo ar gyfer derbyn sain (mewn milfedau o eiliadau)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Galluogi darganfod tawelwch">
+								<longdesc>Wedi&apos;i alluogi, ceisio darganfod distawrwydd gyda&apos;r codecs sy&apos;n cynnal hyn</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Rhestr Codecau Sain">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Dim terfyn amser ar gyfer ateb">
+								<longdesc>Blaenyrru neu wrthod galwadau&apos;n awtomatig os na roddir ateb ar ôl y maint penodedig o amser (mewn eiliadau)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Lleoliad ffenestr fideo bell">
+									<longdesc>Lleoliad y ffenestr fideo bell</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Lleoliad ffenestr fideo bell">
+									<longdesc>Maint y ffenestr fideo bell</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="Golwg fideo rhagosodedig">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Gosod ffenestri fideo ar ben ffenestri eraill yn ystod galwadau">
+									<longdesc>Gosod ffenestri fideo ar ben ffenestri eraill yn ystod galwadau</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Y gwerth chwyddo">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Maint y ffenestr hoffterau">
+									<longdesc>Maint y ffenestr hoffterau</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Lleoliad y ffenestr hoffterau ar y sgrin">
+									<longdesc>Lleoliad y ffenestr hoffterau ar y sgrin</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Maint y ffenestr hoffterau">
+									<longdesc>Maint y ffenestr hoffterau</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Lleoliad y ffenestr hoffterau ar y sgrin">
+									<longdesc>Lleoliad y ffenestr hoffterau ar y sgrin</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Maint y ffenestr llyfr cyfeiriadau">
+									<longdesc>Maint y ffenestr llyfr cyfeiriadau</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Lleoliad y ffenestr llyfr cyfeiriadau ar y sgrin">
+									<longdesc>Lleoliad y ffenestr llyfr cyfeiriadau ar y sgrin</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Lleoliad ffenestr y cynorthwyydd ar y sgrin">
+									<longdesc>Lleoliad ffenestr y cynorthwyydd ar y sgrin</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Maint ffenestr y cynorthwyydd">
+									<longdesc>Maint ffenestr y cynorthwyydd</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Lleoliad y ffenestr sgwrsio ar y sgrin">
+									<longdesc>Lleoliad y ffenestr sgwrsio ar y sgrin</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Maint y ffenestr sgwrsio">
+									<longdesc>Maint y ffenestr sgwrsio</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Lleoliad y brif ffenestr ar y sgrin">
+									<longdesc>Lleoliad y brif ffenestr ar y sgrin</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="Y Gwesteiwr STUN">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Y sain &apos;prysur&apos;">
+								<longdesc>Wedi&apos;i alluogi, dyma&apos;r sain chwaraeir ar ddiwedd galwadau neu wrth alw rhywun sy&apos;n brysur</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Chwarae sain prysur">
+								<longdesc>Wedi&apos;i alluogi, chwaraeir y sain a ddewisir ar ddiwedd galwadau neu wrth alw rhywun sy&apos;n brysur</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Sain tôn deialu">
+								<longdesc>Wedi&apos;i alluogi, dyma&apos;r sain chwaraeir wrth alw rhywun</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Chwarae sain canu">
+								<longdesc>Wedi&apos;i alluogi, chwaraeir y sain a ddewisir wrth alw rhywun</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Chwarae sain wrth dderbyn neges lais newydd">
+								<longdesc>Wedi&apos;i alluogi, chwaraeir y sain a ddewisir wrth dderbyn neges lais newydd</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Y sain neges lais newydd">
+								<longdesc>Wedi&apos;i alluogi, dyma&apos;r sain chwaraeir wrth dderbyn neges lais newydd</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Chwarae sain wrth dderbyn neges newydd">
+								<longdesc>Wedi&apos;i alluogi, chwaraeir y sain a ddewisir wrth dderbyn neges chwim newydd</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Y sain neges chwim newydd">
+								<longdesc>Wedi&apos;i alluogi, dyma&apos;r sain chwaraeir wrth dderbyn neges chwim newydd</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Chwarae sain ar alwadau i mewn">
+								<longdesc>Wedi&apos;i alluogi, chwaraeir y sain a ddewisir wrth i alwad ddod i mewn</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Sain galwad i mewn">
+								<longdesc>Wedi&apos;i alluogi, dyma&apos;r sain chwaraeir wrth i alwadau ddod i mewn</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dyfais allbwn sain amgen">
+								<longdesc>Dewiswch ddyfais allbwn sain amgen i&apos;w ddefnyddio ar gyfer digwyddiadau sain.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Cyfradd Ffrâm">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Rhagolwg fideo">
+								<longdesc>Dangos delweddau o&apos;ch dyfais gamera</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Fformat fideo">
+								<longdesc>Dewiswch y fformat ar gyfer camerâu fideo (nid yw o bwys ar gyfer y rhan fwyaf o gamerâu USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Sianel fideo">
+								<longdesc>Y rhif sianel fideo i&apos;w ddefnyddio (i ddewis camera, deledu, neu darddiadau eraill)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Maint y fideo">
+								<longdesc>Dewiswch faint y fideo a drosglwyddir: Bach (QCIF 176x144) neu Fawr (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Dyfais mewnbwn fideo">
+								<longdesc>Dewiswch y ddyfais fideo i&apos;w defnyddio. Bydd defnyddio dyfais fideo annilys neu &quot;Llun&quot; i drosglwyddo fideo yn trosglwyddo llun profi.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Dyfais mewnbwn sain">
+								<longdesc>Dewiswch y ddyfais mewnbwn sain i&apos;w defnyddio</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Dyfais allbwn sain">
+								<longdesc>Dewiswch y ddyfais allbwn sain i&apos;w defnyddio</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Llyfrnodau">
+						<longdesc>llyfrnodau plygell gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Gemau chwaraewyd yn ddiweddar">
+						<longdesc>Gemau Chwaraewyd yn Ddiweddar</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Ystadegau o&apos;r gemau a chwaraewyd">
+						<longdesc>Rhestr o linynnau sydd yn dod mewn ffurf pumhlyg: enw, enillion, cyfanswm gemau chwaraewyd, amser gorau (mewn eiliadau) a&apos;r amser gwaethaf (hefyd eiliadau). Nid oes rhaid cynrychioli gemau heb ei chwarae.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Y ffeil gêm i&apos;w ddefnyddio">
+						<longdesc>Enw&apos;r ffeil scheme yn cynnwys y gêm amynedd i&apos;w chwarae.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animeiddiadau">
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Sain">
+						<longdesc>A ddylid chwarae seiniau digwyddiadau.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Dewis y math o reoli">
+						<longdesc>Dewis a ddylid llusgo&apos;r cardiau neu i glicio ar y tardd ac yna ar y cyrchfan.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="A ddylid dangos y bar statws">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="A ddylid dangos y bar offer">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Enw&apos;r ffeil thema">
+						<longdesc>Enw&apos;r ffeil sy&apos;n cynnwys y delweddau ar gyfer y cardiau.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

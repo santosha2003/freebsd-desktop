@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=chrome --no-sandbox
+#chrome --user-data-dir /home/www
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name[ru_RU]=chromium
+Name=chromium
+Comment[ru_RU]=chromium unix
+Comment=chromium unix

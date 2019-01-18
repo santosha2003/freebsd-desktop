@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Kõnede ajalugu">
+							<longdesc>Viimase 100 kõne ajalugu</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP-serverid">
+							<longdesc>Seadistatud LDAP-serverite nimekiri</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Ühendamata kontaktide näitamine">
+							<longdesc>Kui märgitud, siis näidatakse nimekirjas ka ühendamata kontakte</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Nimekirjas volditud gruppide nimekiri">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Väljuvate RT IP pakettide Type of Service (TOS) bait">
+							<longdesc>Väljuvate RT IP pakettide Type of Service (TOS) bait. Seda baiti kasutatakse võrgus kvaliteediteenuse (QoS) tagamiseks. Vaikimisi väärtus 184 (0xB8) tähendab kiirendatud edastust (Expedited Forwarding, EF PHB), nagu määrab RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Kontode nimekiri">
+							<longdesc>Nimekiri kontodest, millede külge Ekiga peaks end siduma</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Kõnede edasisuunamine valitud hostile, kui ei vastata">
+								<longdesc>Lubamise korral suunatakse vastamata jäetud kõne allpool määratud hostile</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Kõnede edasisuunamine valitud hostile, kui ollakse hõivatud">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Alati kõnede edastamine määratud hostile">
+								<longdesc>Kui märgitud, siis kõik sisenevad kõned suunatakse allpool oleval väljal kirjeldatud hostile</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP-portide vahemik">
+								<longdesc>Ekiga poolt kasutatavate UDP-portide vahemik.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP-portide vahemik">
+								<longdesc>TCP portide vahemik, mida Ekiga kasutab H.323 H.245 kanali tarbeks. See pordivahemik ei mõju, kui mõlemad konverentsi osapooled kasutavad H.245 tunneldamist.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Kõnede edasisuunamine hostile">
+								<longdesc>Host, kuhu kõnede ümbersuunamise lubamise korral kõned edastatakse</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-i saatmine">
+								<longdesc>DTMF-ide saatmisrežiimi määramine. Väärtus võib olla kas 0 (sõne), 1 (Toon), 2 (RFC2833) või 3 (Q.931). Vaikeväärtus on 0 (sõne). Kõigi väärtuste puhul peale &quot;Sõne&quot; pole võimalik kasutada tekstivestlust.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Kiirkäivituse lubamine">
+								<longdesc>Ühendus luuakse kiirkäivituse režiimis. See on uus viis alustada kõnesid kiiremini, võimalus loodi H.323v2 protokollis. Kahjuks Netmeeting seda ei toeta ning kiirkäivituse ja H.245 tunneli kooskasutamine võib panna mõned Netmeetingu kliendid kokku jooksma</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Varajane H.245 lubatud">
+								<longdesc>Sellega lubatakse H.245 seadistamise varajases faasis</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 tunneldamine on lubatud">
+								<longdesc>See võimaldab H.245 tunnelirežiimi. H.245 tunnelirežiimis pakendatakse H.245 sõnumid H.225 kanalisse (port 1720). See vähendab TCP ühenduste arvu kõne ajal. Tunneli võimalus loodi H.323 versioonis 2 ning Netmeeting seda ei toeta. Kiirkäivituse ja H.245 tunneli kooskasutamine võib panna mõned Netmeetingu versioonid kokku jooksma.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Kuulatav port">
+								<longdesc>Port, mida kuulatakse sisenevate ühenduste vastuvõtmiseks. Uue väärtuse rakendamiseks tuleb Ekiga taaskäivitada.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT-ühendumise ajapiirang">
+								<longdesc>Sekundite arv, mille jooksul STUN-i kasutav Ekiga peaks proovima NAT-seoseid värskendada</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF-i saatmine">
+								<longdesc>DTMF-i saatmisrežiimi määramine. Võimalikud väärtused on 0 (RFC2833) ja 1 (INFO)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Kõnede edasisuunamine hostile">
+								<longdesc>Host, kuhu kõnede ümbersuunamise lubamise korral kõned edastatakse</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Väljuva ühenduse proksi">
+								<longdesc>SIP-proksi väljuvatele kõnedele</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Kuulatav port">
+								<longdesc>Port, mida kuulatakse sisenevate ühenduste vastuvõtmiseks. Uue väärtuse rakendamiseks tuleb Ekiga taaskäivitada</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Ajutine ruumilisuse kompromiss">
+								<longdesc>Kas eelistada suurima kaadrikiiruse säilitamist või seda kaadrite minimaalse (ruumilise) kvaliteedi säilitamiseks vähendada. 0: kõrgeim minimaalne kvaliteet, 31: madalaim minimaalne kvaliteet</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Vastuvõetava video suurim läbilaskevõime">
+								<longdesc>Video vastuvõtmise suurim läbilaskevõime ühikuga kilobaite sekundis. See väärtus saadetakse videovoogu saatvale programmile, mis võib (juhul kui see on toetatud) oma saatmise bitisagedust vastavalt sellele väärtusele korrigeerida</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Saadetava video suurim läbilaskevõime">
+								<longdesc>Video saatmise suurim läbilaskevõime ühikuga kilobaite sekundis. Video kvaliteeti ja sekundis ülekantavate kaadrite arvu (mis sõltub valitud koodekist) reguleeritakse kõne ajal dünaamiliselt video vähimast võimalikust väärtusest kõrgemale ja püütakse hoida siintoodud väärtuse ligidal</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Videokoodekite nimekiri">
+								<longdesc>Videokoodekite nimekiri</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Suurim värinapuhver">
+								<longdesc>Audiovastuvõtul kasutatava värinapuhvri suurim suurus (millisekundites)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Vaikusetuvastuse lubamine">
+								<longdesc>Kui märgitud, siis on vaikuse tuvastamine lubatud seda toetavate koodekite korral</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Audiokoodekite nimekiri">
+								<longdesc>Audiokoodekite nimekiri</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Assistendis valitud võrgu liik">
+							<longdesc>0: 56Kbps, 1: ISDN, 2:DSL, 3: DSL512, 4: LAN, 5: Kohandatud</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Automaatvastamine">
+								<longdesc>Kui märgitud, siis vastatakse sissetulevatele kõnedele automaatselt</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Kõnele vastamata jätmise ajapiirang">
+								<longdesc>Kui sisenevatele kõnedele pole määratud aja (sekundites) jooksul vastatud, siis suunatakse need kõned edasi või lükatakse tagasi</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Kaugvideo akna asukoht">
+									<longdesc>Kaugvideo akna asukoht</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Kaugvideo akna suurus">
+									<longdesc>Kaugvideo akna suurus</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Videovaade enne täisekraanile lülitumist">
+									<longdesc>Videovaade enne täisekraanile lülitumist (samad väärtused nagu võtmel video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Vaikimisi videovaade">
+									<longdesc>Vaikimisi videovaade (0: kohalik, 1: kaugvaade, 2: mõlemad, 3: mõlemad, kohalik video eraldi aknas)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Kõne ajal videoakna asetamine teiste akende peale">
+									<longdesc>Kõne ajal videoakna asetamine teiste akende peale</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Suurendustegur">
+									<longdesc>Põhilises kasutajaliideses kuvatavate piltide suurendustegur protsentides. Võimalikud väärtused on 50, 100 ja 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Tarkvaralise skaleerimise algoritm">
+									<longdesc>Tarkvaralise skaleerimise algoritm: 0: lähim naaber, 1: lähim naaber koos kastifiltriga, 2: bilineaarne filter, 3: hüperboolfilter. See võti ei kehti Windowsi süsteemide kohta.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Picture-in-picture tarkvaralise skaleerimise lubamine">
+									<longdesc>Kui märgitud, siis Ekiga võib riistvaralise toe puudumisel naasta tarkvaralise picture-in-picture (PIP ehk pilt-pildis) skaleerimise juurde. Kui märkimata, siis Ekiga ei ürita riistvaralise toe puudumisel PIP-i avada.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Video riistvaraline kiirendi keelamine">
+									<longdesc>Selle võtmega saab videoseadme riistvaralist kiirendit (DirectX win32 platvormil ja XVideo Linuxi platvormil) välja lülitada</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Eelistuste akna suurus">
+									<longdesc>Eelistuste akna suurus</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Eelistuste akna asukoht ekraanil">
+									<longdesc>Eelistuste akna asukoht ekraanil</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Eelistuste akna suurus">
+									<longdesc>Eelistuste akna suurus</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Eelistuste akna asukoht ekraanil">
+									<longdesc>Eelistuste akna asukoht ekraanil</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Videosätete akna suurus">
+									<longdesc>Videosätete akna suurus</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Videosätete akna asukoht ekraanil">
+									<longdesc>Videosätete akna asukoht ekraanil</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Audiosätete akna suurus">
+									<longdesc>Audiosätete akna suurus</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Audiosätete akna asukoht ekraanil">
+									<longdesc>Audiosätete akna asukoht ekraanil</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Aadressiraamatu akna suurus">
+									<longdesc>Aadressiraamatu akna suurus</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Aadressiraamatu akna asukoht ekraanil">
+									<longdesc>Aadressiraamatu akna asukoht ekraanil</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Seadistusabilise akna asukoht ekraanil">
+									<longdesc>Seadistusabilise akna asukoht ekraanil</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Seadistusabilise akna suurus">
+									<longdesc>Seadistusabilise akna suurus</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Vestlusakna asukoht ekraanil">
+									<longdesc>Vestlusakna asukoht ekraanil</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Vestlusakna suurus">
+									<longdesc>Vestlusakna suurus</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Põhiakna paneelisektsiooni muutmine">
+									<longdesc>Põhiakna paneelisektsiooni muutmine (0=Kontaktid, 1=Klahvid, 2=Kõnede ajalugu)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Põhiakna asukoht ekraanil">
+									<longdesc>Põhiakna asukoht ekraanil</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN-võrgu tuvastamine on lubatud">
+								<longdesc>STUN-testi põhjal automaatse võrguseadistuse lubamine</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN-server">
+								<longdesc>STUN-i toe jaoks kasutatav STUN-server. STUN on tehnoloogia, mis võimaldab kasutada ühendusi läbi mõnda liiki NAT-väravate</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Kinnise tooni heli">
+								<longdesc>Kõne lõpus või hõivatud kasutajele helistamise korral esitatav heli (kui on lubatud)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Kinnise tooni esitamine">
+								<longdesc>Kui märgitud, siis esitatakse kõne lõpul või hõivatud kontaktile helistamisel selleks määratud heli</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Valimistooni heli">
+								<longdesc>Väljuvate kõnede korral esitatav heli (kui on lubatud)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Telefonihelina esitamine">
+								<longdesc>Kui märgitud, siis esitatakse kellelegi helistamisel selleks määratud heli</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Heli esitamine kõneposti uue sõnumi korral">
+								<longdesc>Kui märgitud, siis esitatakse sõnumiposti uute teadete vastuvõtmisel selleks määratud heli</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Kõneposti uue sõnumi heli">
+								<longdesc>Uue kõneposti sõnumi korral esitatav heli (kui on lubatud)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Heli esitamine uue sõnumi korral">
+								<longdesc>Kui märgitud, siis esitatakse uute välksõnumite vastuvõtmise korral selleks määratud heli</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Uue välksõnumi heli">
+								<longdesc>Uue välksõnumi saabumisel esitatav heli (kui on lubatud)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Heli esitamine siseneva kõne korral">
+								<longdesc>Kui märgitud, siis esitatakse sisenevate kõnede korral selleks määratud heli</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Siseneva kõne heli">
+								<longdesc>Sisenevate kõnede korral esitatav heli (kui on lubatud)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Alternatiivne audioväljundi seade">
+								<longdesc>Helisündmuste jaoks alternatiivse audioväljundi seadme valimine.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Kontakti oleku kirjeldus">
+								<longdesc>Tekstiline kokkuvõte kontakti oleku kohta</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Kontakti oleku lühikirjeldus">
+								<longdesc>Tekstiline lühikokkuvõte kontakti oleku kohta</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Täisnimi">
+								<longdesc>Siia sisesta oma täisnimi</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Kaadrisagedus">
+								<longdesc>Suurim ülekantav kaadrisagedus ühikuga kaadrit sekundis. Seda sagedust ei pruugita saavutada juhul, kui minimaalse kvaliteedi TSTO väärtus on väiksem kui 31 ning valitud bitikiirus ei ole selle minimaalse kvaliteedi jaoks piisav</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Video eelvaade">
+								<longdesc>Kaameraseadmest tulevate piltide kuvamine</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Videovorming">
+								<longdesc>Videokaamera poolt kasutatava vormingu valimine (ei kehti enamuse USB-kaamerate kohta)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Videokanal">
+								<longdesc>Kasutusel olev videokanal (kaamera, tv või muude allikate valimiseks)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Video suurus">
+								<longdesc>Ülekantava videopildi suurus. Kas väike (QCIF 176x144, väärtus &quot;Small&quot;) või suur (CIF 352x288, väärtus &quot;Large&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Videosisendi seade">
+								<longdesc>Videosisendi poolt kasutusel olev seade. Kui selle seadme kasutamisel tekib viga, siis kantakse video asemel üle testpilti.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Audiosisendi seade">
+								<longdesc>Audiosisendi poolt kasutusel olev seade</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Audioväljundi seade">
+								<longdesc>Audioväljundi poolt kasutusel olev seade</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Järjehoidjad">
+						<longdesc>gconf-editor&apos;i kataloogijärjehoidjaid</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Viimati mängitud mängud">
+						<longdesc>Viimati mängitud mängude nimekiri.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Mängitud mängude statistika">
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Kasutatav mängufail">
+						<longdesc>Kaardiladumismängu skeemifaili nimi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animatsioonid">
+						<longdesc>Kas kaardikäikude animatsiooni kasutatakse või mitte.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Heli">
+						<longdesc>Kas helisid esitatakse või mitte.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Juhtimislaadi valimine">
+						<longdesc>Kui märgitud, siis kaarte tõstetakse teise kohta lohistamise abil, vastasel juhul aga klõpsamise abil.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Kas olekuriba on nähtaval või peidus">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Kas tööriistariba on nähtaval või peidus">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Teemafaili nimi">
+						<longdesc>Kaardigraafika faili nimi.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

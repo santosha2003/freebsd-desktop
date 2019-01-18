@@ -1,0 +1,575 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="着信履歴">
+							<longdesc>最近の発信履歴 (100回分) です。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP サーバーのリスト">
+							<longdesc>設定済の LDAP サーバーを要素とするリストです。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="オフラインの連絡先を表示するかどうか">
+							<longdesc>TRUE にすると、オフラインの仲間を登録簿に表示します</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="登録簿中に畳まれているグループのリストです">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="accounts_list">
+						<local_schema short_desc="アカウントの一覧">
+							<longdesc>Ekiga に登録されているアカウントの一覧です。</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="応答が無い時に指定したホストへ転送するかどうか">
+								<longdesc>TRUE にすると、着信に応答しない場合、次のフィールドに指定したホストへすべての着信を転送します。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="多忙な時に指定したホストへ転送するかどうか">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="常に指定したホストを呼び出すかどうか">
+								<longdesc>TRUE にすると、次のフィールドに指定したホストへすべての着信を転送します。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP ポート番号の範囲">
+								<longdesc>Ekiga が使用する UDP ポート番号の範囲です。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP ポート番号の範囲">
+								<longdesc>H.323/H.245 のチャンネルで使用する TCP ポート番号の範囲です。この範囲は会議に参加している双方が H.245 のトンネリングを利用している場合は効果はありません。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="転送先のホスト">
+								<longdesc>転送機能が有効な場合に、呼び出しを転送するホスト名です</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF 送信">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="高速起動を有効にするかどうか">
+								<longdesc>高速起動モードで接続を確立します。高速起動モードは通話を素早く開始する新しい手法の一つで、H.323v2 で規格化されています。Netmeeting ではサポートされておらず、いくつかの Netmeeting のバージョンで高速起動と H.245 トンネリングを併用するとクラッシュすることがあります。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="H.245 (初期版) を有効にするかどうか">
+								<longdesc>H.245 トンネリングを有効にします</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 のトンネリングを有効にするかどうか">
+								<longdesc>H.245 のトンネリング・モードを有効にします; H.245 のトンネリング・モードでは H.245 のメッセージを H.225 のチャンネル (ポート番号 1720) の中にカプセル化します; これにより通話中の TCP 接続を保護します; このトンネリングは H.323v2 プロトコルで導入されましたが、Netmeeting ではサポートしていません; 高速起動と H.245 トンネリングの両方を利用すると Netmeeting のいくつかのバージョンでクラッシュすることがあります</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Listen するポート番号">
+								<longdesc>着信を監視するポート番号です。新しい値を有効にするには Ekiga を再起動する必要があります。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT バインディングのタイムアウト">
+								<longdesc>STUN を使用している際に、Ekiga で NAT バインディングを更新する時のタイムアウト (秒) です。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF 送信">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="転送先のホスト">
+								<longdesc>転送機能が有効な場合に、呼び出しを転送するホスト名です</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="外向きのプロキシ">
+								<longdesc>発信する際に使用する外向きの SIP プロキシです</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Listen するポート番号">
+								<longdesc>着信を監視するポート番号です。新しい値を有効にするには Ekiga を再起動する必要があります。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="一時的な空間トレードオフ">
+								<longdesc>すべてのフレームに対して映像空間における品質の最低レベルを維持するように最大フレーム・レートのままにするか、または低く設定します。設定可能な値: 0 (一番高い最小品質)、31 (一番低い最小品質)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="RX 映像の最大ビットレート">
+								<longdesc>RX 映像の最大ビットレート (単位は Kビット/秒) です。この値はピア接続しているエンドポイントに送信され、そこで (サポートしていれば) TX 映像のビットレートがこの値を超えないよう調整できるようにします。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="TX 映像の最大ビットレート">
+								<longdesc>TX 映像の最大ビットレート (単位は Kビット/秒) です。映像の品質と1秒間隔で送信されるフレーム数 (コーデックに依存する) は指定した値に対する帯域を最小限にして呼び出しを試みる間、最小帯域を動的に調整するようになっています。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="映像コーデックを要素とするリストです。">
+								<longdesc>映像コーデックを要素とするリストです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Jitter バッファーの最大値">
+								<longdesc>音声の受信に必要な Jitter バッファーの最大サイズ (ミリ秒) です。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="検出音を鳴らさないかどうか">
+								<longdesc>TRUE にすると、コーデックがサポートするサイレンス検出を使用します</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="音声コーデックのリスト">
+								<longdesc>音声コーデックを要素とするリストです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="設定アシスタントで選択したネットワークの種類">
+							<longdesc>0 (56Kbps)、1 (ISDN)、2 (DSL 128)、3 (DSL 512)、4 (LAN)、 5 (その他)</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="自動応答">
+								<longdesc>TRUE にすると、自動的に呼び出しに応答します</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="「応答なし」にするまでのタイムアウト">
+								<longdesc>指定した時間 (秒) が経過するまで応答がない場合、自動的に着信拒否または転送を行います</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="ビデオ・ウィンドウの位置 (リモート)">
+									<longdesc>ビデオ・ウィンドウの位置 (リモート)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="ビデオ・ウィンドウのサイズ (リモート)">
+									<longdesc>ビデオ・ウィンドウのサイズ (リモート)</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="フルスクリーンに切り替える前の表示方法">
+									<longdesc>映像をフルスクリーンに切り替える前の表示方法です (video_view と同じ数値を指定する)。</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="映像の表示方法 (デフォルト値)">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="着信中は他のウィンドウの上に映像を表示するウィンドウを配置します">
+									<longdesc>着信中は他のウィンドウの上に映像を表示するウィンドウを配置します</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="ズーム率">
+									<longdesc>ウィンドウの中に表示される映像に適用するズーム率です (指定可能な値は 50、100、200)。</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="映像のサイズを変更するアルゴリズム">
+									<longdesc>映像のサイズを変更するアルゴリズムを番号で指定します。選択可能な値: 0 (近傍法)、1 (ボックス・フィルター付きの近傍法)、
+2 (バイリニア・フィルタリング)、3 (双曲線補間を使ったフィルタリング/Win32 のシステムでは適用しないこと)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="ピクチャーインピクチャーでソフトウェアによるサイズ変更を可能にするか">
+									<longdesc>ピクチャーインピクチャー (PIP/画像の中にもう一つ画像を重ねる状態) のサイズ変更をハードウェア側でサポートしていない場合、ソフトウェアによるサイズ変更を許可するかどうかです。これを FALSE にし、ハードウェアがサポートしていない場合は PIP の状態には切り替えることはできません。</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="ビデオのハードウェア・アクセラレーションを無効にするかどうか">
+									<longdesc>DirectX (Win32 の場合) または XVideo (Linux の場合) によるビデオのハードウェア・アクセラレーションを無効にするかどうかです。</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="設定ウィンドウのサイズ">
+									<longdesc>設定ウィンドウのサイズ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="設定ウィンドウの位置">
+									<longdesc>設定ウィンドウの位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="設定ウィンドウのサイズ">
+									<longdesc>設定ウィンドウのサイズ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="設定ウィンドウの位置">
+									<longdesc>設定ウィンドウの位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="映像を設定するウィンドウのサイズ">
+									<longdesc>映像を設定するウィンドウのサイズ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="映像を設定するウィンドウの位置">
+									<longdesc>映像を設定するウィンドウの位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="音声の設定ウィンドウのサイズ">
+									<longdesc>音声の設定ウィンドウのサイズ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="音声の設定ウィンドウの位置">
+									<longdesc>音声の設定ウィンドウの位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="アドレス帳ウィンドウのサイズ">
+									<longdesc>アドレス帳ウィンドウのサイズ</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="アドレス帳ウィンドウの位置">
+									<longdesc>アドレス帳ウィンドウの位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="アシスタント・ウィンドウの位置">
+									<longdesc>アシスタント・ウィンドウの位置</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="アシスタント・ウィンドウのサイズ">
+									<longdesc>アシスタント・ウィンドウのサイズ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="チャット・ウィンドウの位置">
+									<longdesc>チャット・ウィンドウの位置</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="チャット・ウィンドウのサイズ">
+									<longdesc>チャット・ウィンドウのサイズ</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="メイン・ウィンドウの位置">
+									<longdesc>メイン・ウィンドウの位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN ネットワークの検出を有効にするかどうか">
+								<longdesc>STUN のテストにより自動的にネットワークを設定するかどうか</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN サーバー">
+								<longdesc>STUN サービスで利用する STUN サーバーです。STUN はいろいろな種類の NAT ゲートウェイを通過させるための技術です。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="話中で鳴らすサウンドファイル">
+								<longdesc>発信した後、または多忙な人を呼び出す時に選択したサウンドを演奏します (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="話中音を演奏する">
+								<longdesc>呼び出した後、またはビジーな人を呼び出す時に選択したサウンドを演奏します (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="発信音で鳴らすサウンド・ファイル">
+								<longdesc>発信時に演奏するサウンドです (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="着信音を演奏する">
+								<longdesc>誰かを呼び出す時に演奏するサウンドです (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="新しいボイス・メールが届いたらサウンドを演奏する">
+								<longdesc>新しいボイス・メールを受信した時に演奏するサウンドです (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="新しいボイス・メールのサウンド">
+								<longdesc>新しいボイス・メールを受信した時に演奏するサウンドです (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="新しいメッセージが届いたらサウンドを演奏する">
+								<longdesc>新しいインスタント・メッセージを受信した時に演奏するサウンドです (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="新しいインスタント・メッセージのサウンド">
+								<longdesc>新しいインスタント・メッセージを受信した時に演奏するサウンドです (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="着信時にサウンドを演奏する">
+								<longdesc>着信時に選択したサウンドを演奏します (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="着信音のサウンド">
+								<longdesc>着信時に演奏するサウンドです (サウンドを演奏する機能が有効な場合)。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="もう一つの音声出力デバイス">
+								<longdesc>着信音のイベントで使用する音声出力デバイスを指定します。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="連絡先に表示する状態 (長文)">
+								<longdesc>連絡先に表示する状態を表す文字列 (長文) です。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="連絡先に表示する状態 (短文)">
+								<longdesc>連絡先に表示する状態を表す文字列 (短文) です。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="氏名">
+								<longdesc>氏名を入力してください</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="フレーム・レート">
+								<longdesc>転送フレームレートの最大値 (単位はフレーム数/秒) です。最低レベルの品質が 31 より小さい TSTO に設定され、選択されているビットレートがこの品質をサポートするほど十分に大きくない場合は、この値に届かないかもしれません。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="映像をプレビューするかどうか">
+								<longdesc>カメラ・デバイスからの映像を表示します</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="ビデオの形式">
+								<longdesc>ビデオ・カメラのフォーマットを指定します (多くの USB カメラには適用できません)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="映像チャンネル">
+								<longdesc>使用する映像チャンネルの番号 (カメラ、テレビ、またはその他のソース) です</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="映像のサイズ">
+								<longdesc>発信する映像のサイズです: Small (QCIF 176x144) または Large (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="ビデオの入力デバイス">
+								<longdesc>使用するビデオ入力デバイスを選択します (このデバイスを使用した時にエラーが発生した場合は、テスト用の画像が発信されます)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="音声の入力デバイス">
+								<longdesc>使用する音声入力デバイスを指定します</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="音声の出力デバイス">
+								<longdesc>使用する音声出力デバイスを指定します</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="ブックマーク">
+						<longdesc>GConf エディターのフォルダー式ブックマークです。</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="最近プレイしたゲーム">
+						<longdesc>最近プレイしたゲームのリストです。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="プレイしたゲームの成績">
+						<longdesc>5つからなる文字列のリストです: 名前、勝ち数、プレイ数、ベストタイム (秒)、ワーストタイム(秒)。ここにプレイしていない数を指定する必要はありません。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="使用するゲームファイル">
+						<longdesc>プレイするソリティアゲームを格納したスキーマファイルの名前です。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="アニメーションするかどうか">
+						<longdesc>カードを移動する際にアニメーションを使用するかどうかです。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="効果音を鳴らすかどうか">
+						<longdesc>イベント時のサウンドを演奏するかどうかです。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="操作方法の選択">
+						<longdesc>カードを操作する方法として、カードをドラッグするか、または移動元をクリックして対象となるカードへドラッグするかを選択してください。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="ステータスバーを表示するかどうか">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="ツールバーを表示するかどうか">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="テーマファイルの名前">
+						<longdesc>カードの絵柄を格納したファイルの名前です。</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="NTFS-3g 形式のマウント・オプション (デフォルト値)">
+								<longdesc>NTFS-3g 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="NTFS を検出した時にデフォルトで使用するファイルシステムのドライバ">
+								<longdesc>NTFS 形式のファイルシステムを検出した時にデフォルトで使用するファイルシステムのドライバ名です。これは、デフォルトで全ての NTFS 形式のファイルシステムに対して NTFS-3g 用のドライバを使用するようシステムを設定する際に便利な機能です。但し、ユーザはボリュームをマウントする前、あるいはコマンドラインから、このドライバ名を上書きすることで NTFS 用のドライバを選択することも可能になっています。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="NTFS 形式のマウント・オプション (デフォルト値)">
+								<longdesc>NTFS 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="UDF 形式のマウント・オプション (デフォルト値)">
+								<longdesc>UDF 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="ISO9660 形式のファイルシステム向けのマウント・オプション (デフォルト値)">
+								<longdesc>ISO9660 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="VFAT 形式のマウント・オプション (デフォルト値)">
+								<longdesc>VFAT 形式でフォーマットされたボリュームに対するデフォルトのマウント・オプションの並びです。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="desktop">
+			<dir name="gnome">
+				<dir name="policykit">
+					<entry name="auth_dialog_retain_authorization_blacklist">
+						<local_schema short_desc="デフォルトで &quot;認証結果を使用し続ける&quot; のチェックボックスを OFF にしておくアクション">
+							<longdesc>&quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで OFF にしておく PolicyKit アクションを並べたリストです。このリストは認証ダイアログのオブジェクトよって管理されます。例えば、ユーザが任意のアクションに対して &quot;認証結果を使用し続ける&quot; のチェックを外し、そのアクションを実行する権限を手に入れたら、このリストにそのアクションが追加されるということです。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_retain_authorization">
+						<local_schema short_desc="&quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで ON にするかどうか">
+							<longdesc>TRUE にすると、&quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot; キーに格納したアクションを除き、認証ダイアログで &quot;認証結果を使用し続ける&quot; のチェックボックスをデフォルトで ON にしておきます。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_grab_keyboard">
+						<local_schema short_desc="認証ダイアログでキーボード入力をつかんだままにするかどうか">
+							<longdesc>TRUE にすると、PolicyKit-gnome の認証ダイアログでキーボード入力をつかんだままにするので、このダイアログが表示されている間は他のアプリでキーボードを利用することができなくなります。この機能を使えば、お使いのウィンドウ・マネージャが認証ダイアログにフォーカスを与えなかった場合、キーボードからパスワードを入力した時にフォーカスが当たっている他のプログラムに誤って表示されるという危険性を回避することができます。</longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

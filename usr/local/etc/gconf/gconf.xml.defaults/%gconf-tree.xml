@@ -1,0 +1,1140 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="apps">
+		<dir name="ekiga">
+			<dir name="contacts">
+				<entry name="roster" mtime="1544383412" schema="/schemas/apps/ekiga/contacts/roster"/>
+				<entry name="call_history" mtime="1544383412" schema="/schemas/apps/ekiga/contacts/call_history"/>
+				<entry name="ldap_servers" mtime="1544383412" schema="/schemas/apps/ekiga/contacts/ldap_servers"/>
+				<entry name="show_offline_contacts" mtime="1544383412" schema="/schemas/apps/ekiga/contacts/show_offline_contacts"/>
+				<entry name="roster_folded_groups" mtime="1544383412" schema="/schemas/apps/ekiga/contacts/roster_folded_groups"/>
+			</dir>
+			<dir name="protocols">
+				<entry name="interface" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/interface"/>
+				<entry name="rtp_tos_field" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/rtp_tos_field"/>
+				<entry name="accounts_list" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/accounts_list"/>
+				<dir name="call_forwarding">
+					<entry name="forward_on_no_answer" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/call_forwarding/forward_on_no_answer"/>
+					<entry name="forward_on_busy" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/call_forwarding/forward_on_busy"/>
+					<entry name="always_forward" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/call_forwarding/always_forward"/>
+				</dir>
+				<dir name="ports">
+					<entry name="udp_port_range" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/ports/udp_port_range"/>
+					<entry name="tcp_port_range" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/ports/tcp_port_range"/>
+				</dir>
+				<dir name="h323">
+					<entry name="forward_host" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/h323/forward_host"/>
+					<entry name="dtmf_mode" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/h323/dtmf_mode"/>
+					<entry name="video_role" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/h323/video_role"/>
+					<entry name="enable_h239" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/h323/enable_h239"/>
+					<entry name="enable_fast_start" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/h323/enable_fast_start"/>
+					<entry name="enable_early_h245" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/h323/enable_early_h245"/>
+					<entry name="enable_h245_tunneling" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/h323/enable_h245_tunneling"/>
+					<entry name="listen_port" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/h323/listen_port"/>
+				</dir>
+				<dir name="sip">
+					<entry name="binding_timeout" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/sip/binding_timeout"/>
+					<entry name="dtmf_mode" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/sip/dtmf_mode"/>
+					<entry name="forward_host" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/sip/forward_host"/>
+					<entry name="outbound_proxy_host" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/sip/outbound_proxy_host"/>
+					<entry name="listen_port" mtime="1544383412" schema="/schemas/apps/ekiga/protocols/sip/listen_port"/>
+				</dir>
+			</dir>
+			<dir name="codecs">
+				<dir name="video">
+					<entry name="temporal_spatial_tradeoff" mtime="1544383412" schema="/schemas/apps/ekiga/codecs/video/temporal_spatial_tradeoff"/>
+					<entry name="maximum_video_rx_bitrate" mtime="1544383412" schema="/schemas/apps/ekiga/codecs/video/maximum_video_rx_bitrate"/>
+					<entry name="maximum_video_tx_bitrate" mtime="1544383412" schema="/schemas/apps/ekiga/codecs/video/maximum_video_tx_bitrate"/>
+					<entry name="media_list" mtime="1544383412" schema="/schemas/apps/ekiga/codecs/video/media_list"/>
+				</dir>
+				<dir name="audio">
+					<entry name="maximum_jitter_buffer" mtime="1544383412" schema="/schemas/apps/ekiga/codecs/audio/maximum_jitter_buffer"/>
+					<entry name="enable_echo_cancellation" mtime="1544383411" schema="/schemas/apps/ekiga/codecs/audio/enable_echo_cancellation"/>
+					<entry name="enable_silence_detection" mtime="1544383411" schema="/schemas/apps/ekiga/codecs/audio/enable_silence_detection"/>
+					<entry name="media_list" mtime="1544383411" schema="/schemas/apps/ekiga/codecs/audio/media_list"/>
+				</dir>
+			</dir>
+			<dir name="general">
+				<entry name="kind_of_net" mtime="1544383412" schema="/schemas/apps/ekiga/general/kind_of_net"/>
+				<dir name="call_options">
+					<entry name="auto_answer" mtime="1544383412" schema="/schemas/apps/ekiga/general/call_options/auto_answer"/>
+					<entry name="no_answer_timeout" mtime="1544383412" schema="/schemas/apps/ekiga/general/call_options/no_answer_timeout"/>
+				</dir>
+				<dir name="user_interface">
+					<dir name="remote_video_window">
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/remote_video_window/position"/>
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/remote_video_window/size"/>
+					</dir>
+					<dir name="video_display">
+						<entry name="video_view_before_fullscreen" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_display/video_view_before_fullscreen"/>
+						<entry name="video_view" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_display/video_view"/>
+						<entry name="stay_on_top" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_display/stay_on_top"/>
+						<entry name="zoom" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_display/zoom"/>
+						<entry name="sw_scaling_algorithm" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_display/sw_scaling_algorithm"/>
+						<entry name="allow_pip_sw_scaling" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_display/allow_pip_sw_scaling"/>
+						<entry name="disable_hw_accel" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_display/disable_hw_accel"/>
+					</dir>
+					<dir name="accounts_window">
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/accounts_window/size"/>
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/accounts_window/position"/>
+					</dir>
+					<dir name="preferences_window">
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/preferences_window/size"/>
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/preferences_window/position"/>
+					</dir>
+					<dir name="video_settings_window">
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_settings_window/size"/>
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/video_settings_window/position"/>
+					</dir>
+					<dir name="audio_settings_window">
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/audio_settings_window/size"/>
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/audio_settings_window/position"/>
+					</dir>
+					<dir name="addressbook_window">
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/addressbook_window/size"/>
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/addressbook_window/position"/>
+					</dir>
+					<dir name="assistant">
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/assistant/position"/>
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/assistant/size"/>
+					</dir>
+					<dir name="chat_window">
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/chat_window/position"/>
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/chat_window/size"/>
+					</dir>
+					<dir name="main_window">
+						<entry name="panel_section" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/main_window/panel_section"/>
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/main_window/position"/>
+					</dir>
+					<dir name="call_window">
+						<entry name="size" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/call_window/size"/>
+						<entry name="position" mtime="1544383412" schema="/schemas/apps/ekiga/general/user_interface/call_window/position"/>
+					</dir>
+				</dir>
+				<dir name="nat">
+					<entry name="enable_stun" mtime="1544383412" schema="/schemas/apps/ekiga/general/nat/enable_stun"/>
+					<entry name="stun_server" mtime="1544383412" schema="/schemas/apps/ekiga/general/nat/stun_server"/>
+				</dir>
+				<dir name="sound_events">
+					<entry name="busy_tone_sound" mtime="1544383412" schema="/schemas/apps/ekiga/general/sound_events/busy_tone_sound"/>
+					<entry name="enable_busy_tone_sound" mtime="1544383412" schema="/schemas/apps/ekiga/general/sound_events/enable_busy_tone_sound"/>
+					<entry name="ring_tone_sound" mtime="1544383412" schema="/schemas/apps/ekiga/general/sound_events/ring_tone_sound"/>
+					<entry name="enable_ring_tone_sound" mtime="1544383412" schema="/schemas/apps/ekiga/general/sound_events/enable_ring_tone_sound"/>
+					<entry name="enable_new_voicemail_sound" mtime="1544383412" schema="/schemas/apps/ekiga/general/sound_events/enable_new_voicemail_sound"/>
+					<entry name="new_voicemail_sound" mtime="1544383412" schema="/schemas/apps/ekiga/general/sound_events/new_voicemail_sound"/>
+					<entry name="enable_new_message_sound" mtime="1544383412" schema="/schemas/apps/ekiga/general/sound_events/enable_new_message_sound"/>
+					<entry name="new_message_sound" mtime="1544383412" schema="/schemas/apps/ekiga/general/sound_events/new_message_sound"/>
+					<entry name="enable_incoming_call_sound" mtime="1544383411" schema="/schemas/apps/ekiga/general/sound_events/enable_incoming_call_sound"/>
+					<entry name="incoming_call_sound" mtime="1544383411" schema="/schemas/apps/ekiga/general/sound_events/incoming_call_sound"/>
+					<entry name="output_device" mtime="1544383411" schema="/schemas/apps/ekiga/general/sound_events/output_device"/>
+				</dir>
+				<dir name="personal_data">
+					<entry name="available_custom_status" mtime="1544383411" schema="/schemas/apps/ekiga/general/personal_data/available_custom_status"/>
+					<entry name="busy_custom_status" mtime="1544383411" schema="/schemas/apps/ekiga/general/personal_data/busy_custom_status"/>
+					<entry name="away_custom_status" mtime="1544383411" schema="/schemas/apps/ekiga/general/personal_data/away_custom_status"/>
+					<entry name="long_status" mtime="1544383411" schema="/schemas/apps/ekiga/general/personal_data/long_status"/>
+					<entry name="short_status" mtime="1544383411" schema="/schemas/apps/ekiga/general/personal_data/short_status"/>
+					<entry name="full_name" mtime="1544383411" schema="/schemas/apps/ekiga/general/personal_data/full_name"/>
+				</dir>
+			</dir>
+			<dir name="devices">
+				<dir name="video">
+					<entry name="max_frame_rate" mtime="1544383411" schema="/schemas/apps/ekiga/devices/video/max_frame_rate"/>
+					<entry name="enable_preview" mtime="1544383411" schema="/schemas/apps/ekiga/devices/video/enable_preview"/>
+					<entry name="format" mtime="1544383411" schema="/schemas/apps/ekiga/devices/video/format"/>
+					<entry name="channel" mtime="1544383411" schema="/schemas/apps/ekiga/devices/video/channel"/>
+					<entry name="size" mtime="1544383411" schema="/schemas/apps/ekiga/devices/video/size"/>
+					<entry name="input_device" mtime="1544383411" schema="/schemas/apps/ekiga/devices/video/input_device"/>
+				</dir>
+				<dir name="audio">
+					<entry name="input_device" mtime="1544383411" schema="/schemas/apps/ekiga/devices/audio/input_device"/>
+					<entry name="output_device" mtime="1544383411" schema="/schemas/apps/ekiga/devices/audio/output_device"/>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="gconf-editor">
+			<entry name="bookmarks" mtime="1544383400" schema="/schemas/apps/gconf-editor/bookmarks"/>
+		</dir>
+		<dir name="aisleriot">
+			<entry name="recent_games_list" mtime="1544383340" schema="/schemas/apps/aisleriot/recent_games_list"/>
+			<entry name="statistics" mtime="1544383340" schema="/schemas/apps/aisleriot/statistics"/>
+			<entry name="game_file" mtime="1544383340" schema="/schemas/apps/aisleriot/game_file"/>
+			<entry name="animations" mtime="1544383340" schema="/schemas/apps/aisleriot/animations"/>
+			<entry name="sound" mtime="1544383340" schema="/schemas/apps/aisleriot/sound"/>
+			<entry name="click_to_move" mtime="1544383340" schema="/schemas/apps/aisleriot/click_to_move"/>
+			<entry name="show_statusbar" mtime="1544383340" schema="/schemas/apps/aisleriot/show_statusbar"/>
+			<entry name="show_toolbar" mtime="1544383340" schema="/schemas/apps/aisleriot/show_toolbar"/>
+			<entry name="card_style" mtime="1544383340" schema="/schemas/apps/aisleriot/card_style"/>
+		</dir>
+	</dir>
+	<dir name="system">
+		<dir name="storage">
+			<dir name="default_options">
+				<dir name="ntfs-3g">
+					<entry name="mount_options" mtime="1544382862" schema="/schemas/system/storage/default_options/ntfs-3g/mount_options"/>
+				</dir>
+				<dir name="ntfs">
+					<entry name="fstype_override" mtime="1544382862" schema="/schemas/system/storage/default_options/ntfs/fstype_override"/>
+					<entry name="mount_options" mtime="1544382862" schema="/schemas/system/storage/default_options/ntfs/mount_options"/>
+				</dir>
+				<dir name="udf">
+					<entry name="mount_options" mtime="1544382862" schema="/schemas/system/storage/default_options/udf/mount_options"/>
+				</dir>
+				<dir name="iso9660">
+					<entry name="mount_options" mtime="1544382862" schema="/schemas/system/storage/default_options/iso9660/mount_options"/>
+				</dir>
+				<dir name="vfat">
+					<entry name="mount_options" mtime="1544382862" schema="/schemas/system/storage/default_options/vfat/mount_options"/>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="roster" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+						<local_schema locale="C" short_desc="">
+							<longdesc></longdesc>
+						</local_schema>
+					</entry>
+					<entry name="call_history" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+						<local_schema locale="C" short_desc="Calls history">
+							<longdesc>The history of the 100 last calls</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+						<local_schema locale="C" short_desc="LDAP servers">
+							<default type="string">
+								<stringvalue></stringvalue>
+							</default>
+							<longdesc>List of configured LDAP servers</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+						<local_schema locale="C" short_desc="Show offline contacts">
+							<default type="bool" value="true"/>
+							<longdesc>If enabled, offline contacts will be shown in the roster</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups" mtime="1544383412" type="schema" stype="list" owner="Ekiga" list_type="string">
+						<local_schema locale="C" short_desc="List of folded groups in the roster">
+							<default type="list" ltype="string">
+							</default>
+							<longdesc></longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="interface" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+						<local_schema locale="C" short_desc="">
+							<longdesc></longdesc>
+						</local_schema>
+					</entry>
+					<entry name="rtp_tos_field" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+						<local_schema locale="C" short_desc="Type of Service (TOS) byte on outgoing RTP IP packets">
+							<default type="int" value="184"/>
+							<longdesc>The Type of Service (TOS) byte on outgoing RTP IP packets. This byte is used by the network to provide some level of Quality of Service (QoS). Default value 184 (0xB8) correspond to Expedited Forwarding (EF) PHB as defined in RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list" mtime="1544383412" type="schema" stype="list" owner="Ekiga" list_type="string">
+						<local_schema locale="C" short_desc="The accounts list">
+							<default type="list" ltype="string">
+							</default>
+							<longdesc>The list of accounts to which Ekiga should register</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Forward calls to the given host if no answer">
+								<default type="bool" value="false"/>
+								<longdesc>If enabled, all incoming calls will be forwarded to the host that is specified in the field below if you do not answer the call</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Forward calls to the given host if busy">
+								<default type="bool" value="false"/>
+								<longdesc>If enabled, all incoming calls will be forwarded to the host that is specified in the field below if you already are in a call or if you are in busy mode</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Always forward calls to the given host">
+								<default type="bool" value="false"/>
+								<longdesc>If enabled, all incoming calls will be forwarded to the host that is specified in the field below</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="UDP port range">
+								<default type="string">
+									<stringvalue>5061:5100</stringvalue>
+								</default>
+								<longdesc>The range of UDP ports that Ekiga will use.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="TCP port range">
+								<default type="string">
+									<stringvalue>30000:30010</stringvalue>
+								</default>
+								<longdesc>The range of TCP ports that Ekiga will use for the H.323 H.245 channel. This port range has no effect if both participants to the conference are using H.245 Tunneling.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Forward calls to host">
+								<default type="string">
+									<stringvalue>h323:</stringvalue>
+								</default>
+								<longdesc>The host where calls should be forwarded if call forwarding is enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="DTMF sending">
+								<default type="int" value="0"/>
+								<longdesc>Select the mode for sending DTMFs. The values can be 0 (for &quot;String&quot;), 1 (for &quot;Tone&quot;), 2 (for &quot;RFC2833&quot;), or 3 (for &quot;Q.931&quot;) (default is &quot;String&quot;). Choosing other values than &quot;String&quot; disables the Text Chat.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Extended Video Roles">
+								<default type="int" value="0"/>
+								<longdesc>Select the H.239 Video Role. The values can be 0 (for &quot;disable extended video&quot;), 1 (for &quot;allow per content role mask&quot;), 2 (for &quot;force presentation&quot;), or 3 (for &quot;force live role&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Enable H.239">
+								<default type="bool" value="false"/>
+								<longdesc>This enables H.239 capability for additional video roles</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Enable &apos;Fast Start&apos;">
+								<default type="bool" value="true"/>
+								<longdesc>Connection will be established in Fast Start mode. Fast Start is a new way to start calls faster that was introduced in H.323v2. It is not supported by Netmeeting and using both Fast Start and H.245 Tunneling can crash some versions of Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Enable early H.245">
+								<default type="bool" value="true"/>
+								<longdesc>This enables H.245 early in the setup</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Enable H.245 tunneling">
+								<default type="bool" value="true"/>
+								<longdesc>This enables H.245 Tunneling mode. In H.245 Tunneling mode H.245 messages are encapsulated into the H.225 channel (port 1720). This saves one TCP connection during calls. H.245 Tunneling was introduced in H.323v2 and Netmeeting does not support it. Using both Fast Start and H.245 Tunneling can crash some versions of Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Listen port">
+								<default type="int" value="1720"/>
+								<longdesc>The port to listen to for incoming connections. Ekiga needs to be restarted for the new value to take effect.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="NAT Binding Timeout">
+								<default type="int" value="10"/>
+								<longdesc>Enter the number of seconds after which Ekiga should try refreshing the NAT binding when STUN is being used</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="DTMF sending">
+								<default type="int" value="1"/>
+								<longdesc>Select the mode for sending DTMFs. The values can be 0 (for &quot;RFC2833&quot;) and 1 (for &quot;INFO&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Forward calls to host">
+								<default type="string">
+									<stringvalue>sip:</stringvalue>
+								</default>
+								<longdesc>The host where calls should be forwarded if call forwarding is enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Outbound Proxy">
+								<default type="string">
+									<stringvalue></stringvalue>
+								</default>
+								<longdesc>The SIP Outbound Proxy to use for outgoing calls</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Listen port">
+								<default type="int" value="5060"/>
+								<longdesc>The port to listen to for incoming connections. Ekiga needs to be restarted for the new value to take effect</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Temporal Spatial Trade Off">
+								<default type="int" value="31"/>
+								<longdesc>Whether to prefer to sustain the max. frame rate or lower it possibly in order to keep a minimum level of (spatial) quality for all frames. 0: Highest minimal quality, 31: lowest minimal quality</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Maximum RX video bitrate">
+								<default type="int" value="4096"/>
+								<longdesc>The maximum RX video bitrate in kbit/s. This value will be signaled to the peer endpoint that can adjust (if it supports it) its TX bitrate if it is above the signaled value</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Maximum TX video bitrate">
+								<default type="int" value="64"/>
+								<longdesc>The maximum TX video bitrate in kbit/s. The video quality and the number of transmitted frames per second (depends on selected codec) will be dynamically adjusted above their minimum during calls to try to minimize the bandwidth to the given value</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list" mtime="1544383412" type="schema" stype="list" owner="Ekiga" list_type="string">
+							<local_schema locale="C" short_desc="The video codecs list">
+								<default type="list" ltype="string">
+									<li type="string">
+										<stringvalue>h264*90000*0*SIP*1</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>theora*90000*0*SIP*1</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>h261*90000*0*H.323 SIP*1</stringvalue>
+									</li>
+								</default>
+								<longdesc>The video codecs list</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Maximum jitter buffer">
+								<default type="int" value="500"/>
+								<longdesc>The maximum jitter buffer size for audio reception (in ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation" mtime="1544383411" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Enable echo cancellation">
+								<default type="bool" value="false"/>
+								<longdesc>If enabled, use echo cancellation</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection" mtime="1544383411" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Enable silence detection">
+								<default type="bool" value="false"/>
+								<longdesc>If enabled, use silence detection with the codecs supporting it</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list" mtime="1544383411" type="schema" stype="list" owner="Ekiga" list_type="string">
+							<local_schema locale="C" short_desc="The Audio Codecs List">
+								<default type="list" ltype="string">
+									<li type="string">
+										<stringvalue>Speex*16000*1*H.323 SIP*1</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>PCMU*8000*1*H.323 SIP*1</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>PCMA*8000*1*H.323 SIP*1</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>CELT*48000*1*SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>CELT*32000*1*SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>iLBC*8000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>gsm*8000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>G722*16000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>G7221*16000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>AMR-WB*16000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>Speex*8000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>G726-16*8000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>G726-24*8000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>G726-32*8000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>G726-40*8000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>ms-gsm*8000*1*H.323*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>SILK*16000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>SILK*8000*1*H.323 SIP*0</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>MS-IMA-ADPCM*8000*1*H.323*0</stringvalue>
+									</li>
+								</default>
+								<longdesc>The audio codecs list</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+						<local_schema locale="C" short_desc="Kind of network selected in the assistant">
+							<default type="int" value="2"/>
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Custom</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Automatic answer">
+								<default type="bool" value="false"/>
+								<longdesc>If enabled, automatically answer incoming calls</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="No answer timeout">
+								<default type="int" value="45"/>
+								<longdesc>Automatically reject or forward incoming calls if no answer is given after the specified amount of time (in seconds)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Remote video window position">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>The position of the remote video window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Remote video window size">
+									<default type="string">
+										<stringvalue>176,144</stringvalue>
+									</default>
+									<longdesc>The size of the remote video window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+								<local_schema locale="C" short_desc="The video view before having switched to fullscreen">
+									<default type="int" value="1"/>
+									<longdesc>The video view before having switched to fullscreen (same values as video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+								<local_schema locale="C" short_desc="The default video view">
+									<default type="int" value="2"/>
+									<longdesc>The default video view (0: Local, 1: Remote, 2: Both, 3: Both in a separate window)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+								<local_schema locale="C" short_desc="Place windows displaying video above other windows during calls">
+									<default type="bool" value="true"/>
+									<longdesc>Place windows displaying video above other windows during calls</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+								<local_schema locale="C" short_desc="The zoom value">
+									<default type="int" value="100"/>
+									<longdesc>The zoom value in percent to apply to images displayed in the main GUI (can be 50, 100, or 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+								<local_schema locale="C" short_desc="Specify the software scaling algorithm">
+									<default type="int" value="0"/>
+									<longdesc>Specify the software scaling algorithm: 0: nearest neighbor, 1: nearest neighbor with box filter, 2: bilinear filtering, 3: hyperbolic filtering. Does not apply on windows systems.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+								<local_schema locale="C" short_desc="Allow picture-in-picture software scaling">
+									<default type="bool" value="true"/>
+									<longdesc>Allow Ekiga to fall back to software scaling the picture-in-picture if hardware support is not available. If this is set to false, Ekiga will not try to open the PIP if hardware support is not available.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+								<local_schema locale="C" short_desc="Disable video hardware acceleration">
+									<default type="bool" value="false"/>
+									<longdesc>This key disables DirectX (on win32) and XVideo (on Linux) video hardware acceleration</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Size of the preferences window">
+									<default type="string">
+										<stringvalue>470,250</stringvalue>
+									</default>
+									<longdesc>Size of the preferences window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the preferences window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the preferences window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Size of the preferences window">
+									<default type="string">
+										<stringvalue>-1,-1</stringvalue>
+									</default>
+									<longdesc>Size of the preferences window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the preferences window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the preferences window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Size of the video settings window">
+									<default type="string">
+										<stringvalue>250,160</stringvalue>
+									</default>
+									<longdesc>Size of the video settings window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the video settings window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the video settings window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Size of the audio settings window">
+									<default type="string">
+										<stringvalue>250,125</stringvalue>
+									</default>
+									<longdesc>Size of the audio settings window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the audio settings window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the audio settings window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Size of the address book window">
+									<default type="string">
+										<stringvalue>770,470</stringvalue>
+									</default>
+									<longdesc>Size of the address book window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the address book window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the address book window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the druid window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the druid window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Size of the druid window">
+									<default type="string">
+										<stringvalue>525,345</stringvalue>
+									</default>
+									<longdesc>Size of the druid window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the chat window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the chat window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Size of the chat window">
+									<default type="string">
+										<stringvalue>375,400</stringvalue>
+									</default>
+									<longdesc>Size of the chat window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section" mtime="1544383412" type="schema" stype="int" owner="Ekiga">
+								<local_schema locale="C" short_desc="Change the panel section of the main window">
+									<default type="int" value="0"/>
+									<longdesc>Change the panel section of the main window (0=Contacts, 1=Dialpad, 2=Call history)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the main window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the main window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Size of the call window">
+									<default type="string">
+										<stringvalue>270,250</stringvalue>
+									</default>
+									<longdesc>Size of the call window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+								<local_schema locale="C" short_desc="Position on the screen of the call window">
+									<default type="string">
+										<stringvalue>0,0</stringvalue>
+									</default>
+									<longdesc>Position on the screen of the call window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Enable STUN network detection">
+								<default type="bool" value="true"/>
+								<longdesc>Enable the automatic network setup resulting from the STUN test</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="The STUN Server">
+								<default type="string">
+									<stringvalue>stun.ekiga.net</stringvalue>
+								</default>
+								<longdesc>The STUN server to use for STUN Support. STUN is a technology that permits passage through some types of NAT gateway</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="The busy tone sound">
+								<default type="string">
+									<stringvalue>busytone.wav</stringvalue>
+								</default>
+								<longdesc>The sound that will be played at the end of calls or when calling somebody who is busy, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Play busy tone">
+								<default type="bool" value="true"/>
+								<longdesc>The chosen sound will be played at the end of calls or calling somebody who is busy, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="The dial tone sound">
+								<default type="string">
+									<stringvalue>dialtone.wav</stringvalue>
+								</default>
+								<longdesc>The sound that will be played when calling somebody, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Play ring tone">
+								<default type="bool" value="true"/>
+								<longdesc>The chosen sound will be played when calling somebody, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Play sound on new voice mail">
+								<default type="bool" value="true"/>
+								<longdesc>The chosen sound will be played when a new voice mail is received, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="The new voice mail sound">
+								<default type="string">
+									<stringvalue>voicemail.wav</stringvalue>
+								</default>
+								<longdesc>The sound that will be played when there is a new voice mail, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound" mtime="1544383412" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Play sound on new message">
+								<default type="bool" value="true"/>
+								<longdesc>The chosen sound will be played when a new instant message is received, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound" mtime="1544383412" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="The new instant message sound">
+								<default type="string">
+									<stringvalue>newmessage.wav</stringvalue>
+								</default>
+								<longdesc>The sound that will be played when there is a new instant message, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound" mtime="1544383411" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Play sound on incoming calls">
+								<default type="bool" value="true"/>
+								<longdesc>The chosen sound will be played on incoming calls, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound" mtime="1544383411" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="The incoming call sound">
+								<default type="string">
+									<stringvalue>ring.wav</stringvalue>
+								</default>
+								<longdesc>The sound that will be played on incoming calls, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device" mtime="1544383411" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Alternative audio output device">
+								<default type="string">
+									<stringvalue></stringvalue>
+								</default>
+								<longdesc>Select an alternative audio output device to use for sound events.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="available_custom_status" mtime="1544383411" type="schema" stype="list" list_type="string">
+							<local_schema locale="C" short_desc="">
+								<default type="list" ltype="string">
+								</default>
+								<longdesc></longdesc>
+							</local_schema>
+						</entry>
+						<entry name="busy_custom_status" mtime="1544383411" type="schema" stype="list" list_type="string">
+							<local_schema locale="C" short_desc="">
+								<default type="list" ltype="string">
+								</default>
+								<longdesc></longdesc>
+							</local_schema>
+						</entry>
+						<entry name="away_custom_status" mtime="1544383411" type="schema" stype="list" list_type="string">
+							<local_schema locale="C" short_desc="">
+								<default type="list" ltype="string">
+								</default>
+								<longdesc></longdesc>
+							</local_schema>
+						</entry>
+						<entry name="long_status" mtime="1544383411" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Contact long status">
+								<default type="string">
+									<stringvalue>I&apos;m available using Ekiga</stringvalue>
+								</default>
+								<longdesc>The long status information</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status" mtime="1544383411" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Contact short status">
+								<default type="string">
+									<stringvalue>available</stringvalue>
+								</default>
+								<longdesc>The short status information</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name" mtime="1544383411" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Full name">
+								<default type="string">
+									<stringvalue></stringvalue>
+								</default>
+								<longdesc>Enter your full name</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate" mtime="1544383411" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Frame Rate">
+								<default type="int" value="30"/>
+								<longdesc>The maximum transmitted frame rate in frames/s. This rate may not be reached in case a minimum quality was configure via a TSTO value smaller than 31 and the bitrate selected is not sufficient to support this minimum quality</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview" mtime="1544383411" type="schema" stype="bool" owner="Ekiga">
+							<local_schema locale="C" short_desc="Video preview">
+								<default type="bool" value="false"/>
+								<longdesc>Display images from your camera device</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format" mtime="1544383411" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Video format">
+								<default type="int" value="0"/>
+								<longdesc>Select the format for video cameras (does not apply to most USB cameras)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel" mtime="1544383411" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Video channel">
+								<default type="int" value="0"/>
+								<longdesc>The video channel number to use (to select camera, tv or other sources)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size" mtime="1544383411" type="schema" stype="int" owner="Ekiga">
+							<local_schema locale="C" short_desc="Video size">
+								<default type="int" value="0"/>
+								<longdesc>Select the transmitted video size: Small (QCIF 176x144) or Large (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device" mtime="1544383411" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Video input device">
+								<default type="string">
+									<stringvalue></stringvalue>
+								</default>
+								<longdesc>Select the video input device to use. If an error occurs when using this device a test picture will be transmitted.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device" mtime="1544383411" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Audio input device">
+								<default type="string">
+									<stringvalue></stringvalue>
+								</default>
+								<longdesc>Select the audio input device to use</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device" mtime="1544383411" type="schema" stype="string" owner="Ekiga">
+							<local_schema locale="C" short_desc="Audio output device">
+								<default type="string">
+									<stringvalue></stringvalue>
+								</default>
+								<longdesc>Select the audio output device to use</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks" mtime="1544383400" type="schema" stype="list" owner="gconf-editor" list_type="string">
+					<local_schema locale="C" short_desc="Bookmarks">
+						<default type="list" ltype="string">
+						</default>
+						<longdesc>gconf-editor folder bookmarks</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list" mtime="1544383340" type="schema" stype="list" owner="aisleriot" list_type="string">
+					<local_schema locale="C" short_desc="Recently played games">
+						<default type="list" ltype="string">
+						</default>
+						<longdesc>A list of recently played games.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics" mtime="1544383340" type="schema" stype="list" owner="aisleriot" list_type="string">
+					<local_schema locale="C" short_desc="Statistics of games played">
+						<default type="list" ltype="string">
+						</default>
+						<longdesc>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file" mtime="1544383340" type="schema" stype="string" owner="aisleriot">
+					<local_schema locale="C" short_desc="The game file to use">
+						<default type="string">
+							<stringvalue>klondike.scm</stringvalue>
+						</default>
+						<longdesc>The name of the scheme file containing the solitaire game to play.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations" mtime="1544383340" type="schema" stype="bool" owner="aisleriot">
+					<local_schema locale="C" short_desc="Animations">
+						<default type="bool" value="true"/>
+						<longdesc>Whether or not to animate card moves.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound" mtime="1544383340" type="schema" stype="bool" owner="aisleriot">
+					<local_schema locale="C" short_desc="Sound">
+						<default type="bool" value="false"/>
+						<longdesc>Whether or not to play event sounds.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move" mtime="1544383340" type="schema" stype="bool" owner="aisleriot">
+					<local_schema locale="C" short_desc="Select the style of control">
+						<default type="bool" value="false"/>
+						<longdesc>Select whether to drag the cards or to click on the source then the destination.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar" mtime="1544383340" type="schema" stype="bool" owner="aisleriot">
+					<local_schema locale="C" short_desc="Whether or not to show the status bar">
+						<default type="bool" value="true"/>
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar" mtime="1544383340" type="schema" stype="bool" owner="aisleriot">
+					<local_schema locale="C" short_desc="Whether or not to show the toolbar">
+						<default type="bool" value="true"/>
+					</local_schema>
+				</entry>
+				<entry name="card_style" mtime="1544383340" type="schema" stype="string" owner="aisleriot">
+					<local_schema locale="C" short_desc="Theme file name">
+						<default type="string">
+							<stringvalue></stringvalue>
+						</default>
+						<longdesc>The name of the file with the graphics for the cards.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options" mtime="1544382862" type="schema" stype="list" list_type="string">
+							<local_schema locale="C" short_desc="Default mount options for ntfs-3g fs">
+								<default type="list" ltype="string">
+									<li type="string">
+										<stringvalue>locale=</stringvalue>
+									</li>
+								</default>
+								<longdesc>A list of default mount options for volumes formatted with the ntfs file system using ntfs-3g.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override" mtime="1544382862" type="schema" stype="string">
+							<local_schema locale="C" short_desc="When &apos;ntfs&apos; is detected, what file system driver to use by default">
+								<default type="string">
+									<stringvalue></stringvalue>
+								</default>
+								<longdesc>The name of the file system driver to use by default when &apos;ntfs&apos; is detected. This is useful for configuring the system to use the &apos;ntfs-3g&apos; driver for all &apos;ntfs&apos; file systems by default. User can still choose to use the &apos;ntfs&apos; file system driver by overriding it per-volume or on the command line.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options" mtime="1544382862" type="schema" stype="list" list_type="string">
+							<local_schema locale="C" short_desc="Default mount options for ntfs fs">
+								<default type="list" ltype="string">
+									<li type="string">
+										<stringvalue>-m=755</stringvalue>
+									</li>
+								</default>
+								<longdesc>A list of default mount options for volumes formatted with the ntfs file system.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options" mtime="1544382862" type="schema" stype="list" list_type="string">
+							<local_schema locale="C" short_desc="Default mount options for udf fs">
+								<default type="list" ltype="string">
+								</default>
+								<longdesc>A list of default mount options for volumes formatted with the udf file system.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options" mtime="1544382862" type="schema" stype="list" list_type="string">
+							<local_schema locale="C" short_desc="Default mount options for iso9660 fs">
+								<default type="list" ltype="string">
+								</default>
+								<longdesc>A list of default mount options for volumes formatted with the iso9660 file system.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options" mtime="1544382862" type="schema" stype="list" list_type="string">
+							<local_schema locale="C" short_desc="Default mount options for vfat fs">
+								<default type="list" ltype="string">
+									<li type="string">
+										<stringvalue>longnames</stringvalue>
+									</li>
+									<li type="string">
+										<stringvalue>-u=</stringvalue>
+									</li>
+								</default>
+								<longdesc>A list of default mount options for volumes formatted with the vfat file system.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+		<dir name="desktop">
+			<dir name="gnome">
+				<dir name="policykit">
+					<entry name="auth_dialog_retain_authorization_blacklist" mtime="1544382801" type="schema" stype="list" owner="policykit-gnome" list_type="string">
+						<local_schema locale="C" short_desc="A list of actions where the &quot;retain authorization&quot; checkbox isn&apos;t checked by default">
+							<default type="list" ltype="string">
+							</default>
+							<longdesc>
+          A list of PolicyKit action where the &quot;retain authorization&quot;
+          checkbox isn&apos;t checked by default; this list is maintained
+          by the authentication dialog code itself. For example, if a
+          user unchecks the &quot;retain authorization&quot; check box for an
+          action and successfully obtains an authorization for the
+          action, the action will be added to this list.
+         </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_retain_authorization" mtime="1544382801" type="schema" stype="bool" owner="policykit-gnome">
+						<local_schema locale="C" short_desc="Whether the retain authorization check box is checked by default">
+							<default type="bool" value="true"/>
+							<longdesc>
+          If set to true, then &quot;retain authorization&quot; check box (if present) is
+          checked by default in the authentication dialog unless the action
+          is mentioned in the
+          &quot;/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist&quot;
+          key.
+         </longdesc>
+						</local_schema>
+					</entry>
+					<entry name="auth_dialog_grab_keyboard" mtime="1544382801" type="schema" stype="bool" owner="policykit-gnome">
+						<local_schema locale="C" short_desc="Whether the authentication dialog should grab the keyboard">
+							<default type="bool" value="true"/>
+							<longdesc>
+          If set to true, the authentication dialog from PolicyKit-gnome will grab the keyboard,
+          so that you will not be able to type in other programs while the dialog is active.
+	  Use this if your window manager does not focus the authentication dialog automatically,
+	  and you want to avoid accidentally typing passwords in other programs.
+         </longdesc>
+						</local_schema>
+					</entry>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+	<dir name="desktop">
+		<dir name="gnome">
+			<dir name="policykit">
+				<entry name="auth_dialog_retain_authorization_blacklist" mtime="1544382801" schema="/schemas/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist"/>
+				<entry name="auth_dialog_retain_authorization" mtime="1544382801" schema="/schemas/desktop/gnome/policykit/auth_dialog_retain_authorization"/>
+				<entry name="auth_dialog_grab_keyboard" mtime="1544382801" schema="/schemas/desktop/gnome/policykit/auth_dialog_grab_keyboard"/>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

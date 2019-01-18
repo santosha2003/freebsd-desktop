@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="protocols">
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Gqithisa unxibelelwano oluya kumququzeleli onikiweyo ukuba akukho mpendulo">
+								<longdesc>Ukuba iyasebenze, lonke unxulumano ngeefowuni ezingenayo luza kugqithiselwa kumququzeleli obaluliweyo kwindawo engezansi ukuba awuphenduli unxulumano</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Gqithisa unxibelelwano oluya kumququzeleli onikiweyo ukuba uxakekile">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Gqithisa rhoqo ugqithisa unxulumano kumququzeleli onikiweyo">
+								<longdesc>Ukuba iyasebenze, lonke unxulumano ngefowuni ezingenayo luza kugqithiselwa kumququzeleli obaluliweyo kwindawo engezansi</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="Uluhlu lwendawo yonxulumano lwe-UDP">
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="Uluhlu lwendawo yonxulumano lwe-TCP">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Gqithisa unxibelelwano oluya kumququzeleli">
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF iya-thumela">
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Yenza ukuba isebenze ngo-&apos;Fast Start&apos;">
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Ukwenza ukuba i-H.245 isebenze kwangoko">
+								<longdesc>Lena yenza i-H.245 isebenze ekuqaleli ekumiseleni inkqubo</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Indawo yonxulumano yokumamela">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF iya-thumela">
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Gqithisa unxibelelwano oluya kumququzeleli">
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Indawo yonxulumano yokumamela">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Ubukhulu bobuphaku-phaku besigcini sethutyana">
+								<longdesc>Ubukhulu besigcini sethutyana esi siphaku-phaku solwamnkelo lwesandi (in ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Yenza ukuba ikwazi ukufumanisa inzolo">
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Uluhlu lwe Codecs ezinesandi">
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<dir name="call_options">
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Ukuphela kwexesha kungekho mpendulo">
+								<longdesc>Iyayala ngokwayo okanye igqithisele unxulumano olungenayo ukuba akukho mpendulo inikiweyo kubungakanani bexesha elichaziweyo (kwimizuzwana)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Indawo yefestile yevidiyo ekwenye indawo">
+									<longdesc>Indawo yefestile yevidiyo ekwenye indawo</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Ubungakanani befestile yevidiyo ekwenye indawo">
+									<longdesc>Ubungakanani befestile yevidiyo ekwenye indawo</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view">
+								<local_schema short_desc="Emiselweyo okubona ividiyo">
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Beka iifestile ezibonisa ividiyo ngaphezulu kwezinye ngexesha lonxibelelwano">
+									<longdesc>Beka iifestile ezibonisa ividiyo ngaphezulu kwezinye ngexesha lonxibelelwano</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Ixabiso lokwandisa">
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Ubungakanani befestile yoluhlu lwezinto ezikhethwayo">
+									<longdesc>Ubungakanani befestile yoluhlu lwezinto ezikhethwayo</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Indawo ekwiskrini sefestile yoluhlu lwezinto ezikhethwayo">
+									<longdesc>Indawo ekwiskrini sefestile yoluhlu lwezinto ezikhethwayo</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Ubungakanani befestile yoluhlu lwezinto ezikhethwayo">
+									<longdesc>Ubungakanani befestile yoluhlu lwezinto ezikhethwayo</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Indawo ekwiskrini sefestile yoluhlu lwezinto ezikhethwayo">
+									<longdesc>Indawo ekwiskrini sefestile yoluhlu lwezinto ezikhethwayo</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Ubungakanani befestile yencwadi yedilesi">
+									<longdesc>Ubungakanani befestile yencwadi yedilesi</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Indawo esesikrinini yefestile yencwadi yedilesi">
+									<longdesc>Indawo esesikrinini yefestile yencwadi yedilesi</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Indawo eseskrinini yefestile ye-druid">
+									<longdesc>Indawo eseskrinini yefestile ye-druid</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Ubungakanani befestile ye-druid">
+									<longdesc>Ubungakanani befestile ye-druid</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="position">
+								<local_schema short_desc="Indawo esesikrinini yefestile enkulu">
+									<longdesc>Indawo esesikrinini yefestile enkulu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="stun_server">
+							<local_schema short_desc="I-STUN Seva">
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Isandi esixakekileyo">
+								<longdesc>Isandi esiza kudlalwa ekupheleni konxibelelwano okanye kunxulumano nomntu oxakekileyo, ukuba yenziwe isebenze</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Dlala isandi sokuxakeka">
+								<longdesc>Isandi esikhethiweyo siza kudlalwa ekupheleni konxibelelwano okanye kunxulumano nomntu oxakekileyo, ukuba yenziwe isebenze</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema>
+								<longdesc>Isandi esizodlalwa xa unxulumanisa umntu othile, ukuba yenziwe isebenze</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Dlala isandi sengxolo">
+								<longdesc>Isandi esikhethiweyo siza kudlalwa xa unxulumana nomnye umntu, ukuba yenziwe isebenze</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Dlala isandi kunxulumano ngefowuni olungenayo">
+								<longdesc>Isandi esikhethiweyo siza kudlalwa xa kungena unxulumano, ukuba yenziwe isebenze</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Iisandi sonxulumano ngefowuni engenayo">
+								<longdesc>Isandi esiza kudlalwa xa kungena unxulumano, ukuba yenziwe isebenze</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Isantya Se-frame">
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Ukujonga ividiyo phambi koshicilelo">
+								<longdesc>Bonisa imifanekiso yakho ekwisixhobo sekhamera esikrinini</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Ukulungiselela kwe vidiyo">
+								<longdesc>Khetha inkqubo elungiselela iikhamera zevidiyo (ayisebenzi kuninzi lweekhamera ze-USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Isiqhagamshelanisi sevidiyo">
+								<longdesc>Inombolo yesiqhagamshelanisi sevidiyo yokusetyenziswa (ukukhetha ikhamera, i-tv okanye abanye ovimba)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Ubungakanani bevidiyo">
+								<longdesc>Khetha ubungakanani bevidiyo esasaziweyo: Encinci (QCIF 176x144) okanye enkulu (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Isixhobo sekhompyutha esingenisa ividiyo">
+								<longdesc>Khetha isixhobo songeniso kwividiyo emasisetyenziswe. Ukuba kukho impazamo logama usebenzisa esi sixhobo umfanekiso wovavanyo uza kusasazwa.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Isixhobo sekhompyutha enesandi esingenisiweyo">
+								<longdesc>Khetha isixhobo sekhompyutha enesandi olungenisiweyo esiza kusebenza</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Isixhobo sekhompyutha enesandi esiphumayo">
+								<longdesc>Khetha isixhobo sekhompyutha enesandi esiphumayo esiza kusebenza</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Izinto zokuphawula">
+						<longdesc>Izinto zokuphawula zesiqulathi seefayili se-gconf-editor</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="statistics">
+					<local_schema short_desc="Ingqokelela yamanani yemidlalo edlaliweyo">
+						<longdesc>Uluhlu lwamagama oluvela ngezihlanu: igama, ukuphumelela, imidlalo edlaliweyo iyonke, ixesha elilunge ngqo (ngokweesekondi) nexesha elilelona libi (nalo ngokweesekondi). Imidlalo engadlalangwa akukho mfuneko yokuba ivezwe.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Ifayili yomdlalo emayisetyenziswe">
+						<longdesc>Igama lefayili eyiliweyo enomdlalo i-solitaire omawudlalwe.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Isandi">
+						<longdesc>Nokuba ngaba zidlalwe na izandi zezehlo okanye hayi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Khetha isimbo solawulo">
+						<longdesc>Khetha ukuba uwarhuqe na amakhadi okanye ucofe emthonjeni uze ulandelise ngesiphelo.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Nokuba ngaba iboniswe na i-toolbar">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Umxholo wegama lefayili">
+						<longdesc>Igama lefayili enemizobo yamakhadi.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

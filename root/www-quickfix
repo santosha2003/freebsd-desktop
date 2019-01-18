@@ -1,0 +1,58 @@
+#!/usr/local/bin/bash
+#
+pkg check -d
+make -C /usr/ports/multimedia clean
+cd /usr
+./update-svn
+
+pkg install -fRy graphics/opencv graphics/opencv-core devel/binutils lang/gcc49 audio/musepack audio/pulseaudio devel/dbus devel/gconf2 net/avahi-app sysutils/consolekit audio/twolame converters/fribidi devel/libzvbi devel/libunicode devel/sdl12 devel/nasm graphics/aalib graphics/libcaca graphics/freeglut graphics/ftgl graphics/sdl_image multimedia/libass converters/enca converters/p5-Unicode-Map8 converters/p5-Unicode-String converters/recode devel/tbb
+cd ~
+make CC=clang CPP=clang-cpp CXX=clang++ -C /usr/ports/devel/gettext-runtime clean build reinstall
+
+ffmpeg
+ #pkgng pack create packages for freebsd port and all dependency
+make -C /usr/ports/textproc/xmlcharent deinstall clean reinstall clean
+
+
+PACKAGESLINE="wordpress"
+echo $PACKAGESLINE
+   for LINE in `make -C $PORTPATH all-depends-list |cut -c 12-127`
+     do
+        echo -n "Creating package (${LINE})..."
+        PACKAGESLINE="$PACKAGESLINE ${LINE}"
+        make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 CPP=clang-cpp CXX=clang++ -m CC=clang -C /usr/ports/${LINE} clean reinstall
+     done
+PORTPATH=`whereis -s wordpress | awk '{print $2}'`
+echo $PORTPATH
+#make -C $PORTPATH all-depends-list  | cut -c 12-127
+#pkg create -o /root $1
+PACKAGESLINE="$PACKAGESLINE ffmpeg tbb cmake"
+echo $PACKAGESLINE
+   for LINE in `make -C $PORTPATH all-depends-list |cut -c 12-127`
+     do
+        echo -n "Creating package (${LINE})..."
+        PACKAGESLINE="$PACKAGESLINE ${LINE}"
+        make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 CPP=clang-cpp CXX=clang++ -m CC=clang -C /usr/ports/${LINE} clean reinstall
+     done
+
+echo $PACKAGESLINE
+
+        make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 CPP=clang-cpp CXX=clang++ -m CC=clang -C /usr/ports/graphics/pecl-imagick reinstall
+        make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 CPP=clang-cpp CXX=clang++ -m CC=clang -C /usr/ports/multimedia/vlc reinstall
+        make LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0 CPP=clang-cpp CXX=clang++ -m CC=clang -C /usr/ports/multimedia/ffmpeg reinstall
+portmaster -x binutils -x gcc49 -x gcc5 -x pkg -m LD_PRELOAD=/usr/local/lib/libgobject-2.0.so.0.4200.2 -m CPP=clang-cpp -m CXX=clang++ -m CC=clang ffmmpeg
+# make -C /usr/ports clean
+make -C /usr/ports/www/wordpress build reinstall
+make -C /usr/ports/databases/phpmyadmin reinstall
+make -C /usr/ports/www/mod_php56 clean reinstall
+make CC=clang CXX=clang++ CPP=clang-cpp -C /usr/ports/www/mod_perl2 reinstall
+make CC=clang CXX=clang++ CPP=clang-cpp -C /usr/ports/graphics/pecl-imagick reinstall
+chmod 644 /var/db/mysql/my.cnf
+/usr/local/etc/rc.d/mysql-server restart
+cp -R ~/www-bk/* /usr/local
+
+#cp ~/www-bk/httpd.conf  /usr/local/etc/apache24/httpd.conf
+#cp ~/www-bk/footer.php /usr/local/www/wordpress/wp-content/themes/twentythirteen
+#cp ~/www-bk/header.php /usr/local/www/wordpress/wp-content/themes/twentythirteen
+#cp ~/www-bk/functions.php /usr/local/www/wordpress/wp-content/themes/twentythirteen
+#cp ~/www-bk/f.php /usr/local/www/wordpress/wp-includes/functions.php

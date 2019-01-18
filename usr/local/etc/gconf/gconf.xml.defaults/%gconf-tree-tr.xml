@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Arama geçmişi">
+							<longdesc>Son 100 çağrının geçmişi</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP sunucuları">
+							<longdesc>Yapılandırılmış LDAP sunucularının listesi</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Çevrimdışı bağlantıları göster">
+							<longdesc>Etkinleştirilirse çevrimdışı bağlantılar listede görünecektir</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="Listedeki katlanmış grupların listesi">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Giden RTP IP paketlerindeki Hizmet Türü (TOS) baytı">
+							<longdesc>Giden RTP IP paketleri üzerindeki Hizmet Türü (TOS) baytı. Bu bayt, ağ tarafından belli bir düzeyde Servis Kalitesi (QoS) sunmak için kullanılır. Öntanımlı değer olan 184 (0xB8), RFC 3246 standardında tanımlandığı haliyle Hızlandırılmış İletim (EF) PHB değerine karşılık gelir.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="Hesaplar listesi">
+							<longdesc>Ekiga tarafından kaydedilecek hesapların listesi</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Cevapsız aramaları belirtilen makineye yönlendir">
+								<longdesc>Etkinleştirildiğinde, gelen aramalar yanıtlamadığınızda kendiliğinden altta belirtilen makineye yönlendirilecektir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Aramaları, meşgulseniz belirtilen makineye yönlendir">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Aramaları herzaman verilen makineye yönlendir">
+								<longdesc>Etkinleştirildiğinde, gelen aramalar kendiliğinden altta belirtilen makineye yönlendirilecek</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP port dizisi">
+								<longdesc>Ekiga&apos;nın kullanacağı UDP kapıların aralığı.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP port aralığı">
+								<longdesc>H.323 ve H.245 kanalı için Ekiga tarafından kullanılacak TCP portlarının aralığı. Konferanstaki katılımcıların tümü H.245 tünelleme kullanıyorsa bu port aralığının bir etkisi olmayacaktır.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Aramaları makineye yönlendir">
+								<longdesc>Çağrı yönlendirme etkinleştirilmişse yönlendirmenin yapılacağı makine</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF gönderme">
+								<longdesc>DTMF gönderimi kipini seçin. Değerler 0 (&quot;String&quot; için), 1 (&quot;Tone&quot; için), 2 (&quot;RFC2833&quot; için), ya da 3 (&quot;Q.931&quot; için) (öntanımlı &quot;String&quot;) olabilir. &quot;String&quot; seçeneğinden başka değerler seçmek Metin tabanlı Sohbeti devre dışı bırakır.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="&apos;Hızlı Başlat&apos;ı etkinleştir">
+								<longdesc>Bağlantı Hızlı Başlat kipinde kurulacaktır. Hızlı Başlat, aramaları daha hızlı başlatmak için H.323v2&apos; de belirtilen yeni bir yoldur. Netmeeting tarafından desteklenmez; Hızlı Başlat ve H.245 Tünellemesini birlikte kullanmak bazı Netmeeting sürümlerinin çökmesine neden olabilir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Erken H.245&apos;i etkinleştir">
+								<longdesc>Bu erken H.245&apos;i ayarlarda etkinleştirir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="H.245 tünellemeyi etkinleştir">
+								<longdesc>Bu, H.245 Tünelleme kipini etkinleştirir. H.245 Tünelleme kipinde, H.245 iletileri H.225 kanalında kapsüllenir (port 1720). Bu, aramalar sırasında bir TCP bağlantısını saklar. H.245 Tünelleme H.323v2 içinde tanımlanmıştır ve Netmeeting tarafından desteklenmemektedir. Hızlı Başlangıç ve H.245 Tünellemeyi birlikte kullanmak bazı Netmeeting sürümlerinin çökmesine neden olabilir.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Dinlenecek Port">
+								<longdesc>Gelen aramaların dinleneceği port. Yeni değerin etkili olabilmesi için Ekiga yeniden başlatılmalıdır.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT Bağlama Zaman Aşımı">
+								<longdesc>STUN kullanıldığı zaman kaç saniye sonra Ekiga&apos;nın NAT bağını tazelemesini istediğinizi girin</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF gönderme">
+								<longdesc>DTMF gönderimi kipini seçin. Değer olarak 0 (&quot;RFC2833&quot; için) ve 1 (&quot;INFO&quot; için) alabilir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Aramaları makineye yönlendir">
+								<longdesc>Çağrı yönlendirme etkinleştirilmişse yönlendirmenin yapılacağı makine</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Dışa Açılan Vekil">
+								<longdesc>Dışarıya aramalarda kullanılacak SIP Dışa Açılan Vekil</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Dinlenecek Port">
+								<longdesc>Gelen aramaların dinleneceği port. Yeni değerin etkili olabilmesi için Ekiga&apos;nın yeniden başlatılması gerekir</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Geçici Uzaysal Takas">
+								<longdesc>Tüm çerçeveler için en az kalite seviyesini (uzaysal) korumak için en fazla çerçeve oranının korunup korunmayacağı veya bu oranın düşürülüp düşürülmeyeceği. 0: En yüksek en az kalite, 31: en düşük en az kalite</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="En fazla RX video bit oranı">
+								<longdesc>Kbit/s olarak en fazla RX video bit oranı.Bu değer karşıdaki uç noktaya gönderilecek ve eğer bu değerden yüksekse kendi TX değerini düzeltmesini (destekliyorsa) sağlayacaktır.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="En fazla TX video bit oranı">
+								<longdesc>Kbit/s olarak en fazla TX video bit oranı. Çağrılar sırasında bent genişliğini verilen değere indirgemek için video kalitesi ve saniyede iletilen çerçeve sayısı (seçilen kodeğe bağlı) dinamik olarak ayarlanabilir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Video kodekleri listesi">
+								<longdesc>Video kodekleri listesi</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="En büyük stres tamponu">
+								<longdesc>Ses kabulü için en fazla stres tamponu büyüklüğü (ms olarak)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Sessizlik algılamayı etkinleştir">
+								<longdesc>Etkinleştirildiğinde, destekleyen kodekler ile sessizlik algılayıcı kullan</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="Ses Kodekleri Listesi">
+								<longdesc>Ses kodekleri listesi</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Sihirbazda seçilen ağ çeşidi">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Özel</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Otomatik cevap">
+								<longdesc>Eğer etkinse, gelen aramaları otomatik olarak cevapla</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="Cevap alamama zaman aşımı">
+								<longdesc>Belirlenen bir süre (saniye) sonunda eğer cevap yok ise, gelen aramaları kendiliğinden reddet veya yönlendir</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Uzaktaki video penceresinin pozisyonu">
+									<longdesc>Uzaktaki video penceresi pozisyonu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Uzaktaki video penceresinin boyutu">
+									<longdesc>Uzaktaki video penceresinin boyutu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="Tam ekrana geçiş yapmadan önceki video görünümü">
+									<longdesc>Tam ekrana geçiş yapmadan önceki video görünümü (video _görünümü ile aynı değer)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="Öntanımlı video görünümü">
+									<longdesc>Öntanımlı video görünümü (0: Yerel, 1: Uzaktan, 2: Her ikisi birden, 3: Her ikisi birden ayrı pencerede)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="Çağrılar sırasında video gösteren pencereleri diğer pencereler üzerine yerleştirir">
+									<longdesc>Çağrılar sırasında video gösteren pencereleri diğer pencereler üzerine yerleştirir</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="Büyütme değeri">
+									<longdesc>Ana GUI&apos;de görüntülenen görüntülere uygulanacak büyütmenin yüzde değeri (50, 100, ya da 200 olabilir)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Yazılım ölçeklendirme algoritmasını belirtin">
+									<longdesc>Yazılımsal ölçeklendirme algoritmasını belirtin: 0: en yakın komşu, 1: kutu filtreli en yakın komşu 2: çiftdoğrusal filtreleme, 3: hiperbolik filtreleme. Windows sistemlerde uygulanmaz.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Resim-içinde-resim ölçeklendirmesine izin ver">
+									<longdesc>Eğer donanımsal destek yoksa Ekiga&apos;nın yazılımsal resim-içinde-resim ölçeklendirmesine dönmesine izin ver. Eğer hayır seçilirse, donanımsal destek yoksa Ekiga RIR açmayacak.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Video donanımsal hızlandırmayı etkisizleştir">
+									<longdesc>Bu anahtar DirectX (win32 üzerinde) ve XVideo (Linux üstünde) donanımsal video hızlandırmayı etkisizleştirir</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Tercihler penceresinin boyutu">
+									<longdesc>Tercihler penceresinin boyutu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Tercihler penceresinin ekrandaki pozisyonu">
+									<longdesc>Tercihler penceresinin ekrandaki pozisyonu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Tercihler penceresinin boyutu">
+									<longdesc>Tercihler penceresinin boyutu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Tercihler penceresinin ekrandaki pozisyonu">
+									<longdesc>Tercihler penceresinin ekrandaki pozisyonu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Video ayarları penceresinin boyutu">
+									<longdesc>Video ayarları penceresinin boyutu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Video ayarları penceresinin ekrandaki konumu">
+									<longdesc>Video ayarları penceresinin ekrandaki konumu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Ses ayarları penceresinin boyutu">
+									<longdesc>Ses ayarları penceresinin boyutu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Ses ayarları penceresinin ekrandaki konumu">
+									<longdesc>Ses ayarları penceresinin ekrandaki konumu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Adres defteri penceresi boyutu">
+									<longdesc>Adres defteri penceresi boyutu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Adres defteri penceresinin ekrandaki pozisyonu">
+									<longdesc>Adres defteri penceresinin ekrandaki pozisyonu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Sihirbaz penceresinin ekrandaki pozisyonu">
+									<longdesc>Sihirbaz penceresinin ekrandaki pozisyonu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Sihirbaz penceresinin boyutu">
+									<longdesc>Sihirbaz penceresinin boyutu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Sohbet penceresinin ekrandaki pozisyonu">
+									<longdesc>Sohbet penceresinin ekrandaki pozisyonu</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Sohbet penceresinin boyutu">
+									<longdesc>Sohbet penceresinin boyutu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Ana pencerenin panel sekmesini değiştir">
+									<longdesc>Ana pencerenin panel sekmesini değiştir (0=Bağlantılar, 1=Tuş takımı, 2=Arama geçmişi)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Ana pencerenin ekrandaki pozisyonu">
+									<longdesc>Ana pencerenin ekrandaki pozisyonu</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="STUN ağ tespitini etkinleştir">
+								<longdesc>STUN testi sonucundaki otomatik ağ yapılandırmasını etkinleştir</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN Sunucusu">
+								<longdesc>STUN desteği için kullanılacak STUN sunucusu. STUN bazı tür NAT geçitleri üzerinden geçişi sağlayan bir teknolojidir</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="Meşgul tonu sesi">
+								<longdesc>Eğer seçiliyse, çağrıların sonunda veya meşgul birine çağrı yaparken çalınacak ses</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="Meşgul tonu çal">
+								<longdesc>Eğer seçiliyse, seçilen ses çağrıların sonunda veya aranan kişi meşgul ise çalınacak</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="Arama tonu sesi">
+								<longdesc>Eğer seçiliyse, birine çağrı yaparken çalınacak ses</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="Zil tonu çal">
+								<longdesc>Eğer seçiliyse, seçilen ses birini ararken çalınacak</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Yeni sesli postada ses çal">
+								<longdesc>Etkinleştirilmişse, yeni bir sesli posta alındığında çalacak ses</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="Yeni sesli mesaj sesi">
+								<longdesc>Etkinleştirilmişse, yeni bir sesli posta varsa çalacak ses</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Yeni mesajda ses çal">
+								<longdesc>Etkinleştirilmişse, yeni bir anında mesaj alındığında çalacak ses</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="Yeni anında mesaj sesi">
+								<longdesc>Etkinleştirilmişse, yeni bir anında mesaj varsa çalacak ses</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="Gelen aramalarda bir ses çal">
+								<longdesc>Eğer seçiliyse, seçilen ses gelen çağrılarda çalınacak</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="Gelen arama sesi">
+								<longdesc>Eğer seçiliyse, gelen çağrılarda çalınacak ses</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Alternatif ses çıkış aygıtı">
+								<longdesc>Ses olayları için kullanılacak alternatif bir ses çıkış aygıtı seçin.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Bağlantı uzun durumu">
+								<longdesc>Uzun durum ilgisi</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Bağlantı kısa durumu">
+								<longdesc>Kısa durum bilgisi</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Tam isim">
+								<longdesc>Tam ismininizi girin</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="Çerçeve Oranı">
+								<longdesc>Çerçeve/s olarak iletilen en fazla çerçeve oranı. En düşük kalite 31&apos;den küçük bir TSTO değeri ile ayarlanmışsa ve seçilen bit oranı bu en düşük kaliteyi desteklemek için yetersizse bu orana ulaşılamayabilir.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Video önizleme">
+								<longdesc>Kamera aygıtından görüntüleri göster</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Video biçimi">
+								<longdesc>Video kameraları için tip seçin (Bir çok USB kameraya uygulanamaz)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Video kanalı">
+								<longdesc>Kullanılacak video kanalı sayısı (kamera, tv ya da diğer kaynakları seçmek için)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Video boyutu">
+								<longdesc>İletilen video büyüklüğünü seçiniz: Küçük (QCIF 176x144) ya da Büyük (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Video girdi aygıtı">
+								<longdesc>Kullanılacak video girdi aygıtını seçin. Eğer bu aygıtı kullanırken bir hata oluşursa, bir deneme resmi iletilecektir.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Ses girdi aygıtı">
+								<longdesc>Kullanılacak ses girdi aygıtını seçin</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Ses çıkış aygıtı">
+								<longdesc>Kullanılacak ses çıkış aygıtını seçin</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Yer imleri">
+						<longdesc>gconf-editor klasör yer imleri</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Yakınlarda oynanmış oyunlar">
+						<longdesc>Yakınlarda oynanmış oyunların bir listesi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Oynanan oyun hakkındali istatistikler">
+						<longdesc>Beşli olarak gelen dizgilerin anlamları: isim, kazandığı, toplam oynanan oyun, en iyi zaman (saniye) ve en kötü zaman (saniye). Oynanmayan oyunları belirtme ihtiyacı duyulmadı.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="Kullanılacak oyun dosyası">
+						<longdesc>Oynanılacak iskambil falı oyununu içeren şema dosyasının ismi.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Canlandırmalar">
+						<longdesc>Kart hareketlerinin canlandırmalı olup olmayacağı</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Ses">
+						<longdesc>Olay seslerinin çalınıp çalınmayacağı.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Kontrol biçimini seçin">
+						<longdesc>Kağıtları taşınmasını mı yoksa kaynağa sonra da hedefe tıklanmasını mı istediğinizi seçin.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Durum çubuğunu göster veya gizle">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Araç çubuğunu göster veya gizle">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Tema dosyasının ismi">
+						<longdesc>Kartlar için grafikleri içeren dosyanın adı.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

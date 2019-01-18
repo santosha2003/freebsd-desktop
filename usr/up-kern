@@ -1,0 +1,18 @@
+#!/bin/sh
+
+cp /usr/src/sys/amd64/conf/GENERIC /usr/kern
+cp /usr/src/sys/kern/kern_module.c /usr/kern_module.orig
+cp /usr/kern/KERN64* /usr/src/sys/amd64/conf
+cp  /usr/kern_module.c /usr/src/sys/kern/kern_module.c
+
+#kernel world
+#script /root/up-kern.out
+cd /usr/src
+make cleandir
+make cleandir
+make kernel-toolchain
+#make -j4 buildworld  >>/root/build-w.out
+#make buildworld  >>/root/build-w.out
+make -j4 kernel KERNCONF=KERN64  >>/root/up-kern.out
+make cleandepend
+make depend

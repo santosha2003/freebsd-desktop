@@ -1,0 +1,4 @@
+#!/usr/local/bin/bash
+/usr/local/bin/svn up --force --non-interactive /usr/src
+/usr/local/bin/svn up --force --non-interactive /usr/ports
+#

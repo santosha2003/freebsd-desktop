@@ -1,0 +1,22 @@
+/sbin/ipfw -f flush
+/sbin/ipfw add allow tcp from any to me dst-port 1723 in via igb1
+/sbin/ipfw add allow tcp from any to me dst-port 1701 in via igb1
+/sbin/ipfw add allow tcp from any to me dst-port 443 in via igb1
+/sbin/ipfw add allow udp from any to me dst-port 500 in via igb1
+/sbin/ipfw add allow udp from any to me dst-port 1701 in via igb1
+/sbin/ipfw add allow udp from any to me dst-port 4500 in via igb1
+/sbin/ipfw add nat 123 ip from any to me recv igb1 in
+/sbin/ipfw add allow esp from any to me in via igb1
+/sbin/ipfw add allow ip from any to any in
+/sbin/ipfw add nat 123 gre from 192.168.3.0/24 to any xmit igb1 out
+/sbin/ipfw add nat 123 esp from 192.168.3.0/24 to any xmit igb1 out
+/sbin/ipfw add nat 123 ip from 192.168.3.0/24 to any xmit igb1 out
+/sbin/ipfw add allow gre from any to any
+/sbin/ipfw add allow esp from any to any
+/sbin/ipfw add allow ip from any to any via igb0
+/sbin/ipfw add allow ip from any to any via lo0
+/sbin/ipfw add allow icmp from any to any
+/sbin/ipfw add allow ipv6-icmp from any to any
+/sbin/ipfw add allow ip6 from any to any
+/sbin/ipfw nat 123 config if igb1 redirect_port tcp 192.168.3.2:1723 1723  redirect_port tcp 192.168.3.2:4899 4900 redirect_port tcp 192.168.3.2:443 443 redirect_port udp 192.168.3.2:1701 1701 redirect_port udp 192.168.3.2:500 500 redirect_port udp 192.168.3.2:4500 4500
+/sbin/ipfw add allow ip from any to any

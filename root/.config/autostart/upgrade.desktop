@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=gnome-terminal -- "/usr/up1"
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name[ru_RU]=upgrade
+Name=upgrade
+Comment[ru_RU]=upgrade
+Comment=upgrade

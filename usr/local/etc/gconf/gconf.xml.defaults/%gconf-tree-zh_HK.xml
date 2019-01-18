@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="通話記錄">
+							<longdesc>最近 100 個電話記錄</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP 伺服器">
+							<longdesc>設定的 LDAP 伺服器清單</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="顯示離線聯絡人">
+							<longdesc>如果啟用，離線聯絡人會顯示在名冊中</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="名冊中摺疊的羣組清單">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="外送 RTP IP 封包的服務的類型 (TOS) 位元組">
+							<longdesc>外送 RTP IP 封包的服務的類型 (TOS) 位元組。這個位元組是網絡用來提供某種層級的服務質量 (QoS)。預設數值 184 (0xB8) 對應到 RFC 3246 所定義的 Expedited Forwarding (EF) PHB。</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="帳號清單">
+							<longdesc>Ekiga 需要註冊的帳號清單</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="無應答時轉駁來電至指定的主機">
+								<longdesc>如啟用，所有你沒有接聽的電話都會轉駁到下面所指定的主機。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="忙線時轉駁來電至指定的主機">
+								<longdesc>如啟用，若你在通話中或處於請勿打擾狀態時，所有電話都會轉駁到下面所指定的主機</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="總是轉駁來電到指定的主機">
+								<longdesc>如啟用，所有電話都會轉駁到下面所指定的主機</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP 通訊埠範圍">
+								<longdesc>Ekiga 要使用的 UDP 連接埠範圍。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP 連接埠範圍">
+								<longdesc>Ekiga 給 H.323 H.245 通道所使用的 TCP 通訊埠的範圍。如果對話雙方都沒有使用 H.245 穿隧技術，則通訊埠的範圍不會有任何影響。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="轉駁來電至主機">
+								<longdesc>如果啟用了來電轉駁，那麼轉駁至那裏的主機</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF 傳送">
+								<longdesc>選擇 DTMF 的傳送模式。數值可以是：0 (代表「String」)，1 (代表「Tone」)，2  (代表「RFC2833」) 或 3 (代表「Q.931」)（預設是「String」）。選擇「String」以外的數值會停用文字聊天。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="video_role">
+							<local_schema>
+								<longdesc>選擇 H.239 影片角色。數值可以為 0 (「停用擴充的影片」)、1 (「允許每個內容角色遮罩」)、2 (「強制顯示」) 或 3 (「強制現場角色」)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h239">
+							<local_schema short_desc="啟用 H.239">
+								<longdesc>這會啟用額外影片角色的 H.239 功能</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="啟用「快速啟動」">
+								<longdesc>連線會以快速啟動模式建立。快速啟動是 H.323v2 引進的新方法，使啟動通話更快速。Netmeeting 不支援它，同時使用快速啟動和 H.245 穿隧模式會使某些版本的 Netmeeting 當機</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="啟用早期 H.245">
+								<longdesc>這會在設定中啟用早期 H.245</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="啟用 H.245 穿隧技術">
+								<longdesc>在這裏啟用 H.245 穿隧模式。在 H.245 穿隧模式下 H.245 訊息被封裝到 H.225 通道(1720埠)。這可以在通話過程中節約一個 TCP 埠。H.245 穿隧是在 H.323v2 中引進的，Netmeeting 不支援它。同時使用快速啟動和 H.245 穿隧技術會使某些版本的 Netmeeting 當機。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="監聽埠">
+								<longdesc>監聽撥入連線的埠。需要重新啟動 Ekiga 以使新的設定生效。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT 連結逾時">
+								<longdesc>輸入在使用 STUN 時，Ekiga 應在多少秒後更新 NAT 連結的時間，</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF 傳送">
+								<longdesc>選擇 DTMF 的傳送模式。數值可以是 0 (代表「RFC2833」)和 1 (代表「INFO」)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="轉駁來電至主機">
+								<longdesc>如果啟用了來電轉駁，那麼轉駁至那裏的主機</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Outbound Proxy">
+								<longdesc>打出電話使用的 SIP Outbound Proxy</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="監聽埠">
+								<longdesc>監聽撥入連線的埠。需要重新啟動 Ekiga 以使新的設定生效</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="暫時空間替換">
+								<longdesc>是否傾向維持最大幀率或是要降低它以保持所有幀最低限度的品質。0: 最低品質設為最大。31: 最低品質設為最小</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="最大 RX 視像頻寬">
+								<longdesc>RX 視像最大位元率(kbit/s)。若通信兩端的 TX 位元率高於此數值時，它會發出信號要求調整(如果有支援此功能)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="最大 TX 視像頻寬">
+								<longdesc>最大的 TX 視像頻寬（以 kbit/s 計算)。視像的質素及每秒傳送的幀數(根據據選擇的解碼器)會以指定數值作為底線，動態地調整來達致使用最小的頻寬。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="音訊編碼解碼器清單">
+								<longdesc>音訊編碼解碼器清單</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="抗抖動緩衝的最大值">
+								<longdesc>接收音訊時用的抗抖動緩衝大小的最大值（毫秒）</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="啟用回音消除">
+								<longdesc>如果啟用，會使用回音消除</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="啟用靜音探測">
+								<longdesc>如啟用，則會使用編碼解碼器支援的靜音探測</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="音訊編碼解碼器列表">
+								<longdesc>音效 codec 清單</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="在設定精靈中選擇的網絡類型">
+							<longdesc>0：56Kbps，1：ISDN，2：DSL128，3：DSL512，4：區域網絡，5：自選</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="自動接聽">
+								<longdesc>如啟用此項，將會自動接聽來電</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="沒有接聽逾時">
+								<longdesc>如果在指定時間後（秒）沒有接聽，則會自動拒接或轉駁來電</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="遠端視像畫面視窗的位置">
+									<longdesc>遠端視像畫面視窗的位置</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="遠端視像畫面視窗的太小">
+									<longdesc>遠端視像畫面視窗的大小</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="切換至全螢幕前的視像檢視">
+									<longdesc>切換至全螢幕前的視像檢視(數值等同於 video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="預設的視像畫面顯示模式">
+									<longdesc>預設的視像檢視（0：本機，1：遠端，2：兩者（子母視窗），3：兩者，在兩個分開的本機視窗）</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="正在通話時，將視像畫面視窗置於其它的視窗上">
+									<longdesc>正在通話時，將視像畫面視窗置於其它的視窗上</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="放大縮小值">
+									<longdesc>在主視窗所顯示的圖片的放大縮小值（可以是 50，100 或 200）</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="指定軟件縮放演算法">
+									<longdesc>指定軟件縮放演算法：0: 最近鄰居法, 1: 最近鄰居法及方塊過濾, 2: 雙線性過濾, 3: 雙曲線過濾。請勿在視窗系統套用。</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="允許軟件縮放子母畫面">
+									<longdesc>允許 Ekiga 在硬件不支援時改用軟件縮放子母畫面(picture-in-picture)。如果此項設為 false，Ekiga 在在硬件不支援時將不會嘗試開啟 PIP。</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="停用視像硬件加速">
+									<longdesc>這個鍵值會停用 DirectX (win32 環境)和 XVideo (Linux 環境)視像硬件加速</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="偏好設定視窗的大小">
+									<longdesc>偏好設定視窗的大小</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="偏好設定視窗在螢幕中的位置">
+									<longdesc>偏好設定視窗在螢幕中的位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="偏好設定視窗的大小">
+									<longdesc>偏好設定視窗的大小</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="偏好設定視窗在螢幕中的位置">
+									<longdesc>偏好設定視窗在螢幕中的位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="視像設定視窗的大小">
+									<longdesc>視像設定視窗的大小</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="視像設定視窗在螢幕中的位置">
+									<longdesc>視像設定視窗在螢幕中的位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="音訊設定視窗的大小">
+									<longdesc>音訊設定視窗的大小</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="音訊設定視窗在螢幕中的位置">
+									<longdesc>音訊設定視窗在螢幕中的位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="通訊錄視窗的大小">
+									<longdesc>通訊錄視窗的大小</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="通訊錄視窗在螢幕中的位置">
+									<longdesc>通訊錄視窗在螢幕中的位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="首次設定精靈視窗在螢幕中位置">
+									<longdesc>首次設定精靈視窗在螢幕中位置</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="設定精靈視窗的大小">
+									<longdesc>設定精靈視窗的大小</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="聊天視窗在螢幕中的位置">
+									<longdesc>聊天視窗在螢幕中的位置</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="聊天視窗的大小">
+									<longdesc>聊天視窗的大小</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="改變主視窗面板部分">
+									<longdesc>改變主視窗面板部分 (0 = 聯絡人，1 = 撥號盤，2 = 通話記錄)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="主視窗在螢幕中的位置">
+									<longdesc>主視窗在螢幕中的位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="通話視窗尺寸">
+									<longdesc>通話視窗尺寸</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="通話視窗在螢幕上的位置">
+									<longdesc>通話視窗在螢幕上的位置</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="啟用 STUN 網絡偵測">
+								<longdesc>啟用 STUN 測試的自動網絡設定結果</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="STUN 伺服器">
+								<longdesc>STUN 支援所使用的 STUN 伺服器。STUN 是一種可以用來穿透某類 NAT 閘道器的技術</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="忙線音">
+								<longdesc>如啟用，音效會在通話結束，或某人忙碌時播放</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="播放忙線音">
+								<longdesc>如啟用，所選的聲音會在通話結束或致電的人正在忙碌時播放</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="撥號聲音">
+								<longdesc>如啟用，致電某人時會播放的音效</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="播放鈐聲">
+								<longdesc>如啟用，所選的音效會在致電某人時播放</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="收到新留言時播放音效">
+								<longdesc>如啟用，所選的音效會在收到新留言時播放</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="接收到新留言時的音效">
+								<longdesc>如啟用，收到新留言時會播放的音效</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="收到新訊息時播放音效">
+								<longdesc>如啟用，所選的音效會在收到新的即時訊息時播放</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="新即時訊息播放的音效">
+								<longdesc>如啟用，收到新的即時訊息時會播放的音效</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="來電時播放音效">
+								<longdesc>如啟用，所選的音效會在來電時播放</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="來電的聲音">
+								<longdesc>如啟用，來電時會播放的音效</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="其它音訊輸出裝置">
+								<longdesc>選擇鈐聲事件所使用的其它音訊輸出裝置。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="聯絡人詳細狀態">
+								<longdesc>詳細狀態資訊</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="聯絡人簡短狀態">
+								<longdesc>簡短狀態資訊</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="全名">
+								<longdesc>輸入你的全名</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="幀率">
+								<longdesc>最大幀傳輸率(格/秒)。這個速率不一定能達到，像是設定最低品質的 TSTO 數值小於 31 時，選擇的位元率就不足以支援這個最低品質 </longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="視像圖片預覽">
+								<longdesc>顯示攝影機所拍攝的圖片</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="視像格式">
+								<longdesc>選擇視像攝影機的格式（大部份的 USB 攝影機不適用）</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="視像通道">
+								<longdesc>所使用的視像通道的號數（選擇攝影機、電視及其它來源）</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="視像圖片大小">
+								<longdesc>選取傳送視像的大小：小 (QCIF 176x144) 或 大 (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="視像輸入裝置">
+								<longdesc>選取使用的視像裝置。如果使用此裝置時發生錯誤，會傳送一張測試用的圖片。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="音訊輸入裝置">
+								<longdesc>選取使用的音訊輸入裝置</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="音訊輸出裝置">
+								<longdesc>選擇使用的音訊輸出裝置</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="書籤">
+						<longdesc>GConf 編輯器書籤目錄</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="最近玩過的遊戲">
+						<longdesc>最近玩過的遊戲清單。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="已玩過的遊戲的統計">
+						<longdesc>這是一系列的字串，每個字串都有 5 部份：名稱、贏的次數、玩過的總局數、最快時間（秒）和最慢時間（秒）。未玩過的遊戲不需要列出來。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="代表遊戲規則的檔案">
+						<longdesc>載有準備玩的接龍遊戲規則的檔案。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="動畫">
+						<longdesc>移動啤牌時是否使用動畫。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="音效">
+						<longdesc>是否以音效代表不同事件發生。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="選擇啤牌移動方式">
+						<longdesc>選擇移動啤牌的方式；是拖曳啤牌，還是點選啤牌然後點選目的地。</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="是否顯示狀態列">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="是否顯示工具列">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="佈景主題檔案名稱">
+						<longdesc>載有啤牌圖片的檔案的名稱。</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+		<dir name="system">
+			<dir name="storage">
+				<dir name="default_options">
+					<dir name="ntfs-3g">
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 ntfs-3g 檔案系統的預設掛在選項">
+								<longdesc>格式為 ntfs 檔案系統並使用 ntfs-3g 的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ntfs">
+						<entry name="fstype_override">
+							<local_schema short_desc="當偵測到 &apos;ntfs&apos; ，預設要使用哪個檔案系統驅動程式">
+								<longdesc>當偵測到「ntfs」時預設要使用的檔案系統驅動程式的名稱。這在將「ntfs-3g」驅動程式設為所有「ntfs」檔案系統的預設驅動程式時非常有用。使用者仍可以選擇使用「ntfs」檔案系統驅動程式藉由覆蓋每個磁區的設定或是在指令列中使用。</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 ntfs 檔案系統的預設掛在選項">
+								<longdesc>格式為 ntfs 檔案系統的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="udf">
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 udf 檔案系統的預設掛在選項">
+								<longdesc>格式為 udf 檔案系統的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="iso9660">
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 iso9660 檔案系統的預設掛在選項">
+								<longdesc>格式為 iso9660 檔案系統的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="vfat">
+						<entry name="mount_options">
+							<local_schema short_desc="使用在 vfat 檔案系統的預設掛在選項">
+								<longdesc>格式為 vfat 檔案系統的磁區的預設掛載選項清單。</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

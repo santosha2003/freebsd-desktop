@@ -1,0 +1,17 @@
+/sbin/ipfw add 45 nat 123 ip from any to me recv igb1 in
+/sbin/ipfw add 50 allow ip from any to any in
+/sbin/ipfw add 45 nat 123 ip from 192.168.3.0/24 to any xmit igb1 out
+
+ipfw add 100 allow ip from any to any via lo0
+ipfw add 63000 allow icmp from any to any
+ipfw add 62000 allow allow ipv6-icmp from any to any
+
+#${ipfw} add 01000 nat 1 ip from any to me recv re1 in # «разначивание» всех ответов из интернетов
+
+#${ipfw} add 02000 allow ip from any to any in # на этом цепочка in закончилась. перед этим можно налепить запрещающих правил например
+
+#${ipfw} add 03000 nat 1 ip from 192.168.0.0/24 to any xmit re1 out # натим всё исходящее из локалки и уходящее в re1
+
+#как то так. вообще ipfw штука весьма логичная (в отличие от iptables), простая, и мощная. нужно просто почитать буквари, и понять что к чему.
+
+#и да, перекомпиливать ничего не нужно, бросайте эту привычку.

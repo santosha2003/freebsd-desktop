@@ -1,0 +1,37 @@
+portsnap fetch update
+#script /root/up-log.out
+#/root/up-ports-xorgnew
+#exit
+svn up --force --non-interactive /usr/src
+svn up --force --non-interactive /usr/ports
+#
+# backup to /mnt/freebsd
+#tar -C/ -cf /mnt/freebsd/kernel-$HOST.txz boot/kernel
+#tar -C/ -cf /mnt/freebsd/etc-$HOST.txz etc
+#tar -C/ -cf /mnt/freebsd/local-$HOST.txz usr/local
+cd /usr/obj
+chflags -R noschg *
+rm -rf *
+cp /usr/kern/KERN.* /usr/src/sys/i386/conf
+#kernel world
+#script /root/up-kern.out
+cd /usr/src
+make cleandir
+make cleandir
+make -j4 buildworld  >>/root/up-world.out
+make -j4 kernel KERNCONF=KERN  >>/root/up-kern.out
+#exit
+# shutdown -r now
+##singleuser mode better.. shutdown now mount -a swapon -a
+cd /usr/src
+#script /root/up-world.out
+mergemaster -p
+make installworld  >> /root/up-world.out
+#mergemaster -iFP
+portupgrade -afrR
+yes |make delete-old   >> /root/up-world.out
+yes |make delete-old-libs >> /root/up-world-cleanlib.out
+#exit
+shutdown -r now 
+#need reboot
+

@@ -1,0 +1,5 @@
+#
+[system=10]
+add path 'usb/*' mode 0777 group operator
+add path dri/* mode 0666 group video
+

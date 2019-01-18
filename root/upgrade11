@@ -1,0 +1,18 @@
+#Upgrading from FreeBSD 11.0-RELEASE
+
+      # : > /usr/bin/bspatch
+      # freebsd-update fetch
+      # freebsd-update install
+    
+
+#Upgrading from FreeBSD 10.3-RELEASE and Earlier
+
+ /usr/bin/bspatch
+ freebsd-update upgrade -r 11.0-RELEASE
+ freebsd-update install
+shutdown -r now
+ #     <reboot the system>
+      # freebsd-update install
+  ##    <rebuild third-party software>
+      # freebsd-update install
+   

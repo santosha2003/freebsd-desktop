@@ -1,0 +1,537 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="schemas">
+		<dir name="apps">
+			<dir name="ekiga">
+				<dir name="contacts">
+					<entry name="call_history">
+						<local_schema short_desc="Calls history">
+							<longdesc>The history of the 100 last calls</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="ldap_servers">
+						<local_schema short_desc="LDAP servers">
+							<longdesc>List of configured LDAP servers</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="show_offline_contacts">
+						<local_schema short_desc="Show offline contacts">
+							<longdesc>אם אפשרות זו פעילה אנשי קשר מנותקים יופיעו ברשימת אנשי הקשר</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="roster_folded_groups">
+						<local_schema short_desc="List of folded groups in the roster">
+						</local_schema>
+					</entry>
+				</dir>
+				<dir name="protocols">
+					<entry name="rtp_tos_field">
+						<local_schema short_desc="Type of Service (TOS) byte on outgoing RTP IP packets">
+							<longdesc>The Type of Service (TOS) byte on outgoing RTP IP packets. This byte is used by the network to provide some level of Quality of Service (QoS). Default value 184 (0xB8) correspond to Expedited Forwarding (EF) PHB as defined in RFC 3246.</longdesc>
+						</local_schema>
+					</entry>
+					<entry name="accounts_list">
+						<local_schema short_desc="The accounts list">
+							<longdesc>The list of accounts to which Ekiga should register</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_forwarding">
+						<entry name="forward_on_no_answer">
+							<local_schema short_desc="Forward calls to the given host if no answer">
+								<longdesc>If enabled, all incoming calls will be forwarded to the host that is specified in the field below if you do not answer the call</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_on_busy">
+							<local_schema short_desc="Forward calls to the given host if busy">
+							</local_schema>
+						</entry>
+						<entry name="always_forward">
+							<local_schema short_desc="Always forward calls to the given host">
+								<longdesc>If enabled, all incoming calls will be forwarded to the host that is specified in the field below</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="ports">
+						<entry name="udp_port_range">
+							<local_schema short_desc="UDP port range">
+								<longdesc>The range of UDP ports that Ekiga will use.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="tcp_port_range">
+							<local_schema short_desc="TCP port range">
+								<longdesc>The range of TCP ports that Ekiga will use for the H.323 H.245 channel. This port range has no effect if both participants to the conference are using H.245 Tunneling.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="h323">
+						<entry name="forward_host">
+							<local_schema short_desc="Forward calls to host">
+								<longdesc>המארח אליו יועברו שיחות במידה שהעברת שיחות פעילה</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF sending">
+								<longdesc>Select the mode for sending DTMFs. The values can be 0 (for &quot;String&quot;), 1 (for &quot;Tone&quot;), 2 (for &quot;RFC2833&quot;), or 3 (for &quot;Q.931&quot;) (default is &quot;String&quot;). Choosing other values than &quot;String&quot; disables the Text Chat.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_fast_start">
+							<local_schema short_desc="Enable &apos;Fast Start&apos;">
+								<longdesc>Connection will be established in Fast Start mode. Fast Start is a new way to start calls faster that was introduced in H.323v2. It is not supported by Netmeeting and using both Fast Start and H.245 Tunneling can crash some versions of Netmeeting</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_early_h245">
+							<local_schema short_desc="Enable early H.245">
+								<longdesc>אפשרות זו מאפשרת את H.245 בתצורה</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_h245_tunneling">
+							<local_schema short_desc="Enable H.245 tunneling">
+								<longdesc>This enables H.245 Tunneling mode. In H.245 Tunneling mode H.245 messages are encapsulated into the H.225 channel (port 1720). This saves one TCP connection during calls. H.245 Tunneling was introduced in H.323v2 and Netmeeting does not support it. Using both Fast Start and H.245 Tunneling can crash some versions of Netmeeting.</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Listen port">
+								<longdesc>The port to listen to for incoming connections. Ekiga needs to be restarted for the new value to take effect.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sip">
+						<entry name="binding_timeout">
+							<local_schema short_desc="NAT Binding Timeout">
+								<longdesc>Enter the number of seconds after which Ekiga should try refreshing the NAT binding when STUN is being used</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="dtmf_mode">
+							<local_schema short_desc="DTMF sending">
+								<longdesc>Select the mode for sending DTMFs. The values can be 0 (for &quot;RFC2833&quot;) and 1 (for &quot;INFO&quot;)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="forward_host">
+							<local_schema short_desc="Forward calls to host">
+								<longdesc>המארח אליו יועברו שיחות במידה שהעברת שיחות פעילה</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="outbound_proxy_host">
+							<local_schema short_desc="Outbound Proxy">
+								<longdesc>מתווך ה־SIP לתקשורת יוצאת שישמש לשיחות יוצאות</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="listen_port">
+							<local_schema short_desc="Listen port">
+								<longdesc>The port to listen to for incoming connections. Ekiga needs to be restarted for the new value to take effect</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="codecs">
+					<dir name="video">
+						<entry name="temporal_spatial_tradeoff">
+							<local_schema short_desc="Temporal Spatial Trade Off">
+								<longdesc>Whether to prefer to sustain the max. frame rate or lower it possibly in order to keep a minimum level of (spatial) quality for all frames. 0: Highest minimal quality, 31: lowest minimal quality</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_rx_bitrate">
+							<local_schema short_desc="Maximum RX video bitrate">
+								<longdesc>The maximum RX video bitrate in kbit/s. This value will be signaled to the peer endpoint that can adjust (if it supports it) its TX bitrate if it is above the signaled value</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="maximum_video_tx_bitrate">
+							<local_schema short_desc="Maximum TX video bitrate">
+								<longdesc>The maximum TX video bitrate in kbit/s. The video quality and the number of transmitted frames per second (depends on selected codec) will be dynamically adjusted above their minimum during calls to try to minimize the bandwidth to the given value</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="The video codecs list">
+								<longdesc>The video codecs list</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="maximum_jitter_buffer">
+							<local_schema short_desc="Maximum jitter buffer">
+								<longdesc>The maximum jitter buffer size for audio reception (in ms)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_echo_cancellation">
+							<local_schema short_desc="Enable echo cancellation">
+								<longdesc>אם פעיל, יש להשתמש בביטול הד</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_silence_detection">
+							<local_schema short_desc="Enable silence detection">
+								<longdesc>If enabled, use silence detection with the codecs supporting it</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="media_list">
+							<local_schema short_desc="The Audio Codecs List">
+								<longdesc>The audio codecs list</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="general">
+					<entry name="kind_of_net">
+						<local_schema short_desc="Kind of network selected in the assistant">
+							<longdesc>0: 56kbps, 1: ISDN, 2: DSL128, 3: DSL512, 4: LAN, 5: Custom</longdesc>
+						</local_schema>
+					</entry>
+					<dir name="call_options">
+						<entry name="auto_answer">
+							<local_schema short_desc="Automatic answer">
+								<longdesc>אם אפשרות זו פעילה השיחות הנכנסות יענו אוטומטית</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="no_answer_timeout">
+							<local_schema short_desc="No answer timeout">
+								<longdesc>דחייה אוטומטית של שיחות נכנסות אם לא נענו לאחר משך הזמן הנקוב (בשניות)</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="user_interface">
+						<dir name="remote_video_window">
+							<entry name="position">
+								<local_schema short_desc="Remote video window position">
+									<longdesc>The position of the remote video window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Remote video window size">
+									<longdesc>The size of the remote video window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_display">
+							<entry name="video_view_before_fullscreen">
+								<local_schema short_desc="The video view before having switched to fullscreen">
+									<longdesc>The video view before having switched to fullscreen (same values as video_view)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="video_view">
+								<local_schema short_desc="The default video view">
+									<longdesc>The default video view (0: Local, 1: Remote, 2: Both, 3: Both in a separate window)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="stay_on_top">
+								<local_schema short_desc="בזמן שיחה יש להציג את חלון הווידאו מעל לכול החלונות">
+									<longdesc>בזמן שיחה יש להציג את חלון הווידאו מעל לכול החלונות</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="zoom">
+								<local_schema short_desc="The zoom value">
+									<longdesc>The zoom value in percent to apply to images displayed in the main GUI (can be 50, 100, or 200)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="sw_scaling_algorithm">
+								<local_schema short_desc="Specify the software scaling algorithm">
+									<longdesc>Specify the software scaling algorithm: 0: nearest neighbor, 1: nearest neighbor with box filter, 2: bilinear filtering, 3: hyperbolic filtering. Does not apply on windows systems.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="allow_pip_sw_scaling">
+								<local_schema short_desc="Allow picture-in-picture software scaling">
+									<longdesc>Allow Ekiga to fall back to software scaling the picture-in-picture if hardware support is not available. If this is set to false, Ekiga will not try to open the PIP if hardware support is not available.</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="disable_hw_accel">
+								<local_schema short_desc="Disable video hardware acceleration">
+									<longdesc>This key disables DirectX (on win32) and XVideo (on Linux) video hardware acceleration</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="accounts_window">
+							<entry name="size">
+								<local_schema short_desc="Size of the preferences window">
+									<longdesc>Size of the preferences window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the preferences window">
+									<longdesc>Position on the screen of the preferences window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="preferences_window">
+							<entry name="size">
+								<local_schema short_desc="Size of the preferences window">
+									<longdesc>Size of the preferences window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the preferences window">
+									<longdesc>Position on the screen of the preferences window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="video_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Size of the video settings window">
+									<longdesc>Size of the video settings window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the video settings window">
+									<longdesc>Position on the screen of the video settings window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="audio_settings_window">
+							<entry name="size">
+								<local_schema short_desc="Size of the audio settings window">
+									<longdesc>Size of the audio settings window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the audio settings window">
+									<longdesc>Position on the screen of the audio settings window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="addressbook_window">
+							<entry name="size">
+								<local_schema short_desc="Size of the address book window">
+									<longdesc>Size of the address book window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the address book window">
+									<longdesc>Position on the screen of the address book window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="assistant">
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the druid window">
+									<longdesc>Position on the screen of the druid window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Size of the druid window">
+									<longdesc>Size of the druid window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="chat_window">
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the chat window">
+									<longdesc>Position on the screen of the chat window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="size">
+								<local_schema short_desc="Size of the chat window">
+									<longdesc>Size of the chat window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="main_window">
+							<entry name="panel_section">
+								<local_schema short_desc="Change the panel section of the main window">
+									<longdesc>Change the panel section of the main window (0=Contacts, 1=Dialpad, 2=Call history)</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the main window">
+									<longdesc>Position on the screen of the main window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+						<dir name="call_window">
+							<entry name="size">
+								<local_schema short_desc="Size of the call window">
+									<longdesc>Size of the call window</longdesc>
+								</local_schema>
+							</entry>
+							<entry name="position">
+								<local_schema short_desc="Position on the screen of the call window">
+									<longdesc>Position on the screen of the call window</longdesc>
+								</local_schema>
+							</entry>
+						</dir>
+					</dir>
+					<dir name="nat">
+						<entry name="enable_stun">
+							<local_schema short_desc="Enable STUN network detection">
+								<longdesc>הפעלת הגדרת הרשת באופן אוטומטי בהסתמך על תוצאות בדיקת ה־STUN</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="stun_server">
+							<local_schema short_desc="The STUN Server">
+								<longdesc>The STUN server to use for STUN Support. STUN is a technology that permits passage through some types of NAT gateway</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="sound_events">
+						<entry name="busy_tone_sound">
+							<local_schema short_desc="The busy tone sound">
+								<longdesc>The sound that will be played at the end of calls or when calling somebody who is busy, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_busy_tone_sound">
+							<local_schema short_desc="נגינת צליל עסוק">
+								<longdesc>The chosen sound will be played at the end of calls or calling somebody who is busy, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="ring_tone_sound">
+							<local_schema short_desc="The dial tone sound">
+								<longdesc>The sound that will be played when calling somebody, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_ring_tone_sound">
+							<local_schema short_desc="נגינת צליל צלצול">
+								<longdesc>The chosen sound will be played when calling somebody, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_voicemail_sound">
+							<local_schema short_desc="Play sound on new voice mail">
+								<longdesc>The chosen sound will be played when a new voice mail is received, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_voicemail_sound">
+							<local_schema short_desc="The new voice mail sound">
+								<longdesc>The sound that will be played when there is a new voice mail, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_new_message_sound">
+							<local_schema short_desc="Play sound on new message">
+								<longdesc>The chosen sound will be played when a new instant message is received, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="new_message_sound">
+							<local_schema short_desc="The new instant message sound">
+								<longdesc>The sound that will be played when there is a new instant message, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_incoming_call_sound">
+							<local_schema short_desc="השמעת צליל כאשר שיחה נכנסת">
+								<longdesc>The chosen sound will be played on incoming calls, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="incoming_call_sound">
+							<local_schema short_desc="The incoming call sound">
+								<longdesc>The sound that will be played on incoming calls, if enabled</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Alternative audio output device">
+								<longdesc>Select an alternative audio output device to use for sound events.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="personal_data">
+						<entry name="long_status">
+							<local_schema short_desc="Contact long status">
+								<longdesc>The long status information</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="short_status">
+							<local_schema short_desc="Contact short status">
+								<longdesc>The short status information</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="full_name">
+							<local_schema short_desc="Full name">
+								<longdesc>נא להזין את שמך המלא</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+				<dir name="devices">
+					<dir name="video">
+						<entry name="max_frame_rate">
+							<local_schema short_desc="קצב שקופיות">
+								<longdesc>The maximum transmitted frame rate in frames/s. This rate may not be reached in case a minimum quality was configure via a TSTO value smaller than 31 and the bitrate selected is not sufficient to support this minimum quality</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="enable_preview">
+							<local_schema short_desc="Video preview">
+								<longdesc>הצגת תמונות מתוך התקן המצלמה שלך</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="format">
+							<local_schema short_desc="Video format">
+								<longdesc>יש לבחור את מבנה הווידאו עבור מצלמות וידאו (לא תקף לרוב מצלמות ה־USB)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="channel">
+							<local_schema short_desc="Video channel">
+								<longdesc>מספר ערוץ הווידאו לשימוש (כדי לבחור במצלמה, טלוויזיה או מקורות אחרים)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="size">
+							<local_schema short_desc="Video size">
+								<longdesc>Select the transmitted video size: Small (QCIF 176x144) or Large (CIF 352x288)</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="input_device">
+							<local_schema short_desc="Video input device">
+								<longdesc>Select the video input device to use. If an error occurs when using this device a test picture will be transmitted.</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+					<dir name="audio">
+						<entry name="input_device">
+							<local_schema short_desc="Audio input device">
+								<longdesc>יש לבחור את התקן השמע לשימוש</longdesc>
+							</local_schema>
+						</entry>
+						<entry name="output_device">
+							<local_schema short_desc="Audio output device">
+								<longdesc>יש לבחור את התקן השמע היוצא לשימוש</longdesc>
+							</local_schema>
+						</entry>
+					</dir>
+				</dir>
+			</dir>
+			<dir name="gconf-editor">
+				<entry name="bookmarks">
+					<local_schema short_desc="Bookmarks">
+						<longdesc>gconf-editor folder bookmarks</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+			<dir name="aisleriot">
+				<entry name="recent_games_list">
+					<local_schema short_desc="Recently played games">
+						<longdesc>A list of recently played games.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="statistics">
+					<local_schema short_desc="Statistics of games played">
+						<longdesc>A list of strings that come in the form of a quintuple: name, wins, total games played, best time (in seconds) and worst time (also in seconds). Unplayed games do not need to be represented.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="game_file">
+					<local_schema short_desc="The game file to use">
+						<longdesc>שם קובץ הסכימה המכיל את משחק הסוליטר למשחק.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="animations">
+					<local_schema short_desc="Animations">
+						<longdesc>Whether or not to animate card moves.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="sound">
+					<local_schema short_desc="Sound">
+						<longdesc>Whether or not to play event sounds.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="click_to_move">
+					<local_schema short_desc="Select the style of control">
+						<longdesc>Select whether to drag the cards or to click on the source then the destination.</longdesc>
+					</local_schema>
+				</entry>
+				<entry name="show_statusbar">
+					<local_schema short_desc="Whether or not to show the status bar">
+					</local_schema>
+				</entry>
+				<entry name="show_toolbar">
+					<local_schema short_desc="Whether or not to show the toolbar">
+					</local_schema>
+				</entry>
+				<entry name="card_style">
+					<local_schema short_desc="Theme file name">
+						<longdesc>The name of the file with the graphics for the cards.</longdesc>
+					</local_schema>
+				</entry>
+			</dir>
+		</dir>
+	</dir>
+</gconf>
