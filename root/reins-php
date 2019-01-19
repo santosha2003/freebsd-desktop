@@ -1,63 +1,77 @@
 #!/bin/sh
-#make -C /usr/ports/databases/mysql80-server clean reinstall
-make -C /usr/ports/www/nginx clean reinstall
+#make -C /usr/ports/databases/mysql80-server clean deinstall install
+make -C /usr/ports/www/nginx clean deinstall install
 rm /usr/local/etc/php/*.ini
+
+pkg query %ro | grep php | xargs pkg delete -fy
+pkg query %o | grep php | xargs pkg delete -fy
+pkg info |grep php |awk '{print $1}' |xargs pkg delete -fy
+
+# old extensions made core dump
+rm -rf /usr/local/lib/php
+
+# is set extension dir in the  (local) etc php.ini ?
+
+
 PHPPORT=$1
  if ( test "$1" = "" ) then
  #PHPPORT=php56
- PHPPORT=php70
+ PHPPORT=php72
+ MYSQLSRV=mysql57-server
+
  fi
 LINE=`whereis -s $PHPPORT  | awk '{print $2}'`
 echo $LINE
-make -C $LINE clean reinstall
+make -C $LINE clean deinstall install
 #LINST=`whereis -s $LINE | awk '{print $2}'| cut -c 1-8`
-make -C `whereis -s phpMyAdmin | awk '{print $2}'` reinstall
-make -C `whereis -s pecl-imagick | awk '{print $2}'` reinstall
+make -C `whereis -s phpMyAdmin | awk '{print $2}'` deinstall install
+make -C `whereis -s pecl-imagick | awk '{print $2}'` deinstall install
+make -C /usr/ports/www/wordpress deinstall install
 
-make -C `whereis -s  $PHPPORT-calendar | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-ctype | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-curl | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-dba | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-dom | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-exif | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-ftp | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-fileinfo | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-filter | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-gd | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-gettext | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-hash | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-iconv | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-imap | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-json | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-mbstring | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-mcrypt | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-mysql | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-mysqli | awk '{print $2}'` reinstall
+make -C `whereis -s  $PHPPORT-calendar | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-ctype | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-curl | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-dba | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-dom | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-exif | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-ftp | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-fileinfo | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-filter | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-gd | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-gettext | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-hash | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-iconv | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-imap | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-json | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-mbstring | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-mcrypt | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-mysql | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-mysqli | awk '{print $2}'` deinstall install
 #test 4 core dump
-make -C `whereis -s  $PHPPORT-opcache | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-bz2 | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-openssl | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-pcntl | awk '{print $2}'` reinstall
+make -C `whereis -s  $PHPPORT-opcache | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-bz2 | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-openssl | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-pcntl | awk '{print $2}'` deinstall install
 #?
-make -C `whereis -s  $PHPPORT-pdo | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-pdo_mysql | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-pdo_sqlite | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-phar | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-posix | awk '{print $2}'` reinstall
-# make -C `whereis -s  $PHPPORT-recode | awk '{print $2}'` reinstall
+make -C `whereis -s  $PHPPORT-pdo | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-pdo_mysql | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-pdo_sqlite | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-phar | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-posix | awk '{print $2}'` deinstall install
+# make -C `whereis -s  $PHPPORT-recode | awk '{print $2}'` deinstall install
 
-make -C `whereis -s  $PHPPORT-session | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-simplexml | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-snmp | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-socket | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-sqlite3 | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-tokenizer | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-xml | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-xmlreader | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-xmlwriter | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-xsl | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-zip | awk '{print $2}'` reinstall
-make -C `whereis -s  $PHPPORT-zlib | awk '{print $2}'` reinstall
+make -C `whereis -s  $PHPPORT-session | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-simplexml | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-snmp | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-socket | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-sqlite3 | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-tokenizer | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-xml | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-xmlreader | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-xmlwriter | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-xsl | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-zip | awk '{print $2}'` deinstall install
+make -C `whereis -s  $PHPPORT-zlib | awk '{print $2}'` deinstall install
 
 make -C $LINE clean 
 #pkg query %ro | grep php | xargs portmaster

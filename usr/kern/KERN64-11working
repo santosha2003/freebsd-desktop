@@ -4,11 +4,11 @@
 # For more information on this file, please read the config(5) manual page,
 # and/or the handbook section on Kernel Configuration Files:
 #
-#    https://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/kernelconfig-config.html
+#    http://www.FreeBSD.org/doc/en_US.ISO8859-1/books/handbook/kernelconfig-config.html
 #
 # The handbook is also available locally in /usr/share/doc/handbook
 # if you've installed the doc distribution, otherwise always see the
-# FreeBSD World Wide Web server (https://www.FreeBSD.org/) for the
+# FreeBSD World Wide Web server (http://www.FreeBSD.org/) for the
 # latest information.
 #
 # An exhaustive list of options and more detailed explanations of the
@@ -16,7 +16,7 @@
 # If you are in doubt as to the purpose or necessity of a line, check first
 # in NOTES.
 #
-# $FreeBSD: head/sys/amd64/conf/GENERIC 331485 2018-03-24 12:48:10Z jtl $
+# $FreeBSD: stable/11/sys/amd64/conf/GENERIC 333417 2018-05-09 16:14:12Z sbruno $
 
 cpu		HAMMER
 ident		KERN64
@@ -26,15 +26,11 @@ ident		KERN64
 
 options 	SCHED_ULE		# ULE scheduler
 options 	PREEMPTION		# Enable kernel thread preemption
-options 	VIMAGE			# Subsystem virtualization, e.g. VNET
 options 	INET			# InterNETworking
 options 	INET6			# IPv6 communications protocols
 options 	IPSEC			# IP (v4/v6) security
 options 	IPSEC_SUPPORT		# Allow kldload of ipsec and tcpmd5
 options 	TCP_OFFLOAD		# TCP offload
-options 	TCP_BLACKBOX		# Enhanced TCP event logging
-options 	TCP_HHOOK		# hhook(9) framework for TCP
-options		TCP_RFC7413		# TCP Fast Open
 options 	SCTP			# Stream Control Transmission Protocol
 options 	FFS			# Berkeley Fast Filesystem
 options 	SOFTUPDATES		# Enable FFS soft updates support
@@ -61,7 +57,6 @@ options 	COMPAT_FREEBSD6		# Compatible with FreeBSD6
 options 	COMPAT_FREEBSD7		# Compatible with FreeBSD7
 options 	COMPAT_FREEBSD9		# Compatible with FreeBSD9
 options 	COMPAT_FREEBSD10	# Compatible with FreeBSD10
-options 	COMPAT_FREEBSD11	# Compatible with FreeBSD11
 options 	SCSI_DELAY=5000		# Delay (in ms) before probing SCSI
 options 	KTRACE			# ktrace(1) support
 options 	STACK			# stack(9) support
@@ -101,12 +96,13 @@ options 	RCTL			# Resource limits
 
 # Make an SMP-capable kernel by default
 options 	SMP			# Symmetric MultiProcessor Kernel
+options 	DEVICE_NUMA		# I/O Device Affinity
 options 	EARLY_AP_STARTUP
 
 # CPU frequency control
 device		cpufreq
 #device		amdtemp  # for AMD CPU
-device		coretemp  # for Intel CPU  load coretemp.ko first
+#device		coretemp  # for Intel CPU  load coretemp.ko first
 device smb
 device smbus # System management bus
 device intpm # Intel power management
@@ -134,7 +130,11 @@ device		siis			# SiliconImage SiI3124/SiI3132/SiI3531 SATA
 
 # SCSI Controllers
 device		ahc			# AHA2940 and onboard AIC7xxx devices
+options 	AHC_REG_PRETTY_PRINT	# Print register bitfields in debug
+					# output.  Adds ~128k to driver.
 device		ahd			# AHA39320/29320 and onboard AIC79xx devices
+options 	AHD_REG_PRETTY_PRINT	# Print register bitfields in debug
+					# output.  Adds ~215k to driver.
 device		esp			# AMD Am53C974 (Tekram DC-390(T))
 device		hptiop			# Highpoint RocketRaid 3xxx series
 device		isp			# Qlogic family
@@ -151,6 +151,7 @@ device		adw			# Advansys wide SCSI adapters
 device		aic			# Adaptec 15[012]x SCSI adapters, AIC-6[23]60.
 device		bt			# Buslogic/Mylex MultiMaster SCSI adapters
 device		isci			# Intel C600 SAS controller
+device		ocs_fc			# Emulex FC adapters
 
 # ATA/SCSI peripherals
 device		scbus			# SCSI bus (required for ATA/SCSI)
@@ -175,6 +176,7 @@ device		iir			# Intel Integrated RAID
 device		ips			# IBM (Adaptec) ServeRAID
 device		mly			# Mylex AcceleRAID/eXtremeRAID
 device		twa			# 3ware 9000 series PATA/SATA RAID
+device          smartpqi                # Microsemi smartpqi driver
 device		tws			# LSI 3ware 9750 SATA+SAS 6Gb/s RAID controller
 
 # RAID controllers
@@ -239,12 +241,11 @@ device		puc			# Multi I/O cards and multi-channel UARTs
 device		bxe			# Broadcom NetXtreme II BCM5771X/BCM578XX 10GbE
 device		de			# DEC/Intel DC21x4x (``Tulip'')
 device		em			# Intel PRO/1000 Gigabit Ethernet Family
-#device		igb			# Intel PRO/1000 PCIE Server Gigabit Family
+device		igb			# Intel PRO/1000 PCIE Server Gigabit Family
 device		ix			# Intel PRO/10GbE PCIE PF Ethernet
 device		ixv			# Intel PRO/10GbE PCIE VF Ethernet
-#device		ixl			# Intel XL710 40Gbe PCIE Ethernet
-options		IXL_IW			# Enable iWARP Client Interface in ixl(4)
-#device		ixlv			# Intel XL710 40Gbe VF PCIE Ethernet
+device		ixl			# Intel XL710 40Gbe PCIE Ethernet
+device		ixlv			# Intel XL710 40Gbe VF PCIE Ethernet
 device		le			# AMD Am7900 LANCE and Am79C9xx PCnet
 device		ti			# Alteon Networks Tigon I/II gigabit Ethernet
 device		txp			# 3Com 3cR990 (``Typhoon'')
