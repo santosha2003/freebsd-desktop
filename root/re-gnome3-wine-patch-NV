@@ -1,0 +1,30 @@
+#!/usr/local/bin/bash
+#   460	12:46	gnome-shell
+#   461	12:46	libgl
+#   462	12:47	pkg install xorg-drivers
+#   463	12:47	pkg install -f xorg-drivers
+#   464	12:47	pkg install -f clutter
+#   465	12:47	pkg install gtk3
+#   466	12:48	pkg install clutter-gtk
+#   467	12:48	pkg install clutter-gtk3
+#   468	12:48	gnome-shell
+#   469	20:56	gnome-shell
+#   470	20:57	pkg info
+#   471	20:58	gnome-shell
+#   472	20:58	glxgears
+#   473	20:59	pkg install monero-cli qt5 clutter-gtk
+#   474	21:00	pkg install monero-cli qt5 clutter-gtk virtualbox
+#   475	21:00	pkg install monero-cli qt5 clutter-gtk virtualbox-ose
+#   476	21:01	pkg install monero-cli qt5 clutter-gtk virtualbox-ose i386-wine-devel
+#   477	21:02	pkg install monero-cli qt5 clutter-gtk virtualbox-ose i386-wine-devel vinagre xorg-macros
+#   478	21:03	pkg set -o mysql56-server:mysql57-server
+#   479	21:03	pkg set -o databases/mysql56-server:databases/mysql57-server
+#   480	21:03	pkg set -o databases/mysql56-client :databases/mysql57-client
+#   481	21:03	pkg set -o databases/mysql56-client:databases/mysql57-client
+# pkg delete -f mysql56-client mysql56-server
+# ~/reins-port mysql57-server mysql57-client kde5
+#   482	21:04	pkg install monero-cli qt5 clutter-gtk virtualbox-ose i386-wine-devel vinagre xorg-macros
+pkg install i386-wine-devel
+sh /usr/local/share/wine/patch-nvidia.sh
+#   484	21:27	h >> re-gnome3-wine-patch-NV
+

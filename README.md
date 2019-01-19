@@ -20,3 +20,8 @@ Nvidia 1050 ti  amd Ryzen 2600
  Firefox Chrome  web .   / Designer work station /
 
  Router - home or office network connect to Internet
+ 
+ 
+ + add correct script - change links for Nvidia driver for Gnome 3.28+
+  (nv-working-gnome)
+  

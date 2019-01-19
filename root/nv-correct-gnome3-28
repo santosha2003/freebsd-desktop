@@ -1,0 +1,13 @@
+
+cd /usr/local/lib
+echo y |rm libEGL-NVIDIA.so
+echo y |rm libGLESv2-NVIDIA.so
+echo y |rm libGL-NVIDIA.so
+
+ln -s libEGL-NVIDIA.so.1 libEGL-NVIDIA.so 
+ln -s libGL-NVIDIA.so.1 libGL-NVIDIA.so
+ln -s libGLESv2-NVIDIA.so.2 libGLESv2-NVIDIA.so
+
+gnome-terminal -- gnome-shell
+glxgears
+#  h >> ~/nv-correct-gnome3-28

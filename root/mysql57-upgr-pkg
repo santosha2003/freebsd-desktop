@@ -1,0 +1,25 @@
+   985	0:44	cd "`printf '%b' '\0057usr\0057ports\0057x11\0057nvidia\0055driver\0055340'`"
+   986	0:44	make check-plist
+   987	0:46	cd "`printf '%b' '\0057usr\0057ports\0057x11'`"
+   988	0:46	cd "`printf '%b' '\0057usr\0057ports'`"
+   989	0:46	cd "`printf '%b' '\0057usr'`"
+   990	0:49	./update-svn
+   991	2:53	cd "`printf '%b' '\0057usr\0057local'`"
+   992	2:53	cd "`printf '%b' '\0057usr'`"
+   993	2:53	cd "`printf '%b' '\0057'`"
+   994	2:53	cd "`printf '%b' '\0057root'`"
+   995	2:53	cd "`printf '%b' '\0057root\00571'`"
+   996	2:53	cd "`printf '%b' '\0057root\00571\0057mti'`"
+   997	2:54	cd "`printf '%b' '\0057root\00571\0057mti\00575user\0137\0137no'`"
+   998	2:54	cd "`printf '%b' '\0057root\00571\0057mti'`"
+   999	2:54	cd "`printf '%b' '\0057root\00571\0057mti\0057grmti\0056ru'`"
+  1000	2:54	cd "`printf '%b' '\0057root\00571\0057mti'`"
+  1001	13:18	cd ~/masari
+  1002	13:18	git push
+  1003	13:19	git push copy
+  1004	13:19	service mysql-server start
+  1005	13:22	pkg set -o databases/mysql56-server:databases/mysql57-server
+  1006	13:23	pkg set -o databases/mysql56-client:databases/mysql57-client
+  1007	13:23	pkg i databases/mysql57-server
+  1008	13:23	pkg ins databases/mysql57-server
+  1009	13:24	h >> mysql57-upgr-pkg
