@@ -1,12 +1,12 @@
-# Device	Mountpoint	FStype	Options	Dump	Pass#
-/dev/ada0p2	/		ufs	rw	1	1
-/dev/ada0p3	none		swap	sw	0	0
+# Device		Mountpoint	FStype	Options		Dump	Pass#
+/dev/ada0p2		none	swap	sw		0	0
 proc /proc procfs rw 0 0
-#/dev/ada1p2	/mnt2		ufs	rw	0	0
+#/dev/ada3p2	/mnt2		ufs	rw	0	0
 #/dev/da0s1a  /mnt1  ufs  rw,noauto  0  0
-#linprocfs /compat/linux/proc linprocfs rw       0       0
-#tmpfs    /compat/linux/dev/shm  tmpfs   rw,mode=1777    0       0
+linprocfs /compat/linux/proc linprocfs rw       0       0
+linsysfs    /compat/linux/sys	linsysfs	rw	0	0
+#Then run "mount /compat/linux/sys".
+tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 #//p90@santosha/e$  /mnt  smbfs  rw,late,-L=ru_RU.UTF-8,-E UTF-8:CP1251  0  0
 #//p90@srv01/e$  /mnt  smbfs  rw,late  0  0
 md /root/.cache/chromium mfs rw,late,-wroot:wheel,-s300m 2 0
-

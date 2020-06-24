@@ -1,0 +1,119 @@
+Section "ServerLayout"
+
+    #Screen      1  "Screen1" RightOf "Screen0"
+    Identifier     "X.org Configured"
+    Screen      0  "Screen0" 0 0
+    InputDevice    "Mouse0" "CorePointer"
+    InputDevice    "Keyboard0" "CoreKeyboard"
+EndSection
+
+Section "Files"
+	ModulePath   "/usr/local/lib/xorg/modules"
+	FontPath     "/usr/local/share/fonts/misc/"
+	FontPath     "/usr/local/share/fonts/TTF/"
+	FontPath     "/usr/local/share/fonts/OTF/"
+	FontPath     "/usr/local/share/fonts/Type1/"
+	FontPath     "/usr/local/share/fonts/100dpi/"
+	FontPath     "/usr/local/share/fonts/75dpi/"
+EndSection
+
+Section "Module"
+    Load           "dbe"
+    Load           "dri2"
+    Load           "ddc"
+    Load           "vbe"
+    Load           "glamoregl"
+    Load           "bitmap"
+    Load           "freetype"
+    Load           "extmod"
+    Load           "record"
+    Load           "glx"
+EndSection
+
+Section "ServerFlags"
+    Option         "AllowMouseOpenFail" "true"
+    Option         "IgnoreABI" "on"
+    Option         "AIGLX" "true"
+EndSection
+
+Section "InputDevice"
+	Identifier  "Keyboard0"
+	Driver      "kbd"
+EndSection
+
+Section "InputDevice"
+    Identifier     "Mouse0"
+    Driver         "mouse"
+    Option         "Protocol" "auto"
+    Option         "Device" "/dev/sysmouse"
+    Option         "ZAxisMapping" "4 5 6 7"
+EndSection
+
+Section "Monitor"
+
+ #   UseModes       "Modes[0]"
+   # Option         "ModeValidation" "NoVertRefreshCheck,NoHorizSyncCheck"
+#    HorizSync       28.0 - 83.0
+#    VertRefresh     43.0 - 75.0
+#    ModeLine       "1280x1024_60" 108.00 1280 1328 1440 1688 1024 1025 1028 1066 +hsync +vsync
+#    ModeLine       "1280x768_60" 68.25 1280 1328 1360 1440 768 771 778 790 -hsync -vsync
+#    ModeLine       "1024x768_85" 94.50 1024 1072 1168 1376 768 769 772 808 +hsync +vsync
+    ModeLine       "1024x768_60" 65.00 1024 1048 1184 1344 768 771 777 806 -hsync -vsync
+#    ModeLine       "1280x1024_n" 109.00 1280 1368 1496 1712 1024 1027 1034 1063 -hsync +vsync
+#    Option         "ExactModeTimingsDVI" "True"
+    Identifier     "Monitor0"
+    VendorName     "Philips"
+    ModelName      "Philips"
+    Option         "Preferred Mode" "1024x768_60"
+#    Option         "DPMS"
+EndSection
+
+Section "Monitor"
+    Identifier     "Monitor1"
+    VendorName     "Monitor Vendor"
+    ModelName      "Monitor Model"
+EndSection
+
+Section "Device"
+    Identifier     "Card0"
+#    Driver         "modesetting"
+    	Driver   "ati"
+	       Driver      "radeon"
+       Option      "DRI" "on" 
+       Option      "DynamicPM" "on"      # Dynamic powersaving.
+       Option      "ClockGating" "on"    # Assisting option for powersaving.
+       Option      "AccelMethod" "EXA"   # EXA should fit most cases.
+       Option	   "ColorTilling" "on"   # Hopefully a better performance
+       Option      "EXAVSync" "on"       # Sync to lcd controller
+       Option      "DMAForXv" "on"       # Forced option in order to enable Xv overlay.
+       Option      "ScalerWidth" "2048"  # That should fix some very rare bugs.
+       Option      "EnablePageFlip" "on" # It will not be enabled on R5xx cards.
+       Option      "RenderAccel" "on"    # Optional. It should be enabled by default.
+       Option      "AccelDFS" "on"  
+    BusID           "PCI:1:0:0"
+EndSection
+
+Section "Screen"
+
+#    Option         "UseEDIDFreqs" "False"
+#    Option         "UseEDIDDpi" "False"
+#    Option         "IgnoreEDID" "True"
+#    Option         "ModeValidation" "NoVesaModes,NoXServerModes,NoEDIDModes"
+    Identifier     "Screen0"
+    Device         "Card0"
+    Monitor        "Monitor0"
+    DefaultDepth    24
+    Option         "MetaModes" "1024x768_n"
+#   Option         "metamodes"  "CRT-0: nvidia-auto-select +1280+0"
+    SubSection     "Display"
+        Viewport    0 0
+        Depth       24
+        Modes      "1024x768_n"
+    EndSubSection
+    SubSection     "Display"
+        Viewport    0 0
+        Depth       16
+        Modes      "1024x768_n"
+    EndSubSection
+EndSection
+

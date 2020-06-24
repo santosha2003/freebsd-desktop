@@ -4,19 +4,42 @@
 #setenv OSVERSION 1100161
 ##kldload radeon
 #dhclient alc0
-#kldload linux
-#kldload fuse
+kldload linux
+kldload fuse
+#ubuntu disk
+#kldload ext2fs
+
+#kldload i915kms
+
+mount /compat/linux/sys
+mount /compat/linux/dev/shm
 
 #mknod /dev/null c 5 1
 
 #ifconfig igb0 192.168.3.211
 #lan jack
+#
+# vbox guest
+
+# igb0 1.4
 dhclient igb0
+# dedic rtl8161 1gbit
+# dhclient fxp0
+route add 0.0.0.0 192.168.1.111
+#(.1.4)
+#ifconfig em0 192.168.1.4
+#route add 0.0.0.0 192.168.1.62
 
 resolvconf -l
-#ntfs-3g /dev/ada1s1 /media/disk2
-#ntfs-3g /dev/ada1s2 /media/disk3
-#/usr/local/bin/ntfs-3g /dev/da0s1 /media/disk
+#ntfs-3g /dev/ada3s1 /mnt4
+#ntfs-3g /dev/ada4s1 /mnt5
+
+#/usr/local/bin/ntfs-3g /dev/da0s1 /media/disk1
+#ntfs-3g /dev/ada2s1 /mnt4
+
+fsck -y -p ada1p2
+fsck -y -p ada2p2
+#fstab for correct fsck -p -y do not work ! script may be correct - read first line??
 mount /dev/ada1p2 /mnt2
 lklfuse -o type=ext4 /dev/linux_lvm/ubuntu-vg-root /mnt5
 
