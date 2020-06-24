@@ -7,7 +7,7 @@ gconftool-2 -s -t bool /desktop/gnome/remote_access/prompt-enabled false
 gconftool-2 -s -t bool /desktop/gnome/remote_access/prompt_enabled false
 gconftool-2 -s -t list --list-type=string  /desktop/gnome/remote_access/authentication_methods '[vnc]'
 #gconftool-2 --set /desktop/gnome/remote_access/authentication_methods --type list --list-type string '[vnc]'
-gconftool-2 --set /desktop/gnome/remote_access/vnc_passwd --type string `echo -n 'cumine2k' | base64`
+gconftool-2 --set /desktop/gnome/remote_access/vnc_passwd --type string `echo -n 'nv1050' | base64`
 gsettings set org.gnome.Vino require-encryption false
 killall vino-server
 killall x11vnc

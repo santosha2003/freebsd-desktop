@@ -1,147 +1,144 @@
 #!/bin/sh
-#make -C /usr/ports/databases/mysql80-server clean reinstall
+## php gluk gluk fight with restart php-fpm toomany bugs
+#
+ #pkgng pack create packages for freebsd port and all dependency
+ # virtualbox and vlc mplayer libav mesa -all new and not from ports up to date
+#/usr/update-svn
+#n=4
+cd /root
+# minimal set for //no apache //nginx wp phpMyAdmin bitrix drupal ImageMagick
+PHPPORT="php72"
+LINETX="`whereis -s $PHPPORT  | awk '{print $2}' |cut -c 12-127`"
+PACKAGELINE="$LINETX ftp/$PHPPORT-curl graphics/$PHPPORT-gd devel/$PHPPORT-gettext textproc/$PHPPORT-xml archivers/$PHPPORT-zip converters/$PHPPORT-mbstring www/$PHPPORT-session textproc/$PHPPORT-xml devel/$PHPPORT-tokenizer security/$PHPPORT-hash archivers/$PHPPORT-bz2 textproc/$PHPPORT-ctype security/$PHPPORT-filter archivers/$PHPPORT-zip security/$PHPPORT-openssl devel/$PHPPORT-gettext graphics/$PHPPORT-gd ftp/$PHPPORT-ftp databases/$PHPPORT-mysqli devel/$PHPPORT-json archivers/$PHPPORT-zlib databases/phpmyadmin graphics/pecl-imagick re2c p5-Locale-Gettext pcre ncurses rust nspr nginx net-snmp iconv libiconv $PHPPORT-iconv gettext-tools gdbm cclient "
+printf "$PACKAGELINE" >>listpkg
+#clean list (list w/o repeating names)
+printf "databases/phpmyadmin " >listpkge
+#printf "\n" >>
+##pear-HTTP_Session2  ??
+#clear too
+printf "security/$PHPPORT-mcrypt\n" >listbld
+printf "databases/pear-DB\n" >>listbld
+pkg query %ro | grep php > listpkg
+pkg query %ro | grep p5- >> listpkg
+pkg query %ro | grep pear >> listpkg
+# remove repeat lines
+ for ARG in `cat listpkg`
+ do
+  if (test "" == "`cat /root/listpkg |grep $ARG`")  then
+      if (test "$ARG" != "databases/phpmyadmin")  then
+      if (test "$ARG" != "security/php72-mcrypt")  then
+    # list packages to build - not in pkg or another names  
+        if (test "" == "`cat /root/listbld |grep $ARG`")  then
 
-#make -C /usr/ports/www/nginx clean reinstall
+         PACKAGELINE="$PACKAGELINE ${ARG}"
+        fi
+      fi
+      fi
+#        # arithmetic increment use expr command freebsd ubuntu (spaces req.)
+#        n=`expr $n + 1`
+  fi
+ done
+printf "$PACKAGELINE" >> listpkge
 
-rm /usr/local/etc/php/*.ini
 
-pkg query %ro | grep php | xargs pkg delete -fy
-pkg query %o | grep php | xargs pkg delete -fy
-pkg info |grep php |awk '{print $1}' |xargs pkg delete -fy
+rm /root/reins-port.log
+#number of arguments in command line (parse all- not use) #count # of packages
+#n=$#
+n=1
 
-# is set extension dir in the  (local) etc php.ini ?
+printf "$PACKAGELINE" > packages-input
+#PACKAGELINE=$ARG
+#echo $PACKAGELINE
+## reinstall
+# comment 4 test
+ pkg delete -fy $PACKAGELINE
+ pkg install -y $PACKAGELINE
 
+# ..using sat solver ..works no  need to build from source freebsd 12.1
+exit 0
 
-PHPPORT=$1
- if ( test "$1" = "" ) then
- #PHPPORT=php56
- PHPPORT=php72
- MYSQLSRV=mysql57-server
-
+# --- big cycle
+#for ARG in $*
+for ARG in `cat listpkge`
+ do
+ echo $ARG
+ echo $n
+PORTPATH=`whereis -s $ARG | awk '{print $2}'`
+#echo $PORTPATH
+#
+ if (test "$ARG" != "databases/phpmyadmin")  then 
+ PACKAGELINE=$ARG
  fi
-LINE=`whereis -s $PHPPORT | awk '{print $2}' | cut -c 12-127`
-echo $LINE
-LINE1=`whereis -s $MYSQLSRV | awk '{print $2}' | cut -c 12-127`
-echo $LINE1
+#increment all dependency
+printf "$PACKAGELINE \n \n" >>packages-php-cycle
+printf "ports-mgmt/pkg" >> /root/reins-port.log
+printf "\n" >> /root/reins-port.log
+# -- middle cycle -all dep's for each package
+   for LINE in `make -C $PORTPATH all-depends-list |cut -c 12-127`
+     do
+     LINST=`whereis -s $LINE | awk '{print $2}'| cut -c 1-8`
+         if (test "$LINE" != "ports-mgmt/pkg")  then
+          if (test "$LINST" != "/usr/src")  then
+	    if (test "" == "`cat /root/reins-port.log |grep $LINE`")  then
+        echo -n "build  (${LINE}) "
+	PORTP=`whereis -s $LINE | awk '{print $2}'`
+	echo -n " from ($PORTP) "
+        PACKAGELINE="$PACKAGELINE ${LINE}"
+        # arithmetic increment use expr command freebsd ubuntu (spaces req.)
+        n=`expr $n + 1`
+        printf "$PORTPATH  \n ------------------------- \n \n" >> /root/reins-port.log
+        printf  "${LINE}\n" >> /root/reins-port.log
+      # printf "`cat /root/reins-port.log |grep $LINE`\n" >> /root/reins-port1-log
+        #echo "\n" >> /root/reins-log
+         if (test "$LINE" == "devel/gettext-runtime")  then
+          pkg delete -fy gettext-runtime
+          pkg install -y gettext-runtime
+         break
+        #make -C /usr/ports/${LINE} build deinstall install | tail >>~/reins.texi
+         fi
+        #make -C /usr/ports/${LINE} reinstall | tail >>~/reins.texi
+    #make -C /usr/ports/${LINE} clean
+## reinstall
+# comment 4 test
+  #pkg delete -fy $LINE
+ #	echo -n "($LINE)"
+  #pkg install -y $LINE
+	#make -C /usr/ports/ports-mgmt/pkg install
+	    else #echo -n "ist schon bearbeitet ($LINE) "
+	    fi
+          else #printf "\n system package  $LINE  try cd /usr/src make buildworld \n" >> /root/reins-port.log
+          fi
+         fi
+     done
+     echo -n $n
+# -- middle cycle end
+ # if $$i == "" then break  fi
+ # if $$i > $n then break fi
+ done
+# --- big cycle end
+#pkg install -y $PACKAGELINE
+#pkg check -d
+#echo $PACKAGELINE
+printf "$PACKAGELINE" >> do-reins-php
 
-L1=`whereis -s  $PHPPORT-calendar | awk '{print $2}' | cut -c 12-127`
-L2=`whereis -s  $PHPPORT-ctype | awk '{print $2}' | cut -c 12-127`
-L3=`whereis -s  $PHPPORT-curl | awk '{print $2}' | cut -c 12-127`
-L4=`whereis -s  $PHPPORT-dba | awk '{print $2}' | cut -c 12-127` 
-L5=`whereis -s  $PHPPORT-dom | awk '{print $2}' | cut -c 12-127` 
-L6=`whereis -s  $PHPPORT-exif | awk '{print $2}' | cut -c 12-127`
-L7=`whereis -s  $PHPPORT-ftp | awk '{print $2}' | cut -c 12-127`
-L8=`whereis -s  $PHPPORT-fileinfo | awk '{print $2}' | cut -c 12-127`
-L9=`whereis -s  $PHPPORT-filter | awk '{print $2}' | cut -c 12-127`
-L10=`whereis -s  $PHPPORT-gd | awk '{print $2}' | cut -c 12-127`
-L11=`whereis -s  $PHPPORT-gettext | awk '{print $2}' | cut -c 12-127`
-L12=`whereis -s  $PHPPORT-hash | awk '{print $2}' | cut -c 12-127`
-L13=`whereis -s  $PHPPORT-iconv | awk '{print $2}' | cut -c 12-127`
-L14=`whereis -s  $PHPPORT-imap | awk '{print $2}' | cut -c 12-127`
-L15=`whereis -s  $PHPPORT-json | awk '{print $2}' | cut -c 12-127`
-L16=`whereis -s  $PHPPORT-mbstring | awk '{print $2}' | cut -c 12-127`
-L17=`whereis -s  $PHPPORT-mcrypt | awk '{print $2}' | cut -c 12-127`
-L18=`whereis -s  $PHPPORT-mysql | awk '{print $2}' | cut -c 12-127`
-L19=`whereis -s  $PHPPORT-mysqli | awk '{print $2}' | cut -c 12-127`
-#test 4 core dump
-L20=`whereis -s  $PHPPORT-opcache | awk '{print $2}' | cut -c 12-127`
-L21=`whereis -s  $PHPPORT-bz2 | awk '{print $2}' | cut -c 12-127`
-L22=`whereis -s  $PHPPORT-openssl | awk '{print $2}' | cut -c 12-127`
-L23=`whereis -s  $PHPPORT-pcntl | awk '{print $2}' | cut -c 12-127`
-#?
-L24=`whereis -s  $PHPPORT-pdo | awk '{print $2}' | cut -c 12-127`
-L25=`whereis -s  $PHPPORT-pdo_mysql | awk '{print $2}' | cut -c 12-127`
-L26=`whereis -s  $PHPPORT-pdo_sqlite | awk '{print $2}' | cut -c 12-127`
-L27=`whereis -s  $PHPPORT-phar | awk '{print $2}' | cut -c 12-127`
-L28=`whereis -s  $PHPPORT-posix | awk '{print $2}' | cut -c 12-127`
-# make -C `whereis -s  $PHPPORT-recode | awk '{print $2}' | cut -c 12-127` reinstall
+#make -C /usr/ports/${LINE} clean
+#PACKAGELINE ="'cat listpkge'"
+PACKAGELINE=$PACKAGELINE phpmyadmin-$PHPPORT
 
-L29=`whereis -s  $PHPPORT-session | awk '{print $2}' | cut -c 12-127`
-L30=`whereis -s  $PHPPORT-simplexml | awk '{print $2}' | cut -c 12-127`
-L31=`whereis -s  $PHPPORT-snmp | awk '{print $2}' | cut -c 12-127`
-L32=`whereis -s  $PHPPORT-socket | awk '{print $2}' | cut -c 12-127`
-L33=`whereis -s  $PHPPORT-sqlite3 | awk '{print $2}' | cut -c 12-127`
-L34=`whereis -s  $PHPPORT-tokenizer | awk '{print $2}' | cut -c 12-127`
-L35=`whereis -s  $PHPPORT-xml | awk '{print $2}' | cut -c 12-127`
-L36=`whereis -s  $PHPPORT-xmlreader | awk '{print $2}' | cut -c 12-127`
-L37=`whereis -s  $PHPPORT-xmlwriter | awk '{print $2}' | cut -c 12-127`
-L38=`whereis -s  $PHPPORT-xsl | awk '{print $2}' | cut -c 12-127`
-L39=`whereis -s  $PHPPORT-zip | awk '{print $2}' | cut -c 12-127`
-L40=`whereis -s  $PHPPORT-zlib | awk '{print $2}' | cut -c 12-127`
+pkg install -y $PACKAGELINE
+ PACKAGELINE="$PACKAGELINE databases/phpmyadmin"
 
-LIN="$LINE ${LINE1} ${L1} ${L2} ${L3} ${L4} ${L5} ${L6} ${L7} $L8 $L9 $L10 $L11 $L12 $L13 $L14 $L15 $L16 $L17 $L18 $L19 $L20 $L21 $L22 $L23 $L24 $L25 $L26 $L27 $L28 $L29 $L30 $L31 $L32 $L33 $L34 $L35 $L36 $L37 $L38 $L39 $L40"
-echo $LINE
-echo $LIN
-
-
-pkg query %o | grep php | awk '{print $1}'  >> php-ports
-echo $LIN > php-p
-#cat php-ports |xargs pkg delete -y
-pkg install -fy $LIN
-
-#pkg install $LIN
-
-
-
-#make -C $LINE clean reinstall
-#LINST=`whereis -s $LINE | awk '{print $2}'| cut -c 1-8`
-
-make -C `whereis -s phpMyAdmin | awk '{print $2}'` deinstall install
-make -C `whereis -s pecl-imagick | awk '{print $2}'` deinstall install
-make -C /usr/ports/www/wordpress deinstall install
-
-#make -C `whereis -s  $PHPPORT-calendar | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-ctype | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-curl | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-dba | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-dom | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-exif | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-ftp | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-fileinfo | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-filter | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-gd | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-gettext | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-hash | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-iconv | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-imap | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-json | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-mbstring | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-mcrypt | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-mysql | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-mysqli | awk '{print $2}'` reinstall
-#test 4 core dump
-#make -C `whereis -s  $PHPPORT-opcache | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-bz2 | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-openssl | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-pcntl | awk '{print $2}'` reinstall
-#?
-#make -C `whereis -s  $PHPPORT-pdo | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-pdo_mysql | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-pdo_sqlite | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-phar | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-posix | awk '{print $2}'` reinstall
-## make -C `whereis -s  $PHPPORT-recode | awk '{print $2}'` reinstall
-
-#make -C `whereis -s  $PHPPORT-session | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-simplexml | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-snmp | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-socket | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-sqlite3 | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-tokenizer | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-xml | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-xmlreader | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-xmlwriter | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-xsl | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-zip | awk '{print $2}'` reinstall
-#make -C `whereis -s  $PHPPORT-zlib | awk '{print $2}'` reinstall
-
-#make -C `whereis -s  $PHPPORT| awk '{print $2}'` clean
-service mysql-server restart
-wait 15
-service mysql-server status
-service mysql-server start
+make -C `whereis -s pecl-imagick | awk '{print $2}'` clean reinstall clean
+make -C /usr/ports/databases/mysql57-server clean reinstall clean
+#make -C /usr/ports/databases/phpmyadmin clean reinstall clean #new phpmyadmin-php72
+#filter & ext
+#nginx freebsd re-compile all +modules
+make -C /usr/ports/www/wordpress clean reinstall clean
+make -C /usr/ports/miltimedia/vlc clean reinstall clean
+make -C /usr/ports/multimedia/ffmpeg  clean reinstall clean
+make -C /usr/ports/www/nginx clean reinstall clean
+pkg install -y firefox
+pkg install -y chrome
 service php-fpm restart
 service nginx restart
-
-
-#pkg query %ro | grep php | xargs portmaster
+service mysql-server restart
